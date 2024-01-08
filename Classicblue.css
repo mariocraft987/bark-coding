@@ -1,0 +1,32 @@
+body {background-color: White;}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: rgb(54, 154, 255);
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 8px 17px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: rgb(70, 70, 255);
+  color: white;
+}

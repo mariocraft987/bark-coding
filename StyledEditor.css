@@ -1,0 +1,13 @@
+.blockbar  {
+    background-color: #e5e4e4; 
+    height: 700px; 
+    width: 200px; 
+    text-align: center; 
+    box-shadow: 2px 2px 3px;
+    float: left;
+}
+
+.screen {
+    border:1px solid #000000;
+    transform: translate(820px,70px);
+}

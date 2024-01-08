@@ -1,0 +1,52 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: White;
+  margin: 0;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: DodgerBlue;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.navbar a.right {
+  float: right;
+}
+
+.navbar a:hover {
+  background-color: blue;
+  color: white;
+}
+
+.box-body {
+  display: inline-block;
+  padding: 16px 26px;
+  font-size: 17px;
+  text-align: center;
+  outline: none;
+  color: #1b007a;
+  background-color: rgb(176, 215, 255);
+  border: none;
+  border-radius: 10px;
+}
+
+.link {
+  color: dodgerblue;
+}
+
+.needed {
+  visibility: hidden;
+}
