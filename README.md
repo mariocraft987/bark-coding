@@ -2,3 +2,6 @@ This is the bark website, a mod of scratch, if you know 𝗴𝗼𝗼𝗱 html an
 https://scratch.mit.edu/studios/34455419
 
 - mariocraft987 2024
+
+It will have a working editor made from javascript and some mods and  extensions from some contributers,
+all credit to scratch and turbowarp.
