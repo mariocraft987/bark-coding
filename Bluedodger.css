@@ -28,18 +28,18 @@ body {
 
 .navbar a:hover {
   background-color: blue;
+  border-radius: 5px;
   color: white;
 }
 
-.box-body {
+.box {
   display: inline-block;
   padding: 16px 26px;
   font-size: 17px;
   text-align: center;
   outline: none;
   color: #1b007a;
-  background-color: rgb(176, 215, 255);
-  border: none;
+  background-color: rgb(173, 214, 255);
   border-radius: 10px;
 }
 
@@ -47,7 +47,15 @@ a.link {
   color: dodgerblue;
 }
 
-.needed {
-  visibility: hidden;
+button.button1 {
+  background-color: rgb(0, 128, 255);
+  padding: 9px 17px;
+  border-radius: 7px;
+  border: none;
+  color: #ffffff;
 }
 
+button.button1:hover {
+  background-color: rgb(0, 111, 221);
+  border: none;
+}

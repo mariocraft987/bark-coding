@@ -3,12 +3,12 @@
     height: 700px; 
     width: 200px; 
     text-align: center; 
-    box-shadow: 2px 2px 3px;
+    box-shadow: 1px 1px 3px;
     float: left;
 }
 
 .screen {
     border:1px solid #000000;
-    border-radius: 10px;
+    border-radius: 5px;
     transform: translate(820px,70px);
 }

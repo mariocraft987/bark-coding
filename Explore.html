@@ -2,11 +2,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Bark - imagine, Program, Share</title>
+<title>Bark - Explore</title>
 <link rel="shortcut icon" href="images/Logo.svg" type="image/png">
 <link rel="stylesheet" href="Bluedodger.css">
 </head>
-<body>
+<body onload="randomTxt()">
 
 <div class="navbar">
   <a href="Home.html"><img src="images/Logo.svg" alt="Bark" width="25" height="25" ></a>
@@ -22,7 +22,10 @@
   <div class="textCenter">
     <br>
     <input class="search" placeholder="Search for projects">
-  </div>
 </form>
+<br/>
+<h3 id="randomWord"></h3>
+<script src="index.js"></script>
+</div>
 </body>
 </html>
