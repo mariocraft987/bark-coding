@@ -43,10 +43,11 @@ body {
   border-radius: 10px;
 }
 
-.link {
+a.link {
   color: dodgerblue;
 }
 
 .needed {
   visibility: hidden;
 }
+

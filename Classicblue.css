@@ -1,13 +1,13 @@
-body {background-color: White;}
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: White;
   margin: 0;
-
+}
 
 /* Style the top navigation bar */
 .navbar {
   overflow: hidden;
-  background-color: rgb(54, 154, 255);
+  background-color: rgb(51, 143, 234);
 }
 
 /* Style the navigation bar links */
