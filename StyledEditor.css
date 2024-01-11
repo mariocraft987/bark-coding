@@ -1,4 +1,4 @@
-.blockbar  {
+.blockbar {
     background-color: #e5e4e4; 
     height: 700px; 
     width: 200px; 
@@ -8,7 +8,7 @@
 }
 
 .screen {
-    border:1px solid #000000;
+    border:2px solid #000000;
     border-radius: 5px;
-    transform: translate(820px,70px);
+    float: right;
 }

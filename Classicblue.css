@@ -4,13 +4,11 @@ body {
   margin: 0;
 }
 
-/* Style the top navigation bar */
 .navbar {
   overflow: hidden;
   background-color: rgb(51, 143, 234);
 }
 
-/* Style the navigation bar links */
 .navbar a {
   float: left;
   display: block;
@@ -20,13 +18,12 @@ body {
   text-decoration: none;
 }
 
-/* Right-aligned link */
 .navbar a.right {
   float: right;
 }
 
-/* Change color on hover */
 .navbar a:hover {
   background-color: rgb(70, 70, 255);
+  cursor: pointer;
   color: white;
 }
