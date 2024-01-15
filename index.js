@@ -6,11 +6,15 @@ function darkMode() {
  }
 
 function whatsNew() {
-document.getElementById("boxChanger").innerHTML = '<h2>Whats New?</h2><p>The bark explore page is being created.</p>';
+    var News;
+    News = '<h2>Whats New?</h2><p>The bark explore page is being created.</p>';
+document.getElementById("boxChanger").innerHTML = News;
 }
 
 function recentCom() {
-    document.getElementById("boxChanger").innerHTML = '<h2>Recent Commits</h2><p>Recent commits are soon to be added</p>';
+    var Commits;
+    Commits = '<h2>Recent Commits</h2><img src="images/mariocraft987.png" width="50" height="50"><p>"The bark commits are being worked on."</p>';
+    document.getElementById("boxChanger").innerHTML = Commits;
 }
 
 function randomTxt() {
