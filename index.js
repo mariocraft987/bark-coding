@@ -2,13 +2,13 @@
 
 function whatsNew() {
     var News;
-    News = '<h2>Whats New?</h2><p>The bark explore page is being created.</p>';
+    News = '<h2>Whats New?</h2><p>The Bark Editor is being created</p>';
     document.getElementById("boxChanger").innerHTML = News;
 }
 
 function recentCom() {
     var Commits;
-    Commits = '<h2>Recent Commits</h2><p>The bark commits are being worked on.</p>';
+    Commits = '<h2>Recent Commits</h2><p>The Bark commits are being worked on.</p>';
     document.getElementById("boxChanger").innerHTML = Commits;
 }
 
