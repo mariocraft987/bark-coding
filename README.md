@@ -4,4 +4,4 @@ This is the bark website, a mod of scratch with newer extensions, if you know ù
 It will have a working editor made from javascript and some mods and extensions from some contributers,
 all credit to scratch and turbowarp, and penguinmod.
 
-Heres the link: https://mariocraft987.github.io/Bark.github.io/Home.html
+[Click me](https://mariocraft987.github.io/bark.github.io/home.html)
