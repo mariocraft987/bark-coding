@@ -2,7 +2,7 @@
 
 function whatsNew() {
     var News;
-    News = '<h2>Whats New?</h2><p>The Bark Editor is being created</p>';
+    News = '<h2>Whats New?</h2><p>The bark editor is being created in.</p>';
     document.getElementById("boxChanger").innerHTML = News;
 }
 
