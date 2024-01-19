@@ -8,7 +8,7 @@ function whatsNew() {
 
 function recentCom() {
     var Commits;
-    Commits = '<h2>Recent Commits</h2><p>The Bark commits are being worked on.</p>';
+    Commits = '<h2>Recent Commits</h2><p id="latest">Loading...</p>';
     document.getElementById("boxChanger").innerHTML = Commits;
 }
 
