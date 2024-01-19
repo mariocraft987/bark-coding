@@ -1,0 +1,22 @@
+/* Used for other styles */
+.blockbar {
+    background-color: #e5e4e4; 
+    height: 579px; 
+    width: 200px; 
+    text-align: center; 
+    box-shadow: 1px 1px 3px;
+    float: left;
+  }
+  
+.screen {
+  border:2px solid #000000;
+  border-radius: 5px;
+  float: right;
+}
+  
+.slNav {
+  background-color: rgb(255, 153, 0);
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+}

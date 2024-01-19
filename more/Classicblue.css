@@ -1,0 +1,29 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: White;
+  margin: 0;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: rgb(51, 143, 234);
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 8px 17px;
+  text-decoration: none;
+}
+
+.navbar a.right {
+  float: right;
+}
+
+.navbar a:hover {
+  background-color: rgb(70, 70, 255);
+  cursor: pointer;
+  color: white;
+}

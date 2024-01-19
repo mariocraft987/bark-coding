@@ -1,0 +1,81 @@
+/*CSS styles for Bark, without them Bark would not be structured correctly*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: White;
+  font-weight: 500;
+  margin: 0;
+}
+
+.dark-mode {
+  background-color: rgb(29, 29, 29);
+  color: #ffffff;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: DodgerBlue;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.navbar a.right {
+  float: right;
+}
+
+.navbar a:hover {
+  background-color: blue;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+
+.box {
+  display: inline-block;
+  padding: 16px 26px;
+  font-size: 17px;
+  text-align: center;
+  outline: none;
+  color: #1b007a;
+  background-color: rgb(173, 214, 255);
+  border-radius: 10px;
+}
+
+a.link {
+  color: dodgerblue;
+}
+
+button.buttonFrBx {
+  background-color: rgb(0, 128, 255);
+  padding: 9px 17px;
+  border-radius: 7px;
+  cursor: pointer;
+  border: none;
+  color: #ffffff;
+}
+
+button.buttonFrBx:hover {
+  background-color: rgb(0, 111, 221);
+  border: none;
+}
+
+.searchBar {
+  display: inline-block;
+  padding: 13px 20px;
+  font-size: 17px;
+  text-align: center;
+  border: none;
+  color: #ffffff;
+  background-color: rgb(120, 188, 255);
+  border-radius: 5px;
+}
