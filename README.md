@@ -10,4 +10,4 @@ Assets: 1/3
 Programmers: 0/10
 Features: 0/3
 
-[Bark Website](https://mariocraft987.github.io/bark.github.io/Home.html)
+<a href="https://mariocraft987.github.io/bark.github.io/Home.html">Bark Website</a>
