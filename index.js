@@ -22,5 +22,5 @@ function randomTxt() {
     "Wanna help create bark? go <a href='Jobs.html' class='link'>Here</a>"];
 
     wrd = (arr[(Math.floor(Math.random() * arr.length))]);
-    document.getElementById("randomWord").innerHTML = '<h3>'+ wrd + "</h3>";
+    document.getElementById("randomWord").innerHTML = wrd;
 }
