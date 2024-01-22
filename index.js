@@ -16,10 +16,11 @@ function randomTxt() {
     //geeksforgeeks.org for the random text generator.
     var wrd;
     let arr = ["Bark! woof!", "Bark is a mod of scratch with new extensions",
-    "Scratch dog 🐶", "Bark is being created, so stay patient!!", "Note: Bark does not support accounts yet", 
-    "Funfact: Dogs have insane hearing and smelling.", "We need a scratch dog!", "Who not create a project??", "A special version is here somewere..",
-    "Bark is hosted with github."];
+    "Scratch dog", "Bark is being created, so stay patient!!", "Note: Bark does not support accounts yet", 
+    "Funfact: Dogs have insane hearing and smelling.", "We need a scratch dog!", "Why not help with bark??", "A special version is here somewere..",
+    "Bark is hosted with github.", "Funfact: im a funfact!", "Bark is made from penguin mod made from turbowarp made from scratch.", 
+    "Wanna help create bark? go <a href='Jobs.html' class='link'>Here</a>"];
 
     wrd = (arr[(Math.floor(Math.random() * arr.length))]);
-    document.getElementById("randomWord").innerHTML = wrd;
+    document.getElementById("randomWord").innerHTML = '<h3>'+ wrd + "</h3>";
 }
