@@ -19,27 +19,30 @@
 </div>
 <br/>
 <div class="textCenter">
+  <span id="page">
   <h2>Create an account</h2>
   <br/>
   <form action="#" method="get">
     <label for="username">Username:</label>
-    <input type="username" placeholder="username" 
+    <input type="username" id="username" placeholder="username" 
     required="required"/>
     <br/>
     <br/>
     <label for="password">Password:</label>
-    <input type="password" placeholder="password" 
+    <input type="password" id="password" placeholder="password" 
     required="required"/>
     <br/>
     <br/>
     <label for="email">Email:</label>
-    <input type="email" placeholder="example@email.com"
+    <input type="email" id="email" placeholder="example@email.com"
     required="required"/>
     <br/>
     <br/>
-    <input type="submit" value="Submit" onclick="checkUsername()"/>
+    <input type="submit" value="Submit" onclick="checkSignup()"/>
     <p>Note: Bark does not support accounts yet</p>
+  </span>
   </div>
 </form>
   </body>
+  <script src="index.js"></script>
 </html>
