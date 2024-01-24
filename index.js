@@ -27,9 +27,15 @@ function randomTxt() {
 }
 
 function checkSignup() {
-let username = document.getElementById('username').value;
+    let username = document.getElementById('username').value;
+    let password = document.getElementById('password').value;
+    let email = document.getElementById('email').value;
 if (username != '') {
+    if (password != '') {
+        if (email != '') {
             document.getElementById('page').innerHTML = '<br/><h2>Welcome to Bark ' + username + '!</h2>';
+            }
+        }
     }
 }
 
