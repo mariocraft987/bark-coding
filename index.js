@@ -1,5 +1,5 @@
 //Some basic scripts made from Js to work the website, and make it interactive.
-console.log('This part is used for devolopers.');
+console.log("Exit Now! This part is used for devolopers.");
 
 function whatsNew() {
     var News;
@@ -42,5 +42,5 @@ if (username != '') {
 function jobRegister() {
     let job = document.querySelector('input[name=job]:checked').value;
     let username = document.getElementById('github-username').value;
-    document.getElementById('page').innerHTML = '<br/><h2>You have selected a Job to ' + job + '</h2><h4>If your actually <em>'+ username +'</em></h4>';
+    document.getElementById('page').innerHTML = '<br/><h2>You have selected a Job to ' + job + '</h2><p>We have to run a few tests to see your actually <em>'+ username +'</em></p>';
     }
