@@ -1,4 +1,4 @@
-//Some basic scripts made from Js to work the website, and make it interactive.
+//Some basic scripts created in javascript to work the website, and make it interactive.
 console.log("Exit Now! This part is used for devolopers.");
 
 function whatsNew() {
@@ -20,7 +20,7 @@ function randomTxt() {
     "Scratch dog", "Bark is being created, so stay patient!!", "Note: Bark does not support accounts yet", 
     "Funfact: Dogs have insane hearing and smelling.", "We need a scratch dog!", "Why not help with bark??", "A special version is here somewere..",
     "Bark is hosted with github pages.", "Funfact: im a funfact!", "Bark is made from penguin mod made from turbowarp etc.", 
-    "Wanna help create bark? go <a href='Jobs.html' class='link'>Here</a>"];
+    "Wanna help create bark? go <a href='Jobs.html' class='link'>Here</a>", "Bark's birthday month is October"];
 
     wrd = (arr[(Math.floor(Math.random() * arr.length))]);
     document.getElementById("randomWord").innerHTML = wrd;
