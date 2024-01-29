@@ -20,25 +20,3 @@
   cursor: pointer;
   color: white;
 }
-
-.font {
-  font-family: Tahoma, sans-serif;
- }
- 
- .creditsHeader {
-   color: white;
-  background-color: dodgerBlue;
-  padding: 35px;
-  font-size: 20pt;
-  font-family: Tahoma, sans-serif;
-  text-align: center;
- }
-
-.blueLink {
-  color: dodgerblue;
-}
-
-.CreditsPT {
-  transform: translate(100px,-77px);
-  font-size: 20px;
-}
