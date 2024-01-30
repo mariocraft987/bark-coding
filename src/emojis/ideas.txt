@@ -1,0 +1,8 @@
+
+smiley
+happy
+sad
+angry
+
+dog
+cat
