@@ -19,4 +19,6 @@ function createEmojis() {
     .replace(":moneyEyes:", "<img src='src/emojis/money_eyes.svg' alt='moneyEyes' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     .replace(":evil:", "<img src='src/emojis/evil.svg' alt='evil' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     .replace(":panic:", "<img src='src/emojis/panic.svg' alt='panic' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
+    .replace(":dizzy:", "<img src='src/emojis/dizzy.svg' alt='dizzy' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
+    .replace(":jealous:", "<img src='src/emojis/jealous.svg' alt='jealous' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
 }
