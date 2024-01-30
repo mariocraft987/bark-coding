@@ -9,7 +9,8 @@ function whatsNew() {
 
 function recentCom() {
     var Commits;
-    Commits = '<h2>Recent Commits</h2><p id="latest">Loading...</p>';
+    Commits = '<h2>Recent Commits</h2><p id="latest">Error! try looking at commits on the <br/> ';
+    Commits += '<a href="https://github.com/Mariocraft987/bark.github.io/commits/main/" class="link">github commits page</a>';
     document.getElementById("boxChanger").innerHTML = Commits;
 }
 
@@ -32,13 +33,10 @@ function checkSignup() {
     let username = document.getElementById('username').value;
     let password = document.getElementById('password').value;
     let email = document.getElementById('email').value;
-if (username != '') {
-    if (password != '') {
-        if (email != '') {
+    
+if (username != '', password != '', email != '') {
             document.getElementById('page').innerHTML = '<br/><h2>Welcome to Bark ' + username + '!</h2>';
             }
-        }
-    }
 }
 
 function jobRegister() {
