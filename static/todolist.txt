@@ -1,0 +1,12 @@
+2024
+Todo list for Bark.
+
+
+Create the block Editor
+Custom Domains
+Working forms sending data
+Server Databases
+More Enhanced look
+
+Working commits box
+Extensions page

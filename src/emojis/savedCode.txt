@@ -1,0 +1,41 @@
+document.getElementById("emojiButton").innerHTML = "<br/><button onclick='randomEmoji()'><img src='src/emojis/smiley.svg' alt='button' width='40' height='40'></button>";
+
+function randomEmoji() {
+
+    var wrd;
+    let arr = ["smiley", "happy", "sad", "angry", "nerd", "lol", "dizzy", "joyful", "mad", "panic"];
+
+    wrd = (arr[(Math.floor(Math.random() * arr.length))]);
+    alert(":" + wrd + ': has been copied to clipboard!');
+    let copied = ":" + wrd + ":";
+    document.getElementById("emojiButton").innerHTML = "<br/><button onclick='randomEmoji()'><img src='src/emojis/" + wrd + ".svg' alt='button' width='40' height='40'></button>";
+
+    navigator.clipboard.writeText(copied);
+}
+
+
+
+//document.getElementById('emojiTextbox').innerHTML += '</span><br/><input type="button" value="Change" onclick="replaceText()">'
+//Doesn't work
+function replaceText() {
+    let textValue = document.getElementById("savedEmojiText").value ;
+    let answer = '<textarea id="emojiText" name="bio" rows="8" cols="50" placeholder="Your Bio">' + textValue + '</textarea><br/><input type="button" value="Update" onclick="setupText()">'
+    document.getElementById("emojiTextbox").innerHTML = answer
+    .replace("<img src='src/emojis/blank.svg' alt='blank' width='"+ emojiWidth + "' height='" + emojiHeight + "'>", ":blank:")
+    .replace("<img src='src/emojis/smiley.svg' alt='smiley' width='"+ emojiWidth + "' height='" + emojiHeight + "'>", ":smiley:")
+    .replace("<img src='src/emojis/happy.svg' alt='happy' wwidth='"+ emojiWidth + "' height='" + emojiHeight + "'>", ":happy:")
+    .replace("<img src='src/emojis/sad.svg' alt='sad' width='"+ emojiWidth + "' height='" + emojiHeight + "'>", ":sad:")
+    .replace("<img src='src/emojis/angry.svg' alt='angry' width='"+ emojiWidth + "' height='" + emojiHeight + "'>", ":angry:")
+    .replace("<img src='src/emojis/nerd.svg' alt='nerd' width='"+ emojiWidth + "' height='" + emojiHeight + "'>", ":nerd:")
+    .replace("<img src='src/emojis/lol.svg' alt='lol' width='"+ emojiWidth + "' height='" + emojiHeight + "'>", ":lol:")
+    .replace("<img src='src/emojis/textHappy.svg' alt='textHappy' width='"+ emojiWidth + "' height='" + emojiHeight + "'>", ":textHappy:")
+    .replace("<img src='src/emojis/sussedOut.svg' alt='sussedOut' width='"+ emojiWidth + "' height='" + emojiHeight + "'>", ":sussedOut:")
+    .replace("<img src='src/emojis/goofy.svg' alt='goofy' width='"+ emojiWidth + "' height='" + emojiHeight + "'>", ":goofy:")
+    .replace("<img src='src/emojis/mad.svg' alt='mad' width='"+ emojiWidth + "' height='" + emojiHeight + "'>", ":mad:")
+    .replace("<img src='src/emojis/joyful.svg' alt='joyful' width='"+ emojiWidth + "' height='" + emojiHeight + "'>", ":joyful:")
+    .replace("<img src='src/emojis/moneyEyes.svg' alt='moneyEyes' width='"+ emojiWidth + "' height='" + emojiHeight + "'>", ":moneyEyes:")
+    .replace("<img src='src/emojis/evil.svg' alt='evil' width='"+ emojiWidth + "' height='" + emojiHeight + "'>", ":evil:")
+    .replace("<img src='src/emojis/panic.svg' alt='panic' width='"+ emojiWidth + "' height='" + emojiHeight + "'>", ":panic:")
+    .replace("<img src='src/emojis/dizzy.svg' alt='dizzy' width='"+ emojiWidth + "' height='" + emojiHeight + "'>", ":dizzy:")
+    .replace("<img src='src/emojis/jealous.svg' alt='jealous' width='"+ emojiWidth + "' height='" + emojiHeight + "'>", ":jealous:")
+}

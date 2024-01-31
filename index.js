@@ -24,7 +24,7 @@ function randomTxt() {
     "Wanna help create bark? go <a href='Jobs.html' class='link'>Here</a>", "Bark's birthday month is October", 
     "Why not go <a href='https://www.scratchfoundation.org/donate' class='link'>donate</a> to scratch?", "Go check out snail-ide!", ":amongus:", 
     "This text has a 0.07 chance of apearing", "So <em>many</em> breeds of dogs", "Check out our <a href='https://github.com/mariocraft987/bark.github.io/' class='link'>github</a>", 
-    "Funfact: You are waiting for something to load", "Funfact: You are waiting for something to load", "Emojis are added! :party:"];
+    "Funfact: You are waiting for something to load", "Emojis are added! :party:", "Baek is created with html and javascript"];
 
     wrd = (arr[(Math.floor(Math.random() * arr.length))]);
     document.getElementById("randomWord").innerHTML = wrd;
