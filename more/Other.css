@@ -24,6 +24,10 @@
 .font {
   font-family: Tahoma, sans-serif;
  }
+
+ a {
+  color: dodgerblue;
+ }
  
  .creditsHeader {
    color: white;
@@ -35,6 +39,7 @@
  }
 
 .CreditsPT {
-  transform: translate(100px,-77px);
+  margin: 88px;
+  margin-top: -55px;
   font-size: 20px;
 }
