@@ -3,8 +3,8 @@ let emojiHeight = 25;
 
 
 function setupText() {
-    let text = document.getElementById("emojiText").value; 
-    document.getElementById("emojiTextbox").innerHTML = text
+    let text = document.getElementById("TextI").value; 
+    document.getElementById("Textbox").innerHTML = text
     .replaceAll(":blank:", "<img src='src/emojis/blank.svg' alt='blank' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     .replaceAll(":smiley:", "<img src='src/emojis/smiley.svg' alt='smiley' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     .replaceAll(":happy:", "<img src='src/emojis/happy.svg' alt='happy' wwidth='"+ emojiWidth + "' height='" + emojiHeight + "'>")
