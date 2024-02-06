@@ -6,16 +6,19 @@ It will have a working editor made from javascript and some mods and extensions 
 all credit to scratch and turbowarp, and penguinmod. &#128054;
 <hr>
 
+## Jobs
 Users Wanted for jobs.<br/>
 Jobs: <br/>
-Assets: 1/3<br/>
-Programmers: 0/10<br/>
-Features: 0/3<br/>
+- Assets: 2/3<br/>
+- Programmers: 0/10<br/>
+- Features: 0/3<br/>
+
+To be apart of Barks Devlopment then please comment `Job Register 4543` in <a href="https://github.com/Mariocraft987/bark.github.io/commit/5644df6ebc5aa7ea7b611141a265ff7c17712c5e">this commit</a>
+<br/>Heres the link to <a href="https://mariocraft987.github.io/bark.github.io/Home.html">The Bark Website</a>
+
 <hr>
 
-Heres the link to <a href="https://mariocraft987.github.io/bark.github.io/Home.html">The Bark Website</a>
-
-<hr>
+## License
 This is the license for scratch, WE DO NOT OWN THIS LICENSE!
 
 ```
@@ -31,4 +34,7 @@ Redistribution and use in source and binary forms, with or without modification,
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ```
+
+<!-- bark is not affiliated of scratch or turbowarp nor penguin mod and all credit goes to these founding orginizations and not any content should be used with permission,
+please is they are created YET check out our terms of use and private policy --!>
 
