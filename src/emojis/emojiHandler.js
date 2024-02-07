@@ -1,3 +1,4 @@
+/* Makes key words into emojis */
 let emojiWidth = 25;
 let emojiHeight = 25;
 
