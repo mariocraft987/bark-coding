@@ -1,4 +1,4 @@
-//Some basic scripts created in javascript to work the website, and make it interactive.
+/* Some basic scripts created in javascript to work the website, and make it interactive. */
 console.log("Exit Now! This part is used for devolopers.");
 
 function whatsNew() {
@@ -24,7 +24,8 @@ function randomTxt() {
     "Wanna help create bark? go <a href='Jobs.html' class='link'>Here</a>", "Bark's birthday month is October", 
     "Why not go <a href='https://www.scratchfoundation.org/donate' class='link'>donate</a> to scratch?", "Go check out snail-ide!", ":amongus:", 
     "This text has a 0.07 chance of apearing", "So <em>many</em> breeds of dogs", "Check out our <a href='https://github.com/mariocraft987/bark.github.io/' class='link'>github</a>", 
-    "Funfact: You are waiting for something to load", "Emojis are added! :party:", "Baek is created with html and javascript"];
+    "Funfact: You are waiting for something to load", "Emojis are added! :party:", "Baek is created with html and javascript", "Bark needs a custom domain", 
+    "Go check out Goldot", "Svelte is html but enchanted", ":dog::cat::banana:", "Come see our <a href='https://github.com/Bark-programming' class='link' >orginization</a>", ];
 
     wrd = (arr[(Math.floor(Math.random() * arr.length))]);
     document.getElementById("randomWord").innerHTML = wrd;
