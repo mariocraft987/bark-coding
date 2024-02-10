@@ -317,12 +317,7 @@
         </block>
       </category>
       <category name="Custom" colour="260">
-        <block type="change_stage_bg">
-          <value name="COLOR">
-          <shadow type="colour_picker"></shadow>
-        </value>
-      </block>
-
+        <block type="change_stage_bg"></block>
       </category>
     </xml>
 
@@ -344,26 +339,23 @@
       }
 
       Blockly.Blocks['change_stage_bg'] = {
-  init: function() {
-    this.jsonInit({
-      "type": "change_stage_bg",
-      "message0": "change stage bg to %1",
-      "args0": [
-        {
-          "type": "input_value",
-          "name": "COLOR",
-          "check": "Colour" // Change the check type to "Colour" to accept color values
-        }
-      ],
-      "previousStatement": null,
-      "nextStatement": null,
-      "colour": 260,
-      "tooltip": "",
-      "helpUrl": ""
-    });
-  }
-};
-
+        init: function() {
+          this.jsonInit({
+            "type": "change_stage_bg",
+            "message0": "change stage bg to %1",
+            "args0": [
+              {
+                "type": "input_value",
+                "name": "NAME",
+                "check": "String"
+              }
+            ],
+            "previousStatement": null,
+            "nextStatement": null,
+            "colour": 260,
+            "tooltip": "",
+            "helpUrl": ""
+          });
 
           this.setOnChange(function(event) {
             if (!this.workspace || this.workspace.isDragging() || event.type != Blockly.Events.BLOCK_CHANGE) {
