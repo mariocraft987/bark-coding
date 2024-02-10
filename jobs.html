@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Bark - Jobs</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/png">
+<link rel="stylesheet" href="more/Bluedodger.css">
+</head>
+    <body>
+        <div class="navbar"><div class="navbar">
+          <a href="home.html"><img src="src/images/Logo.svg" alt="Bark" width="25" height="25" ></a>
+          <a href="editor.html">Create</a>
+          <a href="explore.html">Explore</a>
+          <a href="ideas.html">ideas</a>
+          <a href="about.html">About</a>
+          <a href="login.html" class="right">Sign in</a>
+          <a href="signup.html" class="right">Join bark</a>
+          </div></div>
+          <div class="textCenter">
+            <span id="page">
+            <form action="#" method="get">
+            <h2>Jobs</h2>
+            <p>Github users Wanted for jobs. <br/><br/>
+              <br/>Jobs: Assets: 2/3 <br/><br/>Programmers: 0/10 <br/><br/>Features: 0/3</p>
+              <input type="text" placeholder="Enter github username" id="github-username" required="required"><br/><br/>
+              <label for="assets">Assets:</label><input type="radio" id="assets" name="job" value="make assets" required="required">
+              <label for="program">Programming:</label><input type="radio" id="program" name="job" value="program" required="required">
+              <label for="features">Features:</label><input type="radio" id="features" name="job" value="add special features" required="required"><br/><br/>
+            <input type="submit" value="Signup now!" onclick="jobRegister()">
+        </form>
+      </span>
+          </div>
+    </body>
+    <script src="index.js"></script>
+</html>
