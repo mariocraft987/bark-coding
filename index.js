@@ -8,11 +8,22 @@ function whatsNew() {
 }
 
 function recentCom() {
-    var Commits;
-    Commits = '<h2>Recent Commits</h2><p id="latest">Error! try looking at commits on the <br/> ';
-    Commits += '<a href="https://github.com/Mariocraft987/bark.github.io/commits/main/" class="link">github commits page</a>';
-    document.getElementById("boxChanger").innerHTML = Commits;
+    fetch('https://api.github.com/repos/Mariocraft987/bark.github.io/commits')
+        .then(response => response.json())
+        .then(commits => {
+            var Commits = '<h2>Recent Commits</h2><ul>';
+            commits.slice(0, 5).forEach(commit => {
+                Commits += `<li><a href="${commit.html_url}" class="link">${commit.commit.message}</a></li>`;
+            });
+            Commits += '</ul>';
+            document.getElementById("boxChanger").innerHTML = Commits;
+        })
+        .catch(error => {
+            console.error('Error fetching commits:', error);
+            document.getElementById("boxChanger").innerHTML = '<h2>Recent Commits</h2><p>Error fetching commits. Please try again later.</p>';
+        });
 }
+
 
 function randomTxt() {
     //geeksforgeeks.org for the random text generator.
