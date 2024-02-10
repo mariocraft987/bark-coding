@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Bark - Editor</title>
+    <script src="https://unpkg.com/blockly/blockly.min.js"></script>
+    <script src="index.js"></script>
+    
+    <script src="custom_category_es6.js"></script>
+    <script src="toolbox_label_es6.js"></script>
+    <link rel="stylesheet" href="toolbox_style.css" />
+    <link rel="stylesheet" href="https://mariocraft987.github.io/bark.github.io/more/Bluedodger.css">
+<link rel="stylesheet" href="https://mariocraft987.github.io/bark.github.io/more/Other.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: #fff;
+        font-family: sans-serif;
+        display: flex;
+        flex-direction: row;
+      }
+
+      h1 {
+        font-weight: normal;
+        font-size: 140%;
+        margin: 10px;
+      }
+	  .navbar a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      .navbar a.right {
+        float: right;
+      }
+
+      .navbar a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      #blocklyDiv {
+        height: 100%;
+        width: 50%;
+        display: inline-block;
+        border-right: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+
+      #stage {
+        height: 100%;
+        width: 50%;
+        display: inline-block;
+        border-left: 1px solid #ccc;
+        padding: 10px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+
+  <body onload="start()">
+    <div class="navbar">
+      <a href="home.html"><img src="src/images/Logo.svg" alt="Bark" width="25" height="25" ></a>
+      <a href="#">Save</a>
+      <a href="#">Tutorials</a>
+      <a href="#">Upload</a>
+      <a href="login.html" class="right">Sign in</a>
+      <a href="signup.html" class="right">Join bark</a>
+    </div>
+    <div class="blockbar"></div>
+    <div id="blocklyDiv"></div>
+    <div id="stage"></div>
+
+    <!-- Toolbox Definition -->
+    <xml
+      xmlns="https://developers.google.com/blockly/xml"
+      id="toolbox"
+      style="display: none"
+    >
+      <category name="Logic" colour="#5b80a5">
+        <block type="controls_if"></block>
+        <block type="logic_compare">
+          <field name="OP">EQ</field>
+        </block>
+        <block type="logic_operation">
+          <field name="OP">AND</field>
+        </block>
+        <block type="logic_negate"></block>
+        <block type="logic_boolean">
+          <field name="BOOL">TRUE</field>
+        </block>
+        <block type="logic_null"></block>
+        <block type="logic_ternary"></block>
+      </category>
+      <category name="Loops" colour="#5ba55b">
+        <block type="controls_repeat_ext">
+          <value name="TIMES">
+            <shadow type="math_number">
+              <field name="NUM">10</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="controls_whileUntil">
+          <field name="MODE">WHILE</field>
+        </block>
+        <block type="controls_for">
+          <field name="VAR" id="QX?tv8_Oe7g@:yT:^:JX">i</field>
+          <value name="FROM">
+            <shadow type="math_number">
+              <field name="NUM">1</field>
+            </shadow>
+          </value>
+          <value name="TO">
+            <shadow type="math_number">
+              <field name="NUM">10</field>
+            </shadow>
+          </value>
+          <value name="BY">
+            <shadow type="math_number">
+              <field name="NUM">1</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="controls_forEach">
+          <field name="VAR" id="FegKP.X,(A|]G*?OeW.k">j</field>
+        </block>
+      </category>
+      <category name="Math" colour="#5b67a5">
+        <block type="math_number">
+          <field name="NUM">0</field>
+        </block>
+        <block type="math_arithmetic">
+          <field name="OP">ADD</field>
+          <value name="A">
+            <shadow type="math_number">
+              <field name="NUM">1</field>
+            </shadow>
+          </value>
+          <value name="B">
+            <shadow type="math_number">
+              <field name="NUM">1</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="math_single">
+          <field name="OP">ROOT</field>
+          <value name="NUM">
+            <shadow type="math_number">
+              <field name="NUM">9</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="math_trig">
+          <field name="OP">SIN</field>
+          <value name="NUM">
+            <shadow type="math_number">
+              <field name="NUM">45</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="math_constant">
+          <field name="CONSTANT">PI</field>
+        </block>
+        <block type="math_number_property">
+          <mutation divisor_input="false"></mutation>
+          <field name="PROPERTY">EVEN</field>
+          <value name="NUMBER_TO_CHECK">
+            <shadow type="math_number">
+              <field name="NUM">0</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="math_round">
+          <field name="OP">ROUND</field>
+          <value name="NUM">
+            <shadow type="math_number">
+              <field name="NUM">3.1</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="math_random_int">
+          <value name="FROM">
+            <shadow type="math_number">
+              <field name="NUM">1</field>
+            </shadow>
+          </value>
+          <value name="TO">
+            <shadow type="math_number">
+              <field name="NUM">100</field>
+            </shadow>
+          </value>
+        </block>
+      </category>
+      <category name="Text" colour="#5ba55b">
+        <block type="text">
+          <field name="TEXT"></field>
+        </block>
+        <block type="text_join">
+          <mutation items="2"></mutation>
+        </block>
+        <block type="text_append">
+          <field name="VAR" id="sWNeB!rGsnM6B\`o?Oy:I">item</field>
+          <value name="TEXT">
+            <shadow type="text">
+              <field name="TEXT"></field>
+            </shadow>
+          </value>
+        </block>
+        <block type="text_isEmpty">
+          <value name="VALUE">
+            <shadow type="text">
+              <field name="TEXT"></field>
+            </shadow>
+          </value>
+        </block>
+        <block type="text_indexOf">
+          <field name="END">FIRST</field>
+          <value name="VALUE">
+            <block type="variables_get">
+              <field name="VAR" id="HlDf|hFCk#=p}+JmzR2+">text</field>
+            </block>
+          </value>
+          <value name="FIND">
+            <shadow type="text">
+              <field name="TEXT">abc</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="text_changeCase">
+          <field name="CASE">UPPERCASE</field>
+          <value name="TEXT">
+            <shadow type="text">
+              <field name="TEXT">abc</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="text_print">
+          <value name="TEXT">
+            <shadow type="text">
+              <field name="TEXT">abc</field>
+            </shadow>
+          </value>
+        </block>
+      </category>
+      <category name="Variables" colour="#a5745b" custom="VARIABLE"></category>
+      <category name="Lists" colour="#a5745b">
+        <block type="lists_create_with">
+          <mutation items="0"></mutation>
+        </block>
+        <block type="lists_repeat">
+          <value name="NUM">
+            <shadow type="math_number">
+              <field name="NUM">5</field>
+            </shadow>
+          </value>
+        </block>
+        <block type="lists_length"></block>
+        <block type="lists_isEmpty"></block>
+        <block type="lists_indexOf">
+          <field name="END">FIRST</field>
+          <value name="VALUE">
+            <block type="variables_get">
+              <field name="VAR" id="}!Pr9@E_xu^L@{z[:5CY">list</field>
+            </block>
+          </value>
+        </block>
+        <block type="lists_getIndex">
+          <mutation statement="false" at="true"></mutation>
+          <field name="MODE">GET</field>
+          <field name="WHERE">FROM_START</field>
+          <value name="VALUE">
+            <block type="variables_get">
+              <field name="VAR" id="}!Pr9@E_xu^L@{z[:5CY">list</field>
+            </block>
+          </value>
+        </block>
+        <block type="lists_getSublist">
+          <mutation at1="true" at2="true"></mutation>
+          <field name="WHERE1">FROM_START</field>
+          <field name="WHERE2">FROM_START</field>
+          <value name="LIST">
+            <block type="variables_get">
+              <field name="VAR" id="}!Pr9@E_xu^L@{z[:5CY">list</field>
+            </block>
+          </value>
+        </block>
+      </category>
+      <category name="Custom" colour="260">
+        <block type="change_stage_bg"></block>
+      </category>
+    </xml>
+
+    <script>
+      function start() {
+        var workspace = Blockly.inject('blocklyDiv', {
+          toolbox: document.getElementById('toolbox'),
+          horizontalLayout: true,
+          toolboxPosition: 'end'
+        });
+
+        workspace.addChangeListener(updateStage);
+      }
+
+      function updateStage(event) {
+        var code = Blockly.JavaScript.workspaceToCode(workspace);
+        eval(code); // Evaluate generated code
+      }
+
+      Blockly.Blocks['change_stage_bg'] = {
+        init: function() {
+          this.jsonInit({
+            "type": "change_stage_bg",
+            "message0": "change stage bg to %1",
+            "args0": [
+              {
+                "type": "input_value",
+                "name": "NAME",
+                "check": "String"
+              }
+            ],
+            "previousStatement": null,
+            "nextStatement": null,
+            "colour": 260,
+            "tooltip": "",
+            "helpUrl": ""
+          });
+
+          this.setOnChange(function(event) {
+            if (!this.workspace || this.workspace.isDragging() || event.type != Blockly.Events.BLOCK_CHANGE) {
+              return;  // Don't change the stage while dragging blocks or on events other than block changes
+            }
+            if (event.blockId === this.id && event.name === "NAME") {
+              var color = this.getFieldValue('NAME');
+              document.getElementById('stage').style.backgroundColor = color;
+            }
+          });
+        }
+      };
+    </script>
+  </body>
+</html>
