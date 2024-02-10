@@ -43,3 +43,17 @@
   margin-top: -55px;
   font-size: 20px;
 }
+
+#TextI {
+  resize: none;
+}
+
+.linkButText {
+  color: black;
+  text-decoration: none;
+}
+
+.none-bullets {
+  list-style-type: none;
+  text-decoration: none;
+}

@@ -3,7 +3,7 @@ console.log("Exit Now! This part is used for devolopers.");
 
 function whatsNew() {
     var News;
-    News = '<h2>Whats New?</h2><p>The bark editor is being created in.</p>';
+    News = '<h2>Whats New?</h2><p>The Bark Editor has a very early alpha! It is being made with Blockly!</p>';
     document.getElementById("boxChanger").innerHTML = News;
 }
 
@@ -13,7 +13,7 @@ function recentCom() {
         .then(commits => {
             var Commits = '<h2>Recent Commits</h2><ul>';
             commits.slice(0, 5).forEach(commit => {
-                Commits += `<li><a href="${commit.html_url}" class="link">${commit.commit.message}</a></li>`;
+                Commits += `<li class="none-bullets"><a href="${commit.html_url}" class="link">${commit.commit.message}</a></li>`;
             });
             Commits += '</ul>';
             document.getElementById("boxChanger").innerHTML = Commits;
@@ -23,7 +23,6 @@ function recentCom() {
             document.getElementById("boxChanger").innerHTML = '<h2>Recent Commits</h2><p>Error fetching commits. Please try again later.</p>';
         });
 }
-
 
 function randomTxt() {
     //geeksforgeeks.org for the random text generator.
@@ -36,7 +35,7 @@ function randomTxt() {
     "Why not go <a href='https://www.scratchfoundation.org/donate' class='link'>donate</a> to scratch?", "Go check out snail-ide!", ":amongus:", 
     "This text has a 0.07 chance of apearing", "So <em>many</em> breeds of dogs", "Check out our <a href='https://github.com/mariocraft987/bark.github.io/' class='link'>github</a>", 
     "Funfact: You are waiting for something to load", "Emojis are added! :party:", "Baek is created with html and javascript", "Bark needs a custom domain", 
-    "Go check out Goldot", "Svelte is html but enchanted", ":dog::cat::banana:", "Come see our <a href='https://github.com/Bark-programming' class='link' >orginization</a>", "e" ];
+    "Go check out Goldot", "Svelte is html but enchanted", ":dog::cat::banana:", "Come see our <a href='https://github.com/Bark-programming' class='link' >orginization</a>", "e"];
 
     wrd = (arr[(Math.floor(Math.random() * arr.length))]);
     document.getElementById("randomWord").innerHTML = wrd;
