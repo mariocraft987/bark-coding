@@ -16,7 +16,7 @@ function recentCom() {
                 Commits += `<li class="none-bullets"><a href="${commit.html_url}" class="link">${commit.commit.message}</a></li>`;
             });
             Commits += '</ul>';
-            document.getElementById("boxChanger").innerHTML = Commits;
+            document.getElementById("boxChanger").innerHTML = censor(Commits + "<br/>");
         })
         .catch(error => {
             console.error('Error fetching commits:', error);
