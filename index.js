@@ -8,6 +8,7 @@ function whatsNew() {
 }
 
 function recentCom() {
+    document.getElementById("boxChanger").innerHTML = "loading...<br/><br/>";
     fetch('https://api.github.com/repos/Mariocraft987/bark.github.io/commits')
         .then(response => response.json())
         .then(commits => {
