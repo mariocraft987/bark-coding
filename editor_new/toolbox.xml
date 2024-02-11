@@ -1,5 +1,5 @@
 <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
-  <category name="Logic" colour="#5b80a5">
+  <category name="Logic" colour="#3399ff">
     <block type="controls_if"></block>
     <block type="logic_compare">
       <field name="OP">EQ</field>
@@ -14,7 +14,7 @@
     <block type="logic_null"></block>
     <block type="logic_ternary"></block>
   </category>
-  <category name="Loops" colour="#5ba55b">
+  <category name="Loops" colour="#20e374">
     <block type="controls_repeat_ext">
       <value name="TIMES">
         <shadow type="math_number">
@@ -47,7 +47,7 @@
       <field name="VAR" id="FegKP.X,(A|]G*?OeW.k">j</field>
     </block>
   </category>
-  <category name="Math" colour="#5b67a5">
+  <category name="Math" colour="#1b85d1">
     <block type="math_number">
       <field name="NUM">0</field>
     </block>
@@ -113,7 +113,7 @@
       </value>
     </block>
   </category>
-  <category name="Text" colour="#5ba55b">
+  <category name="Text" colour="#2fe3f7">
     <block type="text">
       <field name="TEXT"></field>
     </block>
@@ -164,10 +164,10 @@
       </value>
     </block>
   </category>
-  <category name="Physics" colour="#5ba58c">
+  <category name="Physics" colour="#8529c2">
     <block type="physics"></block>
   </category>
-  <category name="Variables" colour="#a5745b" custom="VARIABLE"></category>
+  <category name="Variables" colour="f2461b" custom="VARIABLE"></category>
   <category name="Lists" colour="#a5745b">
     <block type="lists_create_with">
       <mutation items="0"></mutation>
