@@ -79,3 +79,24 @@ button.buttonFrBx:hover {
   background-color: rgb(120, 188, 255);
   border-radius: 5px;
 }
+
+.dark-mode-button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 10px;
+}
+
+.dark-mode-button:hover {
+  background-color: blue;
+  border-radius: 5px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.dark-mode-button img {
+  width: 25px;
+  height: 25px;
+}
