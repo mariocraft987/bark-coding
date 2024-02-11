@@ -6,11 +6,19 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/png">
   <link rel="stylesheet" href="more/Bluedodger.css">
   <link rel="stylesheet" href="more/Other.css">
+
+  <!-- Define styles for dark mode button -->
   <style>
-    /* Add dark mode styles here */
-    body.dark-mode {
-      background-color: #333;
-      color: #fff;
+    .dark-mode-button {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+    }
+
+    .dark-mode-button img {
+      width: 25px;
+      height: 25px;
     }
   </style>
 </head>
@@ -18,16 +26,15 @@
 
 <div class="navbar">
   <a href="home.html"><img src="src/images/Logo.svg" alt="Bark" width="25" height="25" ></a>
-  <!-- Dark mode button with icon -->
-  <button id="darkModeToggle" class="right" style="margin-left: 10px;">
-    <img src="https://editor.snail-ide.com/static/assets/90e939d170002c61a50116ed55763b19.svg" alt="Dark Mode" width="20" height="20">
-  </button>
   <a href="editor.html">Create</a>
   <a href="explore.html">Explore</a>
   <a href="ideas.html">ideas</a>
   <a href="about.html">About</a>
   <a href="login.html" class="right">Sign in</a>
   <a href="signup.html" class="right">Join bark</a>
+  
+  <!-- Dark mode button -->
+  <button class="dark-mode-button" onclick="toggleDarkMode()"><img src="https://editor.snail-ide.com/static/assets/90e939d170002c61a50116ed55763b19.svg" alt="Dark Mode"></button>
 </div>
 
 <div style="float: left; margin: 8px;" class="box">
@@ -46,35 +53,14 @@
 </div>
 
 <script>
-  // Function to toggle dark mode
+  // JavaScript function to toggle dark mode
   function toggleDarkMode() {
     const body = document.body;
-    body.classList.toggle('dark-mode');
-    // Save dark mode state to local storage
-    const isDarkMode = body.classList.contains('dark-mode');
-    localStorage.setItem('darkMode', isDarkMode);
+    body.classList.toggle("dark-mode");
   }
-
-  // Function to initialize dark mode based on local storage
-  function initializeDarkMode() {
-    const isDarkMode = localStorage.getItem('darkMode') === 'true';
-    const body = document.body;
-    if (isDarkMode) {
-      body.classList.add('dark-mode');
-    } else {
-      body.classList.remove('dark-mode');
-    }
-  }
-
-  // Attach event listener to dark mode toggle button
-  const darkModeToggle = document.getElementById('darkModeToggle');
-  darkModeToggle.addEventListener('click', toggleDarkMode);
-
-  // Initialize dark mode when the page loads
-  window.addEventListener('load', initializeDarkMode);
 </script>
 
-</body>
 <script src="index.js"></script>
 <script src="src/scripts/censoring.js"></script>
+</body>
 </html>
