@@ -126,6 +126,7 @@
       </category>
       <category name="Movment" colour="#3399ff">
         <block type="movement_move"></block>
+        <block type="movement_moveback"></block>
       </category>
       <category name="Style" colour="#cd17ff">
         <block type="change_stage_bg"></block>
@@ -386,7 +387,21 @@
             "message0": "move",
             "previousStatement": null,
             "nextStatement": null,
-            "colour": 260,
+            "colour": 230,
+            "tooltip": "",
+            "helpUrl": ""
+          });
+        }
+      };
+
+            Blockly.Blocks['movement_moveback'] = { // Moves sprite back
+        init: function() {
+          this.jsonInit({
+            "type": "movement_moveback",
+            "message0": "move back",
+            "previousStatement": null,
+            "nextStatement": null,
+            "colour": 230,
             "tooltip": "",
             "helpUrl": ""
           });
