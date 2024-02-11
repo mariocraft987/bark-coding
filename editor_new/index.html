@@ -109,6 +109,7 @@
       style="display: none"
     >
       <category name="Logic" colour="#3399ff">
+        <block type="onstart"></block>
         <block type="controls_if"></block>
         <block type="logic_compare">
           <field name="OP">EQ</field>
@@ -125,9 +126,15 @@
       </category>
       <category name="Style" colour="#cd17ff">
         <block type="change_stage_bg"></block>
+        <block type="colour_picker">
+        <field name="COLOUR">#ff0000</field>
+        </block>
+        <block type="colour_random"/>
+        <block type="colour_rgb">
+        <value name="RED">
+        <shadow type="math_number">
+        <field name="NUM">100</field>
         <block type="next_costume"></block>
-        <block type="show_me"></block>
-        <block type="hide_me"></block>
       </category>
       <category name="Loops" colour="#20e374">
         <block type="controls_repeat_ext">
@@ -342,25 +349,17 @@
       }
 
       Blockly.Blocks['change_stage_bg'] = {
-        init: function() {
-          this.jsonInit({
-            "type": "change_stage_bg",
-            "message0": "change stage bg to %1",
-            "args0": [
-              {
-                "type": "input_value",
-                "name": "NAME",
-                "check": "String"
-              }
-            ],
-            "previousStatement": null,
-            "nextStatement": null,
-            "colour": 260,
-            "tooltip": "",
-            "helpUrl": ""
-          });
-        }
-      };
+  init: function() {
+    this.appendDummyInput()
+        .appendField("change stage bg to")
+        .appendField(new Blockly.FieldColour("#ff0000"), "NAME");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(260);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
 
       Blockly.Blocks['next_costume'] = { // Moved this block outside the previous block
         init: function() {
@@ -375,6 +374,18 @@
           });
         }
       };
+      Blockly.Blocks['onstart'] = {
+  init: function() {
+    this.appendStatementInput("start")
+        .setCheck(null)
+        .appendField("when")
+        .appendField(new Blockly.FieldImage("https://www.gstatic.com/codesite/ph/images/star_on.gif", 15, 15, { alt: "*", flipRtl: "FALSE" }))
+        .appendField("clicked");
+    this.setColour(20);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
       
       Blockly.Blocks['change_stage_bg'].setOnChange(function(event) {
         if (!this.workspace || this.workspace.isDragging() || event.type != Blockly.Events.BLOCK_CHANGE) {
