@@ -1,20 +1,21 @@
 # Bark
 Created by mariocraft987 and other devolopers, we have bark.
 
-Bark is a mod of Turbowarp and Scratch with new extensions. If you know <b>good</b> html and javascript then you can help us on creating bark.
-It will have a working editor made from javascript and some mods and extensions from some contributers,
-all credit to scratch and turbowarp, and penguinmod. &#128054;
+Bark is a new programming language made in scratch. If you know <b>good</b> html and javascript, then you can help us on creating bark.
+It will have a working editor made from javascript and stuff from some contributers,
+all credit goes to scratch and turbowarp, and penguinmod. &#128054;
 <hr>
 
 ## Jobs
 Users Wanted for jobs.<br/>
 Jobs: <br/>
 - Assets: 2/3<br/>
-- Programmers: 1/10<br/>
+- Programmers: 2/10<br/>
 - Donators: 0/3<br/>
 
+## Job Registering
 To be apart of Barks Devlopment then please comment `Job Register 4543` in <a href="https://github.com/Mariocraft987/bark.github.io/commit/5644df6ebc5aa7ea7b611141a265ff7c17712c5e">this commit</a>
-<br/>Heres the link to <a href="https://mariocraft987.github.io/bark.github.io/Home.html">The Bark Website</a>
+<br/>Heres the link to <a href="https://mariocraft987.github.io/bark.github.io/Home.html">The Website.</a>
 
 <hr>
 
