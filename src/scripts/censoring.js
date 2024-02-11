@@ -11,8 +11,9 @@ function t(length) {
 
 function censor(text) {
     return String(text)
-        .replace(/(shitting)+/gim, t(8))
-        .replace(/(fucking|shut up)+/gim, t(7))
-        .replace(/(bitch|pussy)+/gim, t(5))
-        .replace(/(fuck|shit|fock)+/gim, t(4))
+        .replaceAll(/(shitting)+/gim, t(8))
+        .replaceAll(/(fucking|shut up)+/gim, t(7))
+        .replaceAll(/(bitch|pussy)+/gim, t(5))
+        .replaceAll(/(fuck|shit|fock)+/gim, t(4))
+        .replaceAll(/(ass|sex|fok)+/gim, t(4))
 }
