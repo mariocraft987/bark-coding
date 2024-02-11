@@ -80,6 +80,12 @@ button.buttonFrBx:hover {
   border-radius: 5px;
 }
 
+code {
+  font-family: monospace;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
 .dark-mode-button {
   background-color: transparent;
   border: none;
