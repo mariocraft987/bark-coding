@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Bark - Create, Code, Play</title>
-    <link rel="shortcut icon" href="favicon.ico" type="image/png">
-    <link rel="stylesheet" href="more/Bluedodger.css">
-    <link rel="stylesheet" href="more/Other.css">
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <title>Bark - Create, Code, Play</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/png">
+  <link rel="stylesheet" href="more/Bluedodger.css">
+  <link rel="stylesheet" href="more/Other.css">
+  <style>
+    /* Add dark mode styles here */
+    body.dark-mode {
+      background-color: #333;
+      color: #fff;
+    }
+  </style>
+</head>
 <body>
 
 <div class="navbar">
   <a href="home.html"><img src="src/images/Logo.svg" alt="Bark" width="25" height="25" ></a>
+  <!-- Dark mode button with icon -->
+  <button id="darkModeToggle" class="right" style="margin-left: 10px;">
+    <img src="https://editor.snail-ide.com/static/assets/90e939d170002c61a50116ed55763b19.svg" alt="Dark Mode" width="20" height="20">
+  </button>
   <a href="editor.html">Create</a>
   <a href="explore.html">Explore</a>
   <a href="ideas.html">ideas</a>
@@ -18,19 +29,51 @@
   <a href="login.html" class="right">Sign in</a>
   <a href="signup.html" class="right">Join bark</a>
 </div>
- <div style="float: left; margin: 8px;" class="box">
+
+<div style="float: left; margin: 8px;" class="box">
   <p>Bark</p>
   <p>is a beta website created with html and javascript. <img src='src/emojis/smiley.svg' alt="smiley emoji" width="20" height="20"></p>
   <p>Created by <a class="link" href="https://github.com/mariocraft987">mariocraft987</a>.</p>
- </div>
- <div style="float: right; margin-right: 8px; margin-top: 8px;" class="box">
+</div>
+
+<div style="float: right; margin-right: 8px; margin-top: 8px;" class="box">
   <span id="boxChanger">
     <h2>Whats New?</h2>
     <p>The Bark Editor has a very early alpha! It is being made with Blockly!</p>
   </span>
-    <button class="buttonFrBx" onclick="whatsNew()">Whats new?</button>
-    <button class="buttonFrBx" onclick="recentCom()">Recent commits</button>
-  </div>
+  <button class="buttonFrBx" onclick="whatsNew()">Whats new?</button>
+  <button class="buttonFrBx" onclick="recentCom()">Recent commits</button>
+</div>
+
+<script>
+  // Function to toggle dark mode
+  function toggleDarkMode() {
+    const body = document.body;
+    body.classList.toggle('dark-mode');
+    // Save dark mode state to local storage
+    const isDarkMode = body.classList.contains('dark-mode');
+    localStorage.setItem('darkMode', isDarkMode);
+  }
+
+  // Function to initialize dark mode based on local storage
+  function initializeDarkMode() {
+    const isDarkMode = localStorage.getItem('darkMode') === 'true';
+    const body = document.body;
+    if (isDarkMode) {
+      body.classList.add('dark-mode');
+    } else {
+      body.classList.remove('dark-mode');
+    }
+  }
+
+  // Attach event listener to dark mode toggle button
+  const darkModeToggle = document.getElementById('darkModeToggle');
+  darkModeToggle.addEventListener('click', toggleDarkMode);
+
+  // Initialize dark mode when the page loads
+  window.addEventListener('load', initializeDarkMode);
+</script>
+
 </body>
 <script src="index.js"></script>
 <script src="src/scripts/censoring.js"></script>
