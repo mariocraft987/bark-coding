@@ -13,8 +13,8 @@ function recentCom() {
         .then(response => response.json())
         .then(commits => {
             var Commits = '<h2>Recent Commits</h2><ul>';
-            commits.slice(0, 5).forEach(commit => {
-                Commits += `<li class="none-bullets"><a href="${commit.html_url}" class="link">${commit.commit.message}</a></li>`;
+            commits.slice(0, 6).forEach(commit => {
+                Commits += `<li class="none-bullets"><sup><a href="https://github.com/${commit.author.login}"><img style="border-radius:25px;margin-bottom:-10px;" src="https://github.com/${commit.author.login}.png" width="21"></a></sup><a href="${commit.html_url}" class="link">${commit.commit.message}</a></li>`;
             });
             Commits += '</ul>';
             document.getElementById("boxChanger").innerHTML = censor(Commits + "<br/>");
