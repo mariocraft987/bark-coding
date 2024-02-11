@@ -3,8 +3,7 @@
 * <b>make blocks vertical and look more like scratch 3 (anyone)</b>
 * <b>show TODO as a license (anyone)</b>
 * <b>Turn this Bing AI code (I can't code - rubiidev-18)
-* ```
-  
+* ``` 
 * <!-- New block to set costume image -->
     <script>
         function setCostumeImage(imageLink) {
