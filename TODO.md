@@ -21,5 +21,6 @@
         }
     </script> 
     Into working blockly blocks (anyone)</b>
+    * <b>Add sun icon for light/dark mode button (nmsderp)</b>
 ## TODO Template
 * <b>todo item template (anyone/certain username)</b>
