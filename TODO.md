@@ -2,8 +2,7 @@
 * <b>Fix github pages workflow (anyone)</b>
 * <b>make blocks vertical and look more like scratch 3 (anyone)</b>
 * <b>show TODO as a license (anyone)</b>
-* <b>Turn this Bing AI code (I can't code - rubiidev-18)
-* ``` 
+* <b>Turn this Bing AI code (I can't code - rubiidev-18) 
 * <!-- New block to set costume image -->
     <script>
         function setCostumeImage(imageLink) {
@@ -21,6 +20,6 @@
             document.body.style.backgroundImage = `url(${imageLink})`;
         }
     </script> 
-    ``` Into working blockly blocks (anyone)</b>
+    Into working blockly blocks (anyone)</b>
 ## TODO Template
 * <b>todo item template (anyone/certain username)</b>
