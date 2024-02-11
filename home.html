@@ -7,20 +7,6 @@
   <link rel="stylesheet" href="more/Bluedodger.css">
   <link rel="stylesheet" href="more/Other.css">
 
-  <!-- Define styles for dark mode button -->
-  <style>
-    .dark-mode-button {
-      background-color: transparent;
-      border: none;
-      padding: 0;
-      cursor: pointer;
-    }
-
-    .dark-mode-button img {
-      width: 25px;
-      height: 25px;
-    }
-  </style>
 </head>
 <body>
 
@@ -33,8 +19,6 @@
   <a href="login.html" class="right">Sign in</a>
   <a href="signup.html" class="right">Join bark</a>
   
-  <!-- Dark mode button -->
-  <button class="dark-mode-button" onclick="toggleDarkMode()"><img src="https://editor.snail-ide.com/static/assets/90e939d170002c61a50116ed55763b19.svg" alt="Dark Mode"></button>
 </div>
 
 <div style="float: left; margin: 8px;" class="box">
@@ -52,13 +36,6 @@
   <button class="buttonFrBx" onclick="recentCom()">Recent commits</button>
 </div>
 
-<script>
-  // JavaScript function to toggle dark mode
-  function toggleDarkMode() {
-    const body = document.body;
-    body.classList.toggle("dark-mode");
-  }
-</script>
 
 <script src="index.js"></script>
 <script src="src/scripts/censoring.js"></script>
