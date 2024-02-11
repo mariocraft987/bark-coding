@@ -1,5 +1,5 @@
 <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
-  <category name="Logic" colour="#3399ff">
+  <category name="Logic" colour="#f5ca20">
     <block type="controls_if"></block>
     <block type="logic_compare">
       <field name="OP">EQ</field>
@@ -14,6 +14,8 @@
     <block type="logic_null"></block>
     <block type="logic_ternary"></block>
   </category>
+    <category name="Movment" colour="#3399ff">
+    </category>
   <category name="Loops" colour="#20e374">
     <block type="controls_repeat_ext">
       <value name="TIMES">
