@@ -1,7 +1,6 @@
 2024
 Todo list for Bark.
 
-
 Create the block Editor
 Custom Domains
 Working forms sending data
@@ -10,3 +9,33 @@ More Enhanced look
 
 Working commits box
 Extensions page
+
+Fix github pages workflow 
+make blocks vertical and look more like scratch 3
+Turn this Bing AI code 
+
+
+<!--
+New block to set costume image
+    <script>
+        function setCostumeImage(imageLink) {
+            // Your logic to set the costume image goes here
+            // For example:
+            document.getElementById('costume').src = imageLink;
+        }
+    </script>
+
+    New block to set backdrop image
+    <script>
+        function setBackdropImage(imageLink) {
+            // Your logic to set the backdrop image goes here
+            // For example:
+            document.body.style.backgroundImage = `url(${imageLink})`;
+        }
+    </script> 
+    -->
+
+    
+  Into working blockly blocks
+    
+  Add sun icon for light/dark mode button
