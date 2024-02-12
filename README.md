@@ -1,5 +1,5 @@
 # Bark
-Created by mariocraft987 and other devolopers, we have Bark.
+Created by mariocraft987 and other devolopers, we have bark.
 
 Bark is a new programming language made from scratch. If you know <b>good</b> html and javascript, then you can help us on creating bark.
 It will have a working editor made from javascript and stuff from some contributers,
