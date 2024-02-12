@@ -86,6 +86,11 @@ code {
   border-radius: 4px;
 }
 
+body.dark-mode {
+  background-color: #2a2a2a;
+  color: #fff;
+}
+
 .dark-mode-button {
   background-color: transparent;
   border: none;

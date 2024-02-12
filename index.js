@@ -1,8 +1,8 @@
 /* Some basic scripts created in javascript to work the website, and make it interactive. */
 console.log("Exit Now! This part is used for devolopers.");
 
-    content = '<div class="navbar"><a href="home.html"><img src="src/images/Logo.svg" alt="Bark" width="25" height="25" ></a><a href="editor.html">Create</a><a href="explore.html">Explore</a>'
-    content += '<a href="ideas.html">ideas</a><a href="about.html">About</a><a href="login.html" class="right">Sign in</a><a href="signup.html" class="right">Join bark</a>'
+    content = '<div class="navbar"><a href="home.html"><img src="src/images/Logo.svg" alt="Bark" width="25" height="25" ></a><a href="editor.html">create</a><a href="explore.html">explore</a>'
+    content += '<a href="ideas.html">ideas</a><a href="about.html">about</a><a href="login.html" class="right">sign in</a><a href="signup.html" class="right">join bark</a>'
     content += '<button class="dark-mode-button" onclick="toggleDarkMode()"><img src="https://editor.snail-ide.com/static/assets/90e939d170002c61a50116ed55763b19.svg" alt="Dark Mode"></button></div>'
     document.getElementById('navbar').innerHTML = content;
 
@@ -19,7 +19,7 @@ function recentCom() {
         .then(commits => {
             var Commits = '<h2>Recent Commits</h2><ul>';
             commits.slice(0, 4).forEach(commit => {
-                Commits += `<div title="${commit.author.login}: ${commit.commit.message}"><li class="none-bullets"><a href="https://github.com/${commit.author.login}"><img style="border-radius:25px;margin-bottom:-3px;" src="https://github.com/${commit.author.login}.png" width="21"></a><a href="${commit.html_url}" class="link">${commit.commit.message}</a></li></div>`;
+                Commits += `<div title="${commit.author.login}: ${commit.commit.message}"><li><a href="https://github.com/${commit.author.login}"><img style="border-radius:25px;margin-bottom:-3px;" src="https://github.com/${commit.author.login}.png" width="21"></a><a href="${commit.html_url}">${commit.commit.message}</a></li></div>`;
             });
             Commits += '</ul>';
             document.getElementById("boxChanger").innerHTML = censor(Commits + "<br/>");
@@ -66,7 +66,7 @@ function jobRegister() {
 
     /* @mnsderp for the data saving scripts */
 
-    // Function to toggle dark mode
+  // Function to toggle dark mode
   function toggleDarkMode() {
     const body = document.body;
     body.classList.toggle('dark-mode');
@@ -92,3 +92,4 @@ function jobRegister() {
 
   // Initialize dark mode when the page loads
   window.addEventListener('load', initializeDarkMode);
+  
