@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+/*CSS styles for Bark, without them Bark would not be structured correctly*/
+
 /* Used for other styles */
 .blockbar {
     background-color: #e5e4e4; 
@@ -34,7 +37,7 @@ a {
   background-color: dodgerBlue;
   padding: 35px;
   font-size: 20pt;
-  font-family: Tahoma, sans-serif;
+  font-family: "Montserrat", Tahoma, sans-serif;
   text-align: center;
  }
 
