@@ -15,5 +15,5 @@ function censor(text) {
         .replaceAll(/(fucking|shut up)+/gim, t(7))
         .replaceAll(/(bitch|pussy)+/gim, t(5))
         .replaceAll(/(fuck|shit|fock)+/gim, t(4))
-        .replaceAll(/(ass|sex|fok)+/gim, t(4))
+        .replaceAll(/(ass|sex|fok)+/gim, t(3))
 }
