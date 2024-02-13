@@ -1,7 +1,7 @@
 /* Some basic scripts created in javascript to work the website, and make it interactive. */
 console.log("Exit Now! This part is used for devolopers.");
 
-    content = '<div class="navbar"><a href="home.html"><img src="src/images/Logo.svg" alt="Bark" width="25" height="25" ></a><a href="editor.html">create</a><a href="explore.html">explore</a>'
+    content = '<div class="navbar"><a href="home.html"><img src="src/images/Logo.svg" alt="Bark" width="25" height="25" ></a><a href="editor.html">create</a><a href="explore.html">explore</a><a href="static/todolist.txt">todo</a>'
     content += '<a href="ideas.html">ideas</a><a href="about.html">about</a><a href="#">discuss</a><a href="login.html" class="right">sign in</a><a href="signup.html" class="right">join bark</a>'
     content += '<button class="dark-mode-button" onclick="toggleDarkMode()"><img src="https://editor.snail-ide.com/static/assets/90e939d170002c61a50116ed55763b19.svg" alt="Dark Mode"></button></div>'
     document.getElementById('navbar').innerHTML = content;
