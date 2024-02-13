@@ -10,9 +10,10 @@ More Enhanced look
 Working commits box
 Extensions page
 
-Fix github pages workflow 
+
 make blocks vertical and look more like scratch 3
-Turn this Bing AI code 
+Turn this Bing AI code Into working blockly blocks
+
 
 
 <!--
@@ -34,8 +35,4 @@ New block to set costume image
         }
     </script> 
     -->
-
-    
-  Into working blockly blocks
-    
-  Add sun icon for light/dark mode button
+Add sun icon for light/dark mode button
