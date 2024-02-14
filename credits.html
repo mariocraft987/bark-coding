@@ -15,10 +15,11 @@
 </div>
 <script>
   /* Add a github username to link them in the credits */
-  const users = ["mariocraft987", "nmsderp", "Rubiidev-18", "ShinjitsuNoGyarusa", "theOVERGOD12"]
+  const slotB= ["mariocraft987", "nmsderp", "Rubiidev-18", "qwertyytheartist", "ShinjitsuNoGyarusa", "theOVERGOD12"]
+  const slotA = ["mariocraft987", "nmsderp", "Rubiidev-18", "qwertyytheartist"]
   i = 0;
-  while (i < users.length) {
-    var username = users[i];
+  while (i < slotA.length) {
+    var username = slotA[i];
     document.getElementById('credits').innerHTML += '<a href="https://github.com/'+username+'"><img src="https://github.com/'+username+'.png" height="60" width="60"><p class="CreditsPT">'+username+'</p></a>';
     i++;
   }
