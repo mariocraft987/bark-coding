@@ -5,7 +5,7 @@ Create the block Editor
 Custom Domains
 Working forms sending data
 Server Databases
-More Enhanced look
+More Enhanced look - done! :)
 
 Working commits box
 Extensions page

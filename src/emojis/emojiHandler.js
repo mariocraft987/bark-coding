@@ -4,7 +4,7 @@ let emojiHeight = 25;
 
 
 function setupText() {
-    let text = document.getElementById("textI").value; 
+    let text = document.innerHTML
     let response = text
     .replaceAll(":blank:", "<img src='src/emojis/blank.svg' alt='blank' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     .replaceAll(":smiley:", "<img src='src/emojis/smiley.svg' alt='smiley' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
@@ -25,5 +25,5 @@ function setupText() {
     .replaceAll(":jealous:", "<img src='src/emojis/jealous.svg' alt='jealous' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     .replaceAll(":smallsmile:", "<img src='src/emojis/smallsmile.svg' alt='small smile' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
 
-    document.getElementById("textbox").innerHTML = censor(response);
+    document.innerHTML = censor(response);
 }
