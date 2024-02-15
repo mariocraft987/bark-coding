@@ -3,18 +3,14 @@
   <head>
     <meta charset="utf-8" />
     <title>Bark - Editor</title>
-    <link rel="shortcut icon" href="https://mariocraft987.github.io/bark.github.io/favicon.ico">
+    <link rel="shortcut icon" href="/favicon.ico">
     <script src="https://unpkg.com/blockly/blockly.min.js"></script>
-    <script src="index.js"></script>
     
     <script src="custom_category_es6.js"></script>
     <script src="toolbox_label_es6.js"></script>
-    <link rel="stylesheet" href="toolbox_style.css" />
-    <link rel="stylesheet" href="https://mariocraft987.github.io/bark.github.io/more/Bluedodger.css">
-    <link rel="stylesheet" href="https://mariocraft987.github.io/bark.github.io/more/Other.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <link rel="stylesheet" lang="css" href="/more/Bluedodger.css">
     <style>
+      @import url(https://fonts.googleapis.com/css?family=Montserrat);
       html,
       body {
         height: 100%;
@@ -24,50 +20,34 @@
 
       body {
         background-color: #fff;
-        font-family: sans-serif;
-        display: flex;
-        flex-direction: column; /* Changed to column */
       }
 
       .navbar {
         overflow: hidden;
-        background-color: DodgerBlue; /* Changed to use custom color */
-        z-index: 999; /* Ensure navbar is on top */
-        width: 100%; /* Ensure full width */
-        position: fixed; /* Fix the navbar position */
-        top: 0; /* Align navbar to the top */
+        background-color: DodgerBlue;
+        height: 50px;
       }
 
-      .navbar a {
-        float: left;
-        display: block;
-        color: white;
-        text-align: center;
-        padding: 12px 20px;
-        text-decoration: none;
-      }
-
-      .navbar a.right {
-        float: right;
-      }
-
-      .navbar a:hover {
-        background-color: blue; /* Changed to use color */
-        border-radius: 5px;
-        cursor: pointer;
-        color: white;
-      }
       #blocklyDiv {
-        height: calc(100% - 40px); /* Adjusted height to accommodate navbar */
-        width: 100%;
+        height: calc(100% - 50px); /* Adjusted height to accommodate navbar */
+        width: calc(100% - 480px);
+        position: absolute;
+      }
+
+      #blocklyDiv * {
+        transition: 0s;
       }
 
       #stage {
-        height: calc(100% - 40px); /* Adjusted height to accommodate navbar */
-        width: 65%;
-        border-right: 1px solid #ccc;
+        height: 360px;
+        width: 480px;
+        border: 1px solid #ccc;
         padding: 10px;
         box-sizing: border-box;
+        border-radius: 5px;
+        position: absolute;
+        right: 0px;
+        transition: 0s;
       }
 
       #generated-code {
@@ -84,24 +64,44 @@
       .hidden {
         display: none; /* Hide the generated code area */
       }
+
+      .blocklyToolboxDiv {
+        padding: 0px;
+        overflow-y: hidden;
+      }
+
+      .blocklyToolboxDiv[layout="h"] .blocklyToolboxCategory {
+        height: inherit;
+        cursor: pointer;
+        margin: 0px;
+      }
+
+      .blocklyTreeLabel {
+        font: 15px "Montserrat";
+        color: #fff;
+        padding: 8px;
+      }
+
+      .blocklyTreeRowContentContainer img {
+        display: none;
+      }
     </style>
   </head>
 
   <body onload="start()">
     <div class="navbar">
-      <a href="https://mariocraft987.github.io/bark.github.io/home.html"><img src="https://mariocraft987.github.io/bark.github.io/src/images/Logo.svg" alt="Bark" width="25" height="25"></a>
-      <div>
-        <a href="#">save</a>
-        <a href="#">tutorials</a>
-        <a href="#">upload</a>
-      </div>
-      <div>
-        <a class="right" href="https://mariocraft987.github.io/bark.github.io/login.html">sign in</a>
-        <a class="right" href="https://mariocraft987.github.io/bark.github.io/signup.html">join bark</a>
-      </div>
+      <a href="/"><img src="/src/images/Logo.svg" alt="Bark" width="25" height="25"></a>
+      <a href="#">save</a>
+      <a href="#">tutorials</a>
+      <a href="#">upload</a>
+      <a class="dark-mode-button" id="darkModeToggle"><dmbico alt="Dark Mode"></dmbico></a>
+      <a class="right" href="/login.html">sign in</a>
+      <a class="right" href="/signup.html">join bark</a>
     </div>
     <div id="blocklyDiv"></div>
     <div id="stage"></div>
+    <div id="sprites" style="position: absolute; right: 0%; bottom: 0%; width: 480px; height: calc(100% - 410px);"><b>the bark editor is not finished!</b>
+    please be patient, it'll be working soon enough :lol:</div>
 
     <!-- Toolbox Definition -->
     <xml
@@ -125,7 +125,7 @@
         <block type="logic_null"></block>
         <block type="logic_ternary"></block>
       </category>
-      <category name="Movment" colour="#3399ff">
+      <category name="Movement" colour="#3399ff">
         <block type="movement_move"></block>
         <block type="movement_moveback"></block>
       </category>
@@ -433,4 +433,5 @@
       });
     </script>
   </body>
+  <script src="/index.js"></script>
 </html>
