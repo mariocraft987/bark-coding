@@ -180,3 +180,7 @@ xml category {
 * .dark-mode input {
   background-color: #000000;
 }
+
+select {
+  color: #000000;
+}
