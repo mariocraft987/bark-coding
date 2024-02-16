@@ -181,6 +181,6 @@ xml category {
   background-color: #000000;
 }
 
-select {
-  color: #000000;
+* .dark-mode select {
+  background-color: #000000;
 }
