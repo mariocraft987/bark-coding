@@ -6,6 +6,22 @@ It will have a working editor made from javascript and stuff from some contribut
 all credit goes to scratch and turbowarp, and penguinmod. &#128054;
 <hr>
 
+## Scripts
+
+Bark is made from `Html` and  `Javascript`
+here's a sample of our code
+
+```javascript
+function setup() {
+  /* Sets up content for website */
+    var content;
+    content = '<h2>Whats New?</h2><p>The Bark Editor has a very early alpha! It is being made with Blockly!</p>';
+    document.getElementById("boxChanger").innerHTML = content;
+}
+```
+
+<hr>
+
 ## Jobs
 Users Wanted for jobs.<br/>
 Jobs: <br/>
