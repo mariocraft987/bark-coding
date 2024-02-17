@@ -18,7 +18,7 @@ function recentCom() {
         .then(response => response.json())
         .then(commits => {
             var Commits = '<h2>Recent Commits</h2><ul>';
-            commits.slice(0, 4).forEach(commit => {
+            commits.slice(0, 6).forEach(commit => {
                 Commits += `<div title="${commit.author.login}: ${commit.commit.message}"><li><a href="https://github.com/${commit.author.login}"><img style="border-radius:25px;margin-bottom:-3px;" src="https://github.com/${commit.author.login}.png" width="21"></a><a href="${commit.html_url}">${commit.commit.message}</a></li></div>`;
             });
             Commits += '</ul>';
