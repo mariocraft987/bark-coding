@@ -243,6 +243,9 @@
         <block type="text">
           <field name="TEXT"></field>
         </block>
+        <block type="pointdir">
+          <field name="NAME">90</field>
+        </block>
         <block type="text_join">
           <mutation items="2"></mutation>
         </block>
@@ -417,6 +420,19 @@
         .appendField(new Blockly.FieldImage("https://www.gstatic.com/codesite/ph/images/star_on.gif", 15, 15, { alt: "*", flipRtl: "FALSE" }))
         .appendField("clicked");
     this.setColour(20);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+      Blockly.Blocks['pointdir'] = {
+  init: function() {
+    this.appendValueInput("NAME")
+        .setCheck(null)
+        .appendField("point in direction")
+        .appendField(new Blockly.FieldAngle(90), "NAME");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(260);
  this.setTooltip("");
  this.setHelpUrl("");
   }
