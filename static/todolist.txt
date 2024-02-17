@@ -11,7 +11,6 @@ Working commits box
 Extensions page
 
 
-make blocks vertical and look more like scratch 3 - you have to replace the blocks with scratch blocks and port all the blockly blocks tho - rubiidev-18 in the future
 Turn this Bing AI code Into working blockly blocks
 
 
