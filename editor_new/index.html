@@ -114,7 +114,7 @@
         <block type="logic_compare">
           <field name="OP">EQ</field>
         </block>
-        <block type="logic_operation">
+        <block type="logic_operation_mod">
           <field name="OP">AND</field>
         </block>
         <block type="logic_negate"></block>
@@ -469,6 +469,22 @@
           document.getElementById('stage').style.backgroundColor = color;
         }
       });
+
+      Blockly.Blocks['logic_operation_mod'] = {
+        init: function() {
+          this.appendValueInput("1")
+              .setCheck("Boolean");
+          this.appendValueInput("2")
+              .setCheck("Boolean")
+              .setAlign(Blockly.ALIGN_RIGHT)
+              .appendField(new Blockly.FieldDropdown([["and","AND"], ["or","OR"], ["xor","XOR"]]), "operations");
+          this.setInputsInline(true);
+          this.setOutput(true, "Boolean");
+          this.setColour(230);
+       this.setTooltip("");
+       this.setHelpUrl("");
+        }
+      };
     </script>
   </body>
   <script src="/index.js"></script>
