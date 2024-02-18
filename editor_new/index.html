@@ -336,6 +336,9 @@
           </value>
         </block>
       </category>
+      <category name="Misc">
+        <block type="javascript_block"></block>
+      </category>
     </xml>
 
     <script>
@@ -413,30 +416,49 @@
       };
       
       Blockly.Blocks['onstart'] = {
-  init: function() {
-    this.appendStatementInput("start")
-        .setCheck(null)
-        .appendField("when")
-        .appendField(new Blockly.FieldImage("https://www.gstatic.com/codesite/ph/images/star_on.gif", 15, 15, { alt: "*", flipRtl: "FALSE" }))
-        .appendField("clicked");
-    this.setColour(20);
- this.setTooltip("");
- this.setHelpUrl("");
-  }
-};
+        init: function() {
+          this.appendStatementInput("start")
+              .setCheck(null)
+              .appendField("when")
+              .appendField(new Blockly.FieldImage("https://www.gstatic.com/codesite/ph/images/star_on.gif", 15, 15, { alt: "*", flipRtl: "FALSE" }))
+              .appendField("clicked");
+          this.setColour(20);
+       this.setTooltip("");
+       this.setHelpUrl("");
+        }
+      };
+      
       Blockly.Blocks['pointdir'] = {
-  init: function() {
-    this.appendValueInput("NAME")
-        .setCheck(null)
-        .appendField("point in direction")
-        .appendField(new Blockly.FieldAngle(90), "NAME");
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(230);
- this.setTooltip("");
- this.setHelpUrl("");
-  }
-};
+        init: function() {
+          this.appendValueInput("NAME")
+              .setCheck(null)
+              .appendField("point in direction")
+              .appendField(new Blockly.FieldAngle(90), "NAME");
+          this.setPreviousStatement(true, null);
+          this.setNextStatement(true, null);
+          this.setColour(230);
+       this.setTooltip("");
+       this.setHelpUrl("");
+        }
+      };
+      
+      Blockly.Blocks['javascript_block'] = {
+        init: function() {
+          this.appendValueInput("js")
+              .setCheck("String")
+              .appendField("javascript");
+          this.setPreviousStatement(true, null);
+          this.setNextStatement(true, null);
+          this.setColour(315);
+       this.setTooltip("Runs Vanilla Javascript.");
+       this.setHelpUrl("");
+        }
+      };
+      javascript.javascriptGenerator.forBlock['javascript_block'] = function(block, generator) {
+        var value_js = generator.valueToCode(block, 'js', javascript.Order.ATOMIC);
+        var code = value_js+'\n';
+        return code;
+      };
       
       Blockly.Blocks['change_stage_bg'].setOnChange(function(event) {
         if (!this.workspace || this.workspace.isDragging() || event.type != Blockly.Events.BLOCK_CHANGE) {
