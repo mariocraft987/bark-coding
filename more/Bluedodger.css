@@ -184,3 +184,20 @@ xml category {
 * .dark-mode select {
   background-color: #000000;
 }
+
+#projectPlayer {
+  width: 480px;
+  height: 390px;
+  position: absolute;
+  right: 0;
+}
+
+#projectToolbar {
+  height: 30px;
+}
+
+.projectToolbarButton {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
