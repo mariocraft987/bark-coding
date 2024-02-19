@@ -50,6 +50,10 @@
         transition: 0s;
       }
 
+      .stage-left #stage {
+        left: 0px;
+      }
+
       #generated-code {
         height: calc(100% - 40px); /* Adjusted height to accommodate navbar */
         width: 25%;
@@ -85,6 +89,11 @@
       .blocklyTreeRowContentContainer img {
         display: none;
       }
+
+      .stage-left #blocklyDiv {
+        position: absolute;
+        right: 0px;
+      }
     </style>
   </head>
 
@@ -110,6 +119,8 @@
     >
       <category name="Logic" colour="#f5ca20">
         <block type="onstart"></block>
+        <block type="hat_always"></block>
+        <block type="forever"></block>
         <block type="controls_if"></block>
         <block type="logic_compare">
           <field name="OP">EQ</field>
@@ -338,6 +349,7 @@
       </category>
       <category name="Misc" colour="#f20db9">
         <block type="javascript_block"></block>
+        <block type="javascript_return"></block>
       </category>
     </xml>
 
@@ -454,6 +466,7 @@
        this.setHelpUrl("");
         }
       };
+      
       javascript.javascriptGenerator.forBlock['javascript_block'] = function(block, generator) {
         var value_js = generator.valueToCode(block, 'js', javascript.Order.ATOMIC);
         var code = value_js+'\n';
@@ -469,6 +482,34 @@
           document.getElementById('stage').style.backgroundColor = color;
         }
       });
+      
+      Blockly.Blocks['hat_always'] = {
+        init: function() {
+          this.appendDummyInput()
+              .appendField("always do");
+          this.setNextStatement(true, null);
+          this.setColour(20);
+       this.setTooltip("");
+       this.setHelpUrl("");
+        }
+      };
+
+      Blockly.Blocks['javascript_return'] = {
+        init: function() {
+          this.appendValueInput("return")
+              .setCheck("String")
+              .appendField("js return value of");
+          this.setColour(315);
+       this.setTooltip("");
+       this.setHelpUrl("");
+        }
+      };
+      javascript.javascriptGenerator.forBlock['javascript_return'] = function(block, generator) {
+        var value_return = generator.valueToCode(block, 'return', javascript.Order.ATOMIC);
+        // TODO: Assemble javascript into code variable.
+        var code = 'return exec("' + value_return + '")\n';
+        return code;
+      };
     </script>
   </body>
   <script src="/index.js"></script>
