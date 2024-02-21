@@ -1,15 +1,13 @@
 /* Some basic scripts created in javascript to work the website, and make it interactive. */
-console.log("%cSTOP!\n%cThis part is for developers. If you were asked to paste a script here, DON'T! Pasting scripts you don't understand can lead to attackers stealing your information!", "color: red; font-size: 35px;", "color: red; font-size: 20px;");
+console.log("Exit Now! This part is used for devolopers.");
 
     content = '<div class="navbar"><a href="home.html"><img src="src/images/Logo.svg" alt="Bark" width="25" height="25" ></a><a href="editor.html">create</a><a href="explore.html">explore</a>'
-    content += '<a href="ideas.html">ideas</a><a href="about.html">about</a><a href="https://barkprogram.boards.net">discuss</a><a href="login.html" class="right">sign in</a><a href="signup.html" class="right">join bark</a>'
-    content += '<a class="dark-mode-button" id="darkModeToggle"><dmbico alt="Dark Mode"></dmbico></a></div>'
+    content += '<a href="ideas.html">ideas</a><a href="about.html">about</a><a href="#">discuss</a><a href="login.html" class="right">sign in</a><a href="signup.html" class="right">join bark</a>'
+    content += '<button class="dark-mode-button" id="darkModeToggle"><img src="https://editor.snail-ide.com/static/assets/90e939d170002c61a50116ed55763b19.svg" alt="Dark Mode"></button></div>'
     document.getElementById('navbar').innerHTML = content;
 
 function whatsNew() {
-    var News;
-    News = '<h2>Whats New?</h2><p>The Bark Editor has a very early alpha! It is being made with Blockly!</p>';
-    document.getElementById("boxChanger").innerHTML = News;
+    document.getElementById("boxChanger").innerHTML = "<h2>Whats New?</h2><p>The Bark Editor has a very early alpha! It is being made with Blockly!</p>";
 }
 
 function recentCom() {
@@ -19,10 +17,11 @@ function recentCom() {
         .then(commits => {
             var Commits = '<h2>Recent Commits</h2><ul>';
             commits.slice(0, 4).forEach(commit => {
-                Commits += `<div title="${commit.author.login}: ${commit.commit.message}"><li><a href="https://github.com/${commit.author.login}"><img style="border-radius:25px;margin-bottom:-3px;" src="https://github.com/${commit.author.login}.png" width="21"></a><a href="${commit.html_url}" class="link">${commit.commit.message}</a></li></div>`;
+                Commits += `<div title="${commit.author.login}: ${commit.commit.message}"><li><a href="https://github.com/${commit.author.login}"><img style="border-radius:25px;margin-bottom:-3px;" src="https://github.com/${commit.author.login}.png" width="21"></a><a href="${commit.html_url}">${commit.commit.message}</a></li></div>`;
             });
             Commits += '</ul>';
-            document.getElementById("boxChanger").innerHTML = censor(Commits + "<br/>");
+            document.getElementById("boxChanger").innerHTML = censor(Commits + "<br/>")
+            .replace(":trollface:", "<img src='src/emojis/svg/troll.svg'> width='23'")
         })
         .catch(error => {
             console.error('Error fetching commits:', error);
@@ -42,7 +41,7 @@ function randomTxt() {
     "This text has a 0.07 chance of apearing", "So <em>many</em> breeds of dogs", "Check out our <a href='https://github.com/mariocraft987/bark.github.io/' class='link'>github</a>", 
     "Funfact: You are waiting for something to load", "Emojis are added! :party:", "Baek is created with html and javascript", "Bark needs a custom domain", 
     "Go check out Goldot", "Svelte is html but enchanted", ":dog::cat::banana:", "Come see our <a href='https://github.com/Bark-programming' class='link' >orginization</a>", "e", 
-    "See barks todo list <a href='https://mariocraft987.github.io/bark.github.io/static/todolist.txt' class='link'>here</a>", "The bark editor is made with Blockly", "pee pee poo poo"];
+    "See barks todo list <a href='https://mariocraft987.github.io/bark.github.io/static/todolist.txt' class='link'>here</a>", "The bark editor is made with Blockly"];
 
     wrd = (arr[(Math.floor(Math.random() * arr.length))]);
     document.getElementById("randomWord").innerHTML = wrd;
