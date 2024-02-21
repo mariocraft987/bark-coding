@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 /*CSS styles for Bark, without them Bark would not be structured correctly*/
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: White;
@@ -22,14 +23,6 @@ body {
 
 .textCenter {
   text-align: center;
-}
-
-/*CSS styles for Bark, without them Bark would not be structured correctly*/
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: White;
-  font-weight: 500;
-  margin: 0;
 }
 
 .dark-mode {
