@@ -24,21 +24,35 @@ body {
   text-align: center;
 }
 
+/*CSS styles for Bark, without them Bark would not be structured correctly*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: White;
+  font-weight: 500;
+  margin: 0;
+}
+
+.dark-mode {
+  background-color: rgb(29, 29, 29);
+  color: #ffffff;
+}
+
+.textCenter {
+  text-align: center;
+}
+
 .navbar {
   overflow: hidden;
-  background-color: rgb(150, 73, 18);
-  height: 45px;
+  background-color: DodgerBlue;
 }
 
 .navbar a {
   float: left;
   display: block;
   color: white;
-  text-align: left;
-  padding: 10px 16px;
-  text-decoration: bold;
-  height: 100%;
-  line-height: 25px;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
 }
 
 .navbar a.right {
@@ -46,26 +60,25 @@ body {
 }
 
 .navbar a:hover {
-  background-color: #bd5f1c;
+  background-color: blue;
+  border-radius: 5px;
   cursor: pointer;
   color: white;
 }
 
 .box {
   display: inline-block;
-  font-size: 15px;
+  padding: 16px 26px;
+  font-size: 17px;
   text-align: center;
   outline: none;
-  color: #000000;
-  background-color: #d47b3b;
-  border-radius: 7px;
-  width: 96%;
-  margin-top: 10px;
-  margin-left: 2%;
+  color: #1b007a;
+  background-color: rgb(173, 214, 255);
+  border-radius: 10px;
 }
 
 a.link {
-  color: rgb(150, 73, 18);
+  color: dodgerblue;
 }
 
 button.buttonFrBx {
@@ -92,7 +105,6 @@ button.buttonFrBx:hover {
   background-color: rgb(120, 188, 255);
   border-radius: 5px;
 }
-
 code {
   font-family: monospace;
   background: rgba(0, 0, 0, 0.1);
