@@ -70,6 +70,17 @@ body {
   border-radius: 10px;
 }
 
+.box.dark-mode {
+  display: inline-block;
+  padding: 16px 26px;
+  font-size: 17px;
+  text-align: center;
+  outline: none;
+  color: #1b007a;
+  background-color: rgb(173, 214, 255);
+  border-radius: 10px;
+}
+
 a.link {
   color: dodgerblue;
 }
@@ -98,6 +109,7 @@ button.buttonFrBx:hover {
   background-color: rgb(120, 188, 255);
   border-radius: 5px;
 }
+
 code {
   font-family: monospace;
   background: rgba(0, 0, 0, 0.1);
