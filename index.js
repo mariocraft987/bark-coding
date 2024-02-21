@@ -20,8 +20,8 @@ function recentCom() {
                 Commits += `<div title="${commit.author.login}: ${commit.commit.message}"><li><a href="https://github.com/${commit.author.login}"><img style="border-radius:25px;margin-bottom:-3px;" src="https://github.com/${commit.author.login}.png" width="21"></a><a href="${commit.html_url}">${commit.commit.message}</a></li></div>`;
             });
             Commits += '</ul>';
-            document.getElementById("boxChanger").innerHTML = censor(Commits + "<br/>")
-            .replace(":trollface:", "<img src='src/emojis/svg/troll.svg'> width='23'")
+            document.getElementById("boxChanger").innerHTML = censor(Commits.replace(":trollface:", "<img src='src/emojis/svg/troll.svg'> width='23'") 
+            + "<br/>")
         })
         .catch(error => {
             console.error('Error fetching commits:', error);
