@@ -26,17 +26,17 @@ body {
 
 .navbar {
   overflow: hidden;
-  background-color: DodgerBlue;
-  height: 50px;
+  background-color: rgb(150, 73, 18);
+  height: 45px;
 }
 
 .navbar a {
-  float: left;
+  float: center;
   display: block;
   color: white;
   text-align: center;
-  padding: 12px 20px;
-  text-decoration: none;
+  padding: 10px 16px;
+  text-decoration: bold;
   height: 100%;
   line-height: 25px;
 }
@@ -46,18 +46,18 @@ body {
 }
 
 .navbar a:hover {
-  background-color: #0000ff2c;
+  background-color: #bd5f1c;
   cursor: pointer;
   color: white;
 }
 
 .box {
   display: inline-block;
-  font-size: 17px;
+  font-size: 15px;
   text-align: center;
   outline: none;
-  color: #1b007a;
-  background-color: #0080ff2d;
+  color: #964d18;
+  background-color: #d47b3b;
   border-radius: 7px;
   width: 96%;
   margin-top: 10px;
@@ -65,7 +65,7 @@ body {
 }
 
 a.link {
-  color: dodgerblue;
+  color: rgb(150, 73, 18);
 }
 
 button.buttonFrBx {
