@@ -23,6 +23,7 @@ body {
 
 .navbar {
   overflow: hidden;
+  height: 45px;
   background-color: DodgerBlue;
 }
 
