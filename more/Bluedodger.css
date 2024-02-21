@@ -17,19 +17,6 @@ body {
   color: #ffffff;
 }
 
-.dark-mode * {
-  color: #ffffff;
-}
-
-.textCenter {
-  text-align: center;
-}
-
-.dark-mode {
-  background-color: rgb(29, 29, 29);
-  color: #ffffff;
-}
-
 .textCenter {
   text-align: center;
 }
