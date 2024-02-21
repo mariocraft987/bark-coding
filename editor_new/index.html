@@ -102,6 +102,7 @@
       <a href="#">save</a>
       <a href="#">tutorials</a>
       <a href="#">upload</a>
+      <a class="dark-mode-button" id="darkModeToggle"><dmbico alt="Dark Mode"></dmbico></a></div>
       <a class="right" href="https://mariocraft987.github.io/bark.github.io/login.html">sign in</a>
       <a class="right" href="https://mariocraft987.github.io/bark.github.io/signup.html">join bark</a>
     </div>
@@ -486,6 +487,36 @@
           document.getElementById('stage').style.backgroundColor = color;
         }
       });
+    </script>
+    <script>
+          /* @mnsderp for the data saving scripts */
+
+          // Function to toggle dark mode
+          function toggleDarkMode() {
+            const body = document.body;
+            body.classList.toggle('dark-mode');
+            // Save dark mode state to local storage
+            const isDarkMode = body.classList.contains('dark-mode');
+            localStorage.setItem('darkMode', isDarkMode);
+          }
+        
+          // Function to initialize dark mode based on local storage
+          function initializeDarkMode() {
+            const isDarkMode = localStorage.getItem('darkMode') === 'true';
+            const body = document.body;
+            if (isDarkMode) {
+              body.classList.add('dark-mode');
+            } else {
+              body.classList.remove('dark-mode');
+            }
+          }
+        
+          // Attach event listener to dark mode toggle button
+          const darkModeToggle = document.getElementById('darkModeToggle');
+          darkModeToggle.addEventListener('click', toggleDarkMode);
+        
+          // Initialize dark mode when the page loads
+          window.addEventListener('load', initializeDarkMode);
     </script>
   </body>
   <script src="https://mariocraft987.github.io/bark.github.io/index.js"></script>
