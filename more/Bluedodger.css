@@ -30,9 +30,11 @@ body {
   float: left;
   display: block;
   color: white;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
+  text-align: left;
+  padding: 10px 16px;
+  text-decoration: bold;
+  height: 100%;
+  line-height: 25px;
 }
 
 .navbar a.right {
@@ -44,6 +46,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   color: white;
+  
 }
 
 .box {
