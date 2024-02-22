@@ -38,7 +38,7 @@
       }
 
       #stage {
-        height: 360px;
+        height: 640px;
         width: 480px;
         border: 1px solid #ccc;
         padding: 10px;
@@ -81,9 +81,9 @@
       }
 
       .blocklyTreeLabel {
-        font: 15px "Montserrat";
+        font: 13px "Montserrat";
         color: #fff;
-        padding: 8px;
+        padding: 11px;
       }
 
       .blocklyTreeRowContentContainer img {
@@ -104,9 +104,13 @@
   <body onload="start()">
     <div class="navbar">
       <a href="https://mariocraft987.github.io/bark.github.io/home.html"><img src="https://mariocraft987.github.io/bark.github.io/src/images/Logo.svg" alt="Bark" width="25" height="25"></a>
-      <a href="#">save</a>
-      <a href="#">tutorials</a>
-      <a href="#">upload</a>
+      <label for="save">Save/Load</label>
+<select name="save" id="save">
+  <option value="saveproject">Save As</option>
+  <option value="loadproject">Load File</option>
+</select>
+      <a href="#">Tutorials</a>
+      <a href="#">Publish</a>
       <a class="dark-mode-button" id="darkModeToggle"><dmbico alt="Dark Mode"></dmbico></a>
       <a class="right" href="https://mariocraft987.github.io/bark.github.io/login.html">sign in</a>
       <a class="right" href="https://mariocraft987.github.io/bark.github.io/signup.html">join bark</a>
@@ -121,8 +125,8 @@
         </div>
         <canvas id="stage"></canvas>
     </div>
-    <div id="sprites" style="position: absolute; right: 0%; bottom: 0%; width: 480px; height: calc(100% - 440px);"><b>the bark editor is not finished!</b>
-    please be patient, it'll be working soon enough, in the meantime here's a <a href="https://bark-programming.github.io/bark-gui/">demo gui</a></div>
+    <div id="sprites" style="position: absolute; right: 0%; bottom: 0%; width: 480px; height: calc(100% - 440px);"><b>the bark editor is not finished! :sad:</b>
+    please be patient, it'll be working soon enough, in the meantime here's a <a href="https://bark-programming.github.io/bark-gui/">demo gui</a> made using penguinmod.</div>
 
     <!-- Toolbox Definition -->
     <xml
@@ -427,7 +431,7 @@
         init: function() {
           this.jsonInit({
             "type": "movement_moveback",
-            "message0": "move back",
+            "message0": "move backwards",
             "previousStatement": null,
             "nextStatement": null,
             "colour": 230,
