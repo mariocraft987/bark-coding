@@ -58,7 +58,6 @@ body {
   outline: none;
   color: #1b007a;
   background-color: rgb(0, 127, 255, 0.24);
-  border-radius: 10px;
 }
 
 .dark-mode .box {
