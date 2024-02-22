@@ -11,7 +11,7 @@ function whatsNew() {
 }
 
 function recentCom() {
-    document.getElementById("boxChanger").innerHTML = "<br/>loading...<br/><br/>";
+    document.getElementById("boxChanger").innerHTML = "<h2>Fetching commits...</h2><p>please wait...</p>"; // get it? "fetching" commits??? eh????........anyone?
     fetch('https://api.github.com/repos/Mariocraft987/bark.github.io/commits')
         .then(response => response.json())
         .then(commits => {
@@ -25,7 +25,7 @@ function recentCom() {
         })
         .catch(error => {
             console.error('Error fetching commits:', error);
-            document.getElementById("boxChanger").innerHTML = '<h2>Recent Commits</h2><p>Error fetching commits. Please try again later.</p>';
+            document.getElementById("boxChanger").innerHTML = '<h2>Recent Commits</h2><p>There was trouble getting commits. Check your connection and try again.</p>';
         });
 }
 
