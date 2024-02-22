@@ -180,10 +180,12 @@ xml category {
 
 * .dark-mode input {
   background-color: #000000;
+  color: white;
 }
 
 * .dark-mode select {
   background-color: #000000;
+  color: white;
 }
 
 #projectPlayer {
