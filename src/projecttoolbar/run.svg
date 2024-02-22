@@ -1,1 +1,7 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.63 17.5"><defs><style>.cls-1,.cls-2{fill:#4cbf56;stroke:#45993d;stroke-linecap:round;stroke-linejoin:round;}.cls-2{stroke-width:1.5px;}</style></defs><title>icon--green-flag</title><path class="cls-1" d="M.75,2A6.44,6.44,0,0,1,8.44,2h0a6.44,6.44,0,0,0,7.69,0V12.4a6.44,6.44,0,0,1-7.69,0h0a6.44,6.44,0,0,0-7.69,0"/><line class="cls-2" x1="0.75" y1="16.75" x2="0.75" y2="0.75"/></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31px" height="33px" viewBox="0 0 31 32" version="1.1">
+<g id="surface1">
+<path style="fill-rule:nonzero;fill:rgb(29.803922%,74.901961%,33.72549%);fill-opacity:1;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(27.058824%,60%,23.921569%);stroke-opacity:1;stroke-miterlimit:4;" d="M 0.750194 2.00075 C 3.032209 0.30054 6.158716 0.30054 8.440731 2.00075 C 10.722746 3.698809 13.847157 3.698809 16.129172 2.00075 L 16.129172 12.399754 C 13.847157 14.097814 10.722746 14.097814 8.440731 12.399754 C 6.158716 10.701694 3.032209 10.701694 0.750194 12.399754 " transform="matrix(1.864101,0,0,1.817331,0,0.0983497)"/>
+<path style="fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(27.058824%,60%,23.921569%);stroke-opacity:1;stroke-miterlimit:4;" d="M 0.750194 16.750226 L 0.750194 0.749774 " transform="matrix(1.864101,0,0,1.817331,0,0.0983497)"/>
+</g>
+</svg>
