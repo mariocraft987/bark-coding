@@ -105,10 +105,10 @@
     <div class="navbar">
       <a href="https://mariocraft987.github.io/bark.github.io/home.html"><img src="https://mariocraft987.github.io/bark.github.io/src/images/Logo.svg" alt="Bark" width="25" height="25"></a>
       <a href="#">save</a>
-      <a href="#" title="download project to your computer.">download</a>
-      <a href="#" title="load a bark project file from your computer.">load external</a>
+      <a href="#" id="downloadbutton" onclick="downloadproject();" title="download project to your computer.">download</a>
+      <a href="#" id="loadexbutton" onclick="openexternalproject();" title="load a bark project file from your computer.">load external</a>
       <a href="#" title="watch helpful tutorials to expand your knowledge!">tutorials</a>
-      <a href="#" title="publish your project so the world can see!">publish</a>
+      <a href="#" onclick="alert("you can't publish projects yet! :(");" title="publish your project so the world can see!">publish</a>
       <a class="dark-mode-button" id="darkModeToggle"><dmbico alt="Dark Mode"></dmbico></a>
       <a class="right" href="https://mariocraft987.github.io/bark.github.io/login.html">sign in</a>
       <a class="right" href="https://mariocraft987.github.io/bark.github.io/signup.html">join bark</a>
@@ -524,6 +524,26 @@
         
           // Initialize dark mode when the page loads
           window.addEventListener('load', initializeDarkMode);
+
+          function openexternalproject() {
+            window.showOpenFilePicker();
+            alert("bark doesn't support uploading projects yet :(");
+          }
+
+          // https://gist.github.com/tiodot/4978b36aae431b79fa3ea9ba6800a90a
+          function downloadproject(fileName) {
+            fetch("https://raw.githubusercontent.com/Mariocraft987/bark.github.io/main/editor_new/project_example.txt", { method: 'get', mode: 'no-cors', referrerPolicy: 'no-referrer' })
+              .then(res => res.blob())
+              .then(res => {
+                const aElement = document.createElement('a');
+                aElement.setAttribute('download', fileName);
+                const href = URL.createObjectURL(res);
+                aElement.href = href;
+                aElement.setAttribute('target', '_blank');
+                aElement.click();
+                URL.revokeObjectURL(href);
+              });
+          };
     </script>
   </body>
   <script src="https://mariocraft987.github.io/bark.github.io/index.js"></script>
