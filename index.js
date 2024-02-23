@@ -16,12 +16,12 @@ function recentCom() {
         .then(response => response.json())
         .then(commits => {
             var Commits = '<h2>Recent Commits</h2><ul>';
-            commits.slice(0, 9).forEach(commit => {
+            commits.slice(0, 7).forEach(commit => {
                 Commits += `<div title="${commit.author.login}: ${commit.commit.message}"><li><a href="https://github.com/${commit.author.login}"><img style="border-radius:12px;margin-top:-4px;margin-left:-6px" src="https://github.com/${commit.author.login}.png" width="21"></a><a href="${commit.html_url}">${commit.commit.message}</a></li></div>`;
             });
             Commits += '</ul>';
-            document.getElementById("boxChanger").innerHTML = censor(Commits.replace(":trollface:", "<img src='src/emojis/svg/troll.svg'> width='23'") 
-            + "<br/>")
+            finalCommits = Commits.replaceAll(":trollface:", "<img src='src/emojis/svg/troll.svg'> width='23'")
+            document.getElementById("boxChanger").innerHTML = censor(finalCommits + "<br/>")
         })
         .catch(error => {
             console.error('Error fetching commits:', error);
