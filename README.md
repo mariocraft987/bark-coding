@@ -1,4 +1,4 @@
-# Bark
+# Bark Coding
 Created by mariocraft987 and other devolopers, we have bark.
 
 Bark is a mod of Turbowarp and Scratch with new extensions. If you know <b>good</b> html and javascript then you can help us on creating bark.
