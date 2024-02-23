@@ -1,5 +1,5 @@
 /* Basicly censors text */
-const token = "*";
+const token = "★";
 
 function t(length) {
     const arr = [];
