@@ -24,6 +24,7 @@ function setupText() {
     .replaceAll(":dizzy:", "<img src='src/emojis/svg/dizzy.svg' alt='dizzy' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     .replaceAll(":jealous:", "<img src='src/emojis/svg/jealous.svg' alt='jealous' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     .replaceAll(":smallsmile:", "<img src='src/emojis/svg/smallsmile.svg' alt='small smile' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
+    .replaceAll(":troll:", "<img src='src/emojis/svg/troll.svg' alt='small smile' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
 
     document.getElementById("textbox").innerHTML = censor(response);
 }
