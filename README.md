@@ -2,7 +2,7 @@
 Created by Mariocraft987 and a team of developers, we have Bark.
 
 Bark is a new programming language made entirely from scratch. It will feature special blocks and features that <a href="https://scratch.mit.edu">Scratch</a> doesn't offer. &#128054;
-![Bark 1.0 Screenshot](https://github.com/mariocraft987/bark.github.io/blob/main/static/Version1.0.jpg?raw=true)
+![Bark 1.0 Screenshot](https://github.com/mariocraft987/bark.github.io/blob/main/static/Version-1.0.jpg?raw=true)
 <hr>
 
 # Available Jobs
