@@ -206,3 +206,14 @@ xml category {
   height: 30px;
   cursor: pointer;
 }
+
+#footer {
+    background-color: #f1f1f1;
+    padding: 60px;
+}
+
+.footer-row {
+    float: left;
+    width: 33.333%;
+    margin-bottom: 40px;
+}
