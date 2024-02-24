@@ -27,8 +27,9 @@ function setupText() {
     .replaceAll(":troll:", "<img src='src/emojis/svg/troll.svg' alt='small smile' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     .replaceAll(":woof:", "<img src='src/emojis/svg/bark.svg' alt='small smile' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
 
-    //last 2 lines are for security purposes. DON'T REMOVE IT, AND KEEP IT AT THE BOTTOM!
-    //Won't run code in input box
+    //last 4 lines are for security purposes. DON'T REMOVE IT, AND KEEP IT AT THE BOTTOM!
+    .replaceAll("<script>", "")
+    .replaceAll("</script>", "")
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;")
     document.getElementById("textbox").innerHTML = censor(response);
