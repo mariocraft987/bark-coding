@@ -22,8 +22,8 @@ function censor(text) {
         .replaceAll(/(shut up|shaddup|goddamn|god dam|the hub|pornhub|tea bag|scrotum|ballsac|bukkake|facesit|fluffer|shemale|upskirt|mammary|quickie|undress|gay sex|erotism|eat ass|asshole|bastard|cumming)+/gim, t(7))
         .replaceAll(/(penile|vagina|nipple|teabag|ekiben|erotic|tranny|sexcam|rimjob|raping|rapist|rectum|pantie|orgasm|nudity|faggot|incest|murder|hentai|retard|my ass|breast)+/gim, t(6))
         .replaceAll(/(bitch|pussy|whore|f off|effin|penis|erect|semen|lmfao|smash|cheek|seggs|teste|prick|squaw|thong|vulva|naked|horny|dildo|booty|boner|balls)+/gim, t(5))
-        .replaceAll(/(fuck|shit|fock|cunt|cock|dick|gyat|boob|butt|lmao|nude|porn|wank|slut|milf|dilf|yiff|yaoi|twat|tush|rape|pedo|nsfw|jizz|kike|jugg|kill|hump|tidd|2g1c|anal|anus)+/gim, t(4))
-        .replaceAll(/(p ⭐️|⬛️ 🟧|cbt|bbc|kys|fag|tit|cum)+/gim, t(3))
+        .replaceAll(/(fuck|shit|fock|cunt|cock|dick|gyat|boob|lmao|nude|porn|wank|slut|milf|dilf|yiff|yaoi|twat|tush|rape|pedo|nsfw|jizz|kike|jugg|kill|hump|tidd|2g1c|anus|tits)+/gim, t(4))
+        .replaceAll(/(p ⭐️|⬛️ 🟧|cbt|bbc|kys|fag|cum)+/gim, t(3))
         .replaceAll(/(p⭐️|⬛️🟧|69)+/gim, t(2))
         .replaceAll(/(🤱|💦|🕳️|🤤|🍑|🥒|🍆|🖕|😩|😫|🥴|🚛|🍒|🍝|🌽|👅|🥵)+/gim, t(1))
 }
