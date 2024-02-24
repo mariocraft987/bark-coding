@@ -69,6 +69,11 @@ a.link {
   color: dodgerblue;
 }
 
+* .dark-mode input {
+  background-color: #000000;
+  color: white;
+}
+
 .buttonFrBx {
   background-color: rgb(0, 128, 255);
   padding: 9px 17px;
@@ -179,11 +184,6 @@ list-style-type: none;
 
 xml category {
   padding: 10px;
-}
-
-* .dark-mode input {
-  background-color: #000000;
-  color: white;
 }
 
 * .dark-mode select {
