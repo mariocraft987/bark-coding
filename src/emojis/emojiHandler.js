@@ -31,5 +31,7 @@ function setupText() {
     .replaceAll(":smallsmile:", "<img src='src/emojis/svg/smallsmile.svg' alt='small smile' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     .replaceAll(":troll:", "<img src='src/emojis/svg/troll.svg' alt='troll face' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     .replaceAll(":woof:", "<img src='src/emojis/svg/bark.svg' alt='dog' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
+    .replaceAll(":fire:", "<img src='src/emojis/svg/fire.svg' alt='fire' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
+    .replaceAll(":pride:", "<img src='src/emojis/svg/bark.svg' alt='pride' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     document.getElementById("textbox").innerHTML = censor(response);
 }
