@@ -26,8 +26,6 @@ function setupText() {
     .replaceAll(":smallsmile:", "<img src='src/emojis/svg/smallsmile.svg' alt='small smile' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     .replaceAll(":troll:", "<img src='src/emojis/svg/troll.svg' alt='small smile' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     .replaceAll(":woof:", "<img src='src/emojis/svg/bark.svg' alt='small smile' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
-    .replaceAll("<script>", "")
-    .replaceAll("</script>", "")
 
     //last 2 lines are for security purposes. DON'T REMOVE IT, AND KEEP IT AT THE BOTTOM!
     //Won't run code in input box
