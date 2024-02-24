@@ -1,10 +1,17 @@
 /* Some basic scripts created in javascript to work the website, and make it interactive. */
 console.log("Exit Now! This part is used for devolopers.");
 
+// header
 content = '<div class="navbar"><a href="home.html"><img src="src/images/Logo.svg" alt="Bark" width="25" height="25" ></a><a href="editor.html">create</a><a href="explore.html">explore (wip)</a>'
 content += '<a href="ideas.html">ideas (wip)</a><a href="about.html">about</a><a href="https://barkprogram.boards.net/">discuss</a><a href="login.html" class="right">sign in</a><a href="signup.html" class="right">join bark</a>'
 content += '<a class="dark-mode-button" id="darkModeToggle"><dmbico alt="Dark Mode"></dmbico></a></div>'
     document.getElementById('navbar').innerHTML = content;
+
+// footer
+content = '<div class="footer-row"><h3>Help</h3><p><a href="https://github.com/Mariocraft987/bark.github.io/issues/new">Report a Bug / Suggest a Feature</a></p><p><a href="https://scratch.mit.edu/users/mariocraft987/#comments">Contact</a></p></div>';
+content += '<div class="footer-row"><h3>Community</h3><p><a href="https://mariocraft987.github.io/bark.github.io/explore.html">Explore</a></p><p><a href="https://barkprogram.boards.net/">Forums</a></p><p><a href="https://mariocraft987.github.io/bark.github.io/login.html">Sign In</a></p><p><a href="https://mariocraft987.github.io/bark.github.io/signup.html">Sign Up</a></p></div>';
+content += '<div class="footer-row"><h3>About</h3><p><a href="https://mariocraft987.github.io/bark.github.io/about.html">About Bark</a></p><p><a href="https://bark-programming.github.io/bark-gui/credits.html">Credits</a></p><p><a href="https://mariocraft987.github.io/bark.github.io/jobs.html">Jobs</a></p><p><a href="https://github.com/Mariocraft987/bark.github.io/blob/main/LICENSE">License</a></p></div>';
+    document.getElementById('footer').innterHTML = content;
 
 function whatsNew() {
     document.getElementById("boxChanger").innerHTML = "<h2>Whats New?</h2><p>The Bark Editor is in early alpha! It is being made with Blockly!</p>";
