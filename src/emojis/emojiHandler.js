@@ -6,6 +6,11 @@ let emojiHeight = 25;
 function setupText() {
     let text = document.getElementById("textI").value; 
     let response = text
+
+    // DO NOT REMOVE. KEEP AT TOP
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+        
     .replaceAll(":blank:", "<img src='src/emojis/svg/blank.svg' alt='blank' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     .replaceAll(":smiley:", "<img src='src/emojis/svg/smiley.svg' alt='smiley' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     .replaceAll(":happy:", "<img src='src/emojis/svg/happy.svg' alt='happy' wwidth='"+ emojiWidth + "' height='" + emojiHeight + "'>")
@@ -24,13 +29,7 @@ function setupText() {
     .replaceAll(":dizzy:", "<img src='src/emojis/svg/dizzy.svg' alt='dizzy' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     .replaceAll(":jealous:", "<img src='src/emojis/svg/jealous.svg' alt='jealous' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     .replaceAll(":smallsmile:", "<img src='src/emojis/svg/smallsmile.svg' alt='small smile' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
-    .replaceAll(":troll:", "<img src='src/emojis/svg/troll.svg' alt='small smile' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
-    .replaceAll(":woof:", "<img src='src/emojis/svg/bark.svg' alt='small smile' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
-
-    //last 4 lines are for security purposes. DON'T REMOVE IT, AND KEEP IT AT THE BOTTOM!
-    .replaceAll("<script>", "")
-    .replaceAll("</script>", "")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
+    .replaceAll(":troll:", "<img src='src/emojis/svg/troll.svg' alt='troll face' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
+    .replaceAll(":woof:", "<img src='src/emojis/svg/bark.svg' alt='dog' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     document.getElementById("textbox").innerHTML = censor(response);
 }
