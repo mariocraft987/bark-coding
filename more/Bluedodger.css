@@ -224,3 +224,13 @@ xml category {
     width: 33.333%;
     margin-bottom: 40px;
 }
+
+::-moz-selection {
+    color: #ffffff;
+    background: #4161ffb8;
+}
+
+::selection {
+    color: #ffffff;
+    background: #4161ffb8;
+}
