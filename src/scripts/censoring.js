@@ -11,6 +11,10 @@ function t(length) {
 
 function censor(text) {
     return String(text)
+         // DO NOT REMOVE. KEEP AT TOP
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        
         // 🔞 i highly reccomend not searching up some of the stuff on here 🔞
         .replaceAll(/(double penetration)+/gim, t(18))
         .replaceAll(/(pearl necklace|rusty trombone)+/gim, t(14))
