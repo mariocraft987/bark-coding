@@ -8,7 +8,7 @@ content += '<a class="dark-mode-button" id="darkModeToggle"><dmbico alt="Dark Mo
     document.getElementById('navbar').innerHTML = content;
 
 // footer
-content = '<div id="footer"><div class="footer-row"><h3>Help</h3><p><a href="https://github.com/Mariocraft987/bark.github.io/issues/new">Report a Bug / Suggest a Feature</a></p><p><a href="https://scratch.mit.edu/users/mariocraft987/#comments">Contact</a></p></div>';
+content = '<br><div id="footer"><div class="footer-row"><h3>Help</h3><p><a href="https://github.com/Mariocraft987/bark.github.io/issues/new">Report a Bug / Suggest a Feature</a></p><p><a href="https://scratch.mit.edu/users/mariocraft987/#comments">Contact</a></p></div>';
 content += '<div class="footer-row"><h3>Community</h3><p><a href="https://mariocraft987.github.io/bark.github.io/explore.html">Explore</a></p><p><a href="https://barkprogram.boards.net/">Forums</a></p><p><a href="https://mariocraft987.github.io/bark.github.io/login.html">Sign In</a></p><p><a href="https://mariocraft987.github.io/bark.github.io/signup.html">Sign Up</a></p></div>';
 content += '<div class="footer-row"><h3>About</h3><p><a href="https://mariocraft987.github.io/bark.github.io/about.html">About Bark</a></p><p><a href="https://bark-programming.github.io/bark-gui/credits.html">Credits</a></p><p><a href="https://mariocraft987.github.io/bark.github.io/jobs.html">Jobs</a></p><p><a href="https://github.com/Mariocraft987/bark.github.io/blob/main/LICENSE">License</a></p></div></div>';
     document.body.innerHTML += content;
