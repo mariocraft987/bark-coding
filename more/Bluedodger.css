@@ -34,7 +34,7 @@ body {
   text-align: left;
   padding: 10px 16px;
   text-decoration: none;
-  height: 100%;
+  height: calc(100% - 20px);
   line-height: 25px;
 }
 
