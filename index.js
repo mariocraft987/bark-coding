@@ -20,7 +20,7 @@ function recentCom() {
                 Commits += `<div title="${commit.author.login}: ${commit.commit.message}"><li><a href="https://github.com/${commit.author.login}"><img style="border-radius:12px;margin-top:-4px;margin-left:-6px" src="https://github.com/${commit.author.login}.png" width="21"></a><a href="${commit.html_url}">${commit.commit.message}</a></li></div>`;
             });
             Commits += '</ul>';
-            finalCommits = Commits.replaceAll(":trollface:", "<img src='src/emojis/svg/troll.svg'> width='23'")
+            finalCommits = Commits.replaceAll(":trollface:", "<img src='src/emojis/svg/troll.svg' width='23'>")
             document.getElementById("boxChanger").innerHTML = censor(finalCommits + "<br/>")
         })
         .catch(error => {
