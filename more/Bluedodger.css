@@ -234,3 +234,8 @@ xml category {
     color: #ffffff;
     background: #4161ffb8;
 }
+
+::placeholder {
+  color: white;
+  opacity: 0.8;
+}
