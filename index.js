@@ -2,8 +2,8 @@
 console.log("Exit Now! This part is used for devolopers.");
 
 // header
-content = '<div class="navbar"><a href="home.html"><img src="src/images/Logo.svg" alt="Bark" width="25" height="25" ></a><a href="editor.html">create</a><a href="explore.html">explore (wip)</a>'
-content += '<a href="ideas.html">ideas (wip)</a><a href="about.html">about</a><a href="https://barkprogram.boards.net/">discuss</a><a href="login.html" class="right">sign in</a><a href="signup.html" class="right">join bark</a>'
+content = '<div class="navbar"><a href="home.html"><img src="src/images/Logo.svg" alt="Bark" width="25" height="25" ></a><a href="editor.html">create</a><a href="explore.html">explore</a>'
+content += '<a href="ideas.html">ideas</a><a href="about.html">about</a><a href="https://barkprogram.boards.net/">discuss</a><a href="login.html" class="right">sign in</a><a href="signup.html" class="right">join bark</a>'
 content += '<a class="dark-mode-button" id="darkModeToggle"><dmbico alt="Dark Mode"></dmbico></a></div>'
     document.getElementById('navbar').innerHTML = content;
 
