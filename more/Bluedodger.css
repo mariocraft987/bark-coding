@@ -92,12 +92,12 @@ a.link {
 
 .searchBar {
   display: inline-block;
-  padding: 6px;
+  padding: 6px 15px;
   margin: 6px;
   font-size: 17px;
   border: none;
-  color: #ffffff;
-  background-color: rgb(120, 188, 255);
+  color: #000000!important;
+  background-color: rgb(120, 188, 255)!important;
   border-radius: 100px;
 }
 
