@@ -6,7 +6,7 @@ Bark is a new programming language made entirely from scratch. It will feature s
 
 # Available Jobs
 - Assets: 2/3<br/>
-- Programmers: 2/10<br/>
+- Programmers: 3/10<br/>
 - Donators: 0/3<br/>
 ## Job Registering
 To be a part of Bark's devlopment, please comment `Job Register 4543` on <a href="https://github.com/Mariocraft987/bark.github.io/commit/5644df6ebc5aa7ea7b611141a265ff7c17712c5e">this commit</a>.
