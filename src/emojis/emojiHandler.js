@@ -6,10 +6,6 @@ let emojiHeight = 25;
 function setupText() {
     let text = document.getElementById("textI").value; 
     let response = text
-
-    // DO NOT REMOVE. KEEP AT TOP
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
         
     .replaceAll(":blank:", "<img src='src/emojis/svg/blank.svg' alt='blank' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     .replaceAll(":smiley:", "<img src='src/emojis/svg/smiley.svg' alt='smiley' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
