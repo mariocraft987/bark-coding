@@ -178,7 +178,7 @@ color: black;
 text-decoration: none;
 }
 
-.none-bullets {
+li {
 list-style-type: none;
 }
 
