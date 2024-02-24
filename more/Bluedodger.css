@@ -98,8 +98,9 @@ a.link {
 
 code {
   font-family: monospace;
-  background: rgba(0, 0, 0, 0.1);
+  background-color: #e6e6e6;
   border-radius: 4px;
+  color: #000000;
 }
 
 body.dark-mode {
