@@ -4,7 +4,7 @@ let emojiHeight = 25;
 
 
 function setupText() {
-    let text = document.getElementById("textI").value; 
+    let text = censor(document.getElementById("textI").value); 
     let response = text
         
     .replaceAll(":blank:", "<img src='src/emojis/svg/blank.svg' alt='blank' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
@@ -29,5 +29,5 @@ function setupText() {
     .replaceAll(":woof:", "<img src='src/emojis/svg/bark.svg' alt='dog' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     .replaceAll(":fire:", "<img src='src/emojis/svg/fire.svg' alt='fire' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     .replaceAll(":pride:", "<img src='src/emojis/svg/bark.svg' alt='pride' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
-    document.getElementById("textbox").innerHTML = censor(response);
+    document.getElementById("textbox").innerHTML = response;
 }
