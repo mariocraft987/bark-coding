@@ -7,6 +7,7 @@ function setupText() {
     let text = censor(document.getElementById("textI").value); 
     let response = text
 
+    .replaceAll(":amazed:", "<img src='src/emojis/svg/amazed.svg' style='margin-bottom: -7px;' alt='amazed face' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     .replaceAll(":alien:", "<img src='src/emojis/svg/alien.svg' style='margin-bottom: -7px;' alt='alien' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     .replaceAll(":blank:", "<img src='src/emojis/svg/blank.svg' style='margin-bottom: -7px;' alt='blank face' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     .replaceAll(":smiley:", "<img src='src/emojis/svg/smiley.svg' alt='smiley face' style='margin-bottom: -7px;' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
