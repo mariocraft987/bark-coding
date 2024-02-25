@@ -24,7 +24,7 @@ function setupText() {
     .replaceAll(":panic:", "<img src='src/emojis/svg/panic.svg' alt='panicking face' style='margin-bottom: -7px;' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     .replaceAll(":dizzy:", "<img src='src/emojis/svg/dizzy.svg' alt='dizzy face' style='margin-bottom: -7px;' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     .replaceAll(":jealous:", "<img src='src/emojis/svg/jealous.svg' alt='jealous face' style='margin-bottom: -7px;' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
-    .replaceAll(":smallsmile:", "<img src='src/emojis/svg/smallsmile.svg' alt='face with small smile' style='margin-bottom: -7px;' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
+    .replaceAll(":smallSmile:", "<img src='src/emojis/svg/smallsmile.svg' alt='face with small smile' style='margin-bottom: -7px;' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     .replaceAll(":troll:", "<img src='src/emojis/svg/troll.svg' alt='troll face' style='margin-bottom: -7px;' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     .replaceAll(":woof:", "<img src='src/emojis/svg/bark.svg' alt='dog' style='margin-bottom: -7px;' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     .replaceAll(":fire:", "<img src='src/emojis/svg/fire.svg' alt='fire' style='margin-bottom: -7px;' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
