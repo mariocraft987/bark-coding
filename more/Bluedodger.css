@@ -239,3 +239,9 @@ xml category {
   color: white;
   opacity: 0.8;
 }
+
+input {
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+}
