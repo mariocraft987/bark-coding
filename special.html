@@ -12,11 +12,10 @@
   <span id="navbar"></span>
   <br/><br/>
     <div style="margin-left: 40px;"><span id="textbox"><textarea id="textI" name="bio" rows="8" cols="50" placeholder="Your Bio"></textarea>
-    <br/><input class="buttonFrBx" type="button" value="Update" onclick="document.getElementById('textbox').innerHTML = censor(document.getElementById('textI').value);"></span><br/><br>
+    <br/><input class="buttonFrBx" type="button" value="Update" onclick="document.getElementById('textbox').innerHTML = replace(document.getElementById('textI').value);"></span><br/><br>
     <a href="https://github.com/Mariocraft987/bark.github.io/blob/main/src/emojis/emojis.md" target="_blank" rel="noopener noreferrer" class="buttonFrBx">List of Emojis</a></div>
 </body>
 
 <script src="index.js"></script>
-<script src="src/scripts/censoring.js"></script>
-<script src="src/emojis/emojiHandler.js"></script>
+<script src="src/scripts/replacer.js"></script>
 </html>
