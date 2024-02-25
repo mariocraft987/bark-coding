@@ -6,7 +6,8 @@ let emojiHeight = 25;
 function setupText() {
     let text = censor(document.getElementById("textI").value); 
     let response = text
-        
+
+    .replaceAll(":alien:", "<img src='src/emojis/svg/alien.svg' style='margin-bottom: -7px;' alt='alien' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     .replaceAll(":blank:", "<img src='src/emojis/svg/blank.svg' style='margin-bottom: -7px;' alt='blank face' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     .replaceAll(":smiley:", "<img src='src/emojis/svg/smiley.svg' alt='smiley face' style='margin-bottom: -7px;' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     .replaceAll(":happy:", "<img src='src/emojis/svg/happy.svg' alt='happy face' style='margin-bottom: -7px;' wwidth='"+ emojiWidth + "' height='" + emojiHeight + "'>")
