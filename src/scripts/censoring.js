@@ -1,5 +1,7 @@
 /* Basicly censors text */
 const token = "★";
+const emojiWidth = 25;
+const emojiHeight = 25;
 
 function t(length) {
     const arr = [];
