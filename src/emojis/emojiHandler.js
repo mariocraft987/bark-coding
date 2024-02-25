@@ -29,5 +29,7 @@ function setupText() {
     .replaceAll(":woof:", "<img src='src/emojis/svg/bark.svg' alt='dog' style='margin-bottom: -7px;' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     .replaceAll(":fire:", "<img src='src/emojis/svg/fire.svg' alt='fire' style='margin-bottom: -7px;' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     .replaceAll(":pride:", "<img src='src/emojis/svg/pride.svg' alt='pride flag' style='margin-bottom: -7px;' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
+    .replaceAll(":rofl:", "<img src='src/emojis/svg/rofl.svg' alt='rofl' style='margin-bottom: -7px;' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
+    .replaceAll(":thumb:", "<img src='src/emojis/svg/thumb.svg' alt='thumbs up' style='margin-bottom: -7px;' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     document.getElementById("textbox").innerHTML = response;
 }
