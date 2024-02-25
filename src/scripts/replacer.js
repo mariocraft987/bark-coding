@@ -11,7 +11,7 @@ function t(length) {
     return arr.join('');
 }
 
-function censor(text) {
+function replace(text) {
     return String(text)
          // DO NOT REMOVE. KEEP AT TOP
         .replaceAll("<", "&lt;")
