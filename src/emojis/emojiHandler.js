@@ -33,5 +33,6 @@ function setupText() {
     .replaceAll(":pride:", "<img src='src/emojis/svg/pride.svg' alt='pride flag' style='margin-bottom: -7px;' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     .replaceAll(":rofl:", "<img src='src/emojis/svg/rofl.svg' alt='rofl' style='margin-bottom: -7px;' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     .replaceAll(":thumb:", "<img src='src/emojis/svg/thumb.svg' alt='thumbs up' style='margin-bottom: -7px;' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
+    .replaceAll(":robot:", "<img src='src/emojis/svg/robot.svg' alt='robot face' style='margin-bottom: -7px;' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
     document.getElementById("textbox").innerHTML = response;
 }
