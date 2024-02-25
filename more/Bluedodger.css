@@ -69,6 +69,14 @@ a.link {
   color: dodgerblue;
 }
 
+input {
+    padding: 5px;
+    border-radius: 10px;
+    border-color: #a3a3a3;
+    border-style: solid;
+    border-width: 1px;
+}
+
 * .dark-mode input {
   background-color: #000000;
   color: white;
@@ -236,12 +244,6 @@ xml category {
 }
 
 ::placeholder {
-  color: white;
+  color: #808080;
   opacity: 0.8;
-}
-
-input {
-    border: none;
-    padding: 5px;
-    border-radius: 10px;
 }
