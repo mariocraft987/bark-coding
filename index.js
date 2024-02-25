@@ -32,7 +32,7 @@ function recentCom() {
         })
         .catch(error => {
             console.error('Error fetching commits:', error);
-            document.getElementById("boxChanger").innerHTML = '<h2>Recent Commits</h2><p>There was trouble getting commits. Check your connection and try again.</p>';
+            document.getElementById("boxChanger").innerHTML = '<h2>Recent Commits</h2><p>Failed to load commits. Check your connection and try again.</p>';
         });
 }
 
