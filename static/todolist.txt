@@ -1,14 +1,13 @@
 2024
 Todo list for Bark.
 
-Create the block Editor
-Custom Domains
-Working forms sending data
-Server Databases
-More Enhanced look - done! :)
+Create the block Editor - done!
+Custom Domains - Working on it
+Working forms sending data - uhhhhhhhhh
+Server Databases - not yet
 
-Working commits box
-Extensions page
+Working commits box - done!
+Extensions page - not yet
 
 
 Turn this Bing AI code Into working blockly blocks
@@ -34,4 +33,4 @@ New block to set costume image
         }
     </script> 
     -->
-Add sun icon for light/dark mode button
+Add sun icon for light/dark mode button - done! (by qwertyy)
