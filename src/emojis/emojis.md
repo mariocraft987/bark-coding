@@ -20,6 +20,7 @@
 |`:panic:`     |<img src="svg/panic.svg" width="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:pride:`     |<img src="svg/pride.svg" width="25">|<a href="https://github.com/qwertyytheartist">qwertyytheartist</a>|
 |`:rofl:`      |<img src="svg/rofl.svg" width="25">|<a href="https://github.com/Rubiidev-18">Rubiidev-18</a>|
+|`:robot:`      |<img src="svg/robot.svg" width="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:sad:`       |<img src="svg/sad.svg" width="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:smallSmile:`|<img src="svg/smallsmile.svg" width="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:smiley:`    |<img src="svg/smiley.svg" width="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
