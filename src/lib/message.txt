@@ -1,1 +1,0 @@
-This .txt is used to keep the lib directory existing.
