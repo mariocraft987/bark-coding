@@ -14,7 +14,7 @@ content += '<a class="dark-mode-button" id="darkModeToggle"><dmbico alt="Dark Mo
 //     document.body.innerHTML += content;
 
 function whatsNew() {
-    document.getElementById("boxChanger").innerHTML = "<h2>Whats New?</h2><p>The Bark Editor is in early alpha! It is being made with Blockly!</p>";
+    document.getElementById("boxChanger").innerHTML = "<h2>Whats New?</h2><p>The Bark Editor has a very early alpha! It is being made with Blockly!</p>";
 }
 
 function recentCom() {
