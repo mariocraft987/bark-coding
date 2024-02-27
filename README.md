@@ -18,7 +18,7 @@ To be a part of Bark's devlopment, please comment `Job Register 4543` on <a href
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
-
+[![All Contributors](https://img.shields.io/github/all-contributors/Mariocraft987/Bark.github.io?color=70400c&style=flat-square)](#contributors)
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
 
