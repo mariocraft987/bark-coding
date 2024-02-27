@@ -6,6 +6,8 @@
 |`:alien:`     |<img src="svg/alien.svg" width="25">|<a href="https://github.com/qwertyytheartist">qwertyytheartist</a>|
 |`:angry:`     |<img src="svg/angry.svg" width="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:blank:`     |<img src="svg/blank.svg" width="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
+|`:clap:`      |<img src="svg/clap.svg" width="25">|<a href="https://github.com/qwertyytheartist">qwertyytheartist</a>|
+|`:clapAnim:`  |<img src="svg/clap_anim.gif" width="25">|<a href="https://github.com/qwertyytheartist">qwertyytheartist</a>|
 |`:dizzy:`     |<img src="svg/dizzy.svg" width="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:evil:`      |<img src="svg/evil.svg" width="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:fire:`      |<img src="svg/fire.svg" width="25">|<a href="https://github.com/qwertyytheartist">qwertyytheartist</a>|
@@ -19,8 +21,8 @@
 |`:nerd:`      |<img src="svg/nerd.svg" width="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:panic:`     |<img src="svg/panic.svg" width="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:pride:`     |<img src="svg/pride.svg" width="25">|<a href="https://github.com/qwertyytheartist">qwertyytheartist</a>|
+|`:robot:`     |<img src="svg/robot.svg" width="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:rofl:`      |<img src="svg/rofl.svg" width="25">|<a href="https://github.com/Rubiidev-18">Rubiidev-18</a>|
-|`:robot:`      |<img src="svg/robot.svg" width="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:sad:`       |<img src="svg/sad.svg" width="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:smallSmile:`|<img src="svg/smallsmile.svg" width="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:smiley:`    |<img src="svg/smiley.svg" width="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
