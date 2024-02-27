@@ -1,7 +1,7 @@
 /* Some basic scripts created in javascript to work the website, and make it interactive. */
 
-let newsBox = "The Bark Editor has a very early alpha! It is being made with Blockly!"
-let commitsLength = 30
+let newsBox = "We have a vercel domain! replit Cycles/donating coming soon. more stuff working in the editor also coming soon."
+let commitsLength = 33
 
 console.log("Exit Now! This part is used for devolopers.");
 
