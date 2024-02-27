@@ -115,7 +115,7 @@
     <div id="blocklyDiv"></div>
     <div id="projectPlayer">
         <div id="projectToolbar">
-          <img class="projectToolbarButton" style="cursor:pointer;" src="https://mariocraft987.github.io/bark.github.io/src/projecttoolbar/run.svg">
+          <img class="projectToolbarButton" style="cursor:pointer;" src="https://mariocraft987.github.io/bark.github.io/src/projecttoolbar/run.svg" onclick="run_code();">
           <img class="projectToolbarButton" style="cursor:pointer;" src="https://mariocraft987.github.io/bark.github.io/src/projecttoolbar/pause.svg">
           <img class="projectToolbarButton" style="cursor:pointer;" src="https://mariocraft987.github.io/bark.github.io/src/projecttoolbar/stopped.svg">
           <img class="projectToolbarButton" src="https://mariocraft987.github.io/bark.github.io/src/projecttoolbar/maximize.svg" style="position: absolute; right: 0; cursor: pointer;">
@@ -543,6 +543,10 @@
                 URL.revokeObjectURL(href);
               });
           };
+
+          function run_code() {
+            eval(Blockly.JavaScript.workspaceToCode(Blockly.getMainWorkspace()));
+          }
     </script>
   </body>
   <script src="https://mariocraft987.github.io/bark.github.io/index.js"></script>
