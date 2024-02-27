@@ -99,3 +99,5 @@ function jobRegister() {
 
   // Initialize dark mode when the page loads
   window.addEventListener('load', initializeDarkMode);
+
+whatsNew();
