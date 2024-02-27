@@ -1,6 +1,6 @@
 /* Some basic scripts created in javascript to work the website, and make it interactive. */
 
-let newsBox = "We have a vercel domain! replit Cycles/donating coming soon. more stuff working in the editor also coming soon."
+let newsBox = "We have a vercel domain! \nreplit Cycles/donating coming soon. \nmore stuff working in the editor also coming soon." /* \n is a newline, don't remove it! */
 let commitsLength = 33
 
 console.log("Exit Now! This part is used for devolopers.");
