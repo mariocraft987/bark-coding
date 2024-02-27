@@ -16,6 +16,7 @@ content += '<a class="dark-mode-button" id="darkModeToggle"><dmbico alt="Dark Mo
 function whatsNew() {
     document.getElementById("boxChanger").innerHTML = "<h2>Whats New?</h2><p>The Bark Editor has a very early alpha! It is being made with Blockly!</p>";
 }
+whatsNew();
 
 function recentCom() {
     document.getElementById("boxChanger").innerHTML = "<h2>Fetching commits...</h2><p>please wait...</p>"; // get it? "fetching" commits??? eh????........anyone?
