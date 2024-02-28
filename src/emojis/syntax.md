@@ -36,8 +36,8 @@
 these are NOT case-sensitive.<br>*please note that these images may be out of date!*
 |syntax        |result|creator|
 |--------------|------|-------|
-|`:mariocraft:`|<img src="https://github.com/mariocraft987/bark.github.io/assets/129226914/44cac082-448d-4911-93e5-c7435a4c19ee" height="28">|<a href="https://github.com/qwertyytheartist">qwertyytheartist</a>|
-|`:qwertyy:`|<img src="https://github.com/mariocraft987/bark.github.io/assets/129226914/bf40c77f-4513-4f10-83a4-10bb9feae717" height="28">|<a href="https://github.com/qwertyytheartist">qwertyytheartist</a>|
-|`:rubiidev:`|<img src="https://github.com/mariocraft987/bark.github.io/assets/129226914/703592f8-e03f-479e-b456-36dc8798e615" height="28">|<a href="https://github.com/qwertyytheartist">qwertyytheartist</a>|
-|`:nmsderp:`|<img src="https://github.com/mariocraft987/bark.github.io/assets/129226914/d55cba2f-09e9-4484-ba19-50de6f2d68dd" height="28">|<a href="https://github.com/qwertyytheartist">qwertyytheartist</a>|
-|`:thepython555:`|<img src="https://github.com/mariocraft987/bark.github.io/assets/129226914/1b483f19-12dc-491f-8fd5-896fa6c09cc8" height="28">|<a href="https://github.com/qwertyytheartist">qwertyytheartist</a>|
+|`@mariocraft`|<img src="https://github.com/mariocraft987/bark.github.io/assets/129226914/44cac082-448d-4911-93e5-c7435a4c19ee" height="28">|<a href="https://github.com/qwertyytheartist">qwertyytheartist</a>|
+|`@qwertyy`|<img src="https://github.com/mariocraft987/bark.github.io/assets/129226914/bf40c77f-4513-4f10-83a4-10bb9feae717" height="28">|<a href="https://github.com/qwertyytheartist">qwertyytheartist</a>|
+|`@rubiidev`|<img src="https://github.com/mariocraft987/bark.github.io/assets/129226914/703592f8-e03f-479e-b456-36dc8798e615" height="28">|<a href="https://github.com/qwertyytheartist">qwertyytheartist</a>|
+|`@nmsderp`|<img src="https://github.com/mariocraft987/bark.github.io/assets/129226914/d55cba2f-09e9-4484-ba19-50de6f2d68dd" height="28">|<a href="https://github.com/qwertyytheartist">qwertyytheartist</a>|
+|`@thepython555`|<img src="https://github.com/mariocraft987/bark.github.io/assets/129226914/1b483f19-12dc-491f-8fd5-896fa6c09cc8" height="28">|<a href="https://github.com/qwertyytheartist">qwertyytheartist</a>|
