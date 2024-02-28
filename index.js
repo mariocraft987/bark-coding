@@ -6,13 +6,13 @@ let commitsLength = 33
 console.log("Exit Now! This part is used for devolopers.");
 
 // header
-content = '<div class="navbar"><a href="home.html"><img src="src/images/Logo.svg" alt="Bark" width="25" height="25" ></a><a href="new_editor/">create</a><a href="explore.html">explore</a>'
+content = '<div class="navbar"><a href="home.html"><img src="src/images/Logo.svg" alt="Bark" width="25" height="25" ></a><a href="editor_new/">create</a><a href="explore.html">explore</a>'
 content += '<a href="ideas.html">ideas</a><a href="about.html">about</a><a href="https://barkprogram.boards.net/">discuss</a><a href="login.html" class="right">sign in</a><a href="signup.html" class="right">join bark</a>'
 content += '<a class="dark-mode-button" id="darkModeToggle"><dmbico alt="Dark Mode"></dmbico></a><input class="searchBar" placeholder="Search for Projects"></input></div>'
     document.getElementById('navbar').innerHTML = content;
 
 // footer
-document.body.innerHTML += '<footer style="background-color: rgb(0, 127, 255, 0.24); margin-top: 200px; padding: 40px; text-align: center;"><p style="color: #777;">Looks like you\'ve reached the bottom.</p><p><a href="home.html">Home</a> <a href="new_editor/">Create</a> <a href="explore.html">Explore</a> <a href="ideas.html">Ideas</a> <a href="https://github.com/mariocraft987/bark.github.io/">GitHub</a> <a href="jobs.html">Jobs</a> <a href="credits.html">Credits</a> <a href="https://scratch.mit.edu/users/mariocraft987/">Contact</a> <a href="https://barkprogram.boards.net/">Forums</a></p></footer>';
+document.body.innerHTML += '<footer style="background-color: rgb(0, 127, 255, 0.24); margin-top: 200px; padding: 40px; text-align: center;"><p style="color: #777;">Looks like you\'ve reached the bottom.</p><p><a href="home.html">Home</a> <a href="editor_new/">Create</a> <a href="explore.html">Explore</a> <a href="ideas.html">Ideas</a> <a href="https://github.com/mariocraft987/bark.github.io/">GitHub</a> <a href="jobs.html">Jobs</a> <a href="credits.html">Credits</a> <a href="https://scratch.mit.edu/users/mariocraft987/">Contact</a> <a href="https://barkprogram.boards.net/">Forums</a></p></footer>';
 
 function whatsNew() {
     document.getElementById("boxChanger").innerHTML = "<h2>Whats New?</h2><p>"+newsBox+"</p>";
