@@ -1,6 +1,6 @@
 ---
 name: Feature suggestion
-about: Suggest a Feature to Bark.
+about: Suggest a Feature for Bark.
 title: ''
 labels: enhancement
 assignees: ''
