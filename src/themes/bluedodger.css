@@ -70,11 +70,6 @@ body {
 
 a.link {
   color: dodgerblue;
-  font-weight: bold;
-}
-
-a.link:visited {
-  font-weight: normal;
 }
 
 input {
