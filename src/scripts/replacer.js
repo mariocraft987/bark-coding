@@ -29,7 +29,7 @@ function replace(text) {
         .replaceAll(/(penile|vagina|nipple|teabag|ekiben|erotic|tranny|sexcam|rimjob|raping|rapist|rectum|pantie|orgasm|nudity|faggot|incest|murder|hentai|retard|my ass|breast|tiktok|reddit|bereal)+/gim, t(6))
         .replaceAll(/(bitch|pussy|whore|f off|effin|penis|erect|semen|lmfao|smash|cheek|seggs|teste|prick|squaw|thong|vulva|naked|horny|dildo|booty|boner|balls)+/gim, t(5))
         .replaceAll(/(fuck|shit|fock|cunt|cock|dick|gyat|boob|lmao|nude|porn|wank|slut|milf|dilf|yiff|yaoi|twat|tush|rape|pedo|nsfw|jizz|kike|jugg|kill|hump|tidd|2g1c|anus|tits|titt)+/gim, t(4))
-        .replaceAll(/(p ⭐️|⬛️ 🟧|cbt|bbc|kys|fag|cum|.gg)+/gim, t(3))
+        .replaceAll(/(p ⭐️|⬛️ 🟧|cbt|bbc|kys|fag|cum)+/gim, t(3))
         .replaceAll(/(p⭐️|⬛️🟧|69)+/gim, t(2))
         .replaceAll(/(🤱|💦|🕳️|🤤|🍑|🥒|🍆|🖕|😩|😫|🥴|🚛|🍒|🍝|🌽|👅|🥵)+/gim, t(1))
         
