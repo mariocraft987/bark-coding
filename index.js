@@ -6,16 +6,13 @@ let commitsLength = 33
 console.log("Exit Now! This part is used for devolopers.");
 
 // header
-content = '<div class="navbar"><a href="home.html"><img src="src/images/Logo.svg" alt="Bark" width="25" height="25" ></a><a href="editor.html">create</a><a href="explore.html">explore</a>'
+content = '<div class="navbar"><a href="home.html"><img src="src/images/Logo.svg" alt="Bark" width="25" height="25" ></a><a href="new_editor/">create</a><a href="explore.html">explore</a>'
 content += '<a href="ideas.html">ideas</a><a href="about.html">about</a><a href="https://barkprogram.boards.net/">discuss</a><a href="login.html" class="right">sign in</a><a href="signup.html" class="right">join bark</a>'
 content += '<a class="dark-mode-button" id="darkModeToggle"><dmbico alt="Dark Mode"></dmbico></a><input class="searchBar" placeholder="Search for Projects"></input></div>'
     document.getElementById('navbar').innerHTML = content;
 
 // footer
-// content = '<br><div id="footer"><div class="footer-row"><h3>Help</h3><p><a href="https://github.com/Mariocraft987/bark.github.io/issues/new">Report a Bug / Suggest a Feature</a></p><p><a href="https://scratch.mit.edu/users/mariocraft987/#comments">Contact</a></p></div>';
-// content += '<div class="footer-row"><h3>Community</h3><p><a href="https://mariocraft987.github.io/bark.github.io/explore.html">Explore</a></p><p><a href="https://barkprogram.boards.net/">Forums</a></p><p><a href="https://mariocraft987.github.io/bark.github.io/login.html">Sign In</a></p><p><a href="https://mariocraft987.github.io/bark.github.io/signup.html">Sign Up</a></p></div>';
-// content += '<div class="footer-row"><h3>About</h3><p><a href="https://mariocraft987.github.io/bark.github.io/about.html">About Bark</a></p><p><a href="https://bark-programming.github.io/bark-gui/credits.html">Credits</a></p><p><a href="https://mariocraft987.github.io/bark.github.io/jobs.html">Jobs</a></p><p><a href="https://github.com/Mariocraft987/bark.github.io/blob/main/LICENSE">License</a></p></div></div>';
-//     document.body.innerHTML += content;
+document.body.innerHTML += '<footer style="background-color: #d1e5ff; margin-top: 200px; padding: 30px; text-align: center;"><p style="color: #777;">Looks like you\'ve reached the bottom.</p><p><a href="home.html">Home</a> <a href="new_editor/">Create</a> <a href="explore.html">Explore</a> <a href="ideas.html">Ideas</a> <a href="https://github.com/mariocraft987/bark.github.io/">GitHub</a> <a href="jobs.html">Jobs</a> <a href="credits.html">Credits</a> <a href="https://scratch.mit.edu/users/mariocraft987/">Contact</a> <a href="https://barkprogram.boards.net/">Forums</a></p></footer>';
 
 function whatsNew() {
     document.getElementById("boxChanger").innerHTML = "<h2>Whats New?</h2><p>"+newsBox+"</p>";
