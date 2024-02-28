@@ -12,4 +12,4 @@ I Want A Feature for bark!
  - Name:
 
 **Feature Info**
-[enter clear & thorough description of the bug here]
+[enter clear & thorough description of the feature you want here]
