@@ -14,6 +14,7 @@ To be a part of Bark's devlopment, please comment `Job Register 4543` on <a href
 <hr>
 
 ## Contributors
+Bark Contributers, or you could just see our credits.
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
