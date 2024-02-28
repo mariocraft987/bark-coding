@@ -1,4 +1,4 @@
-/* Basicly censors text */
+/* Basicly replaces text */
 const token = "★";
 const emojiWidth = 25;
 const emojiHeight = 25;
@@ -63,6 +63,8 @@ function replace(text) {
         .replaceAll(":robot:", "<img src='src/emojis/svg/robot.svg' alt='robot face' style='margin-bottom: -7px;' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
         .replaceAll(":clap:", "<img src='src/emojis/svg/clap.svg' alt='clapping hands' style='margin-bottom: -7px;' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
         .replaceAll(":clapAnim:", "<img src='src/emojis/svg/clap_anim.gif' alt='clapping hands' style='margin-bottom: -7px;' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
+
+        // devoloper emojis
         .replaceAll(/(:mariocraft987:|:mariocraft:)+/gim, '<a href="https://github.com/Mariocraft987" style="background-color: #988bbf;height: 16px;display: inline-block;padding: 5px;margin: -5px 3px;border: 1px solid #ebd7ff;border-radius: 10px;color: #ffffff;position: relative;top: 2px; text-decoration: none;"><img src="https://avatars.githubusercontent.com/u/154646419" width="16px" style="border-radius: 50%;"><span style="top: -2px;margin-left: 3px;margin-right: 3px;position: relative;">mariocraft</span></a>')
         .replaceAll(/(:thepython555:|:dumorando:)+/gim, '<a href="https://github.com/thepython555" style="background-color: #bebf8b;height: 16px;display: inline-block;padding: 5px;margin: -5px 3px;border: 1px solid #fffcd7;border-radius: 10px;color: #ffffff;position: relative;top: 2px; text-decoration: none;"><img src="https://avatars.githubusercontent.com/u/144301348" width="16px" style="border-radius: 50%;"><span style="top: -2px;margin-left: 3px;margin-right: 3px;position: relative;">dumorando</span></a>')
         .replaceAll(/(:qwertyy:|:qwertyytheartist:)+/gim, '<a href="https://github.com/qwertyytheartist" style="background-color: #bfb08b;height: 16px;display: inline-block;padding: 5px;margin: -5px 3px;border: 1px solid #fff4d7;border-radius: 10px;color: #ffffff;position: relative;top: 2px; text-decoration: none;"><img src="https://avatars.githubusercontent.com/u/129226914" width="16px" style="border-radius: 50%;"><span style="top: -2px;margin-left: 3px;margin-right: 3px;position: relative;">qwertyy</span></a>')
