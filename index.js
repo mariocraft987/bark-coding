@@ -48,7 +48,7 @@ function randomTxt() {
     "Funfact: Dogs have insane hearing and smelling.", "Why not help with bark??", "A special version is here somewere..", 
     "Bark is hosted with github pages.", "Funfact: im a funfact!", "Whats cooler, Dogs or Cats?", 
     "Wanna help create bark? go <a href='Jobs.html' class='link'>Here</a>", "Bark's birthday month is October", 
-    "Why not go <a href='https://www.scratchfoundation.org/donate' class='link'>donate</a> to scratch?", "Go check out snail-ide!" 
+    "Why not go <a href='https://www.scratchfoundation.org/donate' class='link'>donate</a> to scratch?", "Go check out snail-ide!", 
     "This text has a 0.07 chance of apearing", "So <em>many</em> breeds of dogs", "Check out our <a href='https://github.com/mariocraft987/bark.github.io/' class='link'>github</a>", 
     "Funfact: You are waiting for something to load", "Emojis are added! :party:", "Bark is created with html and javascript", 
     "Go check out Goldot", "Svelte is html but enchanted", ":dog::cat::banana:", "Come see our <a href='https://github.com/Bark-programming' class='link' >orginization</a>", "e", 
