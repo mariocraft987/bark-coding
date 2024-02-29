@@ -32,6 +32,11 @@
 |`:thumb:`     |<img src="svg/thumb.svg" width="25">|<a href="https://github.com/Rubiidev-18">Rubiidev-18</a>|
 |`:troll:`     |<img src="svg/troll.svg" width="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:woof:`      |<img src="svg/bark.svg" width="25">|<a href="https://scratch.mit.edu/users/SuperL14M/">SuperL14M</a>|
+|`:mariocraft:`     |<img src="svg/mariocraft.svg" width="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
+|`:qwertyy:`     |<img src="svg/qwertyy.png" width="25">|<a href="https://github.com/qwertyytheartist">qwertyytheartist</a>|
+|`:rubiidev:`      |<img src="svg/rubiidev.svg" width="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
+|`:nmsderp:`      |<img src="svg/nmsderp.svg" width="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
+|`:dumo:`      |<img src="svg/dumo.svg" width="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 ## collaborator direct links
 these are NOT case-sensitive.<br>*please note that these images may be out of date!*
 |syntax        |result|creator|
