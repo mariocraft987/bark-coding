@@ -26,7 +26,8 @@ Bark Contributers, or you could just see our credits.
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## Servers
-Uhhh... <br/>
+Uhhh... Someone needs to pay for servers....
+<br/><br/>
 [![Better Stack Badge](https://uptime.betterstack.com/status-badges/v3/monitor/10x1r.svg)](https://uptime.betterstack.com/?utm_source=status_badge)
 
 # License
