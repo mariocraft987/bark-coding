@@ -65,7 +65,7 @@ function replace(text) {
 
         // emojis of dev
         .replaceAll(":mariocraft:", "<img src='src/emojis/svg/mariocraft.svg' alt='dev' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
-        .replaceAll(":qwertyy:", "<img src='src/emojis/svg/qwertyy.svg' alt='dev'' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
+        .replaceAll(":qwertyy:", "<img src='src/emojis/svg/qwertyy.png' alt='dev'' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
         .replaceAll(":rubiidev:", "<img src='src/emojis/svg/rubiidev.svg' alt='dev' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
         .replaceAll(":nmsderp:", "<img src='src/emojis/svg/nmsderp.svg' alt='dev'' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
         .replaceAll(":dumo:", "<img src='src/emojis/svg/dumo.svg' alt='dev' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
