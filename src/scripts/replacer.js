@@ -1,5 +1,5 @@
 /* Basicly replaces text */
-const token = "★";
+const token = "👎";
 const emojiWidth = 25;
 const emojiHeight = 25;
 
