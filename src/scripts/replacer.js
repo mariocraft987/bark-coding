@@ -65,7 +65,7 @@ function replace(text) {
         .replaceAll(":clapAnim:", "<img src='src/emojis/svg/clap_anim.gif' alt='clapping hands' style='margin-bottom: -7px;' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
 
         // emojis of dev
-        .replaceAll(":mariocraft:", "<img src='src/emojis/svg/mariocraft.svg' alt='dev' style='margin-bottom: -7px;' width='"+ emojiWidth-8 + "' height='" + emojiHeight-8 + "'>")
+        .replaceAll(":mariocraft:", "<img src='src/emojis/svg/mariocraft.svg' alt='dev' style='margin-bottom: -7px;' width='"+ emojiWidth - 8 + "' height='" + emojiHeight + "'>")
         .replaceAll(":qwertyy:", "<img src='src/emojis/svg/qwertyy.svg' alt='dev'' style='margin-bottom: -7px;' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
         .replaceAll(":rubiidev:", "<img src='src/emojis/svg/rubiidev.svg' alt='dev' style='margin-bottom: -7px;' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
         .replaceAll(":nmsderp:", "<img src='src/emojis/svg/nmsderp.svg' alt='dev'' style='margin-bottom: -7px;' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
