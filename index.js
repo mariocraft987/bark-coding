@@ -1,7 +1,8 @@
 /* Some basic scripts created in javascript to work the website, and make it interactive. */
 
 let newsBox = "Bark now is being hosted with Vercel! and a new way of donating is coming soon." /* \n is a newline, don't remove it! */
-let commitsLength = 33
+let commitsLength = 50
+let baseUrl = "https://bark-coding.vercel.app"
 
 console.log("Exit Now! This part is used for devolopers.");
 
@@ -12,8 +13,10 @@ content += '<a class="dark-mode-button" id="darkModeToggle"><dmbico alt="Dark Mo
     document.getElementById('navbar').innerHTML = content;
 
 // footer
+if (!document.url = "baseUrl") {
 document.body.innerHTML += '<footer style="background-color: rgb(0, 127, 255, 0.24); margin-top: 200px; height: 25vh; padding: 40px; text-align: center;"><p style="color: #777;">Looks like you\'ve reached the bottom.</p><p><a href="home.html">Home</a> <a href="editor_new/">Editor</a> <a href="https://github.com/mariocraft987/bark.github.io/">Source</a> <a href="credits.html">Credits</a> <a href="https://scratch.mit.edu/users/mariocraft987#comments">Contact</a> <a href="https://barkprogram.boards.net/">Forums</a></p></footer>';
-
+}
+    
 function whatsNew() {
     document.getElementById("boxChanger").innerHTML = "<h2>Whats New?</h2><p>"+newsBox+"</p>";
 }
