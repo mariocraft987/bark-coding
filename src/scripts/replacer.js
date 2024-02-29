@@ -64,6 +64,13 @@ function replace(text) {
         .replaceAll(":clap:", "<img src='src/emojis/svg/clap.svg' alt='clapping hands' style='margin-bottom: -7px;' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
         .replaceAll(":clapAnim:", "<img src='src/emojis/svg/clap_anim.gif' alt='clapping hands' style='margin-bottom: -7px;' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
 
+        // emojis of dev
+        .replaceAll(":mariocraft:", "<img src='src/emojis/svg/mariocraft.svg' alt='dev' style='margin-bottom: -7px;' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
+        .replaceAll(":qwertyy:", "<img src='src/emojis/svg/qwertyy.svg' alt='dev'' style='margin-bottom: -7px;' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
+        .replaceAll(":rubiidev:", "<img src='src/emojis/svg/rubiidev.svg' alt='dev' style='margin-bottom: -7px;' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
+        .replaceAll(":nmsderp:", "<img src='src/emojis/svg/nmsderp.svg' alt='dev'' style='margin-bottom: -7px;' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
+        .replaceAll(":dumo:", "<img src='src/emojis/svg/dumo.svg' alt='dev' style='margin-bottom: -7px;' width='"+ emojiWidth + "' height='" + emojiHeight + "'>")
+
         // devoloper tags
         .replaceAll(/(@mariocraft987|@mariocraft )+/gim, '<a href="https://github.com/Mariocraft987" style="background-color: #988bbf;height: 16px;display: inline-block;padding: 5px;margin: -5px 3px;border: 1px solid #ebd7ff;border-radius: 10px;color: #ffffff;position: relative;top: 2px; text-decoration: none;"><img src="https://github.com/mariocraft987.png" width="16px" style="border-radius: 50%;"><span style="top: -2px;margin-left: 3px;margin-right: 3px;position: relative;">mariocraft</span></a>')
         .replaceAll(/(@thepython555|@dumorando)+/gim, '<a href="https://github.com/thepython555" style="background-color: #bebf8b;height: 16px;display: inline-block;padding: 5px;margin: -5px 3px;border: 1px solid #fffcd7;border-radius: 10px;color: #ffffff;position: relative;top: 2px; text-decoration: none;"><img src="https://github.com/thepython555.png" width="16px" style="border-radius: 50%;"><span style="top: -2px;margin-left: 3px;margin-right: 3px;position: relative;">dumorando</span></a>')
