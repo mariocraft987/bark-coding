@@ -8,19 +8,32 @@
   <body>
     <div class="font">
  <p class="creditsHeader">Bark Credits</p>
- <h2>Thank you for using Bark!</h2>
- <p>If these credits are outdated, then you can find us on our <a href="https://github.com/Mariocraft987/bark.github.io/graphs/contributors">Github page</a>.</p>
- <span id="credits"></span>
+ <div style="margin: 10px;">
+    <h2>Thank You</h2>
+    <p>This is the Bark credits</p>
+    <p>If these credits are outdated then you can find us at our <a href="https://github.com/Mariocraft987/bark.github.io/graphs/contributors">Github</a></p>
+    <span id="credits"></span>
+  </div>
 </div>
 <script>
   /* Add a github username to link them in the credits */
-  const slotB= ["mariocraft987", "nmsderp", "Rubiidev-18", "qwertyytheartist", "ShinjitsuNoGyarusa", "theOVERGOD12"]
-  const slotA = ["mariocraft987", "nmsderp", "Rubiidev-18", "qwertyytheartist"]
+  const devs = ["mariocraft987", "nmsderp", "Rubiidev-18", "qwertyytheartist", "thepython555"] //devoloper
+  const contr = ["ShinjitsuNoGyarusa", "theOVERGOD12"] //contributer
+  let radius = "3px";
+
   i = 0;
-  while (i < slotA.length) {
-    var username = slotA[i];
-    document.getElementById('credits').innerHTML += '<a href="https://github.com/'+username+'"><img src="https://github.com/'+username+'.png" height="60" width="60"><p class="CreditsPT">'+username+'</p></a>';
+  g = 0;
+  document.getElementById('credits').innerHTML = "<h3>Devolopers</h3>"
+  while (i < devs.length) {
+    var username = devs[i];
+    document.getElementById('credits').innerHTML += '<a href="https://github.com/'+username+'"><img src="https://github.com/'+username+'.png" style="border-radius: '+radius+';" height="50"><p class="CreditsPT">'+username+'</p></a>';
     i++;
+  }
+  document.getElementById('credits').innerHTML += "<h3>Contributers</h3>"
+  while (g < contr.length) {
+    var username = contr[g];
+    document.getElementById('credits').innerHTML += '<a href="https://github.com/'+username+'"><img src="https://github.com/'+username+'.png" style="border-radius: '+radius+';" height="50"><p class="CreditsPT">'+username+'</p></a>';
+    g++;
   }
 </script>
  </body>
