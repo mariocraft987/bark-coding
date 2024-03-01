@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emojis</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      #header {
+        width: 100%;
+        background-color: DodgerBlue;
+        color: white;
+        text-align: center;
+        font-family: "Courier New", Courier, monospace;
+      }
+      #insert {
+        padding-left: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">Emoji List</div>
+    <div id="insert"></div>
+
+    <script src="https://unpkg.com/md@0.6.0/dist/md.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(() => {
+        fetch("https://bark-coding.vercel.app/src/emojis/syntax.md")
+          .then((response) => response.text())
+          .then((data) => $('#insert').append(md(data)))
+      });
+    </script>
+  </body>
+</html>
