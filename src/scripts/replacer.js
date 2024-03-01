@@ -65,8 +65,8 @@ function replace(text) {
 
         // emojis of dev
         .replaceAll(":mariocraft:", "<img src='src/emojis/svg/dev/mariocraft.svg' alt='dev' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
-        .replaceAll(":qwertyy:", "<img src='src/emojis/svg/dev/qwertyy.svg' alt='dev'' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
-        .replaceAll(":rubiidev:", "<img src='src/emojis/svg/dev/rubiidev.png' alt='dev' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
+        .replaceAll(":qwertyy:", "<img src='src/emojis/svg/dev/qwertyy.png' alt='dev'' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
+        .replaceAll(":rubiidev:", "<img src='src/emojis/svg/dev/rubiidev.svg' alt='dev' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
         .replaceAll(":nmsderp:", "<img src='src/emojis/svg/dev/nmsderp.svg' alt='dev'' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
         .replaceAll(":dumo:", "<img src='src/emojis/svg/dev/dumo.svg' alt='dev' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
 
