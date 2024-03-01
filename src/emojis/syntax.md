@@ -21,6 +21,7 @@
 |`:mad:`       |<img src="svg/mad.svg" width="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:mariocraft:`|<img src="svg/mariocraft.svg" width="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:moneyEyes:` |<img src="svg/moneyEyes.svg" width="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
+|`:mewing:`    |<img src="svg/mewing.svg" width="25">|<a href="https://github.com/nmsderp">nmsderp</a>|
 |`:nerd:`      |<img src="svg/nerd.svg" width="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:nmsderp:`   |<img src="svg/nmsderp.svg" width="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:panic:`     |<img src="svg/panic.svg" width="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
