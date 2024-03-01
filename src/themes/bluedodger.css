@@ -250,3 +250,10 @@ xml category {
   color: #808080;
   opacity: 0.8;
 }
+
+textarea {
+  font-family: inherit;
+  border-radius: 6px;
+  border: none;
+  padding: 7px;
+}
