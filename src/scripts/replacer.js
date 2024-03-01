@@ -1,6 +1,6 @@
 /* Basicly replaces text */
 const token = "👎";
-const emojiWidth = 25;
+const emojisize = 25;
 
 function t(length) {
     const arr = [];
@@ -33,45 +33,45 @@ function replace(text) {
         .replaceAll(/(🤱|💦|🕳️|🤤|🍑|🥒|🍆|🖕|😩|😫|🥴|🚛|🍒|🍝|🌽|👅|🥵)+/gim, t(1))
         
         // emojis
-        .replaceAll(":amazed:", "<img src='src/emojis/normal/svg/amazed.svg' style='margin-bottom: -7px;' alt='amazed face' width='"+ emojiWidth + "'>")
-        .replaceAll(":alien:", "<img src='src/emojis/svg/normal/alien.svg' style='margin-bottom: -7px;' alt='alien' width='"+ emojiWidth + "'>")
-        .replaceAll(":blank:", "<img src='src/emojis/svg/normal/blank.svg' style='margin-bottom: -7px;' alt='blank face' width='"+ emojiWidth + "'>")
-        .replaceAll(":smiley:", "<img src='src/emojis/svg/normal/smiley.svg' alt='smiley face' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
-        .replaceAll(":happy:", "<img src='src/emojis/svg/normal/happy.svg' alt='happy face' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
-        .replaceAll(":sad:", "<img src='src/emojis/svg/normal/sad.svg' alt='sad face' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
-        .replaceAll(":angry:", "<img src='src/emojis/svg/normal/angry.svg' alt='angry face' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
-        .replaceAll(":nerd:", "<img src='src/emojis/svg/normal/nerd.svg' alt='nerd face' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
-        .replaceAll(":lol:", "<img src='src/emojis/svg/normal/lol.svg' alt='laughing face' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
-        .replaceAll(":textHappy:", "<img src='src/emojis/svg/normal/textHappy.svg' alt='happy face' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
-        .replaceAll(":sussedOut:", "<img src='src/emojis/svg/normal/sussedOut.svg' alt='suspicious face' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
-        .replaceAll(":goofy:", "<img src='src/emojis/svg/normal/goofy.svg' alt='goofy face' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
-        .replaceAll(":mad:", "<img src='src/emojis/svg/normal/mad.svg' alt='mad face' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
-        .replaceAll(":joyful:", "<img src='src/emojis/svg/normal/joyful.svg' alt='joyful face' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
-        .replaceAll(":moneyEyes:", "<img src='src/emojis/svg/normal/moneyEyes.svg' alt='face with money eyes' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
-        .replaceAll(":evil:", "<img src='src/emojis/svg/normal/evil.svg' alt='evil face' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
-        .replaceAll(":panic:", "<img src='src/emojis/svg/normal/panic.svg' alt='panicking face' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
-        .replaceAll(":dizzy:", "<img src='src/emojis/svg/normal/dizzy.svg' alt='dizzy face' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
-        .replaceAll(":jealous:", "<img src='src/emojis/svg/normal/jealous.svg' alt='jealous face' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
-        .replaceAll(":smallSmile:", "<img src='src/emojis/svg/normal/smallsmile.svg' alt='face with small smile' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
-        .replaceAll(":troll:", "<img src='src/emojis/svg/normal/troll.svg' alt='troll face' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
-        .replaceAll(":woof:", "<img src='src/emojis/svg/normal/bark.svg' alt='dog' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
-        .replaceAll(":fire:", "<img src='src/emojis/svg/normal/fire.svg' alt='fire' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
-        .replaceAll(":pride:", "<img src='src/emojis/svg/normal/pride.svg' alt='pride flag' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
-        .replaceAll(":rofl:", "<img src='src/emojis/svg/normal/rofl.svg' alt='rofl' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
-        .replaceAll(":thumb:", "<img src='src/emojis/svg/normal/thumb.svg' alt='thumbs up' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
-        .replaceAll(":robot:", "<img src='src/emojis/svg/normal/robot.svg' alt='robot face' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
-        .replaceAll(":clap:", "<img src='src/emojis/svg/normal/clap.svg' alt='clapping hands' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
-        .replaceAll(":clapAnim:", "<img src='src/emojis/svg/normal/clap_anim.gif' alt='clapping hands' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
+        .replaceAll(":amazed:", "<img src='src/emojis/normal/svg/amazed.svg' style='margin-bottom: -7px;' alt='amazed face' width='"+ emojisize + "' height='"+ emojisize + "'>")
+        .replaceAll(":alien:", "<img src='src/emojis/svg/normal/alien.svg' style='margin-bottom: -7px;' alt='alien' width='"+ emojisize + "' height='"+ emojisize + "'>")
+        .replaceAll(":blank:", "<img src='src/emojis/svg/normal/blank.svg' style='margin-bottom: -7px;' alt='blank face' width='"+ emojisize + "' height='"+ emojisize + "'>")
+        .replaceAll(":smiley:", "<img src='src/emojis/svg/normal/smiley.svg' alt='smiley face' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
+        .replaceAll(":happy:", "<img src='src/emojis/svg/normal/happy.svg' alt='happy face' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
+        .replaceAll(":sad:", "<img src='src/emojis/svg/normal/sad.svg' alt='sad face' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
+        .replaceAll(":angry:", "<img src='src/emojis/svg/normal/angry.svg' alt='angry face' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
+        .replaceAll(":nerd:", "<img src='src/emojis/svg/normal/nerd.svg' alt='nerd face' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
+        .replaceAll(":lol:", "<img src='src/emojis/svg/normal/lol.svg' alt='laughing face' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
+        .replaceAll(":textHappy:", "<img src='src/emojis/svg/normal/textHappy.svg' alt='happy face' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
+        .replaceAll(":sussedOut:", "<img src='src/emojis/svg/normal/sussedOut.svg' alt='suspicious face' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
+        .replaceAll(":goofy:", "<img src='src/emojis/svg/normal/goofy.svg' alt='goofy face' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
+        .replaceAll(":mad:", "<img src='src/emojis/svg/normal/mad.svg' alt='mad face' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
+        .replaceAll(":joyful:", "<img src='src/emojis/svg/normal/joyful.svg' alt='joyful face' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
+        .replaceAll(":moneyEyes:", "<img src='src/emojis/svg/normal/moneyEyes.svg' alt='face with money eyes' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
+        .replaceAll(":evil:", "<img src='src/emojis/svg/normal/evil.svg' alt='evil face' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
+        .replaceAll(":panic:", "<img src='src/emojis/svg/normal/panic.svg' alt='panicking face' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
+        .replaceAll(":dizzy:", "<img src='src/emojis/svg/normal/dizzy.svg' alt='dizzy face' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
+        .replaceAll(":jealous:", "<img src='src/emojis/svg/normal/jealous.svg' alt='jealous face' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
+        .replaceAll(":smallSmile:", "<img src='src/emojis/svg/normal/smallsmile.svg' alt='face with small smile' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
+        .replaceAll(":troll:", "<img src='src/emojis/svg/normal/troll.svg' alt='troll face' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
+        .replaceAll(":woof:", "<img src='src/emojis/svg/normal/bark.svg' alt='dog' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
+        .replaceAll(":fire:", "<img src='src/emojis/svg/normal/fire.svg' alt='fire' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
+        .replaceAll(":pride:", "<img src='src/emojis/svg/normal/pride.svg' alt='pride flag' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
+        .replaceAll(":rofl:", "<img src='src/emojis/svg/normal/rofl.svg' alt='rofl' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
+        .replaceAll(":thumb:", "<img src='src/emojis/svg/normal/thumb.svg' alt='thumbs up' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
+        .replaceAll(":robot:", "<img src='src/emojis/svg/normal/robot.svg' alt='robot face' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
+        .replaceAll(":clap:", "<img src='src/emojis/svg/normal/clap.svg' alt='clapping hands' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
+        .replaceAll(":clapAnim:", "<img src='src/emojis/svg/normal/clap_anim.gif' alt='clapping hands' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
 
         // emojis of dev
-        .replaceAll(":mariocraft:", "<img src='src/emojis/svg/dev/mariocraft.svg' alt='dev' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
-        .replaceAll(":qwertyy:", "<img src='src/emojis/svg/dev/qwertyy.png' alt='dev'' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
-        .replaceAll(":rubiidev:", "<img src='src/emojis/svg/dev/rubiidev.svg' alt='dev' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
-        .replaceAll(":nmsderp:", "<img src='src/emojis/svg/dev/nmsderp.svg' alt='dev'' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
-        .replaceAll(":dumo:", "<img src='src/emojis/svg/dev/dumo.svg' alt='dev' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
+        .replaceAll(":mariocraft:", "<img src='src/emojis/svg/dev/mariocraft.svg' alt='dev' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
+        .replaceAll(":qwertyy:", "<img src='src/emojis/svg/dev/qwertyy.png' alt='dev'' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
+        .replaceAll(":rubiidev:", "<img src='src/emojis/svg/dev/rubiidev.svg' alt='dev' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
+        .replaceAll(":nmsderp:", "<img src='src/emojis/svg/dev/nmsderp.svg' alt='dev'' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
+        .replaceAll(":dumo:", "<img src='src/emojis/svg/dev/dumo.svg' alt='dev' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
 
         // joke emojis
-        .replaceAll(":mewing:", "<img src='src/emojis/svg/joke/mewing.svg' alt='mewing' style='margin-bottom: -7px;' width='"+ emojiWidth + "'>")
+        .replaceAll(":mewing:", "<img src='src/emojis/svg/joke/mewing.svg' alt='mewing' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
 
         // devoloper tags
         .replaceAll(/(@mariocraft987|@mariocraft )+/gim, '<a href="https://github.com/Mariocraft987" style="background-color: #988bbf;height: 16px;display: inline-block;padding: 5px;margin: -5px 3px;border: 1px solid #ebd7ff;border-radius: 10px;color: #ffffff;position: relative;top: 2px; text-decoration: none;"><img src="https://github.com/mariocraft987.png" width="16px" style="border-radius: 50%;"><span style="top: -2px;margin-left: 3px;margin-right: 3px;position: relative;">mariocraft</span></a>')
