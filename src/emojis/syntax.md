@@ -26,7 +26,7 @@
 |`:nmsderp:`   |<img src="svg/nmsderp.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:panic:`     |<img src="svg/panic.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:pride:`     |<img src="svg/pride.svg" width="25" height="25">|<a href="https://github.com/qwertyytheartist">qwertyytheartist</a>|
-|`:qwertyy:`   |<img src="svg/qwertyy.png" width="25" height="25">|<a href="https://github.com/qwertyytheartist">qwertyytheartist</a>|
+|`:qwertyy:`   |<img src="svg/dev/qwertyy.png" width="25" height="25">|<a href="https://github.com/qwertyytheartist">qwertyytheartist</a>|
 |`:robot:`     |<img src="svg/robot.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:rofl:`      |<img src="svg/rofl.svg" width="25" height="25">|<a href="https://github.com/Rubiidev-18">Rubiidev-18</a>|
 |`:rubiidev:`  |<img src="svg/rubiidev.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
