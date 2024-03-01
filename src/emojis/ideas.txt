@@ -1,17 +1,17 @@
 
-smiley ✅
-happy ✅
-sad ✅
-angry ✅
+smiley
+happy
+sad
+angry
 
 dog
 cat
 rabbit
 turtle
 
-woozy ✅
+woozy
 angel
-scratch dog ✅
+scratch dog
 rick astley
 penguin
 
