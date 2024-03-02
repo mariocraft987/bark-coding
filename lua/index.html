@@ -3,19 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <h1>Write Lua Code and Share it With The Bark Community!</h1>
     <title>Bark - Lua Editor</title>
-    <!-- Include Fengari -->
-    <script src="https://bark-coding.vercel.app/lua/fengari.js"></script>
     <!-- Include CodeMirror stylesheet -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/codemirror.min.css">
     <link rel="shortcut icon" href="/favicon.ico" type="image/png">
     <link rel="stylesheet" href="/src/themes/bluedodger.css">
-  <style id="dark-reader-style" type="text/css">@media screen {
-html {-webkit-transition : -webkit-filter 300ms linear;}
-}</style>
+    <style id="dark-reader-style" type="text/css">@media screen {
+        html {-webkit-transition : -webkit-filter 300ms linear;}
+    }</style>
 </head>
 <body>
+    <h1>Write Lua Code and Share it With The Bark Community!</h1>
     <textarea id="code-editor"></textarea>
     <button id="compile-btn">Compile</button>
     <button id="run-btn">Run</button>
@@ -25,6 +23,8 @@ html {-webkit-transition : -webkit-filter 300ms linear;}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/codemirror.min.js"></script>
     <!-- Include Lua mode for CodeMirror -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/mode/lua/lua.min.js"></script>
+    <!-- Include Fengari -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fengari/0.1.2/fengari.js"></script>
 
     <script>
         // Function to compile Lua code
