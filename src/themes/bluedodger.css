@@ -258,7 +258,7 @@ textarea {
   padding: 7px;
 }
 
-@media (max-width: 800px) {
+@media (pointer: coarse) {
   .body {
     overflow-x: hidden;
   }
