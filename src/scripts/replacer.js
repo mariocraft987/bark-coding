@@ -19,6 +19,7 @@ function replace(text) {
         // 🔞 i highly reccomend not searching up some of the stuff on here 🔞
         .replaceAll(/(double penetration)+/gim, t(18))
         .replaceAll(/(pearl necklace|rusty trombone)+/gim, t(14))
+        .replaceAll(/(sunset camera)+/gim, t(13))
         .replaceAll(/(sex position|mating press|white power|sex offender)+/gim, t(12))
         .replaceAll(/(doggy style|intercourse)+/gim, t(11))
         .replaceAll(/(kitten lip|strip club|pornograph|paedophile)+/gim, t(10))
