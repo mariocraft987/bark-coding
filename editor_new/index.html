@@ -27,10 +27,24 @@
         height: 45px;
       }
 
-      #blocklyDiv {
-        height: calc(100% - 50px); /* Adjusted height to accommodate navbar */
+      .tabpage {
+        display: none;
+        height: calc(100% - 80px);
         width: calc(100% - 480px);
         position: absolute;
+        bottom: 0;
+      }
+
+      body.code #blocklyDiv {
+        display: block;
+      }
+
+      body.costumes #costumeseditordiv {
+        display: block;
+      }
+
+      body.sounds #soundseditordiv {
+        display: block;
       }
 
       #blocklyDiv * {
@@ -98,10 +112,26 @@
       .dark-mode * .blocklySvg {
         background-color: #181818;
       }
+
+      #editortabs {
+        position: absolute;
+        height: 35px;
+      }
+      
+      #editortabs button {
+        font-family: inherit;
+        background-color: inherit;
+        color: inherit;
+        border: none;
+        height: 15px;
+        font-size: 15px;
+        padding: 10px;
+        cursor: pointer;
+      }
     </style>
   </head>
 
-  <body onload="start()">
+  <body onload="start()" class="code">
     <div class="navbar">
       <a href="https://bark-coding.vercel.app/home.html"><img src="https://bark-coding.vercel.app/src/images/Logo.svg" alt="Bark" width="25" height="25"></a>
       <a href="#">save</a>
@@ -112,7 +142,20 @@
       <a class="right" href="https://bark-coding.vercel.app/login.html">sign in</a>
       <a class="right" href="https://bark-coding.vercel.app/signup.html">join bark</a>
     </div>
-    <div id="blocklyDiv"></div>
+    <div id="blocklyDiv" class="tabpage"></div>
+    <div id="costumeseditordiv" class="tabpage">
+      <h1>Upload costume</h1>
+      <form><input type="file" accept=".png,.jpg,.jpeg"><input type="submit"></form>
+    </div>
+    <div id="soundsseditordiv" class="tabpage">
+      <h1>Upload sound</h1>
+      <form><input type="file" accept=".mp3,.wav"><input type="submit"></form>
+    </div>
+    <div id="editortabs">
+      <button>Code</button>
+      <button>Costumes</button>
+      <button>Sound</button>
+    </div>
     <div id="projectPlayer">
         <div id="projectToolbar">
           <img class="projectToolbarButton" style="cursor:pointer;" src="https://mariocraft987.github.io/bark.github.io/src/projecttoolbar/run.svg" width="10" onclick="run_code();">
