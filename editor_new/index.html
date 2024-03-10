@@ -146,7 +146,7 @@
     <div id="costumeseditordiv" class="tabpage">
       <h1>Upload costume</h1>
       <input type='file' accept='image/*' onchange='openFile(event)'><br>
-      <img id='costume' style="height:60px; width:60px;">
+      <img id='output' style="height:80px; width:80px;">
     </div>
     <div id="soundseditordiv" class="tabpage">
       <h1>Upload sound</h1>
@@ -602,7 +602,7 @@
           var reader = new FileReader();
             reader.onload = function(){
           var dataURL = reader.result;
-          var output = document.getElementById('costume');
+          var output = document.getElementById('output');
           output.src = dataURL;
   };
   reader.readAsDataURL(input.files[0]);
