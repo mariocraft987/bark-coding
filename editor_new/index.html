@@ -199,7 +199,9 @@
         </block>
       </category>
       <category name="Style" colour="#cd17ff">
-        <block type="change_costume"></block>
+        <block type="change_costume">
+        <field name="TEXT">Player</field>
+        </block>
         <block type="next_costume"></block>
         <block type="change_stage_bg"></block>
         <block type="colour_picker">
@@ -427,19 +429,18 @@
         eval(code); // Evaluate generated code
       }
 
-                Blockly.Blocks['change_costume'] = { // Moved this block outside the previous block
-        init: function() {
-          this.jsonInit({
-            "type": "change_costume",
-            "message0": "switch costume to",
-            "previousStatement": null,
-            "nextStatement": null,
-            "colour": 260,
-            "tooltip": "",
-            "helpUrl": ""
-          });
-        }
-      };
+      Blockly.Blocks['change_stage_bg'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("switch costume to")
+        .appendField(new Blockly.FieldColour("Player"), "TARGET");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(260);
+ this.setTooltip("Change your sprite's costume to a specific one.");
+ this.setHelpUrl("");
+  }
+};
       
             Blockly.Blocks['next_costume'] = { // Moved this block outside the previous block
         init: function() {
