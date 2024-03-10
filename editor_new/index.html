@@ -145,7 +145,8 @@
     <div id="blocklyDiv" class="tabpage"></div>
     <div id="costumeseditordiv" class="tabpage">
       <h1>Upload costume</h1>
-      <form><input type="file" accept=".png,.jpg,.jpeg,.svg"><input type="submit"></form>
+      <input type='file' accept='image/*' onchange='openFile(event)'><br>
+      <img id='output' style="height:100px; width:100px;">
     </div>
     <div id="soundseditordiv" class="tabpage">
       <h1>Upload sound</h1>
@@ -594,6 +595,17 @@
           function run_code() {
             eval(Blockly.JavaScript.workspaceToCode(Blockly.getMainWorkspace()));
           }
+
+          var openFile = function(file) {
+          var input = file.target;
+          var reader = new FileReader();
+            reader.onload = function(){
+          var dataURL = reader.result;
+          var output = document.getElementById('output');
+          output.src = dataURL;
+  };
+  reader.readAsDataURL(input.files[0]);
+};
     </script>
   </body>
   <script src="https://mariocraft987.github.io/bark.github.io/index.js"></script>
