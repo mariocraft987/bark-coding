@@ -146,7 +146,7 @@
     <div id="costumeseditordiv" class="tabpage">
       <h1>Upload costume</h1>
       <input type='file' accept='image/*' onchange='openFile(event)'><br>
-      <img id='costume' style="height:80px; width:80px;">
+      <img id='costume' style="width:50px;">
     </div>
     <div id="soundseditordiv" class="tabpage">
       <h1>Upload sound</h1>
@@ -427,11 +427,11 @@
         eval(code); // Evaluate generated code
       }
 
-      Blockly.Blocks['change_costume'] = { // Changes costume
+      Blockly.Blocks['change_costume'] = { // Changes costume to a specific one
         init: function() {
           this.jsonInit({
             "type": "change_costume",
-            "message0": "change costume",
+            "message0": "switch costume",
             "previousStatement": null,
             "nextStatement": null,
             "colour": 260,
@@ -445,7 +445,7 @@
         init: function() {
           this.jsonInit({
             "type": "next_costume",
-            "message0": "switch costume",
+            "message0": "next costume",
             "previousStatement": null,
             "nextStatement": null,
             "colour": 260,
