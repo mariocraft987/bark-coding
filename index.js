@@ -7,14 +7,14 @@ let baseUrl = "https://bark-coding.vercel.app"
 console.log("Exit Now! This part is used for devolopers.");
 
 // navbar
-content = '<div class="navbar"><a href="home.html"><img src="src/images/Logo.svg" alt="Bark" width="25" height="25" ></a><a href="editor_new/">create</a><a href="explore.html">explore</a>'
+content = '<div class="navbar"><a href="home.html"><img src="src/images/Logo.svg" alt="bark" width="25" height="25" ></a><a href="editor_new/">create</a><a href="explore.html">explore</a>'
 content += '<a href="ideas.html">ideas</a><a href="about.html">about</a><a href="https://barkprogram.boards.net/">discuss</a><a href="login.html" class="right">sign in</a><a href="signup.html" class="right">join bark</a>'
 content += '<a class="dark-mode-button" id="darkModeToggle"><dmbico alt="Dark Mode"></dmbico></a><input class="searchBar" placeholder="Search for Projects"></input></div>'
     document.getElementById('navbar').innerHTML = content;
 
 // footer
 if (document.url != "baseUrl") {
-document.body.innerHTML += '<footer style="background-color: rgb(0, 127, 255, 0.24); margin-top: 200px; height: 25vh; padding: 40px; text-align: center;"><p style="color: #777;">Looks like you\'ve reached the bottom.</p><p><a href="home.html">Home</a> <a href="editor_new/">Editor</a> <a href="https://github.com/mariocraft987/bark.github.io/">Source</a> <a href="credits.html">Credits</a> <a href="https://scratch.mit.edu/users/mariocraft987#comments">Contact</a> <a href="https://barkprogram.boards.net/">Forums</a></p></footer>';
+document.body.innerHTML += '<footer style="background-color: rgb(0, 127, 255, 0.24); margin-top: 200px; height: 25vh; padding: 40px; text-align: center;"><p style="color: #777;">Looks like you\'ve reached the bottom.</p><p><a href="home.html">Home</a> <a href="editor_new/">Editor</a> <a href="https://github.com/mariocraft987/bark.github.io/">Source</a><br/> <a href="credits.html">Credits</a> <a href="https://scratch.mit.edu/users/mariocraft987#comments">Contact</a> <a href="https://barkprogram.boards.net/">Forums</a></p></footer>';
 }
     
 function whatsNew() {
@@ -43,16 +43,17 @@ function recentCom() {
 function randomTxt() {
     //geeksforgeeks.org for the random text generator.
     var wrd;
-    let arr = ["Bark! woof!", "Bark is a mod of scratch with new extensions", 
-    "Scratch dog", "Bark is being created, so stay patient!!", "Note: Bark does not support accounts yet", 
-    "Funfact: Dogs have insane hearing and smelling.", "Why not help with bark??", "A special version is here somewere..", 
-    "Bark is hosted with github pages.", "Funfact: im a funfact!", "Whats cooler, Dogs or Cats?", 
-    "Wanna help create bark? go <a href='Jobs.html' class='link'>Here</a>", "Bark's birthday month is October", 
-    "Why not go <a href='https://www.scratchfoundation.org/donate' class='link'>donate</a> to scratch?", "Go check out snail-ide!", 
-    "This text has a 0.07 chance of apearing", "So <em>many</em> breeds of dogs", "Check out our <a href='https://github.com/mariocraft987/bark.github.io/' class='link'>github</a>", 
-    "Funfact: You are waiting for something to load", "Emojis are added! :party:", "Bark is created with html and javascript", 
-    "Go check out Goldot", "Svelte is html but enchanted", ":dog::cat::banana:", "Come see our <a href='https://github.com/Bark-programming' class='link' >orginization</a>", "e", 
-    "See barks todo list <a href='https://mariocraft987.github.io/bark.github.io/static/todolist.txt' class='link'>here</a>", "The bark editor is made with Blockly", "Lol", ":troll:", "the best emoji is :mewing:"];
+    let arr = ["Bark! woof!", "Bark is a mod of scratch with new extensions",
+    "Scratch dog", "Bark is being created, so stay patient!!", "Note: Bark does not support accounts yet",
+    "Funfact: Dogs have insane hearing and smelling.", "Why not help with bark??", "A special version is here somewere..",
+    "Bark is hosted with github pages.", "Funfact: im a funfact!", "Whats cooler, Dogs or Cats?",
+    "Wanna help create bark? go <a href='Jobs.html' class='link'>Here</a>", "Bark's birthday month is October",
+    "Why not go <a href='https://www.scratchfoundation.org/donate' class='link'>donate</a> to scratch?", "Go check out snail-ide!",
+    "This text has a 0.07 chance of apearing", "So <em>many</em> breeds of dogs", "Check out our <a href='https://github.com/mariocraft987/bark.github.io/' class='link'>github</a>",
+    "Funfact: You are waiting for something to load", "Emojis are added! :party:", "Bark is created with html and javascript",
+    "Go check out Goldot", "Svelte is html but enchanted", ":dog::cat::banana:", "Come see our <a href='https://github.com/Bark-programming' class='link' >orginization</a>", "e",
+    "See barks todo list <a href='https://mariocraft987.github.io/bark.github.io/static/todolist.txt' class='link'>here</a>", "The bark editor is made with Blockly", ":troll:", "the best emoji is :mewing:",
+    ":woof:"];
 
     wrd = (arr[(Math.floor(Math.random() * arr.length))]);
     document.getElementById("randomWord").innerHTML = wrd;
