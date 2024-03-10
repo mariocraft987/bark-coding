@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Bark - Editor</title>
+    <title>Bark Blockly Editor</title>
     <link rel="shortcut icon" href="https://mariocraft987.github.io/bark.github.io/favicon.ico">
     <script src="https://unpkg.com/blockly/blockly.min.js"></script>
     
@@ -199,6 +199,8 @@
         </block>
       </category>
       <category name="Style" colour="#cd17ff">
+        <block type="change_costume"></block>
+        <block type="next_costume"></block>
         <block type="change_stage_bg"></block>
         <block type="colour_picker">
         <field name="COLOUR">#ff0000</field>
@@ -208,7 +210,6 @@
         <value name="RED">
         <shadow type="math_number">
         <field name="NUM">100</field>
-        <block type="next_costume"></block>
       </category>
       <category name="Loops" colour="#20e374">
         <block type="controls_repeat_ext">
@@ -426,20 +427,21 @@
         eval(code); // Evaluate generated code
       }
 
-      Blockly.Blocks['change_stage_bg'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField("change stage bg to")
-        .appendField(new Blockly.FieldColour("#ff0000"), "NAME");
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(260);
- this.setTooltip("");
- this.setHelpUrl("");
-  }
-};
-
-      Blockly.Blocks['next_costume'] = { // Moved this block outside the previous block
+                Blockly.Blocks['change_costume'] = { // Moved this block outside the previous block
+        init: function() {
+          this.jsonInit({
+            "type": "change_costume",
+            "message0": "switch costume to",
+            "previousStatement": null,
+            "nextStatement": null,
+            "colour": 260,
+            "tooltip": "",
+            "helpUrl": ""
+          });
+        }
+      };
+      
+            Blockly.Blocks['next_costume'] = { // Moved this block outside the previous block
         init: function() {
           this.jsonInit({
             "type": "next_costume",
@@ -452,6 +454,19 @@
           });
         }
       };
+      
+      Blockly.Blocks['change_stage_bg'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("change stage bg to")
+        .appendField(new Blockly.FieldColour("#ff0000"), "NAME");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(260);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
 
       
       Blockly.Blocks['movement_move'] = { // Moves sprite
