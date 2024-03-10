@@ -1,5 +1,5 @@
 /* Basicly replaces text */
-const token = "*";
+const token = "█";
 const emojisize = 25;
 
 function t(length) {
