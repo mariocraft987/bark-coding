@@ -1,7 +1,7 @@
-# About
+# About us
 Created by Mariocraft987 and a team of developers, we have Bark.
 
-Bark is a new programming language made entirely from scratch. It will feature special blocks and features that <a href="https://scratch.mit.edu">Scratch</a> doesn't offer. &#128054;
+Bark Coding is a Blockly based coding language. &#128054;
 <hr>
 
 # Available Jobs
@@ -9,14 +9,9 @@ Bark is a new programming language made entirely from scratch. It will feature s
 - Programmers: 3/10<br/>
 - Contributers: 0/3<br/>
 ## Job Registering
-To be a part of Bark's devlopment, please comment `Job Register 4543` on <a href="https://github.com/Mariocraft987/bark.github.io/commit/5644df6ebc5aa7ea7b611141a265ff7c17712c5e">this commit</a>.
+To be a part of Bark's devlopment, please comment `Job Register 4067` on <a href="https://github.com/Mariocraft987/bark.github.io/commit/5644df6ebc5aa7ea7b611141a265ff7c17712c5e">this commit</a>.
 
 <hr>
-
-## Servers
-Uhhh... Someone needs to pay for servers....
-<br/><br/>
-[![Better Stack Badge](https://uptime.betterstack.com/status-badges/v3/monitor/10x1r.svg)](https://uptime.betterstack.com/?utm_source=status_badge)
 
 # License
 
