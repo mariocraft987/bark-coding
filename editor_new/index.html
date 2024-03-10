@@ -103,14 +103,14 @@
 
   <body onload="start()">
     <div class="navbar">
-      <a href="https://mariocraft987.github.io/bark.github.io/home.html"><img src="https://mariocraft987.github.io/bark.github.io/src/images/Logo.svg" alt="Bark" width="25" height="25"></a>
+      <a href="https://bark-coding.vercel.app/home.html"><img src="https://bark-coding.vercel.app/src/images/Logo.svg" alt="Bark" width="25" height="25"></a>
       <a href="#">save</a>
       <a href="#" id="downloadbutton" onclick="downloadproject();" title="download project to your computer.">download</a>
       <a href="#" title="watch helpful tutorials to expand your knowledge!">tutorials</a>
       <a href="#" onclick="alert('you can\'t publish projects yet! :(');" title="publish your project so the world can see!">publish</a>
       <a class="dark-mode-button" id="darkModeToggle"><dmbico alt="Dark Mode"></dmbico></a>
-      <a class="right" href="https://mariocraft987.github.io/bark.github.io/login.html">sign in</a>
-      <a class="right" href="https://mariocraft987.github.io/bark.github.io/signup.html">join bark</a>
+      <a class="right" href="https://bark-coding.vercel.app/login.html">sign in</a>
+      <a class="right" href="https://bark-coding.vercel.app/signup.html">join bark</a>
     </div>
     <div id="blocklyDiv"></div>
     <div id="projectPlayer">
@@ -122,8 +122,8 @@
         </div>
         <canvas id="stage"></canvas>
     </div>
-    <div id="sprites" style="position: absolute; right: 0%; bottom: 0%; width: 480px; height: calc(100% - 440px);"><b>the bark editor is not finished! :sad:</b>
-    please be patient, it'll be working soon enough, in the meantime here's a <a href="https://bark-programming.github.io/bark-gui/">demo gui</a> made from PenguinMod.</div>
+    <div id="sprites" style="position: absolute; right: 0%; bottom: 0%; width: 480px; height: calc(100% - 440px);">the bark editor is not finished <b>yet</b>,
+    please be patient.
 
     <!-- Toolbox Definition -->
     <xml
@@ -359,7 +359,7 @@
           </value>
         </block>
       </category>
-      <category name="Misc" colour="#f20db9">
+      <category name="More" colour="#f20db9">
         <block type="javascript_block"></block>
       </category>
     </xml>
@@ -530,7 +530,7 @@
 
           function openexternalproject() {
             window.showOpenFilePicker();
-            alert("bark doesn't support uploading projects yet :(");
+            alert("bark doesn't support uploading projects yet.");
           }
 
           // https://gist.github.com/tiodot/4978b36aae431b79fa3ea9ba6800a90a
