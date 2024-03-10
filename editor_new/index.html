@@ -147,14 +147,14 @@
       <h1>Upload costume</h1>
       <form><input type="file" accept=".png,.jpg,.jpeg"><input type="submit"></form>
     </div>
-    <div id="soundsseditordiv" class="tabpage">
+    <div id="soundseditordiv" class="tabpage">
       <h1>Upload sound</h1>
       <form><input type="file" accept=".mp3,.wav"><input type="submit"></form>
     </div>
     <div id="editortabs">
-      <button>Code</button>
-      <button>Costumes</button>
-      <button>Sound</button>
+      <button onclick="document.body.classList.add('code'); document.body.classList.remove('costumes'); document.body.classList.remove('sounds');">Code</button>
+      <button onclick="document.body.classList.remove('code'); document.body.classList.add('costumes'); document.body.classList.remove('sounds');">Costumes</button>
+      <button onclick="document.body.classList.remove('code'); document.body.classList.remove('costumes'); document.body.classList.add('sounds');">Sound</button>
     </div>
     <div id="projectPlayer">
         <div id="projectToolbar">
