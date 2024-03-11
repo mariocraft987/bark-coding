@@ -9,10 +9,11 @@ console.log("Exit Now! This part is used for devolopers.");
 content = '<div class="navbar"><a href="home.html"><img src="src/images/Logo.svg" alt="bark" width="25" height="25" ></a><a href="editor_new">create</a><a href="explore.html">explore</a>'
 content += '<a href="ideas.html">ideas</a><a href="about.html">about</a><a href="https://barkprogram.boards.net/">discuss</a>'
     if (localStorage.getItem("myBarkUsername") != "") {
-        content += '<a class="right">profile</a>'
+        content += '<a class="right">sign out</a><a class="right">profile</a>'
     }else{
         content += '<a href="login.html" class="right">sign in</a><a href="signup.html" class="right">join bark</a>'
     }
+console.log(localStorage.getItem("myBarkUsername") != "")
 content += '<a class="dark-mode-button" id="darkModeToggle"><dmbico alt="Dark Mode"></dmbico></a><input class="searchBar" placeholder="Search for Projects"></input></div>'
     document.getElementById('navbar').innerHTML = content;
 
