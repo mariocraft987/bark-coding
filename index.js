@@ -1,13 +1,13 @@
 /* Some basic scripts created in javascript to work the website, and make it interactive. */
 
 let newsBox = "Bark is now being hosted with Vercel! and a new way of donating is coming soon." /* \n is a newline, don't remove it! */
-let commitsLength = 50
+let commitsLength = 150
 let baseUrl = "https://bark-coding.vercel.app"
 
 console.log("Exit Now! This part is used for devolopers.");
 
 // navbar
-content = '<div class="navbar"><a href="home.html"><img src="src/images/Logo.svg" alt="bark" width="25" height="25" ></a><a href="editor_new/">create</a><a href="explore.html">explore</a>'
+content = '<div class="navbar"><a href="home.html"><img src="src/images/Logo.svg" alt="bark" width="25" height="25" ></a><a href="editor_new">create</a><a href="explore.html">explore</a>'
 content += '<a href="ideas.html">ideas</a><a href="about.html">about</a><a href="https://barkprogram.boards.net/">discuss</a><a href="login.html" class="right">sign in</a><a href="signup.html" class="right">join bark</a>'
 content += '<a class="dark-mode-button" id="darkModeToggle"><dmbico alt="Dark Mode"></dmbico></a><input class="searchBar" placeholder="Search for Projects"></input></div>'
     document.getElementById('navbar').innerHTML = content;
@@ -36,7 +36,7 @@ function recentCom() {
         })
         .catch(error => {
             console.error('Error fetching commits:', error);
-            document.getElementById("boxChanger").innerHTML = replace('<h2>Oops... :(</h2><p>Failed to load commits. Check your connection and try again. :sad:</p>');
+            document.getElementById("boxChanger").innerHTML = replace('<h2>Oops... :(</h2><p>Failed to load commits. Check your connection and try again.</p>');
         });
 }
 
@@ -53,7 +53,7 @@ function randomTxt() {
     "Funfact: You are waiting for something to load", "Emojis are added! :party:", "Bark is created with html and javascript",
     "Go check out Goldot", "Svelte is html but enchanted", ":dog::cat::banana:", "Come see our <a href='https://github.com/Bark-programming' class='link' >orginization</a>", "e",
     "See barks todo list <a href='https://mariocraft987.github.io/bark.github.io/static/todolist.txt' class='link'>here</a>", "The bark editor is made with Blockly", ":troll:", "the best emoji is :mewing:",
-    ":woof:"];
+    ":woof:", "I'm a random text!"];
 
     wrd = (arr[(Math.floor(Math.random() * arr.length))]);
     document.getElementById("randomWord").innerHTML = wrd;
