@@ -1,7 +1,6 @@
 /* Some basic scripts created in javascript to work the website, and make it interactive. */
 
 let newsBox = "Bark is now being hosted with Vercel! and a new way of donating is coming soon." /* \n is a newline, don't remove it! */
-let commitsLength = 250
 let baseUrl = "https://bark-coding.vercel.app"
 
 console.log("Exit Now! This part is used for devolopers.");
@@ -27,7 +26,7 @@ function recentCom() {
         .then(response => response.json())
         .then(commits => {
             var Commits = '<h2>Recent Commits</h2><ul style="overflow-y: scroll; height: 150px;"><br/>';
-            commits.slice(0, 250).forEach(commit => {
+            commits.slice(0, 200).forEach(commit => {
                 Commits += `<div title="${replace(commit.author.login)}: ${replace(commit.commit.message)}"><li><a href="https://github.com/${replace(commit.author.login)}"><img style="border-radius:12px;margin-top:-4px;margin-left:-6px" src="https://github.com/${commit.author.login}.png" width="21"></a><a href="${commit.html_url}">${replace(commit.commit.message)}</a></li></div>`;
             });
             Commits += '</ul><br><a class="buttonFrBx" href="https://github.com/Mariocraft987/bark.github.io/commits/main/" style="text-align: center;">See all</a><br>';
@@ -63,11 +62,17 @@ function Signup() {
     let username = document.getElementById('username').value;
     let password = document.getElementById('password').value;
     let email = document.getElementById('email').value;
+    let hasAccount = (localStorage.getItem("myBarkUsername") != "");
 
-if (username != '', password != '', email != '') {
-            document.getElementById('page').innerHTML = '<br/><h2>Welcome to Bark ' + username + '!</h2>';
+            if (username != '', password != '', email != '') {
+                if (hasAccount == true) {
+                    document.getElementById('page').innerHTML = '<br/><h2>You already have a bark account.</h2>';
+                }else{
+                    document.getElementById('page').innerHTML = '<br/><h2>Welcome to Bark ' + username + '!</h2>';
+                    localStorage.setItem("myBarkUsername", username)
+                }
             }
-}
+    }
 
 function jobRegister() {
     let job = document.querySelector('input[name=job]:checked').value;
