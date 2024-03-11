@@ -1,7 +1,7 @@
 /* Some basic scripts created in javascript to work the website, and make it interactive. */
 
 let newsBox = "Bark is now being hosted with Vercel! and a new way of donating is coming soon." /* \n is a newline, don't remove it! */
-let commitsLength = 150
+let commitsLength = 450
 let baseUrl = "https://bark-coding.vercel.app"
 
 console.log("Exit Now! This part is used for devolopers.");
