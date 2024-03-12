@@ -1,6 +1,6 @@
 /* Some basic scripts created in javascript to work the website, and make it interactive. */
 
-let newsBox = "Bark's editor is starting to function, thanks to <a class="user" href='https://github.com/qwertyytheartist'>@qwertyytheartist!</a>"
+let newsBox = "Bark's editor is starting to function, thanks to <a href='https://github.com/qwertyytheartist'>qwertyytheartist!</a>"
 let baseUrl = "https://bark-coding.vercel.app"
 
 console.log("Exit Now! This part is used for devolopers.");
