@@ -68,9 +68,16 @@ body {
   color: inherit;
 }
 
-a.link {
-  color: dodgerblue;
-}
+      a {
+        color: dodgerBlue;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      a:active {
+        text-decoration: underline;
+      }
 
 input {
     padding: 5px;
