@@ -263,3 +263,8 @@ textarea {
   border-radius: 6px;
   padding: 7px;
 }
+
+/* mobile style */
+@media (cursor: coarse) {
+  /* SOMEBODY PUT SOME CODE HERE IDK HOW TO MAKE IT MOBILE FRIENDLY AHHH */
+}
