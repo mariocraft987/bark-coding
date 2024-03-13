@@ -119,3 +119,7 @@ function jobRegister() {
   window.addEventListener('load', initializeDarkMode);
 
 whatsNew();
+
+if (document.URL.includes('https://mariocraft987.github.io/bark.github.io')) {
+    location.href = "https://bark-coding.vercel.app"
+}
