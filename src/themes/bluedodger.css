@@ -266,5 +266,11 @@ textarea {
 
 /* mobile style */
 @media (cursor: coarse) {
-  /* SOMEBODY PUT SOME CODE HERE IDK HOW TO MAKE IT MOBILE FRIENDLY AHHH */
+  .box {
+    width: 95vw
+    margin-left: 2.5vw
+  }
+
+  .navbar {
+    overflow-x: scroll;
 }
