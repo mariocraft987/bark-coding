@@ -267,8 +267,8 @@ textarea {
 /* mobile style */
 @media (cursor: coarse) {
   .box {
-    width: 95%;
-    margin-left: 2.5%;
+    width: 100vw;
+    margin-left: 0;
     padding: 16px 0;
     
   }
