@@ -38,7 +38,6 @@ fetch('https://api.github.com/users/'+username)
     }else{
       document.getElementById('credits').innerHTML += '<a href="'+obj.url'"><img src="'+obj.avatar_url+'" style="border-radius: '+radius+';" height="50"><p class="CreditsPT">'+obj.name+'</p></a>';
     }
-    console.log(obj.name)
    });
     i++;
   }
