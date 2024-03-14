@@ -33,7 +33,7 @@ fetch('https://api.github.com/users/'+username)
     .then(res => res.json()).then(data => {
     obj = data;})
   .then(() => {
-      document.getElementById('credits').innerHTML += '<a href="https://github.com/'+obj.login+'" style="border-radius: '+radius+';" height="50"><p class="CreditsPT">'+obj.login+'</p></a>';
+      document.getElementById('credits').innerHTML += '<a href="https://github.com/'+obj.login+'"><img src="'+obj.avatar_url+'" style="border-radius: '+radius+';" height="50"><p class="CreditsPT">'+obj.login+'</p></a>';
    });
     i++;
   }
