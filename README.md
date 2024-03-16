@@ -7,7 +7,6 @@ Bark Coding is a Blockly based coding language. &#128054;
 # Available Jobs
 - Assets: 2/3<br/>
 - Programmers: 3/10<br/>
-- Contributers: 0/3<br/>
 ## Job Registering
 To be a part of Bark's devlopment, please comment `Job Register 4067` on <a href="https://github.com/Mariocraft987/bark.github.io/commit/5644df6ebc5aa7ea7b611141a265ff7c17712c5e">this commit</a>.
 
