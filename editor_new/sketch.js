@@ -38,6 +38,15 @@ function changeBackgroundColor(color) {
 
 // Function for basic movement
 function basicMove() {
+  // Move stickman to the left by about +10 in the x-direction
+  x += 5;
+
+  // Prevent stickman from going beyond canvas boundaries
+  if (x <= 0) {
+    x = 0;
+  }
+}
+function basicMoveBack() {
   // Move stickman to the left by about -10 in the x-direction
   x -= 5;
 

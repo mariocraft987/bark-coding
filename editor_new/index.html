@@ -549,6 +549,9 @@
       javascript.javascriptGenerator.forBlock['movement_move'] = function(block, generator) {
         return "basicMove()";
       };
+      javascript.javascriptGenerator.forBlock['movement_moveback'] = function(block, generator) {
+        return "basicMoveBack()";
+      };
       
       javascript.javascriptGenerator.forBlock['javascript_block'] = function(block, generator) {
         var value_js = generator.valueToCode(block, 'js', javascript.Order.ATOMIC);
