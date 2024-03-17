@@ -1,6 +1,6 @@
 /* Some basic scripts created in javascript to work the website, and make it interactive. */
 
-let newsBox = "Bark's editor is starting to function, thanks to <a href='https://github.com/qwertyytheartist'>qwertyytheartist!</a>"
+let newsBox = "<a href='https://github.com/nmsderp'>nmsderp!</a> has added functionality to the move/move back blocks, these blocks are used for simple projects so you can't change the amount."
 let baseUrl = "https://bark-coding.vercel.app"
 
 let mobile = window.navigator.userAgent.toLowerCase().includes("mobi");
