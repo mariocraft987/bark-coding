@@ -3,6 +3,7 @@ let x = 0; // Initial x position
 let y = 0; // Initial y position
 let speedX = 5; // Speed in the x direction
 let speedY = 5; // Speed in the y direction
+let bgColor = 255; // Initial background color
 
 function preload() {
   // Load the image from the URL
@@ -13,14 +14,11 @@ function setup() {
   // Create a canvas
   let cnv = createCanvas(480, 360);
   cnv.parent('stage-container'); // Attach the canvas to the stage container
-
-  // Set the background color to white
-  background(255);
 }
 
 function draw() {
-  // Clear the canvas
-  background(255);
+  // Set the background color
+  background(bgColor);
 
   // Update position
   x += speedX;
@@ -47,5 +45,5 @@ function draw() {
 // Function to change the background color
 function changeBackgroundColor(color) {
   // Set the background color to the provided color
-  document.getElementById('stage').style.backgroundColor = color;
+  bgColor = color;
 }
