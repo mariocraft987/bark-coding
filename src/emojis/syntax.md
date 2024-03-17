@@ -7,6 +7,7 @@
 |`:alien:`     |<img src="svg/alien.svg" width="25" height="25">|<a href="https://github.com/qwertyytheartist">qwertyytheartist</a>|
 |`:angry:`     |<img src="svg/angry.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:blank:`     |<img src="svg/blank.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
+|`:barklogo:`     |<img src="svg/normal/barklogo.svg" width="25" height="25">|<a href="https://github.com/nmsderp">nmsderp</a>|
 |`:clap:`      |<img src="svg/clap.svg" width="25" height="25">|<a href="https://github.com/qwertyytheartist">qwertyytheartist</a>|
 |`:clapAnim:`  |<img src="svg/clap_anim.gif" width="25" height="25">|<a href="https://github.com/qwertyytheartist">qwertyytheartist</a>|
 |`:dizzy:`     |<img src="svg/dizzy.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
