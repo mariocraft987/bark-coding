@@ -552,15 +552,32 @@
         return code;
       };
       
-      Blockly.Blocks['change_stage_bg'].setOnChange(function(event) {
-        if (!this.workspace || this.workspace.isDragging() || event.type != Blockly.Events.BLOCK_CHANGE) {
-          return;  // Don't change the stage while dragging blocks or on events other than block changes
-        }
-        if (event.blockId === this.id && event.name === "NAME") {
-          var color = this.getFieldValue('NAME');
-          document.getElementById('stage').style.backgroundColor = color;
-        }
-      });
+      Blockly.Blocks['change_stage_bg'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("Change stage background color to");
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldColour("#ffffff"), "NAME");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(230);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  },
+
+  // This function will be called whenever the block value changes
+  onchange: function(event) {
+    if (!this.workspace || this.workspace.isDragging() || event.type != Blockly.Events.BLOCK_CHANGE) {
+      return;  // Don't change the stage while dragging blocks or on events other than block changes
+    }
+    if (event.blockId === this.id && event.name === "NAME") {
+      var color = this.getFieldValue('NAME');
+      // Call a JavaScript function in your p5.js sketch to change the background color
+      changeBackgroundColor(color);
+    }
+  }
+};
+
     </script>
     <script>
           /* @mnsderp for the data saving scripts */

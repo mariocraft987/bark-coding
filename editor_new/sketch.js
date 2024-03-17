@@ -43,3 +43,9 @@ function draw() {
   fill(0);
   text("Welcome to the Bark Alpha!", width / 2, y - 10);
 }
+
+// Function to change the background color
+function changeBackgroundColor(color) {
+  // Set the background color to the provided color
+  document.getElementById('stage').style.backgroundColor = color;
+}
