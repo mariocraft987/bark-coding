@@ -5,6 +5,8 @@
     <title>Bark Blockly Editor</title>
     <link rel="shortcut icon" href="https://mariocraft987.github.io/bark.github.io/favicon.ico">
     <script src="https://unpkg.com/blockly/blockly.min.js"></script>
+    <script src="https://bark-coding.vercel.app/editor_new/p5.min.js"></script>
+    <script src="sketch.js"></script>
     
     <script src="custom_category_es6.js"></script>
     <script src="toolbox_label_es6.js"></script>
@@ -167,7 +169,7 @@
           <img class="projectToolbarButton" style="cursor:pointer;" src="https://mariocraft987.github.io/bark.github.io/src/projecttoolbar/stopped.svg">
           <img class="projectToolbarButton" src="https://mariocraft987.github.io/bark.github.io/src/projecttoolbar/maximize.svg" style="position: absolute; right: 0; cursor: pointer;">
         </div>
-        <canvas id="stage"></canvas>
+        <div id="stage-container"></div>
     </div>
     <div id="sprites" style="position: absolute; right: 0%; bottom: 0%; width: 480px; height: calc(100% - 440px);">the bark editor is not finished <b>yet</b>,
     please be patient.
