@@ -59,7 +59,7 @@ function randomTxt() {
     "This text has a 0.07 chance of apearing", "So <em>many</em> breeds of dogs", "Check out our <a href='https://github.com/mariocraft987/bark.github.io/' class='link'>github</a>",
     "Funfact: You are waiting for something to load", "Emojis are added! :party:", "Bark is created with html and javascript",
     "Go check out Goldot", "Svelte is html but enchanted", ":dog::cat::banana:", "Come see our <a href='https://github.com/Bark-programming' class='link' >orginization</a>", "e",
-    "See barks todo list <a href='https://mariocraft987.github.io/bark.github.io/static/todolist.txt' class='link'>here</a>", "The bark editor is made with Blockly", ":troll:", "the best emoji is :mewing:",
+    "See barks todo list <a href='https://bark-coding.vercel.app/bark.github.io/static/todolist.txt' class='link'>here</a>", "The bark editor is made with Blockly", ":troll:", "the best emoji is :mewing:",
     ":woof:", "I'm a random text!"];
 
     wrd = (arr[(Math.floor(Math.random() * arr.length))]);
@@ -120,6 +120,6 @@ function jobRegister() {
 
 whatsNew();
 
-if (document.URL.includes("https://mariocraft987.github.io/bark.github.io/")) {
+if (document.URL.includes("https://bark-coding.vercel.app/bark.github.io/")) {
     location.href = "https://bark-coding.vercel.app"
 }

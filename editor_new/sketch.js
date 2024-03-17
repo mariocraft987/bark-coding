@@ -2,7 +2,7 @@ let img; // Declare variable to hold the image
 
 function preload() {
   // Load the image from the URL
-  img = loadImage('https://example.com/your-image.jpg');
+  img = loadImage('https://bark-coding.vercel.app/static/stickman.svg');
 }
 
 function setup() {
