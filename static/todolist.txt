@@ -5,32 +5,13 @@ Create the block Editor - done!
 Custom Domains - Working on it
 Working forms sending data - uhhhhhhhhh
 Server Databases - not yet
+Donating - Someday..
 
 Working commits box - done!
 Extensions page - not yet
 
+One index.html and javascript to change content
 
 Turn this Bing AI code Into working blockly blocks
 
-
-
-<!--
-New block to set costume image
-    <script>
-        function setCostumeImage(imageLink) {
-            // Your logic to set the costume image goes here
-            // For example:
-            document.getElementById('costume').src = imageLink;
-        }
-    </script>
-
-    New block to set backdrop image
-    <script>
-        function setBackdropImage(imageLink) {
-            // Your logic to set the backdrop image goes here
-            // For example:
-            document.body.style.backgroundImage = `url(${imageLink})`;
-        }
-    </script> 
-    -->
 Add sun icon for light/dark mode button - done! (by qwertyy)
