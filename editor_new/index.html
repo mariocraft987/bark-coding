@@ -415,11 +415,6 @@
     </xml>
 
     <script>
-      var workspace = Blockly.getMainWorkspace(); // Accessing the Blockly workspace
-
-        var block = workspace.getBlockById('change_stage_bg');
-
-        var color = block.getFieldValue('NAME');
 
       function start() {
         var workspace = Blockly.inject('blocklyDiv', {
@@ -551,14 +546,9 @@
       javascript.javascriptGenerator.forBlock['onstart'] = function(block, generator) {
         return "alert('green flag was clicked!');";
       };
-      javascript.javascriptGenerator.forBlock['change_stage_bg'] = function(block, generator) {
-        // Generate JavaScript code to get the color value from the block
-        var color = block.getFieldValue('NAME');
-        // Generate JavaScript code to call the changeBackgroundColor function with the color value
-        var code = 'changeBackgroundColor("' + color + '");\n';
-        return code;
+      javascript.javascriptGenerator.forBlock['movement_move'] = function(block, generator) {
+        return "console.log('yeah i gotta make this still, this will be used for beginers to make extremly simple projects, no x and y for this one, just a simple block');";
       };
-
       
       javascript.javascriptGenerator.forBlock['javascript_block'] = function(block, generator) {
         var value_js = generator.valueToCode(block, 'js', javascript.Order.ATOMIC);
