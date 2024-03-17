@@ -120,6 +120,6 @@ function jobRegister() {
 
 whatsNew();
 
-if (document.URL.includes("https://bark-coding.vercel.app/")) {
+if (document.URL.includes("https://mariocraft987/bark.github.io/")) {
     location.href = "https://bark-coding.vercel.app"
 }
