@@ -17,7 +17,7 @@ content += '<a href="ideas.html">ideas</a><a href="about.html">about</a><a href=
         content += '<a href="login.html" class="right">sign in</a><a href="signup.html" class="right">join bark</a>'
     }
 console.log(localStorage.getItem("myBarkUsername") != "")
-content += '<a class="dark-mode-button" id="darkModeToggle"><dmbico alt="Dark Mode"></dmbico></a><form action="search.html"><input class="searchBar" id="search" placeholder="Search for Projects"></input></form></div>'
+content += '<a class="dark-mode-button" id="darkModeToggle"><dmbico alt="Dark Mode"></dmbico></a><form action="search.html?search=' + document.getElementById("search").value + '"><input class="searchBar" id="search" placeholder="Search for Projects"></input></form></div>'
     document.getElementById('navbar').innerHTML = content;
 
 // footer
