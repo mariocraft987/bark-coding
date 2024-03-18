@@ -2,6 +2,7 @@
 
 let newsBox = "<a href='https://github.com/nmsderp'>nmsderp</a> has added functionality to the move/move back blocks, these blocks are used for simple projects so you can't change the amount."
 let baseUrl = "https://bark-coding.vercel.app"
+let commitsLength = 350
 
 let mobile = window.navigator.userAgent.toLowerCase().includes("mobi");
 
@@ -30,11 +31,11 @@ function whatsNew() {
 
 function recentCom() {
     document.getElementById("boxChanger").innerHTML = "<h2>Fetching commits...</h2><p>please wait...</p>"; // get it? "fetching" commits??? eh????........anyone?
-    fetch('https://api.github.com/repos/Mariocraft987/bark.github.io/commits')
+    fetch('https://api.github.com/repos/Mariocraft987/bark.github.io/commits?per_page=50')
         .then(response => response.json())
         .then(commits => {
             var Commits = '<h2>Recent Commits</h2><ul style="overflow-y: scroll; height: 150px;"><br/>';
-            commits.slice(0, 200).forEach(commit => {
+            commits.slice(0, commitsLength).forEach(commit => {
                 Commits += `<div title="${replace(commit.author.login)}: ${replace(commit.commit.message)}"><li><a href="https://github.com/${replace(commit.author.login)}"><img style="border-radius:12px;margin-top:-4px;margin-left:-6px" src="https://github.com/${commit.author.login}.png" width="21"></a><a href="${commit.html_url}">${replace(commit.commit.message)}</a></li></div>`;
             });
             Commits += '</ul><br><a class="buttonFrBx" href="https://github.com/Mariocraft987/bark.github.io/commits/main/" style="text-align: center;">See all</a><br>';
