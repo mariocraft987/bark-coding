@@ -6,9 +6,11 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/png">
   </head>
   <body>
-    
+    null
   </body>
   <script>
     let q = params.get("search");
+    document.body = "<h2>"+q+"</h2>";
+    document.title = "Bark Search - "+q
   </script>
 </html>
