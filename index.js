@@ -2,7 +2,7 @@
 
 let newsBox = "<a href='https://github.com/nmsderp'>nmsderp</a> has added functionality to the move/move back blocks, these blocks are used for simple projects so you can't change the amount."
 let baseUrl = "https://bark-coding.vercel.app"
-let commitsLength = 350
+let commitsLength = 600
 
 let mobile = window.navigator.userAgent.toLowerCase().includes("mobi");
 
