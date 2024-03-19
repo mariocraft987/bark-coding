@@ -553,16 +553,13 @@
         return "basicMoveBack()";
       };
       
-      javascriptGenerator['javascript_block'] = function(block, generator) {
-            // Generate JavaScript code.
-            const jsCode = generator.valueToCode(block, 'js', Order.ATOMIC);
+      javascriptGenerator.forBlock['javascript_block'] = function(block, generator) {
+  // Generate JavaScript code.
+  const jsCode = generator.valueToCode(block, 'js', Blockly.JavaScript.ORDER_ATOMIC);
 
-            // Wrap the generated JavaScript code in a function call or statement as needed.
-            const code = `${jsCode};`;
-
-            // Return the generated code and order.
-            return [code, Order.NONE];
-      };
+  // Return the generated code.
+  return jsCode;
+};
       
       Blockly.Blocks['change_stage_bg'] = {
   init: function() {
