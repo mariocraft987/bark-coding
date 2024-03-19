@@ -9,7 +9,7 @@ let mobile = window.navigator.userAgent.toLowerCase().includes("mobi");
 console.log("Exit Now! This part is used for devolopers.");
 
 // navbar
-content = '<div class="navbar"><a href="index.html"><img src="src/images/Logo.svg" alt="bark" width="25" height="25" ></a><a href="editor_new">create</a><a href="explore.html">explore</a>'
+content = '<div class="navbar"><a href="'+baseUrl+'"><img src="src/images/Logo.svg" alt="bark" width="25" height="25" ></a><a href="editor_new">create</a><a href="explore.html">explore</a>'
 content += '<a href="ideas.html">ideas</a><a href="about.html">about</a><a href="https://barkprogram.boards.net/">discuss</a>'
     if (localStorage.getItem("myBarkUsername") == "") {
         content += '<a class="right">sign out</a><a class="right">profile</a>'
