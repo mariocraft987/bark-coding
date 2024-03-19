@@ -9,7 +9,7 @@ let mobile = window.navigator.userAgent.toLowerCase().includes("mobi");
 console.log("Exit Now! This part is used for devolopers.");
 
 // navbar
-content = '<div class="navbar"><a href="home.html"><img src="src/images/Logo.svg" alt="bark" width="25" height="25" ></a><a href="editor_new">create</a><a href="explore.html">explore</a>'
+content = '<div class="navbar"><a href="index.html"><img src="src/images/Logo.svg" alt="bark" width="25" height="25" ></a><a href="editor_new">create</a><a href="explore.html">explore</a>'
 content += '<a href="ideas.html">ideas</a><a href="about.html">about</a><a href="https://barkprogram.boards.net/">discuss</a>'
     if (localStorage.getItem("myBarkUsername") == "") {
         content += '<a class="right">sign out</a><a class="right">profile</a>'
@@ -22,7 +22,7 @@ content += '<a class="dark-mode-button" id="darkModeToggle"><dmbico alt="Dark Mo
 
 // footer
 if (document.url != "baseUrl") {
-document.body.innerHTML += '<footer style="background-color: rgb(0, 127, 255, 0.24); margin-top: 200px; height: 25vh; padding: 40px; text-align: center;"><p style="color: #777;">Looks like you\'ve reached the bottom.</p><p><a href="home.html">Home</a> <a href="editor_new/">Editor</a> <a href="https://github.com/mariocraft987/bark.github.io/">Source</a><br/><br/> <a href="credits.html">Credits</a> <a href="https://scratch.mit.edu/users/mariocraft987#comments">Contact</a> <a href="https://barkprogram.boards.net/">Forums</a></p></footer>';
+document.body.innerHTML += '<footer style="background-color: rgb(0, 127, 255, 0.24); margin-top: 200px; height: 25vh; padding: 40px; text-align: center;"><p style="color: #777;">Looks like you\'ve reached the bottom.</p><p><a href="index.html">Home</a> <a href="editor_new/">Editor</a> <a href="https://github.com/mariocraft987/bark.github.io/">Source</a><br/><br/> <a href="credits.html">Credits</a> <a href="https://scratch.mit.edu/users/mariocraft987#comments">Contact</a> <a href="https://barkprogram.boards.net/">Forums</a></p></footer>';
 }
     
 function whatsNew() {
