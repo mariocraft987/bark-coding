@@ -531,17 +531,17 @@
       };
       
       Blockly.Blocks['javascript_block'] = {
-        init: function() {
-          this.appendValueInput("js")
-              .setCheck("String")
-              .appendField("javascript");
-          this.setPreviousStatement(true, null);
-          this.setNextStatement(true, null);
-          this.setColour(315);
-       this.setTooltip("Runs Vanilla Javascript.");
-       this.setHelpUrl("");
-        }
-      };
+  init: function() {
+    this.appendValueInput("js")
+        .setCheck("String")
+        .appendField("javascript");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(315);
+    this.setTooltip("Runs Vanilla Javascript.");
+    this.setHelpUrl("");
+  }
+};
 
       javascript.javascriptGenerator.forBlock['onstart'] = function(block, generator) {
         return "alert('green flag was clicked!');";
@@ -553,10 +553,15 @@
         return "basicMoveBack()";
       };
       
-      javascript.javascriptGenerator.forBlock['javascript_block'] = function(block, generator) {
-        var value_js = generator.valueToCode(block, 'js', javascript.Order.ATOMIC);
-        var code = value_js+'\n';
-        return code;
+      javascriptGenerator['javascript_block'] = function(block, generator) {
+            // Generate JavaScript code.
+            const jsCode = generator.valueToCode(block, 'js', Order.ATOMIC);
+
+            // Wrap the generated JavaScript code in a function call or statement as needed.
+            const code = `${jsCode};`;
+
+            // Return the generated code and order.
+            return [code, Order.NONE];
       };
       
       Blockly.Blocks['change_stage_bg'] = {
