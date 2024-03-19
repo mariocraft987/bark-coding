@@ -44,7 +44,7 @@ function recentCom() {
         })
         .catch(error => {
             console.error('Error fetching commits:', error);
-            document.getElementById("boxChanger").innerHTML = replace('<h2>Oops... :(</h2><p>Failed to load commits. Check your connection and try again.</p>');
+            document.getElementById("boxChanger").innerHTML = '<h2>Oops... :(</h2><p>Failed to load commits. Check your connection and try again.</p>';
         });
 }
 
