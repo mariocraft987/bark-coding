@@ -8,6 +8,8 @@
   </body>
   <script>
     function checkFollow() {
+      if (localStorage.getItem("following") == "unfollow") {document.getElementById('followButton').innerHTML = "unfollow";}
+      
       if (document.getElementById('followButton').innerHTML == "follow") {
           document.getElementById('followButton').innerHTML = "unfollow";
           localStorage.setItem("following", "unfollow")
