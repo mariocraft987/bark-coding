@@ -7,15 +7,15 @@
     <button id="followButton" onclick="checkFollow()">follow</button>
   </body>
   <script>
+    if (localStorage.getItem("following") == "yes") {document.getElementById('followButton').innerHTML = "unfollow";}
     function checkFollow() {
-      if (localStorage.getItem("following") == "unfollow") {document.getElementById('followButton').innerHTML = "unfollow";}
       
       if (document.getElementById('followButton').innerHTML == "follow") {
           document.getElementById('followButton').innerHTML = "unfollow";
-          localStorage.setItem("following", "unfollow")
+          localStorage.setItem("following", "yes") // follows
       }else{
           document.getElementById('followButton').innerHTML = "follow";
-          localStorage.setItem("following", "follow")
+          localStorage.setItem("following", "no") // unfollows
       }
     }
   </script>
