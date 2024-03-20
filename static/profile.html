@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Profile</title>
+  </head>
+  <body>
+    <button id="followButton" onclick="checkFollow()">follow</button>
+  </body>
+  <script>
+    function checkFollow() {
+      if (document.getElementById('followButton').innerHTML == "follow") {
+          document.getElementById('followButton').innerHTML = "unfollow";
+          localStorage.setItem("following", "unfollow")
+      }else{
+          document.getElementById('followButton').innerHTML = "follow";
+          localStorage.setItem("following", "follow")
+      }
+    }
+  </script>
+</html>
