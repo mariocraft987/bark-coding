@@ -1,6 +1,6 @@
 /* Some basic scripts created in javascript to work the website, and make it interactive. */
 
-let newsBox = "Try our new alpha <a href='https://github.com/mariocraft987/bark.github.io/releases/tag/0.0.1'>desktop app</a> it is missing a lot of functionality, but you can still do something, nmsderp made it"
+let newsBox = "Try our new alpha <a href='https://github.com/mariocraft987/bark.github.io/releases/tag/0.0.1'>desktop app</a> it is missing a lot of functionality, but you can still do something, created by <a href='https://github.com/nmsderp'>nmsderp</a>"
 let baseUrl = "https://bark-coding.vercel.app"
 let commitsLength = 150
 
