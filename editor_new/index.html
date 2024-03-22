@@ -649,6 +649,7 @@
             reader.onload = function(){
           var dataURL = reader.result;
           var output = document.getElementById('costume');
+            loadImg(dataURL)
           output.src = dataURL;
           };
             reader.readAsDataURL(input.files[0]);
