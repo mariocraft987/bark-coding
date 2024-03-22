@@ -265,11 +265,11 @@ textarea {
 }
 
 /* mobile style */
-@media (cursor: coarse) {
+@media (cursor: coarse) (max-width: 800px) {
   .box {
-    width: 100vw;
-    margin-left: 0;
-    padding: 16px 0;
+    width: 100vw!important;
+    margin-left: 0!important;
+    padding: 16px 0!important;
     
   }
 
