@@ -650,14 +650,17 @@
           var dataURL = reader.result;
           var output = document.getElementById('costume');
           output.src = dataURL;
-  };
-  reader.readAsDataURL(input.files[0]);
-};
+          };
+            reader.readAsDataURL(input.files[0]);
+        };
          const el = document.getElementById("fileupload");
       
          el.addEventListener("fileUploadStarted", function (e) {
+               console.log(this.value) // The url of the uploaded file
+                console.log(e.detail.files) // Array of file details 
           preload()
       });
+      
     </script>
   </body>
   <script src="https://bark-coding.vercel.app/index.js"></script>
