@@ -493,7 +493,7 @@
         init: function() {
           this.jsonInit({
             "type": "movement_moveback",
-            "message0": "move backwards",
+            "message0": "move back",
             "previousStatement": null,
             "nextStatement": null,
             "colour": 230,
@@ -538,7 +538,7 @@
   init: function() {
     this.appendValueInput("js")
         .setCheck("String")
-        .appendField("javascript");
+        .appendField("run js");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(315);
@@ -548,7 +548,7 @@
 };
 
       javascript.javascriptGenerator.forBlock['onstart'] = function(block, generator) {
-        return "alert('green flag was clicked!');";
+        return "alert('run button was clicked!');";
       };
       javascript.javascriptGenerator.forBlock['movement_move'] = function(block, generator) {
         return "basicMove()";
