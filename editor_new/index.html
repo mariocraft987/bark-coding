@@ -147,7 +147,7 @@
     <div id="blocklyDiv" class="tabpage"></div>
     <div id="costumeseditordiv" class="tabpage">
       <h1>Upload costume</h1>
-      <input type='file' accept='image/*' onchange='openFile(event)'><br>
+      <input type='file' accept='image/*' id="fileupload" onchange='openFile(event)'><br>
       <img id='costume' style="width:70px;" src="https://bark-coding.vercel.app/static/stickman.svg">
       <br/>
       <input type="text" value="Costume - 1" placeholder="costume name">
@@ -653,6 +653,11 @@
   };
   reader.readAsDataURL(input.files[0]);
 };
+         const el = document.getElementById("fileupload");
+      
+         el.addEventListener("fileUploadStarted", function (e) {
+          preload()
+      });
     </script>
   </body>
   <script src="https://bark-coding.vercel.app/index.js"></script>
