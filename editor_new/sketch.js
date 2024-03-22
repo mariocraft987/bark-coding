@@ -9,6 +9,10 @@ function preload() {
   basicMove();
 }
 
+function loadImg() {
+  img = loadImage('https://bark-coding.vercel.app/static/stickman.svg');
+}
+
 function setup() {
   // Create a canvas
   let cnv = createCanvas(480, 360);
