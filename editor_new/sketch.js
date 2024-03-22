@@ -9,9 +9,9 @@ function preload() {
   basicMove();
 }
 
-function loadImg() {
+function loadImg(text) {
   // Loads the image from the URL
-  img = loadImage('https://bark-coding.vercel.app/static/stickman.svg');
+  img = loadImage(text);
 }
 
 function setup() {
