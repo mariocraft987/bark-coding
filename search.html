@@ -9,8 +9,8 @@
     null
   </body>
   <script>
-    let q = params.get("search");
-    document.body = "<h2>"+q+"</h2>";
-    document.title = "Bark Search - "+q
+    let q = new URLSearchParams(location.search).get("q".toString()) || "";
+    document.write("<h2>"+q+"</h2>");
+    document.title = "Bark Search - "+q;
   </script>
 </html>
