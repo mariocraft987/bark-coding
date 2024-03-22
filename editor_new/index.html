@@ -504,17 +504,21 @@
       };
       
       Blockly.Blocks['onstart'] = {
-        init: function() {
-          this.appendStatementInput("start")
-              .setCheck(null)
-              .appendField("when")
-              .appendField(new Blockly.FieldImage("https://bark-coding.vercel.app/src/projecttoolbar/run.svg", 25, 25, { alt: "*", flipRtl: "FALSE" }))
-              .appendField("clicked");
-          this.setColour(20);
-       this.setTooltip("");
-       this.setHelpUrl("");
-        }
-      };
+  init: function() {
+    this.appendDummyInput()
+        .appendField("when")
+        .appendField(new Blockly.FieldImage("https://bark-coding.vercel.app/src/projecttoolbar/run.svg", 25, 25, { alt: "*", flipRtl: "FALSE" }))
+        .appendField("clicked");
+    this.appendStatementInput("start")
+        .setCheck(null);
+    this.setColour(20);
+    this.setNextStatement(true);
+    this.setPreviousStatement(false);
+    this.setTooltip("");
+    this.setHelpUrl("");
+  }
+};
+
       
       Blockly.Blocks['pointdir'] = {
         init: function() {
