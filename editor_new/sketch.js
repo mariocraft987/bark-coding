@@ -4,12 +4,13 @@ let y = 175; // Initial y position (centered)
 let bgColor = 255; // Initial background color
 
 function preload() {
-  // Load the image from the URL
+  // Load the image from the URL then move
   img = loadImage('https://bark-coding.vercel.app/static/stickman.svg');
   basicMove();
 }
 
 function loadImg() {
+  // Loads the image from the URL
   img = loadImage('https://bark-coding.vercel.app/static/stickman.svg');
 }
 
