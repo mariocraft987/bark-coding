@@ -265,7 +265,7 @@ textarea {
 }
 
 /* mobile style */
-@media (cursor: coarse) (max-width: 800px) {
+@media (pointer: coarse) {
   .box {
     width: 100vw!important;
     margin-left: 0!important;
