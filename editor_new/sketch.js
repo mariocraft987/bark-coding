@@ -33,6 +33,9 @@ function draw() {
   fill(0);
   text("Welcome to the Bark Alpha!", width / 2, y - 10);
 }
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 // Function to change the background color
 function changeBackgroundColor(color) {
@@ -50,6 +53,7 @@ function basicMove() {
   if (x <= 0) {
     x = 0;
   }
+  sleep(30);
 }
 function basicMoveBack() {
   // Move stickman to the left by about -10 in the x-direction
@@ -59,6 +63,7 @@ function basicMoveBack() {
   if (x <= 0) {
     x = 0;
   }
+  sleep(30);
 }
 
 
