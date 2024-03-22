@@ -40,7 +40,7 @@
 |`:troll:`     |<img src="svg/troll.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:woof:`      |<img src="svg/bark.svg" width="25" height="25">|<a href="https://scratch.mit.edu/users/SuperL14M/">SuperL14M</a>|
 ## collaborator direct links
-these are NOT case-sensitive.<br>*please note that these images may be out of date!*
+these are NOT case-sensitive.<br>*please note that these profile pictures may be out of date!*
 |syntax        |result|creator|
 |--------------|------|-------|
 |`@mariocraft`|<img src="https://github.com/mariocraft987/bark.github.io/assets/129226914/44cac082-448d-4911-93e5-c7435a4c19ee" height="28">|<a href="https://github.com/qwertyytheartist">qwertyytheartist</a>|
