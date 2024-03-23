@@ -25,6 +25,7 @@ body {
   overflow: hidden;
   height: 45px;
   background-color: DodgerBlue;
+  display: flex;
 }
 
 .navbar a {
@@ -117,6 +118,7 @@ input {
   color: #000000!important;
   background-color: rgb(120, 188, 255)!important;
   border-radius: 100px;
+  flex: 1 0 auto;
 }
 
 *:focus {
