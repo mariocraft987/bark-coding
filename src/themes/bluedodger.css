@@ -272,6 +272,9 @@ textarea {
     width: 100vw!important;
     margin-left: 0!important;
     padding: 16px 0!important;
-    
+  }
+
+  .navbar {
+    overflow-x: scroll!important;
   }
 }
