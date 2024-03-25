@@ -26,6 +26,7 @@ body {
   height: 45px;
   background-color: DodgerBlue;
   display: flex;
+  align-items: center;
 }
 
 .navbar a {
@@ -33,7 +34,7 @@ body {
   display: block;
   color: white;
   text-align: left;
-  padding: 10px 16px;
+  padding: 20px 15px;
   text-decoration: none;
   height: calc(100% - 20px);
   line-height: 25px;
@@ -112,7 +113,6 @@ input {
 .searchBar {
   display: inline-block;
   padding: 6px 15px;
-  margin: 6px;
   font-size: 17px;
   border: none;
   color: #000000!important;
