@@ -152,11 +152,12 @@
     </div>
     <div id="soundseditordiv" class="tabpage">
       <h1>Upload sound</h1>
-      <input type="file" accept=".mp3,.wav" onchange='SoundopenFile(event)'>
+      <input type="file" id="upload" />
       <br/>
       <audio controls>
-        <source id="soundupload">
-          Sorry, Your browser does not support the audio element.
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <audio id="audio" controls>
+        <source src="" id="src" />
       </audio>
     </div>
     <div id="editortabs">
@@ -662,16 +663,13 @@
         };
 
           // Script from Stack Overflow
-          var SoundopenFile = function(file) {
-          var Soundinput = file.target;
-          var Soundreader = new FileReader();
-            reader.onload = function(){
-          var SounddataURL = reader.result;
-          var Soundoutput = document.getElementById('soundupload');
-          output.src = dataURL;
-          };
-            reader.readAsDataURL(input.files[0]);
-        };
+    function handleFiles(event) {
+      var files = event.target.files;
+        $("#src").attr("src", URL.createObjectURL(files[0]));
+        document.getElementById("audio").load();
+      }
+
+    document.getElementById("upload").addEventListener("change", handleFiles, false);
       
     </script>
   </body>
