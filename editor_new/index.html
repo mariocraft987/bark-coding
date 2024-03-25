@@ -152,8 +152,11 @@
     </div>
     <div id="soundseditordiv" class="tabpage">
       <h1>Upload sound</h1>
-      <form><input type="file" accept=".mp3,.wav" id="soundupload"><input type="submit"></form>
-      <p>Work in Progress!</p>
+      <input type="file" accept=".mp3,.wav" onchange='SoundopenFile(event)'>
+      <audio controls>
+        <source id="soundupload">
+          Sorry, Your browser does not support the audio element.
+      </audio>
     </div>
     <div id="editortabs">
       <button onclick="document.body.classList.add('code'); document.body.classList.remove('costumes'); document.body.classList.remove('sounds');">Code</button>
