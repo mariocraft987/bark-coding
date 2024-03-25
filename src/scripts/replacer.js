@@ -36,7 +36,6 @@ function replace(text) {
         // emojis
         .replaceAll(":amazed:", "<img src='src/emojis/normal/svg/amazed.svg' style='margin-bottom: -7px;' alt='amazed face' width='"+ emojisize + "' height='"+ emojisize + "'>")
         .replaceAll(":alien:", "<img src='src/emojis/svg/normal/alien.svg' style='margin-bottom: -7px;' alt='alien' width='"+ emojisize + "' height='"+ emojisize + "'>")
-        .replaceAll(":blank:", "<img src='src/emojis/svg/normal/blank.svg' style='margin-bottom: -7px;' alt='blank face' width='"+ emojisize + "' height='"+ emojisize + "'>")
         .replaceAll(":smiley:", "<img src='src/emojis/svg/normal/smiley.svg' alt='smiley face' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
         .replaceAll(":happy:", "<img src='src/emojis/svg/normal/happy.svg' alt='happy face' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
         .replaceAll(":sad:", "<img src='src/emojis/svg/normal/sad.svg' alt='sad face' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
