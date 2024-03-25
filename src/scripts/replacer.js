@@ -41,7 +41,6 @@ function replace(text) {
         .replaceAll(":happy:", "<img src='src/emojis/svg/normal/happy.svg' alt='happy face' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
         .replaceAll(":sad:", "<img src='src/emojis/svg/normal/sad.svg' alt='sad face' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
         .replaceAll(":angry:", "<img src='src/emojis/svg/normal/angry.svg' alt='angry face' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
-        .replaceAll(":nerd:", "<img src='src/emojis/svg/normal/nerd.svg' alt='nerd face' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
         .replaceAll(":lol:", "<img src='src/emojis/svg/normal/lol.svg' alt='laughing face' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
         .replaceAll(":textHappy:", "<img src='src/emojis/svg/normal/textHappy.svg' alt='happy face' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
         .replaceAll(":sussedOut:", "<img src='src/emojis/svg/normal/sussedOut.svg' alt='suspicious face' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
