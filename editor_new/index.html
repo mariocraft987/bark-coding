@@ -152,7 +152,7 @@
     </div>
     <div id="soundseditordiv" class="tabpage">
       <h1>Upload sound</h1>
-      <form><input type="file" accept=".mp3,.wav"><input type="submit"></form>
+      <form><input type="file" accept=".mp3,.wav" id="soundupload"><input type="submit"></form>
       <p>Work in Progress!</p>
     </div>
     <div id="editortabs">
@@ -652,6 +652,18 @@
           var dataURL = reader.result;
           var output = document.getElementById('costume');
             loadImg(dataURL)
+          output.src = dataURL;
+          };
+            reader.readAsDataURL(input.files[0]);
+        };
+
+          // Script from Stack Overflow
+          var SoundopenFile = function(file) {
+          var Soundinput = file.target;
+          var Soundreader = new FileReader();
+            reader.onload = function(){
+          var SounddataURL = reader.result;
+          var Soundoutput = document.getElementById('soundupload');
           output.src = dataURL;
           };
             reader.readAsDataURL(input.files[0]);
