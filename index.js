@@ -119,9 +119,9 @@ function jobRegister() {
   // Initialize dark mode when the page loads
   window.addEventListener('load', initializeDarkMode);
 
+whatsNew();
+
 if (document.URL.includes("https://mariocraft987.github.io/bark.github.io/")) {
     location.href = baseUrl;
 }
-
-whatsNew();
 
