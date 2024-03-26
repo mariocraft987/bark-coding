@@ -123,7 +123,5 @@ if (document.URL.includes("https://mariocraft987.github.io/bark.github.io/")) {
     location.href = baseUrl;
 }
 
-export default message;
-
 whatsNew();
 
