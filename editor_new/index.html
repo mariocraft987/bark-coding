@@ -201,6 +201,7 @@
       <category name="Movement" colour="#3399ff">
         <block type="movement_move"></block>
         <block type="movement_moveback"></block>
+        <block type="goto_mouse"></block>
         <block type="pointdir">
           <field name="NAME">90</field>
         </block>
@@ -490,6 +491,19 @@
           });
         }
       };
+      Blockly.Blocks['goto_mouse'] = { // Moves sprite
+        init: function() {
+          this.jsonInit({
+            "type": "goto_mouse",
+            "message0": "go to mouse pointer",
+            "previousStatement": null,
+            "nextStatement": null,
+            "colour": 230,
+            "tooltip": "",
+            "helpUrl": ""
+          });
+        }
+      };
 
             Blockly.Blocks['movement_moveback'] = { // Moves sprite back
         init: function() {
@@ -557,6 +571,9 @@
       };
       javascript.javascriptGenerator.forBlock['movement_moveback'] = function(block, generator) {
         return "basicMoveBack()";
+      };
+      javascript.javascriptGenerator.forBlock['goto_mouse'] = function(block, generator) {
+        return "gotomouse()";
       };
       
       javascriptGenerator.forBlock['javascript_block'] = function(block, generator) {

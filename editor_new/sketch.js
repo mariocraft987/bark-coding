@@ -65,6 +65,10 @@ function basicMoveBack() {
   }
   sleep(30);
 }
+function gotomouse() {
+  x = mousex;
+  y = mousey;
+}
 
 
 
