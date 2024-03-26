@@ -269,9 +269,9 @@ textarea {
 /* mobile style */
 @media (pointer: coarse) {
   .box {
-    width: 100vw!important;
-    margin-left: 0!important;
-    padding: 16px 0!important;
+    width: calc(100vw - 60px)!important;
+    margin-left: 15px!important;
+    padding: 16px 15px!important;
   }
 
   .navbar {
