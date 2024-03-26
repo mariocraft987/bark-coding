@@ -1,4 +1,9 @@
 {
   "name": "Bark - Desktop",
-  "main": "index.html"
+  "version": "1.0.0",
+  "description": "Bark desktop app",
+  
+  "main": "index.html",
+  "author": "The Bark Team",
+  "license": "BSD 2-Clause"
 }
