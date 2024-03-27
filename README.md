@@ -1,16 +1,32 @@
-# About us
-Created by Mariocraft987 and a team of developers, we have Bark.
+# Description
+Bark is a website that makes coding easy, so users of any age can create and share games, animations, and everything else! &#128054;<br>
+Bark has many features that <a href="https://scratch.mit.edu">Scratch</a>, the inspiration for this project, does not, including:
+- Dark mode
+- Custom stage size&ast;
+- Customize editor layout&ast;
+- More features soon, Bark is still in its early stages
 
-Bark Coding is a Blockly based coding language. &#128054;
+&ast; = coming soon
+
+![Screenshot of the Bark homepage](https://github.com/mariocraft987/bark.github.io/assets/129226914/c4afcd1e-e9c1-477f-a88f-3ae2f64748e6 "Homepage")<br>
+![Screenshot of the Bark code editor](https://github.com/mariocraft987/bark.github.io/assets/129226914/48718313-5243-4b80-92a6-7f986cdb12ec "Code editor")
 <hr>
 
+# Contribution
+Please read our <a href="https://github.com/mariocraft987/bark.github.io/blob/main/CONTRIBUTING.md">contribution guidelines</a> before contributing.
 ## Job Registering
 To be a part of Bark's devlopment, please comment `Job Register 4067` on <a href="https://github.com/Mariocraft987/bark.github.io/commit/5644df6ebc5aa7ea7b611141a265ff7c17712c5e">this commit</a>.
-
+## Contributors
+[<img src="https://avatars.githubusercontent.com/u/154646419?v=4" alt="mariocraft" title="mariocraft" width="70" height="70">](https://github.com/mariocraft987)
+[<img src="https://avatars.githubusercontent.com/u/130254323?v=4" alt="nmsderp" title="nmsderp" width="70" height="70">](https://github.com/nmsderp)
+[<img src="https://avatars.githubusercontent.com/u/129226914?v=4" alt="qwertyy" title="qwertyy" width="70" height="70">](https://github.com/qwertyy-dev)
+[<img src="https://avatars.githubusercontent.com/u/158863401?v=4" alt="Rubiidev" title="Rubiidev" width="70" height="70">](https://github.com/Rubiidev-18)
+[<img src="https://avatars.githubusercontent.com/u/144301348?v=4" alt="dumorando" title="dumorando" width="70" height="70">](https://github.com/dumorando)
+[<img src="https://avatars.githubusercontent.com/u/158528051?v=4" alt="Kevenn" title="Kevenn" width="70" height="70">](https://github.com/QuirkyWorks)
+[<img src="https://avatars.githubusercontent.com/u/110662505?v=4" alt="Adam" title="Adam" width="70" height="70">](https://github.com/Bashamega)
 <hr>
 
 # License
-
 ```
 BSD 2-Clause License
 
@@ -38,6 +54,4 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ```
 
-<!-- bark is not affiliated of scratch or turbowarp nor penguin mod and all credit goes to these founding orginizations and not any content should be used with permission,
-please is they are created YET check out our terms of use and private policy --!>
-
+Bark is not affiliated with Scratch, Turbowarp, nor PenguinMod. All credit for the idea goes to these founding orginizations.
