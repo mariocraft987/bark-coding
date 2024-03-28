@@ -18,7 +18,7 @@ Please read our <a href="https://github.com/mariocraft987/bark.github.io/blob/ma
 ## Job Registering
 To be a part of Bark's devlopment, please comment `Job Register 4067` on <a href="https://github.com/Mariocraft987/bark.github.io/commit/5644df6ebc5aa7ea7b611141a265ff7c17712c5e">this commit</a>.
 ## Contributors
-**Thanks** To our **contributors!** If you want to be here. Read **Job Registering.**
+**Thanks** To our **contributors!** If you want to be here. Read **Job Registering.**\
 [<img src="https://avatars.githubusercontent.com/u/154646419?v=4" alt="mariocraft" title="mariocraft" width="70" height="70" style="border-radius:100%">](https://github.com/mariocraft987)
 [<img src="https://avatars.githubusercontent.com/u/130254323?v=4" alt="nmsderp" title="nmsderp" width="70" height="70" style="border-radius:100%">](https://github.com/nmsderp)
 [<img src="https://avatars.githubusercontent.com/u/129226914?v=4" alt="qwertyy" title="qwertyy" width="70" height="70" style="border-radius:100%">](https://github.com/qwertyy-dev)
