@@ -1,4 +1,4 @@
-# About us
+# Description
 Created by Mariocraft987 and a team of developers, we have Bark.
 
 Bark Coding is a Blockly based coding language. &#128054;
