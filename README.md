@@ -1,4 +1,4 @@
-![WIP Badge](https://img.shields.io/badge/This%2Bis%2Ba%2Bwork%2Bin%2Bprogress!-%23592b0a?style=plastic&color=%23592b0a)
+![WIP Badge](https://img.shields.io/badge/This_is_a_work_in_progress!-%23592b0a?style=plastic&color=%23592b0a)
 
 # Description
 Bark is a website that makes coding easy, so users of any age can create and share games, animations, and everything else! &#128054;<br>
