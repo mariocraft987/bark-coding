@@ -1,3 +1,5 @@
+![WIP Badge](https://img.shields.io/badge/This%2Bis%2Ba%2Bwork%2Bin%2Bprogress!-%23592b0a?style=plastic&color=%23592b0a)
+
 # Description
 Bark is a website that makes coding easy, so users of any age can create and share games, animations, and everything else! &#128054;<br>
 Bark has many features that <a href="https://scratch.mit.edu">Scratch</a>, the inspiration for this project, does not, including:
@@ -7,7 +9,8 @@ Bark has many features that <a href="https://scratch.mit.edu">Scratch</a>, the i
 - And More.
 - More features soon, Bark is still in its early stages
 
-###### &ast; = coming soon
+###### &ast; = coming soon <! -- how do I remove the copy link from from a h6 header - rubiidev alt -->
+
 
 ![Screenshot of the Bark homepage](https://github.com/mariocraft987/bark.github.io/assets/129226914/c4afcd1e-e9c1-477f-a88f-3ae2f64748e6 "Homepage")<br>
 ![Screenshot of the Bark code editor](https://github.com/mariocraft987/bark.github.io/assets/129226914/48718313-5243-4b80-92a6-7f986cdb12ec "Code editor")
