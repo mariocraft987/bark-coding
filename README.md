@@ -6,9 +6,10 @@ Bark has many features that <a href="https://scratch.mit.edu">Scratch</a>, the i
 - Dark mode
 - Custom stage size&ast;
 - Customize editor layout&ast;
+- Paint editor&ast;
 - More features soon, Bark is still in its early stages
 
-&ast; = coming soon
+`&ast;` = coming soon
 
 
 ![Screenshot of the Bark homepage](https://github.com/mariocraft987/bark.github.io/assets/129226914/c4afcd1e-e9c1-477f-a88f-3ae2f64748e6 "Homepage")<br>
