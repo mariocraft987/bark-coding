@@ -11,6 +11,8 @@ Bark has many features that <a href="https://scratch.mit.edu">Scratch</a>, the i
 
 `*` = coming soon
 
+<a href="https://github.com/google/blockly"><img src="https://tinyurl.com/built-on-blockly" /> </a>
+
 
 ![Screenshot of the Bark homepage](https://github.com/mariocraft987/bark.github.io/assets/129226914/c4afcd1e-e9c1-477f-a88f-3ae2f64748e6 "Homepage")<br>
 ![Screenshot of the Bark code editor](https://github.com/mariocraft987/bark.github.io/assets/129226914/48718313-5243-4b80-92a6-7f986cdb12ec "Code editor")
