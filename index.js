@@ -1,6 +1,6 @@
 /* Some basic scripts created in javascript to work the website, and make it interactive. */
 
-let newsBox = "Try our new alpha <a href='https://github.com/mariocraft987/bark.github.io/releases/tag/0.0.1'>desktop app</a> it is missing a lot of functionality, but you can still do something, created by <a href='https://github.com/nmsderp'>nmsderp</a>"
+let newsBox = "Try our new alpha <a href='https://github.com/mariocraft987/bark.github.io/releases/tag/0.1.0'>desktop app</a> it is missing a lot of functionality, but you can still do stuff, created by <a href='https://github.com/nmsderp'>nmsderp</a>, Updated by <a href='https://github.com/rubiidev18alt'>Rubiidev alt</a>"
 let baseUrl = "https://bark-coding.vercel.app"
 let commitsLength = 150
 
@@ -86,7 +86,7 @@ function Signup() {
 function jobRegister() {
     let job = document.querySelector('input[name=job]:checked').value;
     let username = document.getElementById('github-username').value;
-    document.getElementById('page').innerHTML = '<br/><h2>You have selected a Job to ' + job + '</h2><p>We have to run a few tests to see your actually <em>'+ username +'</em></p><br/><br/><p>Please comment "Job Register 4543"';
+    document.getElementById('page').innerHTML = '<br/><h2>You have selected a Job to ' + job + '</h2><p>We have to run a few tests to see your actually <em>'+ username +'</em></p><br/><br/><p>Please comment "Job Register 4067"';
     document.getElementById('page').innerHTML += ' on <a class="link" href="https://github.com/Mariocraft987/bark.github.io/commit/5644df6ebc5aa7ea7b611141a265ff7c17712c5e">this commit</a>.</p>'
     }
 
