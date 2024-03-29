@@ -10,6 +10,7 @@ Bark has many features that <a href="https://scratch.mit.edu">Scratch</a>, the i
 - Custom stage size&ast;
 - Customize editor layout&ast;
 - Paint editor&ast;
+- Accounts/Community&ast;
 - More features soon, Bark is still in its early stages
 
 `*` = coming soon
@@ -21,7 +22,7 @@ Bark has many features that <a href="https://scratch.mit.edu">Scratch</a>, the i
 # Contribution
 Please read our <a href="https://github.com/mariocraft987/bark.github.io/blob/main/CONTRIBUTING.md">contribution guidelines</a> before contributing.
 ## Job Registering
-To be a part of Bark's devlopment, please comment `Job Register 4067` on <a href="https://github.com/Mariocraft987/bark.github.io/commit/5644df6ebc5aa7ea7b611141a265ff7c17712c5e">this commit</a>.
+To be a part of Bark's development, please comment `Job Register 4067` on <a href="https://github.com/Mariocraft987/bark.github.io/commit/5644df6ebc5aa7ea7b611141a265ff7c17712c5e">here.</a>.
 ## Contributors
 **Thanks** To our **contributors!** If you want to be here. Read **Job Registering.**\
 [<img src="https://avatars.githubusercontent.com/u/154646419?v=4" alt="mariocraft" title="mariocraft" width="70" height="70" style="border-radius:100%">](https://github.com/mariocraft987)
@@ -33,6 +34,9 @@ To be a part of Bark's devlopment, please comment `Job Register 4067` on <a href
 [<img src="https://avatars.githubusercontent.com/u/110662505?v=4" alt="Adam" title="Adam" width="70" height="70" style="border-radius:100%">](https://github.com/Bashamega)
 [<img src="https://avatars.githubusercontent.com/u/164731988?v=4" alt="Rubiidev Alt" title="Rubiidev Alt" width="70" height="70" style="border-radius:100%">](https://github.com/Rubiidev18alt)
 <hr>
+
+## Help Wanted
+We need **coders** to do the list in the description above.
 
 # License
 ```
