@@ -1,4 +1,7 @@
-![WIP Badge](https://img.shields.io/badge/This_is_a_work_in_progress!-%23592b0a?style=plastic&color=%23592b0a)
+![Logo](https://raw.githubusercontent.com/mariocraft987/bark.github.io/main/src/images/Bark.svg)<br>
+![Static Badge](https://img.shields.io/badge/inspiration-scratch-orange?style=for-the-badge&logo=scratch&logoColor=orange)
+![Static Badge](https://img.shields.io/badge/made%20using-blockly-yellow?style=for-the-badge&logo=google&logoColor=yellow)
+![Static Badge](https://img.shields.io/badge/latest%20release-0.0.1-green?style=for-the-badge&logo=electron&logoColor=green)
 
 # Description
 Bark is a website that makes coding easy, so users of any age can create and share games, animations, and everything else! &#128054;<br>
@@ -10,9 +13,6 @@ Bark has many features that <a href="https://scratch.mit.edu">Scratch</a>, the i
 - More features soon, Bark is still in its early stages
 
 `*` = coming soon
-
-<a href="https://github.com/google/blockly"><img src="https://tinyurl.com/built-on-blockly" /> </a>
-
 
 ![Screenshot of the Bark homepage](https://github.com/mariocraft987/bark.github.io/assets/129226914/c4afcd1e-e9c1-477f-a88f-3ae2f64748e6 "Homepage")<br>
 ![Screenshot of the Bark code editor](https://github.com/mariocraft987/bark.github.io/assets/129226914/48718313-5243-4b80-92a6-7f986cdb12ec "Code editor")
