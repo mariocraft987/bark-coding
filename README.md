@@ -3,7 +3,7 @@
 ![Static Badge](https://img.shields.io/badge/latest%20release-0.0.1-green?style=for-the-badge&logo=electron&logoColor=green)
 
 # Description
-Bark is a website that makes coding easy, so users of any age can create and share games, animations, and everything else! &#128054;<br>
+Bark is a website that makes programming easy, so users of any age can create and share games, animations, and everything else! &#128054;<br>
 Bark has many features that <a href="https://scratch.mit.edu">Scratch</a>, the inspiration for this project, does not, including:
 - Dark mode
 - Custom stage size&ast;
@@ -35,7 +35,7 @@ To be a part of Bark's development, please comment `Job Register 4067` on <a hre
 <hr>
 
 ## Help Wanted
-We need **coders** to do the list in the description above.
+We need **programmers** to do the list in the description above.
 
 # License
 ```
