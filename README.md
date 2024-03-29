@@ -1,8 +1,7 @@
 ![Logo](https://raw.githubusercontent.com/mariocraft987/bark.github.io/main/src/images/Bark.svg)<br>
-![Static Badge](https://img.shields.io/badge/inspiration-scratch-orange?style=for-the-badge&logo=scratch&logoColor=orange)
 ![Static Badge](https://img.shields.io/badge/made%20using-blockly-yellow?style=for-the-badge&logo=google&logoColor=yellow)
 ![Static Badge](https://img.shields.io/badge/latest%20release-0.0.1-green?style=for-the-badge&logo=electron&logoColor=green)
-![Static Badge](https://img.shields.io/badge/website%20made%20in-HTML5%20And%20CSS-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+
 # Description
 Bark is a website that makes coding easy, so users of any age can create and share games, animations, and everything else! &#128054;<br>
 Bark has many features that <a href="https://scratch.mit.edu">Scratch</a>, the inspiration for this project, does not, including:
