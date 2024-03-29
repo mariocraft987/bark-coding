@@ -1,1 +1,1 @@
-how do I remove the copy link from from a h6 header - rubiidev alt
+how do I draft an already released release (yeah creative vocab ik) - rubiidev alt
