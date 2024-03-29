@@ -2,8 +2,13 @@
   "name": "barkdesktop",
   "version": "1.0.0",
   "description": "Bark desktop app",
-  
   "main": "index.html",
   "author": "The Bark Team",
-  "license": "BSD 2-Clause"
+  "license": "BSD 2-Clause",
+  "dependencies": {
+    "nw": "^0.56.0"
+  },
+  "scripts": {
+    "build": "nw ."
+  }
 }
