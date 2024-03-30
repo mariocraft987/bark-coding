@@ -20,10 +20,9 @@ Bark has many features that <a href="https://scratch.mit.edu">Scratch</a>, the i
 
 # Contribution
 Please read our <a href="https://github.com/mariocraft987/bark.github.io/blob/main/CONTRIBUTING.md">contribution guidelines</a> before contributing.
-## Job Registering
+**Thanks** To our **contributors!**
 To be a part of Bark's development, please comment `Job Register 4067` on <a href="https://github.com/Mariocraft987/bark.github.io/commit/5644df6ebc5aa7ea7b611141a265ff7c17712c5e">here.</a>.
-## Contributors
-**Thanks** To our **contributors!** If you want to be here. Read **Job Registering.**\
+
 [<img src="https://avatars.githubusercontent.com/u/154646419?v=4" alt="mariocraft" title="mariocraft" width="70" height="70" style="border-radius:100%">](https://github.com/mariocraft987)
 [<img src="https://avatars.githubusercontent.com/u/130254323?v=4" alt="nmsderp" title="nmsderp" width="70" height="70" style="border-radius:100%">](https://github.com/nmsderp)
 [<img src="https://avatars.githubusercontent.com/u/129226914?v=4" alt="qwertyy" title="qwertyy" width="70" height="70" style="border-radius:100%">](https://github.com/qwertyy-dev)
@@ -34,11 +33,8 @@ To be a part of Bark's development, please comment `Job Register 4067` on <a hre
 [<img src="https://avatars.githubusercontent.com/u/164731988?v=4" alt="Rubiidev Alt" title="Rubiidev Alt" width="70" height="70" style="border-radius:100%">](https://github.com/Rubiidev18alt)
 <hr>
 
-## Help Wanted
-We need **programmers** to do the list in the description above.
-
 ## How do I add blocks?
-Go to our 'blockaddition.md'
+Go to our `blockaddition.md`
 
 # License
 
