@@ -4,7 +4,7 @@
 
 # Description
 Bark is a website that makes programming easy, so users of any age can create and share games, animations, and everything else! &#128054;<br>
-Bark has many features that <a href="https://scratch.mit.edu">Scratch</a>, the inspiration for this project, does not, including:
+Bark has many features that <a href="https://scratch.mit.edu">Scratch(the inspiration for this project)</a> does not, including:
 - Dark mode
 - Custom stage size&ast;
 - Customize editor layout&ast;
