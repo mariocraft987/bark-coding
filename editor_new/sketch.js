@@ -1,7 +1,7 @@
 let img; // Declare variable to hold the image
 let x = 235; // Initial x position (centered)
 let y = 175; // Initial y position (centered)
-let bgColor = 255; // Initial background color
+let bgColor = '#FFFFFF'; // Initial background color (white)
 
 function preload() {
   // Load the image from the URL then move
@@ -31,46 +31,42 @@ function draw() {
   textSize(20);
   textAlign(CENTER, BOTTOM);
   fill(0);
-  text("Welcome to the Bark Alpha!", width / 2, y - 10);
 }
+
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 // Function to change the background color
-function changeBackgroundColor(color) {
+function changebg(color) {
   // Set the background color to the provided color
   bgColor = color;
 }
 
-
 // Function for basic movement
-function basicMove() {
-  // Move stickman to the left by about +10 in the x-direction
+async function basicMove() {
+  // Move stickman to the right by about +5 in the x-direction
   x += 5;
 
   // Prevent stickman from going beyond canvas boundaries
-  if (x <= 0) {
-    x = 0;
+  if (x >= width - img.width) {
+    x = width - img.width;
   }
-  sleep(30);
+  await sleep(30);
+  basicMove();
 }
+
 function basicMoveBack() {
-  // Move stickman to the left by about -10 in the x-direction
+  // Move stickman to the left by about -5 in the x-direction
   x -= 5;
 
   // Prevent stickman from going beyond canvas boundaries
   if (x <= 0) {
     x = 0;
   }
-  sleep(30);
 }
+
 function gotomouse() {
   x = mouseX;
   y = mouseY;
 }
-
-
-
-
-
