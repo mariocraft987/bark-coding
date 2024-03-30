@@ -579,15 +579,15 @@ Blockly.Blocks['fetch'] = {
         return "alert('run button was clicked!');";
       };
     javascript.javascriptGenerator.forBlock['movement_move'] = function(block, generator) {
-      return "setInterval(function() { basicMove(); }, 250);";
+      return "basicMove();";
     };
 
     javascript.javascriptGenerator.forBlock['movement_moveback'] = function(block, generator) {
-      return "setInterval(function() { basicMoveBack(); }, 250);";
+      return "basicMoveBack();";
     };
 
     javascript.javascriptGenerator.forBlock['goto_mouse'] = function(block, generator) {
-        return "setInterval(function() { gotomouse(); }, 250);";
+        return "gotomouse();";
     };
     javascript.javascriptGenerator.forBlock['change_stage_bg'] = function(block, generator) {
         var colorValue = block.getFieldValue('NAME');
