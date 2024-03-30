@@ -5,7 +5,7 @@ let bgColor = '#FFFFFF'; // Initial background color (white)
 
 function preload() {
   // Load the image from the URL then move
-  img = loadImage('https://bark-coding.vercel.app/static/stickman.svg');
+  img = loadImage('https://bark-coding.vercel.app/src/images/dog/idle.svg');
   basicMove();
 }
 
