@@ -503,6 +503,7 @@
           });
         }
       };
+      
 
             Blockly.Blocks['movement_moveback'] = { // Moves sprite back
         init: function() {
@@ -575,6 +576,10 @@
 
     javascript.javascriptGenerator.forBlock['goto_mouse'] = function(block, generator) {
         return "setInterval(function() { gotomouse(); }, 250);";
+    };
+    javascript.javascriptGenerator.forBlock['change_stage_bg'] = function(block, generator) {
+        var colorValue = block.getFieldValue('NAME');
+        return "alert('" + colorValue + "');";
     };
 
       
