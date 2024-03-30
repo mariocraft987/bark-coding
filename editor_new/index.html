@@ -200,6 +200,7 @@
         <block type="movement_move">
           <field name="NAME">3</field>
         </block>
+        <block type="sine_move"></block>
         <block type="goto_mouse"></block>
         <block type="pointdir">
           <field name="NAME">90</field>
@@ -550,6 +551,17 @@
        this.setHelpUrl("");
         }
       };
+      Blockly.Blocks['sine_move'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("enable sine wave");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(230);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
       
       Blockly.Blocks['javascript_block'] = {
   init: function() {
@@ -584,6 +596,9 @@ Blockly.Blocks['fetch'] = {
 
     javascript.javascriptGenerator.forBlock['movement_moveback'] = function(block, generator) {
       return "basicMoveBack();";
+    };
+    javascript.javascriptGenerator.forBlock['sine_move'] = function(block, generator) {
+      return "sineMove();";
     };
 
     javascript.javascriptGenerator.forBlock['goto_mouse'] = function(block, generator) {
@@ -631,6 +646,7 @@ Blockly.Blocks['fetch'] = {
     this.setTooltip("");
     this.setHelpUrl("");
   },
+
 
   // This function will be called whenever the block value changes
   onchange: function(event) {

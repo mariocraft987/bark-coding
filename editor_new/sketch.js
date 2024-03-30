@@ -2,6 +2,9 @@ let img; // Declare variable to hold the image
 let x = 235; // Initial x position (centered)
 let y = 175; // Initial y position (centered)
 let bgColor = '#FFFFFF'; // Initial background color (white)
+let angle = 0; // Initial angle for sine wave movement
+const amplitude = 50; // Amplitude of the sine wave
+const frequency = 0.05; // Frequency of the sine wave
 
 function preload() {
   // Load the image from the URL then move
@@ -63,6 +66,13 @@ function basicMoveBack() {
     x = 0;
   }
   sleep(30);
+}
+function sineMove() {
+  // Update the y position using sine wave movement
+  y = 175 + amplitude * sin(angle);
+  
+  // Increment the angle to create the oscillating motion
+  angle += frequency;
 }
 
 function gotomouse() {
