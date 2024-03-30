@@ -582,14 +582,10 @@
         return "changebg('" + colorValue + "');";
     };
 
-      
-      javascriptGenerator.forBlock['javascript_block'] = function(block, generator) {
-  // Generate JavaScript code.
-  const jsCode = generator.valueToCode(block, 'js', Blockly.JavaScript.ORDER_ATOMIC);
-
-  // Return the generated code.
-  return jsCode;
-};
+    javascript.javascriptGenerator.forBlock['javascript_block'] = function(block, generator) {
+      var theJs = block.getFieldValue('js');
+      return theJs;
+    };
       
       Blockly.Blocks['change_stage_bg'] = {
   init: function() {

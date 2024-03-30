@@ -44,26 +44,25 @@ function changebg(color) {
 }
 
 // Function for basic movement
-async function basicMove() {
-  // Move stickman to the right by about +5 in the x-direction
+function basicMove() {
+  // Move stickman to the left by about +10 in the x-direction
   x += 5;
 
   // Prevent stickman from going beyond canvas boundaries
-  if (x >= width - img.width) {
-    x = width - img.width;
+  if (x <= 0) {
+    x = 0;
   }
-  await sleep(30);
-  basicMove();
+  sleep(30);
 }
-
 function basicMoveBack() {
-  // Move stickman to the left by about -5 in the x-direction
+  // Move stickman to the left by about -10 in the x-direction
   x -= 5;
 
   // Prevent stickman from going beyond canvas boundaries
   if (x <= 0) {
     x = 0;
   }
+  sleep(30);
 }
 
 function gotomouse() {
