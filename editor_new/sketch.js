@@ -44,6 +44,11 @@ function sleep(ms) {
 function changebg(color) {
   // Set the background color to the provided color
   bgColor = color;
+  setTimeout(betterDelay, 10);
+}
+// this is not a block it is used to handle delays better
+function betterDelay() {
+  console.log('better delay used');
 }
 
 // Function for basic movement
@@ -55,7 +60,7 @@ function basicMove() {
   if (x <= 0) {
     x = 0;
   }
-  sleep(30);
+  setTimeout(betterDelay, 10);
 }
 function basicMoveBack() {
   // Move stickman to the left by about -10 in the x-direction
@@ -65,7 +70,7 @@ function basicMoveBack() {
   if (x <= 0) {
     x = 0;
   }
-  sleep(30);
+  setTimeout(betterDelay, 10);
 }
 function sineMove() {
   // Update the y position using sine wave movement
@@ -91,4 +96,5 @@ function sineMove2() {
 function gotomouse() {
   x = mouseX;
   y = mouseY;
+  setTimeout(betterDelay, 10);
 }
