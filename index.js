@@ -61,7 +61,7 @@ function randomTxt() {
     "Funfact: You are waiting for something to load", "Emojis are added! :party:", "Bark is created with html and javascript",
     "Go check out Goldot", "Svelte is html but enchanted", ":dog::cat::banana:", "Come see our <a href='https://github.com/Bark-programming' class='link' >orginization</a>", "e",
     "See barks todo list <a href='https://bark-coding.vercel.app/static/todolist.txt' class='link'>here</a>", "The bark editor is made with Blockly", ":troll:", "the best emoji is :mewing:",
-    ":woof:", "I'm a random text!", "Take care of us, we'll do it back, plant us and we'll produce"];
+    ":woof:", "I'm a random text!", "Take care of us, we'll do it back, plant us and we'll produce", "3.1415926535"];
 
     wrd = (arr[(Math.floor(Math.random() * arr.length))]);
     document.getElementById("randomWord").innerHTML = wrd;
