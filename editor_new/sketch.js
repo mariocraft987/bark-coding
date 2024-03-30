@@ -98,3 +98,7 @@ function gotomouse() {
   y = mouseY;
   setTimeout(betterDelay, 10);
 }
+function center() {
+  x = 235;
+  y = 175;
+}

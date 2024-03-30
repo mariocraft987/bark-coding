@@ -203,6 +203,7 @@
         <block type="sine_move"></block>
         <block type="sine_move2"></block>
         <block type="goto_mouse"></block>
+        <block type="center"></block>
         <block type="pointdir">
           <field name="NAME">90</field>
         </block>
@@ -506,6 +507,19 @@
           });
         }
       };
+      Blockly.Blocks['center'] = { // Moves sprite
+        init: function() {
+          this.jsonInit({
+            "type": "center",
+            "message0": "center",
+            "previousStatement": null,
+            "nextStatement": null,
+            "colour": 230,
+            "tooltip": "",
+            "helpUrl": ""
+          });
+        }
+      };
       
 
             Blockly.Blocks['movement_moveback'] = { // Moves sprite back
@@ -560,7 +574,7 @@
     this.setNextStatement(true, null);
     this.setColour(230);
  this.setTooltip("");
- this.setHelpUrl("");
+ this.setHelpUrl("https://en.wikipedia.org/wiki/Sine_and_cosine");
   }
 };
 Blockly.Blocks['sine_move2'] = {
@@ -571,7 +585,7 @@ Blockly.Blocks['sine_move2'] = {
     this.setNextStatement(true, null);
     this.setColour(230);
  this.setTooltip("");
- this.setHelpUrl("");
+ this.setHelpUrl("https://en.wikipedia.org/wiki/Sine_and_cosine");
   }
 };
       
