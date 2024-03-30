@@ -13,18 +13,7 @@ function preload() {
   basicMove();
 }
 function toggleFullscreen() {
-  let fs = fullscreen();
-  if (!fs) {
-    let canvas = document.querySelector('canvas');
-    let canvasDataUrl = canvas.toDataURL();
-    let newWindow = window.open();
-    newWindow.document.write('<!DOCTYPE html><html><head><title>Fullscreen Canvas</title></head><body style="margin:0;overflow:hidden;background-color:black;"><canvas id="fullscreenCanvas"></canvas><script>let canvas = document.getElementById("fullscreenCanvas");let ctx = canvas.getContext("2d");let img = new Image();img.onload = function() {canvas.width = window.innerWidth;canvas.height = window.innerHeight;ctx.drawImage(img, 0, 0, canvas.width, canvas.height);fullscreen(canvas);};img.src = "' + canvasDataUrl + '";</script></body></html>');
-    newWindow.document.close();
-    newWindow.focus();
-  } else {
-    fullscreen(false);
-  }
-  isFullscreen = !fs;
+  console.log('uhhhhhhhhhh idk how to do this');
 }
 function loadImg(text) {
   // Loads the image from the URL
