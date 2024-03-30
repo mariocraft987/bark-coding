@@ -40,6 +40,8 @@ We need **programmers** to do the list in the description above.
 ## How do I add blocks?
 *NOTE: Making blocks requires basic knowledge of xml, and some decent knowledge of JavaScript*
   
+*NOTE 2: IT WILL MAKE YOUR LIFE EASIER TO USE BLOCKLY BLOCK FACTORY: https://blockly-demo.appspot.com/static/demos/blockfactory/index.html*
+  
 First we need to design our block, the block code may look like this:
 ```javascript
 Blockly.Blocks['movement_move'] = { // Moves sprite
