@@ -413,6 +413,7 @@
       </category>
       <category name="More" colour="#0fbd8c">
         <block type="javascript_block"></block>
+        <block type="fetch"/>
       </category>
     </xml>
 
@@ -562,6 +563,17 @@
     this.setHelpUrl("");
   }
 };
+Blockly.Blocks['fetch'] = {
+  init: function() {
+    this.appendValueInput("url")
+        .setCheck("String")
+        .appendField("fetch");
+    this.setOutput(true, null);
+    this.setColour(230);
+ this.setTooltip("Fetch data from servers!");
+ this.setHelpUrl("");
+  }
+};
 
     javascript.javascriptGenerator.forBlock['onstart'] = function(block, generator) {
         return "alert('run button was clicked!');";
@@ -586,6 +598,26 @@
       var theJs = block.getFieldValue('js');
       return theJs;
     };
+    javascriptGenerator.forBlock['fetch'] = function(block, generator) {
+      var uri = block.getFieldValue('url');
+      var handleFunction = generator.variableDB_.getDistinctName('handlefetch', Blockly.Variables.NAME_TYPE);
+      generator.addFunction(handleFunction,
+          `async function ${handleFunction}(url) {
+              try {
+                  const response = await fetch(url);
+                  if (!response.ok) {
+                      throw new Error('Network response was not ok');
+                  }
+                  const data = await response.json();
+                  return data;
+              } catch (error) {
+                  console.error('Fetch error:', error);
+                  return null;
+              }
+          }`);
+      return `${handleFunction}('${uri}')`;
+    };
+
       
       Blockly.Blocks['change_stage_bg'] = {
   init: function() {
