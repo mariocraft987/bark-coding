@@ -69,10 +69,13 @@ function basicMoveBack() {
 }
 function sineMove() {
   // Update the y position using sine wave movement
-  y = 175 + amplitude * sin(angle);
-  
+  y = 175 + amplitude * Math.sin(angle);
+
   // Increment the angle to create the oscillating motion
   angle += frequency;
+
+  // Set a timeout to call the function again after the delay
+  setTimeout(sineMove, 350);
 }
 
 function gotomouse() {
