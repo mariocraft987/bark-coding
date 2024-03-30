@@ -1,5 +1,5 @@
 # Block Requests
-## rubiidev18alt's re1uests
+## rubiidev18alt's requests
 1. sine wave for x position (ADDED)
 2. color and brightness effects from scratch (in a seperate looks category)
 3. (not a block but a stylistic choice) no corners on blocks
