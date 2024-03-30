@@ -42,7 +42,7 @@ We need **programmers** to do the list in the description above.
   
 *NOTE 2: IT WILL MAKE YOUR LIFE EASIER TO USE BLOCKLY BLOCK FACTORY: https://blockly-demo.appspot.com/static/demos/blockfactory/index.html*
 
-*NOTE 3: if you wanna request blocks for us to make, change blockrequests.md and open a pull request, then, we will merge if the ideas are good.
+*NOTE 3: if you wanna request blocks for us to make, change blockrequests.md and open a pull request, then, we will merge if the ideas are good.*
   
 First we need to design our block, the block code may look like this:
 ```javascript
