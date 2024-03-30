@@ -54,7 +54,7 @@ function randomTxt() {
     let arr = ["Bark! woof!", "Bark is a mod of scratch with new extensions",
     "Scratch dog", "Bark is being created, so stay patient!!", "Note: Bark does not support accounts yet",
     "Funfact: Dogs have insane hearing and smelling.", "Why not help with bark??", "A special version is here somewere..",
-    "Bark is hosted with github pages.", "Funfact: im a funfact!", "Whats cooler, Dogs or Cats?",
+    "Bark is hosted with Vercel.", "Funfact: im a funfact!", "Whats cooler, Dogs or Cats?",
     "Wanna help create bark? go <a href='Jobs.html' class='link'>Here</a>", "Bark's birthday month is October",
     "Why not go <a href='https://www.scratchfoundation.org/donate' class='link'>donate</a> to scratch?", "Go check out snail-ide!",
     "This text has a 0.07 chance of apearing", "So <em>many</em> breeds of dogs", "Check out our <a href='https://github.com/mariocraft987/bark.github.io/' class='link'>github</a>",
