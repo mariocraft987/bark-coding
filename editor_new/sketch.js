@@ -5,13 +5,18 @@ let bgColor = '#FFFFFF'; // Initial background color (white)
 let angle = 0; // Initial angle for sine wave movement
 const amplitude = 50; // Amplitude of the sine wave
 const frequency = 0.05; // Frequency of the sine wave
+let isFullscreen = false;
 
 function preload() {
   // Load the image from the URL then move
   img = loadImage('https://bark-coding.vercel.app/src/images/dog/idle.svg');
   basicMove();
 }
-
+function toggleFullscreen() {
+  let fs = fullscreen();
+  fullscreen(!fs);
+  isFullscreen = !fs;
+}
 function loadImg(text) {
   // Loads the image from the URL
   img = loadImage(text);
