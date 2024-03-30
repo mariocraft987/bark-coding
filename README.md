@@ -34,7 +34,7 @@ To be a part of Bark's development, please comment `Job Register 4067` on <a hre
 <hr>
 
 ## How do I add blocks?
-Go to our `blockaddition.md`
+Go to `blockaddition.md` and follow the steps, but, if your lazy and want one of us to do it, go to `dev/blockrequests.md`, edit it with your block requests, then make a pull request! if the requests are good, we'll merge!
 
 # License
 
