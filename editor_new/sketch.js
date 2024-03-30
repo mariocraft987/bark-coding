@@ -85,7 +85,7 @@ function sineMove2() {
   angle += frequency;
 
   // Set a timeout to call the function again after the delay
-  setTimeout(sineMove, 10);
+  setTimeout(sineMove2, 10);
 }
 
 function gotomouse() {
