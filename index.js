@@ -51,6 +51,7 @@ function recentCom() {
 function randomTxt() {
     //geeksforgeeks.org for the random text generator.
     var wrd;
+    
     let arr = ["Bark! woof!", "Bark is a mod of scratch with new extensions",
     "Scratch dog", "Bark is being created, so stay patient!!", "Note: Bark does not support accounts yet",
     "Funfact: Dogs have insane hearing and smelling.", "Why not help with bark??", "A special version is here somewere..",
@@ -61,7 +62,8 @@ function randomTxt() {
     "Funfact: You are waiting for something to load", "Emojis are added! :party:", "Bark is created with html and javascript",
     "Go check out Goldot", "Svelte is html but enchanted", ":dog::cat::banana:", "Come see our <a href='https://github.com/Bark-programming' class='link' >orginization</a>", "e",
     "See barks todo list <a href='https://bark-coding.vercel.app/static/todolist.txt' class='link'>here</a>", "The bark editor is made with Blockly", ":troll:", "the best emoji is :mewing:",
-    ":woof:", "I'm a random text!", "Take care of us, we'll do it back, plant us and we'll produce", "3.1415926535"];
+    ":woof:", "I'm a random text!", "Take care of us, we'll do it back, plant us and we'll produce", "3.1415926535", "Funact: The 1k commit for Bark is named 'pi🥧'",
+    "No bad words!"];
 
     wrd = (arr[(Math.floor(Math.random() * arr.length))]);
     document.getElementById("randomWord").innerHTML = wrd;
