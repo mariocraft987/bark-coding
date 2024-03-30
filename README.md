@@ -28,8 +28,8 @@ To be a part of Bark's development, please comment `Job Register 4067` on <a hre
 [<img src="https://avatars.githubusercontent.com/u/129226914?v=4" alt="qwertyy" title="qwertyy" width="70" height="70" style="border-radius:100%">](https://github.com/qwertyy-dev)
 [<img src="https://avatars.githubusercontent.com/u/158863401?v=4" alt="Rubiidev" title="Rubiidev" width="70" height="70" style="border-radius:100%">](https://github.com/Rubiidev-18)
 [<img src="https://avatars.githubusercontent.com/u/144301348?v=4" alt="dumorando" title="dumorando" width="70" height="70" style="border-radius:100%">](https://github.com/dumorando)
-[<img src="https://avatars.githubusercontent.com/u/158528051?v=4" alt="Kevenn" title="Kevenn" width="70" height="70" style="border-radius:100%">](https://github.com/QuirkyWorks)
 [<img src="https://avatars.githubusercontent.com/u/110662505?v=4" alt="Adam" title="Adam" width="70" height="70" style="border-radius:100%">](https://github.com/Bashamega)
+[<img src="https://avatars.githubusercontent.com/u/158528051?v=4" alt="Kevenn" title="Kevenn" width="70" height="70" style="border-radius:100%">](https://github.com/QuirkyWorks)
 [<img src="https://avatars.githubusercontent.com/u/164731988?v=4" alt="Rubiidev Alt" title="Rubiidev Alt" width="70" height="70" style="border-radius:100%">](https://github.com/Rubiidev18alt)
 <hr>
 
