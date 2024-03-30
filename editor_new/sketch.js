@@ -25,6 +25,10 @@ function setup() {
   let cnv = createCanvas(480, 360);
   cnv.parent('stage-container'); // Attach the canvas to the stage container
 }
+function goto(X, Y) {
+  x = X;
+  y = Y;
+}
 
 function draw() {
   // Set the background color
