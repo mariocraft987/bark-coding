@@ -201,6 +201,7 @@
           <field name="NAME">3</field>
         </block>
         <block type="sine_move"></block>
+        <block type="sine_move2"></block>
         <block type="goto_mouse"></block>
         <block type="pointdir">
           <field name="NAME">90</field>
@@ -554,7 +555,18 @@
       Blockly.Blocks['sine_move'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("enable sine wave");
+        .appendField("enable sine wave y");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(230);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+Blockly.Blocks['sine_move2'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("enable sine wave x");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(230);
@@ -599,6 +611,9 @@ Blockly.Blocks['fetch'] = {
     };
     javascript.javascriptGenerator.forBlock['sine_move'] = function(block, generator) {
       return "sineMove();";
+    };
+    javascript.javascriptGenerator.forBlock['sine_move2'] = function(block, generator) {
+      return "sineMove2();";
     };
 
     javascript.javascriptGenerator.forBlock['goto_mouse'] = function(block, generator) {
