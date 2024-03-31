@@ -1,8 +1,8 @@
 let img; // Declare variable to hold the image
 let x = 235; // Initial x position (centered)
 let y = 175; // Initial y position (centered)
-let imgWidth = 100; // Initial width of the image
-let imgHeight = 100; // Initial height of the image
+let imgWidth = 72.54920959472656; // Initial width of the image
+let imgHeight = 96.26698303222656; // Initial height of the image
 let bgColor = '#FFFFFF'; // Initial background color (white)
 let angle = 0; // Initial angle for sine wave movement
 const amplitude = 50; // Amplitude of the sine wave
