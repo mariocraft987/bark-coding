@@ -200,7 +200,6 @@
         <block type="movement_move">
           <field name="NAME">3</field>
         </block>
-        <block type="gotoxy"></block>
         <block type="sine_move"></block>
         <block type="sine_move2"></block>
         <block type="goto_mouse"></block>
@@ -522,7 +521,6 @@
         }
       };
       
-      
 
             Blockly.Blocks['movement_moveback'] = { // Moves sprite back
         init: function() {
@@ -537,21 +535,7 @@
           });
         }
       };
-      Blockly.Blocks['gotoxy'] = {
-  init: function() {
-    this.appendValueInput("xy")
-        .setCheck(null)
-        .appendField("go to x:")
-        .appendField(new Blockly.FieldNumber(0), "a")
-        .appendField("y:")
-        .appendField(new Blockly.FieldNumber(0), "b");
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(230);
- this.setTooltip("Go to a set x/y position");
- this.setHelpUrl("");
-  }
-};
+      
       Blockly.Blocks['onstart'] = {
   init: function() {
     this.appendDummyInput()
@@ -651,12 +635,7 @@ Blockly.Blocks['fetch'] = {
     };
     javascript.javascriptGenerator.forBlock['change_stage_bg'] = function(block, generator) {
         var colorValue = block.getFieldValue('NAME');
-        return "goto('" + colorValue + "');";
-    };
-    javascript.javascriptGenerator.forBlock['gotoxy'] = function(block, generator) {
-        var a = block.getFieldValue('a');
-        var b = block.getFieldValue('a');
-        return "goto('" + a + "," + b + ');";
+        return "changebg('" + colorValue + "');";
     };
 
     javascript.javascriptGenerator.forBlock['javascript_block'] = function(block, generator) {
