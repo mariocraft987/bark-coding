@@ -65,14 +65,18 @@ function betterDelay() {
 }
 
 // Function for basic movement
-function basicMove() {
+function basicMoveX(num) {
   // Move stickman to the left by about +10 in the x-direction
-  x += 5;
+  x += num;
 
-  // Prevent stickman from going beyond canvas boundaries
-  if (x <= 0) {
-    x = 0;
-  }
+  setTimeout(betterDelay, 10);
+}
+
+// Function for basic movement
+function basicMoveY(num) {
+  // Move stickman to the left by about +10 in the x-direction
+  y += num;
+
   setTimeout(betterDelay, 10);
 }
 

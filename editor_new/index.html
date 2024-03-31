@@ -209,8 +209,11 @@
         <block type="logic_ternary"></block>
       </category>
       <category name="Movement" colour="#3399ff">
-        <block type="movement_move">
-          <field name="NAME">3</field>
+        <block type="movement_move_x">
+          <field name="NUM">3</field>
+        </block>
+        <block type="movement_move_y">
+          <field name="NUM">3</field>
         </block>
         <block type="goto_mouse"></block>
         <block type="center"></block>
@@ -496,17 +499,30 @@
 };
 
       
-      Blockly.Blocks['movement_move'] = { // Moves sprite
+      Blockly.Blocks['movement_move_x'] = {
         init: function() {
-          this.jsonInit({
-            "type": "movement_move",
-            "message0": "move",
-            "previousStatement": null,
-            "nextStatement": null,
-            "colour": 230,
-            "tooltip": "",
-            "helpUrl": ""
-          });
+          this.appendValueInput("NUM")
+              .setCheck("Number")
+              .appendField("change x by");
+          this.setInputsInline(true);
+          this.setPreviousStatement(true, null);
+          this.setNextStatement(true, null);
+          this.setColour(230);
+       this.setTooltip("");
+       this.setHelpUrl("");
+        }
+      };
+      Blockly.Blocks['movement_move_y'] = {
+        init: function() {
+          this.appendValueInput("NUM")
+              .setCheck("Number")
+              .appendField("change y by");
+          this.setInputsInline(true);
+          this.setPreviousStatement(true, null);
+          this.setNextStatement(true, null);
+          this.setColour(230);
+       this.setTooltip("");
+       this.setHelpUrl("");
         }
       };
       Blockly.Blocks['goto_mouse'] = { // Moves sprite
@@ -642,10 +658,12 @@ Blockly.Blocks['fetch'] = {
     javascript.javascriptGenerator.forBlock['onstart'] = function(block, generator) {
         return "alert('run button was clicked!');";
       };
-    javascript.javascriptGenerator.forBlock['movement_move'] = function(block, generator) {
-      return "basicMove();";
+    javascript.javascriptGenerator.forBlock['movement_move_x'] = function(block, generator) {
+      return "basicMoveX(" + block.getFieldValue("NUM") + ");";
     };
-
+    javascript.javascriptGenerator.forBlock['movement_move_y'] = function(block, generator) {
+      return "basicMoveY(" + block.getFieldValue("NUM") + ");";
+    };
     javascript.javascriptGenerator.forBlock['movement_moveback'] = function(block, generator) {
       return "basicMoveBack();";
     };
