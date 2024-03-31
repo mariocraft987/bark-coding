@@ -23,7 +23,6 @@
 |`:mariocraft:`|<img src="svg/mariocraft.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:mewing:`    |<img src="svg/joke/mewing.svg" width="25" height="25">|<a href="https://github.com/nmsderp">nmsderp</a>|
 |`:moneyEyes:` |<img src="svg/moneyEyes.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
-|`:nerd:`      |<img src="svg/nerd.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:nmsderp:`   |<img src="svg/nmsderp.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:panic:`     |<img src="svg/panic.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:pride:`     |<img src="svg/pride.svg" width="25" height="25">|<a href="https://github.com/qwertyytheartist">qwertyytheartist</a>|

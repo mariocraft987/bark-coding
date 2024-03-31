@@ -31,7 +31,7 @@ function replace(text) {
         .replaceAll(/(fuck|shit|fock|cunt|cock|dick|gyat|boob|lmao|nude|porn|wank|slut|milf|dilf|yiff|yaoi|twat|tush|rape|pedo|nsfw|jizz|kike|jugg|kill|hump|tidd|2g1c|anus|tits|titt|crap)+/gim, t(4))
         .replaceAll(/(p ⭐️|⬛️ 🟧|cbt|bbc|kys|fag|cum|kys)+/gim, t(3))
         .replaceAll(/(p⭐️|⬛️🟧|69)+/gim, t(2))
-        .replaceAll(/(🤱|💦|🕳️|🤤|🍑|🥒|🍆|🖕|😩|😫|🥴|🚛|🍒|🍝|🌽|👅|🥵)+/gim, t(1))
+        .replaceAll(/(🤱|💦|🕳️|🤤|🍑|🥒|🍆|🖕|😩|😫|🥴|🚛|🍒|🍝|🌽|👅|🥵|🤓)+/gim, t(1))
         
         // emojis
         .replaceAll(":amazed:", "<img src='src/emojis/normal/svg/amazed.svg' style='margin-bottom: -7px;' alt='amazed face' width='"+ emojisize + "' height='"+ emojisize + "'>")
