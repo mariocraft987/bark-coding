@@ -202,6 +202,7 @@
         </block>
         <block type="sine_move"></block>
         <block type="sine_move2"></block>
+        <block type="sine_size"></block>
         <block type="goto_mouse"></block>
         <block type="center"></block>
         <block type="pointdir">
@@ -577,6 +578,17 @@
  this.setHelpUrl("https://en.wikipedia.org/wiki/Sine_and_cosine");
   }
 };
+      Blockly.Blocks['sine_size'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("enable sine wave size");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(230);
+ this.setTooltip("");
+ this.setHelpUrl("https://en.wikipedia.org/wiki/Sine_and_cosine");
+  }
+};
 Blockly.Blocks['sine_move2'] = {
   init: function() {
     this.appendDummyInput()
@@ -628,6 +640,9 @@ Blockly.Blocks['fetch'] = {
     };
     javascript.javascriptGenerator.forBlock['sine_move2'] = function(block, generator) {
       return "sineMove2();";
+    };
+    javascript.javascriptGenerator.forBlock['sine_size'] = function(block, generator) {
+      return "sizeOscillation();";
     };
 
     javascript.javascriptGenerator.forBlock['goto_mouse'] = function(block, generator) {
