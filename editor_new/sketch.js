@@ -125,8 +125,8 @@ function sizeOscillation() {
   let sizeFactor = 1 + 0.2 * Math.sin(angle); // Adjust the 0.2 factor for desired amplitude
 
   // Update the image size based on the calculated factor
-  imgWidth = 100 * sizeFactor; // Adjust the initial width (100) as needed
-  imgHeight = 100 * sizeFactor; // Adjust the initial height (100) as needed
+  imgWidth = 72.54920959472656 * sizeFactor; // Adjust the initial width (100) as needed
+  imgHeight = 96.26698303222656 * sizeFactor; // Adjust the initial height (100) as needed
 
   // Increment the angle to create the oscillating motion
   angle += frequency;
