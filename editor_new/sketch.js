@@ -1,6 +1,8 @@
 let img; // Declare variable to hold the image
 let x = 235; // Initial x position (centered)
 let y = 175; // Initial y position (centered)
+let imgWidth = 100; // Initial width of the image
+let imgHeight = 100; // Initial height of the image
 let bgColor = '#FFFFFF'; // Initial background color (white)
 let angle = 0; // Initial angle for sine wave movement
 const amplitude = 50; // Amplitude of the sine wave
@@ -11,10 +13,13 @@ function preload() {
   // Load the image from the URL then move
   img = loadImage('https://bark-coding.vercel.app/src/images/dog/idle.svg');
   basicMove();
+  sizeOscillation(); // Start the size oscillation
 }
+
 function toggleFullscreen() {
   console.log('uhhhhhhhhhh idk how to do this');
 }
+
 function loadImg(text) {
   // Loads the image from the URL
   img = loadImage(text);
@@ -25,6 +30,7 @@ function setup() {
   let cnv = createCanvas(480, 360);
   cnv.parent('stage-container'); // Attach the canvas to the stage container
 }
+
 function goto(X, Y) {
   x = X;
   y = Y;
@@ -34,8 +40,8 @@ function draw() {
   // Set the background color
   background(bgColor);
 
-  // Draw the image at the current position
-  image(img, x, y);
+  // Draw the image at the current position with specified width and height
+  image(img, x, y, imgWidth, imgHeight);
 
   // Display text above the image
   textSize(20);
@@ -53,7 +59,8 @@ function changebg(color) {
   bgColor = color;
   setTimeout(betterDelay, 10);
 }
-// this is not a block it is used to handle delays better
+
+// This is not a block it is used to handle delays better
 function betterDelay() {
   console.log('better delay used');
 }
@@ -69,6 +76,7 @@ function basicMove() {
   }
   setTimeout(betterDelay, 10);
 }
+
 function basicMoveBack() {
   // Move stickman to the left by about -10 in the x-direction
   x -= 5;
@@ -79,6 +87,7 @@ function basicMoveBack() {
   }
   setTimeout(betterDelay, 10);
 }
+
 function sineMove() {
   // Update the y position using sine wave movement
   y = 175 + amplitude * Math.sin(angle);
@@ -89,6 +98,7 @@ function sineMove() {
   // Set a timeout to call the function again after the delay
   setTimeout(sineMove, 10);
 }
+
 function sineMove2() {
   // Update the y position using sine wave movement
   x = 175 + amplitude * Math.sin(angle);
@@ -105,7 +115,23 @@ function gotomouse() {
   y = mouseY;
   setTimeout(betterDelay, 10);
 }
+
 function center() {
   x = 235;
   y = 175;
+}
+
+function sizeOscillation() {
+  // Calculate the oscillation size based on sine wave movement
+  let sizeFactor = 1 + 0.2 * Math.sin(angle); // Adjust the 0.2 factor for desired amplitude
+
+  // Update the image size based on the calculated factor
+  imgWidth = 100 * sizeFactor; // Adjust the initial width (100) as needed
+  imgHeight = 100 * sizeFactor; // Adjust the initial height (100) as needed
+
+  // Increment the angle to create the oscillating motion
+  angle += frequency;
+
+  // Set a timeout to call the function again after the delay
+  setTimeout(sizeOscillation, 10);
 }
