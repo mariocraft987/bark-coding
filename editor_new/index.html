@@ -48,6 +48,10 @@
       body.sounds #soundseditordiv {
         display: block;
       }
+      
+      body.extensions #extensionseditordiv {
+        display: block;
+      }
 
       #blocklyDiv * {
         transition: 0s;
@@ -157,10 +161,14 @@
         <source src="" id="src" />
       </audio>
     </div>
+    <div id="extensionseditordev">
+      <p>test</p>
+    </div>
     <div id="editortabs">
-      <button onclick="document.body.classList.add('code'); document.body.classList.remove('costumes'); document.body.classList.remove('sounds');">Code</button>
-      <button onclick="document.body.classList.remove('code'); document.body.classList.add('costumes'); document.body.classList.remove('sounds');">Costumes</button>
-      <button onclick="document.body.classList.remove('code'); document.body.classList.remove('costumes'); document.body.classList.add('sounds');">Sound</button>
+      <button onclick="document.body.classList.add('code'); document.body.classList.remove('costumes'); document.body.classList.remove('sounds'); document.body.classList.remove('extensions');">Code</button>
+      <button onclick="document.body.classList.remove('code'); document.body.classList.add('costumes'); document.body.classList.remove('sounds'); document.body.classList.remove('extensions');">Costumes</button>
+      <button onclick="document.body.classList.remove('code'); document.body.classList.remove('costumes'); document.body.classList.add('sounds'); document.body.classList.remove('extensions');">Sound</button>
+      <button onclick="document.body.classList.remove('code'); document.body.classList.remove('costumes'); document.body.classList.remove('sounds'); document.body.classList.add('extensions');">Extensions</button>
     </div>
     <div id="projectPlayer">
         <div id="projectToolbar">
