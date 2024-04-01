@@ -14,15 +14,6 @@ content += '<a href="ideas.html">ideas</a><a href="about.html">about</a><a href=
 // special april fools button ;)
 if (new Date().getMonth() === 3 && new Date().getDate() === 1) {
     content += "<a id='flip-it-afd-btn'>FLIP IT</a>";
-    document.getElementById("flip-it-afd-btn").addEventListener("click", function() {
-        document.body.classList.toggle("afd-upside-down");
-        localStorage.setItem("flip-it-afd", document.body.classList.contains("afd-upside-down"));
-    })
-    window.addEventListener("load", function() {
-        if (localStorage.getItem("flip-it-afd") == true) {
-            this.document.body.classList.add("afd-upside-down");
-        }
-    })
 }
 console.log(localStorage.getItem("myBarkUsername") != "")
 content += '<a class="dark-mode-button" id="darkModeToggle"><dmbico alt="Dark Mode"></dmbico></a><form action="search.html" style="display: contents;"><input class="searchBar" id="search" name="q" placeholder="Search for Projects"></input></form>'
