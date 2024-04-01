@@ -37,6 +37,18 @@ document.getElementById('navbar').innerHTML = content;
 if (document.url != "baseUrl") {
 document.body.innerHTML += '<footer style="background-color: rgb(0, 127, 255, 0.24); margin-top: 200px; height: 25vh; padding: 40px; text-align: center;"><p style="color: #777;">Looks like you\'ve reached the bottom.</p><p><a href="index.html">Home</a> <a href="editor_new/">Editor</a> <a href="https://github.com/mariocraft987/bark.github.io/">Source</a><br/><br/> <a href="credits.html">Credits</a> <a href="https://scratch.mit.edu/users/mariocraft987#comments">Contact</a> <a href="https://barkprogram.boards.net/">Forums</a><br/><br/> <a href="https://github.com/mariocraft987/bark.github.io/releases/download/0.0.1/barkdesktop.zip">Download</a> <a href="https://bark-org.vercel.app">Org</a></p></footer>';
 }
+
+if (new Date().getMonth() === 3 && new Date().getDate() === 1) {
+    document.getElementById("flip-it-afd-btn").addEventListener("click", function() {
+        document.body.classList.toggle("afd-upside-down");
+        localStorage.setItem("flip-it-afd", document.body.classList.contains("afd-upside-down"));
+    })
+    window.addEventListener("load", function() {
+        if (localStorage.getItem("flip-it-afd") == true) {
+            this.document.body.classList.add("afd-upside-down");
+        }
+    })
+}
     
 function whatsNew() {
     document.getElementById("boxChanger").innerHTML = "<h2>Whats New?</h2><p>"+newsBox+"</p>";
