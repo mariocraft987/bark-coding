@@ -11,6 +11,10 @@ console.log("Exit Now! This part is used for devolopers.");
 // navbar
 content = '<div class="navbar"><a href="'+baseUrl+'"><img src="src/images/Logo.svg" alt="bark" width="25" height="25" ></a><a href="https://bark-coding.vercel.app/editor_new">create</a><a href="explore.html">explore</a>'
 content += '<a href="ideas.html">ideas</a><a href="about.html">about</a><a href="https://barkprogram.boards.net/">discuss</a>'
+// special april fools button ;)
+if (new Date().getMonth() === 3 && new Date().getDate() === 1) {
+    content += "<a id='flip-it-afd-btn'>FLIP IT</a>"
+}
 console.log(localStorage.getItem("myBarkUsername") != "")
 content += '<a class="dark-mode-button" id="darkModeToggle"><dmbico alt="Dark Mode"></dmbico></a><form action="search.html" style="display: contents;"><input class="searchBar" id="search" name="q" placeholder="Search for Projects"></input></form>'
 if (localStorage.getItem("myBarkUsername") == "") {
@@ -19,6 +23,12 @@ if (localStorage.getItem("myBarkUsername") == "") {
     content += '<a href="login.html" class="right">sign in</a><a href="signup.html" class="right">join bark</a></div>'
 }
 document.getElementById('navbar').innerHTML = content;
+
+if (document.getElementById("flip-it-afd-btn") != null) {
+    document.addEventListener("click", function() {
+        document.body.classList.toggle("afd-upside-down");
+    })
+}
 
 // footer
 if (document.url != "baseUrl") {

@@ -282,3 +282,7 @@ textarea {
     overflow-x: scroll!important;
   }
 }
+
+.afd-upside-down {
+  transform: rotate(180deg);
+}
