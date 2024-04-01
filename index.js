@@ -14,7 +14,7 @@ content += '<a href="ideas.html">ideas</a><a href="about.html">about</a><a href=
 // special april fools button ;)
 if (new Date().getMonth() === 3 && new Date().getDate() === 1) {
     content += "<a id='flip-it-afd-btn'>FLIP IT</a>";
-    document.body.getElementById("flip-it-afd-btn").addEventListener("click", function() {
+    document.getElementById("flip-it-afd-btn").addEventListener("click", function() {
         document.body.classList.toggle("afd-upside-down");
         localStorage.setItem("flip-it-afd", document.body.classList.contains("afd-upside-down"));
     })
