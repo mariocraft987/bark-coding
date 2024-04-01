@@ -13,7 +13,16 @@ content = '<div class="navbar"><a href="'+baseUrl+'"><img src="src/images/Logo.s
 content += '<a href="ideas.html">ideas</a><a href="about.html">about</a><a href="https://barkprogram.boards.net/">discuss</a>'
 // special april fools button ;)
 if (new Date().getMonth() === 3 && new Date().getDate() === 1) {
-    content += "<a id='flip-it-afd-btn'>FLIP IT</a>"
+    content += "<a id='flip-it-afd-btn'>FLIP IT</a>";
+    document.body.getElementById("flip-it-afd-btn").addEventListener("click", function() {
+        document.body.classList.toggle("afd-upside-down");
+        localStorage.setItem("flip-it-afd", document.body.classList.contains("afd-upside-down"));
+    })
+    window.addEventListener("load", function() {
+        if (localStorage.getItem("flip-it-afd") == true) {
+            this.document.body.classList.add("afd-upside-down");
+        }
+    })
 }
 console.log(localStorage.getItem("myBarkUsername") != "")
 content += '<a class="dark-mode-button" id="darkModeToggle"><dmbico alt="Dark Mode"></dmbico></a><form action="search.html" style="display: contents;"><input class="searchBar" id="search" name="q" placeholder="Search for Projects"></input></form>'
@@ -23,12 +32,6 @@ if (localStorage.getItem("myBarkUsername") == "") {
     content += '<a href="login.html" class="right">sign in</a><a href="signup.html" class="right">join bark</a></div>'
 }
 document.getElementById('navbar').innerHTML = content;
-
-if (document.getElementById("flip-it-afd-btn") != null) {
-    document.addEventListener("click", function() {
-        document.body.classList.toggle("afd-upside-down");
-    })
-}
 
 // footer
 if (document.url != "baseUrl") {
