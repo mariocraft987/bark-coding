@@ -1,34 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bark - Login</title>
-<link rel="shortcut icon" href="favicon.ico" type="image/png">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="src/themes/bluedodger.css">
 </head>
 <body>
 
-<span id="navbar"></span>
-<br/>
-<br/>
-<h2 class="textCenter">Sign in</h2>
-<br/>
-<div class="textCenter">
-  <form action="#">
-    <label for="username">Username:</label>
-    <input type="username" id="username" placeholder="username" 
-    required="required"/>
-    <br/>
-    <br/>
-    <label for="password">Password:</label>
-    <input type="password" id="password" placeholder="password" 
-    required="required"/>
-    <br/>
-    <br/>
-    <input class="buttonFrBx" type="submit" value="Login"/>
+<header id="navbar"></header> <main>
+  <h1 class="text-center">Sign in</h1> <form action="/login" method="post"> <div class="form-group"> <label for="username">Username:</label>
+      <input type="text" id="username" name="username" placeholder="username" required> </div>
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="password" required>
     </div>
+    <div class="text-center">
+      <button class="buttonFrBx" type="submit">Login</button> </div>
   </form>
-  </body>
-  <script src="index.js"></script>
+</main>
+
+<script src="index.js"></script>
+</body>
 </html>
