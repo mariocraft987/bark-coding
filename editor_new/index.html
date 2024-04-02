@@ -434,6 +434,9 @@
       </category>
       <category name="More" colour="#0fbd8c">
         <block type="javascript_block"></block>
+        block type="comment">
+          <field name="TEXT">3</field>
+        </block>
         <block type="fetch"/>
       </category>
     </xml>
@@ -497,7 +500,19 @@
  this.setHelpUrl("");
   }
 };
-
+      Blockly.Blocks['movement_move_x'] = {
+        init: function() {
+          this.appendValueInput("TEXT")
+              .setCheck("Text")
+              .appendField("// ");
+          this.setInputsInline(true);
+          this.setPreviousStatement(true, null);
+          this.setNextStatement(true, null);
+          this.setColour(150);
+       this.setTooltip("");
+       this.setHelpUrl("");
+        }
+      };
       
       Blockly.Blocks['movement_move_x'] = {
         init: function() {
