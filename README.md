@@ -21,9 +21,8 @@ Bark has many features that our competitors don't, including:
 
 # Contribution
 Please read our <a href="https://github.com/mariocraft987/bark.github.io/blob/main/CONTRIBUTING.md">contribution guidelines</a> before contributing.
-**Thanks** To our **contributors!**
-To be a part of Bark's development, please comment `Job Register 4067` <a href="https://github.com/Mariocraft987/bark.github.io/commit/5644df6ebc5aa7ea7b611141a265ff7c17712c5e">here.</a>.
-
+To be a part of Bark's development, please choose a job from <a href="https://github.com/mariocraft987/bark.github.io/blob/main/CONTRIBUTING.md">`JOBS.md`</a> and follow the instructions to apply.
+## Staff/Contributors
 [<img src="https://avatars.githubusercontent.com/u/154646419?v=4" alt="mariocraft" title="mariocraft" width="70" height="70" style="border-radius:100%">](https://github.com/mariocraft987)
 [<img src="https://avatars.githubusercontent.com/u/130254323?v=4" alt="nmsderp" title="nmsderp" width="70" height="70" style="border-radius:100%">](https://github.com/nmsderp)
 [<img src="https://avatars.githubusercontent.com/u/129226914?v=4" alt="qwertyy" title="qwertyy" width="70" height="70" style="border-radius:100%">](https://github.com/qwertyy-dev)
@@ -35,7 +34,7 @@ To be a part of Bark's development, please comment `Job Register 4067` <a href="
 <hr>
 
 ## How do I add blocks?
-Go to `blockAdding.md` and follow the steps, but, if your lazy and want one of us to do it, go to `dev/blockrequests.md`, edit it with your block requests, then make a pull request! if the requests are good, we'll merge!
+Go to <a href="https://github.com/mariocraft987/bark.github.io/blob/main/blockAdding.md">`blockAdding.md`</a> and follow the steps, but, if your lazy and want one of us to do it, make a discussion!
 
 # License
 
