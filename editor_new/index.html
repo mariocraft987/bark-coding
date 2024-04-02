@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Bark Blockly Editor</title>
+    <title>Bark Editor</title>
     <link rel="shortcut icon" href="https://bark-coding.vercel.app/favicon.ico">
     <script src="https://unpkg.com/blockly/blockly.min.js"></script>
     <script src="https://bark-coding.vercel.app/editor_new/p5.min.js"></script>
@@ -157,7 +157,7 @@
                                   <!-- Sounds Tab -->
     <div id="soundseditordiv" class="tabpage">
       <h1>Upload sound</h1>
-      <input type="file" id="upload" />
+      <input type="file" id="upload" accept="audio/*">
       <br/>
       <audio controls>
       <audio id="audio" controls>
@@ -183,8 +183,7 @@
         </div>
         <div id="stage-container"></div>
     </div>
-    <div id="sprites" style="position: absolute; right: 0%; bottom: 0%; width: 480px; height: calc(100% - 440px);">The bark editor is not finished <b>yet</b>,
-    please be patient.
+    <div id="sprites" style="position: absolute; right: 0%; bottom: 0%; width: 480px; height: calc(100% - 440px);">The Bark editor is not finished yet. Please be patient.
 
     <!-- Toolbox Definition -->
     <xml
