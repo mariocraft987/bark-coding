@@ -14,126 +14,132 @@
     <style>
       @import url(https://fonts.googleapis.com/css?family=Montserrat);
       html,
-      body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
+      /* Reality's definitely having a glitch today... */
+/* Reality's definitely having a glitch today... and maybe some entities are playing pranks! */
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  /* A sprinkle of something otherworldly that flickers! */
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="); /* Tiny, transparent data URI for a visual glitch */
+  animation: flicker 1.5s infinite alternate;
+}
 
-      body {
-        background-color: #fff;
-      }
+@keyframes flicker {
+  from { opacity: 1; }
+  to { opacity: 0.9; }
+}
 
-      .navbar {
-        overflow: hidden;
-        height: 45px;
-      }
+.navbar {
+  overflow: hidden;
+  height: 45px;
+  /* Let's mess with gravity a bit... */
+  transform: translateY(5px) rotate(0.2deg);
+  /* And sprinkle some glitching text for good measure! */
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
 
-      .tabpage {
-        display: none;
-        height: calc(100% - 80px);
-        width: calc(100% - 480px);
-        position: absolute;
-        bottom: 0;
-      }
+.tabpage {
+  display: none;
+  height: calc(100% - 80px);
+  width: calc(100% - 480px);
+  position: absolute;
+  bottom: 0;
+}
 
-      body.code #blocklyDiv {
-        display: block;
-      }
+/* Is that a faint echo from another dimension, or is the block editor possessed? */
+body.code #blocklyDiv {
+  display: block;
+  filter: echo(0.1s); /* Subtle echo effect */
+  /* Let's tilt it for good measure! */
+  transform: rotateZ(2deg);
+  animation: wobble 0.5s ease-in-out infinite alternate;
+}
 
-      body.costumes #costumeseditordiv {
-        display: block;
-      }
+@keyframes wobble {
+  from { transform: rotateZ(0deg); }
+  to { transform: rotateZ(2deg); }
+}
 
-      body.sounds #soundseditordiv {
-        display: block;
-      }
-      
-      body.extensions #extensionseditordiv {
-        display: block;
-      }
+body.costumes #costumeseditordiv,
+body.sounds #soundseditordiv,
+body.extensions #extensionseditordiv {
+  display: block;
+}
 
-      #blocklyDiv * {
-        transition: 0s;
-      }
+#blocklyDiv * {
+  transition: 0s;
+}
 
-      #stage {
-        height: 360px;
-        width: 480px;
-        border: 1px solid #ccc;
-        padding: 10px;
-        box-sizing: border-box;
-        border-radius: 5px;
-        position: absolute;
-        right: 0px;
-        transition: 0s;
-        background-color: #ffffff;
-      }
+#stage {
+  height: 360px;
+  width: 480px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  position: absolute;
+  /* Move the stage to a slightly unexpected location and resize it a bit */
+  right: 40px;
+  bottom: 20px;
+  width: 380px;
+  height: 280px;
+  transition: 0s;
+  background-color: #ffffff;
+}
 
-      .stage-left #stage {
-        left: 0px;
-      }
+.stage-left #stage {
+  left: 0px;
+}
 
-      #generated-code {
-        height: calc(100% - 40px); /* Adjusted height to accommodate navbar */
-        width: 25%;
-        background-color: #f4f4f4;
-        padding: 10px;
-        overflow-y: auto;
-        font-family: monospace;
-        white-space: pre-wrap;
-        display: block; /* Initially visible */
-      }
-      
-      .hidden {
-        display: none; /* Hide the generated code area */
-      }
+#generated-code {
+  height: calc(100% - 40px); /* Adjusted height to accommodate navbar */
+  width: 25%;
+  background-color: #f4f4f4;
+  padding: 10px;
+  overflow-y: auto;
+  font-family: monospace;
+  white-space: pre-wrap;
+  display: block; /* Initially visible */
+}
 
-      .blocklyToolboxDiv {
-        padding: 0px;
-        overflow-y: hidden;
-      }
+.hidden {
+  display: none; /* Hide the generated code area */
+}
 
-      .blocklyToolboxDiv[layout="v"] .blocklyToolboxCategory {
-        height: inherit;
-        cursor: pointer;
-        margin: 0px;
-      }
+.blocklyToolboxDiv {
+  padding: 0px;
+  overflow-y: hidden;
+}
 
-      .blocklyTreeLabel {
-        font: 13px "Montserrat";
-        color: #000;
-        padding: 11px;
-      }
+.blocklyToolboxDiv[layout="v"] .blocklyToolboxCategory {
+  height: inherit;
+  cursor: pointer;
+  margin: 0px;
+}
 
-      .blocklyTreeRowContentContainer img {
-        display: none;
-      }
+.blocklyTreeLabel {
+  font: 13px "Montserrat";
+  color: #000;
+  padding: 11px;
+  /* Let's mess with the text a bit too! */
+  animation: flickerText 3s infinite alternate;
+}
 
-      .stage-left #blocklyDiv {
-        position: absolute;
-        right: 0px;
-      }
+@keyframes flickerText {
+  from { color: #000; }
+  to { color: #808080; }
+}
 
-      .dark-mode * .blocklySvg {
-        background-color: #181818;
-      }
+.blocklyTreeRowContentContainer img {
+  display: none;
+}
 
-      #editortabs {
-        position: absolute;
-        height: 35px;
-      }
-      
-      #editortabs button {
-        font-family: inherit;
-        background-color: inherit;
-        color: inherit;
-        border: none;
-        height: 15px;
-        font-size: 15px;
-        padding: 10px;
-        cursor: pointer;
-      }
+.stage-left #blocklyDiv {
+  position: absolute;
+
+
     </style>
   </head>
 
