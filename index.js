@@ -10,7 +10,7 @@ console.log("Exit Now! This part is used for devolopers.");
 
 // navbar
 content = '<div class="navbar"><a href="'+baseUrl+'"><img src="src/images/Logo.svg" alt="bark" width="25" height="25" ></a><a href="https://bark-coding.vercel.app/editor_new">create</a><a href="explore.html">explore</a>'
-content += '<a href="ideas.html">ideas</a><a href="about.html">about</a><a href="https://barkprogram.boards.net/">discuss</a>'
+content += '<a href="ideas.html">ideas</a><a href="about.html">about</a><a href="https://github.com/mariocraft987/bark.github.io/discussions">discuss</a>'
 // special april fools button ;)
 if (new Date().getMonth() === 3 && new Date().getDate() === 1) {
     content += "<a id='flip-it-afd-btn'>FLIP IT</a>";
