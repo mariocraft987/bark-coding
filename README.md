@@ -2,6 +2,12 @@
 ![Static Badge](https://img.shields.io/badge/made%20using-blockly-yellow?style=for-the-badge&logo=google&logoColor=yellow)
 ![Static Badge](https://img.shields.io/badge/latest%20release-0.1.6-green?style=for-the-badge&logo=electron&logoColor=green)
 
+# We're hiring QA's!
+Comment "I would like to be a QA!" <a href="https://github.com/Mariocraft987/bark.github.io/commit/5644df6ebc5aa7ea7b611141a265ff7c17712c5e">here</a> if you would like to get a job at Bark.<br>
+## Requirements:
+- Must know how to open an issue
+- Please make sure you don't make a duplicate issue
+
 # Description
 Bark is a website that makes programming easy, so users of any age can create and share games, animations, and everything else! &#128054;<br>
 Bark has many features that <a href="https://scratch.mit.edu">Scratch(the inspiration for this project)</a> does not, including:
@@ -21,7 +27,7 @@ Bark has many features that <a href="https://scratch.mit.edu">Scratch(the inspir
 # Contribution
 Please read our <a href="https://github.com/mariocraft987/bark.github.io/blob/main/CONTRIBUTING.md">contribution guidelines</a> before contributing.
 **Thanks** To our **contributors!**
-To be a part of Bark's development, please comment `Job Register 4067` on <a href="https://github.com/Mariocraft987/bark.github.io/commit/5644df6ebc5aa7ea7b611141a265ff7c17712c5e">here.</a>.
+To be a part of Bark's development, please comment `Job Register 4067` <a href="https://github.com/Mariocraft987/bark.github.io/commit/5644df6ebc5aa7ea7b611141a265ff7c17712c5e">here.</a>.
 
 [<img src="https://avatars.githubusercontent.com/u/154646419?v=4" alt="mariocraft" title="mariocraft" width="70" height="70" style="border-radius:100%">](https://github.com/mariocraft987)
 [<img src="https://avatars.githubusercontent.com/u/130254323?v=4" alt="nmsderp" title="nmsderp" width="70" height="70" style="border-radius:100%">](https://github.com/nmsderp)
