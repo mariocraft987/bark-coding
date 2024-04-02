@@ -1,12 +1,18 @@
 ![Logo](https://raw.githubusercontent.com/mariocraft987/bark.github.io/main/src/images/Bark.svg)<br>
 ![Static Badge](https://img.shields.io/badge/made%20using-blockly-yellow?style=for-the-badge&logo=google&logoColor=yellow)
+![Static Badge](https://img.shields.io/badge/also_made_using-html_%26_css-orange?style=for-the-badge&logo=html5&logoColor=orange&)
 ![Static Badge](https://img.shields.io/badge/latest%20release-0.1.6-green?style=for-the-badge&logo=electron&logoColor=green)
 
 # We're hiring QA's!
-Comment "I would like to be a QA!" <a href="https://github.com/Mariocraft987/bark.github.io/commit/5644df6ebc5aa7ea7b611141a265ff7c17712c5e">here</a> if you would like to get a job at Bark.<br>
+Comment "I would like to be a QA!" <a href="https://github.com/Mariocraft987/bark.github.io/commit/5644df6ebc5aa7ea7b611141a265ff7c17712c5e">here</a> if you would like to get a job as a QA at Bark.<br>
 ## Requirements:
 - Must know how to open an issue
 - Please make sure you don't make a duplicate issue
+# We're Also hiring A/B Testers!
+Comment "I would like to be a A/B tester!" <a href="https://github.com/Mariocraft987/bark.github.io/commit/5644df6ebc5aa7ea7b611141a265ff7c17712c5e">here</a> if you would like to get a job as a AB tester at Bark.<br>
+## Requirements:
+- Must know how to open an issue, pull request and create a fork
+- Please make sure you don't make a duplicate pr or issue.
 
 # Description
 Bark is a website that makes programming easy, so users of any age can create and share games, animations, and everything else! &#128054;<br>
