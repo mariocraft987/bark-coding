@@ -1,4 +1,4 @@
-/* Some basic scripts created in javascript to work the website, and make it interactive. */
+/* Some common scripts created in javascript to work the website, and make it interactive. */
 
 let newsBox = "Try our new (alpha? beta?) <a href='https://github.com/mariocraft987/bark.github.io/releases/tag/0.16'>desktop app</a>, it is missing a lot of functionality, but you can still do stuff, created by <a href='https://github.com/nmsderp'>nmsderp</a>."
 let baseUrl = "https://bark-coding.vercel.app"
@@ -79,7 +79,7 @@ function randomTxt() {
     "Go check out Goldot", "Svelte is html but enchanted", ":dog::cat::banana:", "Come see our <a href='https://github.com/Bark-programming' class='link' >orginization</a>", "e",
     "See barks todo list <a href='https://bark-coding.vercel.app/static/todolist.txt' class='link'>here</a>", "The bark editor is made with Blockly", ":troll:", "the best emoji is :mewing:",
     ":woof:", "I'm a random text!", "Take care of us, we'll do it back, plant us and we'll produce", "3.1415926535", "Funact: The 1k commit for Bark is named 'pi🥧'",
-    "No bad words!"];
+    "No bad words!", "Funfact: Bark is also contributed from the owners of <a href='https://snail-ide.com' class='link'>Snail-IDE</a>", "Be sure to look out for spelling errors ;)"];
 
     wrd = (arr[(Math.floor(Math.random() * arr.length))]);
     document.getElementById("randomWord").innerHTML = wrd;
@@ -139,7 +139,4 @@ function jobRegister() {
 
 whatsNew();
 
-if (document.URL.includes("https://mariocraft987.github.io/bark.github.io/")) {
-    location.href = baseUrl;
-}
 
