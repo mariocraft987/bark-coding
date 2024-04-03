@@ -34,7 +34,7 @@ To be a part of Bark's development, please choose a job from <a href="https://gi
 <hr>
 
 ## How do I add blocks?
-Go to <a href="https://github.com/mariocraft987/bark.github.io/blob/main/blockAdding.md">`blockAdding.md`</a> and follow the steps, but, if your lazy and want one of us to do it, make a discussion!
+Go to <a href="https://github.com/mariocraft987/bark.github.io/blob/main/blockAdding.md">`blockAdding.md`</a> and follow the steps, but, if you'r lazy and want one of us to do it, make a discussion!
 
 # License
 
