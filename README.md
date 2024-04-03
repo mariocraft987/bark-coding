@@ -1,5 +1,5 @@
 ![Logo](https://raw.githubusercontent.com/mariocraft987/bark.github.io/main/src/images/Bark.svg)<br>
-![Static Badge](https://img.shields.io/badge/made%20using-blockly-yellow?style=for-the-badge&logo=google&logoColor=yellow)
+![Static Badge](https://img.shields.io/badge/engine%20by-blockly-yellow?style=for-the-badge&logo=google&logoColor=yellow)
 ![Static Badge](https://img.shields.io/badge/also_made_using-html_%26_js-orange?style=for-the-badge&logo=html5&logoColor=orange&)
 ![Static Badge](https://img.shields.io/badge/latest%20release-0.1.6-green?style=for-the-badge&logo=electron&logoColor=green)
 
