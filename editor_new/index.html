@@ -825,12 +825,12 @@ Blockly.Blocks['fetch'] = {
           var reader = new FileReader();
           reader.onload = function(){
             var audio = new Audio();
-            audio.src = URL.createObjectURL(file);
+            audio.src = URL.createObjectURL(input);
             audio.controls = true;
             document.getElementById("audiofilelist").append(audio);
           };
           reader.readAsDataURL(input);
-	      };
+	};
       
     </script>
   </body>
