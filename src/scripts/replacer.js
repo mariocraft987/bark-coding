@@ -1,4 +1,4 @@
-/* Basicly replaces text */
+/* Basicly replaces text. Script from Penguinmod */
 const token = "█";
 const emojisize = 25;
 
