@@ -42,7 +42,7 @@ if (new Date().getMonth() === 3 && new Date().getDate() === 1) {
 }
     
 function whatsNew() {
-    if (document.URL = baseUrl) {
+    if (document.URL == baseUrl+"/") {
     document.getElementById("boxChanger").innerHTML = "<h2>Whats New?</h2><p>"+newsBox+"</p>";
     }
 }
