@@ -823,14 +823,14 @@ Blockly.Blocks['fetch'] = {
         var openAudioFile = function(file) {
           var input = file.target.files[0];
           var reader = new FileReader();
-            reader.onload = function(){
-              var audio = new Audio();
-					    audio.src = URL.createObjectURL(file);
-              audio.controls = true;
-              document.getElementById("audiofilelist").append(audio);
+          reader.onload = function(){
+            var audio = new Audio();
+            audio.src = URL.createObjectURL(file);
+            audio.controls = true;
+            document.getElementById("audiofilelist").append(audio);
           };
-            reader.readAsDataURL(input.files[0]);
-	};
+          reader.readAsDataURL(input);
+	      };
       
     </script>
   </body>
