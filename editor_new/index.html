@@ -159,10 +159,7 @@
       <h1>Upload sound</h1>
       <input type="file" id="upload" accept="audio/*">
       <br/>
-      <audio controls>
-      <audio id="audio" controls>
-        <source src="" id="src" />
-      </audio>
+      <div id="audiofilelist"></div>
     </div>
                                   <!-- Extensions Tab -->
         
@@ -819,6 +816,18 @@ Blockly.Blocks['fetch'] = {
           var output = document.getElementById('costume');
             loadImg(dataURL)
           output.src = dataURL;
+          };
+            reader.readAsDataURL(input.files[0]);
+        };
+
+        var openAudioFile = function(file) {
+          var input = file.target.files[0];
+          var reader = new FileReader();
+            reader.onload = function(){
+              var audio = new Audio();
+					    audio.src = URL.createObjectURL(file);
+              audio.controls = true;
+              document.getElementById("audiofilelist").append(audio);
           };
             reader.readAsDataURL(input.files[0]);
         };
