@@ -830,16 +830,7 @@ Blockly.Blocks['fetch'] = {
               document.getElementById("audiofilelist").append(audio);
           };
             reader.readAsDataURL(input.files[0]);
-        };
-
-          // Script from Stack Overflow
-    function handleFiles(event) {
-      var files = event.target.files;
-        $("#src").attr("src", URL.createObjectURL(files[0]));
-        document.getElementById("audio").load();
-      }
-
-    document.getElementById("upload").addEventListener("change", handleFiles, false);
+	};
       
     </script>
   </body>
