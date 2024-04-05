@@ -73,10 +73,9 @@ fetch('https://bark-coding.vercel.app/src/scripts/tips.json')
     .then(res => res.json()).then(data => {
     obj = data;})
   .then(() => {
-      let wrd = obj
+      wrd = obj[parseInt(Math.random() * wrd.length)]
    });
 
-    wrd = values[parseInt(Math.random() * wrd.length)]
     document.getElementById("randomWord").innerHTML = wrd;
 }
 
