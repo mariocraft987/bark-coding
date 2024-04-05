@@ -68,15 +68,16 @@ function recentCom() {
 
 function randomTxt() {
     //geeksforgeeks.org for the random text generator.
-    
+
+    if (document.URL == baseUrl+"/explore.html") {
 fetch('https://bark-coding.vercel.app/src/scripts/tips.json')
     .then(res => res.json()).then(data => {
     obj = data;})
   .then(() => {
       wrd = obj[parseInt(Math.random() * obj.length)]
    });
-
     document.getElementById("randomWord").innerHTML = wrd;
+    }
 }
 
 function Signup() {
