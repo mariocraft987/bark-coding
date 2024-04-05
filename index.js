@@ -15,7 +15,6 @@ content += '<a href="ideas.html">ideas</a><a href="about.html">about</a><a href=
 if (new Date().getMonth() === 3 && new Date().getDate() === 1) {
     content += "<a id='flip-it-afd-btn'>FLIP IT</a>";
 }
-console.log(localStorage.getItem("myBarkUsername") != "")
 content += '<a class="dark-mode-button" id="darkModeToggle"><dmbico alt="Dark Mode"></dmbico></a><form action="search.html" style="display: contents;"><input class="searchBar" id="search" name="q" placeholder="Search for Projects"></input></form>'
 if (localStorage.getItem("myBarkUsername") == "") {
     content += '<a class="right">sign out</a><a class="right">profile</a>'
@@ -70,6 +69,7 @@ function randomTxt() {
     //geeksforgeeks.org for the random text generator.
 
     if (document.URL == baseUrl+"/explore.html") {
+        
 fetch('https://bark-coding.vercel.app/src/scripts/tips.json')
     .then(res => res.json()).then(data => {
     obj = data;})
@@ -77,6 +77,7 @@ fetch('https://bark-coding.vercel.app/src/scripts/tips.json')
       wrd = obj[parseInt(Math.random() * obj.length)]
    });
     document.getElementById("randomWord").innerHTML = wrd;
+        
     }
 }
 
