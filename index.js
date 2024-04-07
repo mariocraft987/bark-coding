@@ -1,6 +1,6 @@
 /* Some common scripts created in javascript to work the website, and make it interactive. */
 
-let newsBox = "Come to Bark's new <a href='https://discord.gg/FUJMHwWY' target="_blank">Discord Server!</a> set up by <a href='https://github.com/mariocraft987'>mariocraft987</a>"
+let newsBox = "Come to Bark's new <a href='https://discord.gg/FUJMHwWY'>Discord Server!</a> set up by <a href='https://github.com/mariocraft987'>mariocraft987</a>"
 let baseUrl = "https://bark-coding.vercel.app"
 let commitsLength = 150
 
