@@ -1,0 +1,89 @@
+/* Import font (optional) */
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+/* Solar Eclipse Theme */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #000; /* Deep space for the night sky */
+  color: #fff; /* White text for readability */
+  font-weight: 500;
+  margin: 0;
+}
+
+.dark-mode { /* Remove this class if not needed */
+  background-color: #000; /* Same as body for consistency */
+  color: #fff;
+}
+
+/* Specific elements with solar eclipse references */
+.sun { /* If applicable to your design */
+  background-color: #ffff00; /* Bright yellow for the uneclipsed sun */
+  border-radius: 50%; /* Make it a circle */
+}
+
+.corona { /* If applicable to your design */
+  background: radial-gradient(circle at center, #f5f5f5 0%, #ffa500 70%); /* Faint white to fiery orange for the corona */
+}
+
+/* Links and text formatting */
+a {
+  color: dodgerblue; /* Adjust to a more eclipse-like color? */
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.link:active {
+  text-decoration: underline;
+}
+
+/* Maintain existing styles and add dark mode support for inputs and selects */
+* {
+  transition: 0.1s;
+}
+
+input {
+  padding: 5px;
+  border-radius: 10px;
+  border-color: #a3a3a3;
+  border-style: solid;
+  border-width: 1px;
+}
+
+*:focus {
+  outline: none;
+}
+
+code {
+  font-family: monospace;
+  background-color: #e6e6e6;
+  border-radius: 4px;
+  color: #000000;
+}
+
+*:dark-mode input {
+  background-color: #000000;
+  color: white;
+}
+
+*:dark-mode select {
+  background-color: #000000;
+  color: white;
+}
+
+/* Other styles (boxes, buttons, etc.) can be reviewed and adjusted for solar eclipse theme */
+
+/* Mobile styles (optional) */
+@media (pointer: coarse) {
+  .box {
+    width: calc(100vw - 60px)!important;
+    margin-left: 15px!important;
+    padding: 16px 15px!important;
+  }
+
+  .navbar {
+    overflow-x: scroll!important;
+  }
+}
