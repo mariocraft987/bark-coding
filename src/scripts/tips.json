@@ -1,6 +1,6 @@
 [
   "Bark! woof!",
-  "Bark is a mod of scratch with new extensions",
+  "Bark is a mod of blockly with new features",
   "Scratch dog",
   "Bark is being created, so stay patient!!",
   "Note: Bark does not support accounts yet",
@@ -13,7 +13,7 @@
   "Wanna help create bark? go <a href='Jobs.html' class='link'>Here</a>",
   "Bark's birthday month is October",
   "Why not go <a href='https://www.scratchfoundation.org/donate' class='link'>donate</a> to scratch?",
-  "Go check out snail-ide!",
+  "Go check out Snail-IDE!",
   "This text has a 0.07 chance of apearing",
   "So <em>many</em> breeds of dogs",
   "Check out our <a href='https://github.com/mariocraft987/bark.github.io/' class='link'>github</a>",
@@ -36,5 +36,8 @@
   "No bad words!",
   "Funfact: Bark is also contributed from the owners of <a href='https://snail-ide.com' class='link'>Snail-IDE</a>",
   "Be sure to look out for spelling errors ;)"
-  "Tip: when someone asks to f4f with you then say: 'Ok, now give me my Follow 4 Free!'"
+  "Tip: when someone asks to f4f with you then say: 'Ok, now give me my Follow 4 Free!'",
+  "#weneedascratchdog",
+  "I hate long deployments",
+  "Bark now has a working editor!"
 ]
