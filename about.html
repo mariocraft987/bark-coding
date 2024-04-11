@@ -29,7 +29,7 @@
     .then(res => res.json()).then(data => {
     obj = data;})
   .then(() => {
-      document.getElementById('version').innerHTML = obj.version;
+      document.getElementById('version').innerHTML = "Current version: "+obj.version;
    });
     </script>
     <script src="index.js"></script>
