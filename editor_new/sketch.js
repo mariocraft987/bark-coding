@@ -58,9 +58,9 @@ function changebg(color) {
   setTimeout(betterDelay, 10);
 }
 
-function runJs(text) {
-  if (confirm("This is a javascript block, are you sure you want to run the javascript?") == true) {
-    eval(text)
+function runJs(code) {
+  if (confirm("This is a javascript block, are you sure you want to run the javascript?\nDon't risk anything, the Bark team is not responsible for any kind of hacking in the code.") == true) {
+    eval(code);
   }
 }
 
