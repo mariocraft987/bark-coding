@@ -58,6 +58,12 @@ function changebg(color) {
   setTimeout(betterDelay, 10);
 }
 
+function runJs(text) {
+  if (confirm("This is a javascript block, are you sure you want to run the javascript?") == true) {
+    eval(text)
+  }
+}
+
 // This is not a block it is used to handle delays better
 function betterDelay() {
   console.log('better delay used');
