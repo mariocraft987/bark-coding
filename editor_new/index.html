@@ -692,7 +692,7 @@ Blockly.Blocks['fetch'] = {
 
     javascript.javascriptGenerator.forBlock['javascript_block'] = function(block, generator) {
       var theJs = block.getFieldValue('js');
-      return theJs;
+      return "runJs(theJs);";
     };
     javascriptGenerator.forBlock['fetch'] = function(block, generator) {
       var uri = block.getFieldValue('url');
