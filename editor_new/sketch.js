@@ -58,12 +58,6 @@ function changebg(color) {
   setTimeout(betterDelay, 10);
 }
 
-function runJs(code) {
-  if (confirm("This is a javascript block, are you sure you want to run the javascript?\nDon't risk anything, the Bark team is not responsible for any kind of hacking in the code.") == true) {
-    eval(code);
-  }
-}
-
 // This is not a block it is used to handle delays better
 function betterDelay() {
   console.log('better delay used');
