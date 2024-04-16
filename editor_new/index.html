@@ -646,11 +646,11 @@ Blockly.Blocks['sine_move2'] = {
   init: function() {
     this.appendValueInput("message")
         .setCheck("String")
-        .appendField("alert message");
+        .appendField("alert");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(315);
-    this.setTooltip("Alert message");
+    this.setTooltip("Alert message to user");
     this.setHelpUrl("");
   }
 };
@@ -661,7 +661,7 @@ Blockly.Blocks['sine_move2'] = {
         .appendField("confirm");
     this.setOutput(true, "Boolean");
     this.setColour(315);
- this.setTooltip("");
+ this.setTooltip("Let user comfirm if a message is true");
  this.setHelpUrl("");
   }
 };
@@ -672,7 +672,7 @@ Blockly.Blocks['sine_move2'] = {
         .appendField("prompt");
     this.setOutput(true, "String");
     this.setColour(315);
- this.setTooltip("");
+ this.setTooltip("Make the user answer a query");
  this.setHelpUrl("");
   }
 };
