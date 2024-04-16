@@ -436,8 +436,14 @@
           </value>
         </block>
       </category>
-      <category name="Custom" colour="#0fbd8c">
-        <block type="javascript_block"></block>
+      <category name="Advanced" colour="#0fbd8c">
+        <block type="alert_block"></block>
+          <field name="TEXT">3</field>
+        </block>
+				<block type="confirm_block"></block>
+          <field name="TEXT">3</field>
+        </block>
+				<block type="prompt_block"></block>
           <field name="TEXT">3</field>
         </block>
         <block type="fetch"/>
@@ -636,18 +642,41 @@ Blockly.Blocks['sine_move2'] = {
   }
 };
       
-      Blockly.Blocks['javascript_block'] = {
+      Blockly.Blocks['alert_block'] = {
   init: function() {
-    this.appendValueInput("js")
+    this.appendValueInput("message")
         .setCheck("String")
-        .appendField("run js");
+        .appendField("alert message");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(315);
-    this.setTooltip("Runs Vanilla Javascript.");
+    this.setTooltip("Alert message");
     this.setHelpUrl("");
   }
 };
+			Blockly.Blocks['confirm_block'] = {
+  init: function() {
+    this.appendValueInput("message")
+        .setCheck("String")
+        .appendField("confirm");
+    this.setOutput(true, "Boolean");
+    this.setColour(230);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+			Blockly.Blocks['prompt_block'] = {
+  init: function() {
+    this.appendValueInput("message")
+        .setCheck(null)
+        .appendField("confirm");
+    this.setOutput(true, "String");
+    this.setColour(230);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+			
 Blockly.Blocks['fetch'] = {
   init: function() {
     this.appendValueInput("url")
@@ -690,10 +719,19 @@ Blockly.Blocks['fetch'] = {
         return "changebg('" + colorValue + "');";
     };
 
-    javascript.javascriptGenerator.forBlock['javascript_block'] = function(block, generator) {
-      var code = block.getFieldValue('js');
-      return "runJs('" + code + "');";
+    javascript.javascriptGenerator.forBlock['alert_block'] = function(block, generator) {
+      var message = block.getFieldValue('message');
+      return "alert('" + message + "');";
     };
+		javascript.javascriptGenerator.forBlock['confirm_block'] = function(block, generator) {
+      var message = block.getFieldValue('message');
+      return "confirm('" + message + "');";
+    };
+		javascript.javascriptGenerator.forBlock['prompt_block'] = function(block, generator) {
+      var message = block.getFieldValue('message');
+      return "prompt('" + message + "');";
+    };
+			
     javascriptGenerator.forBlock['fetch'] = function(block, generator) {
       var uri = block.getFieldValue('url');
       var handleFunction = generator.variableDB_.getDistinctName('handlefetch', Blockly.Variables.NAME_TYPE);
