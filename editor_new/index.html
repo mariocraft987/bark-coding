@@ -597,19 +597,19 @@
 };
 
       
-      Blockly.Blocks['pointdir'] = {
-        init: function() {
-          this.appendValueInput("NAME")
-              .setCheck(null)
-              .appendField("point in direction")
-              .appendField(new Blockly.FieldAngle(90), "NAME");
-          this.setPreviousStatement(true, null);
-          this.setNextStatement(true, null);
-          this.setColour(230);
-       this.setTooltip("");
-       this.setHelpUrl("");
-        }
-      };
+Blockly.Blocks['pointdir'] = {
+  init: function() {
+    this.appendEndRowInput()
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField("point in direction")
+        .appendField(new Blockly.FieldAngle(90), "NAME");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(230);
+ this.setTooltip("Cool new block!");
+ this.setHelpUrl("");
+  }
+};
       Blockly.Blocks['sine_move'] = {
   init: function() {
     this.appendDummyInput()
