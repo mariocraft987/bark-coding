@@ -1,10 +1,11 @@
 ![Logo](https://raw.githubusercontent.com/mariocraft987/bark.github.io/main/src/images/Bark.svg)<br>
-![Static Badge](https://img.shields.io/badge/engine%20by-blockly-yellow?style=for-the-badge&logo=google&logoColor=yellow)
+![Static Badge](https://img.shields.io/badge/engine%20by-blockly-yellow?style=for-the-badge&logo=google&logoColor=yellow)
+
 ![Static Badge](https://img.shields.io/badge/latest%20release-0.1.6-green?style=for-the-badge&logo=electron&logoColor=green)
 
 # Description
 Bark is a website that makes programming easy, so users of any age can create and share games, animations, and everything else! &#128054;<br>
-Bark has many features that our competitors don't, including:
+Bark has many features, including:
 - Dark mode
 - Custom stage size&ast;
 - Customize editor layout&ast;
