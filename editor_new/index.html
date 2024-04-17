@@ -448,6 +448,7 @@
         <block type="fetch"/>
       </category>
       <category name="Custom" colour="#abe645">
+	<block type="create_elm"></block>
       </category>
     </xml>
 
@@ -563,6 +564,18 @@
           });
         }
       };
+	    Blockly.Blocks['create_elm'] = {
+  init: function() {
+    this.appendEndRowInput()
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField("create element");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(0);
+ this.setTooltip("test");
+ this.setHelpUrl("");
+  }
+};
       
 
             Blockly.Blocks['movement_moveback'] = { // Moves sprite back
