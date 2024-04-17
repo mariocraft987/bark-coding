@@ -472,7 +472,7 @@
       Blockly.Blocks['change_costume'] = {
         init: function() {
           this.appendValueInput("NAME")
-              .setCheck("Text")
+              .setCheck("String")
               .appendField("switch costume to");
           this.setInputsInline(true);
           this.setPreviousStatement(true, null);
@@ -483,7 +483,7 @@
         }
       };
       
-            Blockly.Blocks['next_costume'] = { // Moved this block outside the previous block
+            Blockly.Blocks['next_costume'] = {
         init: function() {
           this.jsonInit({
             "type": "next_costume",
@@ -491,7 +491,7 @@
             "previousStatement": null,
             "nextStatement": null,
             "colour": 260,
-            "tooltip": "",
+            "tooltip": "Switches to the next costume",
             "helpUrl": ""
           });
         }
