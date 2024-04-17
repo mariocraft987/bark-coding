@@ -469,17 +469,17 @@
         eval(code); // Evaluate generated code
       }
 
-      Blockly.Blocks['change_costume'] = { // Changes costume to a specific one
+      Blockly.Blocks['change_costume'] = {
         init: function() {
-          this.jsonInit({
-            "type": "change_costume",
-            "message0": "switch costume",
-            "previousStatement": null,
-            "nextStatement": null,
-            "colour": 260,
-            "tooltip": "",
-            "helpUrl": ""
-          });
+          this.appendValueInput("NAME")
+              .setCheck("Text")
+              .appendField("switch costume to");
+          this.setInputsInline(true);
+          this.setPreviousStatement(true, null);
+          this.setNextStatement(true, null);
+          this.setColour(260);
+       this.setTooltip("Changes the costume to a specific one.");
+       this.setHelpUrl("");
         }
       };
       
