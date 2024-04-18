@@ -7,7 +7,7 @@ let commitsLength = 150
 
 let mobile = window.navigator.userAgent.toLowerCase().includes("mobi");
 
-console.log("Exit Now! This part is used for devolopers.");
+console.log("Exit Now! This part is used for devolopers. \n Hackers could tell you to paste strings here. \n DON'T DO IT");
 
 // navbar
 content = '<div class="navbar"><a href="'+baseUrl+'"><img src="src/images/Logo.svg" alt="bark" width="25" height="25" ></a><a href="https://bark-coding.vercel.app/editor_new">create</a><a href="explore.html">explore</a>'
