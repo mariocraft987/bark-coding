@@ -565,33 +565,6 @@
           });
         }
       };
-Blockly.Blocks['create_elm'] = {
-  init: function() {
-    this.appendEndRowInput()
-        .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("create element")
-        .appendField(new Blockly.FieldTextInput("dog"), "NAME");
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(0);
- this.setTooltip("test");
- this.setHelpUrl("");
-  }
-};
-	    
-Blockly.Blocks['delete_elm'] = {
-  init: function() {
-    this.appendEndRowInput()
-        .setAlign(Blockly.ALIGN_RIGHT)
-        .appendField("delete element")
-        .appendField(new Blockly.FieldTextInput("dog"), "NAME");
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(0);
- this.setTooltip("test");
- this.setHelpUrl("");
-  }
-};
       
             Blockly.Blocks['movement_moveback'] = { // Moves sprite back
         init: function() {
@@ -920,6 +893,7 @@ Blockly.Blocks['fetch'] = {
       
     </script>
   </body>
+    <script src="https://bark-coding.vercel.app/editor_new/custom.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://bark-coding.vercel.app/index.js"></script>
 </html>
