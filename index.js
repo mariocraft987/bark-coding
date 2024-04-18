@@ -1,6 +1,6 @@
 /* Some common scripts created in javascript to work the website, and make it interactive. */
 
-let newsBox = "Bark now has a Make your Own Block tutorial! Now you can make your own extension with <a href='https://github.com/mariocraft987/bark.github.io/blob/main/editor_new/README.md'>guide!</a>"
+let newsBox = "Bark now has a Make your Own Block tutorial! Now you can make your own extension with this <a href='https://github.com/mariocraft987/bark.github.io/blob/main/editor_new/README.md'>guide!</a>"
 let unrelatedNews = "<h2>Unrelated News</h2> Scratch, our inspiration, just hit 1 billion projects! the billionth project is <a href='https://scratch.mit.edu/projects/1000000000'>here.</a>"
 let baseUrl = "https://bark-coding.vercel.app"
 let commitsLength = 150
