@@ -1,6 +1,6 @@
 /* Some common scripts created in javascript to work the website, and make it interactive. */
 
-let newsBox = "Come to Bark's new <a href='https://discord.gg/mCrH7CkMBE'>Discord Server!</a> set up by <a href='https://github.com/mariocraft987'>mariocraft987</a>"
+let newsBox = "Bark now has a Make your Own Block tutorial! Now you can make your own extension with <a href='https://github.com/mariocraft987/bark.github.io/blob/main/editor_new/README.md'>this link!</a>"
 let unrelatedNews = "<h2>Unrelated News</h2> Scratch, our inspiration, just hit 1 billion projects! the billionth project is <a href='https://scratch.mit.edu/projects/1000000000'>here.</a>"
 let baseUrl = "https://bark-coding.vercel.app"
 let commitsLength = 150
@@ -26,7 +26,7 @@ document.getElementById('navbar').innerHTML = content;
 
 // footer
 if (document.url != "baseUrl") {
-document.body.innerHTML += '<footer style="background-color: rgb(0, 127, 255, 0.24); margin-top: 200px; height: 25vh; padding: 40px; text-align: center;"><p style="color: #777;">Looks like you\'ve reached the bottom.</p><p><a href="index.html">Home</a> <a href="editor_new/">Editor</a> <a href="https://github.com/mariocraft987/bark.github.io/">Source</a><br/><br/> <a href="credits.html">Credits</a> <a href="https://scratch.mit.edu/users/mariocraft987#comments">Contact</a> <a href="https://github.com/mariocraft987/bark.github.io/discussions">Discuss</a><br/><br/> <a href="https://github.com/mariocraft987/bark.github.io/releases/download/0.0.1/barkdesktop.zip">Download</a> <a href="https://bark-org.vercel.app">Org</a></p></footer>';
+document.body.innerHTML += '<footer style="background-color: rgb(0, 127, 255, 0.24); margin-top: 200px; height: 25vh; padding: 40px; text-align: center;"><p style="color: #777;">Looks like you\'ve reached the bottom.</p><p><a href="index.html">Home</a> <a href="editor_new/">Editor</a> <a href="https://github.com/mariocraft987/bark.github.io/">Source</a><br/><br/><a href="https://discord.com/invite/mCrH7CkMBE">Discord</a></p></footer>';
 }
 
 if (new Date().getMonth() === 3 && new Date().getDate() === 1) {
