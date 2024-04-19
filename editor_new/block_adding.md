@@ -4,7 +4,7 @@
   
 *NOTE 2: IT WILL MAKE YOUR LIFE EASIER TO USE BLOCKLY BLOCK FACTORY: [Block Factory](https://blockly-demo.appspot.com/static/demos/blockfactory/index.html)*
 
-*NOTE 3: if you wanna request blocks for us to make, create a disccusion in Block Requests and we will make it if ideas are good.*
+*NOTE 3: if you wanna request blocks for us to make, create a discussion in Block Requests and we will make it if ideas are good.*
   
 First we need to design our block, the block code may look like this:
 ```javascript
@@ -49,7 +49,7 @@ after that the block is now in the blockbar!
 
 ![picture of block](blockpic.png)
 
-*Last updated April 18 2024*
+*Last updated April 19th, 2024*
 
 <!--
     Make sure to change date to the current commit date!
