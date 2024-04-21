@@ -513,18 +513,19 @@
  this.setHelpUrl("");
   }
 };
-	    Blockly.Blocks['controls_ifelse'] = {
+Blockly.Blocks['controls_ifelse'] = {
   init: function() {
-    this.appendValueInput("TEXT1")
+    this.appendValueInput("if")
         .setCheck("Boolean")
         .appendField("if");
     this.appendStatementInput("DO1")
         .setCheck(null);
-    this.appendValueInput("TEXT2")
-        .setCheck("Boolean")
+    this.appendDummyInput()
         .appendField("else");
     this.appendStatementInput("DO2")
         .setCheck(null);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
     this.setColour(210);
  this.setTooltip("If a value is true then do the statement, if not do the next statement.");
  this.setHelpUrl("");
