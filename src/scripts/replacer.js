@@ -39,8 +39,8 @@ function replace(text) {
         .then(response => response.json())
         .then(commits => {
             commits.slice(0, commitsLength).forEach(commit => {
-                let newText = newText
-                .replaceAll(commits.token, "<img src='"+commits.url+"' style='margin-bottom: -7px;' alt='"+commits.alt+"' width='"+ emojisize + "' height='"+ emojisize + "'>")
+                let newer = newText.replaceAll(commits.token, "<img src='"+commits.url+"' style='margin-bottom: -7px;' alt='"+commits.alt+"' width='"+ emojisize + "' height='"+ emojisize + "'>")
+                let newText = newer
             });
             return String(text)
         })
