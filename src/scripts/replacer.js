@@ -45,7 +45,7 @@ function replace(text) {
             return String(text)
         })
         .catch(error => {
-            console.error('Error loading emojis:', error);
+            console.log('Error loading emojis:', error);
             alert("Error using emojis")
         });
     /*
