@@ -35,6 +35,18 @@ function replace(text) {
         .replaceAll("lmao", "lmso")
         
         // emojis
+    fetch('https://bark-coding.vercel.app/src/scripts/emoji.json')
+        .then(response => response.json())
+        .then(commits => {
+            commits.slice(0, commitsLength).forEach(commit => {
+                .replaceAll(commits.token, "<img src='"+commits.url+"' style='margin-bottom: -7px;' alt='"+commits.alt+"' width='"+ emojisize + "' height='"+ emojisize + "'>")
+            });
+        })
+        .catch(error => {
+            console.error('Error loading emojis:', error);
+            alert("Error using emojis")
+        });
+    /*
         .replaceAll(":amazed:", "<img src='src/emojis/normal/svg/amazed.svg' style='margin-bottom: -7px;' alt='amazed face' width='"+ emojisize + "' height='"+ emojisize + "'>")
         .replaceAll(":alien:", "<img src='src/emojis/svg/normal/alien.svg' style='margin-bottom: -7px;' alt='alien' width='"+ emojisize + "' height='"+ emojisize + "'>")
         .replaceAll(":smiley:", "<img src='src/emojis/svg/normal/smiley.svg' alt='smiley face' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
@@ -80,4 +92,5 @@ function replace(text) {
         .replaceAll(/(@qwertyy|@qwertyytheartist)+/gim, '<a href="https://github.com/qwertyytheartist" style="background-color: #bfb08b;height: 16px;display: inline-block;padding: 5px;margin: -5px 3px;border: 1px solid #fff4d7;border-radius: 10px;color: #ffffff;position: relative;top: 2px; text-decoration: none;"><img src="https://github.com/qwertyytheartist.png" width="16px" style="border-radius: 50%;"><span style="top: -2px;margin-left: 3px;margin-right: 3px;position: relative;">qwertyy</span></a>')
         .replaceAll(/(@rubiidev-18|@rubiidev)+/gim, '<a href="https://github.com/Rubiidev-18" style="background-color: #759cd9;height: 16px;display: inline-block;padding: 5px;margin: -5px 3px;border: 1px solid #d7e8ff;border-radius: 10px;color: #ffffff;position: relative;top: 2px; text-decoration: none;"><img src="https://github.com/rubiidev-18.png" width="16px" style="border-radius: 50%;"><span style="top: -2px;margin-left: 3px;margin-right: 3px;position: relative;">Rubiidev</span></a>')
         .replaceAll(/(@nmsderp|@mr_rudy)+/gim, '<a href="https://github.com/nmsderp" style="background-color: #7ad975;height: 16px;display: inline-block;padding: 5px;margin: -5px 3px;border: 1px solid #d7ffe0;border-radius: 10px;color: #ffffff;position: relative;top: 2px; text-decoration: none;"><img src="https://github.com/nmsderp.png" width="16px" style="border-radius: 50%;"><span style="top: -2px;margin-left: 3px;margin-right: 3px;position: relative;">nmsderp</span></a>')
+        */
 }
