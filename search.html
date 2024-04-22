@@ -10,6 +10,7 @@
   <body>
     <span id="content">null</span>
   </body>
+  <script src="index.js"></script>
   <script>
     let q = new URLSearchParams(location.search).get("q".toString()) || "";
     document.title = "Bark Search - "+q;
@@ -17,5 +18,4 @@
     document.getElementById('content').innerHTML += q;
     document.getElementById('search').value = q;
   </script>
-  <script src="index.js"></script>
 </html>
