@@ -11,7 +11,7 @@ function t(length) {
 }
 
 function replace(text) {
-    return String(text)
+    let newText = text
          // DO NOT REMOVE. KEEP AT TOP
         .replaceAll("<", "&lt;")
         .replaceAll(">", "&gt;")
@@ -32,13 +32,14 @@ function replace(text) {
         .replaceAll(/(p ⭐️|⬛️ 🟧|cbt|bbc|kys|fag|cum|kys)+/gim, t(3))
         .replaceAll(/(p⭐️|⬛️🟧|69)+/gim, t(2))
         .replaceAll(/(🤱|💦|🕳️|🤤|🍑|🥒|🍆|🖕|😩|😫|🥴|🚛|🍒|🍝|🌽|👅|🥵|🤓|👙|💃|👄|💋)+/gim, t(1))
-        .replaceAll("lmao", "lmso")
+        .replaceAll("lmao", "lmso");
         
         // emojis
     fetch('https://bark-coding.vercel.app/src/scripts/emoji.json')
         .then(response => response.json())
         .then(commits => {
             commits.slice(0, commitsLength).forEach(commit => {
+                let newText = newText
                 .replaceAll(commits.token, "<img src='"+commits.url+"' style='margin-bottom: -7px;' alt='"+commits.alt+"' width='"+ emojisize + "' height='"+ emojisize + "'>")
             });
         })
