@@ -75,9 +75,8 @@ fetch('https://bark-coding.vercel.app/src/scripts/tips.json')
     obj = data;})
   .then(() => {
       wrd = obj[parseInt(Math.random() * obj.length)]
-   });
-    document.getElementById("randomWord").innerHTML = wrd;
-        
+      document.getElementById("randomWord").innerHTML = wrd;
+   }); 
     }
 }
 

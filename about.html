@@ -17,9 +17,9 @@
             <a class="link" href="https://github.com/mariocraft987/bark.github.io" target="_blank">Github</a>
             <a class="link" href="https://github.com/mariocraft987/bark.github.io/discussions" target="_blank" rel="noopener noreferrer">Forums</a><br>
             <p>Bark is licensed under the <a class="link" href="https://github.com/Mariocraft987/bark.github.io/blob/main/LICENSE">BSD 2-Clause License</a>.<br>
-            <span>Error loading current version!</span></p>
+            <span id="version">Error loading current version!</span></p>
             <p>This is the Bark dog. He is the mascot of Bark.</p>
-            <button style="background: none;background-image: url(src/images/dog/idle.svg);width: 73px;height: 96px;cursor: grab;background-size: cover;border: none;transition: 0.1s;" alt="Bark Dog" onclick="this.style.backgroundImage = 'url(src/images/dog/happy.svg)';" onmouseleave="this.style.backgroundImage = 'url(src/images/dog/umm.svg)';"></button>
+            <img src="src/images/dog/idle.svg" alt="Scratch Dog" width="120" height="120">
             <img style="margin-left: 50px;" src="src/images/Bark.svg" alt="Bark logo" width="115" height="115">
             
         </div>
@@ -29,8 +29,7 @@
     .then(res => res.json()).then(data => {
     obj = data;})
   .then(() => {
-      console.log(obj.version)
-      document.getElementById('version').innerHTML = obj.version;
+      document.getElementById('version').innerHTML = "Current version: "+obj.version;
    });
     </script>
     <script src="index.js"></script>
