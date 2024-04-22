@@ -1,5 +1,5 @@
 /* Basicly replaces text. Script from Penguinmod */
-const token = "█";
+const token = "*";
 const emojisize = 25;
 
 function t(length) {
