@@ -11,7 +11,7 @@ function t(length) {
 }
 
 function replace(text) {
-    let newText = text
+    return String(text)
          // DO NOT REMOVE. KEEP AT TOP
         .replaceAll("<", "&lt;")
         .replaceAll(">", "&gt;")
@@ -32,23 +32,9 @@ function replace(text) {
         .replaceAll(/(p ⭐️|⬛️ 🟧|cbt|bbc|kys|fag|cum|kys)+/gim, t(3))
         .replaceAll(/(p⭐️|⬛️🟧|69)+/gim, t(2))
         .replaceAll(/(🤱|💦|🕳️|🤤|🍑|🥒|🍆|🖕|😩|😫|🥴|🚛|🍒|🍝|🌽|👅|🥵|🤓|👙|💃|👄|💋)+/gim, t(1))
-        .replaceAll("lmao", "lmso");
+        .replaceAll("lmao", "lmso")
         
         // emojis
-    fetch('https://bark-coding.vercel.app/src/scripts/emoji.json')
-        .then(response => response.json())
-        .then(commits => {
-            commits.slice(0, commitsLength).forEach(commit => {
-                let newer = newText.replaceAll(commits.token, "<img src='"+commits.url+"' style='margin-bottom: -7px;' alt='"+commits.alt+"' width='"+ emojisize + "' height='"+ emojisize + "'>")
-                let newText = newer
-            });
-            return String(text)
-        })
-        .catch(error => {
-            console.error('Error loading emojis:', error);
-            alert("Error using emojis")
-        });
-    /*
         .replaceAll(":amazed:", "<img src='src/emojis/normal/svg/amazed.svg' style='margin-bottom: -7px;' alt='amazed face' width='"+ emojisize + "' height='"+ emojisize + "'>")
         .replaceAll(":alien:", "<img src='src/emojis/svg/normal/alien.svg' style='margin-bottom: -7px;' alt='alien' width='"+ emojisize + "' height='"+ emojisize + "'>")
         .replaceAll(":smiley:", "<img src='src/emojis/svg/normal/smiley.svg' alt='smiley face' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
