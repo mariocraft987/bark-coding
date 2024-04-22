@@ -35,3 +35,13 @@ Blockly.Blocks['delete_elm'] = {
  this.setHelpUrl("");
   }
 };
+Blockly.Blocks['custom_forever'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("Forever");
+    this.setNextStatement(true, null);
+    this.setColour(300);
+ this.setTooltip("Does the code when the green button is clicked.");
+ this.setHelpUrl("");
+  }
+};
