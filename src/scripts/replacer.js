@@ -42,6 +42,7 @@ function replace(text) {
                 let newText = newText
                 .replaceAll(commits.token, "<img src='"+commits.url+"' style='margin-bottom: -7px;' alt='"+commits.alt+"' width='"+ emojisize + "' height='"+ emojisize + "'>")
             });
+            return String(text)
         })
         .catch(error => {
             console.error('Error loading emojis:', error);
