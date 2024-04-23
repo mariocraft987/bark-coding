@@ -17,6 +17,11 @@ function replace(text) {
         .replaceAll(">", "&gt;")
         
         // 🔞 i highly reccomend not searching up some of the stuff on here 🔞
+        .replace(/(shitting)+/gim, t(8))
+        .replace(/(fucking|shut up)+/gim, t(7))
+        .replace(/(bitch|pussy)+/gim, t(5))
+        .replace(/(fuck|shit|dick|cock|fock)+/gim, t(4))
+        .replace(/(ass|sex|fok)+/gim, t(3));
         .replaceAll(/(🤱|💦|🕳️|🤤|🍑|🥒|🍆|🖕|😩|😫|🥴|🚛|🍒|🍝|🌽|👅|🥵|🤓|👙|💃|👄|💋)+/gim, t(1))
         
         // emojis
