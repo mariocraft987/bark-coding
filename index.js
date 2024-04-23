@@ -30,7 +30,8 @@ if (document.url != "baseUrl") {
     footer += '<a href="index.html">Home</a> '; // Home
     footer += '<a href="editor_new/">Editor</a> '; // Editor
     footer += '<a href="https://github.com/mariocraft987/bark.github.io/">Github</a> '; // Github
-    footer += '<br/><br/><a href="https://bark-coding.fandom.com/wiki/Bark_Coding_Wiki">Official Wiki</a> '; // Wiki
+    footer += '<br/><br/><a href="https://bark-coding.fandom.com/wiki/Bark_Coding_Wiki">Wiki</a> '; // Wiki
+    footer += '<a href="https://discord.gg/TgSFVXFXKy">Discord</a> '; // Discord
     footer += '</p></footer>'
     document.body.innerHTML += footer;
 }
