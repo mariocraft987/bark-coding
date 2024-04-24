@@ -1,13 +1,7 @@
-/* @import url(https://fonts.googleapis.com/css?family=Montserrat); */
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
 /*CSS styles for Bark, without them Bark would not be structured correctly*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-html:has(.dark-mode) {
-  color-scheme: dark;
-}
-
 body {
-  /* font-family: Arial, Helvetica, sans-serif; */
-  font-family: Poppins;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: White;
   font-weight: 500;
   margin: 0;
@@ -32,7 +26,7 @@ body {
 
 .navbar {
   overflow: hidden;
-  background-color: rgb(208, 186, 171);
+  background-color: rgb(150, 73, 18);
   height: 45px;
 }
 
@@ -52,7 +46,7 @@ body {
 }
 
 .navbar a:hover {
-  background-color: #623416;
+  background-color: #bd5f1c;
   cursor: pointer;
   color: white;
 }
