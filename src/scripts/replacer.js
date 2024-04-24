@@ -15,14 +15,16 @@ function replace(text) {
          // DO NOT REMOVE. KEEP AT TOP
         .replaceAll("<", "&lt;")
         .replaceAll(">", "&gt;")
-        
-        // 🔞 i highly reccomend not searching up some of the stuff on here 🔞
-        .replace(/(shitting)+/gim, t(8))
-        .replace(/(fucking|shut up)+/gim, t(7))
-        .replace(/(bitch|pussy)+/gim, t(5))
-        .replace(/(fuck|shit|dick|cock|fock)+/gim, t(4))
-        .replace(/(ass|sex|fok)+/gim, t(3));
-        .replaceAll(/(🤱|💦|🕳️|🤤|🍑|🥒|🍆|🖕|😩|😫|🥴|🚛|🍒|🍝|🌽|👅|🥵|🤓|👙|💃|👄|💋)+/gim, t(1))
+
+        // some terms listed here are only slices of words. this is because there are many different words (generally offensive) that begin with these terms
+        .replace(/(strip club|prostitute)+/gim, t(10))
+        .replace(/(ejaculat|beastial|masturbat|testicle)+/gim, t(8))
+        .replace(/(shut up|cumming|asshole|bestial|cocaine|jackass)+/gim, t(7))
+        .replace(/(penile|virgin|breast|condom|faggot|incest|molest|retard)+/gim, t(6))
+        .replace(/(bitch|pussy|penis|vagin|prick|whore|booty|boner|erect|horny|skank|sperm|teste)+/gim, t(5))
+        .replace(/(fuck|shit|dick|cock|cunt|nigg|piss|slut|arse|porn|boob|jizz|milf|dilf|pimp|rape|shat)+/gim, t(4))
+        .replace(/(sex|hoe|wtf)+/gim, t(3));
+        .replaceAll(/(🤱|💦|🕳️|🤤|🍑|🍆|🖕|😩|😫|🍒|🥵|🤓|👙)+/gim, t(1))
         
         // emojis
         .replaceAll(":amazed:", "<img src='src/emojis/normal/svg/amazed.svg' style='margin-bottom: -7px;' alt='amazed face' width='"+ emojisize + "' height='"+ emojisize + "'>")
