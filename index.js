@@ -1,12 +1,12 @@
 /* Some common scripts created in javascript to work the website, and make it interactive. */
 
-let newsBox = "Come to Bark's new <a href='https://discord.gg/mCrH7CkMBE'>Discord Server!</a> set up by <a href='https://github.com/mariocraft987'>mariocraft987</a> <h2>Unrelated News</h2> Scratch, our inspiration, just hit 1 billion projects! the billionth project is <a href='https://scratch.mit.edu/projects/1000000000'>here.</a>"
+let newsBox = "Bark now has a Make your Own Block tutorial! Now you can make your own extension with this <a href='https://github.com/mariocraft987/bark.github.io/blob/main/editor_new/block_adding.md'>guide!</a>"
 let baseUrl = "https://bark-coding.vercel.app"
 let commitsLength = 150
 
 let mobile = window.navigator.userAgent.toLowerCase().includes("mobi");
 
-console.log("Exit Now! This part is used for devolopers.");
+console.error("Exit Now! This part is used for devolopers. \n Hackers could tell you to paste strings here. \n DON'T DO IT");
 
 // navbar
 content = '<div class="navbar"><a href="'+baseUrl+'"><img src="src/images/Logo.svg" alt="bark" width="25" height="25" ></a><a href="https://bark-coding.vercel.app/editor_new">create</a><a href="explore.html">explore</a>'
@@ -25,7 +25,15 @@ document.getElementById('navbar').innerHTML = content;
 
 // footer
 if (document.url != "baseUrl") {
-document.body.innerHTML += '<footer style="background-color: rgb(0, 127, 255, 0.24); margin-top: 200px; height: 25vh; padding: 40px; text-align: center;"><p style="color: #777;">Looks like you\'ve reached the bottom.</p><p><a href="index.html">Home</a> <a href="editor_new/">Editor</a> <a href="https://github.com/mariocraft987/bark.github.io/">Source</a><br/><br/> <a href="credits.html">Credits</a> <a href="https://scratch.mit.edu/users/mariocraft987#comments">Contact</a> <a href="https://github.com/mariocraft987/bark.github.io/discussions">Discuss</a><br/><br/> <a href="https://github.com/mariocraft987/bark.github.io/releases/download/0.0.1/barkdesktop.zip">Download</a> <a href="https://bark-org.vercel.app">Org</a></p></footer>';
+    var footer;
+    footer = '<footer style="background-color: rgb(0, 127, 255, 0.24); margin-top: 200px; height: 25vh; padding: 40px; text-align: center;"><p style="color: #777;">Looks like you\'ve reached the bottom.</p><p>';
+    footer += '<a href="index.html">Home</a> '; // Home
+    footer += '<a href="editor_new/">Editor</a> '; // Editor
+    footer += '<a href="https://github.com/mariocraft987/bark.github.io/">Github</a> '; // Github
+    footer += '<br/><br/><a href="https://bark-coding.fandom.com/wiki/Bark_Coding_Wiki">Wiki</a> '; // Wiki
+    footer += '<a href="https://discord.gg/TgSFVXFXKy">Discord</a> '; // Discord
+    footer += '</p></footer>'
+    document.body.innerHTML += footer;
 }
 
 if (new Date().getMonth() === 3 && new Date().getDate() === 1) {
@@ -53,7 +61,7 @@ function recentCom() {
         .then(commits => {
             var Commits = '<h2>Recent Commits</h2><ul style="overflow-y: scroll; height: 150px;"><br/>';
             commits.slice(0, commitsLength).forEach(commit => {
-                Commits += `<div title="${replace(commit.author.login)}: ${replace(commit.commit.message)}"><li><a href="https://github.com/${replace(commit.author.login)}"><img style="border-radius:12px;margin-top:-4px;margin-left:-6px" src="https://github.com/${commit.author.login}.png" width="21"></a><a href="${commit.html_url}">${replace(commit.commit.message)}</a></li></div>`;
+                Commits += `<div title="${replace(commit.author.login)}: ${replace(commit.commit.message)}"><li><a href="https://github.com/${replace(commit.author.login)}"><img style="border-radius:12px;margin-top:-4px;margin-left:-6px" src="https://github.com/${commit.author.login}.png" width="21"></a><a class="linkoncommits" href="${commit.html_url}">${replace(commit.commit.message)}</a></li></div>`;
             });
             Commits += '</ul><br><a class="buttonFrBx" href="https://github.com/Mariocraft987/bark.github.io/commits/main/" style="text-align: center;">See all</a><br>';
             finalCommits = Commits.replaceAll(":trollface:", "<img src='src/emojis/svg/troll.svg' width='23'>")

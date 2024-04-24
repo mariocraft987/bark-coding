@@ -66,23 +66,6 @@ body {
 .link {
   color: #5f0f40; /* Blue links */
   text-decoration: none;
-  
-.link {
-      color: dodgerBlue;
-      text-decoration: none;
-}
-.link:hover {
-      text-decoration: underline;
-}
-.link:active {
-      text-decoration: underline;
-}
-input {
-    padding: 5px;
-    border-radius: 10px;
-    border-color: #a3a3a3;
-    border-style: solid;
-    border-width: 1px;
 }
 
 .link:hover, .link:active {
@@ -155,8 +138,4 @@ textarea {
   .navbar {
     overflow-x: scroll!important;
   }
-}
-
-.afd-upside-down {
-  transform: rotate(180deg);
 }

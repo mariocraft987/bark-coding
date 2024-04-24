@@ -2,6 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="description" content="Bark Blockly Editor is a mod of Blockly. Many things are still in devolopment such as project saving, file readers, and costume and sound libraries." />
     <title>Bark Blockly Editor</title>
     <link rel="shortcut icon" href="https://bark-coding.vercel.app/favicon.ico">
     <script src="https://unpkg.com/blockly/blockly.min.js"></script>
@@ -435,11 +436,20 @@
           </value>
         </block>
       </category>
-      <category name="Custom" colour="#0fbd8c">
-        <block type="javascript_block"></block>
+      <category name="Advanced" colour="#0fbd8c">
+          <field name="TEXT">3</field>
+        </block>
+				<block type="confirm_block"></block>
+          <field name="TEXT">3</field>
+        </block>
+				<block type="prompt_block"></block>
           <field name="TEXT">3</field>
         </block>
         <block type="fetch"/>
+      </category>
+      <category name="Custom" colour="#abe645">
+	<block type="create_elm"></block>
+        <block type="delete_elm"></block>
       </category>
     </xml>
 
@@ -462,21 +472,21 @@
         eval(code); // Evaluate generated code
       }
 
-      Blockly.Blocks['change_costume'] = { // Changes costume to a specific one
+      Blockly.Blocks['change_costume'] = {
         init: function() {
-          this.jsonInit({
-            "type": "change_costume",
-            "message0": "switch costume",
-            "previousStatement": null,
-            "nextStatement": null,
-            "colour": 260,
-            "tooltip": "",
-            "helpUrl": ""
-          });
+          this.appendValueInput("NAME")
+              .setCheck("String")
+              .appendField("switch costume to");
+          this.setInputsInline(true);
+          this.setPreviousStatement(true, null);
+          this.setNextStatement(true, null);
+          this.setColour(260);
+       this.setTooltip("Changes the costume to a specific one.");
+       this.setHelpUrl("");
         }
       };
       
-            Blockly.Blocks['next_costume'] = { // Moved this block outside the previous block
+            Blockly.Blocks['next_costume'] = {
         init: function() {
           this.jsonInit({
             "type": "next_costume",
@@ -484,7 +494,7 @@
             "previousStatement": null,
             "nextStatement": null,
             "colour": 260,
-            "tooltip": "",
+            "tooltip": "Switches to the next costume",
             "helpUrl": ""
           });
         }
@@ -502,19 +512,24 @@
  this.setHelpUrl("");
   }
 };
-      Blockly.Blocks['movement_move_x'] = {
-        init: function() {
-          this.appendValueInput("TEXT")
-              .setCheck("Text")
-              .appendField("// ");
-          this.setInputsInline(true);
-          this.setPreviousStatement(true, null);
-          this.setNextStatement(true, null);
-          this.setColour(150);
-       this.setTooltip("");
-       this.setHelpUrl("");
-        }
-      };
+Blockly.Blocks['controls_ifelse'] = {
+  init: function() {
+    this.appendValueInput("if")
+        .setCheck("Boolean")
+        .appendField("if");
+    this.appendStatementInput("DO1")
+        .setCheck(null);
+    this.appendDummyInput()
+        .appendField("else");
+    this.appendStatementInput("DO2")
+        .setCheck(null);
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(210);
+ this.setTooltip("If a value is true then do the statement, if not do the next statement.");
+ this.setHelpUrl("");
+  }
+};
       
       Blockly.Blocks['movement_move_x'] = {
         init: function() {
@@ -569,7 +584,6 @@
         }
       };
       
-
             Blockly.Blocks['movement_moveback'] = { // Moves sprite back
         init: function() {
           this.jsonInit({
@@ -584,7 +598,7 @@
         }
       };
       
-      Blockly.Blocks['onstart'] = {
+Blockly.Blocks['onstart'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("when")
@@ -593,27 +607,25 @@
     this.appendStatementInput("start")
         .setCheck(null);
     this.setColour(20);
-    this.setNextStatement(true);
-    this.setPreviousStatement(false);
-    this.setTooltip("");
-    this.setHelpUrl("");
+ this.setTooltip("Does the code when the green button is clicked.");
+ this.setHelpUrl("");
   }
 };
 
       
-      Blockly.Blocks['pointdir'] = {
-        init: function() {
-          this.appendValueInput("NAME")
-              .setCheck(null)
-              .appendField("point in direction")
-              .appendField(new Blockly.FieldAngle(90), "NAME");
-          this.setPreviousStatement(true, null);
-          this.setNextStatement(true, null);
-          this.setColour(230);
-       this.setTooltip("");
-       this.setHelpUrl("");
-        }
-      };
+Blockly.Blocks['pointdir'] = {
+  init: function() {
+    this.appendEndRowInput()
+        .setAlign(Blockly.ALIGN_RIGHT)
+        .appendField("point in direction")
+        .appendField(new Blockly.FieldAngle(90), "NAME");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(230);
+ this.setTooltip("Point the sprite to a specific direction");
+ this.setHelpUrl("");
+  }
+};
       Blockly.Blocks['sine_move'] = {
   init: function() {
     this.appendDummyInput()
@@ -648,26 +660,49 @@ Blockly.Blocks['sine_move2'] = {
   }
 };
       
-      Blockly.Blocks['javascript_block'] = {
+      Blockly.Blocks['alert_block'] = {
   init: function() {
-    this.appendValueInput("js")
+    this.appendValueInput("message")
         .setCheck("String")
-        .appendField("run js");
+        .appendField("alert");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(315);
-    this.setTooltip("Runs Vanilla Javascript.");
+    this.setColour(150);
+    this.setTooltip("Alert message to user");
     this.setHelpUrl("");
   }
 };
+			Blockly.Blocks['confirm_block'] = {
+  init: function() {
+    this.appendValueInput("message")
+        .setCheck("String")
+        .appendField("confirm");
+    this.setOutput(true, "Boolean");
+    this.setColour(150);
+ this.setTooltip("Let user comfirm if a message is true");
+ this.setHelpUrl("");
+  }
+};
+			Blockly.Blocks['prompt_block'] = {
+  init: function() {
+    this.appendValueInput("message")
+        .setCheck(null)
+        .appendField("prompt");
+    this.setOutput(true, "String");
+    this.setColour(150);
+ this.setTooltip("Make the user answer a query");
+ this.setHelpUrl("");
+  }
+};
+			
 Blockly.Blocks['fetch'] = {
   init: function() {
     this.appendValueInput("url")
         .setCheck("String")
         .appendField("fetch");
     this.setOutput(true, null);
-    this.setColour(230);
- this.setTooltip("Fetch data from servers!");
+    this.setColour(150);
+ this.setTooltip("Fetch static data from servers!");
  this.setHelpUrl("");
   }
 };
@@ -702,10 +737,19 @@ Blockly.Blocks['fetch'] = {
         return "changebg('" + colorValue + "');";
     };
 
-    javascript.javascriptGenerator.forBlock['javascript_block'] = function(block, generator) {
-      var theJs = block.getFieldValue('js');
-      return theJs;
+    javascript.javascriptGenerator.forBlock['alert_block'] = function(block, generator) {
+      var message = block.getFieldValue('message');
+      return "alert('" + message + "');";
     };
+		javascript.javascriptGenerator.forBlock['confirm_block'] = function(block, generator) {
+      var message = block.getFieldValue('message');
+      return "confirm('" + message + "');";
+    };
+		javascript.javascriptGenerator.forBlock['prompt_block'] = function(block, generator) {
+      var message = block.getFieldValue('message');
+      return "prompt('" + message + "');";
+    };
+			
     javascriptGenerator.forBlock['fetch'] = function(block, generator) {
       var uri = block.getFieldValue('url');
       var handleFunction = generator.variableDB_.getDistinctName('handlefetch', Blockly.Variables.NAME_TYPE);
@@ -865,6 +909,7 @@ Blockly.Blocks['fetch'] = {
       
     </script>
   </body>
+    <script src="https://bark-coding.vercel.app/editor_new/custom.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://bark-coding.vercel.app/index.js"></script>
 </html>

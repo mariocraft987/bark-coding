@@ -1,11 +1,11 @@
 ![Logo](https://raw.githubusercontent.com/mariocraft987/bark.github.io/main/src/images/Bark.svg)<br>
 ![Static Badge](https://img.shields.io/badge/engine%20by-blockly-yellow?style=for-the-badge&logo=google&logoColor=yellow)
-![Static Badge](https://img.shields.io/badge/made_using-html_%26_js-orange?style=for-the-badge&logo=html5&logoColor=orange&)
+
 ![Static Badge](https://img.shields.io/badge/latest%20release-0.1.6-green?style=for-the-badge&logo=electron&logoColor=green)
 
 # Description
 Bark is a website that makes programming easy, so users of any age can create and share games, animations, and everything else! &#128054;<br>
-Bark has many features that our competitors don't, including:
+Bark has many features, including:
 - Dark mode
 - Custom stage size&ast;
 - Customize editor layout&ast;
@@ -34,7 +34,7 @@ To be a part of Bark's development, please choose a job from <a href="https://gi
 <hr>
 
 ## How do I add blocks?
-Go to <a href="https://github.com/mariocraft987/bark.github.io/blob/main/blockAdding.md">`blockAdding.md`</a> and follow the steps, but, if you'r lazy and want one of us to do it, make a discussion in [Here!](https://github.com/mariocraft987/bark.github.io/discussions/categories/block-requests)
+Go to <a href="https://github.com/mariocraft987/bark.github.io/blob/main/editor_new/blockAdding.md">`blockAdding.md`</a> and follow the steps, but, if you'r lazy and want one of us to do it, make a discussion in [Here!](https://github.com/mariocraft987/bark.github.io/discussions/categories/block-requests)
 
 # License
 

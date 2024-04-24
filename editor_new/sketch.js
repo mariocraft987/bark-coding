@@ -65,7 +65,7 @@ function betterDelay() {
 
 // Function for basic movement
 function basicMoveX(num) {
-  // Move stickman to the left by about +10 in the x-direction
+  // Moves the sprite by the x position
   x += num;
 
   setTimeout(betterDelay, 10);
@@ -73,17 +73,16 @@ function basicMoveX(num) {
 
 // Function for basic movement
 function basicMoveY(num) {
-  // Move stickman to the left by about +10 in the x-direction
+  // Moves the sprite by the y position
   y += num;
 
   setTimeout(betterDelay, 10);
 }
 
 function basicMoveBack() {
-  // Move stickman to the left by about -10 in the x-direction
+  // Old block!!
   x -= 5;
 
-  // Prevent stickman from going beyond canvas boundaries
   if (x <= 0) {
     x = 0;
   }

@@ -11,6 +11,7 @@ I have found a bug!
 
  - Operating System:
  - Browser:
+ - Browser Version: 
 
 **Description**
 [enter clear & thorough description of the bug here]
