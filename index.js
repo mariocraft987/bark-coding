@@ -26,7 +26,7 @@ document.getElementById('navbar').innerHTML = content;
 // footer
 if (document.url != "baseUrl") {
     var footer;
-    footer = '<footer style="background-color: rgb(0, 127, 255, 0.24); margin-top: 200px; height: 25vh; padding: 40px; text-align: center;"><p style="color: #777;">Looks like you\'ve reached the bottom.</p><p>';
+    footer = '<footer><p style="color: #777;">Looks like you\'ve reached the bottom.</p><p>';
     footer += '<a href="index.html">Home</a> '; // Home
     footer += '<a href="editor_new/">Editor</a> '; // Editor
     footer += '<a href="https://github.com/mariocraft987/bark.github.io/">Github</a> '; // Github
