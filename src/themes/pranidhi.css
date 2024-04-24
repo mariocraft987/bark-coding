@@ -59,6 +59,14 @@ body {
   width: 1440px;
 }
 
+footer {
+  background-color: #f6f4d2;
+  margin-top: 200px;
+  height: 25vh;
+  padding: 40px;
+  text-align: center;
+}
+
 .dark-mode .box {
   color: inherit;
 }
