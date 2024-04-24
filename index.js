@@ -1,6 +1,6 @@
 /* Some common scripts created in javascript to work the website, and make it interactive. */
 
-let newsBox = "Bark now has a Make your Own Block tutorial! Now you can make your own extension with this <a href='https://github.com/mariocraft987/bark.github.io/blob/main/editor_new/block_adding.md'>guide!</a>"
+let newsBox = "Bark has a new look created by <a href='https://github.com/Pranidhi10'>Pranidhi10!</a>"
 let baseUrl = "https://bark-coding.vercel.app"
 let commitsLength = 150
 
