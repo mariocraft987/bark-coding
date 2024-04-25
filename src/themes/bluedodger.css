@@ -280,6 +280,13 @@ textarea {
     overflow-x: scroll!important;
   }
 }
+footer {
+  background-color: rgb(143, 158, 239);
+  margin-top: 200px;
+  height: 25vh;
+  padding: 40px;
+  text-align: center;
+}
 
 .afd-upside-down {
   transform: rotate(180deg);
