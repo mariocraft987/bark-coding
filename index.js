@@ -32,7 +32,6 @@ if (document.url != "baseUrl") {
     footer += '<a href="https://github.com/mariocraft987/bark.github.io/">Github</a> '; // Github
     footer += '<br/><br/><a href="https://bark-coding.fandom.com/wiki/Bark_Coding_Wiki">Wiki</a> '; // Wiki
     footer += '<a href="https://discord.gg/TgSFVXFXKy">Discord</a> '; // Discord
-    footer += '<br/><p style="color: #777;">Bark coding is created by Cytrinc Studios</p> '; // Creator
     footer += '</p></footer>'
     document.body.innerHTML += footer;
 }
