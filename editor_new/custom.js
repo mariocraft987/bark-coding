@@ -45,3 +45,18 @@ Blockly.Blocks['custom_forever'] = {
  this.setHelpUrl("");
   }
 };
+Blockly.Blocks['when_barked'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("when barked")
+        .appendField(new Blockly.FieldImage("https://em-content.zobj.net/source/microsoft/379/dog-face_1f436.png", 20, 20, { alt: "A doggy from Mirosoft!", flipRtl: "FALSE" }));
+    this.appendStatementInput("WHENBARKED")
+        .setCheck(null);
+    this.setColour(20);
+ this.setTooltip("Detects when you clicked on the \"bark\" block!");
+ this.setHelpUrl("https://scratch.mit.edu/users/LoganCreatz/");
+  }
+};
+Generator stub: 
+JavaScript
+javascript.javascriptGenerat
