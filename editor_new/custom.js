@@ -57,6 +57,3 @@ Blockly.Blocks['when_barked'] = {
  this.setHelpUrl("https://scratch.mit.edu/users/LoganCreatz/");
   }
 };
-Generator stub: 
-JavaScript
-javascript.javascriptGenerat
