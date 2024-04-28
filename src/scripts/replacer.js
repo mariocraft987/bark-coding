@@ -140,7 +140,7 @@ function replace(text) {
         .replace(/(bitch|pussy|penis|vagin|prick|whore|booty|boner|erect|horny|skank|sperm|teste|eroti|semen)+/gim, t(5))
         .replace(/(fuck|shit|dick|cock|cunt|nigg|piss|slut|porn|boob|jizz|milf|dilf|pimp|rape|shat|sext|nude|tits|titt)+/gim, t(4))
         .replace(/(sex|hoe|wtf|kys)+/gim, t(3))
-        .replaceAll(/(🤱|💦|🕳️|🤤|🍑|🍆|🖕|😩|😫|🍒|🥵|🤓|👙)+/gim, t(1))
+        .replaceAll(/(_____|____|_____|_____|______|_____|_______|______|_______|_______|______|______|______)+/gim, t(1))
 
         // emojis of dev
         .replaceAll(":mariocraft:", "<img src='src/emojis/svg/dev/mariocraft.svg' alt='dev' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
