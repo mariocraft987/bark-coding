@@ -13,6 +13,9 @@ function preload() {
   // Load the image from the URL then move
   img = loadImage('https://bark-coding.vercel.app/src/images/dog/idle.svg');
 }
+function kill() {
+  return;
+}
 
 function toggleFullscreen() {
   console.log('uhhhhhhhhhh idk how to do this');
