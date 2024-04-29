@@ -91,7 +91,7 @@ Blockly.Blocks['chatbot_tell'] = {
         .appendField(new Blockly.FieldTextInput("You are really nerdy"), "NAME");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(150);
+    this.setColour(160);
  this.setTooltip("Tells the bot some instructions to follow");
  this.setHelpUrl("https://scratch.mit.edu/users/LoganCreatz#comments");
   }
@@ -104,7 +104,7 @@ Blockly.Blocks['chatbot_reset'] = {
         .appendField("clear chatbot history");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
-    this.setColour(150);
+    this.setColour(160);
  this.setTooltip("Clears the search and instruction history of the chatbot");
  this.setHelpUrl("https://scratch.mit.edu/users/LoganCreatz#comments");
   }
