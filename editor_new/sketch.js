@@ -144,6 +144,12 @@ function center() {
   const timeoutId = setTimeout(betterDelay, 10);
   timeouts.push(timeoutId);
 }
+function resetsize () {
+  imgWidth = 72.54920959472656
+  imgHeight = 96.2669830322265
+  const timeoutId = setTimeout(betterDelay, 10);
+  timeouts.push(timeoutId);
+}
 
 function sizeOscillation() {
   // Calculate the oscillation size based on sine wave movement
