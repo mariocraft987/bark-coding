@@ -227,6 +227,7 @@
       </category>
       <category name="Style" colour="#cd17ff">
         <block type="change_costume"></block>
+	<block type="resetsize"></block>
         <block type="next_costume"></block>
         <block type="change_stage_bg"></block>
         <block type="colour_picker">
@@ -504,6 +505,19 @@
           });
         }
       };
+	    Blockly.Blocks['resetsize'] = {
+        init: function() {
+          this.jsonInit({
+            "type": "resetsize",
+            "message0": "reset size",
+            "previousStatement": null,
+            "nextStatement": null,
+            "colour": 260,
+            "tooltip": "Resets the size",
+            "helpUrl": ""
+          });
+        }
+      };
       
       Blockly.Blocks['change_stage_bg'] = {
   init: function() {
@@ -745,6 +759,10 @@ Blockly.Blocks['fetch'] = {
     javascript.javascriptGenerator.forBlock['alert_block'] = function(block, generator) {
       var message = block.getFieldValue('message');
       return "alert('" + message + "');";
+    };
+	    javascript.javascriptGenerator.forBlock['resetsize'] = function(block, generator) {
+      var message = block.getFieldValue('message');
+      return "resetsize();";
     };
 		javascript.javascriptGenerator.forBlock['confirm_block'] = function(block, generator) {
       var message = block.getFieldValue('message');
