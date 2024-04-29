@@ -1,3 +1,4 @@
+let timeouts = []; // Array to hold timeout IDs
 let img; // Declare variable to hold the image
 let x = 235; // Initial x position (centered)
 let y = 175; // Initial y position (centered)
@@ -13,8 +14,11 @@ function preload() {
   // Load the image from the URL then move
   img = loadImage('https://bark-coding.vercel.app/src/images/dog/idle.svg');
 }
+
 function kill() {
-  return;
+  // Clear all scheduled timeouts
+  timeouts.forEach(timeout => clearTimeout(timeout));
+  timeouts = []; // Clear the timeouts array
 }
 
 function toggleFullscreen() {
@@ -71,7 +75,9 @@ function basicMoveX(num) {
   // Moves the sprite by the x position
   x += num;
 
-  setTimeout(betterDelay, 10);
+  // Set a timeout and store its ID in the timeouts array
+  const timeoutId = setTimeout(betterDelay, 10);
+  timeouts.push(timeoutId);
 }
 
 // Function for basic movement
@@ -79,7 +85,9 @@ function basicMoveY(num) {
   // Moves the sprite by the y position
   y += num;
 
-  setTimeout(betterDelay, 10);
+  // Set a timeout and store its ID in the timeouts array
+  const timeoutId = setTimeout(betterDelay, 10);
+  timeouts.push(timeoutId);
 }
 
 function basicMoveBack() {
@@ -89,7 +97,10 @@ function basicMoveBack() {
   if (x <= 0) {
     x = 0;
   }
-  setTimeout(betterDelay, 10);
+
+  // Set a timeout and store its ID in the timeouts array
+  const timeoutId = setTimeout(betterDelay, 10);
+  timeouts.push(timeoutId);
 }
 
 function sineMove() {
@@ -99,8 +110,9 @@ function sineMove() {
   // Increment the angle to create the oscillating motion
   angle += frequency;
 
-  // Set a timeout to call the function again after the delay
-  setTimeout(sineMove, 10);
+  // Set a timeout and store its ID in the timeouts array
+  const timeoutId = setTimeout(sineMove, 10);
+  timeouts.push(timeoutId);
 }
 
 function sineMove2() {
@@ -110,19 +122,27 @@ function sineMove2() {
   // Increment the angle to create the oscillating motion
   angle += frequency;
 
-  // Set a timeout to call the function again after the delay
-  setTimeout(sineMove2, 10);
+  // Set a timeout and store its ID in the timeouts array
+  const timeoutId = setTimeout(sineMove2, 10);
+  timeouts.push(timeoutId);
 }
 
 function gotomouse() {
   x = mouseX;
   y = mouseY;
-  setTimeout(betterDelay, 10);
+
+  // Set a timeout and store its ID in the timeouts array
+  const timeoutId = setTimeout(betterDelay, 10);
+  timeouts.push(timeoutId);
 }
 
 function center() {
   x = 235;
   y = 175;
+
+  // Set a timeout and store its ID in the timeouts array
+  const timeoutId = setTimeout(betterDelay, 10);
+  timeouts.push(timeoutId);
 }
 
 function sizeOscillation() {
@@ -136,6 +156,7 @@ function sizeOscillation() {
   // Increment the angle to create the oscillating motion
   angle += frequency;
 
-  // Set a timeout to call the function again after the delay
-  setTimeout(sizeOscillation, 10);
+  // Set a timeout and store its ID in the timeouts array
+  const timeoutId = setTimeout(sizeOscillation, 10);
+  timeouts.push(timeoutId);
 }
