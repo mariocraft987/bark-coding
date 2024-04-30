@@ -22,7 +22,8 @@ function kill() {
 }
 
 function toggleFullscreen() {
-  console.log('uhhhhhhhhhh idk how to do this');
+  let fs = fullscreen();
+  fullscreen(!fs);
 }
 
 function loadImg(text) {
