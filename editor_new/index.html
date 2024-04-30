@@ -208,6 +208,7 @@
           <field name="OP">AND</field>
         </block>
         <block type="logic_negate"></block>
+	<block type="logic_keypressed"></block>
         <block type="logic_boolean">
           <field name="BOOL">TRUE</field>
         </block>
@@ -616,6 +617,19 @@ Blockly.Blocks['controls_ifelse'] = {
           });
         }
       };
+
+Blockly.Blocks['logic_keypressed'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("if")
+        .appendField(new Blockly.FieldDropdown([["Up arrow key","UP"], ["Down arrow key","DOWN"], ["Left arrow key","LEFT"], ["Right arrow key","RIGHT"]]), "NAME")
+        .appendField("pressed?");
+    this.setOutput(true, "Boolean");
+    this.setColour(230);
+ this.setTooltip("Returns if a specific key is pressed.");
+ this.setHelpUrl("https://en.scratch-wiki.info/wiki/Key_()_Pressed%3F_(block)");
+  }
+};
       
 Blockly.Blocks['onstart'] = {
   init: function() {
@@ -626,7 +640,7 @@ Blockly.Blocks['onstart'] = {
     this.appendStatementInput("start")
         .setCheck(null);
     this.setColour(20);
- this.setTooltip("Does the code when the green button is clicked.");
+ this.setTooltip("Runs the code when the green button is clicked.");
  this.setHelpUrl("");
   }
 };
