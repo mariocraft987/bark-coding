@@ -622,7 +622,7 @@ Blockly.Blocks['logic_keypressed'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("if")
-        .appendField(new Blockly.FieldDropdown([["Up arrow key","UP"], ["Down arrow key","DOWN"], ["Left arrow key","LEFT"], ["Right arrow key","RIGHT"]]), "NAME")
+        .appendField(new Blockly.FieldDropdown([["Up arrow key","UP"], ["Down arrow key","DOWN"], ["Left arrow key","LEFT"], ["Right arrow key","RIGHT"], ["Enter key","ENTER"], ["Shift key","SHIFT"]]), "NAME")
         .appendField("pressed?");
     this.setOutput(true, "Boolean");
     this.setColour(210);
