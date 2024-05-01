@@ -230,6 +230,8 @@
       </category>
       <category name="Style" colour="#cd17ff">
         <block type="change_costume"></block>
+	<block type="change_size"></block>
+	<block type="set_size"></block>
 	<block type="resetsize"></block>
         <block type="next_costume"></block>
         <block type="change_stage_bg"></block>
@@ -703,6 +705,28 @@ Blockly.Blocks['sine_move2'] = {
     this.setColour(150);
     this.setTooltip("Alert message to user");
     this.setHelpUrl("");
+  }
+};
+	    Blockly.Blocks['change_size'] = {
+  init: function() {
+    this.appendValueInput("NAME")
+        .setCheck(null)
+        .appendField("change size by");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(260);
+ this.setTooltip("Changes the size.");
+ this.setHelpUrl("");
+  }
+};
+	    Blockly.Blocks['set_size'] = {
+  init: function() {
+    this.appendValueInput("NAME")
+        .setCheck(null)
+        .appendField("set size to");
+    this.setColour(260);
+ this.setTooltip("Sets the size to a specific value.");
+ this.setHelpUrl("");
   }
 };
 			Blockly.Blocks['confirm_block'] = {
