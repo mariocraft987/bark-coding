@@ -216,6 +216,7 @@
         <block type="logic_ternary"></block>
       </category>
       <category name="Movement" colour="#3399ff">
+	<block type="set_position"></block>
         <block type="movement_move_x">
           <field name="NUM">3</field>
         </block>
@@ -548,6 +549,20 @@ Blockly.Blocks['controls_ifelse'] = {
     this.setNextStatement(true, null);
     this.setColour(210);
  this.setTooltip("If a value is true then do the statement, if not do the next statement.");
+ this.setHelpUrl("");
+  }
+};
+	    Blockly.Blocks['set_position'] = {
+  init: function() {
+    this.appendValueInput("NAME")
+        .setCheck(null)
+        .appendField("set")
+        .appendField(new Blockly.FieldDropdown([["x","X"], ["y","Y"], ["",""]]), "XY")
+        .appendField("position to");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(230);
+ this.setTooltip("Sets either X or Y position to a specific value");
  this.setHelpUrl("");
   }
 };
