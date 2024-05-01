@@ -232,7 +232,6 @@
         <block type="change_costume"></block>
 	<block type="change_size"></block>
 	<block type="set_size"></block>
-	<block type="resetsize"></block>
         <block type="next_costume"></block>
         <block type="change_stage_bg"></block>
         <block type="colour_picker">
@@ -719,11 +718,13 @@ Blockly.Blocks['sine_move2'] = {
  this.setHelpUrl("");
   }
 };
-	    Blockly.Blocks['set_size'] = {
+Blockly.Blocks['set_size'] = {
   init: function() {
     this.appendValueInput("NAME")
         .setCheck(null)
         .appendField("set size to");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
     this.setColour(260);
  this.setTooltip("Sets the size to a specific value.");
  this.setHelpUrl("");
