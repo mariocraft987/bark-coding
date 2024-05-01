@@ -151,6 +151,12 @@ function resetsize () {
   const timeoutId = setTimeout(betterDelay, 10);
   timeouts.push(timeoutId);
 }
+function setsize (size) {
+  imgWidth = size
+  imgHeight = size
+  const timeoutId = setTimeout(betterDelay, 10);
+  timeouts.push(timeoutId);
+}
 
 function sizeOscillation() {
   // Calculate the oscillation size based on sine wave movement
