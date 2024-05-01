@@ -255,6 +255,7 @@
         <block type="controls_whileUntil">
           <field name="MODE">WHILE</field>
         </block>
+	<block type="forever"></block>
         <block type="controls_for">
           <field name="VAR" id="QX?tv8_Oe7g@:yT:^:JX">i</field>
           <value name="FROM">
@@ -619,6 +620,19 @@ Blockly.Blocks['controls_ifelse'] = {
           });
         }
       };
+	    Blockly.Blocks['forever'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("forever");
+    this.appendStatementInput("NAME")
+        .setCheck(null)
+        .appendField("do");
+    this.setPreviousStatement(true, null);
+    this.setColour(135);
+ this.setTooltip("Does code forever.");
+ this.setHelpUrl("");
+  }
+};
       
             Blockly.Blocks['movement_moveback'] = { // Moves sprite back
         init: function() {
