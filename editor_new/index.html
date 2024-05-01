@@ -523,11 +523,11 @@
         }
       };
       
-      Blockly.Blocks['change_stage_bg'] = {
+Blockly.Blocks['change_stage_bg'] = {
   init: function() {
-    this.appendDummyInput()
-        .appendField("change stage bg to")
-        .appendField(new Blockly.FieldColour("#ff0000"), "NAME");
+    this.appendValueInput("NAME")
+        .setCheck("colour")
+        .appendField("change stage bg to");
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(260);
