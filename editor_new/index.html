@@ -807,9 +807,13 @@ Blockly.Blocks['fetch'] = {
       var message = block.getFieldValue('message');
       return "confirm('" + message + "');";
     };
-		javascript.javascriptGenerator.forBlock['prompt_block'] = function(block, generator) {
+		javascript.javascriptGenerator.forBlock['set_size'] = function(block, generator) {
       var message = block.getFieldValue('message');
-      return "prompt('" + message + "');";
+      return "setsize('" + message + "');";
+    };
+    		javascript.javascriptGenerator.forBlock['change_size'] = function(block, generator) {
+      var message = block.getFieldValue('message');
+      return "setsize('imgWidth + " + message + "');";
     };
 			
     javascriptGenerator.forBlock['fetch'] = function(block, generator) {
