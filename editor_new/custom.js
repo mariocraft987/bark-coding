@@ -18,7 +18,7 @@ Blockly.Blocks['create_elm'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(0);
- this.setTooltip("test");
+ this.setTooltip("Creates an element.");
  this.setHelpUrl("");
   }
 };   
@@ -31,7 +31,18 @@ Blockly.Blocks['delete_elm'] = {
     this.setPreviousStatement(true, null);
     this.setNextStatement(true, null);
     this.setColour(0);
- this.setTooltip("test");
+ this.setTooltip("Deletes an element.");
+ this.setHelpUrl("");
+  }
+};
+Blockly.Blocks['get_elm'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("get element")
+        .appendField(new Blockly.FieldTextInput("dog"), "NAME");
+    this.setOutput(true, "String");
+    this.setColour(0);
+ this.setTooltip("Gets an element by it's name.");
  this.setHelpUrl("");
   }
 };
