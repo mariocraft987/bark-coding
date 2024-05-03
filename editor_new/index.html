@@ -460,6 +460,10 @@
         </block>
         <block type="fetch"/>
       </category>
+      <category name="Custom" colour="#87ff2b">
+	<block type="create_elm"></block>
+	<block type="delete_elm"></block>
+      </category>
  
     </xml>
 
@@ -665,12 +669,13 @@ Blockly.Blocks['onstart'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("when")
-        .appendField(new Blockly.FieldImage("https://bark-coding.vercel.app/src/projecttoolbar/run.svg", 25, 25, { alt: "*", flipRtl: "FALSE" }))
+        .appendField(new Blockly.FieldImage("https://bark-coding.vercel.app/src/projecttoolbar/run.svg", 15, 15, { alt: "*", flipRtl: "FALSE" }))
         .appendField("clicked");
     this.appendStatementInput("start")
-        .setCheck(null);
+        .setCheck(null)
+        .appendField("do");
     this.setColour(20);
- this.setTooltip("Runs the code when the green button is clicked.");
+ this.setTooltip("Does the code when the green button is clicked.");
  this.setHelpUrl("");
   }
 };
