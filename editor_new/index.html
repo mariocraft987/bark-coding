@@ -146,7 +146,7 @@
 	<input type="file" id="fileInput" style="display: none;" onchange="loadWorkspaceFromFile(this.files[0])" />
 <a href="#" onclick="openFileInput();" title="open a saved project">open</a>
       <a href="#" title="watch helpful tutorials to expand your knowledge!">tutorials</a>
-      <a href="#" onclick="alert('you can\'t publish projects yet! :(');" title="publish your project so the world can see!">publish</a>
+      <a href="#" onclick="alert('you can\'t publish projects yet! :(');" title="share your project so the world can see!">share</a>
       <a class="dark-mode-button" id="darkModeToggle"><dmbico alt="Dark Mode"></dmbico></a>
     </div>
                                   <!-- Code Tab -->
@@ -198,7 +198,7 @@
       id="toolbox"
       style="display: none"
     >
-      <category name="Logic" colour="#f5ca20">
+      <category name="Events" colour="#cf9100">
         <block type="onstart"></block>
         <block type="controls_if"></block>
         <block type="logic_compare">
@@ -244,7 +244,7 @@
         <shadow type="math_number">
         <field name="NUM">100</field>
       </category>
-      <category name="Loops" colour="#20e374">
+      <category name="Control" colour="#689c00">
         <block type="controls_repeat_ext">
           <value name="TIMES">
             <shadow type="math_number">
@@ -344,7 +344,7 @@
           </value>
         </block>
       </category>
-      <category name="Text" colour="#2fe3f7">
+      <category name="Text" colour="#0a8cbf">
         <block type="text">
           <field name="TEXT"></field>
         </block>
@@ -395,7 +395,7 @@
           </value>
         </block>
       </category>
-          <category name="Sine" colour="#66fae1">
+          <category name="Sine" colour="#19b9c2">
         <block type="sine_move"></block>
         <block type="sine_move2"></block>
         <block type="sine_size"></block>
@@ -460,7 +460,7 @@
         </block>
         <block type="fetch"/>
       </category>
-      <category name="Custom" colour="#87ff2b">
+      <category name="Custom" colour="#cf4125">
 	<block type="create_elm"></block>
 	<block type="delete_elm"></block>
 	<block type="get_elm"></block>
