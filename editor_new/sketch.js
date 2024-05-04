@@ -29,8 +29,6 @@ function toggleFullscreen() {
 function loadImg(text) {
   // Loads the image from the URL
   img = loadImage(text);
-  imgWidth = img.width;
-  imgHeight = img.height;
 }
 
 function setup() {
