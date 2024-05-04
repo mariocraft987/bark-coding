@@ -94,6 +94,7 @@ input {
     border-color: #a3a3a3;
     border-style: solid;
     border-width: 1px;
+    font-family: inherit;
 }
 
 * .dark-mode input {
