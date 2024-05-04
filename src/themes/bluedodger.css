@@ -1,12 +1,17 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 /* CSS style for Bark, without them Bark would not be structured correctly */
 
+@font-face {
+  font-family: "Bazin";
+  src: url("https://bark-coding.vercel.app/src/Bazin.ttf");
+}
+
 html:has(.dark-mode) {
   color-scheme: dark;
 }
 
 body {
-  font-family: Arial, Helvetica, Bazin, sans-serif;
+  font-family: Arial, Helvetica, "Bazin", sans-serif;
   background-color: White;
   font-weight: 500;
   margin: 0;
