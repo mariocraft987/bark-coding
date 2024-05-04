@@ -8,7 +8,7 @@ html:has(.dark-mode) {
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: White;
-  font-weight: 500;
+  font-weight: 450;
   margin: 0;
 }
 
@@ -84,8 +84,8 @@ body {
       text-decoration: underline;
 }
 input {
-    padding: 5px;
-    border-radius: 10px;
+    padding: 6px;
+    border-radius: 8px;
     border-color: #a3a3a3;
     border-style: solid;
     border-width: 1px;
@@ -115,7 +115,7 @@ input {
 .searchBar {
   display: inline-block;
   padding: 6px 15px;
-  font-size: 17px;
+  font-size: 15px;
   border: none;
   color: #000000!important;
   background-color: rgb(120, 188, 255)!important;
@@ -163,7 +163,7 @@ body.dark-mode {
 }
 
 .screen {
-border:2px solid #000000;
+border:3px solid #000000;
 border-radius: 5px;
 float: right;
 }
@@ -227,7 +227,7 @@ xml category {
 }
 
 #projectToolbar {
-  height: 30px;
+  height: 25px;
 }
 
 .projectToolbarButton {
@@ -238,7 +238,7 @@ xml category {
 
 #footer {
     background-color: #f1f1f1;
-    padding: 60px;
+    padding: 80px;
 }
 
 .footer-row {
