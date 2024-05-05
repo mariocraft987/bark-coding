@@ -21,7 +21,7 @@ Bark has many features, including:
 
 # Contribution
 Please read our <a href="https://github.com/mariocraft987/bark.github.io/blob/main/CONTRIBUTING.md">contribution guidelines</a> before contributing.
-To be a part of Bark's development, please choose a job from <a href="https://github.com/mariocraft987/bark.github.io/blob/main/CONTRIBUTING.md">`JOBS.md`</a> and follow the instructions to apply.
+To be a part of Bark's development, please choose a job from <a href="https://github.com/mariocraft987/bark.github.io/blob/main/JOBS.md">`JOBS.md`</a> and follow the instructions to apply.
 ## Staff/Contributors
 [<img src="https://avatars.githubusercontent.com/u/154646419?v=4" alt="mariocraft" title="mariocraft" width="70" height="70" style="border-radius:100%">](https://github.com/mariocraft987)
 [<img src="https://avatars.githubusercontent.com/u/130254323?v=4" alt="nmsderp" title="nmsderp" width="70" height="70" style="border-radius:100%">](https://github.com/nmsderp)
