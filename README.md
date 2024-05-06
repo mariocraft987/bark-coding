@@ -31,6 +31,7 @@ To be a part of Bark's development, please choose a job from <a href="https://gi
 [<img src="https://avatars.githubusercontent.com/u/110662505?v=4" alt="Adam" title="Adam" width="70" height="70" style="border-radius:100%">](https://github.com/Bashamega)
 [<img src="https://avatars.githubusercontent.com/u/158528051?v=4" alt="Kevenn" title="Kevenn" width="70" height="70" style="border-radius:100%">](https://github.com/QuirkyWorks)
 [<img src="https://avatars.githubusercontent.com/u/164731988?v=4" alt="Rubiidev Alt" title="Rubiidev Alt" width="70" height="70" style="border-radius:100%">](https://github.com/Rubiidev18alt)
+[<img src="https://avatars.githubusercontent.com/u/115564143?v=4" alt="" title="BwnnyRxbbit" width="70" height="70" style="border-radius:100%">](https://github.com/Funtasmo)
 [<img src="https://avatars.githubusercontent.com/u/167290033?v=4" alt="" title="BwnnyRxbbit" width="70" height="70" style="border-radius:100%">](https://github.com/BwnnyRxbbit)
 <hr>
 
