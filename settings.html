@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Site settings</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/png">
+        <link rel="stylesheet" href="src/themes/bluedodger.css">
+    </head>
+    <body>
+        <span id="navbar"></span>
+        <div class="textCenter">
+            <p>Work in Progress</p>
+        </div>
+    </body>
+    <script>
+        fetch('https://bark-coding.vercel.app/package.json')
+    .then(res => res.json()).then(data => {
+    obj = data;})
+  .then(() => {
+      document.getElementById('version').innerHTML = "Current version: "+obj.version;
+   });
+    </script>
+    <script src="index.js"></script>
+</html>
