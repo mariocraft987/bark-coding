@@ -88,21 +88,6 @@ fetch('https://bark-coding.vercel.app/src/scripts/tips.json')
     }
 }
 
-function checkSignup() {
-    let username = document.getElementById('username').value;
-    let password = document.getElementById('password').value;
-    let email = document.getElementById('email').value;
-    let gender = document.getElementById('gender').value;
-    let dob = document.getElementById('birthday').value;
-    let errormsg = document.getElementById("errormsg")
-
-            if (username != '', password != '', email != '', dob != '') {
-                if (password.length < 3) {errormsg.innerHTML = "Please make your username more than 3 characters!" } else
-                if (password.length > 12) {errormsg.innerHTML = "Please make your username lower than 13 characters!" } else {
-                    document.getElementById('page').innerHTML = '<br/><h2>Welcome to Bark ' + username + '!</h2>';
-            }
-    }
-
 function jobRegister() {
     let job = document.querySelector('input[name=job]:checked').value;
     let username = document.getElementById('github-username').value;
