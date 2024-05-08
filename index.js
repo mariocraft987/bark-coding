@@ -6,10 +6,10 @@ let commitsLength = 150
 
 let mobile = window.navigator.userAgent.toLowerCase().includes("mobi");
 
-console.error("Exit Now! This part is used for devolopers. \n Hackers could tell you to paste strings here. \n DON'T DO IT");
+console.error("Exit Now! This part is used by devolopers. \n Hackers could tell you to paste strings here to hack your Bark account. \n DON'T DO IT");
 
 // navbar
-content = '<div class="navbar"><a href="'+baseUrl+'"><img src="src/images/Logo.svg" alt="bark" width="25" height="25" ></a><a href="https://bark-coding.vercel.app/editor_new">create</a><a href="explore.html">explore</a>'
+content = '<div class="navbar"><a href="'+baseUrl+'"><img src="src/images/Logo.svg" alt="bark" width="25" height="25" ></a><a href="https://bark-coding.vercel.app/editor_new">Create</a><a href="explore.html">Explore</a>'
 content += '<a href="ideas.html">Ideas</a><a href="about.html">About</a><a href="https://github.com/mariocraft987/bark.github.io/discussions">Discuss</a><a href="settings.html">Settings</a>'
 // special april fools button ;)
 if (new Date().getMonth() === 3 && new Date().getDate() === 1) {
