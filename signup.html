@@ -33,12 +33,11 @@
       <br/>
       <br/>
       <label for="gender">Gender:</label>
-      <input list="genders" name="gender" id="gender" placeholder="gender"required="required"/>
-      <datalist id="genders">
-        <option value="Female">
-        <option value="Male">
-        <option value="Other">
-      </datalist>
+      <select name="gender" id="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
       <br/>
       <br/>
     <input class="buttonFrBx" type="submit" value="Submit" onclick="checkSignup()"/>
