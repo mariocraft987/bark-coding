@@ -31,6 +31,22 @@
     required="required"/>
       <br/>
       <br/>
+    <label for="birthday">Birthday:</label>
+      <input type="birthday" id="birthday" placeholder="birthday" 
+      <br/>
+      <br/>
+    <fieldset data-role="controlgroup">
+      <legend>Choose your gender:</legend>
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="male" value="male" checked>
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="female" value="female">
+        <label for="other">Other</label>
+        <input type="radio" name="gender" id="other" value="other">
+      </fieldset>
+      <br/>
+      <br/>
+    required="required"/>
     <input class="buttonFrBx" type="submit" value="Submit" onclick="checkSignup()"/>
     <p>Note: Bark accounts are being worked on.</p>
     </form>
