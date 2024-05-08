@@ -19,7 +19,7 @@ content += '<a class="dark-mode-button" id="darkModeToggle"><dmbico alt="Dark Mo
 if (localStorage.getItem("myBarkUsername") == "") {
     content += '<a class="right">sign out</a><a class="right">profile</a>'
 } else {
-    content += '<a href="login.html" class="right">sign in</a><a href="signup.html" class="right">join bark</a></div>'
+    content += '<a href="login.html" class="right">Sign in</a><a href="signup.html" class="right">Join bark</a></div>'
 }
 document.getElementById('navbar').innerHTML = content;
 
