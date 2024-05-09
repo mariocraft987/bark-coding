@@ -145,13 +145,13 @@ function center() {
   const timeoutId = setTimeout(betterDelay, 10);
   timeouts.push(timeoutId);
 }
-function resetsize () {
+function resetsize() {
   imgWidth = 72.54920959472656
   imgHeight = 96.2669830322265
   const timeoutId = setTimeout(betterDelay, 10);
   timeouts.push(timeoutId);
 }
-function setsize (size) {
+function setsize(size) {
   imgWidth = size
   imgHeight = size
   const timeoutId = setTimeout(betterDelay, 10);

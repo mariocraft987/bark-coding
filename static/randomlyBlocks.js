@@ -105,7 +105,7 @@
             text: 'get Miliseconds since 1970',
             disableMonitor: true,
           },
-            
+
         ],
       };
     }
@@ -114,7 +114,7 @@
     }
 
     YNalert(args) {
-      return("hello!")
+      return ("hello!")
     }
 
     changeTitle(args) {
@@ -163,6 +163,6 @@
       return pressLog
     }
   }
-  
+
   Scratch.extensions.register(new RandomlyBlocks())
 })(Scratch);
