@@ -845,6 +845,9 @@ Blockly.Blocks['fetch'] = {
     javascript.javascriptGenerator.forBlock['movement_move_y'] = function(block, generator) {
       return "basicMoveY(" + block.getFieldValue("NUM") + ");";
     };
+javascript.javascriptGenerator.forBlock['center'] = function(block, generator) {
+      return "center();";
+    };
     javascript.javascriptGenerator.forBlock['movement_moveback'] = function(block, generator) {
       return "basicMoveBack();";
     };
