@@ -33,12 +33,13 @@
       <br/>
       <br/>
       <label for="gender">Gender:</label>
-      <input list="genders" name="gender" id="gender" placeholder="gender"required="required"/>
-      <datalist id="genders">
-        <option value="Female">
-        <option value="Male">
-        <option value="Other">
-      </datalist>
+      <select name="gender" id="gender" required>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="none">Non-binary</option>
+        <option value="other">Other</option>
+        <option value="none">Prefer not to say</option>
+      </select>
       <br/>
       <br/>
       <label for="country">country:</label>
@@ -287,10 +288,27 @@
     </datalist>
     <br><br>    
     <input class="buttonFrBx" type="submit" value="Submit" onclick="checkSignup()"/>
+    <span style="color: red;" id="errormsg"></span>
     <p>Note: Bark accounts are being worked on.</p>
     </form>
   </span>
   </div>
   </body>
   <script src="index.js"></script>
+  <script>
+    function checkSignup() {
+    let username = document.getElementById('username').value;
+    let password = document.getElementById('password').value;
+    let email = document.getElementById('email').value;
+    let gender = document.getElementById('gender').value;
+    let dob = document.getElementById('birthday').value;
+    let errormsg = document.getElementById("errormsg")
+
+            if (username != '', password != '', email != '', dob != '') {
+                if (password.length < 3) {errormsg.innerHTML = "Please make your username more than 3 characters!" } else
+                if (password.length > 12) {errormsg.innerHTML = "Please make your username lower than 13 characters!" } else {
+                    document.getElementById('page').innerHTML = '<br/><h2>Welcome to Bark ' + username + '!</h2>';
+            }
+    }
+  </script>
 </html>

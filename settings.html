@@ -10,21 +10,20 @@
     <body>
         <span id="navbar"></span>
         <div class="textCenter">
+            <br/>
+            <br/>
             <form>
                 <label for="favcolor">Navbar Color:</label>
                 <input type="color" id="navbar_color" name="navbar_color" value="#ff0000"><br><br>
-                <input type="submit">
+                <input type="submit" value="Apply">
             </form>
-            <p>This feature is a work in progress.</p>
+            <br/>
+                    <p>Or, Select A Theme Below:</p>
+          <button type="button">bluedodger</button> <button type="button">browndodger</button> <button type="button">classic blue</button> <button type="button">prandihi</button>
+            <br/><br/>
+            <input type="submit" value="Apply">
+           <p>This feature is a work in progress.</p>
         </div>
     </body>
-    <script>
-        fetch('https://bark-coding.vercel.app/package.json')
-    .then(res => res.json()).then(data => {
-    obj = data;})
-  .then(() => {
-      document.getElementById('version').innerHTML = "Current version: "+obj.version;
-   });
-    </script>
     <script src="index.js"></script>
 </html>

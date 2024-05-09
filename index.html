@@ -23,7 +23,7 @@
       <p>Bark is a programming language building off of Google's <i>Blockly</i>.</p>
       <p>Bark is inspired by <a class="link" href="https://scratch.mit.edu">Scratch</a>. <img src='src/emojis/svg/smiley.svg' alt="smiley emoji" width="20" height="20"><img src='src/emojis/svg/thumb.svg' alt="thumbs up emoji" width="20" height="20"></p>
       <p>Created by <a href="https://github.com/mariocraft987">mariocraft987</a> and many awesome <a href="https://github.com/mariocraft987/bark.github.io/graphs/contributors">contributors!</a></p>
-      <iframe width="280" height="160" src="https://www.youtube.com/embed/0YtI5jil8D8?si=xDzRdlFlkbXg7QxT" title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe width="280" height="160" src="https://www.youtube.com/embed/OmJAIourvDI?si=Phe9fc7XcRbENm1e" title="YouTube video player" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
       <div class="box">
       <span id="boxChanger">
@@ -46,4 +46,24 @@
 </body>
 <script src="index.js"></script>
 <script src="src/scripts/replacer.js"></script>
+<script>
+    function recentCom() {
+    document.getElementById("boxChanger").innerHTML = "<h2>Fetching commits...</h2><p>please wait...</p>"; // get it? "fetching" commits??? eh????........anyone?
+    fetch('https://api.github.com/repos/Mariocraft987/bark.github.io/commits?per_page=50')
+        .then(response => response.json())
+        .then(commits => {
+            var Commits = '<h2>Recent Commits</h2><ul style="overflow-y: scroll; height: 150px;"><br/>';
+            commits.slice(0, commitsLength).forEach(commit => {
+                Commits += `<div title="${replace(commit.author.login)}: ${replace(commit.commit.message)}"><li><a href="https://github.com/${replace(commit.author.login)}"><img style="border-radius:12px;margin-top:-4px;margin-left:-6px" src="https://github.com/${commit.author.login}.png" width="21"></a><a class="linkoncommits" href="${commit.html_url}">${replace(commit.commit.message)}</a></li></div>`;
+            });
+            Commits += '</ul><br><a class="buttonFrBx" href="https://github.com/Mariocraft987/bark.github.io/commits/main/" style="text-align: center;">See all</a><br>';
+            finalCommits = Commits.replaceAll(":trollface:", "<img src='src/emojis/svg/troll.svg' width='23'>")
+            document.getElementById("boxChanger").innerHTML = finalCommits + "<br/>"
+        })
+        .catch(error => {
+            console.error('Error fetching commits:', error);
+            document.getElementById("boxChanger").innerHTML = '<h2>Oops... :(</h2><p>Failed to load commits. Check your connection and try again.</p>';
+        });
+}
+  </script>
 </html>
