@@ -106,15 +106,15 @@ const emojis = [
     {
         emoji: "clap",
         url: "src/emojis/svg/normal/clap.svg"
-    },
+    },/*
+    {
+        emoji: "clapAnim",
+        url: "src/emojis/svg/normal/clap_anim.gif"
+    }, SHOULD NOT BE USED*/
     {
         emoji: "barklogo",
         url: "src/emojis/svg/normal/barklogo.svg"
     },
-    /*{
-        emoji: "emoji name",
-        url: "emoji image link"
-    },*/
 ];
 
 function t(length) {
@@ -131,8 +131,7 @@ function replace(text) {
         .replaceAll("<", "&lt;")
         .replaceAll(">", "&gt;")
 
-        // Some terms listed here are only slices of words. this is because there are many different words (generally offensive and sexual) that begin with these terms.
-        // 🆘 I wouldn't recommend searching these terms 🆘
+        // some terms listed here are only slices of words. this is because there are many different words (generally offensive) that begin with these terms
         .replace(/(strip club|prostitute)+/gim, t(10))
         .replace(/(paedophile|wet dream)+/gim, t(9))
         .replace(/(ejaculat|beastial|masturbat|testicle|pedophile|stripper)+/gim, t(8))

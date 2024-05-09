@@ -9,8 +9,8 @@
     <script src="https://bark-coding.vercel.app/editor_new/p5.min.js"></script>
     <script src="https://bark-coding.vercel.app/editor_new/sketch.js"></script>
     
-    <script src="https://bark-coding.vercel.app/editor_new/custom_category_es6.js"></script>
-    <script src="https://bark-coding.vercel.app/editor_new/toolbox_label_es6.js"></script>
+    <script src="custom_category_es6.js"></script>
+    <script src="toolbox_label_es6.js"></script>
     <link rel="stylesheet" lang="css" href="https://bark-coding.vercel.app/src/themes/bluedodger.css">
     <style>
       @import url(https://fonts.googleapis.com/css?family=Montserrat);
@@ -103,7 +103,7 @@
 
       .blocklyTreeLabel {
         font: 12px "Montserrat";
-        color: #fff;
+        color: #000;
         padding: 13px;
       }
 
@@ -141,12 +141,12 @@
   <body onload="start()" class="code">
     <div class="navbar">
       <a href="https://bark-coding.vercel.app"><img src="https://bark-coding.vercel.app/src/images/Logo.svg" alt="Bark" width="25" height="25"></a>
-      <a href="#">Save</a>
-      <a href="#" id="downloadbutton" onclick="downloadproject();" title="download project to your computer.">Download</a>
+      <a href="#">save</a>
+      <a href="#" id="downloadbutton" onclick="downloadproject();" title="download project to your computer.">download</a>
 	<input type="file" id="fileInput" style="display: none;" onchange="loadWorkspaceFromFile(this.files[0])" />
-<a href="#" onclick="openFileInput();" title="open a saved project">Open</a>
-      <a href="#" title="watch helpful tutorials to expand your knowledge!">Tutorials</a>
-      <a href="#" onclick="alert('you can\'t publish projects yet! :(');" title="share your project so the world can see!">Share</a>
+<a href="#" onclick="openFileInput();" title="open a saved project">open</a>
+      <a href="#" title="watch helpful tutorials to expand your knowledge!">tutorials</a>
+      <a href="#" onclick="alert('you can\'t publish projects yet! :(');" title="share your project so the world can see!">share</a>
       <a class="dark-mode-button" id="darkModeToggle"><dmbico alt="Dark Mode"></dmbico></a>
     </div>
                                   <!-- Code Tab -->
