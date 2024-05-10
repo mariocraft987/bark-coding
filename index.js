@@ -1,6 +1,6 @@
 /* Some common scripts created in javascript to work the website, and make it interactive. */
 
-let newsBox = "Bark has a new look created by <a href='https://github.com/Pranidhi10'>Pranidhi10!</a> which is being decided if added or not"
+let newsBox = "Come see Bark's 5th trailer!"
 let baseUrl = "https://bark-coding.vercel.app"
 let commitsLength = 150
 
