@@ -14,7 +14,7 @@ const emojis = [
     {
         emoji: "smiley",
         url: "src/emojis/svg/normal/smiley.svg"
-    }, 
+    },
     {
         emoji: "happy",
         url: "src/emojis/svg/normal/happy.svg"
@@ -127,7 +127,7 @@ function t(length) {
 
 function replace(text) {
     let start = String(text)
-         // DO NOT REMOVE. KEEP AT TOP
+        // DO NOT REMOVE. KEEP AT TOP
         .replaceAll("<", "&lt;")
         .replaceAll(">", "&gt;")
 
@@ -144,14 +144,14 @@ function replace(text) {
         .replaceAll(/(🤱|💦|🕳️|🤤|🍑|🍆|🖕|😩|😫|🍒|🥵|🤓|👙)+/gim, t(1))
 
         // emojis of dev
-        .replaceAll(":mariocraft:", "<img src='src/emojis/svg/dev/mariocraft.svg' alt='dev' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
-        .replaceAll(":qwertyy:", "<img src='src/emojis/svg/dev/qwertyy.png' alt='dev'' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
-        .replaceAll(":rubiidev:", "<img src='src/emojis/svg/dev/rubiidev.svg' alt='dev' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
-        .replaceAll(":nmsderp:", "<img src='src/emojis/svg/dev/nmsderp.svg' alt='dev'' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
-        .replaceAll(":dumo:", "<img src='src/emojis/svg/dev/dumo.svg' alt='dev' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
+        .replaceAll(":mariocraft:", "<img src='src/emojis/svg/dev/mariocraft.svg' alt='dev' style='margin-bottom: -7px;' width='" + emojisize + "' height='" + emojisize + "'>")
+        .replaceAll(":qwertyy:", "<img src='src/emojis/svg/dev/qwertyy.png' alt='dev'' style='margin-bottom: -7px;' width='" + emojisize + "' height='" + emojisize + "'>")
+        .replaceAll(":rubiidev:", "<img src='src/emojis/svg/dev/rubiidev.svg' alt='dev' style='margin-bottom: -7px;' width='" + emojisize + "' height='" + emojisize + "'>")
+        .replaceAll(":nmsderp:", "<img src='src/emojis/svg/dev/nmsderp.svg' alt='dev'' style='margin-bottom: -7px;' width='" + emojisize + "' height='" + emojisize + "'>")
+        .replaceAll(":dumo:", "<img src='src/emojis/svg/dev/dumo.svg' alt='dev' style='margin-bottom: -7px;' width='" + emojisize + "' height='" + emojisize + "'>")
 
         // joke emojis
-        .replaceAll(":mewing:", "<img src='src/emojis/svg/joke/mewing.svg' alt='mewing' style='margin-bottom: -7px;' width='"+ emojisize + "' height='"+ emojisize + "'>")
+        .replaceAll(":mewing:", "<img src='src/emojis/svg/joke/mewing.svg' alt='mewing' style='margin-bottom: -7px;' width='" + emojisize + "' height='" + emojisize + "'>")
 
         // devoloper tags
         .replaceAll(/(@mariocraft987|@mariocraft)+/gim, '<a href="https://github.com/Mariocraft987" style="background-color: #988bbf;height: 16px;display: inline-block;padding: 5px;margin: -5px 3px;border: 1px solid #ebd7ff;border-radius: 10px;color: #ffffff;position: relative;top: 2px; text-decoration: none;"><img src="https://github.com/mariocraft987.png" width="16px" style="border-radius: 50%;"><span style="top: -2px;margin-left: 3px;margin-right: 3px;position: relative;">mariocraft</span></a>')
