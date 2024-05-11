@@ -90,5 +90,5 @@ input[type="color"]::-moz-color-swatch {
     border: none;
 }
 .active{
-    border: red 5px solid;
+    outline: gray 3px solid;
 }
