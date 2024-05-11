@@ -58,7 +58,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
   color: white;
-  
+
 }
 
 .box {
@@ -78,23 +78,27 @@ body {
 .dark-mode .box {
   color: inherit;
 }
+
 .link {
-      color: dodgerBlue;
-      text-decoration: none;
+  color: dodgerBlue;
+  text-decoration: none;
 }
+
 .link:hover {
-      text-decoration: underline;
+  text-decoration: underline;
 }
+
 .link:active {
-      text-decoration: underline;
+  text-decoration: underline;
 }
+
 input {
-    padding: 6px;
-    border-radius: 8px;
-    border-color: #a3a3a3;
-    border-style: solid;
-    border-width: 1px;
-    font-family: inherit;
+  padding: 6px;
+  border-radius: 8px;
+  border-color: #a3a3a3;
+  border-style: solid;
+  border-width: 1px;
+  font-family: inherit;
 }
 
 * .dark-mode input {
@@ -123,8 +127,8 @@ input {
   padding: 6px 15px;
   font-size: 15px;
   border: none;
-  color: #000000!important;
-  background-color: rgb(120, 188, 255)!important;
+  color: #000000 !important;
+  background-color: rgb(120, 188, 255) !important;
   border-radius: 100px;
   flex: 1 0 auto;
 }
@@ -160,60 +164,60 @@ body.dark-mode {
 }
 
 .blockbar {
-  background-color: #e5e4e4; 
-  height: 650px; 
-  width: 200px; 
-  text-align: center; 
+  background-color: #e5e4e4;
+  height: 650px;
+  width: 200px;
+  text-align: center;
   box-shadow: 1px 1px 3px;
   float: left;
 }
 
 .screen {
-border:3px solid #000000;
-border-radius: 5px;
-float: right;
+  border: 3px solid #000000;
+  border-radius: 5px;
+  float: right;
 }
 
 a {
-color: dodgerblue;
+  color: dodgerblue;
 }
 
 .slNav {
-background-color: rgb(255, 153, 0);
-border-radius: 10px;
-cursor: pointer;
-color: white;
+  background-color: rgb(255, 153, 0);
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
 }
 
 .font {
-font-family: Tahoma, sans-serif, monospace;
+  font-family: Tahoma, sans-serif, monospace;
 }
 
 .creditsHeader {
- color: white;
-background-color: dodgerBlue;
-padding: 35px;
-font-size: 20pt;
-text-align: center;
+  color: white;
+  background-color: dodgerBlue;
+  padding: 35px;
+  font-size: 20pt;
+  text-align: center;
 }
 
 .CreditsPT {
-margin: 88px;
-margin-top: -55px;
-font-size: 20px;
+  margin: 88px;
+  margin-top: -55px;
+  font-size: 20px;
 }
 
 #TextI {
-resize: none;
+  resize: none;
 }
 
 .linkButText {
-color: black;
-text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 
 li {
-list-style-type: none;
+  list-style-type: none;
 }
 
 xml category {
@@ -243,24 +247,24 @@ xml category {
 }
 
 #footer {
-    background-color: #f1f1f1;
-    padding: 80px;
+  background-color: #f1f1f1;
+  padding: 80px;
 }
 
 .footer-row {
-    float: left;
-    width: 33.333%;
-    margin-bottom: 40px;
+  float: left;
+  width: 33.333%;
+  margin-bottom: 40px;
 }
 
 ::-moz-selection {
-    color: #ffffff;
-    background: #4161ffb8;
+  color: #ffffff;
+  background: #4161ffb8;
 }
 
 ::selection {
-    color: #ffffff;
-    background: #4161ffb8;
+  color: #ffffff;
+  background: #4161ffb8;
 }
 
 ::placeholder {
@@ -277,15 +281,16 @@ textarea {
 /* mobile style */
 @media (pointer: coarse) {
   .box {
-    width: calc(100vw - 60px)!important;
-    margin-left: 15px!important;
-    padding: 16px 15px!important;
+    width: calc(100vw - 60px) !important;
+    margin-left: 15px !important;
+    padding: 16px 15px !important;
   }
 
   .navbar {
-    overflow-x: scroll!important;
+    overflow-x: scroll !important;
   }
 }
+
 footer {
   background-color: rgb(0, 127, 255, 0.24);
   margin-top: 200px;

@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
+
 /*CSS styles for Bark, without them Bark would not be structured correctly*/
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -64,16 +65,18 @@ body {
   margin-left: 2%;
 }
 
-      .link {
-        color: brown;
-        text-decoration: none;
-      }
-      .link:hover {
-        text-decoration: underline;
-      }
-      .link:active {
-        text-decoration: underline;
-      }
+.link {
+  color: brown;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.link:active {
+  text-decoration: underline;
+}
 
 button.buttonFrBx {
   background-color: rgb(0, 128, 255);
@@ -124,60 +127,60 @@ body.dark-mode {
 }
 
 .blockbar {
-  background-color: #e5e4e4; 
-  height: 650px; 
-  width: 200px; 
-  text-align: center; 
+  background-color: #e5e4e4;
+  height: 650px;
+  width: 200px;
+  text-align: center;
   box-shadow: 1px 1px 3px;
   float: left;
 }
 
 .screen {
-border:2px solid #000000;
-border-radius: 5px;
-float: right;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  float: right;
 }
 
 a {
-color: dodgerblue;
+  color: dodgerblue;
 }
 
 .slNav {
-background-color: rgb(255, 153, 0);
-border-radius: 10px;
-cursor: pointer;
-color: white;
+  background-color: rgb(255, 153, 0);
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
 }
 
 .font {
-font-family: Tahoma, sans-serif;
+  font-family: Tahoma, sans-serif;
 }
 
 .creditsHeader {
- color: white;
-background-color: dodgerBlue;
-padding: 35px;
-font-size: 20pt;
-text-align: center;
+  color: white;
+  background-color: dodgerBlue;
+  padding: 35px;
+  font-size: 20pt;
+  text-align: center;
 }
 
 .CreditsPT {
-margin: 88px;
-margin-top: -55px;
-font-size: 20px;
+  margin: 88px;
+  margin-top: -55px;
+  font-size: 20px;
 }
 
 #TextI {
-resize: none;
+  resize: none;
 }
 
 .linkButText {
-color: black;
-text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 
 .none-bullets {
-list-style-type: none;
+  list-style-type: none;
 }
 
 xml category {

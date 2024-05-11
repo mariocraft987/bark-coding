@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.59.1/codemirror.min.css">
     <link rel="shortcut icon" href="/favicon.ico" type="image/png">
     <link rel="stylesheet" href="/src/themes/bluedodger.css">
-    <style id="dark-reader-style" type="text/css">@media screen {
-        html {-webkit-transition : -webkit-filter 300ms linear;}
-    }</style>
+    <style id="dark-reader-style" type="text/css">
+        @media screen {
+            html {
+                -webkit-transition: -webkit-filter 300ms linear;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <h2>Write Lua Code and Share it With The Bark Community!</h2>
     <textarea id="code-editor"></textarea>
@@ -82,4 +88,5 @@
         document.getElementById('run-btn').addEventListener('click', runCode);
     </script>
 </body>
+
 </html>
