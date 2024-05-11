@@ -89,3 +89,6 @@ input[type="color"]::-moz-color-swatch {
     border-radius: 10px;
     border: none;
 }
+.active{
+    border: red 5px solid;
+}
