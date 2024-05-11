@@ -36,10 +36,10 @@ body {
 .navbar a {
   float: left;
   display: block;
-  color: white;
+  color: white!important;
   text-align: left;
   padding: 20px 25px;
-  text-decoration: none;
+  text-decoration: none!important;
   line-height: 25px;
 }
 
