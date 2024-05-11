@@ -124,4 +124,9 @@ if (theme) {
         link.href = `https://bark-coding.vercel.app/src/themes/${theme}.css`;
         document.head.append(link);
     };
+}else{
+    const link = document.createElement('link');
+    link.rel = "stylesheet";
+    link.href = `https://bark-coding.vercel.app/src/themes/bluedodger.css`;
+    document.head.append(link);
 };
