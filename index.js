@@ -113,10 +113,14 @@ if (theme) {
         const style = document.createElement('style');
         style.innerHTML = `
         .navbar{
-            background:${theme};
+            background:${theme}!important;
         }
         `;
         document.head.append(style);
+        const link = document.createElement('link');
+        link.rel = "stylesheet";
+        link.href = `https://bark-coding.vercel.app/src/themes/bluedodger.css`;
+        document.head.append(link);
     } else if (theme != "bluedodger") {
         const link = document.createElement('link');
         link.rel = "stylesheet";
