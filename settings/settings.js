@@ -7,7 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 btn.classList.add('active');
             }
         }
-    }
+    }else{
+        const btn = document.querySelector('[name="bluedodger"]');
+        if (btn) {
+            btn.classList.add('active');
+        };
+    };
     const form = document.getElementById('navColor');
     if (form) {
         form.addEventListener('submit', (e) => {
