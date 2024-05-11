@@ -9,8 +9,8 @@ let mobile = window.navigator.userAgent.toLowerCase().includes("mobi");
 console.error("Exit Now! This part is used by devolopers. \n Hackers could tell you to paste strings here to hack your Bark account. \n DON'T DO IT");
 
 // navbar
-content = '<div class="navbar"><a href="' + baseUrl + '"><img src="src/images/Logo.svg" alt="bark" width="25" height="25" ></a><a href="https://bark-coding.vercel.app/editor_new">Create</a><a href="explore.html">Explore</a>'
-content += '<a href="ideas.html">Ideas</a><a href="about.html">About</a><a href="https://github.com/mariocraft987/bark.github.io/discussions">Discuss</a><a href="settings.html">Settings</a>'
+content = '<div class="navbar"><a href="' + baseUrl + '"><img src="https://bark-coding.vercel.app/src/images/Logo.svg" alt="bark" width="25" height="25" ></a><a href="https://bark-coding.vercel.app/editor_new">Create</a><a href="/explore.html">Explore</a>'
+content += '<a href="/ideas.html">Ideas</a><a href="/about.html">About</a><a href="https://github.com/mariocraft987/bark.github.io/discussions">Discuss</a><a href="/settings">Settings</a>'
 // special april fools button ;)
 if (new Date().getMonth() === 3 && new Date().getDate() === 1) {
     content += "<a id='flip-it-afd-btn'>FLIP IT</a>";
@@ -27,8 +27,8 @@ document.getElementById('navbar').innerHTML = content;
 if (document.url != "baseUrl") {
     var footer;
     footer = '<footer><p style="color: #777;">Looks like you\'ve reached the bottom.</p><p>';
-    footer += '<a href="index.html">Home</a> '; // Home
-    footer += '<a href="editor_new/">Editor</a> '; // Editor
+    footer += '<a href="/index.html">Home</a> '; // Home
+    footer += '<a href="/editor_new/">Editor</a> '; // Editor
     footer += '<a href="https://github.com/mariocraft987/bark.github.io/">Github</a> '; // Github
     footer += '<br/><br/><a href="https://github.com/mariocraft987/bark-coding/wiki">Wiki</a> '; // Wiki
     footer += '<a href="https://discord.gg/hXmHw7H9BF">Discord</a> '; // Discord
@@ -108,4 +108,20 @@ window.addEventListener('load', initializeDarkMode);
 
 whatsNew();
 
-
+const theme = localStorage.getItem('theme');
+if (theme) {
+    if (theme.startsWith('#')) {
+        const style = document.createElement('style');
+        style.innerHTML = `
+        .navbar{
+            background:${theme};
+        }
+        `;
+        document.head.append(style);
+    } else if (theme != "bluedodger") {
+        const link = document.createElement('link');
+        link.rel = "stylesheet";
+        link.href = `https://bark-coding.vercel.app/src/themes/${theme}.css`;
+        document.head.append(link);
+    };
+};

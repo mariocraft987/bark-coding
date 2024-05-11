@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site settings</title>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/png">
+    <link rel="stylesheet" href="../src/themes/bluedodger.css">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <span id="navbar"></span>
+    <main>
+        <section>
+            <br />
+            <br />
+            <form id="navColor">
+                <div style="display: flex;align-items: center;">
+                    <label for="favcolor">Navbar Color:</label>
+                    <input type="color" id="navbar_color" name="navbar_color" value="#ff0000"><br><br>
+                </div>
+
+                <input type="submit" value="Apply">
+            </form>
+            <br />
+            <p>Or, Select A Theme Below:</p>
+            <button type="button" name="bluedodger" class="themeBtn">Bluedodger</button>
+            <button type="button" name="browndodger" class="themeBtn">Browndodger</button>
+            <button type="button" name="clasicblue" class="themeBtn">Classic blue</button>
+            <button type="button" name="pranidhi" class="themeBtn">Prandihi</button>
+            <br /><br />
+            <input type="submit" value="Apply" id="applybtn">
+            <div id="warning">
+                <h2>Warning</h2>
+                <p>This feature is a work in progress.</p>
+                <p>Some features may not work</p>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="../index.js"></script>
+<script src="./settings.js"></script>
+
+</html>
