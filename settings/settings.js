@@ -11,15 +11,15 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 })
-var pendingTheme = localStorage.getItem('theme')
+var pendingTheme = localStorage.getItem('theme');
 const btns = Array.from(document.getElementsByClassName('themeBtn'));
 btns.forEach(btn => {
     btn.addEventListener('click', (e) => {
-        pendingTheme = e.target.name
+        pendingTheme = e.target.name;
     });
 });
 const applybtn = document.getElementById('applybtn');
 applybtn.addEventListener('click', () => {
     localStorage.setItem('theme', pendingTheme);
     window.location.reload();
-})
+});

@@ -108,7 +108,7 @@ window.addEventListener('load', initializeDarkMode);
 
 whatsNew();
 
-const theme = localStorage.getItem('theme')
+const theme = localStorage.getItem('theme');
 if (theme) {
     if (theme.startsWith('#')) {
         const style = document.createElement('style');
@@ -116,12 +116,12 @@ if (theme) {
         .navbar{
             background:${theme};
         }
-        `
+        `;
         document.head.append(style);
     } else if (theme != "bluedodger") {
         const link = document.createElement('link');
         link.rel = "stylesheet";
-        link.href = `https://bark-coding.vercel.app/src/themes/${theme}.css`
-        document.head.append(link)
-    }
-}
+        link.href = `https://bark-coding.vercel.app/src/themes/${theme}.css`;
+        document.head.append(link);
+    };
+};
