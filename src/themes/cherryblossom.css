@@ -74,8 +74,12 @@ body {
 }
 
 a {
-  color: #ff1ed5;
+  color: #eb12c3;
   text-decoration: none;
+}
+
+.dark-mode a {
+  color: #ff1ed5;
 }
 
 a:hover, a:active {
