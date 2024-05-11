@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bark - *username*'s Profile</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/png">
+</head>
+
+<body>
+  <!-- A developer test for a working bio. -->
+
+  <span id="navbar"></span>
+  <br /><br />
+  <div style="margin-left: 40px;"><span id="textbox"><textarea id="textI" name="bio" rows="5" cols="30"
+        placeholder="Enter Bio"></textarea>
+      <br /><input class="buttonFrBx" type="button" value="Update Bio"
+        onclick="document.getElementById('textbox').innerHTML = replace(document.getElementById('textI').value);"></span><br /><br>
+    <a href="https://github.com/mariocraft987/bark.github.io/blob/main/src/emojis/syntax.md" target="_blank"
+      rel="noopener noreferrer"><button class="buttonFrBx">Custom Syntax</button></a>
+    <p>Note: Emojis will work.</p>
+  </div>
+</body>
+
+<script src="index.js"></script>
+<script src="src/scripts/replacer.js"></script>
+
+</html>
