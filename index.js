@@ -111,8 +111,7 @@ const theme = localStorage.getItem('theme');
 if (theme) {
     if (theme.startsWith('#')) {
         const style = document.createElement('style');
-        var c = c.substring(1);
-        var rgb = parseInt(c, 16);
+        var rgb = parseInt(theme, 16);
         var r = (rgb >> 16) & 0xff;
         var g = (rgb >>  8) & 0xff;
         var b = (rgb >>  0) & 0xff;
