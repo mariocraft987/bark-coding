@@ -24,7 +24,7 @@ const users = [
         "active": true,
         "bio": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "pfp": "https://bark-coding.vercel.app/src/images/Logo.svg",
-        "password": "SupperSecret"
+        "password": "SuperSecret"
     }
 ];
 class Auth {
