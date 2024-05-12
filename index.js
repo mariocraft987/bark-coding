@@ -111,9 +111,20 @@ const theme = localStorage.getItem('theme');
 if (theme) {
     if (theme.startsWith('#')) {
         const style = document.createElement('style');
+        var c = c.substring(1);
+        var rgb = parseInt(c, 16);
+        var r = (rgb >> 16) & 0xff;
+        var g = (rgb >>  8) & 0xff;
+        var b = (rgb >>  0) & 0xff;
+        if (0.2126 * r + 0.7152 * g + 0.0722 * b < 40) {
+            var color = "black";
+        } else {
+            var color = "white";
+        }
         style.innerHTML = `
         .navbar{
             background:${theme}!important;
+            color: ${color}!important;
         }
         `;
         document.head.append(style);
