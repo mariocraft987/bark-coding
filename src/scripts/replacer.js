@@ -136,10 +136,10 @@ function replace(text) {
         .replace(/(strip club|prostitute)+/gim, t(10))
         .replace(/(paedophile|wet dream)+/gim, t(9))
         .replace(/(ejaculat|beastial|masturbat|testicle|pedophile|stripper)+/gim, t(8))
-        .replace(/(shut up|cumming|asshole|bestial|cocaine|jackass)+/gim, t(7))
+        .replace(/(cumming|asshole|bestial|cocaine|jackass)+/gim, t(7))
         .replace(/(penile|virgin|breast|condom|faggot|incest|molest|retard|rapist|hentai|orgasm|nudity)+/gim, t(6))
         .replace(/(bitch|pussy|penis|vagin|prick|whore|booty|boner|erect|horny|skank|sperm|teste|eroti|semen)+/gim, t(5))
-        .replace(/(fuck|shit|dick|cock|cunt|nigg|piss|slut|porn|boob|jizz|milf|dilf|pimp|rape|shat|sext|nude|tits|titt)+/gim, t(4))
+        .replace(/(fuck|dick|cock|cunt|nigg|slut|porn|boob|jizz|milf|dilf|pimp|rape|sext|nude|tits|titt)+/gim, t(4))
         .replace(/(sex|hoe|wtf|kys)+/gim, t(3))
         .replaceAll(/(🤱|💦|🕳️|🤤|🍑|🍆|🖕|😩|😫|🍒|🥵|🤓|👙)+/gim, t(1))
 
