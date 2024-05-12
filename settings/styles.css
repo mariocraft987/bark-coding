@@ -15,6 +15,7 @@ section,
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 50%;
     margin-top: 10px;
+    color: black;
 }
 
 label {
@@ -99,4 +100,7 @@ input[type="color"]::-moz-color-swatch {
 }
 .active{
     outline: gray 3px solid;
+}
+.dark-mode input[type="color"]{
+    background-color: white !important;
 }
