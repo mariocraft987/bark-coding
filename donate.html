@@ -13,10 +13,23 @@
 
   <span id="navbar"></span>
   <div class="textCenter">
-    <p>Hello</p>
+    <h1>We want to ask you something!</h1><br>
+    <p>Donations help keep our site free and accessable to all. Bark is powered by volunteers who donate their time to keep this project on it's feet.</p>
+    <p>Your support makes a huge difference!</p><br><br>
+    <button class="buttonFrBx" onclick="donate()">Donate now!</button>
+    <h2 id="text"></h2>
+    <input id="form" type="text" style="display: none;">
     <br />
   </div>
 </body>
 <script src="index.js"></script>
+<script>
+  const text = document.getElementById('text');
+  const form = document.getElementById('form');
 
+  function donate() {
+    text.innerText = "How much would you like to donate?";
+    form.style.display = 'block';
+  }
+</script>
 </html>

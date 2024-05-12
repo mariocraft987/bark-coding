@@ -1,8 +1,8 @@
 /* Some common scripts created in javascript to work the website, and make it interactive. */
 
-let newsBox = "Come see Bark's 5th trailer!"
-let baseUrl = "https://bark-coding.vercel.app"
-let commitsLength = 150
+let newsBox = "Come see Bark's 5th trailer!";
+let baseUrl = "https://bark-coding.vercel.app";
+let commitsLength = 150;
 
 let mobile = window.navigator.userAgent.toLowerCase().includes("mobi");
 
