@@ -5,7 +5,8 @@ const users = [
         "date_joined": "2022-01-01",
         "active": true,
         "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "pfp": "https://bark-coding.vercel.app/src/images/Logo.svg"
+        "pfp": "https://bark-coding.vercel.app/src/images/Logo.svg",
+        "password": "123"
     },
     {
         "id": 123456,
@@ -13,7 +14,8 @@ const users = [
         "date_joined": "2022-01-02",
         "active": false,
         "bio": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "pfp": "https://bark-coding.vercel.app/src/images/Logo.svg"
+        "pfp": "https://bark-coding.vercel.app/src/images/Logo.svg",
+        "password": "myPersonalPassword"
     },
     {
         "id": 789012,
@@ -21,12 +23,12 @@ const users = [
         "date_joined": "2022-01-03",
         "active": true,
         "bio": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "pfp": "https://bark-coding.vercel.app/src/images/Logo.svg"
+        "pfp": "https://bark-coding.vercel.app/src/images/Logo.svg",
+        "password": "SupperSecret"
     }
 ];
-
 class Auth {
-    constructor() {}
+    constructor() { }
 
     exists(id) {
         const user = users.find(user => user.id === id);
@@ -107,5 +109,15 @@ class Auth {
         } else {
             throw new Error('No user logged in.');
         }
+    }
+    login(userName, password) {
+        const user = this.exists(userName)
+        if (password == user.password) {
+            localStorage.setItem('user', user)
+            return true;
+        } else {
+            throw new Error('Not valid')
+        }
+
     }
 }

@@ -6,30 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bark - Login</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./src/styles/UI.css">
 </head>
 
 <body>
 
   <header id="navbar"></header>
-  <center>
-    <h1 class="text-center">Sign in</h1>
-    <form action="/login" method="post">
-      <div class="form-group"> <label for="username">Username:</label>
-        <input type="text" id="username" name="username" placeholder="username" required>
-      </div>
-      <br />
-      <div class="form-group">
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" placeholder="password" required>
-      </div>
-      <br />
-      <div class="text-center">
-        <button class="buttonFrBx" type="submit">Login</button>
-      </div>
-    </form>
-  </center>
+  <div class="container-center">
+    <div class="containers-shadow container-center">
+      <form>
+        <h1 class="text-center">Sign in</h1>
+        <div id="loginForm">
+          <div class="form-group"> <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="username" required class="w-lg">
+          </div>
+          <br />
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="password" required class="w-lg">
+          </div>
+          <br />
+          <div class="text-center">
+            <button class="buttonFrBx w-lg" type="submit">Login</button>
+          </div>
+        </div>
+      </form>
 
-
+    </div>
+  </div>
   <script src="index.js"></script>
 </body>
 
