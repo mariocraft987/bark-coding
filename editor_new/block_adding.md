@@ -23,7 +23,7 @@ Blockly.Blocks['movement_move'] = { // Moves sprite
       };
 ```
 Then we add the block design to `custom.js`, 
-After that we need to add it to the toolbox in `editor_new/index.html`
+After that we need to add it to the toolbox in `editor_new/`
 ```xml
 <block type="movement_move">
           <field name="NAME">3</field>

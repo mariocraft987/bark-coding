@@ -9,17 +9,17 @@ let mobile = window.navigator.userAgent.toLowerCase().includes("mobi");
 console.error("Exit Now! This part is used by devolopers. \n Hackers could tell you to paste strings here to hack your Bark account. \n DON'T DO IT");
 
 // navbar
-content = '<div class="navbar"><a href="' + baseUrl + '"><img src="https://bark-coding.vercel.app/src/images/Logo.svg" alt="bark" width="25" height="25" ></a><a href="https://bark-coding.vercel.app/editor_new">Create</a><a href="/explore.html">Explore</a>'
-content += '<a href="/ideas.html">Ideas</a><a href="/about.html">About</a><a href="https://github.com/mariocraft987/bark.github.io/discussions">Discuss</a><a href="/settings">Settings</a>'
+content = '<div class="navbar"><a href="' + baseUrl + '"><img src="https://bark-coding.vercel.app/src/images/Logo.svg" alt="bark" width="25" height="25" ></a><a href="https://bark-coding.vercel.app/editor_new">Create</a><a href="/explore">Explore</a>'
+content += '<a href="/ideas">Ideas</a><a href="/about">About</a><a href="https://github.com/mariocraft987/bark.github.io/discussions">Discuss</a><a href="/settings">Settings</a>'
 // special april fools button ;)
 if (new Date().getMonth() === 3 && new Date().getDate() === 1) {
     content += "<a id='flip-it-afd-btn'>FLIP IT</a>";
 }
-content += '<a class="dark-mode-button" id="darkModeToggle"><dmbico alt="Dark Mode"></dmbico></a><form action="search.html" style="display: contents;"><input class="searchBar" id="search" name="q" placeholder="Search for Projects"></input></form>'
+content += '<a class="dark-mode-button" id="darkModeToggle"><dmbico alt="Dark Mode"></dmbico></a><form action="search" style="display: contents;"><input class="searchBar" id="search" name="q" placeholder="Search for Projects"></input></form>'
 if (localStorage.getItem("myBarkUsername") == "") {
     content += '<a class="right">sign out</a><a class="right">profile</a>'
 } else {
-    content += '<a href="login.html" class="right">Sign in</a><a href="signup.html" class="right">Join bark</a></div>'
+    content += '<a href="login" class="right">Sign in</a><a href="signup" class="right">Join bark</a></div>'
 }
 document.getElementById('navbar').innerHTML = content;
 
@@ -27,7 +27,7 @@ document.getElementById('navbar').innerHTML = content;
 if (document.url != "baseUrl") {
     var footer;
     footer = '<footer><p style="color: #777;">Looks like you\'ve reached the bottom.</p><p>';
-    footer += '<a href="/index.html">Home</a> '; // Home
+    footer += '<a href="/index">Home</a> '; // Home
     footer += '<a href="/editor_new/">Editor</a> '; // Editor
     footer += '<a href="https://github.com/mariocraft987/bark.github.io/">Github</a> '; // Github
     footer += '<br/><br/><a href="https://github.com/mariocraft987/bark-coding/wiki">Wiki</a> '; // Wiki
@@ -57,7 +57,7 @@ function whatsNew() {
 function randomTxt() {
     //geeksforgeeks.org for the random text generator.
 
-    if (document.URL == baseUrl + "/explore.html") {
+    if (document.URL == baseUrl + "/explore") {
 
         fetch('https://bark-coding.vercel.app/src/scripts/tips.json')
             .then(res => res.json()).then(data => {
