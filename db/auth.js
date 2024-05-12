@@ -24,14 +24,14 @@ const users = [
         "active": true,
         "bio": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         "pfp": "https://bark-coding.vercel.app/src/images/Logo.svg",
-        "password": "SuperSecret"
+        "password": "SupperSecret"
     }
 ];
 class Auth {
     constructor() { }
 
-    exists(id) {
-        const user = users.find(user => user.id === id);
+    exists(idOrUsername) {
+        const user = users.find(user => user.id === idOrUsername || user.username === idOrUsername);
         if (user) {
             return user;
         } else {
@@ -111,13 +111,17 @@ class Auth {
         }
     }
     login(userName, password) {
-        const user = this.exists(userName)
-        if (password == user.password) {
-            localStorage.setItem('user', user)
+        const user = this.exists(userName);
+        if (password === user.password) {
+            localStorage.setItem('user', JSON.stringify(user)); // Serialize user object
             return true;
         } else {
-            throw new Error('Not valid')
+            throw new Error('Not valid');
         }
-
+    }
+}
+function redirect(){
+    if(new Auth().logged()){
+        window.location.href = "/"
     }
 }

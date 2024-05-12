@@ -14,7 +14,7 @@
   <header id="navbar"></header>
   <div class="container-center">
     <div class="containers-shadow container-center">
-      <form>
+      <form id="loginForm">
         <h1 class="text-center">Sign in</h1>
         <div id="loginForm">
           <div class="form-group"> <label for="username">Username:</label>
@@ -29,11 +29,17 @@
           <div class="text-center">
             <button class="buttonFrBx w-lg" type="submit">Login</button>
           </div>
+          <div class="error" id="error" style="display: none;">
+            <h2>Incorrect username or password</h2>
+            <p>Please try again</p>
+          </div>
         </div>
       </form>
 
     </div>
   </div>
+  <script src="db/auth.js"></script>
+  <script src="db/login.js"></script>
   <script src="index.js"></script>
 </body>
 

@@ -14,3 +14,12 @@
 .w-lg{
     width:100%;
 }
+.error {
+    margin-top: 5%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    border-left: red 5px solid;
+}
