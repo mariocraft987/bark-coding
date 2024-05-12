@@ -78,8 +78,8 @@ try {
                         ${contributor.login ==username?(
                             `<span id="gold">Founder</span>`
                         ):(``)}
-                        <p>${contributor.contributions}</p>
                         </section>
+                        <p>${contributor.contributions} contributions</p>
                         `;
                     } else {
                         contributorContainer.textContent = contributor.login;
