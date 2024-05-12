@@ -111,22 +111,6 @@ const theme = localStorage.getItem('theme');
 if (theme) {
     if (theme.startsWith('#')) {
         const style = document.createElement('style');
-        var rgb = parseInt(theme, 16);
-        var r = (rgb >> 16) & 0xff;
-        var g = (rgb >>  8) & 0xff;
-        var b = (rgb >>  0) & 0xff;
-        if ((0.2126 * r + 0.7152 * g + 0.0722 * b) < 40) {
-            var color = "black";
-        } else {
-            var color = "white";
-        }
-        style.innerHTML = `
-        .navbar{
-            background:${theme}!important;
-        }
-        .navbar a {
-            color: ${color}!important;
-        }`;
         document.head.append(style);
         const link = document.createElement('link');
         link.rel = "stylesheet";
