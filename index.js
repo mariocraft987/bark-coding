@@ -123,9 +123,10 @@ if (theme) {
         style.innerHTML = `
         .navbar{
             background:${theme}!important;
-            color: ${color}!important;
         }
-        `;
+        .navbar a {
+            color: ${color}!important;
+        }`;
         document.head.append(style);
         const link = document.createElement('link');
         link.rel = "stylesheet";
