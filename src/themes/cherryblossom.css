@@ -86,7 +86,7 @@ a:hover, a:active {
   text-decoration: underline;
 }
 
-input {
+input, select {
   padding: 6px;
   border-radius: 8px;
   border-color: #a3a3a3;

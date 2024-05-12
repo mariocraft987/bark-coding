@@ -13,7 +13,8 @@ section,
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 50%
+    width: 50%;
+    margin-top: 10px;
 }
 
 label {
@@ -58,14 +59,21 @@ p {
     color: #888;
 }
 
-#warning {
+#warning[priority="1"] {
     border-left: red 5px solid;
-    margin-top: 10px;
 
 }
 
-#warning h2 {
+#warning[priority="1"] h2 {
     color: red;
+}
+
+#warning[priority="2"] {
+    border-left: orange 5px solid;
+}
+
+#warning[priority="2"] h2 {
+    color: orange;
 }
 
 /*Input customization*/
@@ -90,5 +98,5 @@ input[type="color"]::-moz-color-swatch {
     border: none;
 }
 .active{
-    border: red 5px solid;
+    outline: gray 3px solid;
 }

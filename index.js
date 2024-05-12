@@ -107,25 +107,30 @@ darkModeToggle.addEventListener('click', toggleDarkMode);
 window.addEventListener('load', initializeDarkMode);
 
 whatsNew();
-const link = document.createElement('link');
-link.rel = "stylesheet";
-link.href = `https://bark-coding.vercel.app/src/themes/bluedodger.css`;
-document.head.append(link);
 const theme = localStorage.getItem('theme');
 if (theme) {
     if (theme.startsWith('#')) {
         const style = document.createElement('style');
-        style.innerHTML = `
-        .navbar{
-            background:${theme};
-        }
-        `;
         document.head.append(style);
+        const link = document.createElement('link');
+        link.rel = "stylesheet";
+        link.href = `https://bark-coding.vercel.app/src/themes/bluedodger.css`;
+        document.head.append(link);
     } else if (theme != "bluedodger") {
         const link = document.createElement('link');
         link.rel = "stylesheet";
         link.href = `https://bark-coding.vercel.app/src/themes/${theme}.css`;
         document.head.append(link);
-    };
-};
+    } else {
+        const link = document.createElement('link');
+        link.rel = "stylesheet";
+        link.href = `https://bark-coding.vercel.app/src/themes/bluedodger.css`;
+        document.head.append(link);
+    }
+} else {
+        const link = document.createElement('link');
+        link.rel = "stylesheet";
+        link.href = `https://bark-coding.vercel.app/src/themes/bluedodger.css`;
+        document.head.append(link);
+    }
 
