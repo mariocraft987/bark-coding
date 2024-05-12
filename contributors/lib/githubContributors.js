@@ -70,7 +70,16 @@ try {
                     contributorContainer.target = "_blank"; // Open link in a new tab/window
 
                     if (imgProfile) {
-                        contributorContainer.innerHTML = `<p>${contributor.login}</p><img src="${contributor.avatar_url}" alt="${contributor.login}">`;
+                        contributorContainer.innerHTML = `
+                        <p>${contributor.login}</p>
+                        <img src="${contributor.avatar_url}" alt="${contributor.login}">
+                        <section id="contributors-tags">
+                        <span>Coder</span>
+                        ${contributor.login ==username?(
+                            `<span id="gold">Founder</span>`
+                        ):(``)}
+                        </section>
+                        `;
                     } else {
                         contributorContainer.textContent = contributor.login;
                     }
