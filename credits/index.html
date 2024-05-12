@@ -1,3 +1,4 @@
+<!-- redirects to /contributors/ -->
 <!DOCTYPE html>
 
 <head>
@@ -7,6 +8,7 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/png">
   <meta name="title" content="Bark coding - Credits">
   <meta name="description" content="Bark is a programming language building off of Google's Blockly.">
+  <meta http-equiv="refresh" content="0; URL=/contributors/" />
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
@@ -32,66 +34,7 @@
 </head>
 
 <body>
-  <span id="navbar"></span>
-  <p class="creditsHeader">Bark Credits</p>
-  <div style="margin: 10px;">
-    <h2>Thank You</h2>
-    <p>This is the Bark credits</p>
-    <p>If these credits are outdated then you can find us at our <a class="link"
-        href="https://github.com/Mariocraft987/bark.github.io/graphs/contributors">GitHub</a></p>
-
-    <span id="dev">Welp, the javascript here is broken. Report it to the dev.</span>
-    <span id="contr">BRO THE JS BROKE, REPORT IT TO THE DEV!!!</span>
-    <a href="https://vercel.com"><img
-        src="https://raw.githubusercontent.com/github/explore/3c66f1237835e0b877190fbea528d0ebece7bccf/topics/vercel/vercel.png"
-        width="120"></a>
-    <p>Bark is hosted with Vercel</p>
-    <p>Mister Humming Bird and Tretre are written by mariocraft987.</p>
-    <br />
-    <p style="text-align: center;">Bark is not affiliated with Scratch, Turbowarp, nor PenguinMod. All credit for the
-      idea goes to these founding orginizations.<br />
-      Bark is licensed under the <a class="link"
-        href="https://github.com/Mariocraft987/bark.github.io/blob/main/LICENSE">BSD 2-Clause License</a></p>
-  </div>
-  <script src="https://bark-coding.vercel.app/index.js"></script>
-  <script>
-    /* Add a github username to link them in the credits */
-    const devs = ["mariocraft987", "qwertyy-dev", "nmsderp", "Rubiidev-18", "dumorando"] //devoloper
-    const contr = ["ShinjitsuNoGyarusa", "theOVERGOD12", "QuirkyWorks", "Bashamega", "Pranidhi10", "Funtasmo", "thatonecoderfr", "BwnnyRxbbit "] //contributers
-    let radius = "3px";
-
-    i = 0;
-    var obj;
-    document.getElementById('dev').innerHTML = "<h3>Devolopers</h3>";
-    while (i < devs.length) {
-      var username = devs[i];
-
-      fetch('https://api.github.com/users/' + username)
-        .then(res => res.json()).then(data => {
-          obj = data;
-        })
-        .then(() => {
-          document.getElementById('dev').innerHTML += '<a href="https://github.com/' + obj.login + '" target="_blank"><img src="' + obj.avatar_url + '" style="border-radius: ' + radius + ';" height="50"><p class="CreditsPT">' + obj.login + '</p></a>';
-        });
-      i++;
-    }
-    document.getElementById('contr').innerHTML = "<h3>Contributers</h3>";
-    i = 0;
-
-    while (i < contr.length) {
-      var username = contr[i];
-
-      fetch('https://api.github.com/users/' + username)
-        .then(res => res.json()).then(data => {
-          obj = data;
-        })
-        .then(() => {
-          document.getElementById('contr').innerHTML += '<a href="https://github.com/' + obj.login + '" target="_blank"><img src="' + obj.avatar_url + '" style="border-radius: ' + radius + ';" height="50"><p class="CreditsPT">' + obj.login + '</p></a>';
-        });
-      i++;
-    }
-  </script>
+  
 </body>
-<script src="https://bark-coding.vercel.app/index.js"></script>
 
 </html>
