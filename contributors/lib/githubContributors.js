@@ -77,8 +77,8 @@ try {
                         <span>Coder</span>
                         ${contributor.login ==username?(
                             `<span id="gold">Founder</span>`
-                        ):(``)
-                        <p>${contributor.contributions}</p>}
+                        ):(``)}
+                        <p>${contributor.contributions}</p>
                         </section>
                         `;
                     } else {
