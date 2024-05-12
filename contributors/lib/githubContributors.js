@@ -79,6 +79,7 @@ try {
                             `<span id="gold">Founder</span>`
                         ):(``)}
                         </section>
+                        <p>${contributor.contributions} contribution${contributor.contributions == 1 ? "" : "s"}</p>
                         `;
                     } else {
                         contributorContainer.textContent = contributor.login;
