@@ -115,7 +115,7 @@ if (theme) {
         var r = (rgb >> 16) & 0xff;
         var g = (rgb >>  8) & 0xff;
         var b = (rgb >>  0) & 0xff;
-        if (0.2126 * r + 0.7152 * g + 0.0722 * b < 40) {
+        if ((0.2126 * r + 0.7152 * g + 0.0722 * b) < 40) {
             var color = "black";
         } else {
             var color = "white";
