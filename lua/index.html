@@ -6,42 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bark - Lua Editor</title>
     <meta name="title" content="Bark coding - Lua editor" />
-    <meta
-      name="description"
-      content="Bark is a programming language building off of Google's Blockly."
-    />
+    <meta name="description" content="Bark is a programming language building off of Google's Blockly." />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bark-coding.vercel.app/" />
     <meta property="og:title" content="Bark coding - Lua editor" />
-    <meta
-      property="og:description"
-      content="Bark is a programming language building off of Google's Blockly."
-    />
-    <meta
-      property="og:image"
-      content="https://bark-coding.vercel.app/src/images/Logo.svg"
-    />
+    <meta property="og:description" content="Bark is a programming language building off of Google's Blockly." />
+    <meta property="og:image" content="https://bark-coding.vercel.app/src/images/Logo.svg" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://bark-coding.vercel.app/" />
     <meta property="twitter:title" content="Bark coding - Lua Editor" />
-    <meta
-      property="twitter:description"
-      content="Bark is a programming language building off of Google's Blockly."
-    />
-    <meta
-      property="twitter:image"
-      content="https://bark-coding.vercel.app/src/images/Logo.svg"
-    />
+    <meta property="twitter:description" content="Bark is a programming language building off of Google's Blockly." />
+    <meta property="twitter:image" content="https://bark-coding.vercel.app/src/images/Logo.svg" />
 
     <!-- Optional Meta Tags -->
-    <meta
-      name="keywords"
-      content="coding, blockly, block coding, bark coding, lua, online coding"
-    />
+    <meta name="keywords" content="coding, blockly, block coding, bark coding, lua, online coding" />
     <meta name="robots" content="index, follow" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="language" content="English" />
@@ -57,13 +39,23 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <span id="navbar"></span>
+    <nav id="subnav">
+        <div>
+            <button id="compile-btn">Compile</button>
+            <button id="run-btn">Run</button>
+        </div>
+        <h2>LUA EDITOR</h2>
+    </nav>
+    <!--
     <h2>Write Lua Code and Share it With The Bark Community!</h2>
+    <-->
     <textarea id="code-editor"></textarea>
-    <button id="compile-btn">Compile</button>
-    <button id="run-btn">Run</button>
+
     <div id="output"></div>
 
     <!-- Include CodeMirror -->
@@ -128,6 +120,7 @@
         document.getElementById('compile-btn').addEventListener('click', compileCode);
         document.getElementById('run-btn').addEventListener('click', runCode);
     </script>
+    <script src="/index.js"></script>
 </body>
 
 </html>
