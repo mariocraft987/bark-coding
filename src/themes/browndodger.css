@@ -211,3 +211,22 @@ xml category {
   height: 30px;
   cursor: pointer;
 }
+
+#form {
+  margin-left: calc(52% - 100px);
+}
+
+#currencyList {
+  margin-left: calc(50% - 100px);
+  width: 200px;
+}
+
+#button_orange {
+  margin-left: calc(54% - 100px);
+}
+
+.warning {
+  background: rgb(255, 153, 153);
+  padding: 20px 15px;
+  font-size: 25px;
+}
