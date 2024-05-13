@@ -326,3 +326,9 @@ footer {
 #button_orange {
   margin-left: calc(54% - 100px);
 }
+
+.warning {
+  background: rgb(255, 153, 153);
+  padding: 20px 15px;
+  font-size: 25px;
+}
