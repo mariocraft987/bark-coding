@@ -1,0 +1,45 @@
+footer {
+    display: none;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+#subnav{
+    background-color: black;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:chartreuse;
+    padding-bottom: 5px;
+    height: 25px;
+}
+textarea, .CodeMirror{
+    height: 100%;
+    width: 100%;
+}
+main{
+    height: calc(100vh - 70px);
+    display: flex;
+    background-color: #333;
+    color: #ccc;
+
+}
+#output{
+    padding: 15px;
+    margin: 15px;
+    background-color: gray;
+    width: 100%;
+    border-radius: 15px;
+}
