@@ -34,7 +34,6 @@ function loadImg(text) {
 function setup() {
   // Create a canvas
   let cnv = createCanvas(480, 360);
-  cnv.id = "stage";
   cnv.parent('stage-container'); // Attach the canvas to the stage container
 }
 
