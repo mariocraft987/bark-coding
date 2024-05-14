@@ -1,32 +1,19 @@
-const users = [
-    {
-        "id": 987654,
-        "username": "user1",
-        "date_joined": "2022-01-01",
-        "active": true,
-        "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-        "pfp": "https://bark-coding.vercel.app/src/images/Logo.svg",
-        "password": "123"
-    },
-    {
-        "id": 123456,
-        "username": "user2",
-        "date_joined": "2022-01-02",
-        "active": false,
-        "bio": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "pfp": "https://bark-coding.vercel.app/src/images/Logo.svg",
-        "password": "myPersonalPassword"
-    },
-    {
-        "id": 789012,
-        "username": "user3",
-        "date_joined": "2022-01-03",
-        "active": true,
-        "bio": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        "pfp": "https://bark-coding.vercel.app/src/images/Logo.svg",
-        "password": "SupperSecret"
-    }
-];
+const users = [];
+function generateUniqueID() {
+    let id;
+    do {
+        // Generate a random number between 100000 and 999999
+        id = Math.floor(Math.random() * 900000) + 100000;
+    } while (users.some(user => user.id === id));
+    return id;
+}
+function getTodaysDate() {
+    const today = new Date();
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+    const day = String(today.getDate()).padStart(2, '0');
+    return `${year}-${month}-${day}`;
+}
 class Auth {
     constructor() { }
 
@@ -118,6 +105,22 @@ class Auth {
         } else {
             throw new Error('Not valid');
         }
+    }
+    createUser(username, email, password, date, gender){
+        const obj = {
+            id: generateUniqueID(),
+            username: username,
+            date_joined:getTodaysDate(),
+            active: false,
+            bio: '',
+            pfp: 'https://bark-coding.vercel.app/src/images/Logo.svg',
+            password: password,
+            birthday: date,
+            gender: gender,
+            email: email 
+        }
+        users.push(obj);
+        this.login(username, password)
     }
 }
 function redirect(){

@@ -1,73 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bark - Signup</title>
-  <link rel="shortcut icon" href="favicon.ico" type="image/png">
+  <title>Bark - Register</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./src/styles/UI.css">
+  <link rel="stylesheet" href="./src/styles/register.css">
 </head>
 
 <body>
 
-  <span id="navbar"></span>
-  <br />
-  <div class="textCenter">
-    <span id="page">
-      <h2>Create an account</h2>
-      <br />
-      <form action="#" method="get">
-        <label for="username">Username:</label>
-        <input type="username" id="username" placeholder="username" required="required" />
-        <br />
-        <br />
-        <label for="password">Password:</label>
-        <input type="password" id="password" placeholder="password" required="required" />
-        <br />
-        <br />
-        <label for="email">Email:</label>
-        <input type="email" id="email" placeholder="example@email.com" required="required" />
-        <br />
-        <br />
-        <label for="birthday">Birthday:</label>
-        <input type="date" id="birthday" required="required" />
-        <br />
-        <br />
-        <label for="gender">Gender:</label>
-        <select name="gender" id="gender" required>
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-          <option value="none">Non-Binary</option>
-          <option value="other">Other</option>
-        </select>
-        <br />
-        <br />
-        <input class="buttonFrBx" type="submit" value="Submit" onclick="checkSignup()" />
-        <span style="color: red;" id="errormsg"></span>
-        <p>Note: Bark accounts are being worked on.</p>
+  <header id="navbar"></header>
+  <main>
+    <div class="container">
+      <h2>Register</h2>
+      <form id="registrationForm">
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" required>
+        </div>
+        <div class="form-group gender">
+          <label>Gender:</label><br>
+          <div class="flex" style="align-items: center;">
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+          </div>
+        </div>
+        <button type="submit">Register</button>
       </form>
-    </span>
-  </div>
+    </div>
+  </main>
+  <script src="db/auth.js"></script>
+  <script src="db/register.js"></script>
+  <script src="index.js"></script>
 </body>
-<script src="index.js"></script>
-<script>
-  function checkSignup() {
-    let username = document.getElementById('username').value;
-
-    let password = document.getElementById('password').value;
-    let email = document.getElementById('email').value;
-    let gender = document.getElementById('gender').value;
-    let dob = document.getElementById('birthday').value;
-    let errormsg = document.getElementById("errormsg")
-
-    if (username != '', password != '', email != '', dob != '') {
-      if (password.length < 3) { errormsg.innerHTML = "Please make your username more than 3 characters!" } else
-        if (password.length > 12) { errormsg.innerHTML = "Please make your username lower than 13 characters!" } else {
-          document.getElementById('page').innerHTML = '<br/><h2>Welcome to Bark ' + username + '!</h2>';
-        }
-    }
-  }
-</script>
 
 </html>
-
