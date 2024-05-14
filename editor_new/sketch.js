@@ -34,7 +34,7 @@ function loadImg(text) {
 function setup() {
   // Create a canvas
   let cnv = createCanvas(480, 360);
-  cnv.parent('stage-container'); // Attach the canvas to the stage container
+  cnv.parent('stage'); // Attach the canvas to the stage container
 }
 
 function goto(X, Y) {
