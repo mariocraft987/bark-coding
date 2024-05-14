@@ -6,8 +6,7 @@ main {
     align-items: center;
 }
 
-section,
-#warning {
+section, #warning {
     margin-top: 5%;
     background-color: #ffffff;
     padding: 20px;
@@ -56,8 +55,12 @@ button:hover {
     background-color: #0056b3;
 }
 
-p {
-    color: #888;
+.black-text {
+    color: #000000;
+}
+
+.white-text {
+    color: #ffffff;
 }
 
 #warning[priority="1"] {
