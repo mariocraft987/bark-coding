@@ -107,8 +107,17 @@ input[type="color"]::-moz-color-swatch {
 .dark-mode input[type="color"]{
     background-color: white !important;
 }
-.dark-mode #settingsPage, .dark-mode #warning{
+.dark-mode #settingsPage {
     background-color: #212529;
     color: #ffff;
 }
 .dark-mode button, .dark-mode input[type="submit"]{color:#fff!important}
+
+.dark-mode #warning {
+    background-color: #393f46;
+    color: #ffff;
+}
+
+#warning {
+    background-color: #f5f5f5;
+}
