@@ -107,7 +107,7 @@ input[type="color"]::-moz-color-swatch {
 .dark-mode input[type="color"]{
     background-color: white !important;
 }
-.dark-mode #settingsPage{
+.dark-mode #settingsPage, .dark-mode #warning{
     background-color: #212529;
 }
 .dark-mode button, .dark-mode input[type="submit"]{color:#fff!important}
