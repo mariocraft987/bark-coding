@@ -340,9 +340,9 @@ footer {
   right: 30px;
   z-index: 99;
   outline: none;
-  opacity: 1;
+  opacity: 0;
 }
 
 #topBtn[disabled] {
-  opacity: 0;
+  opacity: 1;
 }
