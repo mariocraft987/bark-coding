@@ -23,6 +23,8 @@ if (localStorage.getItem("myBarkUsername") == "") {
 }
 document.getElementById('navbar').innerHTML = content;
 
+document.body.innerHTML += "<button onclick='scrollToTop()' class='buttonFrBx' id='topBtn'>Top</button>";
+
 // footer
 if (document.url != "baseUrl") {
     var footer;
