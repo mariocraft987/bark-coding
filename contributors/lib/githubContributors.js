@@ -37,7 +37,12 @@ try {
     const type = div.getAttribute('data-type');
     const imgProfile = div.getAttribute('data-imgprofile') === 'true';
     const useLink = div.getAttribute('data-link') === 'true';
-
+    const customLink = div.getAttribute('data-local-styles');
+    if(customLink){
+        list.href= `${customLink}list.css`;
+        slideshow.href= `${customLink}slideshow.css`;
+        grid.href = `$${customLink}grid.css`;
+    }
     const parsedUrl = new URL(githuburl);
     const [username, repoName] = parsedUrl.pathname.split('/').slice(1);
 
