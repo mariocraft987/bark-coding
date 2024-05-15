@@ -334,10 +334,15 @@ footer {
 }
 
 #topBtn {
-  display: none;
+  display: block;
   position: fixed;
   bottom: 20px;
   right: 30px;
   z-index: 99;
   outline: none;
+  opacity: 1;
+}
+
+#topBtn[disabled] {
+  opacity: 0;
 }
