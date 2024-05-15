@@ -17,18 +17,14 @@ function createElement(tag, attributes = {}) {
 }
 
 const errorcss = document.createElement('link');
-errorcss.href = "https://bashamega.github.io/scripts/cdn/libs/js/contributingjs/styles/error.css";
 errorcss.rel = "stylesheet";
 
 const grid = document.createElement('link');
-grid.href = "https://bashamega.github.io/scripts/cdn/libs/js/contributingjs/styles/contributors/grid.css";
 grid.rel = "stylesheet";
 
 const slideshow = document.createElement('link');
-slideshow.href = "https://bashamega.github.io/scripts/cdn/libs/js/contributingjs/styles/contributors/slideshow.css";
 slideshow.rel = "stylesheet";
 const list = document.createElement('link');
-list.href = "https://bashamega.github.io/scripts/cdn/libs/js/contributingjs/styles/contributors/list.css";
 list.rel = "stylesheet";
 const div = document.getElementById('contributors');
 
@@ -37,11 +33,18 @@ try {
     const type = div.getAttribute('data-type');
     const imgProfile = div.getAttribute('data-imgprofile') === 'true';
     const useLink = div.getAttribute('data-link') === 'true';
-    const customLink = div.getAttribute('data-local-styles');
+    const customLink = div.getAttribute('data-styles');
     if(customLink){
         list.href= `${customLink}list.css`;
         slideshow.href= `${customLink}slideshow.css`;
-        grid.href = `$${customLink}grid.css`;
+        grid.href = `${customLink}grid.css`;
+        errorcss.href = `${customLink}error.css`
+    }else{
+        list.href = "https://bashamega.github.io/scripts/cdn/libs/js/contributingjs/styles/contributors/list.css";
+        slideshow.href = "https://bashamega.github.io/scripts/cdn/libs/js/contributingjs/styles/contributors/slideshow.css";
+        grid.href = "https://bashamega.github.io/scripts/cdn/libs/js/contributingjs/styles/contributors/grid.css";
+        errorcss.href = "https://bashamega.github.io/scripts/cdn/libs/js/contributingjs/styles/error.css";
+
     }
     const parsedUrl = new URL(githuburl);
     const [username, repoName] = parsedUrl.pathname.split('/').slice(1);
