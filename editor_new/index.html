@@ -261,6 +261,7 @@
       </category>
       <category name="Movement" colour="#3399ff">
         <block type="set_position"></block>
+        <block type="get_position"></block>
         <block type="movement_move_x">
           <field name="NUM">3</field>
         </block>
@@ -621,7 +622,18 @@
           this.setHelpUrl("");
         }
       };
-
+      Blockly.Blocks['get_position'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("get")
+        .appendField(new Blockly.FieldDropdown([["X","x"], ["Y","y"]]), "XY")
+        .appendField("position");
+    this.setOutput(true, null);
+    this.setColour(230);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
       Blockly.Blocks['movement_move_x'] = {
         init: function () {
           this.appendValueInput("NUM")
