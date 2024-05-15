@@ -1,6 +1,6 @@
 /* Some common scripts created in javascript to work the website, and make it interactive. */
 
-let newsBox = "Come see Bark's 5th trailer!";
+let newsBox = "Come see Bark's <a href='https://bark-coding.vercel.app/settings'>theme selector!</a>";
 let baseUrl = "https://bark-coding.vercel.app";
 let commitsLength = 150;
 
