@@ -1,0 +1,65 @@
+name: Report a bug
+title: "[bug] ..."
+description: Create a report to help us improve Bark.
+labels: "bug", "problem"
+body:
+
+- type: dropdown
+  id: os
+  attributes:
+    label: Operating System
+    description: "What operating system(s) are you seeing this problem on?"
+    multiple: true
+    options:
+      - Android
+      - ChromeOS
+      - iOS
+      - Linux
+      - Mac
+      - Windows
+      - Other
+  validations:
+    required: true
+
+- type: dropdown
+  id: browsers
+  attributes:
+    label: Browser(s)
+    description: "What browsers(s) are you seeing this problem on?"
+    multiple: true
+    options:
+      - Arc
+      - Chrome
+      - Firefox
+      - Internet (Galaxy)
+      - Internet Explorer (if this is the case, please switch to a more modern browser)
+      - Microsoft Edge
+      - Opera
+      - Safari
+      - Other
+  validations:
+    required: true
+
+- type: markdown
+  id: happened
+  attributes:
+    label: What happened
+    description: "Tell us, step by step, how you got this behavior to happen."
+  validations:
+    required: true
+
+- type: input
+  id: expected
+  attributes:
+    label: Expected Behavior
+    description: "Tell us, step by step, how you got this behavior to happen."
+  validations:
+    required: false
+
+- type: markdown
+  id: screenshots
+  attributes:
+    label: Screenshots
+    description: "If possible, add screenshots of the bug."
+  validations:
+    required: false
