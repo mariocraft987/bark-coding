@@ -66,6 +66,11 @@ body {
   width: 1440px;
 }
 
+.box.dark-mode {
+  background-color: #212529;
+  color: white;
+}
+
 .textCenter {
   text-align: center;
 }
