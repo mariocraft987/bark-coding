@@ -52,11 +52,11 @@ body:
   validations:
     required: true
 
-- type: input
+- type: textarea
   id: expected
   attributes:
     label: Expected Behavior
-    description: "Tell us, step by step, how you got this behavior to happen."
+    description: "What did you expect?"
   validations:
     required: false
 
