@@ -63,7 +63,7 @@ body {
   background-color: #f6f4d2;
   /* Light gray box background */
   margin-top: 15px;
-  width: 1440px;
+  width: calc(100% - 32px);
 }
 
 .box.dark-mode {
