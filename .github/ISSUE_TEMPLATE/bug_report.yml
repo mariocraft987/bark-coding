@@ -5,8 +5,7 @@ labels: ["bug", "problem"]
 body:
 - type: markdown
   attributes:
-    - value: |
-      Thanks for filling out this report!
+    - value: "## Thanks for filling out this report!"
 
 - type: checkboxes
   id: os
