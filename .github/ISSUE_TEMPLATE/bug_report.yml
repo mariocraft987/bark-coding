@@ -20,7 +20,6 @@ body:
       - label: Mac
       - label: Windows
       - label: Other
-    default: 0
   validations:
     required: true
 
@@ -38,7 +37,6 @@ body:
       - label: Opera
       - label: Safari
       - label: Other
-    default: 0
   validations:
     required: true
 
