@@ -1,7 +1,7 @@
 name: Report a bug
 title: "[bug] ..."
 description: Create a report to help us improve Bark.
-labels: "bug", "problem"
+labels: "bug"
 body:
 
 - type: dropdown
