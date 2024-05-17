@@ -66,6 +66,10 @@ body {
   width: 1440px;
 }
 
+.textCenter {
+  text-align: center;
+}
+
 footer {
   background-color: #f6f4d2;
   margin-top: 200px;
