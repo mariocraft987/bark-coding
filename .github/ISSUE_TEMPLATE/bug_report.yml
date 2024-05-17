@@ -12,34 +12,32 @@ body:
   attributes:
     label: Operating System
     description: "What operating system(s) are you seeing this problem on?"
-    multiple: true
     options:
-      - Android
-      - ChromeOS
-      - iOS
-      - Linux
-      - Mac
-      - Windows
-      - Other
+      - label: Android
+      - label: ChromeOS
+      - label: iOS
+      - label: Linux
+      - label: Mac
+      - label: Windows
+      - label: Other
     default: 0
   validations:
     required: true
 
-- type: dropdown
+- type: checkboxes
   id: browsers
   attributes:
     label: Browser(s)
     description: "What browsers(s) are you seeing this problem on?"
-    multiple: true
     options:
-      - Arc
-      - Chrome
-      - Firefox
-      - Internet (Galaxy)
-      - Microsoft Edge
-      - Opera
-      - Safari
-      - Other
+      - label: Arc
+      - label: Chrome
+      - label: Firefox
+      - label: Internet (Galaxy)
+      - label: Microsoft Edge
+      - label: Opera
+      - label: Safari
+      - label: Other
     default: 0
   validations:
     required: true
