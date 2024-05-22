@@ -149,6 +149,23 @@ footer {
   transform: rotate3d(0, 1, 0, 180deg);
 }
 
+#projectPlayer {
+  width: 480px;
+  height: 390px;
+  position: absolute;
+  right: 0;
+}
+
+#projectToolbar {
+  height: 30px;
+}
+
+.projectToolbarButton {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
 ::-moz-selection {
   color: #ffffff;
   background: #f6f4d2;
