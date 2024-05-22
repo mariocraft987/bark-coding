@@ -87,8 +87,8 @@ footer {
   color: inherit;
 }
 
-.link {
-  color: #5f0f40;
+a.link {
+  color: blue;
   /* Blue links */
   text-decoration: none;
 }
