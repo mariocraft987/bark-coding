@@ -29,7 +29,7 @@ document.body.innerHTML += "<button onclick='scrollToTop()' class='buttonFrBx' i
 if (document.url != "baseUrl") {
     var footer;
     footer = '<footer><p style="color: #777;">Looks like you\'ve reached the bottom.</p><p>';
-    footer += '<a href="'+baseUrl+'/index">Home</a> '; // Home
+    footer += '<a href="'+baseUrl+'">Home</a> '; // Home
     footer += '<a href="/editor_new/">Editor</a> '; // Editor
     footer += '<a href="https://github.com/mariocraft987/bark.github.io/">Github</a> '; // Github
     footer += '<br/><br/><a href="https://github.com/mariocraft987/bark-coding/wiki">Wiki</a> '; // Wiki
