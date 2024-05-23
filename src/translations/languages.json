@@ -1,10 +1,10 @@
 [
     {
-        "name": "Arabic",
+        "name": "عربي",
         "file": "ar.json"
     },
     {
-        "name": "Chinese",
+        "name": "中国人",
         "file": "ch.json"
     },
     {
@@ -12,7 +12,7 @@
         "file": "en.json"
     },
     {
-        "name": "Italian",
+        "name": "Italiano",
         "file": "it.json"
     }
 ]
