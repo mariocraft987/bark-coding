@@ -166,3 +166,30 @@ function replace(text) {
 
     return start;
 }
+const lang = localStorage.getItem('lang');
+function translate(id, val) {
+    const elements = document.getElementsByClassName(id);
+    if (elements.length > 0) {
+        Array.from(elements).forEach(element => {
+            element.innerHTML = val;
+        });
+    }
+}
+if (lang) {
+    const obj = JSON.parse(lang);
+    const url = `${window.location.origin}/src/translations/${obj.file}`;
+    if(obj.file !== 'en.json'){
+        fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            for (let key in data) {
+                if (data.hasOwnProperty(key)) {
+                    translate(key, data[key]);
+                }
+            }
+        })
+    }
+
+
+}
