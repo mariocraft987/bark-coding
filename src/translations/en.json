@@ -1,4 +1,4 @@
-[
+{
   "welcome": "Welcome!",
   "barkfromblockly": "Bark is a programming language building off of Google's <i>Blockly</i>.",
   "barkinspiredscratch": "Bark is inspired by <a class='link' href='https://scratch.mit.edu'>Scratch</a>.",
@@ -7,7 +7,7 @@
   "nothingyet": "Nothing Yet...",
   "recentcommitsbutton": "Recent commits",
   "petmascot": "Pet our mascot!",
-  "checkeditor": "And then you can check out the <a href="https://bark-coding.vercel.app/editor_new/">editor</a>!",
+  "checkeditor": "And then you can check out the <a href='https://bark-coding.vercel.app/editor_new/'>editor</a>!",
   "fromcountries": "Visitors from other countries",
   "donatebutton": "Donate page",
   "fetchingloading": "Fetching commits...",
@@ -17,4 +17,4 @@
   "needideas": "Need Ideas?",
   "workingprog": "This page is a work in progress.",
   "newblocks": "Bark's newest series of blocks."
-]
+}
