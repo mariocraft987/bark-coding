@@ -59,6 +59,15 @@ applybtn.addEventListener('click', () => {
 
 // too lazy to change variable names, but this is for stage position
 
+document.addEventListener('DOMContentLoaded', () => {
+    const theme = localStorage.getItem('stage-pos');
+    if (theme) {
+        if (theme == "left" && document.getElementById("blocklyDiv") != null) {
+            document.body.classList.add("stage-left");
+        }
+    }
+}
+
 var pendingTheme = localStorage.getItem('stage-pos');
 const btns = Array.from(document.getElementsByClassName('themeBtn'));
 btns.forEach(btn => {
@@ -74,7 +83,7 @@ btns.forEach(btn => {
         } 
     });
 });
-const applybtn = document.getElementById('applybtn');
+const applybtn = document.getElementById('applybtn-stage-pos');
 applybtn.addEventListener('click', () => {
     localStorage.setItem('stage-pos', pendingTheme);
 });
