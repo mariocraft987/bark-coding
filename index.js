@@ -15,7 +15,7 @@ if (document.url != "baseUrl") {
     var footer;
     footer = '<footer><p style="color: #777;">Looks like you\'ve reached the bottom.</p><p>';
     footer += '<a href="'+baseUrl+'">Home</a> '; // Home
-    footer += '<a href="/editor_new/">Editor</a> '; // Editor
+    footer += '<a href="/editor/">Editor</a> '; // Editor
     footer += '<a href="https://github.com/mariocraft987/bark.github.io/">Github</a> '; // Github
     footer += '<br/><br/><a href="https://github.com/mariocraft987/bark-coding/wiki">Wiki</a> '; // Wiki
     footer += '<a href="https://discord.gg/hXmHw7H9BF">Discord</a> '; // Discord
