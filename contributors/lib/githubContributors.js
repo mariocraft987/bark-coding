@@ -82,7 +82,7 @@ try {
                         <p>${contributor.login}</p>
                         <img src="${contributor.avatar_url}" alt="${contributor.login}">
                         <section id="contributors-tags">
-                        <span>Coder</span>
+                        <span>Programmer</span>
                         ${contributor.login ==username?(
                             `<span id="gold">Founder</span>`
                         ):(``)}
