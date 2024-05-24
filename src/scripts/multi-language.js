@@ -1,6 +1,9 @@
 const elements = document.querySelectorAll('.multi-language');
 const url = `${window.location.origin}/src/translations/languages.json`;
-const currentLang = localStorage.getItem('lang');
+let currentLang = localStorage.getItem('lang');
+if(currentLang){
+    currentLang = `{"name":"English","file":"en.json"}`
+}
 fetch(url)
     .then(response => response.json())
     .then(data => {
