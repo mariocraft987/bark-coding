@@ -45,3 +45,36 @@ applybtn.addEventListener('click', () => {
     localStorage.setItem('theme', pendingTheme);
     window.location.reload();
 });
+
+
+
+
+
+
+
+
+
+
+
+
+// too lazy to change variable names, but this is for stage position
+
+var pendingTheme = localStorage.getItem('stage-pos');
+const btns = Array.from(document.getElementsByClassName('themeBtn'));
+btns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        pendingTheme = e.target.name;
+        const selectedBtn = document.getElementsByClassName('active')[0];
+        if(selectedBtn){
+            selectedBtn.classList.remove('active')
+        };
+        const newBtn = document.querySelector('[name="' + pendingTheme + '"]');
+        if (newBtn) {
+            newBtn.classList.add('active');
+        } 
+    });
+});
+const applybtn = document.getElementById('applybtn');
+applybtn.addEventListener('click', () => {
+    localStorage.setItem('stage-pos', pendingTheme);
+});
