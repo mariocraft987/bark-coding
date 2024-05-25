@@ -1,5 +1,16 @@
 /* Some common scripts created in javascript to work the website, and make it interactive. */
 
+let toevaluate = ["/src/scripts/injector.js"];
+toevaluate.forEach(path => {
+  fetch(path)
+    .then(data => data.text())
+    .then(data => {
+      (async () => {
+        eval(data);
+      })(); //run in a seprate thread so it doesnt block this scripts execution
+    });
+});
+
 let newsBox = "Come see Bark's <a href='https://bark-coding.vercel.app/settings'>theme selector!</a>";
 let baseUrl = "https://bark-coding.vercel.app";
 let commitsLength = 150;
@@ -11,6 +22,9 @@ console.error("Exit Now! This part is used by devolopers. \n Hackers could tell 
 document.body.innerHTML += "<button onclick='scrollToTop()' class='buttonFrBx' id='topBtn' disabled>Top</button>";
 
 // footer
+
+// @deprecated use <!-- inject:footer --> instead.
+/*
 if (document.url != "baseUrl") {
     var footer;
     footer = '<footer><p style="color: #777;">Looks like you\'ve reached the bottom.</p><p>';
@@ -22,6 +36,7 @@ if (document.url != "baseUrl") {
     footer += '</p></footer>'
     document.body.innerHTML += footer;
 }
+*/
 
 if (new Date().getMonth() === 3 && new Date().getDate() === 1) {
     document.getElementById("flip-it-afd-btn").addEventListener("click", function () {

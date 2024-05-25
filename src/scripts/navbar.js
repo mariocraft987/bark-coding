@@ -15,4 +15,8 @@ if (localStorage.getItem("myBarkUsername") == "") { // has profile?
 } else {
     content += '<a href="login" class="right">Sign in</a><a href="signup" class="right">Join bark</a></div>' // signup and login button
 }
-document.getElementById('navbar').innerHTML = content;
+try {
+    document.getElementById('navbar').innerHTML = content;
+} catch {
+    console.log('seems like this page uses inject syntax for the navbar, continuing..')
+}
