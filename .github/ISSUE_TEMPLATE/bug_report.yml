@@ -32,7 +32,6 @@ body:
       - label: Arc
       - label: Chrome
       - label: Firefox
-      - label: Internet (Galaxy)
       - label: Microsoft Edge
       - label: Opera
       - label: Safari
