@@ -9,7 +9,7 @@ content += '<a href="/settings">Settings</a>'
 if (new Date().getMonth() === 3 && new Date().getDate() === 1) {
     content += "<a id='flip-it-afd-btn'>FLIP IT</a>";
 }
-content += '<a class="dark-mode-button" id="darkModeToggle"><dmbico alt="Dark Mode"></dmbico></a><form action="search" style="display: contents;"><input class="searchBar" id="search" name="q" placeholder="Search for Projects"></input></form>'
+content += '<a class="dark-mode-button" onclick="toggleDarkMode()" id="darkModeToggle"><dmbico alt="Dark Mode"></dmbico></a><form action="search" style="display: contents;"><input class="searchBar" id="search" name="q" placeholder="Search for Projects"></input></form>'
 if (localStorage.getItem("myBarkUsername") == "") { // has profile?
     content += '<a class="right">sign out</a><a class="right">profile</a>' // profile button
 } else {
