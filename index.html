@@ -44,7 +44,7 @@
 </head>
 
 <body>
-  <span id="navbar"></span>
+  <!-- inject:navbar -->
   <div class="box">
     <h2 class="welcome">Welcome!</h2>
     <p class="barkfromblockly">Bark is a programming language building off of Google's <i>Blockly</i>.</p>
@@ -85,9 +85,13 @@
   <a href="https://bark-coding.vercel.app/donate"><button class="buttonFrBx">Donate page</button></a>
   </div>
   -->
+  <!-- inject:footer -->
 </body>
-<script src="https://bark-coding.vercel.app/index.js"></script>
-<script src="src/scripts/navbar.js"></script>
+<!--
+  <script src="/index.js"></script>
+  ???????????
+-->
+<script src="/index.js"></script>
 <script src="src/scripts/replacer.js"></script>
 <script>
   function recentCom() {
