@@ -266,9 +266,7 @@
         </block>
         <block type="goto_mouse"></block>
         <block type="center"></block>
-        <block type="pointdir">
-          <field name="NAME">90</field>
-        </block>
+        <!-- todo: add pointdir block -->
       </category>
       <category name="Style" colour="#cd17ff">
         <block type="change_costume"></block>
@@ -276,6 +274,11 @@
         <block type="set_size"></block>
         <block type="next_costume"></block>
         <block type="change_stage_bg"></block>
+        <block type="colour_picker">
+          <field name="COLOUR">#ff0000</field>
+        </block>
+        <block type="colour_random"></block>
+        <block type="colour_rgb"></block>
       </category>
       <category name="Control" colour="#689c00">
         <block type="controls_repeat_ext">
@@ -729,20 +732,6 @@
           this.setHelpUrl("");
         }
       };
-
-
-      Blockly.Blocks['pointdir'] = {
-        init: function () {
-          this.appendEndRowInput()
-            .setAlign(Blockly.ALIGN_RIGHT)
-            .appendField("point in direction")
-            .appendField(new Blockly.FieldAngle(90), "NAME");
-          this.setPreviousStatement(true, null);
-          this.setNextStatement(true, null);
-          this.setColour(230);
-          this.setTooltip("Point the sprite to a specific direction");
-          this.setHelpUrl("");
-        }
       };
       Blockly.Blocks['sine_move'] = {
         init: function () {
