@@ -949,19 +949,18 @@ Blockly.Blocks['onreturn'] = {
       };
 
 
-      Blockly.Blocks['change_stage_bg'] = {
-        init: function () {
-          this.appendDummyInput()
-            .appendField("Change stage background color to");
-          this.appendDummyInput()
-            .appendField(new Blockly.FieldColour("#ffffff"), "NAME");
-          this.setPreviousStatement(true, null);
-          this.setNextStatement(true, null);
-          this.setColour(230);
-          this.setTooltip("");
-          this.setHelpUrl("");
-        }
-      };
+Blockly.Blocks['change_stage_bg'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("Change background color to")
+        .appendField(new Blockly.FieldColour("#ff0000"), "NAME");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(260);
+ this.setTooltip("Change the background color.");
+ this.setHelpUrl("");
+  }
+};
 
 
         // This function will be called whenever the block value changes
