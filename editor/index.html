@@ -499,6 +499,7 @@
         <field name="TEXT">3</field>
         </block>
         <block type="fetch" />
+        <block type="letters_from" />
       </category>
       <category name="Custom" colour="#cf4125">
         <block type="create_elm"></block>
@@ -812,6 +813,23 @@ Blockly.Blocks['onreturn'] = {
           this.setHelpUrl("");
         }
       };
+
+      Blockly.Blocks['letters_from'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("letters from")
+        .appendField(new Blockly.FieldNumber(0, 0, 999), "FIRST")
+        .appendField("to")
+        .appendField(new Blockly.FieldNumber(0, 0, 999), "LAST")
+        .appendField("in")
+        .appendField(new Blockly.FieldVariable("word"), "VAR");
+    this.setOutput(true, "String");
+    this.setColour(150);
+ this.setTooltip("Returns the string from 2 number inputs in a variable.");
+ this.setHelpUrl("");
+  }
+};
+      
       Blockly.Blocks['change_size'] = {
         init: function () {
           this.appendValueInput("NAME")
