@@ -1,5 +1,5 @@
-content = '<div class="navbar"><a href="' + baseUrl + '"><img src="https://bark-coding.vercel.app/src/images/Logo.svg" alt="bark" width="25" height="25" ></a>'
-content += '<a href="https://bark-coding.vercel.app/editor">Create</a>'
+content = '<div class="navbar"><a href="' + baseUrl + '"><img src="' + window.location.origin +'/src/images/Logo.svg" alt="bark" width="25" height="25" ></a>'
+content += '<a href="/editor">Create</a>'
 content += '<a href="/explore">Explore</a>'
 content += '<a href="/ideas">Ideas</a>' 
 content += '<a href="/about">About</a>'

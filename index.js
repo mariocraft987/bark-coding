@@ -11,8 +11,8 @@ toevaluate.forEach(path => {
     });
 });
 
-let newsBox = "Come see Bark's <a href='https://bark-coding.vercel.app/settings'>theme selector!</a>";
-let baseUrl = "https://bark-coding.vercel.app";
+let newsBox = "Come see Bark's <a href='" + window.location.origin + "/settings'>theme selector!</a>";
+let baseUrl = window.location.origin;
 let commitsLength = 150;
 
 let mobile = window.navigator.userAgent.toLowerCase().includes("mobi");
@@ -61,7 +61,7 @@ function randomTxt() {
 
     if (document.URL == baseUrl + "/explore") {
 
-        fetch('https://bark-coding.vercel.app/src/scripts/tips.json')
+        fetch(window.location.origin +'/src/scripts/tips.json')
             .then(res => res.json()).then(data => {
                 obj = data;
             })
@@ -120,23 +120,23 @@ if (theme) {
         document.head.append(style);
         const link = document.createElement('link');
         link.rel = "stylesheet";
-        link.href = `https://bark-coding.vercel.app/src/themes/bluedodger.css`;
+        link.href = window.location.origin + `/src/themes/bluedodger.css`;
         document.head.append(link);
     } else if (theme != "bluedodger") {
         const link = document.createElement('link');
         link.rel = "stylesheet";
-        link.href = `https://bark-coding.vercel.app/src/themes/${theme}.css`;
+        link.href = window.location.origin +`/src/themes/${theme}.css`;
         document.head.append(link);
     } else {
         const link = document.createElement('link');
         link.rel = "stylesheet";
-        link.href = `https://bark-coding.vercel.app/src/themes/bluedodger.css`;
+        link.href = window.location.origin+`/src/themes/bluedodger.css`;
         document.head.append(link);
     }
 } else {
         const link = document.createElement('link');
         link.rel = "stylesheet";
-        link.href = `https://bark-coding.vercel.app/src/themes/bluedodger.css`;
+        link.href = window.location.origin + `/src/themes/bluedodger.css`;
         document.head.append(link);
     }
 
