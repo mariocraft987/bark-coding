@@ -105,7 +105,7 @@ function initializeDarkMode() {
 const darkModeToggle = document.getElementById('darkModeToggle');
 try {
     darkModeToggle.addEventListener('click', toggleDarkMode);
-} catch (err) {
+} catch (error) {
     console.error('failed to add click event for the dark mode toggle :(', err);
 }
 
