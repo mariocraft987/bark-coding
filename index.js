@@ -92,6 +92,13 @@ function toggleDarkMode() {
 
 // Function to initialize dark mode based on local storage
 function initializeDarkMode() {
+    // Attach event listener to dark mode toggle button
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    try {
+        darkModeToggle.addEventListener('click', toggleDarkMode);
+    } catch (error) {
+        console.error('failed to add click event for the dark mode toggle :(', error);
+    }
     const isDarkMode = localStorage.getItem('darkMode') === 'true';
     const body = document.body;
     if (isDarkMode) {
@@ -99,14 +106,6 @@ function initializeDarkMode() {
     } else {
         body.classList.remove('dark-mode');
     }
-}
-
-// Attach event listener to dark mode toggle button
-const darkModeToggle = document.getElementById('darkModeToggle');
-try {
-    darkModeToggle.addEventListener('click', toggleDarkMode);
-} catch (error) {
-    console.error('failed to add click event for the dark mode toggle :(', error);
 }
 
 // Initialize dark mode when the page loads
