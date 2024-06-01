@@ -37,6 +37,8 @@ body {
   text-decoration: none;
   height: calc(100% - 20px);
   line-height: 25px;
+  display: flex;
+  gap: 10px;
 }
 
 .navbar a.right {
