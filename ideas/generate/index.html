@@ -27,8 +27,15 @@
 			margin-right: auto;
 			position: absolute;
 			left: 50%;
-			top: 50%;
+			top: calc(50% + 30px);
 			transform: translate(-50%, -50%);
+			opacity: 0;
+			transition: 1s;
+		}
+
+		content.show {
+			opacity: 1;
+			top: 50%;
 		}
 
 		content * {
