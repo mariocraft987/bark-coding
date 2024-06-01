@@ -41,6 +41,8 @@ body {
   padding: 20px 25px;
   text-decoration: none!important;
   line-height: 25px;
+  display: flex;
+  gap: 15px;
 }
 
 .navbar a.right {
