@@ -1,4 +1,4 @@
-content = '<div class="navbar"><a href="' + baseUrl + '"><img src="' + window.location.origin +'/src/images/Logo.svg" alt="bark" width="25" height="25" ><img src="' + window.location.origin +'/src/emojis/svg/pride.svg" alt="pride flag" width="25" height="25" ></a>'
+content = '<div class="navbar"><a href="' + baseUrl + '"><img src="' + window.location.origin +'/src/images/Logo.svg" alt="bark" width="25" height="25"><img src="' + window.location.origin +'/src/emojis/svg/pride.svg" alt="pride flag" width="25" height="25"></a>'
 content += '<a href="/editor">Create</a>'
 content += '<a href="/explore">Explore</a>'
 content += '<a href="/ideas">Ideas</a>' 
