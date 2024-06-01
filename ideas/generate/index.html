@@ -74,13 +74,23 @@
 	<content>
 		<h1>Bark's Magic Idea Generator</h1>
 		<p>When you're out of ideas but want to feed your hunger for programming, Bark's Magic Idea Generator gives you creative ideas to spend your time on!</p>
-		<button>Start</button>
+		<button onclick="next(0)">Start</button>
 	</content>
 	<script type="text/javascript">
 		var cards = document.getElementsByTagName("content");
 		document.addEventListener("DOMContentLoaded", function() {
 			cards[0].classList.add("show");
 		})
+
+		var next = function(current_card) {
+			cards[current_card].classList.remove("show");
+			cards[current_card+1].classList.add("show");
+		}
+
+		var back = function(current_card) {
+			cards[current_card].classList.remove("show");
+			cards[current_card-1].classList.add("show");
+		}
 	</script>
 </body>
 </html>
