@@ -15,7 +15,7 @@
 
 		body {
 			margin: 0;
-			overflow-x: hidden;
+			overflow: hidden;
 			font-family: "Poppins", "Franklin Gothic Medium", Arial, sans-serif;
 			background-color: var(--bg);
 			color: var(--text);
@@ -27,7 +27,7 @@
 			margin-right: auto;
 			position: absolute;
 			left: 50%;
-			top: calc(50% + 30px);
+			top: 110vh;
 			transform: translate(-50%, -50%);
 			opacity: 0;
 			transition: 1s;
@@ -47,6 +47,9 @@
 			left: 50%;
 			transform: translate(-50%, -50%);
 			margin-top: 40px;
+		}
+
+		button, select {
 			padding: 10px 50px;
 			font-family: inherit;
 			border-radius: 100px;
@@ -57,7 +60,7 @@
 			cursor: pointer;
 		}
 
-		button:hover {
+		button:hover, select:hover {
 			background-color: var(--bg);
 			color: var(--cyan);
 			outline: 2px solid var(--cyan);
