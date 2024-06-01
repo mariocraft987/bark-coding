@@ -92,6 +92,23 @@
 		</form>
 		<button onclick="next()">Next</button>
 	</content>
+	<content>
+		<h1>Genre</h1>
+		<p>What kind of project would you like to make?</p>
+		<form>
+			<select>
+				<option value="1">Animation</option>
+				<option value="2" selected>Game</option>
+				<option value="3">Music</option>
+				<option value="4">Tutorial</option>
+			</select>
+		</form>
+		<button onclick="next()">Next</button>
+	</content>
+	<content>
+		<h1>Help</h1>
+		<p>Well, I got this far, but can someone figure out how to make this work?? :(</p>
+	</content>
 	<script type="text/javascript">
 		var cards = document.getElementsByTagName("content");
 		document.addEventListener("DOMContentLoaded", function() {
