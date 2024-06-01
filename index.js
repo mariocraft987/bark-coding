@@ -11,7 +11,7 @@ toevaluate.forEach(path => {
     });
 });
 
-let newsBox = "Come see Bark's <a href='" + window.location.origin + "/settings'>theme selector!</a>";
+let newsBox = "Bark has some few errors, that we are working on to be fixed";
 let baseUrl = window.location.origin;
 let commitsLength = 150;
 
