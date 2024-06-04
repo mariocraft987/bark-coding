@@ -494,6 +494,22 @@
         <block type="fetch"></block>
         <block type="letters_from"></block>
       </category>
+      <category name="Sine" colour="#19b9c2">
+        <block type="sine_move"></block>
+        <block type="sine_move2"></block>
+        <block type="sine_size"></block>
+      </category>
+      <category name="A.I." colour="#5E7D6C">
+        <block type="set_chatbot"></block>
+        <block type="chatbot_respond"></block>
+        <block type="chatbot_tell"></block>
+        <block type="chatbot_reset"></block>
+      </category>
+      <category name="Custom" colour="#cf4125">
+        <block type="create_elm"></block>
+        <block type="delete_elm"></block>
+        <block type="get_elm"></block>
+        </category>
     </xml>
 
     <script>
@@ -1119,5 +1135,8 @@ if (theme) {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="/index.js"></script>
 <script src="https://bark-coding.vercel.app/editor/uploader.js"></script>
-<script src="/editor/extensions.js"></script>
+<!--
+  <script src="/editor/extensions.js"></script>
+  to be reimplemented later, for some reason updatetoolbox breaks category switching :(
+-->
 </html>
