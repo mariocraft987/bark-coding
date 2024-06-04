@@ -1,6 +1,13 @@
 const elements = document.querySelectorAll('.multi-language');
+var select = document.getElementById("lang-select");
 const url = `${window.location.origin}/src/translations/languages.json`;
-const currentLang = localStorage.getItem('lang');
+let currentLang = localStorage.getItem('lang');
+var option
+if(!currentLang){
+    currentLang = `{"name":"English","file":"en.json"}`
+}
+
+/*
 fetch(url)
     .then(response => response.json())
     .then(data => {
@@ -20,3 +27,15 @@ fetch(url)
             });
         });
     });
+*/
+
+fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        obj = data;
+      })
+      .then(() => {
+          option = document.createElement("option");
+            option.text = "obj.name;
+            select.add(option);
+      });
