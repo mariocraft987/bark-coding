@@ -1,4 +1,4 @@
-let profile = localStorage.getItem("myBarkUsername") == "" ? '<a class="right">sign out</a><a class="right">profile</a>' : '<a href="login" class="right">Sign in</a><a href="signup" class="right">Join bark</a></div>'
+let profile = localStorage.getItem("myBarkUsername") == "" ? '<a class="right">sign out</a><a class="right">profile</a>' : '<a href="login" class="right">Login</a><a href="signup" class="right">Join bark</a></div>'
 let afdbtn = new Date().getMonth() === 3 && new Date().getDate() === 1 ? "<a id='flip-it-afd-btn'>FLIP IT</a>" : '';
 const components = {
     //navbar
