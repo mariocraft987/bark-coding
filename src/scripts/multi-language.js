@@ -1,13 +1,10 @@
 const elements = document.querySelectorAll('.multi-language');
-var select = document.getElementById("lang-select");
 const url = `${window.location.origin}/src/translations/languages.json`;
 let currentLang = localStorage.getItem('lang');
-var option
 if(!currentLang){
     currentLang = `{"name":"English","file":"en.json"}`
 }
 
-/*
 fetch(url)
     .then(response => response.json())
     .then(data => {
@@ -27,7 +24,10 @@ fetch(url)
             });
         });
     });
-*/
+    
+/*
+var select = document.getElementById("lang-select");
+var option
 
 fetch(url)
       .then((res) => res.json())
@@ -39,3 +39,4 @@ fetch(url)
             option.text = "obj.name;
             select.add(option);
       });
+*/
