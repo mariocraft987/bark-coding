@@ -812,19 +812,19 @@ Blockly.Blocks['onreturn'] = {
         }
       };
 
-      Blockly.Blocks['letters_from'] = {
+Blockly.Blocks['letters_from'] = {
   init: function() {
-    this.appendDummyInput()
+    this.appendValueInput("NAME")
+        .setCheck(null)
         .appendField("letters from")
         .appendField(new Blockly.FieldNumber(0, 0, 999), "FIRST")
         .appendField("to")
-        .appendField(new Blockly.FieldNumber(5, 0, 999), "LAST")
-        .appendField("in")
-        .appendField(new Blockly.FieldVariable("word"), "VAR");
+        .appendField(new Blockly.FieldNumber(0, 0, 999), "LAST")
+        .appendField("of");
     this.setOutput(true, "String");
     this.setColour(150);
  this.setTooltip("Returns the string from 2 number inputs in a variable.");
- this.setHelpUrl("");
+ this.setHelpUrl("https://scratch.mit.edu/users/legoer3/#comments");
   }
 };
       
