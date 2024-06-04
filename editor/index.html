@@ -167,6 +167,10 @@
       padding: 10px;
       cursor: pointer;
     }
+
+    .extension {
+      cursor: pointer;
+    }
   </style>
 </head>
 
@@ -202,11 +206,11 @@
   <div id="extensionseditordiv" class="tabpage">
     <h1>Choose An Extension</h1>
     <img src="https://bark-coding.vercel.app/src/images/assets/extension_sine.png" alt="Sine Extension"
-      title="Sine (created by nmsderp)" style="cursor: pointer" width="160">
+      title="Sine (created by nmsderp)" class="extension" width="160" id="hardcodedSineExtension">
     <img src="https://bark-coding.vercel.app/src/images/assets/extension_ai.png" alt="Artificial Intelligence Extension"
-      title="AI (created by funtasmo)" style="cursor: pointer" width="160">
+      title="AI (created by funtasmo)" class="extension" width="160" id="hardcodedAIExtension">
     <img src="https://bark-coding.vercel.app/src/images/assets/extension_barkblocks.png" alt="Bark Blocks Extension"
-      title="Bark blocks (created by funtasmo)" style="cursor: pointer" width="160">
+      title="Bark blocks (created by funtasmo)" class="extension" width="160" id="hardcodedBarkBlocksExtension">
     <h3>Or Upload a Extension to use.</h3>
     <input type="file" accept='.js' id="upload">
 
@@ -430,17 +434,6 @@
           </value>
         </block>
       </category>
-      <category name="Sine" colour="#19b9c2">
-        <block type="sine_move"></block>
-        <block type="sine_move2"></block>
-        <block type="sine_size"></block>
-      </category>
-      <category name="A.I." colour="#5E7D6C">
-        <block type="set_chatbot"></block>
-        <block type="chatbot_respond"></block>
-        <block type="chatbot_tell"></block>
-        <block type="chatbot_reset"></block>
-      </category>
       <category name="Variables" colour="#f2951b" custom="VARIABLE"></category>
       <category name="Lists" colour="#f2461b">
         <block type="lists_create_with">
@@ -501,18 +494,12 @@
         <block type="fetch"></block>
         <block type="letters_from"></block>
       </category>
-      <category name="Custom" colour="#cf4125">
-        <block type="create_elm"></block>
-        <block type="delete_elm"></block>
-        <block type="get_elm"></block>
-      </category>
-
     </xml>
 
     <script>
 
       function start() {
-        var workspace = Blockly.inject('blocklyDiv', {
+        window.workspace = Blockly.inject('blocklyDiv', {
           toolbox: document.getElementById('toolbox'),
           horizontalLayout: true,
           toolboxPosition: 'end',
@@ -1132,4 +1119,5 @@ if (theme) {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="/index.js"></script>
 <script src="https://bark-coding.vercel.app/editor/uploader.js"></script>
+<script src="/editor/extensions.js"></script>
 </html>
