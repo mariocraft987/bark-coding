@@ -277,6 +277,8 @@
         <block type="change_size"></block>
         <block type="set_size"></block>
         <block type="next_costume"></block>
+        <block type="change_stage_bg"></block>
+        <block type="return_color"></block>
       </category>
       <category name="Control" colour="#689c00">
         <block type="controls_repeat_ext">
@@ -525,6 +527,29 @@
         document.getElementById('generated-code').textContent = code; // Display generated code
         eval(code); // Evaluate generated code
       }
+      
+Blockly.Blocks['return_color'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField(new Blockly.FieldColour("#ff0000"), "NAME");
+    this.setOutput(true, null);
+    this.setColour(260);
+ this.setTooltip("Returns a color");
+ this.setHelpUrl("");
+  }
+};    
+      Blockly.Blocks['change_stage_bg'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("Change background color to")
+        .appendField(new Blockly.FieldColour("#ff0000"), "NAME");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(260);
+ this.setTooltip("Change the background color.");
+ this.setHelpUrl("");
+  }
+};
 
       Blockly.Blocks['change_costume'] = {
         init: function () {
