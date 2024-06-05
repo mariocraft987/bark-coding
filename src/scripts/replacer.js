@@ -39,8 +39,8 @@ const emojis = [
         url: "src/emojis/svg/normal/angry.svg"
     },
     {
-        token: ":raiseEyebrow:",
-        emoji: "raiseEyebrow",
+        token: ":raisedEyebrow:",
+        emoji: "raisedEyebrow",
         url: "src/emojis/svg/normal/raiseEyebrow.svg"
     },
     {
