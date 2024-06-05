@@ -5,7 +5,7 @@ const emojisize = 25;
 const emojis = [
     {
         emoji: "amazed",
-        url: "src/emojis/normal/svg/amazed.svg"
+        url: "src/emojis/svg/normal/amazed.svg"
     },
     {
         emoji: "alien",
