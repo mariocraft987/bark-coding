@@ -39,13 +39,22 @@ const aiXML = `
       </category>
 `;
 
-const barkBlocksXML = `
-<category name="Custom" colour="#cf4125">
-<block type="create_elm"></block>
-<block type="delete_elm"></block>
-<block type="get_elm"></block>
-</category>
+const customXML = `
+      <category name="Custom" colour="#cf4125">
+        <block type="create_elm"></block>
+        <block type="delete_elm"></block>
+        <block type="get_elm"></block>
+        </category>
 `;
+
+const sineXML = `
+<category name="Sine" colour="#19b9c2">
+        <block type="sine_move"></block>
+        <block type="sine_move2"></block>
+        <block type="sine_size"></block>
+      </category>
+`;
+
 
 /**
  * to add a hardcoded extension, put the xml in a variable like above then map the element id
@@ -54,7 +63,7 @@ const barkBlocksXML = `
 const MapIdToExtensions = {
     "hardcodedSineExtension": sineXML,
     "hardcodedAIExtension": aiXML,
-    "hardcodedBarkBlocksExtension": barkBlocksXML
+    "hardcodedCustomBlocksExtension": customXML
 };
 
 //stupid basic state manager
