@@ -12,7 +12,7 @@ let isFullscreen = false;
 
 function preload() {
   // Load the image from the URL then move
-  img = loadImage(window.location.origin + '/src/images/dog/idle.svg');
+  img = loadImage(window.location.origin + '/src/images/dog/scratch_dog.png');
 }
 
 function kill() {
