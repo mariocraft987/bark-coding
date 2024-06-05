@@ -1,5 +1,6 @@
 let timeouts = []; // Array to hold timeout IDs
 let img; // Declare variable to hold the image
+let imgsrc = window.location.origin + '/src/images/dog/scratch_dog.png'
 let x = 235; // Initial x position (centered)
 let y = 175; // Initial y position (centered)
 let imgWidth = 72.54920959472656; // Initial width of the image
@@ -12,7 +13,8 @@ let isFullscreen = false;
 
 function preload() {
   // Load the image from the URL then move
-  img = loadImage(window.location.origin + '/src/images/dog/scratch_dog.png');
+  img = loadImage(imgsrc);
+  document.getElementById('costume').src = imgsrc;
 }
 
 function kill() {
