@@ -3,6 +3,8 @@ div.gallery {
   border: 1px solid #ccc;
   float: left;
   width: 180px;
+  background: #c9deff;
+  border-radius: 25px;
 }
 
 div.gallery:hover {
