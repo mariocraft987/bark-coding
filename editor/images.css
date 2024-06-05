@@ -3,17 +3,6 @@ div.gallery {
   border: 1px solid #ccc;
   float: left;
   width: 180px;
-  background: #c9deff;
-  border-radius: 25px;
-}
-
-div.gallery:hover {
-  border: 1px solid #777;
-}
-
-div.gallery img {
-  width: 100%;
-  height: auto;
 }
 
 div.desc {
