@@ -4,6 +4,11 @@ const emojisize = 25;
 
 const emojis = [
     {
+        token: ":actingSus:",
+        emoji: "actingSus",
+        url: "src/emojis/svg/normal/actingSus.svg"
+    },
+    {
         token: ":amazed:",
         emoji: "amazed",
         url: "src/emojis/svg/normal/amazed.svg"
@@ -142,6 +147,16 @@ const emojis = [
         token: ":robot:",
         emoji: "robot",
         url: "src/emojis/svg/normal/robot.svg"
+    },
+    {
+        token: ":loading:",
+        emoji: "loading",
+        url: "src/emojis/svg/normal/loading.svg"
+    },
+    {
+        token: ":clapAnim:",
+        emoji: "clapAnim",
+        url: "src/emojis/svg/normal/clap_anim.gif"
     },
     {
         token: ":clap:",
