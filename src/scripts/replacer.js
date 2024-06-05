@@ -4,114 +4,152 @@ const emojisize = 25;
 
 const emojis = [
     {
+        token: ":amazed:",
         emoji: "amazed",
-        url: "src/emojis/normal/svg/amazed.svg"
+        url: "src/emojis/svg/normal/amazed.svg"
     },
     {
+        token: ":amongus:",
+        emoji: "amongus",
+        url: "src/emojis/svg/joke/amongus.svg"
+    },
+    {
+        token: ":alien:",
         emoji: "alien",
         url: "src/emojis/svg/normal/alien.svg"
     },
     {
+        token: ":smiley:",
         emoji: "smiley",
         url: "src/emojis/svg/normal/smiley.svg"
     },
     {
+        token: ":happy:",
         emoji: "happy",
         url: "src/emojis/svg/normal/happy.svg"
     },
     {
+        token: ":sad:",
         emoji: "sad",
         url: "src/emojis/svg/normal/sad.svg"
     },
     {
+        token: ":angry:",
         emoji: "angry",
         url: "src/emojis/svg/normal/angry.svg"
     },
     {
+        token: ":raiseEyebrow:",
+        emoji: "raiseEyebrow",
+        url: "src/emojis/svg/normal/raiseEyebrow.svg"
+    },
+    {
+        token: ":loading:",
+        emoji: "loading",
+        url: "src/emojis/svg/normal/loading.svg"
+    },
+    {
+        token: ":lol:",
         emoji: "lol",
         url: "src/emojis/svg/normal/lol.svg"
     },
     {
+        token: ":textHappy:",
         emoji: "textHappy",
         url: "src/emojis/svg/normal/textHappy.svg"
     },
     {
+        token: ":sussedOut:",
         emoji: "sussedOut",
         url: "src/emojis/svg/normal/sussedOut.svg"
     },
     {
+        token: ":goofy:",
         emoji: "goofy",
         url: "src/emojis/svg/normal/goofy.svg"
     },
     {
+        token: ":mad:",
         emoji: "mad",
         url: "src/emojis/svg/normal/mad.svg"
     },
     {
+        token: ":joyful:",
         emoji: "joyful",
         url: "src/emojis/svg/normal/joyful.svg"
     },
     {
+        token: ":moneyEyes:",
         emoji: "moneyEyes",
         url: "src/emojis/svg/normal/moneyEyes.svg"
     },
     {
+        token: ":evil:",
         emoji: "evil",
         url: "src/emojis/svg/normal/evil.svg"
     },
     {
+        token: ":panic:",
         emoji: "panic",
         url: "src/emojis/svg/normal/panic.svg"
     },
     {
+        token: ":dizzy:",
         emoji: "dizzy",
         url: "src/emojis/svg/normal/dizzy.svg"
     },
     {
+        token: ":jealous:",
         emoji: "jealous",
         url: "src/emojis/svg/normal/jealous.svg"
     },
     {
+        token: ":smallsmile:",
         emoji: "smallsmile",
         url: "src/emojis/svg/normal/smallsmile.svg"
     },
     {
+        token: ":troll:",
         emoji: "troll",
         url: "src/emojis/svg/normal/troll.svg"
     },
     {
-        emoji: "woof",
-        url: "src/emojis/svg/normal/bark.svg"
-    },
-    {
+        token: ":fire:",
         emoji: "fire",
         url: "src/emojis/svg/normal/fire.svg"
     },
     {
+        token: ":pride:",
         emoji: "pride",
         url: "src/emojis/svg/normal/pride.svg"
     },
     {
+        token: ":rofl:",
         emoji: "rofl",
         url: "src/emojis/svg/normal/rofl.svg"
     },
     {
+        token: ":skibidi:",
+        emoji: "skibidi",
+        url: "src/emojis/svg/joke/skibidi.svg"
+    },
+    {
+        token: ":thumb:",
         emoji: "thumb",
         url: "src/emojis/svg/normal/thumb.svg"
     },
     {
+        token: ":robot:",
         emoji: "robot",
         url: "src/emojis/svg/normal/robot.svg"
     },
     {
+        token: ":clap:",
         emoji: "clap",
         url: "src/emojis/svg/normal/clap.svg"
     },
-    {
-        emoji: "barklogo",
-        url: "src/emojis/svg/normal/barklogo.svg"
-    },
     /*{
+        token: ":emojiName:",
         emoji: "emoji name",
         url: "emoji image link"
     },*/
@@ -161,7 +199,7 @@ function replace(text) {
         .replaceAll(/(@nmsderp|@mr_rudy)+/gim, '<a href="https://github.com/nmsderp" style="background-color: #7ad975;height: 16px;display: inline-block;padding: 5px;margin: -5px 3px;border: 1px solid #d7ffe0;border-radius: 10px;color: #ffffff;position: relative;top: 2px; text-decoration: none;"><img src="https://github.com/nmsderp.png" width="16px" style="border-radius: 50%;"><span style="top: -2px;margin-left: 3px;margin-right: 3px;position: relative;">nmsderp</span></a>')
 
     for (const emoji of emojis) {
-        start = String(start).replace(`:${emoji.emoji}:`, `<img src='${emoji.url}' alt=':${emoji.emoji}:' style='margin-bottom: 7px;' width='${emojisize}' height='${emojisize}'>`);
+        start = String(start).replace(`${emoji.token}`, `<img src='${emoji.url}' alt=':${emoji.emoji}:' style='margin-bottom: 7px;' width='${emojisize}' height='${emojisize}'>`);
     }
 
     return start;
