@@ -1,10 +1,10 @@
 let timeouts = []; // Array to hold timeout IDs
 let img; // Declare variable to hold the image
 let imgsrc = window.location.origin + '/src/images/dog/scratch_dog.png'
-let x = 235; // Initial x position (centered)
-let y = 175; // Initial y position (centered)
-let imgWidth = 72.54920959472656; // Initial width of the image
-let imgHeight = 96.26698303222656; // Initial height of the image
+let x = 190; // Initial x position (centered)
+let y = 130; // Initial y position (centered)
+let imgWidth = 110; // Initial width of the image
+let imgHeight = 110; // Initial height of the image
 let bgColor = '#FFFFFF'; // Initial background color (white)
 let angle = 0; // Initial angle for sine wave movement
 const amplitude = 50; // Amplitude of the sine wave
