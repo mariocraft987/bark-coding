@@ -37,7 +37,8 @@
 
   <script src="https://bark-coding.vercel.app/editor/custom_category_es6.js"></script>
   <script src="https://bark-coding.vercel.app/editor/toolbox_label_es6.js"></script>
-  <link rel="stylesheet" lang="css" href="https://bark-coding.vercel.app/editor/uploader.css">
+  <link rel="stylesheet" lang="css" href="editor/uploader.css">
+  <link rel="stylesheet" lang="css" href="images.css">
   <style>
     @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
@@ -186,14 +187,23 @@
       <dmbico alt="Dark Mode"></dmbico>
     </a>
   </div>
+  
   <!-- Code Tab -->
   <div id="blocklyDiv" class="tabpage"></div>
+  
   <!-- Costumes Tab -->
   <div id="costumeseditordiv" class="tabpage">
     <h1>Upload costume</h1>
     <input type='file' accept='image/*' id="fileupload" onchange='openFile(event)'><br>
     <img id='costume' style="width:70px;" src="https://bark-coding.vercel.app/src/images/dog/idle.svg">
+    
+    <div class="gallery"><a target="_blank" href="/src/images/dog/scratch_dog.png">
+    <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="desc">Bark Dog</div></div>
+    
   </div>
+  
   <!-- Sounds Tab -->
   <div id="soundseditordiv" class="tabpage">
     <h1>Upload sound</h1>
