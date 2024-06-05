@@ -310,6 +310,7 @@
         <block type="change_size"></block>
         <block type="set_size"></block>
         <block type="next_costume"></block>
+        <block type="colour_value"></block>
       </category>
       <category name="Control" colour="#689c00">
         <block type="controls_repeat_ext">
@@ -885,6 +886,17 @@ Blockly.Blocks['letters_from'] = {
           this.setHelpUrl("");
         }
       };
+      Blockly.Blocks['colour_value'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("colour")
+        .appendField(new Blockly.FieldColour("#ff0000"), "NAME");
+    this.setOutput(true, null);
+    this.setColour(260);
+ this.setTooltip("a colour value");
+ this.setHelpUrl("");
+  }
+};
       Blockly.Blocks['confirm_block'] = {
         init: function () {
           this.appendValueInput("message")
