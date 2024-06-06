@@ -78,7 +78,7 @@
 <script src="/index.js"></script>
 <script>
   let gender_value = document.getElementById("gender").value;
-  let other_gender = document.getElementById("other_gender")
+  let other_gender = document.getElementById("other_gender");
   
   function checkSignup() {
     let username = document.getElementById('username').value;
@@ -99,6 +99,7 @@
 
   function checkGender() {
     gender_value = document.getElementById("gender").value;
+    other_gender = document.getElementById("other_gender");
     if (gender_value == "other") {
       other_gender.style.display = "block";
       other_gender.style.textAlign = "center";
