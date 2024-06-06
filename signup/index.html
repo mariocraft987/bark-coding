@@ -58,12 +58,14 @@
         <br />
         <br />
         <label for="gender">Gender:</label>
-        <select name="gender" id="gender" onchange="console.log('changed')" required>
+        <select name="gender" id="gender" onchange="checkGender()" required>
           <option value="male">Male</option>
           <option value="female">Female</option>
           <option value="none">Non-Binary</option>
           <option value="other">Other</option>
         </select>
+        <br/>
+        <input type="other_gender" id="other_gender" placeholder="other" />
         <br />
         <br />
         <input class="buttonFrBx" type="submit" value="Submit" onclick="checkSignup()" />
@@ -89,6 +91,16 @@
         if (password.length > 12) { errormsg.innerHTML = "Please make your username lower than 13 characters!" } else {
           document.getElementById('page').innerHTML = '<br/><h2>Welcome to Bark ' + username + '!</h2>';
         }
+    }
+  }
+
+  function checkGender() {
+    let gender_value = document.getElementById("gender").value;
+    let other_gender = document.getElementById("other_gender")
+    if (gender_value == "other") {
+      other_gender.style.display = "block";
+    }else{
+      other_gender.style.display = "none";
     }
   }
 </script>
