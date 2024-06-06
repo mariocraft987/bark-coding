@@ -65,7 +65,7 @@
           <option value="other">Other</option>
         </select>
         <br/>
-        <input type="other_gender" id="other_gender" style="text-align: center;" placeholder="other" />
+        <input type="other_gender" id="other_gender" placeholder="other" />
         <br />
         <br />
         <input class="buttonFrBx" type="submit" value="Submit" onclick="checkSignup()" />
@@ -77,6 +77,9 @@
 </body>
 <script src="/index.js"></script>
 <script>
+  let gender_value = document.getElementById("gender").value;
+  let other_gender = document.getElementById("other_gender")
+  
   function checkSignup() {
     let username = document.getElementById('username').value;
 
@@ -95,10 +98,10 @@
   }
 
   function checkGender() {
-    let gender_value = document.getElementById("gender").value;
-    let other_gender = document.getElementById("other_gender")
+    gender_value = document.getElementById("gender").value;
     if (gender_value == "other") {
       other_gender.style.display = "block";
+      other_gender.style.textAlign = "center";
     }else{
       other_gender.style.display = "none";
     }
