@@ -30,7 +30,7 @@
 |`:panic:`     |<img src="svg/normal/panic.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:pride:`     |<img src="svg/normal/pride.svg" width="25" height="25">|<a href="https://github.com/qwertyy-dev">qwertyy-dev</a>|
 |`:qwertyy:`   |<img src="svg/dev/qwertyy.png" width="25" height="25">|<a href="https://github.com/qwertyy-dev">qwertyy-dev</a>|
-|`:raiseEyebrow:`   |<img src="svg/normal/raiseEyebrow.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
+|`:raisedEyebrow:`   |<img src="svg/normal/raiseEyebrow.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:robot:`     |<img src="svg/normal/robot.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:rofl:`      |<img src="svg/normal/rofl.svg" width="25" height="25">|<a href="https://github.com/Rubiidev-18">Rubiidev-18</a>|
 |`:rubiidev:`  |<img src="svg/dev/rubiidev.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
