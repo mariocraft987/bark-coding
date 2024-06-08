@@ -186,14 +186,14 @@ function replace(text) {
 
         // Some terms listed here are only slices of words. this is because there are many different words (generally offensive and sexual) that begin with these terms.
         // 🆘 I wouldn't recommend searching these terms 🆘
-        .replace(/(strip club|prostitute)+/gim, t(10))
-        .replace(/(paedophile|wet dream)+/gim, t(9))
-        .replace(/(ejaculat|beastial|masturbat|testicle|pedophile|stripper)+/gim, t(8))
-        .replace(/(cumming|asshole|bestial|cocaine|jackass)+/gim, t(7))
-        .replace(/(penile|virgin|breast|condom|faggot|incest|molest|retard|rapist|hentai|orgasm|nudity)+/gim, t(6))
-        .replace(/(bitch|pussy|penis|vagin|prick|whore|booty|boner|erect|horny|skank|sperm|teste|eroti|semen)+/gim, t(5))
-        .replace(/(fuck|dick|cock|cunt|nigg|slut|porn|boob|jizz|milf|dilf|pimp|rape|sext|nude|tits|titt)+/gim, t(4))
-        .replace(/(sex|hoe|wtf|kys)+/gim, t(3))
+        .replaceAll(/(strip club|prostitute)+/gim, t(10))
+        .replaceAll(/(paedophile|wet dream)+/gim, t(9))
+        .replaceAll(/(ejaculat|beastial|masturbat|testicle|pedophile|stripper)+/gim, t(8))
+        .replaceAll(/(cumming|asshole|bestial|cocaine|jackass)+/gim, t(7))
+        .replaceAll(/(penile|virgin|breast|condom|faggot|incest|molest|retard|rapist|hentai|orgasm|nudity)+/gim, t(6))
+        .replaceAll(/(bitch|pussy|penis|vagin|prick|whore|booty|boner|erect|horny|skank|sperm|teste|eroti|semen)+/gim, t(5))
+        .replaceAll(/(fuck|dick|cock|cunt|nigg|slut|porn|boob|jizz|milf|dilf|pimp|rape|sext|nude|tits|titt)+/gim, t(4))
+        .replaceAll(/(sex|hoe|wtf|kys)+/gim, t(3))
         .replaceAll(/(🤱|💦|🕳️|🤤|🍑|🍆|🖕|😩|😫|🍒|🥵|🤓|👙)+/gim, t(1))
 
         // emojis of dev
@@ -214,7 +214,7 @@ function replace(text) {
         .replaceAll(/(@nmsderp|@mr_rudy)+/gim, '<a href="https://github.com/nmsderp" style="background-color: #7ad975;height: 16px;display: inline-block;padding: 5px;margin: -5px 3px;border: 1px solid #d7ffe0;border-radius: 10px;color: #ffffff;position: relative;top: 2px; text-decoration: none;"><img src="https://github.com/nmsderp.png" width="16px" style="border-radius: 50%;"><span style="top: -2px;margin-left: 3px;margin-right: 3px;position: relative;">nmsderp</span></a>')
 
     for (const emoji of emojis) {
-        start = String(start).replace(`${emoji.token}`, `<img src='${emoji.url}' alt=':${emoji.emoji}:' style='margin-bottom: 7px;' width='${emojisize}' height='${emojisize}'>`);
+        start = String(start).replaceAll(`${emoji.token}`, `<img src='${emoji.url}' alt=':${emoji.emoji}:' style='margin-bottom: 7px;' width='${emojisize}' height='${emojisize}'>`);
     }
 
     return start;
