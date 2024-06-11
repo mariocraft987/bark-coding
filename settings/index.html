@@ -47,7 +47,7 @@
             <span id="edit-mode-settings">
                 <br/>
                 <br/>
-                <select id="dark-mode-setting-edit">
+                <select id="dark-mode-setting-edit" onchange="checkDarkModeSelect()">
                     <option value="darkmodeon">Dark Mode true</option>
                     <option value="darkmodeoff">Dark Mode false</option>
                 </select>
@@ -55,6 +55,17 @@
         </section>
     </main>
 </body>
+<script>
+    function checkDarkModeSelect() {
+    let darkModeValue = document.getElementById(dark-mode-setting-edit").value
+        if (darkModeValue == "darkmodeon") {
+            localStorage.darkMode = true;
+        }else (darkModeValue == "darkmodeoff"){
+            localStorage.darkMode = false;
+        }
+        location.reload()
+    }
+</script>
 <script src="/index.js"></script>
 <script src="/src/scripts/multi-language.js"></script>
 <script src="/src/scripts/replacer.js"></script>
