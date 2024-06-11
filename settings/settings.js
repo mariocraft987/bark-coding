@@ -7,7 +7,7 @@ function checkDarkModeSelect() {
         if (darkModeValue == "darkmodeoff") {
             localStorage.darkMode = false;
         }
-        location.reload()
+        window.location.reload()
     }
 
 if (localStorage.darkMode == false) {
