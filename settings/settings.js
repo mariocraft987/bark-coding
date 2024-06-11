@@ -11,10 +11,10 @@ function checkDarkModeSelect() {
     }
 
 if (localStorage.darkMode == false) {
-    document.getElementById("dark-mode-setting-edit").selectedIndex = 1;
+    document.getElementById("dark-mode-setting-edit").selectedIndex = 0;
 }
 if (localStorage.darkMode == true) {
-    document.getElementById("dark-mode-setting-edit").selectedIndex = 0;
+    document.getElementById("dark-mode-setting-edit").selectedIndex = 1;
 }
 
 document.addEventListener('DOMContentLoaded', () => {
