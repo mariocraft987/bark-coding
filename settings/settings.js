@@ -1,9 +1,3 @@
-if (localStorage.darkMode == true) {
-    document.getElementById("dark-mode-setting-edit").selectedIndex = 0;
-}else{
-    document.getElementById("dark-mode-setting-edit").selectedIndex = 1;
-}
-
 function checkDarkModeSelect() {
     let darkModeValue = document.getElementById("dark-mode-setting-edit").value
     
@@ -15,6 +9,12 @@ function checkDarkModeSelect() {
         }
         location.reload()
     }
+
+if (localStorage.darkMode == true) {
+    document.getElementById("dark-mode-setting-edit").selectedIndex = 0;
+}else{
+    document.getElementById("dark-mode-setting-edit").selectedIndex = 1;
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     const theme = localStorage.getItem('theme');
