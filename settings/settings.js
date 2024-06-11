@@ -1,3 +1,14 @@
+function checkDarkModeSelect() {
+    let darkModeValue = document.getElementById("dark-mode-setting-edit").value
+        if (darkModeValue == "darkmodeon") {
+            localStorage.darkMode = true;
+        }
+        if (darkModeValue == "darkmodeoff") {
+            localStorage.darkMode = false;
+        }
+        location.reload()
+    }
+
 document.addEventListener('DOMContentLoaded', () => {
     const theme = localStorage.getItem('theme');
     if (theme) {
