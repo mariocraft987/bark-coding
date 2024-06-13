@@ -72,6 +72,12 @@
 			text-decoration-style: wavy;
 			text-decoration-color: var(--cyan);
 		}
+
+		#output-box {
+			width: 700px;
+			height: 500px;
+			overflow-y: auto;
+		}
 	</style>
 </head>
 <body>
@@ -104,32 +110,81 @@
 				<option value="4">Animation</option>
 			</select>
 		</form>
-		<button onclick="next()">Next</button>
+		<button onclick="next();generate()">Next</button>
 	</content>
 	<content>
-		<h1>Help</h1>
-		<p>Well, I got this far, but can someone figure out how to make this work?? :( - Qwertyytheartist</p>
-		<span id="idea-output"></span>
+		<h1 id="idea-title">Idea</h1>
+		<div id="output-box">
+			<div id="idea-output"></div>
+		</div>
 	</content>
-	<script type="text/javascript">
-		var cards = document.getElementsByTagName("content");
+	<script type="module">
+		import markdownIt from 'https://cdn.jsdelivr.net/npm/markdown-it@14.1.0/+esm'
+
+		const cards = document.getElementsByTagName("content");
 		document.addEventListener("DOMContentLoaded", function() {
 			cards[0].classList.add("show");
 		})
 
-		var current_card = 0;
+		let current_card = 0;
 
-		var next = function() {
+		const next = () => {
 			cards[current_card].classList.remove("show");
 			current_card++;
 			cards[current_card].classList.add("show");
 		}
 
-		var back = function() {
+		const back = () => {
 			cards[current_card].classList.remove("show");
 			current_card--;
 			cards[current_card].classList.add("show");
 		}
+
+		function getValuefromoption(idx) {
+			const element = document.querySelectorAll("select")[idx];
+			return element.options[element.selectedIndex].text;
+		}
+
+		const generate = async () => {
+			//generate using ai (i hate ai too, but there is 12 possible combinations and that would take so long to do)
+			const skill = getValuefromoption(0);
+			const projecttype = getValuefromoption(1);
+
+			//tell the user its generating. it takes a while to generate so its nice to know that the app didnt crash
+			document.getElementById("idea-title").innerText = "Idea - Generating..";
+
+			const response = await fetch("https://reverse.mubi.tech/v1/chat/completions", {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+					'Origin': 'https://gptcall.net/',
+					'Referer': 'https://gptcall.net/'//spelling is intentional
+				},
+				body: JSON.stringify({
+					model: 'gpt-4o',
+					messages: [
+						{
+							"role": "system",
+							"content": "You are an AI idea generator for a block-based programming program called Bark. Bark is based off of Blockly and it is mostly simular to scratch.mit.edu."
+						},
+						{
+							"role": "user",
+							"content": `hello! I want an idea! My skill at Bark is ${skill} and i want to make a project with the type of ${projecttype}`
+						}
+					]
+				})
+			}).then(data => data.json());
+
+			document.getElementById("idea-title").innerText = "Idea";
+			
+			//it will probably generate markdown
+			const md = markdownIt();
+			document.getElementById("idea-output").innerHTML = md.render(response.choices[0].message.content);
+		}
+
+		window.generate = generate;
+		window.next = next;
+		window.back = back;
 	</script>
 </body>
 </html>

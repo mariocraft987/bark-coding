@@ -1,5 +1,8 @@
 {
   "name": "barkdesktop",
   "main": "index.html",
-  "version": "0.17"
+  "version": "0.17",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
 }

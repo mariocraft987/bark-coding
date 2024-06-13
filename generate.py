@@ -1,6 +1,8 @@
 import os
 import json
 
+#this script is so obviously ai generated kill me
+
 # Function to list all files in the 'pages' folder and generate rewrite rules
 def generate_rewrites(pages_folder):
     rewrites = []
@@ -14,11 +16,17 @@ def generate_rewrites(pages_folder):
             url_path = url_path.replace(os.sep, '/')
             # Add leading slash
             url_path = '/' + url_path
-            # Create rewrite rule
-            rewrite = {
-                "source": url_path,
-                "destination": f"/pages/{relative_path}"
-            }
+            #create rewrite rule, but have a custom thing for generate
+            if relative_path == "generate.html":
+                rewrite = {
+                    "source": "/ideas/generate",
+                    "destination": f"/pages/{relative_path}"
+                }
+            else:
+                rewrite = {
+                    "source": url_path,
+                    "destination": f"/pages/{relative_path}"
+                }
             rewrites.append(rewrite)
     return rewrites
 
