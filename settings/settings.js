@@ -10,7 +10,15 @@ function checkDarkModeSelect() {
         window.location.reload()
     }
 
-
+switchTheme(selected) {
+    if (selected != "pranidhi", selected != "cherryblossom", selected != "bluedodger") {
+        localStorage.theme = selected;
+    }else{
+        localStorage.theme = "bluedodger";
+    }
+    window.location.reload()
+}
+    
 document.addEventListener('DOMContentLoaded', () => {
     const theme = localStorage.getItem('theme');
     if (theme) {
