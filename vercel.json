@@ -1,8 +1,56 @@
 {
   "rewrites": [
     {
-      "source": "/resize/:width/:height",
-      "destination": "/api/sharp"
+      "source": "/about",
+      "destination": "/pages/about.html"
+    },
+    {
+      "source": "/contributors",
+      "destination": "/pages/contributors.html"
+    },
+    {
+      "source": "/credits",
+      "destination": "/pages/credits.html"
+    },
+    {
+      "source": "/donates",
+      "destination": "/pages/donates.html"
+    },
+    {
+      "source": "/explore",
+      "destination": "/pages/explore.html"
+    },
+    {
+      "source": "/generate",
+      "destination": "/pages/generate.html"
+    },
+    {
+      "source": "/ideas",
+      "destination": "/pages/ideas.html"
+    },
+    {
+      "source": "/login",
+      "destination": "/pages/login.html"
+    },
+    {
+      "source": "/lua",
+      "destination": "/pages/lua.html"
+    },
+    {
+      "source": "/search",
+      "destination": "/pages/search.html"
+    },
+    {
+      "source": "/settings",
+      "destination": "/pages/settings.html"
+    },
+    {
+      "source": "/signup",
+      "destination": "/pages/signup.html"
+    },
+    {
+      "source": "/special",
+      "destination": "/pages/special.html"
     }
   ]
 }
