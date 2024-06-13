@@ -21,7 +21,7 @@
       "destination": "/pages/explore.html"
     },
     {
-      "source": "/generate",
+      "source": "/ideas/generate",
       "destination": "/pages/generate.html"
     },
     {
