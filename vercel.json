@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/resize/:width/:height",
+      "destination": "/api/sharp"
+    }
+  ]
+}
