@@ -51,6 +51,6 @@
     {
       "source": "/special",
       "destination": "/pages/special.html"
-    },
+    }
   ]
 }
