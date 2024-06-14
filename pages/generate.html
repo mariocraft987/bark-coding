@@ -95,6 +95,8 @@
 				<option value="1">1 | New</option>
 				<option value="2" selected>2 | Average</option>
 				<option value="3">3 | Advanced</option>
+				<option value="4">4 | Expert</option>
+				<option value="4">5 | Bark God</option>
 			</select>
 		</form>
 		<button onclick="next()">Next</button>
@@ -107,13 +109,14 @@
 				<option value="1">Animation</option>
 				<option value="2" selected>Game</option>
 				<option value="3">Music</option>
-				<option value="4">Animation</option>
+				<option value="4">Story</option>
+				<option value="5">Misc.</option>
 			</select>
 		</form>
 		<button onclick="next();generate()">Next</button>
 	</content>
 	<content>
-		<h1 id="idea-title">Idea</h1>
+		<h1 id="idea-title">Heres your Idea!</h1>
 		<div id="output-box">
 			<div id="idea-output"></div>
 		</div>
@@ -165,11 +168,11 @@
 					messages: [
 						{
 							"role": "system",
-							"content": "You are an AI idea generator for a block-based programming program called Bark. Bark is based off of Blockly and it is mostly simular to scratch.mit.edu."
+							"content": "You are an AI idea generator for a block-based programming program called Bark. Bark is based off of Blockly and it is mostly similar to scratch.mit.edu."
 						},
 						{
 							"role": "user",
-							"content": `hello! I want an idea! My skill at Bark is ${skill} and i want to make a project with the type of ${projecttype}`
+							"content": `hello! I want an idea! My skill at Bark is ${skill} and i want to make a project with the type of ${projecttype}, pls add extra details to everything!`
 						}
 					]
 				})
