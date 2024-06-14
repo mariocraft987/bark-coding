@@ -112,10 +112,10 @@
 				<option value="5">Misc.</option>
 			</select>
 		</form>
-		<button onclick="next();generate()">Next</button>
+		<button onclick="generatenext()">Next</button>
 	</content>
 	<content>
-		<h1 id="idea-title">Heres your Idea!</h1>
+		<h1 id="idea-title">Loading..</h1>
 		<div id="output-box">
 			<div id="idea-output"></div>
 		</div>
@@ -140,6 +140,11 @@
 			cards[current_card].classList.remove("show");
 			current_card--;
 			cards[current_card].classList.add("show");
+		}
+
+		const generatenext = () => {
+			next();
+			generate();
 		}
 
 		function getValuefromoption(idx) {
@@ -171,7 +176,7 @@
 						},
 						{
 							"role": "user",
-							"content": `hello! I want an idea! My skill at Bark is ${skill} and i want to make a project with the type of ${projecttype}, pls add extra details to everything!`
+							"content": `hello! I want an idea! My skill at Bark is ${skill} and i want to make a project with the type of ${projecttype}, please add extra details to everything!`
 						}
 					]
 				})
@@ -185,6 +190,7 @@
 		}
 
 		window.generate = generate;
+		window.generatenext = generatenext;
 		window.next = next;
 		window.back = back;
 	</script>
