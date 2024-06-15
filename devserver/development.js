@@ -1,13 +1,11 @@
-//this is an express server to simulate the vercel.json in a development environment
-//type "node server.js"
-
-//install express
-const childprocess = require("child_process");
-childprocess.execSync("pnpm i express");
-require('fs').unlinkSync('pnpm-lock.yaml');
-
 //the server
-const express = require("express");
+let express;
+try {
+    express = require("express");
+} catch {
+    console.error("Seems like express isn't installed. To fix this, run \"npm i\" (or use bun/pnpm if you have it) then try again.");
+    require('process').exit(1);
+}
 const app = express();
 
 app.use(express.static("."));
