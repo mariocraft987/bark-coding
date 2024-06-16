@@ -50,6 +50,7 @@
                 <br/>
                 <br/>
                 <select id="dark-mode-setting-edit" onchange="checkDarkModeSelect()">
+                    <option value="notincluded">(Choose options)</option>
                     <option value="darkmodeon">Dark Mode true</option>
                     <option value="darkmodeoff">Dark Mode false</option>
                 </select>
@@ -62,13 +63,5 @@
 <script src="/src/scripts/replacer.js"></script>
 <script src="/settings/settings.js"></script>
 <script src="/src/scripts/navbar.js"></script>
-<script>
-    if (localStorage.darkMode == false) {
-    document.getElementById("dark-mode-setting-edit").selectedIndex = 0;
-}
-if (localStorage.darkMode == true) {
-    document.getElementById("dark-mode-setting-edit").selectedIndex = 1;
-}
-</script>
 
 </html>
