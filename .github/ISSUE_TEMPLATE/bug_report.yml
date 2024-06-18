@@ -13,8 +13,7 @@ body:
     label: Operating System
     description: "What operating system(s) are you seeing this problem on?"
     options:
-      - label: Android
-      - label: ChromeOS
+      - label: Android/ChromeOS
       - label: iOS
       - label: Linux
       - label: Mac
@@ -35,6 +34,7 @@ body:
       - label: Internet (Galaxy)
       - label: Microsoft Edge
       - label: Opera
+      - label: Brave
       - label: Safari
       - label: Other
   validations:
