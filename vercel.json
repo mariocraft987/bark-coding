@@ -51,6 +51,10 @@
     {
       "source": "/explore",
       "destination": "/pages/explore.html"
+    },
+    {
+      "source": "/discord-bot",
+      "destination": "/pages/discordbot.html"
     }
   ]
 }
