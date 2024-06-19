@@ -1,6 +1,6 @@
 let timeouts = []; // Array to hold timeout IDs
 let img; // Declare variable to hold the image
-let imgsrc = window.location.origin + '/src/images/dog/scratch_dog.png'
+let imgsrc = window.location.origin + '/src/images/dog/scratch_dog.png'; // Default image source
 let x = 190; // Initial x position (centered)
 let y = 130; // Initial y position (centered)
 let imgWidth = 110; // Initial width of the image
@@ -9,7 +9,7 @@ let bgColor = '#FFFFFF'; // Initial background color (white)
 let angle = 0; // Initial angle for sine wave movement
 const amplitude = 50; // Amplitude of the sine wave
 const frequency = 0.05; // Frequency of the sine wave
-let isFullscreen = false;
+let isFullscreen = false; // Full screen
 
 function preload() {
   // Load the image from the URL then move
