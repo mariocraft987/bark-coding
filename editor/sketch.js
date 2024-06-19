@@ -1,8 +1,8 @@
 let timeouts = []; // Array to hold timeout IDs
 let img; // Declare variable to hold the image
 let imgsrc = window.location.origin + '/src/images/dog/scratch_dog.png'
-let x = 190; // Initial x position (centered)
-let y = 130; // Initial y position (centered)
+let x = centerx; // Initial x position (centered)
+let y = centery; // Initial y position (centered)
 let imgWidth = 110; // Initial width of the image
 let imgHeight = 110; // Initial height of the image
 let bgColor = '#FFFFFF'; // Initial background color (white)
