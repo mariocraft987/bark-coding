@@ -30,12 +30,12 @@
 			left: 50%;
 			top: 110vh;
 			transform: translate(-50%, -50%);
-			opacity: 0;
+			display: none;
 			transition: 1s;
 		}
 
 		content.show {
-			opacity: 1;
+			display: block;
 			top: 50%;
 		}
 
@@ -156,7 +156,6 @@
 			//generate using ai (i hate ai too, but there is 12 possible combinations and that would take so long to do)
 			const skill = getValuefromoption(0);
 			const projecttype = getValuefromoption(1);
-
 			//tell the user its generating. it takes a while to generate so its nice to know that the app didnt crash
 			document.getElementById("idea-title").innerText = "Idea - Generating..";
 
@@ -180,8 +179,7 @@
 						}
 					]
 				})
-			}).then(data => data.json());
-
+			}).then(data => data.json()).catch(e=>console.log(e));
 			document.getElementById("idea-title").innerText = "Idea";
 			
 			//it will probably generate markdown
