@@ -40,6 +40,21 @@
     .linkoncommits:hover {
       text-decoration: underline;
     }
+
+    #dog {
+      display: none;
+    }
+
+    #dog.active {
+      display: block;
+    }
+
+    .dogcage {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
   </style>
 </head>
 
@@ -68,16 +83,22 @@
   <div class="box">
     <h3 class="petmascot">Pet our mascot!</h3>
     <p class="checkeditor">And then you can check out the <a href="https://bark-coding.vercel.app/editor/">editor</a>!</p>
-    <button
+    <!--
+      <button
       style="background: none;background-image: url(src/images/dog/idle.svg);width: 73px;height: 96px;cursor: grab;background-size: cover;border: none;transition: 0.1s;"
       alt="Bark Dog" onclick="this.style.backgroundImage = 'url(src/images/dog/happy.svg)';"
       onmouseleave="this.style.backgroundImage = 'url(src/images/dog/umm.svg)';"></button>
+    -->
+    <div class="dogcage">
+      <button id="dog" style="background: none;width: 73px;height: 96px;cursor: grab;background-size: cover;border: none;" alt="Bark Dog"></button>
+    </div>
+    <p id="loadingdog">Loading..</p>
     <br />
     <br />
     <h3 class="fromcountries">Visitors from other countries </h3>
     <a href="https://info.flagcounter.com/z8GL"><img
         src="https://s01.flagcounter.com/count2/z8GL/bg_FFFFFF/txt_4B52B8/border_949494/columns_4/maxflags_12/viewers_0/labels_0/pageviews_1/flags_0/percent_1/"
-        alt="Flag Counter" border="0"></a>
+        alt="Flag Counter" style="border:0;"></a>
   </div>
   <!--
 <div class="box">
@@ -94,6 +115,36 @@
 <script src="/index.js"></script>
 <script src="src/scripts/replacer.js"></script>
 <script>
+
+  //**blob to dataURL**
+  function blobToDataURL(blob) {
+      return new Promise((resolve, reject) => {
+        var a = new FileReader();
+        a.onload = function(e) {resolve(e.target.result);}
+        a.readAsDataURL(blob);
+      });
+  }
+
+  //utillity function to set the backround image of an element to a url.
+  function changeImage(element, url) {
+    element.style.backgroundImage = `url(${url})`;
+  }
+
+  async function setupDog() {
+    const idleblob = await fetch("src/images/dog/idle.svg").then(data => data.blob());
+    const happyblob = await fetch("src/images/dog/happy.svg").then(data => data.blob());
+    const ummblob = await fetch("src/images/dog/umm.svg").then(data => data.blob());
+    const idle = await blobToDataURL(idleblob);
+    const happy = await blobToDataURL(happyblob);
+    const umm = await blobToDataURL(ummblob);
+    const dog = document.getElementById("dog");
+    dog.addEventListener("mouseleave", () => changeImage(dog, umm));
+    dog.addEventListener("click", () => changeImage(dog, happy));
+    changeImage(dog, idle);
+    dog.classList.add('active');
+    document.getElementById('loadingdog').remove();
+  }
+
   function recentCom() {
     document.getElementById("boxChanger").innerHTML = "<h2>Fetching commits...</h2><p>please wait...</p>"; // get it? "fetching" commits??? eh????........anyone?
     fetch('https://api.github.com/repos/Mariocraft987/bark.github.io/commits?per_page=50')
@@ -112,6 +163,8 @@
         document.getElementById("boxChanger").innerHTML = '<h2>Oops... :(</h2><p>Failed to load commits. Check your connection and try again.</p>';
       });
   }
+
+  setupDog();
 </script>
 
 </html>
