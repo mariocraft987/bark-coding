@@ -179,12 +179,18 @@
 						}
 					]
 				})
-			}).then(data => data.json()).catch(e=>console.log(e));
-			document.getElementById("idea-title").innerText = "Idea";
-			
+			}).then(data => data.json()).catch(e=>console.log(e));			
 			//it will probably generate markdown
-			const md = markdownIt();
-			document.getElementById("idea-output").innerHTML = md.render(response.choices[0].message.content);
+			const res = response.choices[0].message.content
+			console.log(res)
+			if(!res.error){
+				document.getElementById("idea-title").innerText = "Idea";
+				const md = markdownIt();
+				document.getElementById("idea-output").innerHTML = md.render(res);
+			}else{
+				document.getElementById("idea-title").innerText = "An error has occured";
+				document.getElementById("idea-output").innerText = "Please try again later.";
+			}
 		}
 
 		window.generate = generate;
