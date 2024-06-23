@@ -11,17 +11,17 @@
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://bark-coding.vercel.app/">
+  <meta property="og:url" content="https://bark.dumorando.com/">
   <meta property="og:title" content="Bark coding - Editor">
   <meta property="og:description" content="Bark is a programming language building off of Google's Blockly.">
-  <meta property="og:image" content="https://bark-coding.vercel.app/src/images/Logo.svg">
+  <meta property="og:image" content="/src/images/Logo.svg">
   
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://bark-coding.vercel.app/">
+  <meta property="twitter:url" content="https://bark.dumorando.com/">
   <meta property="twitter:title" content="Bark coding - Editor">
   <meta property="twitter:description" content="Bark is a programming language building off of Google's Blockly.">
-  <meta property="twitter:image" content="https://bark-coding.vercel.app/src/images/Logo.svg">
+  <meta property="twitter:image" content="/src/images/Logo.svg">
   
   <!-- Optional Meta Tags -->
   <meta name="keywords" content="coding, blockly, block coding, bark coding">
@@ -30,14 +30,14 @@
   <meta name="language" content="English">
   <meta name="revisit-after" content=" days">
   <meta name="author" content="mariocraft">
-  <link rel="shortcut icon" href="https://bark-coding.vercel.app/favicon.ico">
+  <link rel="shortcut icon" href="/favicon.ico">
   <script src="https://unpkg.com/blockly/blockly.min.js"></script>
-  <script src="https://bark-coding.vercel.app/editor/p5.min.js"></script>
-  <script src="https://bark-coding.vercel.app/editor/sketch.js"></script>
+  <script src="/editor/p5.min.js"></script>
+  <script src="/editor/sketch.js"></script>
 
-  <script src="https://bark-coding.vercel.app/editor/custom_category_es6.js"></script>
-  <script src="https://bark-coding.vercel.app/editor/toolbox_label_es6.js"></script>
-  <link rel="stylesheet" lang="css" href="editor/uploader.css">
+  <script src="/editor/custom_category_es6.js"></script>
+  <script src="/editor/toolbox_label_es6.js"></script>
+  <link rel="stylesheet" lang="css" href="/editor/uploader.css">
   <style>
     @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
@@ -195,7 +195,7 @@
 
 <body onload="start()" class="code">
   <div class="navbar">
-    <a href="https://bark-coding.vercel.app"><img src="https://bark-coding.vercel.app/src/images/Logo.svg" alt="Bark"
+    <a href="/"><img src="/src/images/Logo.svg" alt="Bark"
         width="25" height="25"></a>
     <a href="#" onclick="alert('You can\'t download projects yet! :(');" id="downloadbutton" onclick="downloadproject();" title="download project to your computer.">Download</a>
     <input type="file" id="fileInput" accept=".barkf" style="display: none;" onchange="loadWorkspaceFromFile(this.files[0])" />
@@ -213,7 +213,7 @@
   <div id="costumeseditordiv" class="tabpage">
     <h1>Upload costume</h1>
     <input type='file' accept='image/*' id="fileupload" onchange='openFile(event)'><br>
-    <img id='costume' style="width:70px;" src="https://bark-coding.vercel.app/src/images/dog/idle.svg">
+    <img id='costume' style="width:70px;" src="/src/images/dog/idle.svg">
     
     <!--
     image library
@@ -265,12 +265,12 @@
   <div id="projectPlayer">
     <div id="projectToolbar">
       <img class="projectToolbarButton" style="cursor:pointer;"
-        src="https://bark-coding.vercel.app/src/projecttoolbar/run.svg" width="10" onclick="kill(); run_code();">
+        src="/src/projecttoolbar/run.svg" width="10" onclick="kill(); run_code();">
       <img class="projectToolbarButton" style="cursor:pointer;"
-        src="https://bark-coding.vercel.app/src/projecttoolbar/pause.svg">
+        src="/src/projecttoolbar/pause.svg">
       <img class="projectToolbarButton" style="cursor:pointer;"
-        src="https://bark-coding.vercel.app/src/projecttoolbar/stopped.svg" onclick="kill();">
-      <img class="projectToolbarButton" src="https://bark-coding.vercel.app/src/projecttoolbar/maximize.svg"
+        src="/src/projecttoolbar/stopped.svg" onclick="kill();">
+      <img class="projectToolbarButton" src="/src/projecttoolbar/maximize.svg"
         onclick="toggleFullscreen();" style="position: absolute; right: 0; cursor: pointer;">
     </div>
     <div id="stage-container"><div id="stage"></div></div>
@@ -283,6 +283,10 @@
   <br/>
   <label for="ypos">Y pos:</label>
   <input value="0" type="number" id="ypos" name="ypos" min="-140" max="190" onchange="y = Number(document.getElementById('ypos').value) + 130;">
+  <br />
+  <br />
+  <label for="spritesize">Size:</label>
+  <input value="100" type="number" id="spritesize" name="spritesize" min="0" max="300" onchange="setsize(Number(document.getElementById('spritesize').value))">
 
     <!-- Toolbox Definition -->
     <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
@@ -566,8 +570,8 @@
 
       function updateStage(event) {
         var code = Blockly.JavaScript.workspaceToCode(workspace);
-        document.getElementById('generated-code').textContent = code; // Display generated code
-        eval(code); // Evaluate generated code
+        //document.getElementById('generated-code').textContent = code; // Display generated code
+        //eval(code); // Evaluate generated code
       }
 
       Blockly.Blocks['change_costume'] = {
@@ -764,7 +768,7 @@
         init: function () {
           this.appendDummyInput()
             .appendField("when")
-            .appendField(new Blockly.FieldImage("https://bark-coding.vercel.app/src/projecttoolbar/run.svg", 25, 25, { alt: "*", flipRtl: "FALSE" }))
+            .appendField(new Blockly.FieldImage("/src/projecttoolbar/run.svg", 25, 25, { alt: "*", flipRtl: "FALSE" }))
             .appendField("clicked");
           this.appendStatementInput("start")
             .setCheck(null)
@@ -979,15 +983,15 @@ Blockly.Blocks['letters_from'] = {
         return "prompt('" + message + "');";
       };
       javascript.javascriptGenerator.forBlock['set_size'] = function (block, generator) {
-        var message = block.getFieldValue('message');
-        return "setsize('" + message + "');";
+        var message = Blockly.JavaScript.valueToCode(block, 'NAME', Blockly.JavaScript.ORDER_ATOMIC);
+        return "setsize(Number('" + message + "'));";
       };
       javascript.javascriptGenerator.forBlock['change_size'] = function (block, generator) {
         var message = block.getFieldValue('message');
         return "setsize('imgWidth + " + message + "');";
       };
 
-      javascriptGenerator.forBlock['fetch'] = function (block, generator) {
+      javascript.javascriptGenerator.forBlock['fetch'] = function (block, generator) {
         var uri = block.getFieldValue('url');
         var handleFunction = generator.variableDB_.getDistinctName('handlefetch', Blockly.Variables.NAME_TYPE);
         generator.addFunction(handleFunction,
@@ -1149,31 +1153,31 @@ if (theme) {
         document.head.append(style);
         const link = document.createElement('link');
         link.rel = "stylesheet";
-        link.href = `https://bark-coding.vercel.app/src/themes/bluedodger.css`;
+        link.href = `/src/themes/bluedodger.css`;
         document.head.append(link);
     } else if (theme != "bluedodger") {
         const link = document.createElement('link');
         link.rel = "stylesheet";
-        link.href = `https://bark-coding.vercel.app/src/themes/${theme}.css`;
+        link.href = `/src/themes/${theme}.css`;
         document.head.append(link);
     } else {
         const link = document.createElement('link');
         link.rel = "stylesheet";
-        link.href = `https://bark-coding.vercel.app/src/themes/bluedodger.css`;
+        link.href = `/src/themes/bluedodger.css`;
         document.head.append(link);
     }
 } else {
         const link = document.createElement('link');
         link.rel = "stylesheet";
-        link.href = `https://bark-coding.vercel.app/src/themes/bluedodger.css`;
+        link.href = `/src/themes/bluedodger.css`;
         document.head.append(link);
     }
     </script>
 </body>
-<script src="https://bark-coding.vercel.app/editor/custom.js"></script>
+<script src="/editor/custom.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="/index.js"></script>
-<script src="https://bark-coding.vercel.app/editor/uploader.js"></script>
+<script src="/editor/uploader.js"></script>
 <!--
   <script src="/editor/extensions.js"></script>
   to be reimplemented later, for some reason updatetoolbox breaks category switching :(
