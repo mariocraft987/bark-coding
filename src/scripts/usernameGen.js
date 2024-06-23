@@ -18,4 +18,5 @@ function generateUsername() {
   return name;
 }
 
-document.getElementById('userGen').innerHTML = `<button>How about `+generateUsername()+`?</button><br/><br/>`
+let generatedName = generateUsername()
+document.getElementById('userGen').innerHTML = `<button onclick="document.getElementById('username').innerHTML = '`+generatedName+`';">How about `+generatedName+`?</button><br/><br/>`
