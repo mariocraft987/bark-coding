@@ -11,7 +11,7 @@ toevaluate.forEach(path => {
     });
 });
 
-let newsBox = "Bark has some few errors, that we are working on to be fixed";
+let newsBox = "<a href='https://bark.dumorando.com'>bark.dumorando.com</a> is a new domain of Bark Coding!";
 let baseUrl = window.location.origin;
 let commitsLength = 150;
 
