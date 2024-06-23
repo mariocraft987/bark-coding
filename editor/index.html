@@ -279,14 +279,15 @@
 
   <label for="xpos">X pos:</label>
   <input value="0" type="number" id="xpos" name="xpos" min="-250" max="250" onchange="x = Number(document.getElementById('xpos').value) + 190;">
-  <br/>
-  <br/>
+  <br />
+  <br />
   <label for="ypos">Y pos:</label>
   <input value="0" type="number" id="ypos" name="ypos" min="-140" max="190" onchange="y = Number(document.getElementById('ypos').value) + 130;">
   <br />
   <br />
   <label for="spritesize">Size:</label>
   <input value="100" type="number" id="spritesize" name="spritesize" min="0" max="300" onchange="setsize(Number(document.getElementById('spritesize').value))">
+  <span id="easterEgg"></span>
 
     <!-- Toolbox Definition -->
     <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
@@ -1172,6 +1173,12 @@ if (theme) {
         link.href = `/src/themes/bluedodger.css`;
         document.head.append(link);
     }
+    </script>
+    <script>
+      let now = new Date();
+      if (now.getDate() === 7 && now.getMonth = 12) {
+        document.getElementById('easterEgg').innerHTML = "<p onclick="document.write('Well to create a bark project, you need to go to scratch.mit.edu LOL')">?</p>";
+      }
     </script>
 </body>
 <script src="/editor/custom.js"></script>
