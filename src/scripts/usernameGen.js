@@ -18,4 +18,4 @@ function generateUsername() {
   return name;
 }
 
-document.getElementById('userGen').innerHTML = `<buttton>How about `+generateUsername()+`?</button><br/><br/>`
+document.getElementById('userGen').innerHTML = `<button>How about `+generateUsername()+`?</button><br/><br/>`
