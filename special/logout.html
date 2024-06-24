@@ -56,7 +56,7 @@
     const status = document.querySelector('h2');
     const urlParams = new URLSearchParams(window.location.search);
 
-    if (urlParams.get('code') == "123") {
+    if (urlParams.get('code') == localStorage.getItem("secret")) {
         localStorage.removeItem("myBarkUsername");
         localStorage.removeItem("barktoken");
         window.location.replace("/");
