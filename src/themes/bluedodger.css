@@ -17,10 +17,6 @@ body {
   margin: 0;
 }
 
-* {
-  transition: 0.1s;
-}
-
 .dark-mode {
   background-color: rgb(29, 29, 29);
   color: #ffffff;
