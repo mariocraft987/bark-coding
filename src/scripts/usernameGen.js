@@ -21,5 +21,11 @@ function generateUsername() {
   return name;
 }
 
-let generatedName = generateUsername()
-document.getElementById('userGen').innerHTML = `<button onclick="document.getElementById('username').value = '`+generatedName+`';">How about `+generatedName+`?</button><br/><br/>`
+let generatedName = generateUsername();
+
+const newbtn = document.createElement('button');
+newbtn.addEventListener("click", () => document.getElementById('username').value = generatedName);
+newbtn.innerText = `How about ${generatedName}?`;
+newbtn.classList.add('buttonFrBx');
+
+document.getElementById('usergen').appendChild(newbtn);
