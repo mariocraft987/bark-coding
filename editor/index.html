@@ -1077,17 +1077,17 @@ Blockly.Blocks['letters_from'] = {
 
       function downloadproject() {
         const state = Blockly.serialization.workspaces.save(workspace);
-        const data = {
+        const data = JSON.stringify({
           blockly: btoa(JSON.stringify(state)),
           costume
-        }
+        });
 
         // Convert the XML text to Blob
-        var blob = new Blob([xmlText], { type: 'text/xml' });
+        var blob = new Blob([state], { type: 'application/json' });
 
         // Create a link element
         var aElement = document.createElement('a');
-        aElement.setAttribute('download', 'project.bark');
+        aElement.setAttribute('download', 'project.barkf');
         aElement.href = URL.createObjectURL(blob);
         aElement.setAttribute('target', '_blank');
         aElement.click();
