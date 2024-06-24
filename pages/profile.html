@@ -52,7 +52,8 @@
       <img style="border-radius: 50%" height="75" src="" id="pfp" alt="Profile picture">
       <h1 id="username"></h1>
     </div>
-    <p id="bio"></p>
+    <p id="bio"></p><br />
+    <button class="buttonFrBx" id="changeprofiledetails">Change profile details</button>
   </div>
   
   <!-- inject:footer -->
@@ -67,6 +68,15 @@
   let parts = window.location.href.split("/");
   document.getElementById('username').innerText = parts[parts.length - 1];
   const username = parts[parts.length - 1];
+
+  if (username === localStorage.getItem('myBarkUsername')) {
+    let btn = document.querySelector("button#changeprofiledetails");
+    btn.addEventListener('click', () => window.location.replace('/settings/profile'));
+  } else {
+    let btn = document.querySelector("button#changeprofiledetails");
+    btn.remove();
+  }
+
   const response = await fetch(`https://bark-backend-api-prod.replit.app/api/v1/fetchUser?username=${encodeURIComponent(username)}`);
 
   if (response.status === 404) window.location.replace("/404");
