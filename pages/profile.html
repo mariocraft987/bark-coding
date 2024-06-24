@@ -46,7 +46,7 @@
 <body>
   <!-- inject:navbar -->
   <div class="box">
-    <img src="" alt="Profile picture">
+    <img style="border-radius: 50%" src="" id="pfp" alt="Profile picture">
     <h3 id="username"></h3>
     <p id="bio"></p>
   </div>
@@ -58,7 +58,7 @@
   ???????????
 -->
 <script src="/index.js"></script>
-<script src="src/scripts/replacer.js"></script>
+<script src="/src/scripts/replacer.js"></script>
 <script type="module">
   let parts = window.location.href.split("/");
   document.getElementById('username').innerText = parts[parts.length - 1];
@@ -68,7 +68,7 @@
   if (response.status === 404) window.location.replace("/404");
 
   const data = await response.json();
-  const pfpbox = document.querySelector('img');
+  const pfpbox = document.getElementById('pfp');
   pfpbox.src = data.profilepicture;
   
   const bio = document.getElementById('bio');
