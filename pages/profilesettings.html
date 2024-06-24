@@ -117,6 +117,7 @@
             $('#errpfp').css({ color: 'green '}).text('success!');
         } else {
             $('#errpfp').text('something went wrong..');
+            console.error(await response.json());
         }
     }
   });
