@@ -64,7 +64,7 @@
     .tabpage {
       display: none;
       height: calc(100% - 80px);
-      width: calc(100% - 480px);
+      width: calc(100% - 640px);
       position: absolute;
       bottom: 0;
     }
@@ -91,7 +91,7 @@
 
     #stage {
       height: 360px;
-      width: 480px;
+      width: 640px;
       outline: 1px solid #ccc;
       box-sizing: border-box;
       border-radius: 5px;
@@ -190,6 +190,10 @@
   .gallery img { 
     text-align: center;
   }
+
+  #projectPlayer {
+    width: 640px !important;
+  }
   </style>
 </head>
 
@@ -275,7 +279,7 @@
     </div>
     <div id="stage-container"><div id="stage"></div></div>
   </div>
-  <div id="sprites" style="position: absolute; right: 0%; bottom: 0%; width: 480px; height: calc(100% - 440px);">
+  <div id="sprites" style="position: absolute; right: 0%; bottom: 0%; width: 640px; height: calc(100% - 440px);">
 
   <label for="xpos">X pos:</label>
   <input value="0" type="number" id="xpos" name="xpos" min="-250" max="250" onchange="x = Number(document.getElementById('xpos').value) + 190;">
