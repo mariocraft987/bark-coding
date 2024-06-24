@@ -59,6 +59,10 @@
     {
       "source": "/discord-bot",
       "destination": "/pages/discordbot.html"
+    },
+    {
+      "source": "/logout",
+      "destination": "/special/logout.html"
     }
   ]
 }
