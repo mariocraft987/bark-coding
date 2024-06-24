@@ -59,6 +59,9 @@
     if (urlParams.get('code') == "123") {
         localStorage.removeItem("myBarkUsername");
         localStorage.removeItem("barktoken");
+        window.location.replace("/");
+    } else {
+        status.innerText = 'code not specified.'
     }
 </script>
 
