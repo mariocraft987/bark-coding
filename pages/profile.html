@@ -108,8 +108,7 @@
   const bio = document.getElementById('bio');
   bio.innerHTML = replace(data.bio);
 
-  const admins = await fetch('https://bark-backend-api-prod.replit.app/api/v1/admins').then(data => data.json());
-  if (admins.includes(document.getElementById('username').innerText)) {
+  if (await isuseradmin(username)) {
     document.getElementById('username').outerHTML += "<admin-pin>Admin</admin-pin>";
   }
 
