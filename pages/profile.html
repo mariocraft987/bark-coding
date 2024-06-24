@@ -50,6 +50,14 @@
     #admin.show {
       display: block;
     }
+
+    admin-pin {
+      background-color: white;
+      color: black;
+      font-size: 1rem;
+      padding: 0 0.5rem;
+      border-radius: 0.5rem;
+    }
   </style>
 </head>
 
@@ -98,6 +106,11 @@
   
   const bio = document.getElementById('bio');
   bio.innerHTML = replace(data.bio);
+
+  const admins = await fetch('https://bark-backend-api-prod.replit.app/api/v1/admins').then(data => data.json());
+  if admins.includes(document.getElementById('username').innerText) {
+    document.getElementById('username').outerHTML += "<admin-pin>Admin</admin-pin>";
+  }
 
   if (await amiadmin()) {
     document.getElementById('admin').classList.add('show');
