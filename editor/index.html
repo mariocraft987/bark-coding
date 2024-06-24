@@ -197,7 +197,7 @@
   <div class="navbar">
     <a href="/"><img src="/src/images/Logo.svg" alt="Bark"
         width="25" height="25"></a>
-    <a href="#" onclick="alert('You can\'t download projects yet! :(');" id="downloadbutton" onclick="downloadproject();" title="download project to your computer.">Download</a>
+    <a href="#" id="downloadbutton" onclick="downloadproject();" title="download project to your computer.">Download</a>
     <input type="file" id="fileInput" accept=".barkf" style="display: none;" onchange="loadWorkspaceFromFile(this.files[0])" />
     <a href="#" onclick="openFileInput();" title="open a saved project">Open</a>
     <a href="/editor/tutorials" target="_BLANK" title="watch helpful tutorials to expand your knowledge!">Tutorials</a>
@@ -557,6 +557,7 @@
     </xml>
 
     <script>
+      let costume = "";
 
       function start() {
         window.workspace = Blockly.inject('blocklyDiv', {
@@ -1075,9 +1076,11 @@ Blockly.Blocks['letters_from'] = {
       }
 
       function downloadproject() {
-        // Get the XML representation of the workspace
-        var xml = Blockly.Xml.workspaceToDom(Blockly.getMainWorkspace());
-        var xmlText = Blockly.Xml.domToPrettyText(xml);
+        const state = Blockly.serialization.workspaces.save(workspace);
+        const data = {
+          blockly: btoa(JSON.stringify(state)),
+          costume
+        }
 
         // Convert the XML text to Blob
         var blob = new Blob([xmlText], { type: 'text/xml' });
@@ -1100,16 +1103,15 @@ Blockly.Blocks['letters_from'] = {
         var reader = new FileReader();
 
         reader.onload = function (event) {
-          var xmlText = event.target.result;
+          const data = JSON.parse(event.target.result);
 
           // Clear the workspace before loading
           Blockly.getMainWorkspace().clear();
 
-          // Load the XML text into the workspace
-          var xmlDom = Blockly.Xml.textToDom(xmlText);
-          Blockly.Xml.domToWorkspace(xmlDom, Blockly.getMainWorkspace());
-
-          alert('Workspace loaded successfully!');
+          Blockly.serialization.workspaces.load(JSON.parse(atob(data.blockly)), workspace);
+          loadImg(data.costume);
+          
+          //alert('Workspace loaded successfully!'); shut your happy ass up
         };
 
         reader.readAsText(file);
@@ -1129,7 +1131,8 @@ Blockly.Blocks['letters_from'] = {
         reader.onload = function () {
           var dataURL = reader.result;
           var output = document.getElementById('costume');
-          loadImg(dataURL)
+          loadImg(dataURL);
+          costume = dataURL;
           output.src = dataURL;
         };
         reader.readAsDataURL(input.files[0]);
