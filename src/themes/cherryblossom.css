@@ -17,10 +17,6 @@ body {
   margin: 0;
 }
 
-* {
-  transition: 0.1s;
-}
-
 .textCenter {
   text-align: center;
 }
