@@ -37,7 +37,6 @@
   <!-- inject:navbar -->
   <center>
     <h1 class="text-center">Sign in</h1>
-    <form>
       <div class="form-group"> <label for="username">Username:</label>
         <input type="text" id="username" name="username" placeholder="username" required>
       </div>
@@ -48,9 +47,8 @@
       </div>
       <br />
       <div class="text-center">
-        <button class="buttonFrBx" type="submit">Login</button>
+        <button class="buttonFrBx" id="submit">Login</button>
       </div>
-    </form>
     <p id="err" style="color: red;"></p>
   </center>
 
@@ -59,8 +57,7 @@
   <script src="/index.js"></script>
   <script src="/src/scripts/navbar.js"></script>
   <script>
-    $('form').on('submit', async (e) => {
-      e.preventDefault();
+    $('#submit').on('click', async (e) => {
       let username = $('#username').text();
       let password = $('#password').text();
       $('button').prop('disabled', true);
