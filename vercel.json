@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/profile/*",
+      "destination": "/pages/profile.html"
+    },
+    {
       "source": "/donates",
       "destination": "/pages/donates.html"
     },
