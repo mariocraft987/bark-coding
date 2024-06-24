@@ -17,7 +17,15 @@ let commitsLength = 150;
 
 let mobile = window.navigator.userAgent.toLowerCase().includes("mobi");
 
-console.error("Exit Now! This part is used by devolopers. \n Hackers could tell you to paste strings here to hack your Bark account. \n DON'T DO IT");
+// if your a dev and u know what ur doing use tampermonkey to set showHoldOn to false automatically
+let showHoldOn = true;
+
+setInterval(() => {
+  if (showHoldOn) {
+    console.log("%cHold on!", "font-size:36pt; color: dodgerblue;");
+    console.log("Pasting anything in the console can get your account stolen.");
+  }
+}, 1000);
 
 document.body.innerHTML += "<button onclick='scrollToTop()' class='buttonFrBx' id='topBtn' disabled>Top</button>";
 
