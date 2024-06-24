@@ -1,4 +1,5 @@
-let profile = !!localStorage.getItem("myBarkUsername") ? `<a href="/signout?code=123" class="right">Sign out</a><a href="/profile/${localStorage.getItem("myBarkUsername")}" class="right">${localStorage.getItem("myBarkUsername")}</a></div>` : '<a href="login" class="right">Login</a><a href="signup" class="right">Join bark</a></div>'
+const actionsecret = localStorage.getItem("secret");
+let profile = !!localStorage.getItem("myBarkUsername") ? `<a href="/signout?code=${encodeURIComponent(secret)}" class="right">Sign out</a><a href="/profile/${localStorage.getItem("myBarkUsername")}" class="right">${localStorage.getItem("myBarkUsername")}</a></div>` : '<a href="login" class="right">Login</a><a href="signup" class="right">Join bark</a></div>'
 let afdbtn = new Date().getMonth() === 3 && new Date().getDate() === 1 ? "<a id='flip-it-afd-btn'>FLIP IT</a>" : '';
 const components = {
     //navbar
