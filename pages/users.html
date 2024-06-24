@@ -84,6 +84,7 @@
         const usera = document.createElement('a');
         usera.innerText = `${user.username}${admins.includes(user.username) ? ' (bark team)' : ''}`;
         usera.src = `/profile/${user.username}`;
+        usera.outerHTML += "<br />"
         container.appendChild(usera);
     });
 </script>
