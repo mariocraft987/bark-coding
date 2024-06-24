@@ -37,7 +37,7 @@
   <!-- inject:navbar -->
   <center>
     <h1 class="text-center">Sign in</h1>
-    <form action="/login" method="post">
+    <form>
       <div class="form-group"> <label for="username">Username:</label>
         <input type="text" id="username" name="username" placeholder="username" required>
       </div>
@@ -51,11 +51,31 @@
         <button class="buttonFrBx" type="submit">Login</button>
       </div>
     </form>
+    <p id="err" style="color: red;"></p>
   </center>
 
-
+  <!-- zepto cuz i got tired of doing dom stuff -->
+  <script src="https://zeptojs.com/zepto.min.js"></script>
   <script src="/index.js"></script>
   <script src="src/scripts/navbar.js"></script>
+  <script>
+    $('form').on('submit', async () => {
+      let username = $('#username').text();
+      let password = $('#password').text();
+      $('button').prop('disabled', true);
+      const response = await fetch(`https://bark-backend-api-prod.replit.app/api/v1/login?username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`, {
+        method: 'POST'
+      });
+      const data = await response.json();
+      if (data.error || !data.token) {
+        $('#err').text(data.error);
+      } else {
+        localStorage.setItem('myBarkUsername', username);
+        localStorage.setItem('barktoken', data.token);
+        window.location.replace("/");
+      }
+    });
+  </script>
 </body>
 
 </html>
