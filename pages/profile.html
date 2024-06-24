@@ -61,7 +61,7 @@
       <h1 id="username"></h1>
     </div>
     <p id="bio"></p><br />
-    <button class="buttonFrBx" id="changeprofiledetails">Change profile details</button>
+    <button class="buttonFrBx" id="changeprofiledetails" onclick="location.replace('/settings/profile')">Change profile details</button>
     <div id="admin">
       <button class="buttonFrBx" id="buttonadmininvalidatebio">admin: invalidate bio</button><br />
       <button class="buttonFrBx" id="buttonadmininvalidatepfp">admin: invalidate pfp</button>
@@ -83,10 +83,7 @@
   const username = parts[parts.length - 1];
   const token = localStorage.getItem('barktoken');
 
-  if (username === localStorage.getItem('myBarkUsername')) {
-    let btn = document.querySelector("button#changeprofiledetails");
-    btn.addEventListener('click', () => window.location.replace('/settings/profile'));
-  } else {
+  if (!username === localStorage.getItem('myBarkUsername')) {
     let btn = document.querySelector("button#changeprofiledetails");
     btn.remove();
   }
