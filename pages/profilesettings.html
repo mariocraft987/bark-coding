@@ -113,7 +113,7 @@
         });
         if (response.status === 414) {
             $('#errpfp').text('profile picture is too big in file size.');
-        } else if (response.status === 200) {
+        } else if (response.status === 204) {
             $('#errpfp').css({ color: 'green '}).text('success!');
         } else {
             $('#errpfp').text('something went wrong..');
