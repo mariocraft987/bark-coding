@@ -83,7 +83,7 @@
     response.users.forEach(user => {
         const usera = document.createElement('a');
         usera.innerText = `${user.username}${admins.includes(user.username) ? ' (bark team)' : ''}`;
-        usera.src = `/profile/${user.username}`;
+        usera.href = `/profile/${user.username}`;
         container.appendChild(usera);
         container.innerHTML += "<br />";
     });
