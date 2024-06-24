@@ -33,12 +33,10 @@
   <meta name="description"
     content="Bark Coding is a Blockly Based coding language created by mariocraft987 and more!" />
   <style>
-    .linkoncommits {
-      text-decoration: none;
-    }
-
-    .linkoncommits:hover {
-      text-decoration: underline;
+    .flex {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   </style>
 </head>
@@ -46,8 +44,10 @@
 <body>
   <!-- inject:navbar -->
   <div class="box">
-    <img style="border-radius: 50%" height="75" src="" id="pfp" alt="Profile picture">
-    <h3 id="username"></h3>
+    <div class="flex">
+      <img style="border-radius: 50%" height="75" src="" id="pfp" alt="Profile picture">
+      <h1 id="username"></h1>
+    </div>
     <p id="bio"></p>
   </div>
   
