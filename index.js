@@ -38,6 +38,30 @@ if (document.url != "baseUrl") {
 }
 */
 
+if (localStorage.getItem("myBarkUsername")) {
+  if (localStorage.getItem("barktoken")) {
+    //verify to see if the username matches the token.
+    fetch(`https://bark-backend-api-prod.replit.app/api/v1/currentUser?token=${localStorage.getItem("barktoken")}`)
+      .then(data => data.json())
+      .then(data => {
+        if (data.error === 'Reauthenticate') {
+          localStorage.removeItem("myBarkUsername");
+          localStorage.removeItem("barktoken");
+          location.reload();
+        } else {
+          if (data.username !== localStorage.getItem("myBarkUsername")) {
+            localStorage.removeItem("myBarkUsername");
+            localStorage.removeItem("barktoken");
+            location.reload();
+          }
+        }
+      });
+  } else {
+    localStorage.removeItem("myBarkUsername");
+    location.reload();
+  }
+}
+
 if (new Date().getMonth() === 3 && new Date().getDate() === 1) {
     document.getElementById("flip-it-afd-btn").addEventListener("click", function () {
         document.body.classList.toggle("afd-upside-down");
