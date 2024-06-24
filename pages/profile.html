@@ -45,7 +45,10 @@
 
 <body>
   <!-- inject:navbar -->
-  <p id="username"></p>
+  <div class="box">
+    <img src="" alt="Profile picture">
+    <p id="username"></p>
+  </div>
   
   <!-- inject:footer -->
 </body>
@@ -55,8 +58,15 @@
 -->
 <script src="/index.js"></script>
 <script src="src/scripts/replacer.js"></script>
-<script>
+<script type="module">
   let parts = window.location.href.split("/");
   document.getElementById('username').innerText = parts[parts.length - 1];
+  const username = parts[parts.length - 1];
+  const response = await fetch(`https://bark-backend-api-prod.replit.app/api/v1/fetchUser?username=${encodeURIComponent(username)}`);
+
+  if (response.status === 404) window.location.replace("/404");
+
+  const data = await response.json();
+  console.log(data);
 </script>
 </html>
