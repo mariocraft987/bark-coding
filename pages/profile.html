@@ -47,7 +47,8 @@
   <!-- inject:navbar -->
   <div class="box">
     <img src="" alt="Profile picture">
-    <p id="username"></p>
+    <h3 id="username"></h3>
+    <p id="bio"></p>
   </div>
   
   <!-- inject:footer -->
@@ -67,6 +68,10 @@
   if (response.status === 404) window.location.replace("/404");
 
   const data = await response.json();
-  console.log(data);
+  const pfpbox = document.querySelector('img');
+  pfpbox.src = data.profilepicture;
+  
+  const bio = document.getElementById('bio');
+  bio.innerText = data.bio;
 </script>
 </html>
