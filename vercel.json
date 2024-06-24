@@ -1,7 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "/profile/*",
+      "source": "/profile/:username",
       "destination": "/pages/profile.html"
     },
     {
