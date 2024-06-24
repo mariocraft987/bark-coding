@@ -29,4 +29,4 @@ newbtn.innerText = `How about ${generatedName}?`;
 newbtn.classList.add('buttonFrBx');
 newbtn.outerHTML += '<br /><br />';
 
-document.getElementById('userGen').appendChild(newbtn);
+// document.getElementById('userGen').appendChild(newbtn);
