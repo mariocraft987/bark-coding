@@ -392,3 +392,7 @@ h2 {
 .select-items div:hover, .same-as-selected {
   background-color: rgba(0, 0, 0, 0.1);
 }
+
+admin-tag {
+  background-color: rgb(255 0 129 / 39%) !important;
+}
