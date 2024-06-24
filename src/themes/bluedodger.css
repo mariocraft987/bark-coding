@@ -286,6 +286,7 @@ textarea {
   font-family: inherit;
   border-radius: 6px;
   padding: 7px;
+  transition: 0.1s;
 }
 
 /* mobile style */
