@@ -92,7 +92,7 @@
   const username = parts[parts.length - 1];
   const token = localStorage.getItem('barktoken');
 
-  if (!username === localStorage.getItem('myBarkUsername')) {
+  if (username !== localStorage.getItem('myBarkUsername')) {
     let btn = document.querySelector("button#changeprofiledetails");
     btn.remove();
   }
