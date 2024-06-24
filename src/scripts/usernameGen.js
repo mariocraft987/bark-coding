@@ -28,4 +28,4 @@ newbtn.addEventListener("click", () => document.getElementById('username').value
 newbtn.innerText = `How about ${generatedName}?`;
 newbtn.classList.add('buttonFrBx');
 
-document.getElementById('usergen').appendChild(newbtn);
+document.getElementById('userGen').appendChild(newbtn);
