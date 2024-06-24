@@ -71,7 +71,7 @@
         <input type="other_gender" id="other_gender" placeholder="other" />
         <br />
         <br />
-        <button class="buttonFrBx" onclick="checkSignup()">Sign up</button>
+        <input type="submit" value="Sign up" class="buttonFrBx" id="submitbutton">
         <span style="color: red;" id="errormsg"></span>
         <p>Note: Bark accounts are currently a beta feature.</p>
       </form>
@@ -125,6 +125,10 @@
 
     document.getElementById('submitbutton').setAttribute('disabled', false);
   }
+  document.getElementById('submitbutton').addEventListener("click", function(event) {
+    event.preventDefault();
+    checkSignup();
+  })
 
   function checkGender() {
     gender_value = document.getElementById("gender").value;
