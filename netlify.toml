@@ -1,0 +1,89 @@
+[[redirects]]
+  from = "/profile/:username"
+  to = "/pages/profile.html"
+  status = 200
+
+[[redirects]]
+  from = "/donates"
+  to = "/pages/donates.html"
+  status = 200
+
+[[redirects]]
+  from = "/contributors"
+  to = "/pages/contributors.html"
+  status = 200
+
+[[redirects]]
+  from = "/ideas/generate"
+  to = "/pages/generate.html"
+  status = 200
+
+[[redirects]]
+  from = "/search"
+  to = "/pages/search.html"
+  status = 200
+
+[[redirects]]
+  from = "/ideas"
+  to = "/pages/ideas.html"
+  status = 200
+
+[[redirects]]
+  from = "/signup"
+  to = "/pages/signup.html"
+  status = 200
+
+[[redirects]]
+  from = "/about"
+  to = "/pages/about.html"
+  status = 200
+
+[[redirects]]
+  from = "/credits"
+  to = "/pages/credits.html"
+  status = 200
+
+[[redirects]]
+  from = "/special"
+  to = "/pages/special.html"
+  status = 200
+
+[[redirects]]
+  from = "/settings"
+  to = "/pages/settings.html"
+  status = 200
+
+[[redirects]]
+  from = "/lua"
+  to = "/pages/lua.html"
+  status = 200
+
+[[redirects]]
+  from = "/login"
+  to = "/pages/login.html"
+  status = 200
+
+[[redirects]]
+  from = "/explore"
+  to = "/pages/explore.html"
+  status = 200
+
+[[redirects]]
+  from = "/discord-bot"
+  to = "/pages/discordbot.html"
+  status = 200
+
+[[redirects]]
+  from = "/signout"
+  to = "/special/logout.html"
+  status = 200
+
+[[redirects]]
+  from = "/settings/profile"
+  to = "/pages/profilesettings.html"
+  status = 200
+
+[[redirects]]
+  from = "/users"
+  to = "/pages/users.html"
+  status = 200
