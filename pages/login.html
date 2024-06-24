@@ -47,7 +47,7 @@
       </div>
       <br />
       <div class="text-center">
-        <button class="buttonFrBx" id="loginbutton">Login</button>
+        <button class="buttonFrBx" id="loginbutton" onclick="login()">Login</button>
       </div>
     <p id="err" style="color: red;"></p>
     <p id="feedback"></p>
@@ -57,7 +57,7 @@
   <script src="/index.js"></script>
   <script src="/src/scripts/navbar.js"></script>
   <script>
-    document.getElementById('loginbutton').addEventListener("click", async () => {
+    async function login() {
       document.querySelector('#feedback').innerText = 'logging in..';
       let username = document.getElementById('username').value;
       let password = document.getElementById('password').value;
@@ -72,7 +72,7 @@
         localStorage.setItem('barktoken', data.token);
         window.location.replace("/");
       }
-    });
+    };
   </script>
 </body>
 
