@@ -47,7 +47,7 @@
       </div>
       <br />
       <div class="text-center">
-        <button class="buttonFrBx" id="submit">Login</button>
+        <button class="buttonFrBx" id="loginbutton">Login</button>
       </div>
     <p id="err" style="color: red;"></p>
   </center>
@@ -56,7 +56,7 @@
   <script src="/index.js"></script>
   <script src="/src/scripts/navbar.js"></script>
   <script>
-    document.getElementById('submit').addEventListener("click", async (e) => {
+    document.getElementById('loginbutton').addEventListener("click", async (e) => {
       let username = document.getElementById('username').value;
       let password = document.getElementById('password').value;
       const response = await fetch(`https://bark-backend-api-prod.replit.app/api/v1/login?username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`, {
