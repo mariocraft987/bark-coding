@@ -61,7 +61,7 @@
       "destination": "/pages/discordbot.html"
     },
     {
-      "source": "/logout",
+      "source": "/signout",
       "destination": "/special/logout.html"
     },
     {
