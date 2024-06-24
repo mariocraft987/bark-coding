@@ -86,6 +86,9 @@ try {
                         ${contributor.login ==username?(
                             `<span id="gold">Founder</span>`
                         ):(``)}
+                        ${contributor.login =="nmsderp"(
+                            `<span style="background-color: #efff66; color=#000000"><img src='/src/emojis/svg/joke/mewing.svg' alt='mewing' width='25' height='25'></span>`
+                        ):(``)}
                         </section>
                         <p>${contributor.contributions} contribution${contributor.contributions == 1 ? "" : "s"}</p>
                         `;
