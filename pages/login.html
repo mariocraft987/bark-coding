@@ -59,7 +59,8 @@
   <script src="/index.js"></script>
   <script src="/src/scripts/navbar.js"></script>
   <script>
-    $('form').on('submit', async () => {
+    $('form').on('submit', async (e) => {
+      e.preventDefault();
       let username = $('#username').text();
       let password = $('#password').text();
       $('button').prop('disabled', true);
