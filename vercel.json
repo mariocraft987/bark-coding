@@ -63,6 +63,10 @@
     {
       "source": "/logout",
       "destination": "/special/logout.html"
+    },
+    {
+      "source": "/settings/profile",
+      "destination": "/pages/profilesettings.html"
     }
   ]
 }
