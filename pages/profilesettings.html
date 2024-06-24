@@ -78,7 +78,7 @@
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            bio: $('textarea#bio').text()
+            bio: $('textarea#bio').val()
         })
     });
     $('#setbio').prop('disabled', false);
