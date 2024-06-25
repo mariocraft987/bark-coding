@@ -32,6 +32,7 @@
   <meta name="author" content="mariocraft">
   <link rel="shortcut icon" href="/favicon.ico">
   <script src="https://unpkg.com/blockly/blockly.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@blockly/theme-dark"></script>
   <script src="/editor/p5.min.js"></script>
   <script src="/editor/sketch.js"></script>
 
@@ -146,10 +147,6 @@
     .stage-left #blocklyDiv {
       position: absolute;
       right: 0px;
-    }
-
-    .dark-mode * .blocklySvg {
-      background-color: #181818;
     }
 
     #editortabs {
@@ -559,6 +556,7 @@
         <block type="get_elm"></block>
         </category>
     </xml>
+
 
     <script>
       let costume = "";
@@ -1054,25 +1052,15 @@ Blockly.Blocks['letters_from'] = {
         // Save dark mode state to local storage
         const isDarkMode = body.classList.contains('dark-mode');
         localStorage.setItem('darkMode', isDarkMode);
+        initializeDarkMode();
       }
 
       // Function to initialize dark mode based on local storage
-      function initializeDarkMode() {
-        const isDarkMode = localStorage.getItem('darkMode') === 'true';
-        const body = document.body;
-        if (isDarkMode) {
-          body.classList.add('dark-mode');
-        } else {
-          body.classList.remove('dark-mode');
-        }
-      }
+      
 
       // Attach event listener to dark mode toggle button
       const darkModeToggle = document.getElementById('darkModeToggle');
       darkModeToggle.addEventListener('click', toggleDarkMode);
-
-      // Initialize dark mode when the page loads
-      window.addEventListener('load', initializeDarkMode);
 
       function openexternalproject() {
         window.showOpenFilePicker();
@@ -1120,8 +1108,6 @@ Blockly.Blocks['letters_from'] = {
 
         reader.readAsText(file);
       }
-
-
 
 
       function run_code() {
@@ -1186,6 +1172,45 @@ if (theme) {
       if (now.getDate() == 7 && now.getMonth == 12) {
         document.getElementById('easterEgg').innerHTML = '"<p>Well to create a bark project, you need to go to scratch.mit.edu LOL</p>"';
       }
+    </script>
+    <script>
+      //import DarkTheme from 'https://esm.run/@blockly/theme-dark';
+
+      //define it ourselves because this fuck ass script wont load it from esm.run
+      const themedark = Blockly.Theme.defineTheme('dark', {
+        base: Blockly.Themes.Classic,
+        componentStyles: {
+          workspaceBackgroundColour: '#1e1e1e',
+          toolboxBackgroundColour: 'blackBackground',
+          toolboxForegroundColour: '#fff',
+          flyoutBackgroundColour: '#252526',
+          flyoutForegroundColour: '#ccc',
+          flyoutOpacity: 1,
+          scrollbarColour: '#797979',
+          insertionMarkerColour: '#fff',
+          insertionMarkerOpacity: 0.3,
+          scrollbarOpacity: 0.4,
+          cursorColour: '#d0d0d0',
+          blackBackground: '#333',
+        },
+      });
+
+      function initializeDarkMode() {
+        const isDarkMode = localStorage.getItem('darkMode') === 'true';
+        const body = document.body;
+        if (isDarkMode) {
+          body.classList.add('dark-mode');
+          console.log(window.workspace)
+          window.workspace.setTheme(themedark);
+          window.workspace.refreshTheme();
+        } else {
+          body.classList.remove('dark-mode');
+          window.workspace.setTheme();
+          window.workspace.refreshTheme();
+        }
+      }
+      window.addEventListener('load', initializeDarkMode);
+
     </script>
 </body>
 <script src="/editor/custom.js"></script>
