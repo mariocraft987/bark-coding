@@ -24,6 +24,7 @@ class CustomCategory extends Blockly.ToolboxCategory {
      * @override
      */
     addColourBorder_(colour) {
+      this.rowDiv_.style.borderRadius = '12px';
       this.rowDiv_.style.backgroundColor = colour;
     }
   
@@ -49,6 +50,7 @@ class CustomCategory extends Blockly.ToolboxCategory {
         labelDom.style.color = 'white';
         this.iconDom_.style.color = 'white';
       }
+      
       // This is used for accessibility purposes.
       Blockly.utils.aria.setState(
         /** @type {!Element} */ (this.htmlDiv_),
