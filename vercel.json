@@ -71,10 +71,6 @@
     {
       "source": "/users",
       "destination": "/pages/users.html"
-    },
-    {
-      "source": "/settings/customize",
-      "destination": "/pages/customize.html"
     }
   ]
 }

@@ -1,6 +1,6 @@
 /* Some common scripts created in javascript to work the website, and make it interactive. */
 
-let toevaluate = ["/src/scripts/injector.js", "/src/scripts/customcss.js"];
+let toevaluate = ["/src/scripts/injector.js"];
 toevaluate.forEach(path => {
   fetch(path)
     .then(data => data.text())
