@@ -36,7 +36,7 @@
 <script src="/src/scripts/navbar.js"></script>
 <script>
     let cssbox = document.getElementById('cssbox');
-
+    cssbox.value = localStorage.getItem('customCSS') ?? "";
     cssbox.addEventListener('change', () => {
         localStorage.setItem('customCSS', cssbox.value);
     });
