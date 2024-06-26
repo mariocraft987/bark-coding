@@ -20,6 +20,10 @@ let mobile = window.navigator.userAgent.toLowerCase().includes("mobi");
 // if your a dev and u know what ur doing use tampermonkey to set showHoldOn to false automatically
 let showHoldOn = true;
 
+if (document.URL.includes('bark-coding.vercel.app')) {
+  window.location.href = "https://bark.dumorando.com" + document.URL.replaceAll(window.location.origin, "")
+}
+
 if (showHoldOn) {
   console.log("%cHold on!", "font-size:36pt; color: dodgerblue;");
   console.log("Pasting anything in the console can get your account stolen.");
