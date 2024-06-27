@@ -75,12 +75,12 @@
 <script type="module">
   const username = localStorage.getItem('myBarkUsername');
   const token = localStorage.getItem('barktoken');
-  const response = await fetch(`https://bark-backend-api-prod.replit.app/api/v1/fetchUser?username=${localStorage.getItem("myBarkUsername")}`).then(data => data.json());
+  const response = await fetch(`https://api.bark.dumorando.com/api/v2/fetchUser?username=${localStorage.getItem("myBarkUsername")}`).then(data => data.json());
   $('#welcome').text(`Welcome back, ${username}!`);
   $('textarea#bio').text(response.bio);
   $('#setbio').on('click', async () => {
     $('#setbio').prop('disabled', true);
-    await fetch(`https://bark-backend-api-prod.replit.app/api/v1/setBio?token=${encodeURIComponent(token)}`, {
+    await fetch(`https://api.bark.dumorando.com/api/v2/setBio?token=${encodeURIComponent(token)}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json'
@@ -102,7 +102,7 @@
   document.getElementById('pfpupload').addEventListener("change", async (e) => {
     const file = e.target.files[0];
     if (file) {
-        const response = await fetch(`https://bark-backend-api-prod.replit.app/api/v1/setPFP?token=${encodeURIComponent(token)}`, {
+        const response = await fetch(`https://api.bark.dumorando.com/api/v2/setPFP?token=${encodeURIComponent(token)}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'

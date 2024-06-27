@@ -99,7 +99,7 @@
   document.getElementById('username').innerText = username;
   const token = localStorage.getItem('barktoken');
 
-  const response = await fetch(`https://bark-backend-api-prod.replit.app/api/v1/fetchUser?username=${encodeURIComponent(username)}`);
+  const response = await fetch(`https://api.bark.dumorando.com/api/v2/fetchUser?username=${encodeURIComponent(username)}`);
 
   if (response.status === 404) window.location.replace("/404");
 
@@ -118,7 +118,7 @@
     document.getElementById('admin').classList.add('show');
 
     document.getElementById('buttonadmininvalidatebio').addEventListener('click', async () => {
-      await fetch(`https://bark-backend-api-prod.replit.app/api/v1/setBio/admin?token=${encodeURIComponent(token)}&target=${username}`, {
+      await fetch(`https://api.bark.dumorando.com/api/v2/setBio/admin?token=${encodeURIComponent(token)}&target=${username}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
@@ -130,7 +130,7 @@
     });
 
     document.getElementById('buttonadmininvalidatepfp').addEventListener('click', async () => {
-      await fetch(`https://bark-backend-api-prod.replit.app/api/v1/setPFP/admin?token=${encodeURIComponent(token)}&target=${username}`, {
+      await fetch(`https://api.bark.dumorando.com/api/v2/setPFP/admin?token=${encodeURIComponent(token)}&target=${username}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'

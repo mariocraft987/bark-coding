@@ -96,7 +96,7 @@
     if (username != '', password != '', email != '', dob != '') {
       if (password.length < 3) { errormsg.innerHTML = "Please make your username more than 3 characters!" } else
         if (password.length > 12) { errormsg.innerHTML = "Please make your username lower than 13 characters!" } else {
-          const response = await fetch(`https://bark-backend-api-prod.replit.app/api/v1/createAccount?username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`, {
+          const response = await fetch(`https://api.bark.dumorando.com/api/v2/createAccount?username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`, {
             method: 'POST'
           });
           if (response.status !== 200) {
@@ -106,7 +106,7 @@
             //laziness
             errormsg.style.color = 'white';
             errormsg.innerText = 'Creating your Bark account..';
-            const loginresponse = await fetch(`https://bark-backend-api-prod.replit.app/api/v1/login?username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`, {
+            const loginresponse = await fetch(`https://api.bark.dumorando.com/api/v2/login?username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`, {
               method: 'POST'
             });
             if (loginresponse.status !== 200) {

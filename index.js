@@ -68,7 +68,7 @@ if (document.url != "baseUrl") {
 if (localStorage.getItem("myBarkUsername")) {
   if (localStorage.getItem("barktoken")) {
     //verify to see if the username matches the token.
-    fetch(`https://bark-backend-api-prod.replit.app/api/v1/currentUser?token=${localStorage.getItem("barktoken")}`)
+    fetch(`https://api.bark.dumorando.com/api/v2/currentUser?token=${localStorage.getItem("barktoken")}`)
       .then(data => data.json())
       .then(data => {
         if (data.error === 'Reauthenticate') {
