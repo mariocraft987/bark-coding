@@ -584,9 +584,8 @@
       Array.from(document.querySelectorAll("*")).forEach(item => {
         if (item.getAttribute("data-extensionpath")) {
           item.addEventListener("click", () => {
-            added.push(item.getAttribute("data-extensionpath"));
-            console.log(added)
             if (!added.includes(item.getAttribute("data-extensionpath"))) {
+              added.push(item.getAttribute("data-extensionpath"));
               fetch(item.getAttribute("data-extensionpath"))
               .then(data => data.text())
               .then(data => {
