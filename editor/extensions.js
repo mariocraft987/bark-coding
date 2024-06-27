@@ -1,51 +1,59 @@
-// Bark extension handler
+// Bark extension API
 
-const sineXML = `
-        <block type="sine_move"></block>
-        <block type="sine_move2"></block>
-        <block type="sine_size"></block>
-`;
+(() => {
+    "use strict";
 
-const aiXML = `
-        <block type="set_chatbot"></block>
-        <block type="chatbot_respond"></block>
-        <block type="chatbot_tell"></block>
-        <block type="chatbot_reset"></block>
-`;
+    const Bark = {};
 
-const customXML = `
-        <block type="create_elm"></block>
-        <block type="delete_elm"></block>
-        <block type="get_elm"></block>
-`;
-
-
-/**
- * to add a hardcoded extension, put the xml in a variable like above then map the element id
- * to the xml with this object
- */
-const MapIdToExtensions = {
-    "hardcodedSineExtension": sineXML,
-    "hardcodedAIExtension": aiXML,
-    "hardcodedCustomBlocksExtension": customXML
-};
-
-//stupid basic state manager
-const state = {
-    extensionsLoaded: []
-};
-
-Object.keys(MapIdToExtensions).forEach(item => {
-    document.getElementById(item).addEventListener("click", () => {
-        if (!state.extensionsLoaded.includes(item)) {
-            //push it to state so you cant add it twice :bleh:
-            state.extensionsLoaded.push(item);
+    class Category {
+        constructor(categoryelement) {
+            this.element = categoryelement;
         }
-    });
-});
 
-function extflyoutcallback(workspace) {
-    return state.extensionsLoaded.map(item => MapIdToExtensions[item]);
-}
+        addBlock(blkclass) {
+            this.element.appendChild(blkclass.element);
+        }
 
-setTimeout(() => Blockly.getMainWorkspace().registerToolboxCategoryCallback('EXTS', extflyoutcallback), 2000);
+        setColor(color) {
+            this.element.setAttribute('colour', color);
+        }
+
+        setName(name) {
+            this.element.setAttribute('name', name);
+        }
+    }
+
+    class Block {
+        constructor(blockid) {
+            this.element = document.createElement('block');
+            this.element.setAttribute('type', blockid);
+        }
+
+        addField(name, defaultvalue) {
+            const newfield = document.createElement('field');
+            newfield.setAttribute('name', name);
+            newfield.innerText = defaultvalue;
+            this.element.appendChild(newfield);
+        }
+    }
+
+    Bark.CreateCategory = (name, color) => {  
+        const category = document.createElement('category');
+        category.setAttribute('name', name);
+        category.setAttribute('colour', color);
+
+        return new Category(category);
+    }
+
+    Bark.CreateBlock = (id) => {
+        return new Block(id);
+    }
+
+    Bark.AppendCategoryToToolbox = (category) => {
+        let toolbox = document.getElementById('toolbox');
+        toolbox.appendChild(category.element);
+        window.workspace.updateToolbox(toolbox);
+    }
+
+    window.Bark = Bark;
+})();
