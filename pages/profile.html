@@ -91,14 +91,13 @@
 <script src="/src/scripts/admin.js"></script>
 <script type="module">
   let parts = window.location.href.split("/");
-  document.getElementById('username').innerText = parts[parts.length - 1];
   const username = parts[parts.length - 1];
-  const token = localStorage.getItem('barktoken');
-
   if (username !== localStorage.getItem('myBarkUsername')) {
     let btn = document.querySelector("button#changeprofiledetails");
     btn.remove();
   }
+  document.getElementById('username').innerText = username;
+  const token = localStorage.getItem('barktoken');
 
   const response = await fetch(`https://bark-backend-api-prod.replit.app/api/v1/fetchUser?username=${encodeURIComponent(username)}`);
 
