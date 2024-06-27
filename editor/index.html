@@ -191,6 +191,24 @@
   #projectPlayer {
     width: 640px !important;
   }
+
+  .popupholder {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+  }
+
+  .popup {
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    border: 2px solid white;
+    background-color: #333;
+  }
   </style>
 </head>
 
@@ -239,31 +257,30 @@
     <br />
     <div id="audiofilelist"></div>
   </div>
-  <!-- Extensions Tab -->
 
-  <div id="extensionseditordiv" class="tabpage">
-    <h1>Choose An Extension</h1>
-    <img src="/src/images/assets/extension_sine.png" alt="Sine Extension"
-      title="Sine (created by nmsderp)" class="extension" width="160" id="hardcodedSineExtension" data-extensionpath="/editor/builtinextensions/sine.js">
-    <img src="/src/images/assets/extension_ai.png" alt="Artificial Intelligence Extension"
-      title="AI (created by funtasmo)" class="extension" width="160" id="hardcodedAIExtension">
-    <img src="/src/images/assets/extension_barkblocks.png" alt="Bark Blocks Extension"
-      title="Bark blocks (created by funtasmo)" class="extension" width="160" id="hardcodedBarkBlocksExtension">
-    <img src="/src/images/assets/extension_custom.png" alt="Custom Blocks Extension"
-      title="Custom Blocks (created by mariocraft987)" class="extension" width="160" id="hardcodedCustomBlocksExtension">
-    <h3>Or Upload a Extension to use.</h3>
-    <input type="file" accept='.js' id="upload">
-
+  <div class="popupholder">
+    <div id="extensionseditordiv" class="popup">
+      <h1>Choose An Extension</h1>
+      <img src="/src/images/assets/extension_sine.png" alt="Sine Extension"
+        title="Sine (created by nmsderp)" class="extension" width="160" id="hardcodedSineExtension" data-extensionpath="/editor/builtinextensions/sine.js">
+      <img src="/src/images/assets/extension_ai.png" alt="Artificial Intelligence Extension"
+        title="AI (created by funtasmo)" class="extension" width="160" id="hardcodedAIExtension">
+      <img src="/src/images/assets/extension_barkblocks.png" alt="Bark Blocks Extension"
+        title="Bark blocks (created by funtasmo)" class="extension" width="160" id="hardcodedBarkBlocksExtension">
+      <img src="/src/images/assets/extension_custom.png" alt="Custom Blocks Extension"
+        title="Custom Blocks (created by mariocraft987)" class="extension" width="160" id="hardcodedCustomBlocksExtension">
+      <h3>Or Upload a Extension to use.</h3>
+      <input type="file" accept='.js' id="upload">
+  
+    </div>
   </div>
   <div id="editortabs">
     <button
-      onclick="document.body.classList.add('code'); document.body.classList.remove('costumes'); document.body.classList.remove('sounds'); document.body.classList.remove('extensions');">Code</button>
+      onclick="document.body.classList.add('code'); document.body.classList.remove('costumes'); document.body.classList.remove('sounds'); ">Code</button>
     <button
-      onclick="document.body.classList.remove('code'); document.body.classList.add('costumes'); document.body.classList.remove('sounds'); document.body.classList.remove('extensions');">Costumes</button>
+      onclick="document.body.classList.remove('code'); document.body.classList.add('costumes'); document.body.classList.remove('sounds');">Costumes</button>
     <button
-      onclick="document.body.classList.remove('code'); document.body.classList.remove('costumes'); document.body.classList.add('sounds'); document.body.classList.remove('extensions');">Sounds</button>
-    <button
-      onclick="document.body.classList.remove('code'); document.body.classList.remove('costumes'); document.body.classList.remove('sounds'); document.body.classList.add('extensions');">Extensions</button>
+      onclick="document.body.classList.remove('code'); document.body.classList.remove('costumes'); document.body.classList.add('sounds');">Sounds</button>
   </div>
   <div id="projectPlayer">
     <div id="projectToolbar">
