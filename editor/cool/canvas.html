@@ -33,7 +33,7 @@
     <canvas width="700" height="400"></canvas>
     <textarea id="projecttext" spellcheck="false"></textarea>
     <script>
-        var canvas = document.getElementsByTagName("canvas")[0].getContext("2d");
+        const canvas = document.getElementsByTagName("canvas")[0].getContext("2d");
 
         window.addEventListener("message", function(msg) {
             try {
