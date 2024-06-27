@@ -244,7 +244,7 @@
   <div id="extensionseditordiv" class="tabpage">
     <h1>Choose An Extension</h1>
     <img src="/src/images/assets/extension_sine.png" alt="Sine Extension"
-      title="Sine (created by nmsderp)" class="extension" width="160" id="hardcodedSineExtension">
+      title="Sine (created by nmsderp)" class="extension" width="160" id="hardcodedSineExtension" data-extensionpath="/editor/builtinextensions/sine.js">
     <img src="/src/images/assets/extension_ai.png" alt="Artificial Intelligence Extension"
       title="AI (created by funtasmo)" class="extension" width="160" id="hardcodedAIExtension">
     <img src="/src/images/assets/extension_barkblocks.png" alt="Bark Blocks Extension"
@@ -541,11 +541,6 @@
         <block type="fetch"></block>
         <block type="letters_from"></block>
       </category>
-      <category name="Sine" colour="#19b9c2">
-        <block type="sine_move"></block>
-        <block type="sine_move2"></block>
-        <block type="sine_size"></block>
-      </category>
       <category name="A.I." colour="#5E7D6C">
         <block type="set_chatbot"></block>
         <block type="chatbot_respond"></block>
@@ -562,6 +557,21 @@
 
     <script>
       let costume = "";
+      let added = [];
+
+      //handle hardcoded extensions
+      Array.from(document.querySelectorAll("*")).forEach(item => {
+        if (item.getAttribute("data-extensionpath")) {
+          item.addEventListener("click", () => {
+            added.push(item.getAttribute("data-extensionpath"));
+            fetch(item.getAttribute("data-extensionpath"))
+              .then(data => data.text())
+              .then(data => {
+                eval(data);
+              });
+          });
+        }
+      });
 
       function start() {
         window.workspace = Blockly.inject('blocklyDiv', {
@@ -784,39 +794,6 @@
           this.setHelpUrl("");
         }
       };
-      Blockly.Blocks['sine_move'] = {
-        init: function () {
-          this.appendDummyInput()
-            .appendField("sine wave move y");
-          this.setPreviousStatement(true, null);
-          this.setNextStatement(true, null);
-          this.setColour(180);
-          this.setTooltip("Sine Moves Sprite by Y");
-          this.setHelpUrl("https://en.wikipedia.org/wiki/Sine_and_cosine");
-        }
-      };
-      Blockly.Blocks['sine_size'] = {
-        init: function () {
-          this.appendDummyInput()
-            .appendField("sine wave size");
-          this.setPreviousStatement(true, null);
-          this.setNextStatement(true, null);
-          this.setColour(180);
-          this.setTooltip("Sizes Sprite Using Sine");
-          this.setHelpUrl("https://en.wikipedia.org/wiki/Sine_and_cosine");
-        }
-      };
-      Blockly.Blocks['sine_move2'] = {
-        init: function () {
-          this.appendDummyInput()
-            .appendField("sine wave move x");
-          this.setPreviousStatement(true, null);
-          this.setNextStatement(true, null);
-          this.setColour(180);
-          this.setTooltip("Sine Moves Sprite By X");
-          this.setHelpUrl("https://en.wikipedia.org/wiki/Sine_and_cosine");
-        }
-      };
 Blockly.Blocks['onreturn'] = {
   init: function() {
     this.appendValueInput("NAME")
@@ -953,15 +930,7 @@ Blockly.Blocks['letters_from'] = {
       javascript.javascriptGenerator.forBlock['movement_moveback'] = function (block, generator) {
         return "basicMoveBack();";
       };
-      javascript.javascriptGenerator.forBlock['sine_move'] = function (block, generator) {
-        return "sineMove();";
-      };
-      javascript.javascriptGenerator.forBlock['sine_move2'] = function (block, generator) {
-        return "sineMove2();";
-      };
-      javascript.javascriptGenerator.forBlock['sine_size'] = function (block, generator) {
-        return "sizeOscillation();";
-      };
+      
 
       javascript.javascriptGenerator.forBlock['goto_mouse'] = function (block, generator) {
 
