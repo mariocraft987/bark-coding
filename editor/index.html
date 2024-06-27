@@ -1069,7 +1069,8 @@ Blockly.Blocks['letters_from'] = {
         const state = Blockly.serialization.workspaces.save(workspace);
         const data = JSON.stringify({
           blockly: btoa(JSON.stringify(state)),
-          costume
+          costume,
+          added
         });
 
         // Convert the XML text to Blob
@@ -1092,7 +1093,7 @@ Blockly.Blocks['letters_from'] = {
       function loadWorkspaceFromFile(file) {
         let reader = new FileReader();
 
-        reader.onload = function (event) {
+        reader.onload = async function (event) {
           const data = JSON.parse(event.target.result);
 
           // Clear the workspace before loading
@@ -1100,6 +1101,17 @@ Blockly.Blocks['letters_from'] = {
 
           Blockly.serialization.workspaces.load(JSON.parse(atob(data.blockly)), workspace);
           loadImg(data.costume);
+
+          // check if its there first to support older bark versions
+          if (data.added) {
+            for (const extURL of data.added) {
+              if (!added.includes(extURL)) {
+                const response = await fetch(extURL).then(data => data.text());
+                eval(response);
+                added.push(extURL);
+              }
+            }
+          }
           
           //alert('Workspace loaded successfully!'); shut your happy ass up
         };
