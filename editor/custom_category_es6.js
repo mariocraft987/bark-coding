@@ -26,6 +26,7 @@ class CustomCategory extends Blockly.ToolboxCategory {
     addColourBorder_(colour) {
       this.rowDiv_.style.borderRadius = '12px';
       this.rowDiv_.style.backgroundColor = colour;
+      this.rowDiv_.style.transition = "0.1s";
     }
   
     /**
