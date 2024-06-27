@@ -585,11 +585,13 @@
         if (item.getAttribute("data-extensionpath")) {
           item.addEventListener("click", () => {
             added.push(item.getAttribute("data-extensionpath"));
-            fetch(item.getAttribute("data-extensionpath"))
+            if (!added.includes(item.getAttribute("data-extensionpath"))) {
+              fetch(item.getAttribute("data-extensionpath"))
               .then(data => data.text())
               .then(data => {
                 eval(data);
               });
+            }
           });
         }
       });
