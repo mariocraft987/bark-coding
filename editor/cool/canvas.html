@@ -85,24 +85,24 @@
             }
         }
 
-        var rect = function(x=0, y=0, w=50, h=50, color="red") {
+        let rect = function(x=0, y=0, w=50, h=50, color="red") {
             canvas.beginPath();
             canvas.rect(x, y, w, h);
             canvas.fillStyle = color;
             canvas.fill();
         }
 
-        var text = function(x=0, y=50, text="Hello, world!", font="48px serif", color="black") {
+        let text = function(x=0, y=50, text="Hello, world!", font="48px serif", color="black") {
             canvas.font = font;
             canvas.fillStyle = color;
             canvas.fillText(text, x, y);
         }
 
-        var clear = function() {
+        let clear = function() {
             canvas.clearRect(0, 0, canvas.width, canvas.height);
         }
 
-        var log = function(string="", newline=true) {
+        let log = function(string="", newline=true) {
             document.getElementById("projecttext").value += string + (newline ? "\n" : "")
         }
     </script>

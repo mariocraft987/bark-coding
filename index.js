@@ -35,10 +35,10 @@ document.body.innerHTML += "<button onclick='scrollToTop()' class='buttonFrBx' i
 
 // i copied this 
 function randomstring() {
-    var length = 8,
+    let length = 8,
         charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789",
         retVal = "";
-    for (var i = 0, n = charset.length; i < length; ++i) {
+    for (let i = 0, n = charset.length; i < length; ++i) {
         retVal += charset.charAt(Math.floor(Math.random() * n));
     }
     return retVal;
@@ -53,7 +53,7 @@ if (!localStorage.getItem("secret")) {
 // @deprecated use <!-- inject:footer --> instead.
 /*
 if (document.url != "baseUrl") {
-    var footer;
+    let footer;
     footer = '<footer><p style="color: #777;">Looks like you\'ve reached the bottom.</p><p>';
     footer += '<a href="'+baseUrl+'">Home</a> '; // Home
     footer += '<a href="/editor/">Editor</a> '; // Editor
@@ -209,7 +209,7 @@ function scrollToTop() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-var x, i, j, l, ll, selElmnt, a, b, c;
+let x, i, j, l, ll, selElmnt, a, b, c;
 /*look for any elements with the class "custom-select":*/
 x = document.getElementsByClassName("custom-select");
 l = x.length;
@@ -232,7 +232,7 @@ for (i = 0; i < l; i++) {
     c.addEventListener("click", function(e) {
         /*when an item is clicked, update the original select box,
         and the selected item:*/
-        var y, i, k, s, h, sl, yl;
+        let y, i, k, s, h, sl, yl;
         s = this.parentNode.parentNode.getElementsByTagName("select")[0];
         sl = s.length;
         h = this.parentNode.previousSibling;
@@ -266,7 +266,7 @@ for (i = 0; i < l; i++) {
 function closeAllSelect(elmnt) {
   /*a function that will close all select boxes in the document,
   except the current select box:*/
-  var x, y, i, xl, yl, arrNo = [];
+  let x, y, i, xl, yl, arrNo = [];
   x = document.getElementsByClassName("select-items");
   y = document.getElementsByClassName("select-selected");
   xl = x.length;

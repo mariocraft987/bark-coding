@@ -32,7 +32,7 @@ After that we need to add it to the toolbox in `editor/`
 In Blockly code is ran with generators, in our code we have to define what the blocks do:
 ```javascript
 javascript.javascriptGenerator.forBlock['change_stage_bg'] = function(block, generator) {
-        var colorValue = block.getFieldValue('NAME');
+        let colorValue = block.getFieldValue('NAME');
         return "changebg('" + colorValue + "');";
     };
 ```

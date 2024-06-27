@@ -71,15 +71,15 @@
     <script>
         // Function to compile Lua code
         function compileCode() {
-            var luaCode = editor.getValue();
-            var result = '';
+            let luaCode = editor.getValue();
+            let result = '';
 
             // Try compiling the Lua code
             try {
                 // Create Lua VM
-                var vm = new fengari.vm.LuaVM(new fengari.vm.State());
+                let vm = new fengari.vm.LuaVM(new fengari.vm.State());
                 // Compile Lua code
-                var chunk = vm.load(luaCode);
+                let chunk = vm.load(luaCode);
                 // Execute the compiled chunk
                 vm.call(chunk);
                 result = 'Compilation successful!';
@@ -93,15 +93,15 @@
 
         // Function to run compiled Lua code
         function runCode() {
-            var luaCode = editor.getValue();
-            var result = '';
+            let luaCode = editor.getValue();
+            let result = '';
 
             // Try running the Lua code
             try {
                 // Create Lua VM
-                var vm = new fengari.vm.LuaVM(new fengari.vm.State());
+                let vm = new fengari.vm.LuaVM(new fengari.vm.State());
                 // Compile Lua code
-                var chunk = vm.load(luaCode);
+                let chunk = vm.load(luaCode);
                 // Execute the compiled chunk
                 vm.call(chunk);
                 result = 'Execution successful!';
@@ -114,7 +114,7 @@
         }
 
         // Initialize CodeMirror
-        var editor = CodeMirror.fromTextArea(document.getElementById("code-editor"), {
+        let editor = CodeMirror.fromTextArea(document.getElementById("code-editor"), {
             mode: "lua",
             lineNumbers: true
         });

@@ -575,7 +575,7 @@
       }
 
       function updateStage(event) {
-        var code = Blockly.JavaScript.workspaceToCode(workspace);
+        let code = Blockly.JavaScript.workspaceToCode(workspace);
         //document.getElementById('generated-code').textContent = code; // Display generated code
         //eval(code); // Evaluate generated code
       }
@@ -968,38 +968,38 @@ Blockly.Blocks['letters_from'] = {
         return "gotomouse();";
       };
       javascript.javascriptGenerator.forBlock['change_stage_bg'] = function (block, generator) {
-        var colorValue = block.getFieldValue('NAME');
+        let colorValue = block.getFieldValue('NAME');
         return "changebg('" + colorValue + "');";
       };
 
       javascript.javascriptGenerator.forBlock['alert_block'] = function (block, generator) {
-        var message = block.getFieldValue('message');
+        let message = block.getFieldValue('message');
         return "alert('" + message + "');";
       };
       javascript.javascriptGenerator.forBlock['resetsize'] = function (block, generator) {
-        var message = block.getFieldValue('message');
+        let message = block.getFieldValue('message');
         return "resetsize();";
       };
       javascript.javascriptGenerator.forBlock['confirm_block'] = function (block, generator) {
-        var message = block.getFieldValue('message');
+        let message = block.getFieldValue('message');
         return "confirm('" + message + "');";
       };
       javascript.javascriptGenerator.forBlock['prompt_block'] = function (block, generator) {
-        var message = block.getFieldValue('message');
+        let message = block.getFieldValue('message');
         return "prompt('" + message + "');";
       };
       javascript.javascriptGenerator.forBlock['set_size'] = function (block, generator) {
-        var message = Blockly.JavaScript.valueToCode(block, 'NAME', Blockly.JavaScript.ORDER_ATOMIC);
+        let message = Blockly.JavaScript.valueToCode(block, 'NAME', Blockly.JavaScript.ORDER_ATOMIC);
         return "setsize(Number('" + message + "'));";
       };
       javascript.javascriptGenerator.forBlock['change_size'] = function (block, generator) {
-        var message = block.getFieldValue('message');
+        let message = block.getFieldValue('message');
         return "setsize('imgWidth + " + message + "');";
       };
 
       javascript.javascriptGenerator.forBlock['fetch'] = function (block, generator) {
-        var uri = block.getFieldValue('url');
-        var handleFunction = generator.variableDB_.getDistinctName('handlefetch', Blockly.Variables.NAME_TYPE);
+        let uri = block.getFieldValue('url');
+        let handleFunction = generator.variableDB_.getDistinctName('handlefetch', Blockly.Variables.NAME_TYPE);
         generator.addFunction(handleFunction,
           `async function ${handleFunction}(url) {
               try {
@@ -1036,7 +1036,7 @@ Blockly.Blocks['letters_from'] = {
             return;  // Don't change the stage while dragging blocks or on events other than block changes
           }
           if (event.blockId === this.id && event.name === "NAME") {
-            var color = this.getFieldValue('NAME');
+            let color = this.getFieldValue('NAME');
             // Call a JavaScript function in your p5.js sketch to change the background color
             changeBackgroundColor(color);
           }
@@ -1077,10 +1077,10 @@ Blockly.Blocks['letters_from'] = {
         });
 
         // Convert the XML text to Blob
-        var blob = new Blob([data], { type: 'application/json' });
+        let blob = new Blob([data], { type: 'application/json' });
 
         // Create a link element
-        var aElement = document.createElement('a');
+        let aElement = document.createElement('a');
         aElement.setAttribute('download', 'project.barkf');
         aElement.href = URL.createObjectURL(blob);
         aElement.setAttribute('target', '_blank');
@@ -1094,7 +1094,7 @@ Blockly.Blocks['letters_from'] = {
       }
 
       function loadWorkspaceFromFile(file) {
-        var reader = new FileReader();
+        let reader = new FileReader();
 
         reader.onload = function (event) {
           const data = JSON.parse(event.target.result);
@@ -1117,12 +1117,12 @@ Blockly.Blocks['letters_from'] = {
       }
 
       // Script from Stack Overflow
-      var openFile = function (file) {
-        var input = file.target;
-        var reader = new FileReader();
+      let openFile = function (file) {
+        let input = file.target;
+        let reader = new FileReader();
         reader.onload = function () {
-          var dataURL = reader.result;
-          var output = document.getElementById('costume');
+          let dataURL = reader.result;
+          let output = document.getElementById('costume');
           loadImg(dataURL);
           costume = dataURL;
           output.src = dataURL;
@@ -1130,11 +1130,11 @@ Blockly.Blocks['letters_from'] = {
         reader.readAsDataURL(input.files[0]);
       };
 
-      var openAudioFile = function (file) {
-        var input = file.target.files[0];
-        var reader = new FileReader();
+      let openAudioFile = function (file) {
+        let input = file.target.files[0];
+        let reader = new FileReader();
         reader.onload = function () {
-          var audio = new Audio();
+          let audio = new Audio();
           audio.src = URL.createObjectURL(input);
           audio.controls = true;
           document.getElementById("audiofilelist").append(audio);

@@ -26,8 +26,8 @@ fetch(url)
     });
     
 /*
-var select = document.getElementById("lang-select");
-var option
+let select = document.getElementById("lang-select");
+let option
 
 fetch(url)
       .then((res) => res.json())

@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 })
-var pendingTheme = localStorage.getItem('theme');
+let pendingTheme = localStorage.getItem('theme');
 const btns = Array.from(document.getElementsByClassName('themeBtn'));
 btns.forEach(btn => {
     btn.addEventListener('click', (e) => {

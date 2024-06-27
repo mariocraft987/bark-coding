@@ -119,7 +119,7 @@
   //**blob to dataURL**
   function blobToDataURL(blob) {
       return new Promise((resolve, reject) => {
-        var a = new FileReader();
+        let a = new FileReader();
         a.onload = function(e) {resolve(e.target.result);}
         a.readAsDataURL(blob);
       });
@@ -150,7 +150,7 @@
     fetch('https://api.github.com/repos/Mariocraft987/bark.github.io/commits?per_page=50')
       .then(response => response.json())
       .then(commits => {
-        var Commits = '<h2>Recent Commits</h2><ul style="overflow-y: scroll; height: 150px;"><br/>';
+        let Commits = '<h2>Recent Commits</h2><ul style="overflow-y: scroll; height: 150px;"><br/>';
         commits.slice(0, commitsLength).forEach(commit => {
           Commits += `<div title="${replace(commit.author.login)}: ${replace(commit.commit.message)}"><li><a href="https://github.com/${replace(commit.author.login)}"><img style="border-radius:12px;margin-top:-4px;margin-left:-6px" src="https://github.com/${commit.author.login}.png" width="21"></a><a class="linkoncommits" href="${commit.html_url}">${replace(commit.commit.message)}</a></li></div>`;
         });

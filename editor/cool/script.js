@@ -1,15 +1,15 @@
-var zoomsize = 12;
-var linetabs = 0;
-var code = document.getElementById("code");
-var zoomindicator = document.getElementById("zi");
-var notif = document.getElementById("notification");
-var notifpreview = document.getElementById("notifpreview");
-var notiflc = document.getElementById("notiflettercount");
-var bluroverlay = document.getElementById("blur-overlay");
+let zoomsize = 12;
+let linetabs = 0;
+let code = document.getElementById("code");
+let zoomindicator = document.getElementById("zi");
+let notif = document.getElementById("notification");
+let notifpreview = document.getElementById("notifpreview");
+let notiflc = document.getElementById("notiflettercount");
+let bluroverlay = document.getElementById("blur-overlay");
 
 code.focus();
 
-var zoom = function() {
+let zoom = function() {
     if (zoomsize < 50) {
         zoomsize += 4;
         code.style.fontSize = zoomsize+"pt";
@@ -18,7 +18,7 @@ var zoom = function() {
     zoomindicator.innerText = zoomsize;
 };
 
-var zoomout = function() {
+let zoomout = function() {
     if (zoomsize > 6) {
         zoomsize -= 4;
         code.style.fontSize = zoomsize+"pt";
@@ -27,7 +27,7 @@ var zoomout = function() {
     zoomindicator.innerText = zoomsize;
 };
 
-var resetzoom = function() {
+let resetzoom = function() {
     zoomsize = 12;
     code.style.fontSize = zoomsize+"pt";
     code.focus();
@@ -43,8 +43,8 @@ code.addEventListener('keydown', function(e) {
         notifpreview.innerText = code.value.substring(start, end);
     } else if (e.key == "Tab") {
         e.preventDefault();
-        var start = this.selectionStart;
-        var end = this.selectionEnd;
+        let start = this.selectionStart;
+        let end = this.selectionEnd;
         this.value = this.value.substring(0, start) +
         "\t" + this.value.substring(end);
         this.selectionStart =
@@ -60,36 +60,36 @@ code.addEventListener('keydown', function(e) {
             '};'
         };
     } else if (e.key == "(") {
-        var start = this.selectionStart;
-        var end = this.selectionEnd;
+        let start = this.selectionStart;
+        let end = this.selectionEnd;
         this.value = this.value.substring(0, start) +
         ")" + this.value.substring(end);
         this.selectionStart =
         this.selectionEnd = start;
     } else if (e.key == "\"") {
-        var start = this.selectionStart;
-        var end = this.selectionEnd;
+        let start = this.selectionStart;
+        let end = this.selectionEnd;
         this.value = this.value.substring(0, start) +
         "\"" + this.value.substring(end);
         this.selectionStart =
         this.selectionEnd = start;
     } else if (e.key == "'") {
-        var start = this.selectionStart;
-        var end = this.selectionEnd;
+        let start = this.selectionStart;
+        let end = this.selectionEnd;
         this.value = this.value.substring(0, start) +
         "'" + this.value.substring(end);
         this.selectionStart =
         this.selectionEnd = start;
     } else if (e.key == "[") {
-        var start = this.selectionStart;
-        var end = this.selectionEnd;
+        let start = this.selectionStart;
+        let end = this.selectionEnd;
         this.value = this.value.substring(0, start) +
         "]" + this.value.substring(end);
         this.selectionStart =
         this.selectionEnd = start;
     } else if (e.key == "{") {
-        var start = this.selectionStart;
-        var end = this.selectionEnd;
+        let start = this.selectionStart;
+        let end = this.selectionEnd;
         this.value = this.value.substring(0, start) +
         "}" + this.value.substring(end);
         this.selectionStart =
@@ -98,15 +98,15 @@ code.addEventListener('keydown', function(e) {
         e.preventDefault();
     } else if (e.key == "Enter") {
         if ((code.value[this.selectionStart-1] == "{" && code.value[this.selectionStart] == "}") || (code.value[this.selectionStart-1] == "[" && code.value[this.selectionStart] == "]") || (code.value[this.selectionStart-1] == "(" && code.value[this.selectionStart] == ")")) {
-            var start = this.selectionStart;
-            var end = this.selectionEnd;
+            let start = this.selectionStart;
+            let end = this.selectionEnd;
             this.value = this.value.substring(0, start) + "\n\t\n" + this.value.substring(end);
             code.setSelectionRange(this.selectionStart-2, this.selectionStart-2);
         };
     } else if (e.ctrlKey && e.key == "/") {
         e.preventDefault();
-        var start = this.selectionStart;
-        var end = this.selectionEnd;
+        let start = this.selectionStart;
+        let end = this.selectionEnd;
         if (start == end) {
             this.value = this.value.substring(0, start) + "/*  */" + this.value.substring(end);
             code.setSelectionRange(start+3, start+3);
@@ -122,27 +122,27 @@ code.addEventListener('keydown', function(e) {
     };
 });
 
-var deleteselection = function() {
+let deleteselection = function() {
     code.focus();
-    var start = code.selectionStart;
-    var end = code.selectionEnd;
+    let start = code.selectionStart;
+    let end = code.selectionEnd;
     code.value = code.value.substring(0, start)+code.value.substring(end);
     code.selectionEnd = start;
     closenotif();
 };
 
-var closenotif = function() {
+let closenotif = function() {
     code.selectionStart = code.selectionEnd;
     notif.classList.remove("open");
     bluroverlay.classList.remove("on");
     code.focus();
 };
 
-var log = function(message) {
+let log = function(message) {
     document.getElementById("projecttext").innerHTML += message;
 };
 
-var clearconsole = function() {
+let clearconsole = function() {
     document.getElementById("projecttext").innerHTML = "";
 };
 
