@@ -18,7 +18,13 @@
     <div id="app"></div>
     <script>
       window.$docsify = {
-        basePath: '/docs/content/'
+        basePath: '/docs/content/',
+        icon: 'https://bark.dumorando.com/favicon.ico',
+        name: 'Bark Coding Docs',
+        loadSidebar: true,
+        alias: {
+        '/.*/_sidebar.md': '/docs/content/_sidebar.md'
+        }
       };
     </script>
     <script src="/docs/docsify/index.js"></script>
