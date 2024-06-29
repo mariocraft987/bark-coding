@@ -569,6 +569,7 @@
       </category>
       <category name="Custom" colour="#cf4125">
         <button text="Add Extension.." callbackKey="showExtsMenu"></button>
+        <block type="test_block"></block>
         <block type="create_elm"></block>
         <block type="delete_elm"></block>
         <block type="get_elm"></block>
@@ -616,6 +617,18 @@
         //document.getElementById('generated-code').textContent = code; // Display generated code
         //eval(code); // Evaluate generated code
       }
+
+      Blockly.Blocks['test_block'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("Lorem lpsum...");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(230);
+ this.setTooltip("A test block, won't work.");
+ this.setHelpUrl("");
+  }
+};
 
       Blockly.Blocks['change_costume'] = {
         init: function () {
