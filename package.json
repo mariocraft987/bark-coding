@@ -3,7 +3,9 @@
   "description": "A Fun block based coding editor similar to Scratch.",
   "scripts": {
     "dev": "nw editor/",
-    "prod": "nwbuild --platforms win32,win64,osx64,linux32,linux64 --buildDir dist/ editor/"
+    "prod:win": "nwbuild --platform win --arch x64 --outDir dist/src --glob=false editor",
+    "prod:linux": "nwbuild --platform linux --arch x64 --outDir dist/src --glob=false editor",
+    "prod:osx": "nwbuild --platform osx --arch x64 --outDir dist/src --glob=false editor"
   },
   "main": "index.html",
   "version": "0.60",
