@@ -8,5 +8,9 @@
   "version": "0.60",
   "dependencies": {
     "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nw": "^0.44.1-sdk",
+    "nw-builder": "^4.7.7"
   }
 }
