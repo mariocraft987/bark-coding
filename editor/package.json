@@ -2,17 +2,15 @@
   "name": "editor",
   "version": "1.0.0",
   "description": "",
-  "main": "views/main.html",
+  "main": "src/screen/main.html",
   "window": {
     "title": "Bark Coding app",
-    "icon": "/src/images/Logo.svg",
+    "icon": "src/img/Logo.svg",
     "toolbar": false,
     "width": 1000,
     "height": 1000,
     "min_width": 1000,
     "min_height": 1000,
-    "max_width": 1000,
-    "max_height": 1000,
     "position": "center"
   },
   "scripts": {
