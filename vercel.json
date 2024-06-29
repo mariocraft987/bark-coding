@@ -71,6 +71,10 @@
     {
       "source": "/users",
       "destination": "/pages/users.html"
+    },
+    {
+      "source": "/docs",
+      "destination": "/pages/docs.html"
     }
   ]
 }
