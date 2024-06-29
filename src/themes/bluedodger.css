@@ -11,7 +11,7 @@ html:has(.dark-mode) {
 }
 
 body {
-  font-family: Arial, Helvetica, "Bazin", sans-serif;
+  font-family: "Bazin", Arial, Helvetica, sans-serif;
   background-color: White;
   font-weight: 450;
   margin: 0;
