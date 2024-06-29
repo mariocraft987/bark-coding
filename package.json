@@ -11,7 +11,7 @@
     "express": "^4.19.2"
   },
   "devDependencies": {
-    "nw": "^0.44.1-sdk",
+    "nw": "^0.89.0",
     "nw-builder": "^4.7.7"
   }
 }
