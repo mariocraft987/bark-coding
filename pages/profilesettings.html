@@ -73,6 +73,8 @@
 <script src="/index.js"></script>
 <script src="/src/scripts/replacer.js"></script>
 <script type="module">
+  if (!localStorage.myBarkUsername) window.location.replace("/login");
+  
   const username = localStorage.getItem('myBarkUsername');
   const token = localStorage.getItem('barktoken');
   const response = await fetch(`https://api.bark.dumorando.com/api/v2/fetchUser?username=${localStorage.getItem("myBarkUsername")}`).then(data => data.json());
