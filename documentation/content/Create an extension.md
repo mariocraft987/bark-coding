@@ -10,7 +10,7 @@ Blockly.defineBlocksWithJsonArray([
 ]);
 ```
 
-Or, you can use the javascript format to make your block code:
+Or, you can use the javascript format to make your block code (not recommended):
 ```js
   Blockly.Blocks['dumorandoutils_coolblock'] = {
     init: function () {
