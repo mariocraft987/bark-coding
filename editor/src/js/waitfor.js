@@ -1,15 +1,15 @@
 function waitFor(name) {
-    return new Promise((resolve) => {
-        function run() {
-            if (window[name]) {
-                resolve();
-            } else {
-                requestAnimationFrame(run);
-            }
-        }
+  return new Promise((resolve) => {
+    function run() {
+      if (window[name]) {
+        resolve();
+      } else {
+        requestAnimationFrame(run);
+      }
+    }
 
-        run();
-    });
+    run();
+  });
 }
 
 export default waitFor;
