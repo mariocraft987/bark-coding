@@ -10,6 +10,21 @@ Blockly.defineBlocksWithJsonArray([
 ]);
 ```
 
+Or, you can use the javascript format to make your block code:
+```js
+  Blockly.Blocks['dumorandoutils_coolblock'] = {
+    init: function () {
+      this.appendDummyInput()
+        .appendField("Cool block"); // Block Text
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.setColour(160); // Color
+      this.setTooltip(""); // description
+      this.setHelpUrl(""); // help URL
+    }
+  };
+```
+
 After you do that, setup the Javascript Generator for your block. You can copy the one in Block factory as a starting point.<br />
 *You may need to change a few things, like var to let because of linters*<br />
 Example:
@@ -44,3 +59,4 @@ After you add all your blocks, then add it to the toolbox.
 ```js
 Bark.AppendCategoryToToolbox(myCategory);
 ```
+![Category preview](https://bark.dumorando.com/src/images/assets/category.png)
