@@ -1,0 +1,54 @@
+name: bump the version
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  bump-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v2
+
+      - name: get node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: use jq for json procwessing in bash
+        run: sudo apt-get install jq
+
+      - name: get number of commits
+        id: commit_count
+        run: |
+          commit_count=$(git rev-list --count HEAD)
+          echo "::set-output name=count::$commit_count"
+
+      - name: get the current verson
+        id: get_version
+        run: |
+          current_version=$(node -p "require('./package.json').version")
+          echo "::set-output name=current_version::$current_version"
+
+      - name: bump version
+        if: ${{ steps.commit_count.outputs.count % 10 == 0 }}
+        id: bump_version
+        run: |
+          current_version=${{ steps.get_version.outputs.current_version }}
+          IFS='.' read -r -a version_parts <<< "$current_version"
+          new_version="${version_parts[0]}.$((version_parts[1] + 1)).${version_parts[2]}"
+          echo "New version: $new_version"
+          jq ".version = \"$new_version\"" package.json > tmp.$$.json && mv tmp.$$.json package.json
+          echo "::set-output name=new_version::$new_version"
+
+      - name: commit
+        if: ${{ steps.commit_count.outputs.count % 10 == 0 }}
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add package.json
+          git commit -m "Bump version to ${{ steps.bump_version.outputs.new_version }}"
+          git tag -a "v${{ steps.bump_version.outputs.new_version }}" -m "Version ${{ steps.bump_version.outputs.new_version }}"
+          git push origin main --tags
