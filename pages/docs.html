@@ -10,11 +10,6 @@
     />
   </head>
   <body>
-    <style>
-        *{
-            --theme-color: dodgerblue;
-        }
-    </style>
     <div id="app"></div>
     <script>
       window.$docsify = {
@@ -26,6 +21,23 @@
         '/.*/_sidebar.md': '/documentation/content/_sidebar.md'
         }
       };
+      const theme = localStorage.getItem('theme');
+      let color;
+      switch (theme.toLocaleLowerCase()) {
+        case "pranidhi":
+          color = "#c95757";
+          break;
+        case "cherryblossom":
+          color = "#ff66bb";
+          break;
+        case "shelledgastropod":
+          color = "purple";
+          break;
+        default:
+          color = "dodgerblue";
+          break;
+      }
+      document.body.style = `--theme-color:${color}`
     </script>
     <script src="/documentation/docsify/index.js"></script>
   </body>
