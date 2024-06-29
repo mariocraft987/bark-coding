@@ -2,6 +2,8 @@
 ![Static Badge](https://img.shields.io/badge/engine%20by-blockly-yellow?style=for-the-badge&logo=google&logoColor=yellow)
 ![Static Badge](https://img.shields.io/badge/server:%20-dumorando-green?style=for-the-badge&logo=javascript&logoColor=yellow)
 ![Static Badge](https://img.shields.io/badge/latest%20release-0.1.7-green?style=for-the-badge&logo=electron&logoColor=green)
+<br />
+*The API source code is hosted at https://github.com/dumorando/bapiv2*
 
 # Description
 Bark is a website that makes programming easy, so users of any age can create and share games, animations, and everything else! &#128054;<br>
