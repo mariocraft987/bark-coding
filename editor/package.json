@@ -5,7 +5,7 @@
   "main": "src/screen/main.html",
   "window": {
     "title": "Bark Coding app",
-    "icon": "src/img/Logo.svg",
+    "icon": "src/img/Logo.png",
     "toolbar": false,
     "width": 1000,
     "height": 1000,
