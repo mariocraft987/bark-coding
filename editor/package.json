@@ -5,15 +5,15 @@
   "main": "views/main.html",
   "window": {
     "title": "Bark Coding app",
-    "icon": "assets/icon.png",
-    "toolbar": true,
+    "icon": "/src/images/Logo.svg",
+    "toolbar": false,
     "width": 1000,
     "height": 1000,
     "min_width": 1000,
     "min_height": 1000,
     "max_width": 1000,
     "max_height": 1000,
-    "position": "mouse"
+    "position": "center"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
