@@ -1,12 +1,12 @@
 {
   "name": "bark-coding",
+  "version": "0.1.0",
   "description": "A Fun block-based coding editor similar to Scratch.",
   "scripts": {
     "dev": "nw editor/",
-    "prod": "nwbuild --platforms win64,linux64,osx64 --outDir export --glob false editor --appName BarkCoding --appVersion 0.1"
+    "prod": "nwbuild --mode build --platforms win64,linux64,osx64 --outDir export editor --appName BarkCoding --appVersion 0.1 --nwJsVersion 0.89.0 --src editor"
   },
   "main": "index.html",
-  "version": "0.1",
   "dependencies": {
     "express": "^4.19.2"
   },
