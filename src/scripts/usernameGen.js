@@ -15,7 +15,12 @@ function generateUsername() {
     "Cereal",
     "Car",
     "Backpacking",
-    "IfElse"
+    "Corgi",
+    "Party",
+    "Toast",
+    "Apple",
+    "Lemon",
+    "Bowtie"
   ]
   let name = selectedWords[Math.floor(Math.random() * selectedWords.length)] + selectedWords[Math.floor(Math.random() * selectedWords.length)] + Math.floor(Math.random() * 99);
   return name;
