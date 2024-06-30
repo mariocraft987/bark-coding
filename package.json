@@ -4,7 +4,7 @@
   "description": "A Fun block-based coding editor similar to Scratch.",
   "scripts": {
     "dev": "nw editor/",
-    "prod": "nwbuild --mode build --platforms win64,linux64,osx64 --outDir export /editor --appName BarkCoding --appVersion 0.1 --nwJsVersion 0.89.0 --src editor"
+    "prod": "nwbuild --platforms win64,linux64,osx64 --outDir export /editor --appName BarkCoding --appVersion 0.1 --nwJsVersion 0.89.0 --src editor"
   },
   "main": "index.html",
   "dependencies": {
