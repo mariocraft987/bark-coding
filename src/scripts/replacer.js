@@ -213,8 +213,27 @@ function replace(text) {
         .replaceAll(/(@rubiidev-18|@rubiidev)+/gim, '<a href="https://github.com/Rubiidev-18" style="background-color: #759cd9;height: 16px;display: inline-block;padding: 5px;margin: -5px 3px;border: 1px solid #d7e8ff;border-radius: 10px;color: #ffffff;position: relative;top: 2px; text-decoration: none;"><img src="https://github.com/rubiidev-18.png" width="16px" style="border-radius: 50%;"><span style="top: -2px;margin-left: 3px;margin-right: 3px;position: relative;">Rubiidev</span></a>')
         .replaceAll(/(@nmsderp|@mr_rudy)+/gim, '<a href="https://github.com/nmsderp" style="background-color: #7ad975;height: 16px;display: inline-block;padding: 5px;margin: -5px 3px;border: 1px solid #d7ffe0;border-radius: 10px;color: #ffffff;position: relative;top: 2px; text-decoration: none;"><img src="https://github.com/nmsderp.png" width="16px" style="border-radius: 50%;"><span style="top: -2px;margin-left: 3px;margin-right: 3px;position: relative;">nmsderp</span></a>')
 
+
+        function getSecondHalf(str, coin) {
+            return str.split(coin).pop()
+        }
+
+        function getFirstHalf(str, coin) {
+            return str.substring(0, str.indexOf(coin));
+        }
+    
+        if (text.includes('https://')) {
+            text = text.replace("https://", "<a href='")
+            let link = getSecondHalf(text, "https://")
+            let wordlength = getFirstHalf(text, "https://")
+                for (let e = Number(wordlength.length); text.charAt(e) != ' ';) {
+                    text = text.charAt(e).replace(` `, `'></a>`)
+                    e++
+                }
+            }
+
         // allow newlines
-        .replace(/\n/g, "<br>")
+        .replaceAll(/\n/g, "<br>")
 
     for (const emoji of emojis) {
         start = String(start).replaceAll(`${emoji.token}`, `<img src='${emoji.url}' alt=':${emoji.emoji}:' style='margin-bottom: -7px;' width='${emojisize}' height='${emojisize}'>`);
