@@ -157,41 +157,40 @@ function scrollToTop() {
 }
 
 
-// You cannot pay me to rename these variables, it's somebody else's
-// problem now.
+
 let CustomSelect = document.getElementsByClassName("custom-select");
 for (let i = 0; i < CustomSelect.length; i++) {
-  let selectElemnet = CustomSelect[i].querySelector("select");
-  let a = document.createElement("div");
-  a.setAttribute("class", "select-selected");
-  a.innerHTML = selectElemnet.options[selectElemnet.selectedIndex].innerHTML;
+  let selectElement = CustomSelect[i].querySelector("select");
+  let SelectedItem = document.createElement("div");
+  SelectedItem.setAttribute("class", "select-selected");
+  SelectedItem.innerHTML = selectElement.options[selectElement.selectedIndex].innerHTML;
   CustomSelect[i].appendChild(a);
-  let b = document.createElement("div");
-  b.setAttribute("class", "select-items select-hide");
-  for (let j = 1; j < selectElmenet.length; j++) {
-    let c = document.createElement("div");
-    c.innerHTML = selElmnt.options[j].innerHTML;
-    c.addEventListener("click", function(e) {
-        let s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-        let h = this.parentNode.previousSibling;
-        for (let i = 0; i < s.lenght; i++) {
-          if (s.options[i].innerHTML == this.innerHTML) {
-            s.selectedIndex = i;
-            h.innerHTML = this.innerHTML;
-            let y = this.parentNode.getElementsByClassName("same-as-selected");
-            for (let k = 0; k < y.length; k++) {
-              y[k].removeAttribute("class");
+  let OptionList = document.createElement("div");
+  OptionList.setAttribute("class", "select-items select-hide");
+  for (let j = 1; j < selectElement.length; j++) {
+    let option = document.createElement("div");
+    option.innerHTML = selElmnt.options[j].innerHTML;
+    option.addEventListener("click", function(e) {
+        let select = this.parentNode.parentNode.getElementsByTagName("select")[0];
+        let OptionItem = this.parentNode.previousSibling;
+        for (let i = 0; i < select.options.lenght; i++) {
+          if (select.options[i].innerHTML == this.innerHTML) {
+            select.selectedIndex = i;
+            OptionItem.innerHTML = this.innerHTML;
+            let LastSelected = this.parentNode.getElementsByClassName("same-as-selected");
+            for (let k = 0; k < LastSelected.length; k++) {
+              LastSelected[k].removeAttribute("class");
             }
             this.setAttribute("class", "same-as-selected");
             break;
           }
         }
-        h.click();
+        OptionItem.click();
     });
-    b.appendChild(c);
+    OptionList.appendChild(option);
   }
-  CustomSelect[i].appendChild(b);
-  a.addEventListener("click", function(e) {
+  CustomSelect[i].appendChild(OptionList);
+  SelectedItem.addEventListener("click", function(e) {
     e.stopPropagation();
     closeAllSelect(this);
     this.nextSibling.classList.toggle("select-hide");
@@ -199,7 +198,7 @@ for (let i = 0; i < CustomSelect.length; i++) {
   });
 }
 function closeAllSelect(elemnt) {
-  let arrNo = [];
+  let IndexesThatAreSelected = [];
   let SelectItems = document.getElementsByClassName("select-items");
   let SelectedItems = document.getElementsByClassName("select-selected");
   for (let i = 0; i < SelectedItems.length; i++) {
@@ -208,10 +207,10 @@ function closeAllSelect(elemnt) {
       continue;
     }
     
-    arrNo.push(i);
+    IndexesThatAreSelected.push(i);
   }
   for (let i = 0; i < SelectItems.length; i++) {
-    if (!arrNo.includes(i))
+    if (!IndexesThatAreSelected.includes(i))
       continue;
     SelectItems[i].classList.add("select-hide");
   }
