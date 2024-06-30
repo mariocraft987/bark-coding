@@ -21,11 +21,11 @@ let mobile = window.navigator.userAgent.toLowerCase().includes("mobi");
 let showHoldOn = true;
 
 // conditionals
-/*
+
 if (document.URL.includes('bark-coding.vercel.app')) {
   window.location.href = "https://bark.dumorando.com" + document.URL.replaceAll(window.location.origin, "")
 }
-
+/*
 if (document.URL.includes('bark.dumorando.com') == true||document.URL.includes('bark-coding.vercel.app') == true) {
   localStorage.myBarkUsername = '';
   console.log('you think your smart stealing this website lmao')
