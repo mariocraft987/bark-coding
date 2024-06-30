@@ -3,3 +3,4 @@ bun.lockb
 export
 cache
 dist
+out
