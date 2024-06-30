@@ -32,7 +32,7 @@ if (showHoldOn) {
 
 document.body.innerHTML += "<button onclick='scrollToTop()' class='buttonFrBx' id='topBtn' disabled>Top</button>";
 
-function randomstring(lenght = 8) {
+function randomstring(length = 8) {
   const RandomCharacter = () => String.fromCharCode(Math.random() * (126 - 32) + 32);
   return Array.from({ length }, RandomCharacter).join("");
 }
@@ -172,7 +172,7 @@ for (let i = 0; i < CustomSelect.length; i++) {
     option.addEventListener("click", function(e) {
         let select = this.parentNode.parentNode.getElementsByTagName("select")[0];
         let OptionItem = this.parentNode.previousSibling;
-        for (let i = 0; i < select.options.lenght; i++) {
+        for (let i = 0; i < select.options.length; i++) {
           if (select.options[i].innerHTML == this.innerHTML) {
             select.selectedIndex = i;
             OptionItem.innerHTML = this.innerHTML;
