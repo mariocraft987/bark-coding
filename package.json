@@ -14,6 +14,6 @@
   },
   "devDependencies": {
     "nw": "^0.89.0",
-    "nw-builder": "^4.7.7"
+    "nw-builder": "^3.8.9"
   }
 }
