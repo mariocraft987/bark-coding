@@ -27,7 +27,7 @@ if (document.URL.includes('bark-coding.vercel.app')) {
 */
 
 if (showHoldOn) {
-  console.log("%cHold on!", "font-size:37pt; color: dodgerblue;");
+  console.log("%cHold on!", "font-size:36pt; color: dodgerblue;");
   console.log("Pasting anything in the console can get your account stolen.");
 }
 
