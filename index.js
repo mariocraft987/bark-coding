@@ -45,7 +45,6 @@ if (!localStorage.getItem("secret")) {
 function CheckLoggedIn() {
   if (localStorage.getItem("barktoken") === null) {
     localStorage.removeItem("myBarkUsername");
-    location.reload();
 
     return;
   }
