@@ -17,7 +17,6 @@ let commitsLength = 150;
 
 let mobile = window.navigator.userAgent.toLowerCase().includes("mobi");
 
-// if your a dev and u know what ur doing use tampermonkey to set showHoldOn to false automatically
 let showHoldOn = true;
 
 // conditionals
