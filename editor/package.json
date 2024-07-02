@@ -1,0 +1,19 @@
+{
+  "name": "editor",
+  "version": "0.1",
+  "description": "",
+  "main": "src/screen/main.html",
+  "window": {
+    "title": "Bark Coding app",
+    "icon": "src/img/Logo.png",
+    "toolbar": false,
+    "width": 1000,
+    "height": 1000,
+    "min_width": 1000,
+    "min_height": 1000,
+    "position": "center"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
