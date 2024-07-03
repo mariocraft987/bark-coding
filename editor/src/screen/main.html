@@ -1,217 +1,245 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+  <head>
+    <script src="https://unpkg.com/blockly/blockly.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@blockly/theme-dark"></script>
+    <script src="../js/p5.min.js"></script>
+    <script src="../js/sketch.js"></script>
+    <link rel="stylesheet" href="../css/bluedodger.css" />
+    <script src="../js/custom_category_es6.js"></script>
+    <link rel="stylesheet" lang="css" href="../css/uploader.css" />
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
-<head>
-  <script src="https://unpkg.com/blockly/blockly.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@blockly/theme-dark"></script>
-  <script src="../js/p5.min.js"></script>
-  <script src="../js/sketch.js"></script>
-  <link rel="stylesheet" href="../css/bluedodger.css">
-  <script src="../js/custom_category_es6.js"></script>
-  <link rel="stylesheet" lang="css" href="../css/uploader.css">
-  <style>
-    @import url(https://fonts.googleapis.com/css?family=Montserrat);
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
 
-    html,
-    body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
+      body {
+        background-color: #fff;
+      }
 
-    body {
-      background-color: #fff;
-    }
+      .blocklyToolboxContents {
+        flex-wrap: nowrap !important;
+      }
 
-    .blocklyToolboxContents {
-      flex-wrap: nowrap !important;
-    }
+      .navbar {
+        overflow: hidden;
+        height: 45px !important;
+      }
 
-    .navbar {
-      overflow: hidden;
-      height: 45px!important;
-    }
+      .tabpage {
+        display: none;
+        height: calc(100% - 80px);
+        width: calc(100% - 640px);
+        position: absolute;
+        bottom: 0;
+      }
 
-    .tabpage {
-      display: none;
-      height: calc(100% - 80px);
-      width: calc(100% - 640px);
-      position: absolute;
-      bottom: 0;
-    }
+      body.code #blocklyDiv {
+        display: block;
+      }
 
-    body.code #blocklyDiv {
-      display: block;
-    }
+      body.costumes #costumeseditordiv {
+        display: block;
+      }
 
-    body.costumes #costumeseditordiv {
-      display: block;
-    }
+      body.sounds #soundseditordiv {
+        display: block;
+      }
 
-    body.sounds #soundseditordiv {
-      display: block;
-    }
+      body.extensions #extensionseditordiv {
+        display: block;
+      }
 
-    body.extensions #extensionseditordiv {
-      display: block;
-    }
+      #blocklyDiv * {
+        transition: 0s;
+      }
 
-    #blocklyDiv * {
-      transition: 0s;
-    }
+      #stage {
+        height: 360px;
+        width: 640px;
+        outline: 1px solid #ccc;
+        box-sizing: border-box;
+        border-radius: 5px;
+        position: absolute;
+        right: 0px;
+        transition: 0s;
+        background-color: #ffffff;
+      }
 
-    #stage {
-      height: 360px;
-      width: 640px;
-      outline: 1px solid #ccc;
-      box-sizing: border-box;
-      border-radius: 5px;
-      position: absolute;
-      right: 0px;
-      transition: 0s;
-      background-color: #ffffff;
-    }
+      .stage-left #stage {
+        left: 0px;
+      }
 
-    .stage-left #stage {
-      left: 0px;
-    }
+      #generated-code {
+        height: calc(100% - 40px);
+        /* Adjusted height to accommodate navbar */
+        width: 25%;
+        background-color: #f4f4f4;
+        padding: 10px;
+        overflow-y: auto;
+        font-family: monospace;
+        white-space: pre-wrap;
+        display: block;
+        /* Initially visible */
+      }
 
-    #generated-code {
-      height: calc(100% - 40px);
-      /* Adjusted height to accommodate navbar */
-      width: 25%;
-      background-color: #f4f4f4;
-      padding: 10px;
-      overflow-y: auto;
-      font-family: monospace;
-      white-space: pre-wrap;
-      display: block;
-      /* Initially visible */
-    }
+      .hidden {
+        display: none;
+        /* Hide the generated code area */
+      }
+      .blocklyToolboxDiv {
+        padding: 0px;
+        overflow-y: hidden;
+      }
 
-    .hidden {
-      display: none;
-      /* Hide the generated code area */
-    }
-    .blocklyToolboxDiv {
-      padding: 0px;
-      overflow-y: hidden;
-    }
+      .blocklyToolboxDiv[layout="h"] .blocklyToolboxCategory {
+        height: inherit;
+        cursor: pointer;
+        margin: 3px;
+      }
 
-    .blocklyToolboxDiv[layout="h"] .blocklyToolboxCategory {
-      height: inherit;
-      cursor: pointer;
-      margin: 3px;
-    }
+      .blocklyTreeLabel {
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+        color: #fff;
+        padding: 13px;
+      }
 
-    .blocklyTreeLabel {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      color: #fff;
-      padding: 13px;
-    }
+      .blocklyTreeRowContentContainer img {
+        display: none;
+      }
 
-    .blocklyTreeRowContentContainer img {
-      display: none;
-    }
+      .stage-left #blocklyDiv {
+        position: absolute;
+        right: 0px;
+      }
 
-    .stage-left #blocklyDiv {
-      position: absolute;
-      right: 0px;
-    }
+      #editortabs {
+        position: absolute;
+        height: 35px;
+      }
 
-    #editortabs {
-      position: absolute;
-      height: 35px;
-    }
+      #editortabs button {
+        font-family: inherit;
+        background-color: inherit;
+        color: inherit;
+        border: none;
+        height: 15px;
+        font-size: 15px;
+        padding: 10px;
+        cursor: pointer;
+      }
 
-    #editortabs button {
-      font-family: inherit;
-      background-color: inherit;
-      color: inherit;
-      border: none;
-      height: 15px;
-      font-size: 15px;
-      padding: 10px;
-      cursor: pointer;
-    }
+      .extension {
+        cursor: pointer;
+      }
 
-    .extension {
-      cursor: pointer;
-    }
+      .gallery {
+        margin: 5px;
+        width: 180px;
+        cursor: pointer;
+        background-color: #c9deff;
+        border-radius: 25px;
+        width: 17;
+        height: 40;
+      }
 
-  .gallery {
-    margin: 5px;
-    width: 180px;
-    cursor: pointer; 
-    background-color: #c9deff; 
-    border-radius: 25px; 
-    width: 17; 
-    height: 40
-  }
+      .desc {
+        padding: 15px;
+        text-align: center;
+      }
 
-  .desc {
-    padding: 15px;
-    text-align: center;
-  }
+      .gallery img {
+        text-align: center;
+      }
 
-  .gallery img { 
-    text-align: center;
-  }
+      #projectPlayer {
+        width: 640px !important;
+      }
 
-  #projectPlayer {
-    width: 640px !important;
-  }
+      .popupholder {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 2000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+      }
 
-  .popupholder {
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 2000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    display: none;
-  }
+      .popupholder.active {
+        display: block;
+      }
 
-  .popupholder.active {
-    display: block;
-  }
+      .popup {
+        color: white;
+        padding: 20px;
+        border-radius: 12px;
+        border: 2px solid white;
+        background-color: #333;
+      }
+    </style>
+  </head>
 
-  .popup {
-    color: white;
-    padding: 20px;
-    border-radius: 12px;
-    border: 2px solid white;
-    background-color: #333;
-  }
-  </style>
-</head>
+  <body onload="start()" class="code">
+    <div class="navbar">
+      <a href="/"
+        ><img src="../img/Logo.svg" alt="Bark" width="25" height="25"
+      /></a>
+      <a
+        href="#"
+        id="downloadbutton"
+        onclick="downloadproject();"
+        title="download project to your computer."
+        >Download</a
+      >
+      <input
+        type="file"
+        id="fileInput"
+        accept=".barkf"
+        style="display: none"
+        onchange="loadWorkspaceFromFile(this.files[0])"
+      />
+      <a href="advanced.html">Advanced</a>
+      <a class="dark-mode-button" id="darkModeToggle">
+        <dmbico alt="Dark Mode"></dmbico>
+      </a>
+    </div>
 
-<body onload="start()" class="code">
-  <div class="navbar">
-    <a href="/"><img src="../img/Logo.svg" alt="Bark"
-        width="25" height="25"></a>
-    <a href="#" id="downloadbutton" onclick="downloadproject();" title="download project to your computer.">Download</a>
-    <input type="file" id="fileInput" accept=".barkf" style="display: none;" onchange="loadWorkspaceFromFile(this.files[0])" />
-    <a class="dark-mode-button" id="darkModeToggle">
-      <dmbico alt="Dark Mode"></dmbico>
-    </a>
+    <!-- Code Tab -->
+    <div id="blocklyDiv" class="tabpage"></div>
 
-  </div>
-  
-  <!-- Code Tab -->
-  <div id="blocklyDiv" class="tabpage"></div>
-  
-  <!-- Costumes Tab -->
-  <div id="costumeseditordiv" class="tabpage">
-    <h1>Upload costume</h1>
-    <input type='file' accept='image/*' id="fileupload" onchange='openFile(event)'><br>
-    <img id='costume' style="width:70px;" src="../img/idle.svg">
-    
-    <!--
+    <!-- Costumes Tab -->
+    <div id="costumeseditordiv" class="tabpage">
+      <h1>Upload costume</h1>
+      <input
+        type="file"
+        accept="image/*"
+        id="fileupload"
+        onchange="openFile(event)"
+      /><br />
+      <img id="costume" style="width: 70px" src="../img/idle.svg" />
+
+      <!--
     image library
     
     <div class="gallery">
@@ -221,750 +249,910 @@
     <div class="gallery">
     <img src="../img/sprites/Jerri.png" alt="Jerri" width="78" onclick="loadImage('../img/sprites/Jerri.png')">
     <div class="desc">Jerri</div></div>
-    -->
-    
-  </div>
-  
-  <!-- Sounds Tab -->
-  <div id="soundseditordiv" class="tabpage">
-    <h1>Upload sound</h1>
-    <input type="file" id="upload" accept="audio/*" onchange="openAudioFile(event);">
-    <br />
-    <div id="audiofilelist"></div>
-  </div>
+    --></div>
 
-  <div class="popupholder">
-    <div id="extensionseditordiv" class="popup">
-      <h1>Choose An Extension</h1>
-      <img src="../img/extensions/extension_sine.png" alt="Sine Extension"
-        title="Sine (created by nmsderp)" class="extension" width="160" id="hardcodedSineExtension" data-extensionpath="/editor/builtinextensions/sine.js">
-      <img src="../img/extensions/extension_ai.png" alt="Artificial Intelligence Extension"
-        title="AI (created by funtasmo)" class="extension" width="160" id="hardcodedAIExtension" data-extensionpath="/editor/builtinextensions/ai.js">
-      <img src="../img/extensions/extension_barkblocks.png" alt="Bark Blocks Extension"
-        title="Bark blocks (created by funtasmo)" class="extension" width="160" id="hardcodedBarkBlocksExtension">
-      <img src="../img/extensions/extension_custom.png" alt="Custom Blocks Extension"
-        title="Custom Blocks (created by mariocraft987)" class="extension" width="160" id="hardcodedCustomBlocksExtension">
-      <h3>Or Upload a Extension to use.</h3>
-      <input type="file" accept='.js' id="upload">
-      <button class="buttonFrBx" onclick="document.querySelector('.popupholder').classList.remove('active')">Close menu..</button>
-  
+    <!-- Sounds Tab -->
+    <div id="soundseditordiv" class="tabpage">
+      <h1>Upload sound</h1>
+      <input
+        type="file"
+        id="upload"
+        accept="audio/*"
+        onchange="openAudioFile(event);"
+      />
+      <br />
+      <div id="audiofilelist"></div>
     </div>
-  </div>
-  <div id="editortabs">
-    <button
-      onclick="document.body.classList.add('code'); document.body.classList.remove('costumes'); document.body.classList.remove('sounds'); ">Code</button>
-    <button
-      onclick="document.body.classList.remove('code'); document.body.classList.add('costumes'); document.body.classList.remove('sounds');">Costumes</button>
-    <button
-      onclick="document.body.classList.remove('code'); document.body.classList.remove('costumes'); document.body.classList.add('sounds');">Sounds</button>
-  </div>
-  <div id="projectPlayer">
-    <div id="projectToolbar">
-      <img class="projectToolbarButton" style="cursor:pointer;"
-        src="../img/projecttoolbar/run.svg" width="10" onclick="kill(); run_code();">
-      <img class="projectToolbarButton" style="cursor:pointer;"
-        src="../img/projecttoolbar/pause.svg">
-      <img class="projectToolbarButton" style="cursor:pointer;"
-        src="../img/projecttoolbar/stopped.svg" onclick="kill();">
-      <img class="projectToolbarButton" src="../img/projecttoolbar/maximize.svg"
-        onclick="toggleFullscreen();" style="position: absolute; right: 0; cursor: pointer;">
+
+    <div class="popupholder">
+      <div id="extensionseditordiv" class="popup">
+        <h1>Choose An Extension</h1>
+        <img
+          src="../img/extensions/extension_sine.png"
+          alt="Sine Extension"
+          title="Sine (created by nmsderp)"
+          class="extension"
+          width="160"
+          id="hardcodedSineExtension"
+          data-extensionpath="/editor/builtinextensions/sine.js"
+        />
+        <img
+          src="../img/extensions/extension_ai.png"
+          alt="Artificial Intelligence Extension"
+          title="AI (created by funtasmo)"
+          class="extension"
+          width="160"
+          id="hardcodedAIExtension"
+          data-extensionpath="/editor/builtinextensions/ai.js"
+        />
+        <img
+          src="../img/extensions/extension_barkblocks.png"
+          alt="Bark Blocks Extension"
+          title="Bark blocks (created by funtasmo)"
+          class="extension"
+          width="160"
+          id="hardcodedBarkBlocksExtension"
+        />
+        <img
+          src="../img/extensions/extension_custom.png"
+          alt="Custom Blocks Extension"
+          title="Custom Blocks (created by mariocraft987)"
+          class="extension"
+          width="160"
+          id="hardcodedCustomBlocksExtension"
+        />
+        <h3>Or Upload a Extension to use.</h3>
+        <input type="file" accept=".js" id="upload" />
+        <button
+          class="buttonFrBx"
+          onclick="document.querySelector('.popupholder').classList.remove('active')"
+        >
+          Close menu..
+        </button>
+      </div>
     </div>
-    <div id="stage-container"><div id="stage"></div></div>
-  </div>
-  <div id="sprites" style="position: absolute; right: 0%; bottom: 0%; width: 640px; height: calc(100% - 440px);">
+    <div id="editortabs">
+      <button
+        onclick="document.body.classList.add('code'); document.body.classList.remove('costumes'); document.body.classList.remove('sounds'); "
+      >
+        Code
+      </button>
+      <button
+        onclick="document.body.classList.remove('code'); document.body.classList.add('costumes'); document.body.classList.remove('sounds');"
+      >
+        Costumes
+      </button>
+      <button
+        onclick="document.body.classList.remove('code'); document.body.classList.remove('costumes'); document.body.classList.add('sounds');"
+      >
+        Sounds
+      </button>
+    </div>
+    <div id="projectPlayer">
+      <div id="projectToolbar">
+        <img
+          class="projectToolbarButton"
+          style="cursor: pointer"
+          src="../img/projecttoolbar/run.svg"
+          width="10"
+          onclick="kill(); run_code();"
+        />
+        <img
+          class="projectToolbarButton"
+          style="cursor: pointer"
+          src="../img/projecttoolbar/pause.svg"
+        />
+        <img
+          class="projectToolbarButton"
+          style="cursor: pointer"
+          src="../img/projecttoolbar/stopped.svg"
+          onclick="kill();"
+        />
+        <img
+          class="projectToolbarButton"
+          src="../img/projecttoolbar/maximize.svg"
+          onclick="toggleFullscreen();"
+          style="position: absolute; right: 0; cursor: pointer"
+        />
+      </div>
+      <div id="stage-container"><div id="stage"></div></div>
+    </div>
+    <div
+      id="sprites"
+      style="
+        position: absolute;
+        right: 0%;
+        bottom: 0%;
+        width: 640px;
+        height: calc(100% - 440px);
+      "
+    >
+      <label for="xpos">X pos:</label>
+      <input
+        value="0"
+        type="number"
+        id="xpos"
+        name="xpos"
+        min="-250"
+        max="250"
+        onchange="x = Number(document.getElementById('xpos').value) + 270;"
+      />
+      <br />
+      <br />
+      <label for="ypos">Y pos:</label>
+      <input
+        value="0"
+        type="number"
+        id="ypos"
+        name="ypos"
+        min="-140"
+        max="190"
+        onchange="y = Number(document.getElementById('ypos').value) + 130;"
+      />
+      <br />
+      <br />
+      <label for="spritesize">Size:</label>
+      <input
+        value="100"
+        type="number"
+        id="spritesize"
+        name="spritesize"
+        min="0"
+        max="300"
+        onchange="setsize(Number(document.getElementById('spritesize').value))"
+      />
+      <span id="easterEgg"></span>
 
-  <label for="xpos">X pos:</label>
-  <input value="0" type="number" id="xpos" name="xpos" min="-250" max="250" onchange="x = Number(document.getElementById('xpos').value) + 270;">
-  <br />
-  <br />
-  <label for="ypos">Y pos:</label>
-  <input value="0" type="number" id="ypos" name="ypos" min="-140" max="190" onchange="y = Number(document.getElementById('ypos').value) + 130;">
-  <br />
-  <br />
-  <label for="spritesize">Size:</label>
-  <input value="100" type="number" id="spritesize" name="spritesize" min="0" max="300" onchange="setsize(Number(document.getElementById('spritesize').value))">
-  <span id="easterEgg"></span>
-
-    <!-- Toolbox Definition -->
-    <xml xmlns="https://developers.google.com/blockly/xml" id="toolbox" style="display: none">
-      <category name="Logic" colour="#cf9100">
-        <block type="onstart"></block>
-        <block type="controls_if"></block>
-        <block type="logic_compare">
-          <field name="OP">EQ</field>
-        </block>
-        <block type="logic_operation">
-          <field name="OP">AND</field>
-        </block>
-        <block type="logic_negate"></block>
-        <block type="logic_keypressed"></block>
-        <block type="logic_boolean">
-          <field name="BOOL">TRUE</field>
-        </block>
-        <block type="logic_null"></block>
-        <block type="logic_ternary"></block>
-      </category>
-      <category name="Movement" colour="#3399ff">
-        <block type="set_position"></block>
-        <block type="get_position"></block>
-        <block type="movement_move_x">
-          <field name="NUM">3</field>
-        </block>
-        <block type="movement_move_y">
-          <field name="NUM">3</field>
-        </block>
-        <block type="goto_mouse"></block>
-        <block type="center"></block>
-        <!-- todo: add pointdir block -->
-      </category>
-      <category name="Style" colour="#cd17ff">
-        <block type="change_costume"></block>
-        <block type="change_size"></block>
-        <block type="set_size"></block>
-        <block type="next_costume"></block>
-      </category>
-      <category name="Control" colour="#689c00">
-        <block type="controls_repeat_ext">
-          <value name="TIMES">
-            <shadow type="math_number">
-              <field name="NUM">10</field>
-            </shadow>
-          </value>
-        </block>
-        <block type="controls_whileUntil">
-          <field name="MODE">WHILE</field>
-        </block>
-        <block type="forever"></block>
-        <block type="controls_for">
-          <field name="VAR" id="QX?tv8_Oe7g@:yT:^:JX">i</field>
-          <value name="FROM">
-            <shadow type="math_number">
-              <field name="NUM">1</field>
-            </shadow>
-          </value>
-          <value name="TO">
-            <shadow type="math_number">
-              <field name="NUM">10</field>
-            </shadow>
-          </value>
-          <value name="BY">
-            <shadow type="math_number">
-              <field name="NUM">1</field>
-            </shadow>
-          </value>
-        </block>
-        <block type="controls_forEach">
-          <field name="VAR" id="FegKP.X,(A|]G*?OeW.k">j</field>
-        </block>
-      </category>
-      <category name="Math" colour="#1b85d1">
-        <block type="math_number">
-          <field name="NUM">0</field>
-        </block>
-        <block type="math_arithmetic">
-          <field name="OP">ADD</field>
-          <value name="A">
-            <shadow type="math_number">
-              <field name="NUM">1</field>
-            </shadow>
-          </value>
-          <value name="B">
-            <shadow type="math_number">
-              <field name="NUM">1</field>
-            </shadow>
-          </value>
-        </block>
-        <block type="math_single">
-          <field name="OP">ROOT</field>
-          <value name="NUM">
-            <shadow type="math_number">
-              <field name="NUM">9</field>
-            </shadow>
-          </value>
-        </block>
-        <block type="math_trig">
-          <field name="OP">SIN</field>
-          <value name="NUM">
-            <shadow type="math_number">
-              <field name="NUM">45</field>
-            </shadow>
-          </value>
-        </block>
-        <block type="math_constant">
-          <field name="CONSTANT">PI</field>
-        </block>
-        <block type="math_number_property">
-          <mutation divisor_input="false"></mutation>
-          <field name="PROPERTY">EVEN</field>
-          <value name="NUMBER_TO_CHECK">
-            <shadow type="math_number">
-              <field name="NUM">0</field>
-            </shadow>
-          </value>
-        </block>
-        <block type="math_round">
-          <field name="OP">ROUND</field>
-          <value name="NUM">
-            <shadow type="math_number">
-              <field name="NUM">3.1</field>
-            </shadow>
-          </value>
-        </block>
-        <block type="math_random_int">
-          <value name="FROM">
-            <shadow type="math_number">
-              <field name="NUM">1</field>
-            </shadow>
-          </value>
-          <value name="TO">
-            <shadow type="math_number">
-              <field name="NUM">100</field>
-            </shadow>
-          </value>
-        </block>
-      </category>
-      <category name="Text" colour="#21d9b7">
-        <block type="text">
-          <field name="TEXT"></field>
-        </block>
-        <block type="text_join">
-          <mutation items="2"></mutation>
-        </block>
-        <block type="text_append">
-          <field name="VAR" id="sWNeB!rGsnM6B`o?Oy:I">item</field>
-          <value name="TEXT">
-            <shadow type="text">
-              <field name="TEXT"></field>
-            </shadow>
-          </value>
-        </block>
-        <block type="text_isEmpty">
-          <value name="VALUE">
-            <shadow type="text">
-              <field name="TEXT"></field>
-            </shadow>
-          </value>
-        </block>
-        <block type="text_indexOf">
-          <field name="END">FIRST</field>
-          <value name="VALUE">
-            <block type="variables_get">
-              <field name="VAR" id="HlDf|hFCk#=p}+JmzR2+">text</field>
-            </block>
-          </value>
-          <value name="FIND">
-            <shadow type="text">
-              <field name="TEXT">abc</field>
-            </shadow>
-          </value>
-        </block>
-        <block type="text_changeCase">
-          <field name="CASE">UPPERCASE</field>
-          <value name="TEXT">
-            <shadow type="text">
-              <field name="TEXT">abc</field>
-            </shadow>
-          </value>
-        </block>
-        <block type="text_print">
-          <value name="TEXT">
-            <shadow type="text">
-              <field name="TEXT">abc</field>
-            </shadow>
-          </value>
-        </block>
-      </category>
-      <category name="Variables" colour="#f2951b" custom="VARIABLE"></category>
-      <category name="Lists" colour="#f2461b">
-        <block type="lists_create_with">
-          <mutation items="0"></mutation>
-        </block>
-        <block type="lists_repeat">
-          <value name="NUM">
-            <shadow type="math_number">
-              <field name="NUM">5</field>
-            </shadow>
-          </value>
-        </block>
-        <block type="lists_length"></block>
-        <block type="lists_isEmpty"></block>
-        <block type="lists_indexOf">
-          <field name="END">FIRST</field>
-          <value name="VALUE">
-            <block type="variables_get">
-              <field name="VAR" id="}!Pr9@E_xu^L@{z[:5CY">list</field>
-            </block>
-          </value>
-        </block>
-        <block type="lists_getIndex">
-          <mutation statement="false" at="true"></mutation>
-          <field name="MODE">GET</field>
-          <field name="WHERE">FROM_START</field>
-          <value name="VALUE">
-            <block type="variables_get">
-              <field name="VAR" id="}!Pr9@E_xu^L@{z[:5CY">list</field>
-            </block>
-          </value>
-        </block>
-        <block type="lists_getSublist">
-          <mutation at1="true" at2="true"></mutation>
-          <field name="WHERE1">FROM_START</field>
-          <field name="WHERE2">FROM_START</field>
-          <value name="LIST">
-            <block type="variables_get">
-              <field name="VAR" id="}!Pr9@E_xu^L@{z[:5CY">list</field>
-            </block>
-          </value>
-        </block>
-      </category>
-      <category name="Functions" colour="#e643d2">
-        <block type="onreturn"></block>
-        <block type="dofunction"></block>
-        <block type="onfunction"></block>
-      </category>
-      <category name="Advanced" colour="#0fbd8c">
-        <field name="TEXT">3</field>
-        </block>
-        <block type="confirm_block"></block>
-        <field name="TEXT">3</field>
-        </block>
-        <block type="prompt_block"></block>
-        <field name="TEXT">3</field>
-        </block>
-        <block type="fetch"></block>
-        <block type="letters_from"></block>
-      </category>
-      <category name="Custom" colour="#cf4125">
-        <button text="Add Extension.." callbackKey="showExtsMenu"></button>
-        <block type="create_elm"></block>
-        <block type="delete_elm"></block>
-        <block type="get_elm"></block>
+      <!-- Toolbox Definition -->
+      <xml
+        xmlns="https://developers.google.com/blockly/xml"
+        id="toolbox"
+        style="display: none"
+      >
+        <category name="Logic" colour="#cf9100">
+          <block type="onstart"></block>
+          <block type="controls_if"></block>
+          <block type="logic_compare">
+            <field name="OP">EQ</field>
+          </block>
+          <block type="logic_operation">
+            <field name="OP">AND</field>
+          </block>
+          <block type="logic_negate"></block>
+          <block type="logic_keypressed"></block>
+          <block type="logic_boolean">
+            <field name="BOOL">TRUE</field>
+          </block>
+          <block type="logic_null"></block>
+          <block type="logic_ternary"></block>
         </category>
-    </xml>
+        <category name="Movement" colour="#3399ff">
+          <block type="set_position"></block>
+          <block type="get_position"></block>
+          <block type="movement_move_x">
+            <field name="NUM">3</field>
+          </block>
+          <block type="movement_move_y">
+            <field name="NUM">3</field>
+          </block>
+          <block type="goto_mouse"></block>
+          <block type="center"></block>
+          <!-- todo: add pointdir block -->
+        </category>
+        <category name="Style" colour="#cd17ff">
+          <block type="change_costume"></block>
+          <block type="change_size"></block>
+          <block type="set_size"></block>
+          <block type="next_costume"></block>
+        </category>
+        <category name="Control" colour="#689c00">
+          <block type="controls_repeat_ext">
+            <value name="TIMES">
+              <shadow type="math_number">
+                <field name="NUM">10</field>
+              </shadow>
+            </value>
+          </block>
+          <block type="controls_whileUntil">
+            <field name="MODE">WHILE</field>
+          </block>
+          <block type="forever"></block>
+          <block type="controls_for">
+            <field name="VAR" id="QX?tv8_Oe7g@:yT:^:JX">i</field>
+            <value name="FROM">
+              <shadow type="math_number">
+                <field name="NUM">1</field>
+              </shadow>
+            </value>
+            <value name="TO">
+              <shadow type="math_number">
+                <field name="NUM">10</field>
+              </shadow>
+            </value>
+            <value name="BY">
+              <shadow type="math_number">
+                <field name="NUM">1</field>
+              </shadow>
+            </value>
+          </block>
+          <block type="controls_forEach">
+            <field name="VAR" id="FegKP.X,(A|]G*?OeW.k">j</field>
+          </block>
+        </category>
+        <category name="Math" colour="#1b85d1">
+          <block type="math_number">
+            <field name="NUM">0</field>
+          </block>
+          <block type="math_arithmetic">
+            <field name="OP">ADD</field>
+            <value name="A">
+              <shadow type="math_number">
+                <field name="NUM">1</field>
+              </shadow>
+            </value>
+            <value name="B">
+              <shadow type="math_number">
+                <field name="NUM">1</field>
+              </shadow>
+            </value>
+          </block>
+          <block type="math_single">
+            <field name="OP">ROOT</field>
+            <value name="NUM">
+              <shadow type="math_number">
+                <field name="NUM">9</field>
+              </shadow>
+            </value>
+          </block>
+          <block type="math_trig">
+            <field name="OP">SIN</field>
+            <value name="NUM">
+              <shadow type="math_number">
+                <field name="NUM">45</field>
+              </shadow>
+            </value>
+          </block>
+          <block type="math_constant">
+            <field name="CONSTANT">PI</field>
+          </block>
+          <block type="math_number_property">
+            <mutation divisor_input="false"></mutation>
+            <field name="PROPERTY">EVEN</field>
+            <value name="NUMBER_TO_CHECK">
+              <shadow type="math_number">
+                <field name="NUM">0</field>
+              </shadow>
+            </value>
+          </block>
+          <block type="math_round">
+            <field name="OP">ROUND</field>
+            <value name="NUM">
+              <shadow type="math_number">
+                <field name="NUM">3.1</field>
+              </shadow>
+            </value>
+          </block>
+          <block type="math_random_int">
+            <value name="FROM">
+              <shadow type="math_number">
+                <field name="NUM">1</field>
+              </shadow>
+            </value>
+            <value name="TO">
+              <shadow type="math_number">
+                <field name="NUM">100</field>
+              </shadow>
+            </value>
+          </block>
+        </category>
+        <category name="Text" colour="#21d9b7">
+          <block type="text">
+            <field name="TEXT"></field>
+          </block>
+          <block type="text_join">
+            <mutation items="2"></mutation>
+          </block>
+          <block type="text_append">
+            <field name="VAR" id="sWNeB!rGsnM6B`o?Oy:I">item</field>
+            <value name="TEXT">
+              <shadow type="text">
+                <field name="TEXT"></field>
+              </shadow>
+            </value>
+          </block>
+          <block type="text_isEmpty">
+            <value name="VALUE">
+              <shadow type="text">
+                <field name="TEXT"></field>
+              </shadow>
+            </value>
+          </block>
+          <block type="text_indexOf">
+            <field name="END">FIRST</field>
+            <value name="VALUE">
+              <block type="variables_get">
+                <field name="VAR" id="HlDf|hFCk#=p}+JmzR2+">text</field>
+              </block>
+            </value>
+            <value name="FIND">
+              <shadow type="text">
+                <field name="TEXT">abc</field>
+              </shadow>
+            </value>
+          </block>
+          <block type="text_changeCase">
+            <field name="CASE">UPPERCASE</field>
+            <value name="TEXT">
+              <shadow type="text">
+                <field name="TEXT">abc</field>
+              </shadow>
+            </value>
+          </block>
+          <block type="text_print">
+            <value name="TEXT">
+              <shadow type="text">
+                <field name="TEXT">abc</field>
+              </shadow>
+            </value>
+          </block>
+        </category>
+        <category
+          name="Variables"
+          colour="#f2951b"
+          custom="VARIABLE"
+        ></category>
+        <category name="Lists" colour="#f2461b">
+          <block type="lists_create_with">
+            <mutation items="0"></mutation>
+          </block>
+          <block type="lists_repeat">
+            <value name="NUM">
+              <shadow type="math_number">
+                <field name="NUM">5</field>
+              </shadow>
+            </value>
+          </block>
+          <block type="lists_length"></block>
+          <block type="lists_isEmpty"></block>
+          <block type="lists_indexOf">
+            <field name="END">FIRST</field>
+            <value name="VALUE">
+              <block type="variables_get">
+                <field name="VAR" id="}!Pr9@E_xu^L@{z[:5CY">list</field>
+              </block>
+            </value>
+          </block>
+          <block type="lists_getIndex">
+            <mutation statement="false" at="true"></mutation>
+            <field name="MODE">GET</field>
+            <field name="WHERE">FROM_START</field>
+            <value name="VALUE">
+              <block type="variables_get">
+                <field name="VAR" id="}!Pr9@E_xu^L@{z[:5CY">list</field>
+              </block>
+            </value>
+          </block>
+          <block type="lists_getSublist">
+            <mutation at1="true" at2="true"></mutation>
+            <field name="WHERE1">FROM_START</field>
+            <field name="WHERE2">FROM_START</field>
+            <value name="LIST">
+              <block type="variables_get">
+                <field name="VAR" id="}!Pr9@E_xu^L@{z[:5CY">list</field>
+              </block>
+            </value>
+          </block>
+        </category>
+        <category name="Functions" colour="#e643d2">
+          <block type="onreturn"></block>
+          <block type="dofunction"></block>
+          <block type="onfunction"></block>
+        </category>
+        <category name="Advanced" colour="#0fbd8c">
+          <field name="TEXT">3</field>
+          <block type="confirm_block"></block>
+          <field name="TEXT">3</field>
+          <block type="prompt_block"></block>
+          <field name="TEXT">3</field>
+          <block type="fetch"></block>
+          <block type="letters_from"></block>
+        </category>
+        <category name="Custom" colour="#cf4125">
+          <button text="Add Extension.." callbackKey="showExtsMenu"></button>
+          <block type="create_elm"></block>
+          <block type="delete_elm"></block>
+          <block type="get_elm"></block>
+        </category>
+      </xml>
 
+      <script>
+        let costume = "../img/scratch_dog.png";
+        let added = [];
 
-    <script>
-      let costume = "../img/scratch_dog.png";
-      let added = [];
-
-      //handle hardcoded extensions
-      Array.from(document.querySelectorAll("*")).forEach(item => {
-        if (item.getAttribute("data-extensionpath")) {
-          item.addEventListener("click", () => {
-            if (!added.includes(item.getAttribute("data-extensionpath"))) {
-              added.push(item.getAttribute("data-extensionpath"));
-              fetch(item.getAttribute("data-extensionpath"))
-              .then(data => data.text())
-              .then(data => {
-                eval(data);
-              });
-            }
-          });
-        }
-      });
-
-      function start() {
-        window.workspace = Blockly.inject('blocklyDiv', {
-          toolbox: document.getElementById('toolbox'),
-          horizontalLayout: true,
-          toolboxPosition: 'end',
-          renderer: 'zelos',
+        //handle hardcoded extensions
+        Array.from(document.querySelectorAll("*")).forEach((item) => {
+          if (item.getAttribute("data-extensionpath")) {
+            item.addEventListener("click", () => {
+              if (!added.includes(item.getAttribute("data-extensionpath"))) {
+                added.push(item.getAttribute("data-extensionpath"));
+                fetch(item.getAttribute("data-extensionpath"))
+                  .then((data) => data.text())
+                  .then((data) => {
+                    eval(data);
+                  });
+              }
+            });
+          }
         });
 
-        workspace.addChangeListener(updateStage);
+        function start() {
+          window.workspace = Blockly.inject("blocklyDiv", {
+            toolbox: document.getElementById("toolbox"),
+            horizontalLayout: true,
+            toolboxPosition: "end",
+            renderer: "zelos",
+          });
 
-        workspace.registerButtonCallback("showExtsMenu", () => {
-          document.querySelector(".popupholder").classList.add('active');
-        });
-      }
+          workspace.addChangeListener(updateStage);
 
-      function updateStage(event) {
-        let code = Blockly.JavaScript.workspaceToCode(workspace);
-        //document.getElementById('generated-code').textContent = code; // Display generated code
-        //eval(code); // Evaluate generated code
-      }
-
-      Blockly.Blocks['change_costume'] = {
-        init: function () {
-          this.appendValueInput("NAME")
-            .setCheck("String")
-            .appendField("switch costume to");
-          this.setInputsInline(true);
-          this.setPreviousStatement(true, null);
-          this.setNextStatement(true, null);
-          this.setColour(260);
-          this.setTooltip("Changes the costume to a specific one.");
-          this.setHelpUrl("");
-        }
-      };
-
-      Blockly.Blocks['next_costume'] = {
-        init: function () {
-          this.jsonInit({
-            "type": "next_costume",
-            "message0": "next costume",
-            "previousStatement": null,
-            "nextStatement": null,
-            "colour": 260,
-            "tooltip": "Switches to the next costume",
-            "helpUrl": ""
+          workspace.registerButtonCallback("showExtsMenu", () => {
+            document.querySelector(".popupholder").classList.add("active");
           });
         }
-      };
-      Blockly.Blocks['reset_size'] = {
-        init: function () {
-          this.jsonInit({
-            "type": "resetsize",
-            "message0": "reset size",
-            "previousStatement": null,
-            "nextStatement": null,
-            "colour": 260,
-            "tooltip": "Resets the size",
-            "helpUrl": ""
-          });
-        }
-      };
 
-      Blockly.Blocks['change_stage_bg'] = {
-        init: function () {
-          this.appendDummyInput()
-            .appendField("change stage bg to")
-            .appendField(new Blockly.FieldColour("#ff0000"), "NAME");
-          this.setPreviousStatement(true, null);
-          this.setNextStatement(true, null);
-          this.setColour(260);
-          this.setTooltip("");
-          this.setHelpUrl("");
+        function updateStage(event) {
+          let code = Blockly.JavaScript.workspaceToCode(workspace);
+          //document.getElementById('generated-code').textContent = code; // Display generated code
+          //eval(code); // Evaluate generated code
         }
-      };
-      Blockly.Blocks['controls_ifelse'] = {
-        init: function () {
-          this.appendValueInput("if")
-            .setCheck("Boolean")
-            .appendField("if");
-          this.appendStatementInput("DO1")
-            .setCheck(null);
-          this.appendDummyInput()
-            .appendField("else");
-          this.appendStatementInput("DO2")
-            .setCheck(null);
-          this.setPreviousStatement(true, null);
-          this.setNextStatement(true, null);
-          this.setColour(210);
-          this.setTooltip("If a value is true then do the statement, if not do the next statement.");
-          this.setHelpUrl("");
-        }
-      };
-      Blockly.Blocks['set_position'] = {
-        init: function () {
-          this.appendValueInput("NAME")
-            .setCheck(null)
-            .appendField("set")
-            .appendField(new Blockly.FieldDropdown([["x", "X"], ["y", "Y"]]), "XY")
-            .appendField("position to");
-          this.setPreviousStatement(true, null);
-          this.setNextStatement(true, null);
-          this.setColour(230);
-          this.setTooltip("Sets either X or Y position to a specific value");
-          this.setHelpUrl("");
-        }
-      };
-      Blockly.Blocks['get_position'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField("get")
-        .appendField(new Blockly.FieldDropdown([["x","X"], ["y","Y"]]), "XY")
-        .appendField("position");
-    this.setOutput(true, null);
-    this.setColour(230);
- this.setTooltip("");
- this.setHelpUrl("");
-  }
-};
-      Blockly.Blocks['movement_move_x'] = {
-        init: function () {
-          this.appendValueInput("NUM")
-            .setCheck("Number")
-            .appendField("change x by");
-          this.setInputsInline(true);
-          this.setPreviousStatement(true, null);
-          this.setNextStatement(true, null);
-          this.setColour(230);
-          this.setTooltip("");
-          this.setHelpUrl("");
-        }
-      };
-      Blockly.Blocks['movement_move_y'] = {
-        init: function () {
-          this.appendValueInput("NUM")
-            .setCheck("Number")
-            .appendField("change y by");
-          this.setInputsInline(true);
-          this.setPreviousStatement(true, null);
-          this.setNextStatement(true, null);
-          this.setColour(230);
-          this.setTooltip("");
-          this.setHelpUrl("");
-        }
-      };
-      Blockly.Blocks['goto_mouse'] = { // Moves sprite
-        init: function () {
-          this.jsonInit({
-            "type": "goto_mouse",
-            "message0": "go to mouse pointer",
-            "previousStatement": null,
-            "nextStatement": null,
-            "colour": 230,
-            "tooltip": "",
-            "helpUrl": ""
-          });
-        }
-      };
-      Blockly.Blocks['center'] = { // Moves sprite
-        init: function () {
-          this.jsonInit({
-            "type": "center",
-            "message0": "center",
-            "previousStatement": null,
-            "nextStatement": null,
-            "colour": 230,
-            "tooltip": "",
-            "helpUrl": ""
-          });
-        }
-      };
-      Blockly.Blocks['forever'] = {
-        init: function () {
-          this.appendDummyInput()
-            .appendField("forever");
-          this.appendStatementInput("NAME")
-            .setCheck(null)
-            .appendField("do");
-          this.setPreviousStatement(true, null);
-          this.setColour(120);
-          this.setTooltip("Does code forever.");
-          this.setHelpUrl("");
-        }
-      };
 
-      Blockly.Blocks['movement_moveback'] = { // Moves sprite back
-        init: function () {
-          this.jsonInit({
-            "type": "movement_moveback",
-            "message0": "move back",
-            "previousStatement": null,
-            "nextStatement": null,
-            "colour": 230,
-            "tooltip": "",
-            "helpUrl": ""
-          });
-        }
-      };
+        Blockly.Blocks["change_costume"] = {
+          init: function () {
+            this.appendValueInput("NAME")
+              .setCheck("String")
+              .appendField("switch costume to");
+            this.setInputsInline(true);
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(260);
+            this.setTooltip("Changes the costume to a specific one.");
+            this.setHelpUrl("");
+          },
+        };
 
-      Blockly.Blocks['logic_keypressed'] = {
-        init: function () {
-          this.appendDummyInput()
-            .appendField("if")
-            .appendField(new Blockly.FieldDropdown([["Any key", "ANY"], ["Up arrow key", "UP"], ["Down arrow key", "DOWN"], ["Left arrow key", "LEFT"], ["Right arrow key", "RIGHT"], ["Enter key", "ENTER"], ["Shift key", "SHIFT"]]), "NAME")
-            .appendField("pressed");
-          this.setOutput(true, "Boolean");
-          this.setColour(210);
-          this.setTooltip("Returns if a specific key is pressed.");
-          this.setHelpUrl("https://en.scratch-wiki.info/wiki/Key_()_Pressed%3F_(block)");
-        }
-      };
+        Blockly.Blocks["next_costume"] = {
+          init: function () {
+            this.jsonInit({
+              type: "next_costume",
+              message0: "next costume",
+              previousStatement: null,
+              nextStatement: null,
+              colour: 260,
+              tooltip: "Switches to the next costume",
+              helpUrl: "",
+            });
+          },
+        };
+        Blockly.Blocks["reset_size"] = {
+          init: function () {
+            this.jsonInit({
+              type: "resetsize",
+              message0: "reset size",
+              previousStatement: null,
+              nextStatement: null,
+              colour: 260,
+              tooltip: "Resets the size",
+              helpUrl: "",
+            });
+          },
+        };
 
-      Blockly.Blocks['onstart'] = {
-        init: function () {
-          this.appendDummyInput()
-            .appendField("when")
-            .appendField(new Blockly.FieldImage("../projecttoolbar/run.svg", 25, 25, { alt: "*", flipRtl: "FALSE" }))
-            .appendField("clicked");
-          this.appendStatementInput("start")
-            .setCheck(null)
-            .appendField("do");
-          this.setColour(20);
-          this.setTooltip("Does the code when the green button is clicked.");
-          this.setHelpUrl("");
-        }
-      };
-Blockly.Blocks['onreturn'] = {
-  init: function() {
-    this.appendValueInput("NAME")
-        .setCheck(null)
-        .appendField("return");
-    this.setPreviousStatement(true, null);
-    this.setColour(315);
- this.setTooltip("Returns a value");
- this.setHelpUrl("");
-  }
-};
-      Blockly.Blocks['onfunction'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField("on function")
-        .appendField(new Blockly.FieldTextInput("move"), "FUNC");
-    this.appendStatementInput("NAME")
-        .setCheck(null)
-        .appendField("do");
-    this.setColour(315);
- this.setTooltip("Code of a function of the chosen name");
- this.setHelpUrl("https://www.w3schools.com/js/js_functions.asp");
-  }
-};
-    Blockly.Blocks['dofunction'] = {
-  init: function() {
-    this.appendDummyInput()
-        .appendField("do function")
-        .appendField(new Blockly.FieldTextInput("move"), "FUNC");
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
-    this.setColour(315);
- this.setTooltip("Does a function of the chosen name");
- this.setHelpUrl("https://www.w3schools.com/js/js_functions.asp");
-  }
-};
-      Blockly.Blocks['alert_block'] = {
-        init: function () {
-          this.appendValueInput("message")
-            .setCheck("String")
-            .appendField("alert");
-          this.setPreviousStatement(true, null);
-          this.setNextStatement(true, null);
-          this.setColour(150);
-          this.setTooltip("Alert message to user");
-          this.setHelpUrl("");
-        }
-      };
+        Blockly.Blocks["change_stage_bg"] = {
+          init: function () {
+            this.appendDummyInput()
+              .appendField("change stage bg to")
+              .appendField(new Blockly.FieldColour("#ff0000"), "NAME");
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(260);
+            this.setTooltip("");
+            this.setHelpUrl("");
+          },
+        };
+        Blockly.Blocks["controls_ifelse"] = {
+          init: function () {
+            this.appendValueInput("if").setCheck("Boolean").appendField("if");
+            this.appendStatementInput("DO1").setCheck(null);
+            this.appendDummyInput().appendField("else");
+            this.appendStatementInput("DO2").setCheck(null);
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(210);
+            this.setTooltip(
+              "If a value is true then do the statement, if not do the next statement.",
+            );
+            this.setHelpUrl("");
+          },
+        };
+        Blockly.Blocks["set_position"] = {
+          init: function () {
+            this.appendValueInput("NAME")
+              .setCheck(null)
+              .appendField("set")
+              .appendField(
+                new Blockly.FieldDropdown([
+                  ["x", "X"],
+                  ["y", "Y"],
+                ]),
+                "XY",
+              )
+              .appendField("position to");
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(230);
+            this.setTooltip("Sets either X or Y position to a specific value");
+            this.setHelpUrl("");
+          },
+        };
+        Blockly.Blocks["get_position"] = {
+          init: function () {
+            this.appendDummyInput()
+              .appendField("get")
+              .appendField(
+                new Blockly.FieldDropdown([
+                  ["x", "X"],
+                  ["y", "Y"],
+                ]),
+                "XY",
+              )
+              .appendField("position");
+            this.setOutput(true, null);
+            this.setColour(230);
+            this.setTooltip("");
+            this.setHelpUrl("");
+          },
+        };
+        Blockly.Blocks["movement_move_x"] = {
+          init: function () {
+            this.appendValueInput("NUM")
+              .setCheck("Number")
+              .appendField("change x by");
+            this.setInputsInline(true);
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(230);
+            this.setTooltip("");
+            this.setHelpUrl("");
+          },
+        };
+        Blockly.Blocks["movement_move_y"] = {
+          init: function () {
+            this.appendValueInput("NUM")
+              .setCheck("Number")
+              .appendField("change y by");
+            this.setInputsInline(true);
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(230);
+            this.setTooltip("");
+            this.setHelpUrl("");
+          },
+        };
+        Blockly.Blocks["goto_mouse"] = {
+          // Moves sprite
+          init: function () {
+            this.jsonInit({
+              type: "goto_mouse",
+              message0: "go to mouse pointer",
+              previousStatement: null,
+              nextStatement: null,
+              colour: 230,
+              tooltip: "",
+              helpUrl: "",
+            });
+          },
+        };
+        Blockly.Blocks["center"] = {
+          // Moves sprite
+          init: function () {
+            this.jsonInit({
+              type: "center",
+              message0: "center",
+              previousStatement: null,
+              nextStatement: null,
+              colour: 230,
+              tooltip: "",
+              helpUrl: "",
+            });
+          },
+        };
+        Blockly.Blocks["forever"] = {
+          init: function () {
+            this.appendDummyInput().appendField("forever");
+            this.appendStatementInput("NAME").setCheck(null).appendField("do");
+            this.setPreviousStatement(true, null);
+            this.setColour(120);
+            this.setTooltip("Does code forever.");
+            this.setHelpUrl("");
+          },
+        };
 
-Blockly.Blocks['letters_from'] = {
-  init: function() {
-    this.appendValueInput("NAME")
-        .setCheck(null)
-        .appendField("letters from")
-        .appendField(new Blockly.FieldNumber(0, 0, 999), "FIRST")
-        .appendField("to")
-        .appendField(new Blockly.FieldNumber(5, 0, 999), "LAST")
-        .appendField("of");
-    this.setOutput(true, "String");
-    this.setColour(150);
- this.setTooltip("Returns the string from 2 number inputs in a variable.");
- this.setHelpUrl("https://scratch.mit.edu/users/legoer3/#comments");
-  }
-};
-      
-      Blockly.Blocks['change_size'] = {
-        init: function () {
-          this.appendValueInput("NAME")
-            .setCheck(null)
-            .appendField("change size by");
-          this.setPreviousStatement(true, null);
-          this.setNextStatement(true, null);
-          this.setColour(260);
-          this.setTooltip("Changes the size.");
-          this.setHelpUrl("");
-        }
-      };
-      Blockly.Blocks['set_size'] = {
-        init: function () {
-          this.appendValueInput("NAME")
-            .setCheck(null)
-            .appendField("set size to");
-          this.setPreviousStatement(true, null);
-          this.setNextStatement(true, null);
-          this.setColour(260);
-          this.setTooltip("Sets the size to a specific value.");
-          this.setHelpUrl("");
-        }
-      };
-      Blockly.Blocks['confirm_block'] = {
-        init: function () {
-          this.appendValueInput("message")
-            .setCheck("String")
-            .appendField("confirm");
-          this.setOutput(true, "Boolean");
-          this.setColour(150);
-          this.setTooltip("Let user comfirm if a message is true");
-          this.setHelpUrl("");
-        }
-      };
-      Blockly.Blocks['prompt_block'] = {
-        init: function () {
-          this.appendValueInput("message")
-            .setCheck(null)
-            .appendField("prompt");
-          this.setOutput(true, "String");
-          this.setColour(150);
-          this.setTooltip("Make the user answer a query");
-          this.setHelpUrl("");
-        }
-      };
+        Blockly.Blocks["movement_moveback"] = {
+          // Moves sprite back
+          init: function () {
+            this.jsonInit({
+              type: "movement_moveback",
+              message0: "move back",
+              previousStatement: null,
+              nextStatement: null,
+              colour: 230,
+              tooltip: "",
+              helpUrl: "",
+            });
+          },
+        };
 
-      Blockly.Blocks['fetch'] = {
-        init: function () {
-          this.appendValueInput("url")
-            .setCheck("String")
-            .appendField("fetch");
-          this.setOutput(true, null);
-          this.setColour(150);
-          this.setTooltip("Fetch static data from servers!");
-          this.setHelpUrl("");
-        }
-      };
-              
-      javascript.javascriptGenerator.forBlock['onstart'] = function (block, generator) {
-        return "alert('run button was clicked!');";
-      };
-      javascript.javascriptGenerator.forBlock['movement_move_x'] = function (block, generator) {
-        return "basicMoveX(" + block.getFieldValue("NUM") + ");";
-      };
-      javascript.javascriptGenerator.forBlock['movement_move_y'] = function (block, generator) {
-        return "basicMoveY(" + block.getFieldValue("NUM") + ");";
-      };
-      javascript.javascriptGenerator.forBlock['movement_moveback'] = function (block, generator) {
-        return "basicMoveBack();";
-      };
-      
+        Blockly.Blocks["logic_keypressed"] = {
+          init: function () {
+            this.appendDummyInput()
+              .appendField("if")
+              .appendField(
+                new Blockly.FieldDropdown([
+                  ["Any key", "ANY"],
+                  ["Up arrow key", "UP"],
+                  ["Down arrow key", "DOWN"],
+                  ["Left arrow key", "LEFT"],
+                  ["Right arrow key", "RIGHT"],
+                  ["Enter key", "ENTER"],
+                  ["Shift key", "SHIFT"],
+                ]),
+                "NAME",
+              )
+              .appendField("pressed");
+            this.setOutput(true, "Boolean");
+            this.setColour(210);
+            this.setTooltip("Returns if a specific key is pressed.");
+            this.setHelpUrl(
+              "https://en.scratch-wiki.info/wiki/Key_()_Pressed%3F_(block)",
+            );
+          },
+        };
 
-      javascript.javascriptGenerator.forBlock['goto_mouse'] = function (block, generator) {
+        Blockly.Blocks["onstart"] = {
+          init: function () {
+            this.appendDummyInput()
+              .appendField("when")
+              .appendField(
+                new Blockly.FieldImage("../img/projecttoolbar/run.svg", 25, 25, {
+                  alt: "*",
+                  flipRtl: "FALSE",
+                }),
+              )
+              .appendField("clicked");
+            this.appendStatementInput("start").setCheck(null).appendField("do");
+            this.setColour(20);
+            this.setTooltip("Does the code when the green button is clicked.");
+            this.setHelpUrl("");
+          },
+        };
+        Blockly.Blocks["onreturn"] = {
+          init: function () {
+            this.appendValueInput("NAME").setCheck(null).appendField("return");
+            this.setPreviousStatement(true, null);
+            this.setColour(315);
+            this.setTooltip("Returns a value");
+            this.setHelpUrl("");
+          },
+        };
+        Blockly.Blocks["onfunction"] = {
+          init: function () {
+            this.appendDummyInput()
+              .appendField("on function")
+              .appendField(new Blockly.FieldTextInput("move"), "FUNC");
+            this.appendStatementInput("NAME").setCheck(null).appendField("do");
+            this.setColour(315);
+            this.setTooltip("Code of a function of the chosen name");
+            this.setHelpUrl("https://www.w3schools.com/js/js_functions.asp");
+          },
+        };
+        Blockly.Blocks["dofunction"] = {
+          init: function () {
+            this.appendDummyInput()
+              .appendField("do function")
+              .appendField(new Blockly.FieldTextInput("move"), "FUNC");
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(315);
+            this.setTooltip("Does a function of the chosen name");
+            this.setHelpUrl("https://www.w3schools.com/js/js_functions.asp");
+          },
+        };
+        Blockly.Blocks["alert_block"] = {
+          init: function () {
+            this.appendValueInput("message")
+              .setCheck("String")
+              .appendField("alert");
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(150);
+            this.setTooltip("Alert message to user");
+            this.setHelpUrl("");
+          },
+        };
 
-        return "gotomouse();";
-      };
-      javascript.javascriptGenerator.forBlock['change_stage_bg'] = function (block, generator) {
-        let colorValue = block.getFieldValue('NAME');
-        return "changebg('" + colorValue + "');";
-      };
+        Blockly.Blocks["letters_from"] = {
+          init: function () {
+            this.appendValueInput("NAME")
+              .setCheck(null)
+              .appendField("letters from")
+              .appendField(new Blockly.FieldNumber(0, 0, 999), "FIRST")
+              .appendField("to")
+              .appendField(new Blockly.FieldNumber(5, 0, 999), "LAST")
+              .appendField("of");
+            this.setOutput(true, "String");
+            this.setColour(150);
+            this.setTooltip(
+              "Returns the string from 2 number inputs in a variable.",
+            );
+            this.setHelpUrl("https://scratch.mit.edu/users/legoer3/#comments");
+          },
+        };
 
-      javascript.javascriptGenerator.forBlock['alert_block'] = function (block, generator) {
-        let message = block.getFieldValue('message');
-        return "alert('" + message + "');";
-      };
-      javascript.javascriptGenerator.forBlock['resetsize'] = function (block, generator) {
-        let message = block.getFieldValue('message');
-        return "resetsize();";
-      };
-      javascript.javascriptGenerator.forBlock['confirm_block'] = function (block, generator) {
-        let message = block.getFieldValue('message');
-        return "confirm('" + message + "');";
-      };
-      javascript.javascriptGenerator.forBlock['prompt_block'] = function (block, generator) {
-        let message = block.getFieldValue('message');
-        return "prompt('" + message + "');";
-      };
-      javascript.javascriptGenerator.forBlock['set_size'] = function (block, generator) {
-        let message = Blockly.JavaScript.valueToCode(block, 'NAME', Blockly.JavaScript.ORDER_ATOMIC);
-        return "setsize(Number('" + message + "'));";
-      };
-      javascript.javascriptGenerator.forBlock['change_size'] = function (block, generator) {
-        let message = block.getFieldValue('message');
-        return "setsize('imgWidth + " + message + "');";
-      };
+        Blockly.Blocks["change_size"] = {
+          init: function () {
+            this.appendValueInput("NAME")
+              .setCheck(null)
+              .appendField("change size by");
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(260);
+            this.setTooltip("Changes the size.");
+            this.setHelpUrl("");
+          },
+        };
+        Blockly.Blocks["set_size"] = {
+          init: function () {
+            this.appendValueInput("NAME")
+              .setCheck(null)
+              .appendField("set size to");
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(260);
+            this.setTooltip("Sets the size to a specific value.");
+            this.setHelpUrl("");
+          },
+        };
+        Blockly.Blocks["confirm_block"] = {
+          init: function () {
+            this.appendValueInput("message")
+              .setCheck("String")
+              .appendField("confirm");
+            this.setOutput(true, "Boolean");
+            this.setColour(150);
+            this.setTooltip("Let user comfirm if a message is true");
+            this.setHelpUrl("");
+          },
+        };
+        Blockly.Blocks["prompt_block"] = {
+          init: function () {
+            this.appendValueInput("message")
+              .setCheck(null)
+              .appendField("prompt");
+            this.setOutput(true, "String");
+            this.setColour(150);
+            this.setTooltip("Make the user answer a query");
+            this.setHelpUrl("");
+          },
+        };
 
-      javascript.javascriptGenerator.forBlock['fetch'] = function (block, generator) {
-        let uri = block.getFieldValue('url');
-        let handleFunction = generator.variableDB_.getDistinctName('handlefetch', Blockly.Variables.NAME_TYPE);
-        generator.addFunction(handleFunction,
-          `async function ${handleFunction}(url) {
+        Blockly.Blocks["fetch"] = {
+          init: function () {
+            this.appendValueInput("url")
+              .setCheck("String")
+              .appendField("fetch");
+            this.setOutput(true, null);
+            this.setColour(150);
+            this.setTooltip("Fetch static data from servers!");
+            this.setHelpUrl("");
+          },
+        };
+
+        javascript.javascriptGenerator.forBlock["onstart"] = function (
+          block,
+          generator,
+        ) {
+          return "alert('run button was clicked!');";
+        };
+        javascript.javascriptGenerator.forBlock["movement_move_x"] = function (
+          block,
+          generator,
+        ) {
+          return "basicMoveX(" + block.getFieldValue("NUM") + ");";
+        };
+        javascript.javascriptGenerator.forBlock["movement_move_y"] = function (
+          block,
+          generator,
+        ) {
+          return "basicMoveY(" + block.getFieldValue("NUM") + ");";
+        };
+        javascript.javascriptGenerator.forBlock["movement_moveback"] =
+          function (block, generator) {
+            return "basicMoveBack();";
+          };
+
+        javascript.javascriptGenerator.forBlock["goto_mouse"] = function (
+          block,
+          generator,
+        ) {
+          return "gotomouse();";
+        };
+        javascript.javascriptGenerator.forBlock["change_stage_bg"] = function (
+          block,
+          generator,
+        ) {
+          let colorValue = block.getFieldValue("NAME");
+          return "changebg('" + colorValue + "');";
+        };
+
+        javascript.javascriptGenerator.forBlock["alert_block"] = function (
+          block,
+          generator,
+        ) {
+          let message = block.getFieldValue("message");
+          return "alert('" + message + "');";
+        };
+        javascript.javascriptGenerator.forBlock["resetsize"] = function (
+          block,
+          generator,
+        ) {
+          let message = block.getFieldValue("message");
+          return "resetsize();";
+        };
+        javascript.javascriptGenerator.forBlock["confirm_block"] = function (
+          block,
+          generator,
+        ) {
+          let message = block.getFieldValue("message");
+          return "confirm('" + message + "');";
+        };
+        javascript.javascriptGenerator.forBlock["prompt_block"] = function (
+          block,
+          generator,
+        ) {
+          let message = block.getFieldValue("message");
+          return "prompt('" + message + "');";
+        };
+        javascript.javascriptGenerator.forBlock["set_size"] = function (
+          block,
+          generator,
+        ) {
+          let message = Blockly.JavaScript.valueToCode(
+            block,
+            "NAME",
+            Blockly.JavaScript.ORDER_ATOMIC,
+          );
+          return "setsize(Number('" + message + "'));";
+        };
+        javascript.javascriptGenerator.forBlock["change_size"] = function (
+          block,
+          generator,
+        ) {
+          let message = block.getFieldValue("message");
+          return "setsize('imgWidth + " + message + "');";
+        };
+
+        javascript.javascriptGenerator.forBlock["fetch"] = function (
+          block,
+          generator,
+        ) {
+          let uri = block.getFieldValue("url");
+          let handleFunction = generator.variableDB_.getDistinctName(
+            "handlefetch",
+            Blockly.Variables.NAME_TYPE,
+          );
+          generator.addFunction(
+            handleFunction,
+            `async function ${handleFunction}(url) {
               try {
                   const response = await fetch(url);
                   if (!response.ok) {
@@ -976,201 +1164,212 @@ Blockly.Blocks['letters_from'] = {
                   console.error('Fetch error:', error);
                   return null;
               }
-          }`);
-        return `${handleFunction}('${uri}')`;
-      };
+          }`,
+          );
+          return `${handleFunction}('${uri}')`;
+        };
 
-            Blockly.Blocks['change_stage_bg'] = {
-        init: function () {
-          this.appendDummyInput()
-            .appendField("Change stage background color to");
-          this.appendDummyInput()
-            .appendField(new Blockly.FieldColour("#ffffff"), "NAME");
-          this.setPreviousStatement(true, null);
-          this.setNextStatement(true, null);
-          this.setColour(230);
-          this.setTooltip("");
-          this.setHelpUrl("");
-        },
+        Blockly.Blocks["change_stage_bg"] = {
+          init: function () {
+            this.appendDummyInput().appendField(
+              "Change stage background color to",
+            );
+            this.appendDummyInput().appendField(
+              new Blockly.FieldColour("#ffffff"),
+              "NAME",
+            );
+            this.setPreviousStatement(true, null);
+            this.setNextStatement(true, null);
+            this.setColour(230);
+            this.setTooltip("");
+            this.setHelpUrl("");
+          },
 
-        // This function will be called whenever the block value changes
-        onchange: function (event) {
-          if (!this.workspace || this.workspace.isDragging() || event.type != Blockly.Events.BLOCK_CHANGE) {
-            return;  // Don't change the stage while dragging blocks or on events other than block changes
-          }
-          if (event.blockId === this.id && event.name === "NAME") {
-            let color = this.getFieldValue('NAME');
-            // Call a JavaScript function in your p5.js sketch to change the background color
-            changeBackgroundColor(color);
-          }
+          // This function will be called whenever the block value changes
+          onchange: function (event) {
+            if (
+              !this.workspace ||
+              this.workspace.isDragging() ||
+              event.type != Blockly.Events.BLOCK_CHANGE
+            ) {
+              return; // Don't change the stage while dragging blocks or on events other than block changes
+            }
+            if (event.blockId === this.id && event.name === "NAME") {
+              let color = this.getFieldValue("NAME");
+              // Call a JavaScript function in your p5.js sketch to change the background color
+              changeBackgroundColor(color);
+            }
+          },
+        };
+      </script>
+      <script>
+        /* @mnsderp for the data saving scripts */
+
+        // Function to toggle dark mode
+        function toggleDarkMode() {
+          const body = document.body;
+          body.classList.toggle("dark-mode");
+          // Save dark mode state to local storage
+          const isDarkMode = body.classList.contains("dark-mode");
+          localStorage.setItem("darkMode", isDarkMode);
+          initializeDarkMode();
         }
-      };
 
-    </script>
-    <script>
-      /* @mnsderp for the data saving scripts */
+        // Function to initialize dark mode based on local storage
 
-      // Function to toggle dark mode
-      function toggleDarkMode() {
-        const body = document.body;
-        body.classList.toggle('dark-mode');
-        // Save dark mode state to local storage
-        const isDarkMode = body.classList.contains('dark-mode');
-        localStorage.setItem('darkMode', isDarkMode);
-        initializeDarkMode();
-      }
+        // Attach event listener to dark mode toggle button
+        const darkModeToggle = document.getElementById("darkModeToggle");
+        darkModeToggle.addEventListener("click", toggleDarkMode);
 
-      // Function to initialize dark mode based on local storage
-      
+        function openexternalproject() {
+          window.showOpenFilePicker();
+          alert("bark doesn't support uploading projects yet.");
+        }
 
-      // Attach event listener to dark mode toggle button
-      const darkModeToggle = document.getElementById('darkModeToggle');
-      darkModeToggle.addEventListener('click', toggleDarkMode);
+        function downloadproject() {
+          const state = Blockly.serialization.workspaces.save(workspace);
+          const data = JSON.stringify({
+            blockly: btoa(JSON.stringify(state)),
+            costume,
+            added,
+          });
 
-      function openexternalproject() {
-        window.showOpenFilePicker();
-        alert("bark doesn't support uploading projects yet.");
-      }
+          // Convert the XML text to Blob
+          let blob = new Blob([data], { type: "application/json" });
 
-      function downloadproject() {
-        const state = Blockly.serialization.workspaces.save(workspace);
-        const data = JSON.stringify({
-          blockly: btoa(JSON.stringify(state)),
-          costume,
-          added
-        });
+          // Create a link element
+          let aElement = document.createElement("a");
+          aElement.setAttribute("download", "project.barkf");
+          aElement.href = URL.createObjectURL(blob);
+          aElement.setAttribute("target", "_blank");
+          aElement.click();
 
-        // Convert the XML text to Blob
-        let blob = new Blob([data], { type: 'application/json' });
+          // Clean up
+          URL.revokeObjectURL(aElement.href);
+        }
+        function openFileInput() {
+          document.getElementById("fileInput").click();
+        }
 
-        // Create a link element
-        let aElement = document.createElement('a');
-        aElement.setAttribute('download', 'project.barkf');
-        aElement.href = URL.createObjectURL(blob);
-        aElement.setAttribute('target', '_blank');
-        aElement.click();
+        function loadWorkspaceFromFile(file) {
+          let reader = new FileReader();
 
-        // Clean up
-        URL.revokeObjectURL(aElement.href);
-      }
-      function openFileInput() {
-        document.getElementById('fileInput').click();
-      }
+          reader.onload = async function (event) {
+            const data = JSON.parse(event.target.result);
 
-      function loadWorkspaceFromFile(file) {
-        let reader = new FileReader();
+            // Clear the workspace before loading
+            Blockly.getMainWorkspace().clear();
 
-        reader.onload = async function (event) {
-          const data = JSON.parse(event.target.result);
+            Blockly.serialization.workspaces.load(
+              JSON.parse(atob(data.blockly)),
+              workspace,
+            );
+            loadImg(data.costume);
 
-          // Clear the workspace before loading
-          Blockly.getMainWorkspace().clear();
-
-          Blockly.serialization.workspaces.load(JSON.parse(atob(data.blockly)), workspace);
-          loadImg(data.costume);
-
-          // check if its there first to support older bark versions
-          if (data.added) {
-            for (const extURL of data.added) {
-              if (!added.includes(extURL)) {
-                const response = await fetch(extURL).then(data => data.text());
-                eval(response);
-                added.push(extURL);
+            // check if its there first to support older bark versions
+            if (data.added) {
+              for (const extURL of data.added) {
+                if (!added.includes(extURL)) {
+                  const response = await fetch(extURL).then((data) =>
+                    data.text(),
+                  );
+                  eval(response);
+                  added.push(extURL);
+                }
               }
             }
-          }
-          
-          //alert('Workspace loaded successfully!'); shut your happy ass up
-        };
 
-        reader.readAsText(file);
-      }
+            //alert('Workspace loaded successfully!'); shut your happy ass up
+          };
 
-
-      function run_code() {
-        eval(Blockly.JavaScript.workspaceToCode(Blockly.getMainWorkspace()));
-      }
-
-      // Script from Stack Overflow
-      let openFile = function (file) {
-        let input = file.target;
-        let reader = new FileReader();
-        reader.onload = function () {
-          let dataURL = reader.result;
-          let output = document.getElementById('costume');
-          loadImg(dataURL);
-          costume = dataURL;
-          output.src = dataURL;
-        };
-        reader.readAsDataURL(input.files[0]);
-      };
-
-      let openAudioFile = function (file) {
-        let input = file.target.files[0];
-        let reader = new FileReader();
-        reader.onload = function () {
-          let audio = new Audio();
-          audio.src = URL.createObjectURL(input);
-          audio.controls = true;
-          document.getElementById("audiofilelist").append(audio);
-        };
-        reader.readAsDataURL(input);
-      };
-
-      const theme = localStorage.getItem('theme');
-    </script>
-    <script>
-      let now = new Date();
-      if (now.getDate() == 7 && now.getMonth == 12) {
-        document.getElementById('easterEgg').innerHTML = '"<p>Well to create a bark project, you need to go to scratch.mit.edu LOL</p>"';
-      }
-    </script>
-    <script>
-      //import DarkTheme from 'https://esm.run/@blockly/theme-dark';
-
-      //define it ourselves because this fuck ass script wont load it from esm.run
-      const themedark = Blockly.Theme.defineTheme('dark', {
-        base: Blockly.Themes.Classic,
-        componentStyles: {
-          workspaceBackgroundColour: '#1e1e1e',
-          toolboxBackgroundColour: 'blackBackground',
-          toolboxForegroundColour: '#fff',
-          flyoutBackgroundColour: '#252526',
-          flyoutForegroundColour: '#ccc',
-          flyoutOpacity: 1,
-          scrollbarColour: '#797979',
-          insertionMarkerColour: '#fff',
-          insertionMarkerOpacity: 0.3,
-          scrollbarOpacity: 0.4,
-          cursorColour: '#d0d0d0',
-          blackBackground: '#333',
-        },
-      });
-
-      function initializeDarkMode() {
-        const isDarkMode = localStorage.getItem('darkMode') === 'true';
-        const body = document.body;
-        if (isDarkMode) {
-          body.classList.add('dark-mode');
-          console.log(window.workspace)
-          window.workspace.setTheme(themedark);
-          window.workspace.refreshTheme();
-        } else {
-          body.classList.remove('dark-mode');
-          window.workspace.setTheme();
-          window.workspace.refreshTheme();
+          reader.readAsText(file);
         }
-      }
-      window.addEventListener('load', initializeDarkMode);
 
-    </script>
-</body>
-<script src="../js/custom.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="../js/uploader.js"></script>
-<script src="../js/extensions.js"></script>
-<!--
+        function run_code() {
+          eval(Blockly.JavaScript.workspaceToCode(Blockly.getMainWorkspace()));
+        }
+
+        // Script from Stack Overflow
+        let openFile = function (file) {
+          let input = file.target;
+          let reader = new FileReader();
+          reader.onload = function () {
+            let dataURL = reader.result;
+            let output = document.getElementById("costume");
+            loadImg(dataURL);
+            costume = dataURL;
+            output.src = dataURL;
+          };
+          reader.readAsDataURL(input.files[0]);
+        };
+
+        let openAudioFile = function (file) {
+          let input = file.target.files[0];
+          let reader = new FileReader();
+          reader.onload = function () {
+            let audio = new Audio();
+            audio.src = URL.createObjectURL(input);
+            audio.controls = true;
+            document.getElementById("audiofilelist").append(audio);
+          };
+          reader.readAsDataURL(input);
+        };
+
+        const theme = localStorage.getItem("theme");
+      </script>
+      <script>
+        let now = new Date();
+        if (now.getDate() == 7 && now.getMonth == 12) {
+          document.getElementById("easterEgg").innerHTML =
+            '"<p>Well to create a bark project, you need to go to scratch.mit.edu LOL</p>"';
+        }
+      </script>
+      <script>
+        //import DarkTheme from 'https://esm.run/@blockly/theme-dark';
+
+        //define it ourselves because this fuck ass script wont load it from esm.run
+        const themedark = Blockly.Theme.defineTheme("dark", {
+          base: Blockly.Themes.Classic,
+          componentStyles: {
+            workspaceBackgroundColour: "#1e1e1e",
+            toolboxBackgroundColour: "blackBackground",
+            toolboxForegroundColour: "#fff",
+            flyoutBackgroundColour: "#252526",
+            flyoutForegroundColour: "#ccc",
+            flyoutOpacity: 1,
+            scrollbarColour: "#797979",
+            insertionMarkerColour: "#fff",
+            insertionMarkerOpacity: 0.3,
+            scrollbarOpacity: 0.4,
+            cursorColour: "#d0d0d0",
+            blackBackground: "#333",
+          },
+        });
+
+        function initializeDarkMode() {
+          const isDarkMode = localStorage.getItem("darkMode") === "true";
+          const body = document.body;
+          if (isDarkMode) {
+            body.classList.add("dark-mode");
+            console.log(window.workspace);
+            window.workspace.setTheme(themedark);
+            window.workspace.refreshTheme();
+          } else {
+            body.classList.remove("dark-mode");
+            window.workspace.setTheme();
+            window.workspace.refreshTheme();
+          }
+        }
+        window.addEventListener("load", initializeDarkMode);
+      </script>
+      <script src="../js/custom.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script src="../js/uploader.js"></script>
+      <script src="../js/extensions.js"></script>
+      <!--
   <script src="/editor/extensions.js"></script>
   to be reimplemented later, for some reason updatetoolbox breaks category switching :(
 -->
+    </div>
+  </body>
 </html>
