@@ -75,6 +75,10 @@
     {
       "source": "/docs",
       "destination": "/pages/docs.html"
+    },
+    {
+      "source": "/link",
+      "destination": "/pages/external.html"
     }
   ]
 }

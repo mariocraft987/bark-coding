@@ -3,7 +3,7 @@
 
 @font-face {
   font-family: "Bazin";
-  src: url("https://bark-coding.vercel.app/src/Bazin.ttf");
+  src: url("https://bark.dumorando.com/src/Bazin.ttf");
 }
 html:has(.dark-mode) {
   color-scheme: dark;
