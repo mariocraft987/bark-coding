@@ -214,26 +214,6 @@ function replace(text) {
         // allow newlines
         .replaceAll(/\n/g, "<br>")
 
-        function getSecondHalf(str, coin) {
-            return str.split(coin).pop()
-        }
-
-        function getFirstHalf(str, coin) {
-            return str.substring(0, str.indexOf(coin));
-        }
-    
-        if (text.includes('https://')) {
-            text = text.replace("https://", "<a href='")
-            let link = getSecondHalf(text, "https://")
-            let wordlength = getFirstHalf(text, "https://")
-                for (let e = Number(wordlength.length); text.charAt(e) != ' ';) {
-                    text = text.charAt(e).replace(` `, `'></a>`)
-                    e++
-                }
-            }
-
-
-
     for (const emoji of emojis) {
         start = String(start).replaceAll(`${emoji.token}`, `<img src='${emoji.url}' alt=':${emoji.emoji}:' style='margin-bottom: -7px;' width='${emojisize}' height='${emojisize}'>`);
     }
