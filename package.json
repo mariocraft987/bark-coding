@@ -1,6 +1,6 @@
 {
   "name": "bark-coding",
-  "version": "0.1",
+  "version": "0.2",
   "description": "A Fun block-based coding editor similar to Scratch.",
   "scripts": {
     "dev": "nw editor/",
