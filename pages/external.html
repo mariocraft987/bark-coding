@@ -53,6 +53,19 @@
     <script src="/index.js"></script>
     <script>
       const url = new URL(window.location.href);
+      const trusted = [
+        "https://bark-coding.vercel.app",
+        "https://bark.dumorando.com",
+        "http://bark.dumorando.com",
+        "http://bark-coding.vercel.app",
+        "https://dumorando.com",
+        "http://dumorando.com",
+        "https://breakfast.pages.gay",
+        "http://breakfast.pages.gay",
+        "https://mariocraft987.github.io",
+        "http://mariocraft987.github.io"
+      ];
+
       function isValidURL(string) {
         try {
           new URL(string);
@@ -61,11 +74,18 @@
           return false;
         }
       }
+
       const paramValue = url.searchParams.get("urlLink");
       if (isValidURL(paramValue)) {
         document.getElementsByClassName("box")[0].classList.remove("hidden");
         document.getElementsByClassName("box")[1].classList.add("hidden");
         document.getElementById("url").href = paramValue;
+
+        //just instantly go to the site if it is trusted
+        trusted.forEach(start => {
+          if (paramValue.startsWith(trusted)) document.getElementById('url').click();
+        });
+
         document.getElementById("url-text").innerText = paramValue;
       }
     </script>
