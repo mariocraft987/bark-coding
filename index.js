@@ -21,7 +21,7 @@ let showHoldOn = true;
 
 // conditionals
 
-if (document.URL.includes('bark.dumorando.com')) {
+if (document.URL.includes('bark-coding.vercel.app')) {
   window.location.href = "https://bark.dumorando.com" + document.URL.replaceAll(window.location.origin, "")
 }
 
