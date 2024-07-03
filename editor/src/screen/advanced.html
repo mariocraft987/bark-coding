@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bark Advanced Editor</title>
     <link rel="shortcut icon" href="https://bark.dumorando.com/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="/editor/cool/style.css" />
+    <link rel="stylesheet" type="text/css" href="../css/advanced/style.css" />
   </head>
   <body>
     <div class="navbar">
@@ -35,8 +35,7 @@
         >Open</a
       >
       <a
-        href="#"
-        onclick="alert('This feature is not available yet :(');"
+        href="https://bark.dumorando.com/docs"
         title="read the advanced editor's documentation to expand your knowledge!"
         >Documentation</a
       >
@@ -90,19 +89,19 @@ let dog = new sprite("dog", 0, 0, 100); dog.draw();</textarea
       "
     >
       <button class="programtoolbar" title="stop">
-        <img src="/src/projecttoolbar/stop.svg" />
+        <img src="../img/projecttoolbar/stop.svg" />
       </button>
       <button class="programtoolbar" title="pause">
-        <img src="/src/projecttoolbar/pause.svg" />
+        <img src="../img/projecttoolbar/pause.svg" />
       </button>
       <button class="programtoolbar" title="start" id="start">
-        <img src="/src/projecttoolbar/run.svg" />
+        <img src="../img/projecttoolbar/run.svg" />
       </button>
       <iframe
         frameborder="0"
         sandbox="allow-scripts"
         id="stage"
-        src="/editor/cool/canvas.html"
+        src="canvas.html"
       ></iframe>
     </div>
     <div id="blur-overlay"></div>
@@ -138,6 +137,6 @@ let dog = new sprite("dog", 0, 0, 100); dog.draw();</textarea
       </p>
     </div>
 
-    <script src="/editor/cool/script.js"></script>
+    <script src="../js/advanced/script.js"></script>
   </body>
 </html>
