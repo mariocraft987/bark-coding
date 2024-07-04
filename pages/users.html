@@ -130,7 +130,7 @@
       userContainer.href = `/profile/${user.username}`;
       userContainer.innerHTML = `
 <p>${user.username}</p>
-<img src="${user.profilepicture}" alt="${user.username}">
+<img src="${XSSfix(user.profilepicture)}" alt="${user.username}">
 <section id="user-tags">
   ${admins.includes(user.username) ? `<span id="gold">Bark team</span>` : ``}
 </section>
