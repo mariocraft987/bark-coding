@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Search</title>
+  <title>Bark - Search</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/png">
 </head>
 
@@ -13,7 +13,7 @@
 </body>
 <script>
   let q = new URLSearchParams(location.search).get("q".toString()) || "";
-  document.title = "Bark Search - " + q;
+  document.title = 'Bark Search - "' + q + '"';
   document.getElementById('content').innerHTML = '<span id="navbar"></span>';
   document.getElementById('content').innerHTML += q;
   document.getElementById('search').value = q;
