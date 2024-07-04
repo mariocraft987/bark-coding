@@ -177,6 +177,12 @@ function t(length) {
     return arr.join('');
 }
 
+function XSSfix(text) {
+    return String(text)
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;");
+}
+
 function replace(text) {
     let start = String(text)
         // DO NOT REMOVE. KEEP AT TOP
