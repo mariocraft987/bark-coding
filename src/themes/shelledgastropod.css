@@ -187,8 +187,12 @@ body.dark-mode {
   float: right;
 }
 
-a {
+body.dark-mode a {
   color: #ffffff;
+}
+
+a {
+  color: #000000;
 }
 
 .slNav {
