@@ -79,7 +79,7 @@
     {
       "source": "/link",
       "destination": "/pages/external.html"
-    }
+    },
     {
       "source": "/new",
       "destination": "/pages/newproject.html"
