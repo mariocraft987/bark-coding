@@ -6,7 +6,7 @@ const components = {
     //navbar
     "navbar": `
     <div class="navbar"><a href="/"><img src="/src/images/Logo.svg" alt="bark" width="25" height="25" ><img src="/src/emojis/svg/normal/pride.svg" alt="pride flag" width="25" height="25" ></a>
-    <a href="${window.location.origin}/editor">Create</a>
+    <a href="${window.location.origin}/new">New</a>
     <a href="/explore">Explore</a>
     <a href="/ideas">Ideas</a>
     <a href="/about">About</a>
