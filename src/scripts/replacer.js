@@ -228,14 +228,21 @@ function replace(text) {
             return str.substring(0, str.indexOf(coin));
         }
 
-        if (text.includes('https://')) {
-            text = text.replace("https://", "<a href='")
-            let link = getSecondHalf(text, "https://")
-            let wordlength = getFirstHalf(text, "https://")
-                for (let e = Number(wordlength.length); text.charAt(e) != ' '; e++) {
-                    text = text.charAt(e).replace(` `, `'></a>`)
-                }
-            }
+    // https://gist.github.com/alordiel/ed8587044be07e408f5f93b3124836b3
+    function markdownLink(thisText) {
+        var derText = thisText;
+        //replace the linebreaks with <br>
+        derText = derText.replace(/(?:\r\n|\r|\n)/g, '<br>');
+        //check for links [text](url)
+        let elements = derText.match(/\[.*?\)/g);
+        if( elements != null && elements.length > 0){
+          for(el of elements){
+            let txt = el.match(/\[(.*?)\]/)[1];//get only the txt
+            let url = el.match(/\((.*?)\)/)[1];//get only the link
+            derText = derText.replace(el,'<a href="'+url+'" target="_blank">'+txt+'</a>')
+          }
+        }
+    }
     
     for (const emoji of emojis) {
         start = String(start).replaceAll(`${emoji.token}`, `<img src='${emoji.url}' alt=':${emoji.emoji}:' style='margin-bottom: -7px;' width='${emojisize}' height='${emojisize}'>`);
