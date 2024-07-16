@@ -1120,6 +1120,8 @@ Blockly.Blocks['letters_from'] = {
           Blockly.serialization.workspaces.load(JSON.parse(atob(data.blockly)), workspace);
           loadImg(data.costume);
 
+          console.log(document.getElementById("fileInput").files[0].name)
+
           // check if its there first to support older bark versions
           if (data.added) {
             for (const extURL of data.added) {
