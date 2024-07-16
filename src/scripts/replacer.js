@@ -242,6 +242,8 @@ function replace(text) {
         }
         return derText;
     }
+
+        text = markdownLink(text);
     
     for (const emoji of emojis) {
         start = String(start).replaceAll(`${emoji.token}`, `<img src='${emoji.url}' alt=':${emoji.emoji}:' style='margin-bottom: -7px;' width='${emojisize}' height='${emojisize}'>`);
