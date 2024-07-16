@@ -231,8 +231,6 @@ function replace(text) {
     // https://gist.github.com/alordiel/ed8587044be07e408f5f93b3124836b3
     function markdownLink(thisText) {
         var derText = thisText;
-        //replace the linebreaks with <br>
-        derText = derText.replace(/(?:\r\n|\r|\n)/g, '<br>');
         //check for links [text](url)
         let elements = derText.match(/\[.*?\)/g);
         if( elements != null && elements.length > 0){
@@ -242,6 +240,7 @@ function replace(text) {
             derText = derText.replace(el,'<a href="'+url+'" target="_blank">'+txt+'</a>')
           }
         }
+        return derText;
     }
     
     for (const emoji of emojis) {
