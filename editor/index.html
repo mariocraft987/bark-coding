@@ -39,6 +39,7 @@
   <script src="/editor/custom_category_es6.js"></script>
   <script src="/editor/toolbox_label_e26.js"></script>
   <link rel="stylesheet" lang="css" href="/editor/uploader.css">
+  <link rel="stylesheet" lang="css" href="/src/css/img-library.css">
   <style>
     @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
@@ -249,17 +250,12 @@
     <input type='file' accept='image/*' id="fileupload" onchange='openFile(event)'><br>
     <img id='costume' style="width:70px;" src="/src/images/dog/idle.svg">
     
-    <!--
-    image library
-    
-    <div class="gallery">
-    <img src="/src/images/dog/scratch_dog.png" alt="scratch dog" width="100" onclick="loadImage('/src/images/dog/scratch_dog.png')">
-    <div class="desc">Bark Dog</div></div>
-
-    <div class="gallery">
-    <img src="/src/images/sprites/Jerri.png" alt="Jerri" width="78" onclick="loadImage('/src/images/sprites/Jerri.png')">
-    <div class="desc">Jerri</div></div>
-    -->
+<div class="responsive">
+  <div class="gallery">
+      <img src="/src/images/dog/idle.svg" alt="Bark Dog" width="600" height="400">
+    <div class="desc">Bark Dog</div>
+  </div>
+</div>
     
   </div>
   
