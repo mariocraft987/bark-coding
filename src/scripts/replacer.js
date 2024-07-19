@@ -243,6 +243,14 @@ function replace(text) {
         return derText;
     }
 
+    function getTwoKeys(GTKtext, char, first, last) {
+        GTKtext = GTKtext.replace(char, first)
+        GTKtext = GTKtext.replace(char, last)
+        return GTKtext;
+    }
+
+    textgetTwoKeys(text, "*", "<i>","</i>")
+
         text = markdownLink(text);
     
     for (const emoji of emojis) {
