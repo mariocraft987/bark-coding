@@ -237,7 +237,7 @@ function replace(text) {
           for(el of elements){
             let txt = el.match(/\[(.*?)\]/)[1];//get only the txt
             let url = el.match(/\((.*?)\)/)[0];//get only the link
-            derText = derText.replace(el,'<a href="https://bark.dumorando.com/link?urlLink='+url+'" target="_blank">'+txt.slice(1, txt.length-2)+'</a>')
+            derText = derText.replace(el,'<a href="https://bark.dumorando.com/link?urlLink='+url.slice(1, url.length-1)+'" target="_blank">'+txt+'</a>')
           }
         }
         return derText;
