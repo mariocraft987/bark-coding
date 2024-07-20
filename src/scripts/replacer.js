@@ -249,7 +249,7 @@ function replace(text) {
         return GTKtext;
     }
 
-    textgetTwoKeys(text, "*", "<i>","</i>")
+    text = getTwoKeys(text, "*", "<i>","</i>")
 
         text = markdownLink(text);
     
