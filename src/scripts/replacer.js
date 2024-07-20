@@ -249,9 +249,9 @@ function replace(text) {
         return GTKtext;
     }
 
-    text = getTwoKeys(text, "*", "<i>","</i>")
+    start = getTwoKeys(start, "*", "<i>","</i>")
 
-        text = markdownLink(text);
+        start = markdownLink(start);
     
     for (const emoji of emojis) {
         start = String(start).replaceAll(`${emoji.token}`, `<img src='${emoji.url}' alt=':${emoji.emoji}:' style='margin-bottom: -7px;' width='${emojisize}' height='${emojisize}'>`);
