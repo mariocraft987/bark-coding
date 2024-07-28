@@ -38,9 +38,17 @@
   <!-- inject:navbar -->
   <div class="textCenter">
     <h2>Upload Project</h2>
-  <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)"></p>
   <p><label for="file" style="cursor: pointer;">Upload Thumbnail:</label></p>
+  <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)"></p>
   <p><img id="output" width="200" /></p>
+    <br/>
+    <br/>
+      <label for="selectas">Upload project as </label>
+  <select name="selectas" id="selectas">
+    <option value="volvo">A small project</option>
+    <option value="saab">A Demo</option>
+    <option value="opel">A full game</option>
+  </select>
   </div>
   <!-- inject:footer -->
 </body>
