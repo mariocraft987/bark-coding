@@ -83,8 +83,8 @@
     {
       "source": "/new",
       "destination": "/pages/newproject.html"
-    }
-        {
+    },
+    {
       "source": "/game_engine",
       "destination": "/gameengine/index.html"
     }
