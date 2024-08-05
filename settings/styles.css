@@ -121,3 +121,70 @@ input[type="color"]::-moz-color-swatch {
 #warning {
     background-color: #f5f5f5;
 }
+
+/* Pranidhi */
+.pranidhiButton {
+  background-color: #bc4749;
+  /* Green buttons */
+  padding: 9px 17px;
+  border-radius: 7px;
+  cursor: pointer;
+  border: none;
+  color: #ffffff;
+  font-size: 10pt;
+  text-decoration: none;
+}
+
+.pranidhiButton:hover {
+  background-color: #e29578;
+  border: none;
+}
+
+/* Cherry Blossom */
+.CherryBlossomButton {
+  background-color: rgb(255 0 129);
+  padding: 14px 18px;
+  border-radius: 17px;
+  cursor: pointer;
+  border: none;
+  color: #ffffff;
+  font-size: 10pt;
+  text-decoration: none;
+}
+
+.CherryBlossomButton:hover {
+  background-color: rgb(221 0 153);
+  border: none;
+}
+
+/* Shelled Gastropod */
+.SnailButton {
+  background-color: rgb(0, 128, 255);
+  padding: 9px 17px;
+  border-radius: 7px;
+  cursor: pointer;
+  border: none;
+  color: #ffffff;
+  font-size: 10pt;
+  text-decoration: none;
+}
+
+.SnailButton:hover {
+  background-color: rgb(0, 111, 221);
+  border: none;
+}
+
+/* Crap Brown Dodger */
+BrownDodger {
+  background-color: rgb(0, 128, 255);
+  padding: 9px 17px;
+  border-radius: 7px;
+  cursor: pointer;
+  border: none;
+  color: #ffffff;
+}
+
+BrownDodger:hover {
+  background-color: rgb(0, 111, 221);
+  border: none;
+}
