@@ -144,7 +144,7 @@ input[type="color"]::-moz-color-swatch {
 .CherryBlossomButton {
   background-color: rgb(255 0 129);
   padding: 14px 18px;
-  border-radius: 17px;
+  border-radius: 15px;
   cursor: pointer;
   border: none;
   color: #ffffff;
@@ -160,8 +160,8 @@ input[type="color"]::-moz-color-swatch {
 /* Shelled Gastropod */
 .SnailButton {
   background-color: rgb(0, 128, 255);
-  padding: 9px 17px;
-  border-radius: 7px;
+  padding: 12px 17px;
+  border-radius: 10px;
   cursor: pointer;
   border: none;
   color: #ffffff;
@@ -170,13 +170,13 @@ input[type="color"]::-moz-color-swatch {
 }
 
 .SnailButton:hover {
-  background-color: rgb(0, 111, 221);
+  background-color: rgb(51, 7, 59);
   border: none;
 }
 
 /* Crap Brown Dodger */
 BrownDodger {
-  background-color: rgb(0, 128, 255);
+  background-color:rgb(150, 73, 18);
   padding: 9px 17px;
   border-radius: 7px;
   cursor: pointer;
@@ -185,6 +185,6 @@ BrownDodger {
 }
 
 BrownDodger:hover {
-  background-color: rgb(0, 111, 221);
+  background-color: rgb(99, 50, 14);
   border: none;
 }
