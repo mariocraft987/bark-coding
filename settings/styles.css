@@ -126,7 +126,7 @@ input[type="color"]::-moz-color-swatch {
 .pranidhiButton {
   background-color: #bc4749;
   /* Green buttons */
-  padding: 9px 17px;
+  padding: 12px 17px;
   border-radius: 7px;
   cursor: pointer;
   border: none;
