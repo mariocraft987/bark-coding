@@ -159,7 +159,7 @@ input[type="color"]::-moz-color-swatch {
 
 /* Shelled Gastropod */
 .SnailButton {
-  background-color: rgb(0, 128, 255);
+  background-color: Purple;
   padding: 12px 17px;
   border-radius: 10px;
   cursor: pointer;
