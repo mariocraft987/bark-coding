@@ -176,9 +176,9 @@ input[type="color"]::-moz-color-swatch {
 
 /* Crap Brown Dodger */
 BrownDodger {
-  background-color:rgb(150, 73, 18);
+  background-color: rgb(150, 73, 18);
   padding: 9px 17px;
-  border-radius: 7px;
+  border-radius: 6px;
   cursor: pointer;
   border: none;
   color: #ffffff;
