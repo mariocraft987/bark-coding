@@ -109,7 +109,6 @@
   //use vanilla js for this one cause idk how to use zepto with it 
   document.getElementById('pfpupload').addEventListener("change", async (e) => {
     const file = e.target.files[0];
-    navigator.clipboard.writeText(file);
     if (file) {
         const response = await fetch(`https://api.bark.dumorando.com/api/v2/setPFP?token=${encodeURIComponent(token)}`, {
             method: 'PUT',
