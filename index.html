@@ -141,6 +141,7 @@
     let barksound = new Audio('src/bark.mp3')
     dog.addEventListener("mouseleave", () => changeImage(dog, umm));
     dog.addEventListener("click", () => changeImage(dog, happy) barksound.play());
+    dog.addEventListener("click", () => barksound.play());
     changeImage(dog, idle);
     dog.classList.add('active');
     document.getElementById('loadingdog').remove();
