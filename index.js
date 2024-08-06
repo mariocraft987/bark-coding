@@ -123,6 +123,9 @@ whatsNew();
 InitTheme()
 
 function InitTheme() {
+  if (localStorage.theme == "bluedodger" && localStorage.navcolor != "nocolor") {
+    document.getElementById("navbar").style.background = localStorage.navcolor;
+  } else {
   const theme = localStorage.getItem('theme') ?? "bluedodger";
   if (theme.startsWith('#')) {
     const style = document.createElement('style');
@@ -141,6 +144,7 @@ function InitTheme() {
 
   document.head.append(link);
   return;
+  }
 }
 
 let mybutton = document.getElementById("topBtn");
