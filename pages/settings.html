@@ -13,7 +13,6 @@
     <!-- inject:navbar -->
     <main>
         <section id="settingsPage">
-            <!--
             <form id="navColor">
                 <div style="display: flex;align-items: center;">
                     <label for="favcolor">Navbar Color:</label>
@@ -22,8 +21,9 @@
 
                 <input type="submit" value="Apply">
             </form>
-            -->
-            <p class="selecttheme">Select a theme:</p>
+            <br/>
+            <br/>
+            <p class="selecttheme">Or select a premade theme:</p>
             <button type="button" name="bluedodger" onclick="switchTheme(`bluedodger`)" onclick class="themeBtn">Bluedodger</button>
             <button type="button" name="pranidhi" onclick="switchTheme(`pranidhi`)" class="pranidhiButton">Pranidhi</button>
             <button type="button" name="cherryblossom" onclick="switchTheme(`cherryblossom`)" class="CherryBlossomButton">Cherry Blossom</button>
@@ -61,13 +61,13 @@
 <script src="/src/scripts/navbar.js"></script>
 <script>
     let span = document.getElementById("forthischangelang");
-    let lang = navigator.language
-    if (lang.includes("zh")) {span.innerHTML = "选择语言："}
-    if (lang.includes("fr")) {span.innerHTML = "Sélectionnez une langue:"}
-    if (lang.includes("ar")) {span.innerHTML = "اختر لغة:"}
-    if (lang.includes("es")) {span.innerHTML = "Selecciona un idioma:"}
-    if (lang.includes("ja")) {span.innerHTML = "言語を選択してください:"}
-    if (lang.includes("pt")) {span.innerHTML = "Selecione um idioma:"}
+    let spanslang = navigator.language
+    if (spanslang.includes("zh")) {span.innerHTML = "选择语言："}
+    if (spanslang.includes("fr")) {span.innerHTML = "Sélectionnez une langue:"}
+    if (spanslang.includes("ar")) {span.innerHTML = "اختر لغة:"}
+    if (spanslang.includes("es")) {span.innerHTML = "Selecciona un idioma:"}
+    if (spanslang.includes("ja")) {span.innerHTML = "言語を選択してください:"}
+    if (spanslang.includes("pt")) {span.innerHTML = "Selecione um idioma:"}
 </script>
 
 </html>
