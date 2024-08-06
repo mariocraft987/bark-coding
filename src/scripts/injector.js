@@ -5,7 +5,7 @@ let afdbtn = new Date().getMonth() === 3 && new Date().getDate() === 1 ? "<a id=
 const components = {
     //navbar
     "navbar": `
-    <div class="navbar"><a href="/"><img src="/src/images/Logo.svg" alt="bark" width="25" height="25" ></a>
+    <div id="navbar" class="navbar"><a href="/"><img src="/src/images/Logo.svg" alt="bark" width="25" height="25" ></a>
     <a href="${window.location.origin}/new">New</a>
     <a href="/explore">Explore</a>
     <a href="/ideas">Ideas</a>
