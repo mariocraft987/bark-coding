@@ -97,7 +97,7 @@
     btn.remove();
   }
   document.getElementById('username').innerText = username;
-  document.title = "User - " + username;
+  document.title = username + " on Bark";
   const token = localStorage.getItem('barktoken');
 
   const response = await fetch(`https://api.bark.dumorando.com/api/v2/fetchUser?username=${encodeURIComponent(username)}`);
