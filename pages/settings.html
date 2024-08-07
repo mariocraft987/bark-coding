@@ -71,6 +71,11 @@
     if (spanslang.includes("es")) {span.innerHTML = "Selecciona un idioma:"}
     if (spanslang.includes("ja")) {span.innerHTML = "言語を選択してください:"}
     if (spanslang.includes("pt")) {span.innerHTML = "Selecione um idioma:"}
+
+function switchTheme(selected) {
+    localStorage.theme = selected;
+    window.location.reload()
+}
 </script>
 
 </html>
