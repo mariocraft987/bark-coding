@@ -1,3 +1,4 @@
+document.getElementById("code").value = 'let dog = new sprite("dog", 0, 0, 100);\ndog.draw();\n\n// This is an example code to show a dog';
 let zoomsize = 12;
 let linetabs = 0;
 let code = document.getElementById("code");
