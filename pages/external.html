@@ -52,29 +52,23 @@
     <!-- inject:footer -->
     <script src="/index.js"></script>
     <script>
-      // do you guys think git services should be ok?
-      const url = new URL(window.location.href);
+      // it's safer to just include our own websites
+      const url = new URL(window.location.host);
       const trusted = [
-        "https://bark-coding.vercel.app",
-        "https://bark.dumorando.com",
-        "http://bark.dumorando.com",
-        "http://bark-coding.vercel.app",
-        "https://dumorando.com",
-        "http://dumorando.com",
-        "https://breakfast.pages.gay",
-        "http://breakfast.pages.gay",
-        "https://mariocraft987.github.io",
-        "http://mariocraft987.github.io",
-        "https://mariocraft987.github.io",
-        "https://nmsderp.xyz",
-        "https://go.nmsderp.xyz",
-        "https://snail-ide.com",
-        "https://penguinmod.com",
-        "https://scratch.org",
-        "https://scratch.mit.edu",
-        "https://mit.edu",
-        "https://github.com",
-        "https://codeberg.org"
+        "api.semisocial.chat",
+        "bark-coding.vercel.app",
+        "bark.dumorando.com",
+        "breakfast.pages.gay",
+        "dumorando.com",
+        "dumo.network",
+        "dumosgamemaker.vercel.app",
+        "go.nmsderp.xyz",
+        "mariocraft987.github.io",
+        "nmsderp.xyz",
+        "penguinmod.com",
+        "semisocial.chat",
+        "snail-ide.com",
+        "uwu.dumorando.com"
       ];
 
       function isValidURL(string) {
