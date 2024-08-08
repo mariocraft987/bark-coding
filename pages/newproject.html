@@ -36,18 +36,13 @@
   <!-- inject:navbar -->
   <div class="textCenter">
     <br/>
-    <p>New Blockly Project:</p>
-    <button onclick="window.location = '/editor';">Go</button>
-    <br/>
-    <p>HTML editor:</p>
-    <button>Coming soon...</button>
-    <br/>
-    <p>Javascript editor:</p>
-    <button onclick="window.location = '/editor/cool/';">Go</button>
-    <br/>
-    <p>Buttons:</p>
-    <button onclick="window.location = 'https://barkinbox.vercel.app/';">Go</button>
-  </div>
+    <p>New project:</p>
+<select name="project" id="projecttype">
+  <option value="blockly">Blockly</option>
+  <option value="html">HTML</option>
+  <option value="js">Javascript</option>
+  <option value="buttons">Buttons-cript</option>
+</select>
   <!-- inject:footer -->
 </body>
 <script src="/src/scripts/navbar.js"></script>
