@@ -192,7 +192,7 @@ function replace(text) {
         // Some terms listed here are only slices of words. this is because there are many different words (generally offensive and sexual) that begin with these terms.
         // 🆘 I wouldn't recommend searching these terms 🆘
         .replaceAll(/(strip club|prostitute)+/gim, t(10))
-        .replaceAll(/(paedophile|wet dream)+/gim, t(9))
+        .replaceAll(/(paedophile|wet dream|goofy ahh)+/gim, t(9))
         .replaceAll(/(ejaculat|beastial|masturbat|testicle|pedophile|stripper)+/gim, t(8))
         .replaceAll(/(cumming|asshole|bestial|cocaine|jackass)+/gim, t(7))
         .replaceAll(/(penile|virgin|breast|condom|faggot|incest|molest|retard|rapist|hentai|orgasm|nudity)+/gim, t(6))
