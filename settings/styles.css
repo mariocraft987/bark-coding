@@ -188,3 +188,18 @@ input[type="color"]::-moz-color-swatch {
   background-color: rgb(99, 50, 14);
   border: none;
 }
+
+.oldWeb {
+  background-color: #a85400;
+  padding: 9px 17px;
+  cursor: pointer;
+  border: none;
+  color: #ffffff;
+  font-size: 10pt;
+  text-decoration: none;
+}
+
+.oldWeb:hover {
+  background-color: #783c00;
+  border: none;
+}
