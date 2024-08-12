@@ -2,13 +2,13 @@
 ### This tutorial was written by @nmsderp, feel free to add more if needed
 *NOTE: Making blocks requires basic knowledge of xml, and some decent knowledge of JavaScript*
   
-*NOTE 2: IT WILL MAKE YOUR LIFE EASIER TO USE BLOCKLY BLOCK FACTORY: [Block Factory](https://blockly-demo.appspot.com/static/demos/blockfactory/index.html)*
+*NOTE 2: IT WILL MAKE YOUR LIFE EASIER TO USE BLOCKLY BLOCK FACTORY: [Block Factory](https://blockly-demo.appspot.com/static/demos/blockfactory/index.html) OR THE [NEWER VERSION](https://google.github.io/blockly-samples/examples/developer-tools/index.html)*
 
 *NOTE 3: if you wanna request blocks for us to make, create a discussion in Block Requests and we will make it if ideas are good.*
   
 First we need to design our block, the block code may look like this:
 ```javascript
-Blockly.Blocks['movement_move'] = { // Moves sprite
+Blockly.Blocks['movement_move'] = { // Block Id
         init: function() {
           this.jsonInit({
             "type": "movement_move", // Block Id
@@ -31,8 +31,8 @@ After that we need to add it to the toolbox in `editor/`
 ```
 In Blockly code is ran with generators, in our code we have to define what the blocks do:
 ```javascript
-javascript.javascriptGenerator.forBlock['change_stage_bg'] = function(block, generator) {
-        let colorValue = block.getFieldValue('NAME');
+javascript.javascriptGenerator.forBlock['change_stage_bg'] = function(block, generator) { // Block Id
+        let colorValue = block.getFieldValue('NAME'); // Code...
         return "changebg('" + colorValue + "');";
     };
 ```
@@ -48,6 +48,8 @@ function changebg(color) {
 after that the block is now in the blockbar!
 
 ![picture of block](https://bark.dumorando.com/editor/blockpic.png)
+
+If you want to make a library of custom blocks, go see `Creating an extension.md`!
 
 *Last updated April 19th, 2024*
 
