@@ -60,8 +60,11 @@
 <script src="/src/scripts/multi-language.js"></script>
 <script src="/src/scripts/replacer.js"></script>
 <script src="/settings/settings.js"></script>
-<script src="/src/scripts/navbar.js"></script>
 <script>
+    if (localStorage.myBarkUsername != "barkteam") {
+        x.style.display = "none";
+    }
+    
     let span = document.getElementById("forthischangelang");
     let spanslang = navigator.language
     if (spanslang.includes("zh")) {span.innerHTML = "选择语言："}
