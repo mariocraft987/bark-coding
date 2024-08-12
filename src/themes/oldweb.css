@@ -66,9 +66,8 @@ body {
   font-size: 17px;
   text-align: center;
   outline: none;
-  color: #1b007a;
-  border-radius: 5px;
-  background-color: rgb(0, 127, 255, 0.24);
+  color: #000000;
+  background-color: #78c700;
   margin-top: 15px;
   width: 900px;
   margin-left: calc(50% - 476px);
@@ -79,7 +78,7 @@ body {
 }
 
 .link {
-  color: dodgerBlue;
+  color: Blue;
   text-decoration: none;
 }
 
@@ -93,7 +92,6 @@ body {
 
 input {
   padding: 6px;
-  border-radius: 8px;
   border-color: #a3a3a3;
   border-style: solid;
   border-width: 1px;
@@ -108,7 +106,6 @@ input {
 .buttonFrBx {
   background-color: rgb(0, 128, 255);
   padding: 9px 17px;
-  border-radius: 7px;
   cursor: pointer;
   border: none;
   color: #ffffff;
@@ -119,7 +116,6 @@ input {
 .buttonFrBx2 {
   background-color: rgb(255, 183, 0);
   padding: 9px 17px;
-  border-radius: 7px;
   cursor: pointer;
   border: none;
   color: #000000;
