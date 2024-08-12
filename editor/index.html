@@ -557,6 +557,7 @@
         <block type="end_block"></block>
         <block type="test_block"></block>
         <block type="random_dorito"></block>
+        <block type="reapete"></block>
       </category>
     </xml>
 
@@ -975,6 +976,17 @@ Blockly.Blocks['letters_from'] = {
     this.setColour(90);
  this.setTooltip("idk");
  this.setHelpUrl("");
+  }
+};
+
+      Blockly.Blocks['reapete'] = {
+  init: function() {
+    this.appendStatementInput("NAME")
+        .setCheck(null)
+        .appendField("Start when \"∞\" ends");
+    this.setColour(45);
+ this.setTooltip("Starts the code until \"∞\" ends.");
+ this.setHelpUrl("https://www.youtube.com/watch?v=j98suMfW1tc");
   }
 };
               
