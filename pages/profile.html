@@ -113,6 +113,7 @@
 
   if (await isuseradmin(username)) {
     document.getElementById('username').outerHTML += "<admin-pin>Bark team</admin-pin>";
+    document.getElementById('username').style.color = "#ffa70f";
   }
 
   if (await amiadmin()) {
