@@ -541,7 +541,7 @@
         <block type="onfunction"></block>
       </category>
       
-      <category name="Advanced" colour="#0fbd8c">
+      <category name="Advanced" colour="#a826ff">
         <block type="confirm_block">
           <field name="TEXT">3</field>
         </block>
@@ -554,7 +554,9 @@
       
       <category name="Custom" colour="#cf4125">
         <button text="Add Extension.." callbackKey="showExtsMenu"></button>
+        <block type="end_block"></block>
         <block type="test_block"></block>
+        <block type="random_dorito"></block>
       </category>
     </xml>
 
@@ -951,6 +953,30 @@ Blockly.Blocks['letters_from'] = {
           this.setHelpUrl("");
         }
       };
+
+      Blockly.Blocks['end_block'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("End");
+    this.setPreviousStatement(true, null);
+    this.setColour(330);
+ this.setTooltip("A more organized way of ending your scripts.");
+ this.setHelpUrl("");
+  }
+};
+
+      Blockly.Blocks['random_dorito'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("DORITOS")
+        .appendField(new Blockly.FieldImage("https://bark.dumorando.com/src/emojis/svg/normal/smiley.svg", 20, 20, { alt: ":)", flipRtl: "FALSE" }));
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(90);
+ this.setTooltip("idk");
+ this.setHelpUrl("");
+  }
+};
               
       javascript.javascriptGenerator.forBlock['onstart'] = function (block, generator) {
         return "alert('run button was clicked!');";
