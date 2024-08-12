@@ -49,7 +49,7 @@ after that the block is now in the blockbar!
 
 ![picture of block](https://bark.dumorando.com/editor/blockpic.png)
 
-If you want to make a library of custom blocks, go see `Creating an extension.md`!
+If you want to make a library of custom blocks, go see `Create an extension.md`!
 
 *Last updated April 19th, 2024*
 
