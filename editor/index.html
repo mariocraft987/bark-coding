@@ -247,7 +247,7 @@
   <div id="costumeseditordiv" class="tabpage">
     <h1>Upload costume</h1>
     <input type='file' accept='image/*' id="fileupload" onchange='openFile(event)'><br>
-    <img id='costume' style="width:70px;" src="/src/images/dog/idle.svg">
+    <span id="imgoutput"></span>
     
   <!-- Place Image library here -->
     
@@ -1179,10 +1179,10 @@ Blockly.Blocks['letters_from'] = {
         let reader = new FileReader();
         reader.onload = function () {
           let dataURL = reader.result;
-          let output = document.getElementById('costume');
+          let output = document.getElementById('imgoutput');
           loadImg(dataURL);
           costume = dataURL;
-          output.src = dataURL;
+          output.innerHTML += "<img style='width:70px;' src='"+dataURL+"'><br/>";
         };
         reader.readAsDataURL(input.files[0]);
       };
