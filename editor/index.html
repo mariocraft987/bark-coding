@@ -333,7 +333,7 @@
         <block type="logic_null"></block>
         <block type="logic_ternary"></block>
       </category>
-      
+      <!--
       <category name="Movement" colour="#3399ff">
         <block type="set_position"></block>
         <block type="get_position"></block>
@@ -345,7 +345,7 @@
         </block>
         <block type="goto_mouse"></block>
         <block type="center"></block>
-        <!-- todo: add pointdir block -->
+        <block type="point_in_dir"></block>
       </category>
       <category name="Style" colour="#cd17ff">
         <block type="change_costume"></block>
@@ -567,6 +567,7 @@
         <button text="Add Extension.." callbackKey="showExtsMenu"></button>
         <block type="test_block"></block>
       </category>
+      -->
     </xml>
 
 
@@ -746,6 +747,18 @@
           this.setHelpUrl("");
         }
       };
+      Blockly.Blocks['point_in_dir'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("Point in direction")
+        .appendField(new Blockly.FieldAngle(90), "NAME");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(230);
+ this.setTooltip("Point in the direction of the value.");
+ this.setHelpUrl("");
+  }
+};
       Blockly.Blocks['goto_mouse'] = { // Moves sprite
         init: function () {
           this.jsonInit({
