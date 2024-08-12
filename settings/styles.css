@@ -189,7 +189,7 @@ input[type="color"]::-moz-color-swatch {
   border: none;
 }
 
-.oldWeb {
+.oldWebButton {
   background-color: #a85400;
   padding: 9px 17px;
   cursor: pointer;
@@ -199,7 +199,7 @@ input[type="color"]::-moz-color-swatch {
   text-decoration: none;
 }
 
-.oldWeb:hover {
+.oldWebButton:hover {
   background-color: #783c00;
   border: none;
 }
