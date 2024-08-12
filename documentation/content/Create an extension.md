@@ -60,3 +60,6 @@ After you add all your blocks, then add it to the toolbox.
 Bark.AppendCategoryToToolbox(myCategory);
 ```
 ![Category preview](https://bark.dumorando.com/src/images/assets/category.png)
+Then put all of this together into a single `.js` file!
+
+If your having trouble, use [these files](https://github.com/mariocraft987/bark-coding/tree/main/editor/builtinextensions).
