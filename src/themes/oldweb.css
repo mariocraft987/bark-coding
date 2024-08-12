@@ -92,7 +92,7 @@ body {
 
 input {
   padding: 6px;
-  border-color: #a3a3a3;
+  border-color:#8a8fed;
   border-style: solid;
   border-width: 1px;
   font-family: inherit;
@@ -134,7 +134,7 @@ input {
   font-size: 15px;
   border: none;
   color: #000000 !important;
-  background-color: rgb(120, 188, 255) !important;
+  background-color: #8a8fed !important;
   border-radius: 100px;
   flex: 1 0 auto;
 }
