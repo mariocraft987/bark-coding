@@ -66,6 +66,7 @@
     <input type="file" name="pfpupload" id="pfpupload" accept="image/*">
     <br />
     <p id="errpfp" style="color:red"></p>
+    <img id="currentpfp" width=40>
   </div>
   
   <!-- inject:footer -->
@@ -129,5 +130,13 @@
         }
     }
   });
+
+  const response = await fetch(`https://api.bark.dumorando.com/api/v2/fetchUser?username=${encodeURIComponent(username)}`);
+
+  if (response.status === 404) window.location.replace("/404");
+
+  const data = await response.json();
+  document.getElementById('currentpfp').src = data.profilepicture;
+  
 </script>
 </html>
