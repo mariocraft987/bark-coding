@@ -124,7 +124,7 @@
             $('#errpfp').text('profile picture is too big in file size.');
         } else if (response.status === 204) {
             $('#errpfp').css({ color: 'green '}).text('success!');
-            document.getElementById('currentpfp').src = blobtodataurl(file)
+            document.getElementById('currentpfp').src = await blobtodataurl(file)
         } else {
             $('#errpfp').text('something went wrong..');
             console.error(await response.json());
