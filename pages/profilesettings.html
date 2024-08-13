@@ -131,7 +131,7 @@
     }
   });
 
-  const response = await fetch(`https://api.bark.dumorando.com/api/v2/fetchUser?username=${encodeURIComponent(username)}`);
+  const response = await fetch(`https://api.bark.dumorando.com/api/v2/fetchUser?username=${localStorage.myBarkUsername}`);
 
   if (response.status === 404) window.location.replace("/404");
 
