@@ -31,7 +31,7 @@
             <button type="button" name="pranidhi" onclick="switchTheme(`pranidhi`)" class="pranidhiButton">Pranidhi</button>
             <button type="button" name="cherryblossom" onclick="switchTheme(`cherryblossom`)" class="CherryBlossomButton">Cherry Blossom</button>
             <button type="button" name="shelledgastropod" onclick="switchTheme(`shelledgastropod`)" class="SnailButton">Shelled Gastropod</button>
-            <button id="oldweb" type="button" name="oldweb" onclick="switchTheme(`oldweb`)" class="oldWebButton">Old Web</button>
+            <button type="button" name="oldweb" onclick="switchTheme(`oldweb`)" class="oldWebButton">Old Web</button>
 
             <br/>
             <p class="selecttheme" id="forthischangelang">Select a language:</p>
@@ -61,10 +61,6 @@
 <script src="/src/scripts/replacer.js"></script>
 <script src="/settings/settings.js"></script>
 <script>
-    if (localStorage.myBarkUsername != "barkteam") {
-        document.getElementById('oldweb').style.display = "none";
-    }
-    
     let span = document.getElementById("forthischangelang");
     let spanslang = navigator.language
     if (spanslang.includes("zh")) {span.innerHTML = "选择语言："}
