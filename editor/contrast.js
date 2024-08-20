@@ -1,6 +1,6 @@
 // All list colors are sorted by order in the category orders
 
-function contrastBlocks(trueorfalse) {
+function contrastBlocks(isone) {
 // true = blocks on contrast, false = blocks on normal color
 
 let normalcolors = ["#cf9100", "#3399ff", "#689c00", "#1b85d1", "#21d9b7", "#f2951b", "#f2461b", "#e643d2", "#0fbd8c", "#a826ff"]
@@ -8,16 +8,16 @@ let normalcolors = ["#cf9100", "#3399ff", "#689c00", "#1b85d1", "#21d9b7", "#f29
 let contrastcolors = ["#ffce5c", "#8ac4ff", "#c6ff54", "#51aced", "#91ffeb", "#ffc170", "#ff8b6e", "#ff94f2", "#7dfad7", "#d08aff"]
 
 for (let i = 0; i < 10; i++) {
-  if (trueorfalse == true) {
+  if (isone == 1) {
     document.getElementById("blockly-" + i).style.backgroundColor = contrastcolors[i];
     document.getElementById("blockly-" + i + ".label").classList.remove("blocklyTreeLabel");
     document.getElementById("blockly-" + i + ".label").classList.add("blocklyTreeLabelContrast");
-    localStorage.contrast = true;
+    localStorage.contrast = 1;
   } else {
     document.getElementById("blockly-" + i).style.backgroundColor = normalcolors[i];
     document.getElementById("blockly-" + i + ".label").classList.add("blocklyTreeLabel");
     document.getElementById("blockly-" + i + ".label").classList.remove("blocklyTreeLabelContrast");
-    localStorage.contrast = false;
+    localStorage.contrast = 0;
     }
   }
 } 
