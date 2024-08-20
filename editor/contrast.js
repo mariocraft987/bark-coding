@@ -10,10 +10,12 @@ function contrastBlocks(trueorfalse) {
 for (let i = 0; i < 10; i++) {
   if (trueorfalse == true) {
     document.getElementById("blockly-" + i).style.backgroundColor = contrastcolors[i];
-    document.getElementById("blockly-" + i).style.color = "black";
+    document.getElementById("blockly-" + i + ".label").classList.remove("blocklyTreeLabel");
+    document.getElementById("blockly-" + i + ".label").classList.add("blocklyTreeLabelContrast");
   } else {
     document.getElementById("blockly-" + i).style.backgroundColor = normalcolors[i];
-    document.getElementById("blockly-" + i).style.color = "white";
+    document.getElementById("blockly-" + i + ".label").classList.add("blocklyTreeLabel");
+    document.getElementById("blockly-" + i + ".label").classList.remove("blocklyTreeLabelContrast");
     }
   }
 } 
