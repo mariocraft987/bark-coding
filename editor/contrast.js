@@ -12,10 +12,12 @@ for (let i = 0; i < 10; i++) {
     document.getElementById("blockly-" + i).style.backgroundColor = contrastcolors[i];
     document.getElementById("blockly-" + i + ".label").classList.remove("blocklyTreeLabel");
     document.getElementById("blockly-" + i + ".label").classList.add("blocklyTreeLabelContrast");
+    localStorage.contrast = true;
   } else {
     document.getElementById("blockly-" + i).style.backgroundColor = normalcolors[i];
     document.getElementById("blockly-" + i + ".label").classList.add("blocklyTreeLabel");
     document.getElementById("blockly-" + i + ".label").classList.remove("blocklyTreeLabelContrast");
+    localStorage.contrast = false;
     }
   }
 } 
