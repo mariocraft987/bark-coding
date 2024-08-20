@@ -72,7 +72,7 @@
   </div>
 
   <div class="box">
-      <a href="/signout?code=${encodeURIComponent(actionsecret)}" class="right">Sign out?</a>
+      <a onclick="signoutAcc()" class="right">Sign out?</a>
   </div>
   
   <!-- inject:footer -->
@@ -85,6 +85,11 @@
     <script src="https://zeptojs.com/zepto.min.js"></script>
 <script src="/index.js"></script>
 <script src="/src/scripts/replacer.js"></script>
+<script>
+  function signoutAcc() {
+      location.href = `/signout?code=${encodeURIComponent(actionsecret)}`;
+  }
+</script>
 <script type="module">
   if (!localStorage.myBarkUsername) window.location.replace("/login");
   
