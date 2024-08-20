@@ -62,7 +62,19 @@
  this.setHelpUrl("");
   }
 };
-      Blockly.Blocks['goto_mouse'] = { // Moves sprite
+Blockly.Blocks['goto_mouse'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("Go to mouse pointer");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(230);
+ this.setTooltip("Moves the sprite to the mouse");
+ this.setHelpUrl("");
+  }
+};
+/*
+      Blockly.Blocks['goto_mouse'] = { // Moves sprite to mouse
         init: function () {
           this.jsonInit({
             "type": "goto_mouse",
@@ -75,7 +87,8 @@
           });
         }
       };
-      Blockly.Blocks['center'] = { // Moves sprite
+*/
+      Blockly.Blocks['center'] = { // Moves sprite to 0, 0
         init: function () {
           this.jsonInit({
             "type": "center",
