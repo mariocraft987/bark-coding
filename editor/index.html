@@ -320,7 +320,7 @@
   <span id="easterEgg"></span>
   <br/>
   <br/>
-  <button onclick="addContrastBlocks()" id="contrastbutton">Add High Contrast</button>
+  <button onclick="contrastBlocks(Number(localStorage.contrast))">High Contrast</button>
     </span>
 
     <!-- Toolbox Definition -->
@@ -920,18 +920,6 @@ if (theme) {
 <script src="/editor/uploader.js"></script>
 <script src="/editor/extensions.js"></script>
 <script src="/editor/fullscreen.js"></script>
-
-<script>
-  function addContrastBlocks() {
-    if (localStorage.contrast == 1) {
-      document.getElementById("contrastbutton").innerText = "Add High Contrast";
-      contrastBlocks(0)
-    } else {
-      document.getElementById("contrastbutton").innerText = "Remove High Contrast";
-      contrastBlocks(1)
-    }
-  }
-</script>
 <!--
   <script src="/editor/extensions.js"></script>
   to be reimplemented later, for some reason updatetoolbox breaks category switching :(
