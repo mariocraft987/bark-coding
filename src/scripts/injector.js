@@ -1,5 +1,5 @@
 const actionsecret = localStorage.getItem("secret");
-let profile = !!localStorage.getItem("myBarkUsername") ? `<a class="right">Mail</a><a href="/profile/${localStorage.getItem("myBarkUsername")}" class="right">My Profile</a></div>` : '<a href="login" class="right">Login</a><a href="signup" class="right">Join bark</a></div>'
+let profile = !!localStorage.getItem("myBarkUsername") ? `<a href="/mail" class="right">Mail</a><a href="/profile/${localStorage.getItem("myBarkUsername")}" class="right">My Profile</a></div>` : '<a href="login" class="right">Login</a><a href="signup" class="right">Join bark</a></div>'
 let setting = !!localStorage.getItem("myBarkUsername") ? `<a href="/settings">Settings</a>` : ''
 let afdbtn = new Date().getMonth() === 3 && new Date().getDate() === 1 ? "<a id='flip-it-afd-btn'>FLIP IT</a>" : '';
 const components = {
