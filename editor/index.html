@@ -318,6 +318,9 @@
   <label for="spritesize">Size:</label>
   <input value="100" type="number" id="spritesize" name="spritesize" min="0" max="300" onchange="setsize(Number(document.getElementById('spritesize').value))">
   <span id="easterEgg"></span>
+  <br/>
+  <br/>
+  <button onclick="addContrastBlocks" id="contrastbutton">Add High Contrast</button>
     </span>
 
     <!-- Toolbox Definition -->
@@ -917,6 +920,18 @@ if (theme) {
 <script src="/editor/uploader.js"></script>
 <script src="/editor/extensions.js"></script>
 <script src="/editor/fullscreen.js"></script>
+
+<script>
+  function addContrastBlocks() {
+    if (localStorage.contrast == 1) {
+      contrastBlocks(0)
+      document.getElementById("contrastbutton").value = "Add High Contrast";
+    } else {
+      contrastBlocks(1)
+      document.getElementById("contrastbutton").value = "Remove High Contrast";
+    }
+  }
+</script>
 <!--
   <script src="/editor/extensions.js"></script>
   to be reimplemented later, for some reason updatetoolbox breaks category switching :(
