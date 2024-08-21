@@ -87,6 +87,10 @@
     {
       "source": "/game_engine",
       "destination": "/gameengine/index.html"
+    },
+    {
+      "source": "/mail",
+      "destination": "/pages/mail.html"
     }
   ]
 }
