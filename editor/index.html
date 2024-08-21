@@ -320,7 +320,7 @@
   <span id="easterEgg"></span>
   <br/>
   <br/>
-  <button onclick="addContrastBlocks" id="contrastbutton">Add High Contrast</button>
+  <button onclick="addContrastBlocks()" id="contrastbutton">Add High Contrast</button>
     </span>
 
     <!-- Toolbox Definition -->
@@ -924,11 +924,11 @@ if (theme) {
 <script>
   function addContrastBlocks() {
     if (localStorage.contrast == 1) {
+      document.getElementById("contrastbutton").innerText = "Add High Contrast";
       contrastBlocks(0)
-      document.getElementById("contrastbutton").value = "Add High Contrast";
     } else {
+      document.getElementById("contrastbutton").innerText = "Remove High Contrast";
       contrastBlocks(1)
-      document.getElementById("contrastbutton").value = "Remove High Contrast";
     }
   }
 </script>
