@@ -86,6 +86,10 @@
       display: block;
     }
 
+    body.betas #betaeditordiv {
+      display: block;
+    }
+
     #blocklyDiv * {
       transition: 0s;
     }
@@ -282,11 +286,13 @@
   </div>
   <div id="editortabs">
     <button
-      onclick="document.body.classList.add('code'); document.body.classList.remove('costumes'); document.body.classList.remove('sounds'); ">Code</button>
+      onclick="document.body.classList.add('code'); document.body.classList.remove('costumes'); document.body.classList.remove('sounds'); document.body.classList.remove('beta');">Code</button>
     <button
-      onclick="document.body.classList.remove('code'); document.body.classList.add('costumes'); document.body.classList.remove('sounds');">Costumes</button>
+      onclick="document.body.classList.remove('code'); document.body.classList.add('costumes'); document.body.classList.remove('sounds'); document.body.classList.remove('beta');">Costumes</button>
     <button
-      onclick="document.body.classList.remove('code'); document.body.classList.remove('costumes'); document.body.classList.add('sounds');">Sounds</button>
+      onclick="document.body.classList.remove('code'); document.body.classList.remove('costumes'); document.body.classList.add('sounds'); document.body.classList.remove('beta');">Sounds</button>
+    <button
+      onclick="document.body.classList.remove('code'); document.body.classList.remove('costumes'); document.body.classList.add('sounds'); document.body.classList.add('beta');">BETA</button>
   </div>
   <div id="projectPlayer">
     <div id="projectToolbar">
