@@ -82,11 +82,7 @@
       display: block;
     }
 
-    body.extensions #extensionseditordiv {
-      display: block;
-    }
-
-    body.beta #betaeditordiv {
+    body.extensions #extensioneditordiv {
       display: block;
     }
 
@@ -272,7 +268,7 @@
   </div>
 
   <!-- BETA Tab -->
-  <div id="betaeditordiv" class="tabpage">
+  <div id="extensioneditordiv" class="tabpage">
     <h1>Beta</h1>
     <input placeholder="Please enter a key...">
   </div>
@@ -292,13 +288,13 @@
   </div>
   <div id="editortabs">
     <button
-      onclick="document.body.classList.add('code'); document.body.classList.remove('costumes'); document.body.classList.remove('sounds'); document.body.classList.remove('beta');">Code</button>
+      onclick="document.body.classList.add('code'); document.body.classList.remove('costumes'); document.body.classList.remove('sounds'); document.body.classList.remove('extension');">Code</button>
     <button
-      onclick="document.body.classList.remove('code'); document.body.classList.add('costumes'); document.body.classList.remove('sounds'); document.body.classList.remove('beta');">Costumes</button>
+      onclick="document.body.classList.remove('code'); document.body.classList.add('costumes'); document.body.classList.remove('sounds'); document.body.classList.remove('extension');">Costumes</button>
     <button
-      onclick="document.body.classList.remove('code'); document.body.classList.remove('costumes'); document.body.classList.add('sounds'); document.body.classList.remove('beta');">Sounds</button>
+      onclick="document.body.classList.remove('code'); document.body.classList.remove('costumes'); document.body.classList.add('sounds'); document.body.classList.remove('extension');">Sounds</button>
     <button
-      onclick="document.body.classList.remove('code'); document.body.classList.remove('costumes'); document.body.classList.remove('sounds'); document.body.classList.add('beta');">BETA</button>
+      onclick="document.body.classList.remove('code'); document.body.classList.remove('costumes'); document.body.classList.remove('sounds'); document.body.classList.add('extension');">More Extensions</button>
   </div>
   <div id="projectPlayer">
     <div id="projectToolbar">
