@@ -45,7 +45,7 @@
   }
 };
 
-Blockly.Blocks['wait'] = {
+Blockly.Blocks['custom_wait'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("wait for")
