@@ -57,3 +57,17 @@ Blockly.Blocks['custom_wait'] = {
  this.setHelpUrl("");
   }
 };
+
+Blockly.Blocks['onstop'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("when")
+        .appendField(new Blockly.FieldImage("https://bark.dumorando.com/src/projecttoolbar/stopped.svg", 25, 25, { alt: "*", flipRtl: "FALSE" }))
+        .appendField("clicked");
+    this.appendStatementInput("start")
+        .setCheck(null);
+    this.setColour(20);
+ this.setTooltip("Does the code when the stop button is clicked.");
+ this.setHelpUrl("");
+  }
+};
