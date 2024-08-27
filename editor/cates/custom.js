@@ -45,7 +45,7 @@
   }
 };
 
-Blockly.Blocks['custom_wait'] = {
+Blockly.Blocks['bruh_wait'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("wait for")
@@ -59,7 +59,7 @@ Blockly.Blocks['custom_wait'] = {
   }
 };
 
-Blockly.Blocks['onstop'] = {
+Blockly.Blocks['custom_onstop'] = {
   init: function() {
     this.appendDummyInput()
         .appendField("when")
