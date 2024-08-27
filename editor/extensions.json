@@ -1,3 +1,4 @@
+{"extensions":[
 {
   "name": "Sine",
   "creator": "nmmsderp",
@@ -10,3 +11,4 @@
   "imgurl": "https://bark.dumorando.com/src/images/assets/extension_ai.png",
   "codeurl": "https://bark.dumorando.com/editor/builtinextensions/ai.js",
 }
+]}
