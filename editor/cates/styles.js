@@ -76,3 +76,15 @@
           this.setHelpUrl("");
         }
       };
+
+Blockly.Blocks['new_img_uri'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("New img URI")
+        .appendField(new Blockly.FieldTextInput("data:image..."), "NAME");
+    this.setOutput(true, null);
+    this.setColour(330);
+ this.setTooltip("Returns an image URI.");
+ this.setHelpUrl("");
+  }
+};
