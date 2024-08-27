@@ -44,3 +44,14 @@
  this.setHelpUrl("https://www.youtube.com/watch?v=j98suMfW1tc");
   }
 };
+
+Blockly.Blocks['logic_mousedown'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("mouse down?");
+    this.setOutput(true, "Boolean");
+    this.setColour(230);
+ this.setTooltip("If mouse downs, returns True.");
+ this.setHelpUrl("https://en.scratch-wiki.info/wiki/Mouse_Down%3F_(block)");
+  }
+};
