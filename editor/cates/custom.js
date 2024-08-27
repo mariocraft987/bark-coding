@@ -45,13 +45,15 @@
   }
 };
 
-Blockly.Blocks['logic_mousedown'] = {
+Blockly.Blocks['wait'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("mouse down?");
+        .appendField("wait for")
+        .appendField(new Blockly.FieldNumber(0, 0), "NAME")
+        .appendField("secs");
     this.setOutput(true, "Boolean");
-    this.setColour(230);
- this.setTooltip("If mouse downs, returns True.");
- this.setHelpUrl("https://en.scratch-wiki.info/wiki/Mouse_Down%3F_(block)");
+    this.setColour(195);
+ this.setTooltip("Waits for a specific time.");
+ this.setHelpUrl("");
   }
 };
