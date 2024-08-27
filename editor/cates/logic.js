@@ -25,3 +25,28 @@
           this.setHelpUrl("https://en.scratch-wiki.info/wiki/Key_()_Pressed%3F_(block)");
         }
       };
+
+Blockly.Blocks['logic_mousedown'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("mouse down?");
+    this.setOutput(true, "Boolean");
+    this.setColour(230);
+ this.setTooltip("If mouse downs, returns True.");
+ this.setHelpUrl("https://en.scratch-wiki.info/wiki/Mouse_Down%3F_(block)");
+  }
+};
+
+Blockly.Blocks['onstop'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("when")
+        .appendField(new Blockly.FieldImage("https://bark.dumorando.com/src/projecttoolbar/stopped.svg", 15, 15, { alt: "*", flipRtl: "FALSE" }))
+        .appendField("clicked");
+    this.appendStatementInput("start")
+        .setCheck(null);
+    this.setColour(20);
+ this.setTooltip("Does the code when the stop button is clicked.");
+ this.setHelpUrl("");
+  }
+};
