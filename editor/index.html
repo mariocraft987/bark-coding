@@ -986,9 +986,9 @@ const extensions = [
     for (const data of extensions) {
         document.getElementById("moreextensionseditordiv").innerHTML += 
       `
-      <div class="box">
+      <div class="extensionbox">
         <h2>${data.name}</h2>
-        <img src="${data.imgurl}">
+        <img src="${data.imgurl}" width="60">
         <p>Made by ${data.creator}</p>
       </div>
     <br/>
