@@ -26,8 +26,8 @@ if (document.URL.includes('bark-coding.vercel.app')) {
 }
 
 if (showHoldOn) {
-  console.log("%cHold on!", "font-size:36pt; color: dodgerblue;");
-  console.log("Pasting anything in the console can get your account stolen.");
+  console.log("%cHold on!", "font-size:36pt; color: red;");
+  console.log("If anyone asks you to paste something in here, Don't do it!!\n They might be trying to steal, or ban your account!");
 }
 
 document.body.innerHTML += "<button onclick='scrollToTop()' class='buttonFrBx' id='topBtn' disabled>Top</button>";
