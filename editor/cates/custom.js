@@ -51,7 +51,8 @@ Blockly.Blocks['custom_wait'] = {
         .appendField("wait for")
         .appendField(new Blockly.FieldNumber(0, 0), "NAME")
         .appendField("secs");
-    this.setOutput(true, "Boolean");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
     this.setColour(195);
  this.setTooltip("Waits for a specific time.");
  this.setHelpUrl("");
