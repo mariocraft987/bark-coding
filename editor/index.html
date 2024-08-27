@@ -230,6 +230,37 @@
     border: 2px solid white;
     background-color: #333;
   }
+
+    body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.extensionbox {
+    background-color: #fff;
+    border: 2px solid #000;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.extensionbox.h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.extensionbox.p {
+    margin: 5px 0;
+    color: #666;
+}
+
   </style>
 </head>
 
@@ -963,7 +994,15 @@ const extensions = [
 ];
       
     for (const data of extensions) {
-        document.getElementById("moreextensionseditordiv").innerHTML += `<br/><br/><p>c${data.name}, created by ${data.creator}</p>`;
+        document.getElementById("moreextensionseditordiv").innerHTML += 
+      `
+      <div class="box">
+        <h2>${data.name}</h2>
+        <img src="${data.imgurl}">
+        <p>Made by ${data.creator}</p>
+      </div>
+    <br/>
+      `;
     }
       
     </script>
