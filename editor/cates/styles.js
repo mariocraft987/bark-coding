@@ -77,6 +77,36 @@
         }
       };
 
+Blockly.Blocks['style_change'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("Set")
+        .appendField(new Blockly.FieldDropdown([["Size","SIZE"], ["Brightness","BRIGHT"], ["Hue","COLOR"]]), "TYPE")
+        .appendField("to")
+        .appendField(new Blockly.FieldNumber(0), "NAME");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(260);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['style_get'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("Set")
+        .appendField(new Blockly.FieldDropdown([["Size","SIZE"], ["Brightness","BRIGHT"], ["Hue","COLOR"]]), "TYPE")
+        .appendField("to")
+        .appendField(new Blockly.FieldNumber(0), "NAME");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(260);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+
 Blockly.Blocks['new_img_uri'] = {
   init: function() {
     this.appendDummyInput()
