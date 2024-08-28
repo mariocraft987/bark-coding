@@ -18,7 +18,7 @@
         .appendField("get")
         .appendField(new Blockly.FieldDropdown([["x","X"], ["y","Y"]]), "XY")
         .appendField("position");
-    this.setOutput(true, null);
+    this.setOutput(true, "Number");
     this.setColour(230);
  this.setTooltip("");
  this.setHelpUrl("");
