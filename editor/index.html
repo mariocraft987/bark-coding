@@ -992,21 +992,13 @@ const extensions = [
     for (const data of extensions) {
         document.getElementById("moreextensionseditordiv").innerHTML += 
       `
-      <div class="extensionbox" onclick="eval(openextension(${data.codeurl}));">
+      <div class="extensionbox">
         <h2>${data.name}</h2>
         <img src="${data.imgurl}" width="140" alt="Thumbnail of ${data.name}" title="${data.name}, made by ${data.creator}">
         <p>Made by ${data.creator}</p>
       </div>
     <br/>
       `;
-    }
-
-    function openextension(url) {
-      // W3Schools
-      fetch(url)
-    .then(x => x.text())
-    .then(y => let e = (y));
-      return e;
     }
       
     </script>
