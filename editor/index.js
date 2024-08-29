@@ -5,6 +5,6 @@ function start() {
   window.workspace = Blockly.inject('blocklyDiv', {
     toolbox: document.getElementById('toolbox-categories'),
     renderer: 'zelos',
-    theme: 'classic',
+    theme: 'zelos',
   });
 }
