@@ -58,7 +58,7 @@ javascript.javascriptGenerator.forBlock['prompt'] = function(block, generator) {
   return [code, Blockly.javascript.ORDER_NONE];
 };
 
-let randomlyBlocks = Bark.CreateCategory("Randomly Blox", "#07f290");
+let randomlyBlocks = Bark.CreateCategory("Randomly", "#07f290");
 randomlyBlocks.addBlock(Bark.CreateBlock("change_title"));
 randomlyBlocks.addBlock(Bark.CreateBlock("confirm"));
 randomlyBlocks.addBlock(Bark.CreateBlock("prompt"));
