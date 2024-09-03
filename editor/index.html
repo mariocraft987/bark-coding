@@ -702,9 +702,9 @@
       };
        javascript.javascriptGenerator.forBlock['set_position'] = function (block, generator) {
         if (block.getFieldValue("XY") == "x") {
-          x = (block.getFieldValue("NAME");
+          return "moveto('x', " + (block.getFieldValue("NAME")) + ");";
         } else {
-          y = (block.getFieldValue("NAME");
+          return "moveto('y', " + (block.getFieldValue("NAME")) + ");";
         }
       };
       javascript.javascriptGenerator.forBlock['movement_move_y'] = function (block, generator) {
