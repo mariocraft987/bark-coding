@@ -44,14 +44,6 @@ function goto(X, Y) {
   y = Y;
 }
 
-function moveto(xory, int) {
-  if (xory == "x") {
-    x = int;
-  } else {
-    y = int;
-  }
-}
-
 function draw() {
   // Set the background color
   background(bgColor);
