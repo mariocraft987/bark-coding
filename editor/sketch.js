@@ -160,6 +160,14 @@ function setsize(size) {
   timeouts.push(timeoutId);
 }
 
+function moveto(xory, int) {
+  if (xory == "x") {
+    x = int;
+  } else {
+    y = int;
+  }
+}
+
 function sizeOscillation() {
   // Calculate the oscillation size based on sine wave movement
   let sizeFactor = 1 + 0.2 * Math.sin(angle); // Adjust the 0.2 factor for desired amplitude
