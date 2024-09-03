@@ -693,6 +693,20 @@
       javascript.javascriptGenerator.forBlock['movement_move_x'] = function (block, generator) {
         return "basicMoveX(" + block.getFieldValue("NUM") + ");";
       };
+      javascript.javascriptGenerator.forBlock['get_position'] = function (block, generator) {
+        if (block.getFieldValue("XY") == "x") {
+          return x;
+        } else {
+          return y;
+        }
+      };
+       javascript.javascriptGenerator.forBlock['set_position'] = function (block, generator) {
+        if (block.getFieldValue("XY") == "x") {
+          x = (block.getFieldValue("NAME");
+        } else {
+          y = (block.getFieldValue("NAME");
+        }
+      };
       javascript.javascriptGenerator.forBlock['movement_move_y'] = function (block, generator) {
         return "basicMoveY(" + block.getFieldValue("NUM") + ");";
       };
