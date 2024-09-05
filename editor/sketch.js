@@ -160,11 +160,19 @@ function setsize(size) {
   timeouts.push(timeoutId);
 }
 
+function gotox(X) {
+  x = X;
+}
+
+function gotoy(Y) {
+  y = Y;
+}
+
 function moveto(xory, int) {
   if (xory == "x") {
-    x = int;
+    gotox(int)
   } else {
-    y = int;
+    gotoy(int)
   }
 }
 
