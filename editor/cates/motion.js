@@ -1,4 +1,19 @@
-      Blockly.Blocks['set_position'] = {
+Blockly.Blocks['set_xy_pos'] = {
+  init: function() {
+    this.appendValueInput("NAME")
+        .setCheck(null)
+        .appendField("Set sprite X to:")
+        .appendField(new Blockly.FieldTextInput("0"), "X")
+        .appendField("Y to:")
+        .appendField(new Blockly.FieldTextInput("0"), "Y");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(230);
+ this.setTooltip("Sets the X & Y pos to a value.");
+ this.setHelpUrl("");
+  }
+};
+Blockly.Blocks['set_position'] = {
         init: function () {
           this.appendValueInput("NAME")
             .setCheck(null)
