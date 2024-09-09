@@ -7,10 +7,11 @@
 Bark is a website that makes programming easy, so users of any age can create and share games, animations, and everything else! &#128054;<br>
 Bark has many features, including:
 - Dark mode
+- Theme selection
 - Custom stage size&ast;
 - Customize editor layout&ast;
 - Paint editor&ast;
-- Accounts/Community&ast;
+- Accounts/Community
 - More features soon, Bark is still in its early stages
 
 `*` = coming soon
