@@ -66,7 +66,9 @@
           <option value="other">Other</option>
         </select>
         <br/>
-        <input type="other_gender" id="other_gender" placeholder="other" />
+          <center>
+            <input type="other_gender" id="other_gender" placeholder="other" />
+          </center>
         <br />
         <br />
         <button class="buttonFrBx" onclick="checkSignup()">Sign up</button>
@@ -136,6 +138,13 @@
   }
 
   checkGender()
+
+window.addEventListener('beforeunload', function (e) {
+    if (document.getElementById("username").value !== '' || document.getElementById("password").value !== '' || document.getElementById("email").value !== '') {
+        e.preventDefault();
+        e.returnValue = '';
+    }
+});
 </script>
 <script src="/src/scripts/usernameGen.js"></script>
 <script src="/src/scripts/navbar.js"></script>
