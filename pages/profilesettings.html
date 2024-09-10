@@ -60,6 +60,7 @@
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt atque eos praesentium magnam minima eum explicabo, aut, doloremque itaque officiis, expedita amet. Expedita inventore aut amet perferendis alias labore maiores!
     </textarea>
     <br />
+    <button class="buttonFrBx" onclick="addURL()">Save</button>
     <button class="buttonFrBx" id="setbio">Save</button>
   </div>
 
@@ -86,6 +87,11 @@
 <script src="/index.js"></script>
 <script src="/src/scripts/replacer.js"></script>
 <script>
+  function addURL() {
+    document.getElementById("bio").value += "\n[text](url)";
+    document.getElementById("bio").focus();
+  }
+
   function signoutAcc() {
       const actionsecret = localStorage.getItem("secret");
       location.href = `/signout?code=${encodeURIComponent(actionsecret)}`;
