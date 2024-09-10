@@ -21,7 +21,7 @@ Blockly.Blocks['letters_from'] = {
         .appendField(new Blockly.FieldNumber(5, 0, 999), "LAST")
         .appendField("of");
     this.setOutput(true, "String");
-    this.setColour(160);
+    this.setColour(165);
  this.setTooltip("Returns the string from 2 number inputs in a variable.");
  this.setHelpUrl("https://scratch.mit.edu/users/legoer3/#comments");
   }
