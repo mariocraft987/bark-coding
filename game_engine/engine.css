@@ -2,8 +2,6 @@ body {
     background-color: #2a2a2e;
     color: white;
     font-family: Arial, sans-serif;
-    padding-top: 5em;
-    display: flex;
 }
 
 textarea {
@@ -40,6 +38,10 @@ textarea {
     background-color: #424242;
   }
   
+.beginning {
+    padding-top: 5em;
+    display: flex;
+}
 
 .typewriter h1 {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
