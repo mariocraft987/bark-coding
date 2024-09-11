@@ -3,52 +3,12 @@
   <head>
     <meta charset="UTF-8">
     <title>Bark game engine test</title>
-
-    <style>
-body {
-    background-color: #2a2a2e;
-    color: white;
-    font-family: Arial, sans-serif;
-}
-
-textarea {
-    background-color: #3e3e42;
-    color: white;
-    border-radius: 5px;
-}
-
-#beginning {
-    text-align: center;
-}
-
-.boxsettings {
-    border-radius: 2px;
-    padding: 5px 5px;
-    background-color: #3d3d4e;
-}
-
-.topnav {
-    overflow: hidden;
-    background-color: #303030;
-  }
-  
-  .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 6px 16px;
-    text-decoration: none;
-    font-size: 13px;
-  }
-  
-  .topnav a:hover {
-    background-color: #424242;
-  }
-  
-    </style>
+    <link rel="stylesheet" href="/game_engine/engine.css"/>
   </head>
   <body>
+    <div class="typewriter">
     <span id="beginning"><h1>AtomicBolts presents...</h1></span>
+    </div>
 
     <span id="editor" style="display: none;">
 
@@ -78,7 +38,7 @@ textarea {
 
   </body>
   <script>
-    const Timeout = setTimeout(starteditor, 1500);
+    const Timeout = setTimeout(starteditor, 3000);
 
     function starteditor() {
         document.getElementById("beginning").style.display = "none";
