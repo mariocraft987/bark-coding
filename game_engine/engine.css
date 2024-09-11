@@ -2,6 +2,8 @@ body {
     background-color: #2a2a2e;
     color: white;
     font-family: Arial, sans-serif;
+    padding-top: 5em;
+    display: flex;
 }
 
 textarea {
@@ -36,13 +38,6 @@ textarea {
   
   .topnav a:hover {
     background-color: #424242;
-  }
-
-.beginning {
-    background: #333;
-    padding-top: 5em;
-    display: flex;
-    justify-content: center;
   }
   
 
