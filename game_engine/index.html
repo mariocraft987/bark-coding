@@ -6,8 +6,12 @@
     <link rel="stylesheet" href="/game_engine/engine.css"/>
   </head>
   <body>
-    <span class="typewriter" id="beginning">
+    <span id="beginning">
+
+      <div class="typewriter">
       <h1>AtomicBolts presents...</h1>
+      </div>
+      
     </span>
 
     <span id="editor" style="display: none;">
@@ -38,7 +42,7 @@
 
   </body>
   <script>
-    const Timeout = setTimeout(starteditor, 3000);
+    const Timeout = setTimeout(starteditor, 1500);
 
     function starteditor() {
         document.getElementById("beginning").style.display = "none";
