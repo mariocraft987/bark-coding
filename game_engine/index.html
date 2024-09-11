@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Bark game engine test</title>
+
+    <style>
+body {
+    background-color: #2a2a2e;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+textarea {
+    background-color: #3e3e42;
+    color: white;
+    border-radius: 5px;
+}
+
+#beginning {
+    text-align: center;
+}
+
+.boxsettings {
+    border-radius: 2px;
+    padding: 5px 5px;
+    background-color: #3d3d4e;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #303030;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 6px 16px;
+    text-decoration: none;
+    font-size: 13px;
+  }
+  
+  .topnav a:hover {
+    background-color: #424242;
+  }
+  
+    </style>
+  </head>
+  <body>
+    <span id="beginning"><h1>AtomicBolts presents...</h1></span>
+
+    <span id="editor" style="display: none;">
+
+      <div class="topnav">
+        <a href="#">File</a>
+        <a href="#">Edit</a>
+        <a href="#">View</a>
+        <a href="#">Run</a>
+        <a href="#">Help</a>
+      </div>
+
+    <div style="padding: 20px;">
+    <h4>Barkscript BETA</h4>
+    <img src="/src/images/assets/gameengine_assets/add_player_button.png" onclick="add('player')" style="cursor: pointer;" title="Add Player">
+    <img src="/src/images/assets/gameengine_assets/add_object_button.png" onclick="add('object')" style="cursor: pointer;" title="Add Object">
+    <img src="/src/images/assets/gameengine_assets/add_button_button.png" style="cursor: pointer;" title="Add Button">
+    <img src="/src/images/assets/gameengine_assets/add_image_button.png" style="cursor: pointer;" title="Add Image">
+    <img src="/src/images/assets/gameengine_assets/add_text_button.png" style="cursor: pointer;" title="Add Text">
+    <img src="/src/images/assets/gameengine_assets/add_var_button.png" style="cursor: pointer;" title="Add new variable">
+    <img src="/src/images/assets/gameengine_assets/add_sp_button.png" style="cursor: pointer;" title="Add Secondary Character">
+    <img src="/src/images/assets/gameengine_assets/add_particles_button.png" style="cursor: pointer;" title="Add Particle System">
+    </div>
+
+    <span id="object-box"></span>
+
+    </span>
+
+  </body>
+  <script>
+    const Timeout = setTimeout(starteditor, 1500);
+
+    function starteditor() {
+        document.getElementById("beginning").style.display = "none";
+        document.getElementById("editor").style.display = "block";
+    }
+
+    function add(type) {
+      // add a setting box for each type
+      if (type == "player") {
+        document.getElementById("object-box").innerHTML += 
+        '<div class="boxsettings"><p>Player</p><input type="file"><br/><br/><label>Motion:</label><select><option value="none">None</option><option value="topdown">Top-Down</option><option value="pphysics">Platformer Physics</option><option value="mouse">Move-to mouse</option></select></div><br/>';
+
+      }
+
+      else if (type == "object") {
+        document.getElementById("object-box").innerHTML += 
+        '<div class="boxsettings"><p>Object</p><input type="file"><br/><br/><label>Motion:</label><select><option value="none">None</option><option value="topdown">Top-Down</option><option value="pphysics">Platformer Physics</option><option value="mouse">Move-to mouse</option></select></div><br/>';
+
+      }
+    }
+  </script>
+</html>
