@@ -53,13 +53,13 @@
       // add a setting box for each type
       if (type == "player") {
         document.getElementById("object-box").innerHTML += 
-        '<div class="boxsettings">Player<br/><input type="file"><br/><br/><label>Motion:</label><select><option value="none">None</option><option value="topdown">Top-Down</option><option value="pphysics">Platformer Physics</option><option value="mouse">Move-to mouse</option></select></div>';
+        '<div class="boxsettings">Player:<br/><input type="file"><br/><br/><label>Motion:</label><select><option value="none">None</option><option value="topdown">Top-Down</option><option value="pphysics">Platformer Physics</option><option value="mouse">Move-to mouse</option></select></div>';
 
       }
 
       else if (type == "object") {
         document.getElementById("object-box").innerHTML += 
-        '<div class="boxsettings">Object<br/><input type="file"><br/><br/><label>Motion:</label><select><option value="none">None</option><option value="topdown">Top-Down</option><option value="pphysics">Platformer Physics</option><option value="mouse">Move-to mouse</option></select></div>';
+        '<div class="boxsettings">Object:<br/><br/><label>Motion:</label><select><option value="none">None</option><option value="topdown">Top-Down</option><option value="pphysics">Platformer Physics</option><option value="mouse">Move-to mouse</option></select></div>';
 
       }
     }

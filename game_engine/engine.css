@@ -17,17 +17,17 @@ textarea {
 .boxsettings {
     border-radius: 1px;
     padding: 4px 4px;
-    margin: 10px;
+    margin: 7px;
     background-color: #19161c;
     font-family: monospace
 }
 
-.boxsettings input[type="file"] {
+input[type="file"] {
   color: white;
   background-color: #19161c;
 }
 
-.boxsettings option {
+option {
   color: white;
   background-color: #19161c;
 }
