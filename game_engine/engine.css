@@ -16,8 +16,8 @@ textarea {
 
 .boxsettings {
     border-radius: 1px;
-    padding: 2px 2px;
-    margin: 3px;
+    padding: 4px 4px;
+    margin: 10px;
     background-color: #19161c;
     font-family: monospace
 }
