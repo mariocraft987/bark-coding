@@ -26,8 +26,8 @@
 
     <div style="padding: 20px;">
     <h4>Barkscript BETA</h4>
-    <img src="/src/images/assets/gameengine_assets/add_player_button.png" onclick="add('player')" style="cursor: pointer;" title="Add Player">
-    <img src="/src/images/assets/gameengine_assets/add_object_button.png" onclick="add('object')" style="cursor: pointer;" title="Add Object">
+    <img src="/src/images/assets/gameengine_assets/add_player_button.png" onclick="addElement('player')" style="cursor: pointer;" title="Add Player">
+    <img src="/src/images/assets/gameengine_assets/add_object_button.png" onclick="addElement('object')" style="cursor: pointer;" title="Add Object">
     <img src="/src/images/assets/gameengine_assets/add_button_button.png" style="cursor: pointer;" title="Add Button">
     <img src="/src/images/assets/gameengine_assets/add_image_button.png" style="cursor: pointer;" title="Add Image">
     <img src="/src/images/assets/gameengine_assets/add_text_button.png" style="cursor: pointer;" title="Add Text">
@@ -49,18 +49,26 @@
         document.getElementById("editor").style.display = "block";
     }
 
-    function add(type) {
+    function addElement(type) {
       // add a setting box for each type
       if (type == "player") {
-        document.getElementById("object-box").innerHTML += 
-        '<div class="boxsettings">Player:<br/><input type="file"><br/><br/><label>Motion:</label><select><option value="none">None</option><option value="topdown">Top-Down</option><option value="pphysics">Platformer Physics</option><option value="mouse">Move-to mouse</option></select></div>';
+        
+        let output = '<div class="boxsettings">Player:<br/><br/>';
+        output += '<input type="file"><br/>'
+        output += '<label>Motion:</label>'
+        output += '<select><option value="none">None</option><option value="topdown">Top-Down</option>'
+        output += '<option value="pphysics">Platformer Physics</option><option value="mouse">Move-to mouse</option></select></div>'
+        document.getElementById("object-box").innerHTML += output
 
       }
 
       else if (type == "object") {
-        document.getElementById("object-box").innerHTML += 
-        '<div class="boxsettings">Object:<br/><br/><label>Motion:</label><select><option value="none">None</option><option value="topdown">Top-Down</option><option value="pphysics">Platformer Physics</option><option value="mouse">Move-to mouse</option></select></div>';
-
+        
+        let output  = '<div class="boxsettings">Object:<br/><br/>';
+        output += '<label>Motion:</label>'
+        output += '<select><option value="none">None</option><option value="topdown">Top-Down</option>'
+        output += '<option value="pphysics">Platformer Physics</option><option value="mouse">Move-to mouse</option></select></div>'
+        document.getElementById("object-box").innerHTML += output
       }
     }
   </script>
