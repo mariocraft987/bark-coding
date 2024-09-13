@@ -16,9 +16,14 @@ textarea {
 
 .boxsettings {
     border-radius: 1px;
-    padding: 5px 5px;
+    padding: 2px 2px;
     background-color: #19161c;
     font-family: monospace
+}
+
+.boxsettings input[type="file"] {
+  color: white;
+  background-color: #19161c;
 }
 
 .topnav {
