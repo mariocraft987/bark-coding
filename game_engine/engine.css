@@ -26,6 +26,11 @@ textarea {
   background-color: #19161c;
 }
 
+.boxsettings option {
+  color: white;
+  background-color: #19161c;
+}
+
 .topnav {
     overflow: hidden;
     background-color: #303030;
