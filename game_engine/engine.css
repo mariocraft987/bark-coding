@@ -15,9 +15,10 @@ textarea {
 }
 
 .boxsettings {
-    border-radius: 2px;
+    border-radius: 1px;
     padding: 5px 5px;
-    background-color: #3d3d4e;
+    background-color: #19161c;
+    font-family: monospace
 }
 
 .topnav {
