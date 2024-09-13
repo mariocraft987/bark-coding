@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Bark game engine test</title>
-    <link rel="stylesheet" href="/game_engine/engine.css"/>
+    <link rel="stylesheet" href="/game_engine/style.css"/>
   </head>
   <body>
     <span id="beginning">
@@ -54,7 +54,7 @@
       if (type == "player") {
         
         let output = '<div class="boxsettings">Player:<br/><br/>';
-        output += '<input type="file"><br/>'
+        output += '<input type="file"><br/><br/>'
         output += '<label>Motion:</label>'
         output += '<select><option value="none">None</option><option value="topdown">Top-Down</option>'
         output += '<option value="pphysics">Platformer Physics</option><option value="mouse">Move-to mouse</option></select></div>'
@@ -72,4 +72,5 @@
       }
     }
   </script>
+  <script src="/game_engine/engine.js"></script>
 </html>
