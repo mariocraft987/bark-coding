@@ -62,7 +62,7 @@ body {
   font-size: 17px;
   text-align: center;
   outline: none;
-  color: #303030;
+  color: #616161;
   border-radius: 1px;
   background-color: #534f6e;
   margin-top: 15px;
@@ -299,7 +299,8 @@ textarea {
 }
 
 footer {
-  background-color: rgb(0, 127, 255, 0.24);
+  color: #ffffff;
+  background-color: #3d3d3d;
   margin-top: 200px;
   height: 25vh;
   padding: 40px;
