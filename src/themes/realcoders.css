@@ -6,7 +6,7 @@ html:has(.dark-mode) {
 }
 
 body {
-  font-family: Arial, Helvetica, "Bazin", sans-serif;
+  font-family: monospace;
   background-color: White;
   font-weight: 450;
   margin: 0;
@@ -23,7 +23,7 @@ body {
 
 .navbar {
   overflow: hidden;
-  height: 45px;
+  height: 30px;
   background-color: #1d1b29;
   display: flex;
   align-items: center;
