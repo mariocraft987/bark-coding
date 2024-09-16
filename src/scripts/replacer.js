@@ -162,6 +162,36 @@ const emojis = [
         emoji: "clap",
         url: "/src/emojis/svg/normal/clap.svg"
     },
+    {
+        token: ":cool:",
+        emoji: "cool",
+        url: "/src/emojis/svg/normal/cooldude.svg"
+    },
+    {
+        token: ":devilLike:",
+        emoji: "devilLike",
+        url: "/src/emojis/svg/normal/devilLike.svg"
+    },
+    {
+        token: ":itsyou:",
+        emoji: "itsyou",
+        url: "/src/emojis/svg/normal/itsyou.svg"
+    },
+    {
+        token: ":oksign:",
+        emoji: "oksign",
+        url: "/src/emojis/svg/normal/oksign.svg"
+    },
+    {
+        token: ":peace:",
+        emoji: "peace",
+        url: "/src/emojis/svg/normal/peace.svg"
+    },
+    {
+        token: ":shrug:",
+        emoji: "shrug",
+        url: "/src/emojis/svg/normal/shrug.svg"
+    }
     /*{
         token: ":emojiName:",
         emoji: "emoji name",

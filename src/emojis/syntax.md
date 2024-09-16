@@ -12,7 +12,9 @@
 |`:barklogo:`  |<img src="svg/normal/barklogo.svg" width="25" height="25">|<a href="https://github.com/nmsderp">nmsderp</a>|
 |`:clap:`      |<img src="svg/normal/clap.svg" width="25" height="25">|<a href="https://github.com/qwertyy-dev">qwertyy-dev</a>|
 |`:clapAnim:`  |<img src="svg/normal/clap_anim.gif" width="25" height="25">|<a href="https://github.com/qwertyy-dev">qwertyy-dev</a>|
+|`:cool:`    |<img src="svg/normal/cooldude.svg" width="25" height="25">|<a href="https://github.com/mariocraft987">Mariocraft987</a>|
 |`:dizzy:`     |<img src="svg/normal/dizzy.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
+|`:devilLike:`    |<img src="svg/normal/devilLike.svg" width="25" height="25">|<a href="https://github.com/mariocraft987">Mariocraft987</a>|
 |`:dumo:`      |<img src="svg/dev/dumo.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:evil:`      |<img src="svg/normal/evil.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:fire:`      |<img src="svg/normal/fire.svg" width="25" height="25">|<a href="https://github.com/qwertyy-dev">qwertyy-dev</a>|
@@ -20,6 +22,7 @@
 |`:happy:`     |<img src="svg/normal/happy.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:jealous:`   |<img src="svg/normal/jealous.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:joyful:`    |<img src="svg/normal/joyful.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
+|`:itsyou:`    |<img src="svg/normal/itsyou.svg" width="25" height="25">|<a href="https://github.com/mariocraft987">Mariocraft987</a>|
 |`:loading:`   |<img src="svg/normal/loading.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:lol:`       |<img src="svg/normal/lol.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:mad:`       |<img src="svg/normal/mad.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
@@ -27,7 +30,9 @@
 |`:mewing:`    |<img src="svg/joke/mewing.svg" width="25" height="25">|<a href="https://github.com/nmsderp">nmsderp</a>|
 |`:moneyEyes:` |<img src="svg/normal/moneyEyes.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:nmsderp:`   |<img src="svg/dev/nmsderp.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
+|`:oksign:`    |<img src="svg/normal/oksign.svg" width="25" height="25">|<a href="https://github.com/mariocraft987">Mariocraft987</a>|
 |`:panic:`     |<img src="svg/normal/panic.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
+|`:peace:`    |<img src="svg/normal/peace.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:pride:`     |<img src="svg/normal/pride.svg" width="25" height="25">|<a href="https://github.com/qwertyy-dev">qwertyy-dev</a>|
 |`:qwertyy:`   |<img src="svg/dev/qwertyy.png" width="25" height="25">|<a href="https://github.com/qwertyy-dev">qwertyy-dev</a>|
 |`:raisedEyebrow:`   |<img src="svg/normal/raiseEyebrow.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
@@ -38,6 +43,7 @@
 |`:smallSmile:`|<img src="svg/normal/smallsmile.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:smiley:`    |<img src="svg/normal/smiley.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:skibidi:`    |<img src="svg/joke/skibidi.svg" width="25" height="25">|<a href="https://github.com/mariocraft987">Mariocraft987</a>|
+|`:shrug:`    |<img src="svg/normal/shrug.svg" width="25" height="25">|<a href="https://github.com/mariocraft987">Mariocraft987</a>|
 |`:sussedOut:` |<img src="svg/normal/sussedOut.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:textHappy:` |<img src="svg/normal/textHappy.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:thumb:`     |<img src="svg/normal/thumb.svg" width="25" height="25">|<a href="https://github.com/Rubiidev-18">Rubiidev-18</a>|
