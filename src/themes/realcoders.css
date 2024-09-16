@@ -41,7 +41,7 @@ body {
   display: flex;
   gap: 10px;
   white-space: nowrap;
-  translate: 0px -9px;
+  translate: 0px -7px;
 }
 
 .navbar a.right {
@@ -62,9 +62,9 @@ body {
   font-size: 17px;
   text-align: center;
   outline: none;
-  color: #534f6e;
+  color: #303030;
   border-radius: 1px;
-  background-color: rgb(0, 127, 255, 0.24);
+  background-color: #534f6e;
   margin-top: 15px;
   width: 900px;
   margin-left: calc(50% - 476px);
@@ -134,8 +134,8 @@ input {
   font-size: 15px;
   border: none;
   color: #000000 !important;
-  background-color: #4a4a4a !important;
-  border-radius: 100px;
+  background-color: #666565 !important;
+  border-radius: 80px;
   flex: 1 0 auto;
 }
 
