@@ -41,6 +41,7 @@ body {
   display: flex;
   gap: 10px;
   white-space: nowrap;
+  translate: 0px -9px;
 }
 
 .navbar a.right {
@@ -133,7 +134,7 @@ input {
   font-size: 15px;
   border: none;
   color: #000000 !important;
-  background-color: rgb(120, 188, 255) !important;
+  background-color: #4a4a4a !important;
   border-radius: 100px;
   flex: 1 0 auto;
 }
@@ -273,7 +274,7 @@ xml category {
 }
 
 ::placeholder {
-  color: #808080;
+  color: #383838;
   opacity: 0.8;
 }
 
