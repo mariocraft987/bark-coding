@@ -62,6 +62,7 @@
   <!-- inject:navbar -->
   <div class="box">
     <h2 class="welcome">Welcome!</h2>
+    <span id="formisterbrick"></span>
     <p class="barkfromblockly">Bark is a programming language building off of Google's <i>Blockly</i>.</p>
     <p class="barkinspiredscratch">Bark is inspired by <a class="link" href="https://scratch.mit.edu">Scratch</a>. <img
         src='/src/emojis/svg/normal/smiley.svg' alt="smiley emoji" width="20" height="20"><img src='/src/emojis/svg/normal/thumb.svg'
@@ -116,6 +117,10 @@
 <script src="/src/scripts/replacer.js"></script>
 <script>
 
+  if (localStorage.myBarkUsername == "Mister_Brick") {
+    document.getElementById("formisterbrick").innerHTML = "Dude, cannot you get a Discord account, or another Scratch account?? - mariocraft987"
+  }
+  
   //**blob to dataURL**
   function blobToDataURL(blob) {
       return new Promise((resolve, reject) => {
