@@ -101,6 +101,7 @@
       <button class="buttonFrBx" id="postprofilecomment">Post</button>
       <span id="commenterror"></span>
     </div>
+    <div id="comments"></div>
   </div>
   
   <!-- inject:footer -->
@@ -134,7 +135,8 @@
   const data = await response.json();
   const pfpbox = document.getElementById('pfp');
   pfpbox.src = data.profilepicture;
-  
+
+  const comments = document.getElementById('comments');
   const bio = document.getElementById('bio');
   bio.innerHTML = replace(data.bio);
 
@@ -151,7 +153,7 @@
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-          bio: document.getElementById("texttoexecute").value
+          comments: replace(document.getElementById("commentbox").value)
         })
       });
         if (response.status === 404) {
@@ -162,7 +164,7 @@
         }
     });
 
-const comments = await fetch(
+const commentresponse = await fetch(
       "https://api.bark.dumorando.com/api/v2/profileComments?username=marioc"
     ).then((data) => data.json());
   
