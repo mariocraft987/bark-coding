@@ -1018,7 +1018,7 @@ const extensions = [
     for (const data of extensions) {
         document.getElementById("moreextensionseditordiv").innerHTML += 
       `
-      <div class="extensionbox" onclick="setTimeout(fetchandexecute('${data.codeurl}'), 50);">
+      <div class="extensionbox" onclick="setTimeout(fetchandexecute('${data.codeurl}'), 200);">
         <h2>${data.name}</h2>
         <img src="${data.imgurl}" width="140" alt="Thumbnail of ${data.name}" title="${data.name}, made by ${data.creator}">
         <p>Made by ${data.creator}</p>
