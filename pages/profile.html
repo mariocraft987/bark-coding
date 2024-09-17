@@ -139,9 +139,8 @@
   }
 
     // be able to post comments? plz???
-    document.getElementById('commentposter').classList.add('show');
       document.getElementById('postprofilecomment').addEventListener('click', async () => {
-      await fetch(`https://api.bark.dumorando.com/api/v2/postProfileComment?username=${username}&comment=${document.getElementById('commentbox').value}`, {
+      await fetch(`https://api.bark.dumorando.com/api/v2/postProfileComment?username=${username}&comment=${replace(document.getElementById('commentbox').value)}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
@@ -151,6 +150,11 @@
         })
       });
     });
+
+const comments = await fetch(
+      "https://api.bark.dumorando.com/api/v2/profileComments?username=marioc"
+    ).then((data) => data.json());
+  
 
   if (await amiadmin()) {
     document.getElementById('admin').classList.add('show');
