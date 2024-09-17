@@ -91,8 +91,11 @@
   <div style="text-align: center;">
   <br/>
   <br/>
-  <textarea placeholder="Hi guys..." rows="3" cols="25"></textarea>
-
+    <div id="commentposter">
+      <textarea id="commentbox" placeholder="Hi guys... I made this small project..." rows="3" cols="25"></textarea>
+      <br/>
+      <button class="buttonFrBx" id="postprofilecomment">Post</button>
+    </div>
   </div>
   
   <!-- inject:footer -->
@@ -129,6 +132,24 @@
   if (await isuseradmin(username)) {
     document.getElementById('username').outerHTML += "<admin-pin>Bark team</admin-pin>";
     document.getElementById('username').style.color = "#ffa70f";
+  }
+
+    // be able to post comments? plz???
+  if((!!localStorage.myBarkUsername)) {
+    document.getElementById('commentposter').classList.add('show');
+      document.getElementById('postprofilecomment').addEventListener('click', async () => {
+      await fetch(`https://api.bark.dumorando.com/api/v2/postProfileComment?username=${username}&comment=${document.getElementById('commentbox').value}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          bio: document.getElementById("texttoexecute").value
+        })
+      });
+    });
+  } else {
+    document.getElementById('commentposter').remove();
   }
 
   if (await amiadmin()) {
