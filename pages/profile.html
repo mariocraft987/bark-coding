@@ -101,7 +101,6 @@
       <button class="buttonFrBx" id="postprofilecomment">Post</button>
       <span id="commenterror"></span>
     </div>
-    <div id="comments"></div>
   </div>
   
   <!-- inject:footer -->
@@ -136,7 +135,6 @@
   const pfpbox = document.getElementById('pfp');
   pfpbox.src = data.profilepicture;
 
-  const comments = document.getElementById('comments');
   const bio = document.getElementById('bio');
   bio.innerHTML = replace(data.bio);
 
@@ -144,31 +142,7 @@
     document.getElementById('username').outerHTML += "<admin-pin>Bark team</admin-pin>";
     document.getElementById('username').style.color = "#ffa70f";
   }
-
-    // be able to post comments? plz???
-      document.getElementById('postprofilecomment').addEventListener('click', async () => {
-      await fetch(`https://api.bark.dumorando.com/api/v2/postProfileComment?username=${username}&comment=${replace(document.getElementById('commentbox').value)}`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          comments: replace(document.getElementById("commentbox").value)
-        })
-      });
-        if (response.status === 404) {
-            document.getElementById('commenterror').innerHTML = "400: Invalid Request";
-        }
-        if (response.status === 404) {
-            document.getElementById('commenterror').innerHTML = "404: Not Found";
-        }
-    });
-
-const commentresponse = await fetch(
-      "https://api.bark.dumorando.com/api/v2/profileComments?username=marioc"
-    ).then((data) => data.json());
   
-
   if (await amiadmin()) {
     document.getElementById('admin').classList.add('show');
 
