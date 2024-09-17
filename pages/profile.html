@@ -108,6 +108,8 @@
 <script src="/src/scripts/replacer.js"></script>
 <script src="/src/scripts/admin.js"></script>
 <script type="module">
+  document.getElementById('commentposter').remove();
+  
   let parts = window.location.href.split("/");
   const username = parts[parts.length - 1];
   if (username !== localStorage.getItem('myBarkUsername')) {
@@ -148,8 +150,6 @@
         })
       });
     });
-  } else {
-    document.getElementById('commentposter').remove();
   }
 
   if (await amiadmin()) {
