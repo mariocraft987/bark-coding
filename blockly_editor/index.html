@@ -990,6 +990,14 @@ if (theme) {
     </script>
 
     <script>
+      // scripts for extensions
+
+       function fetchandexecute(url) {
+        let file = url;
+      fetch (file)
+        .then(x => x.text())
+        .then(y => eval(y));
+      }
 
 const extensions = [
   {
@@ -1023,13 +1031,6 @@ const extensions = [
     <br/>
       `;
     }
-
-      function fetchandexecute(url) {
-        let file = url;
-      fetch (file)
-        .then(x => x.text())
-        .then(y => eval(y));
-      }
       
     </script>
     
