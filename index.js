@@ -47,6 +47,7 @@ function CheckLoggedIn() {
 
     return;
   }
+  
   // Quick note, probably shouldn't send the token in the search string, use POST instead.
   fetch(`https://api.bark.dumorando.com/api/v2/currentUser?token=${localStorage.getItem("barktoken")}`)
     .then(data => data.json())
@@ -220,3 +221,5 @@ function closeAllSelect(elemnt) {
   }
 }
 document.addEventListener("click", closeAllSelect);
+
+console.log("All scripts were run sucessfully")
