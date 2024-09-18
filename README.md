@@ -39,7 +39,7 @@ To be a part of Bark's development, please go to <a href="https://bark.dumorando
 <hr>
 
 ## How do I add blocks?
-Go to <a href="https://github.com/mariocraft987/bark.github.io/blob/main/editor/block_adding.md">`block_adding.md`</a> and follow the steps, but, if you'r lazy and want one of us to do it, make a discussion in [Here!](https://github.com/mariocraft987/bark.github.io/discussions/categories/block-requests)
+Go to <a href="https://bark.dumorando.com/docs#/Add%20a%20new%20block">`block_adding.md`</a> and follow the steps. If you have made a library of blocks, why not make an <a href="https://bark.dumorando.com/docs#/Create%20an%20extension">extension</a> but, if you're lazy and want one of us to do it, make a discussion in [Here!](https://github.com/mariocraft987/bark.github.io/discussions/categories/block-requests)
 
 # License
 
