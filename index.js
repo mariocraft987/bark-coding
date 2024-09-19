@@ -222,4 +222,4 @@ function closeAllSelect(elemnt) {
 }
 document.addEventListener("click", closeAllSelect);
 
-console.log("All scripts were run sucessfully")
+console.log("All scripts were run successfully")
