@@ -55,8 +55,8 @@
         
         let output = '<div class="boxsettings"><img src="/src/images/assets/gameengine_assets/add_player_button.png" width="20">Player:<br/><br/>';
         output += '<input type="file"><br/><br/>'
-        output += '<input type="number" placeholder="X" min="-3489" max="3489"><br/><input type="number" placeholder="Y" min="-3489" max="3489"><br/>'
         output += '<label>Motion:</label>'
+        output += '<br/><input type="number" placeholder="X" min="-3489" max="3489"><br/><input type="number" placeholder="Y" min="-3489" max="3489"><br/>'
         output += '<select><option value="none">None</option><option value="topdown">Top-Down</option>'
         output += '<option value="pphysics">Platformer Physics</option><option value="mouse">Move-to mouse</option></select></div>'
         document.getElementById("object-box").innerHTML += output
@@ -67,7 +67,7 @@
         
         let output  = '<div class="boxsettings"><img src="/src/images/assets/gameengine_assets/add_object_button.png" width="20">Object:<br/><br/>';
         output += '<label>Motion:</label>'
-        output += '<input type="number" placeholder="X" min="-3489" max="3489"><br/><input type="number" placeholder="Y" min="-3489" max="3489"><br/>'
+        output += '<br/><br/><input type="number" placeholder="X" min="-3489" max="3489"><br/><input type="number" placeholder="Y" min="-3489" max="3489"><br/>'
         output += '<select><option value="none">None</option>>'
         output += '<option value="pphysics">Platform Physics</option><option value="mouse">Move-to mouse</option></select></div>'
         document.getElementById("object-box").innerHTML += output
