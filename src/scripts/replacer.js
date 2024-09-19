@@ -221,15 +221,15 @@ function replace(text) {
 
         // Some terms listed here are only slices of words. this is because there are many different words (generally offensive and sexual) that begin with these terms.
         // 🆘 I wouldn't recommend searching these terms 🆘
-        .replaceAll(/(kid amongus)+/gim, t(10))
-        .replaceAll(/(strip club|prostitute)+/gim, t(10))
+        .replaceAll(/(project 2025)+/gim, t(11))
+        .replaceAll(/(strip club|prostitute|kid amongus)+/gim, t(10))
         .replaceAll(/(paedophile|wet dream|goofy ahh)+/gim, t(9))
         .replaceAll(/(ejaculat|beastial|masturbat|testicle|pedophile|stripper)+/gim, t(8))
         .replaceAll(/(cumming|asshole|bestial|cocaine|jackass)+/gim, t(7))
         .replaceAll(/(penile|virgin|breast|condom|faggot|incest|molest|retard|rapist|hentai|orgasm|nudity)+/gim, t(6))
         .replaceAll(/(bitch|pussy|penis|vagin|prick|whore|booty|boner|erect|horny|skank|sperm|teste|eroti|balls|semen|ligma)+/gim, t(5))
         .replaceAll(/(fuck|dick|cock|cunt|nigg|slut|porn|boob|jizz|milf|dilf|pimp|rape|sext|nude|tits|titt)+/gim, t(4))
-        .replaceAll(/(sex|hoe|wtf|kys|gta)+/gim, t(3))
+        .replaceAll(/(sex|hoe|wtf|kys|kkk)+/gim, t(3))
         .replaceAll(/(🤱|💦|🕳️|🤤|🍑|🍆|🖕|😩|😫|🍒|🥵|🤓|👙|🥒)+/gim, t(1))
 
         // emojis of dev
