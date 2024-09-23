@@ -1,7 +1,13 @@
+@font-face {
+  font-family: ipix;
+  src: url(/src/fonts/Ipix.ttf);
+}
+
 body {
     background-color: #2a2a2e;
     color: white;
     font-family: Arial, sans-serif;
+    font-family: ipix;
 }
 
 textarea {
