@@ -77,6 +77,14 @@
         output += '<option value="pphysics">Platform Physics</option><option value="mouse">Move-to mouse</option></select></div>'
         document.getElementById("object-box").innerHTML += output
       }
+
+      else if (type == "script") {
+        
+        let output  = '<div class="boxsettings"><img src="/src/images/assets/gameengine_assets/add_script_button.png" width="20">Script:<br/><br/>';
+        output += '<br/><textarea cols="40" rows"5"><br/>'
+        output += '</div>'
+        document.getElementById("object-box").innerHTML += output
+      }
     }
   </script>
   <script src="/game_engine/engine.js"></script>
