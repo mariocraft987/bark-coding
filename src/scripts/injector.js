@@ -7,8 +7,6 @@ const components = {
     "navbar": `
     <div id="navbar" class="navbar"><a href="/"><img src="/src/images/Logo_halloween.svg" alt="bark" width="25" height="25" ></a>
     <a href="/editor_comingsoon">Create</a>
-    <a href="/explore">Explore</a>
-    <a href="/ideas">Ideas</a>
     <a href="/about">About</a>
     `+ /*<a href="https://github.com/mariocraft987/bark.github.io/discussions">Discuss</a>*/ `
     ${setting}
