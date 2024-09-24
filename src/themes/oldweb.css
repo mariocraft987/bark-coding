@@ -6,12 +6,18 @@
   src: url("https://bark.dumorando.com/src/Bazin.ttf");
 }
 
+@font-face {
+  font-family: ipix;
+  src: url("https://bark.dumorando.com/src/fonts/Ipix.ttf");
+}
+
 html:has(.dark-mode) {
   color-scheme: dark;
 }
 
 body {
-  font-family: Georgia, serif;
+  /* font-family: Georgia, serif; */
+  font-family: ipix;
   background-color: White;
   font-weight: 450;
   margin: 0;
