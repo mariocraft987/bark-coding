@@ -1058,9 +1058,11 @@ const extensions = [
         document.getElementById("moreextensionseditordiv").innerHTML += 
       `
       <span class="extensionbox" onclick="setTimeout(fetchandexecute('${data.codeurl}'), 200);">
-        <h2>${data.name}</h2>
+        ${data.name}
+        <br/>
         <img src="${data.imgurl}" width="140" alt="Thumbnail of ${data.name}" title="${data.name}, made by ${data.creator}">
-        <p>Made by ${data.creator}</p>
+        <br/>
+        Made by ${data.creator}
       </span>
     ${linebreak}
       `;
