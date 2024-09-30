@@ -653,7 +653,6 @@
 <script src="/blockly_editor/cates/control.js"></script>
 <script src="/blockly_editor/cates/functions.js"></script>
 <script src="/blockly_editor/cates/advanced.js"></script>
-<script src="/blockly_editor/cates/lua.js"></script>
 
     <script>
       let costume = "/src/images/dog/scratch_dog.png";
@@ -1018,22 +1017,34 @@ const extensions = [
     "creator": "nmmsderp",
     "imgurl": "https://bark.dumorando.com/src/images/assets/extension/sine.png",
     "codeurl": "https://bark.dumorando.com/blockly_editor/builtinextensions/sine.js",
+    "count": 1,
   },
   {
     "name": "AI Chatbot",
     "creator": "funtasmo",
     "imgurl": "https://bark.dumorando.com/src/images/assets/extension/ai.png",
     "codeurl": "https://bark.dumorando.com/blockly_editor/builtinextensions/ai.js",
+    "count": 2,
   },
   {
     "name": "Discord Bot Maker",
     "creator": "mariocraft987",
     "imgurl": "https://bark.dumorando.com/src/images/assets/extension/discord.png",
     "codeurl": "https://bark.dumorando.com/blockly_editor/builtinextensions/discord.js",
+    "count": 3,
   }
 ];
       
     for (const data of extensions) {
+
+      if (data.count == 4 || data.count == 10 || data.count == 13 || data.count == 16) 
+      {
+          let linebreak = "<br/>"
+      } else {
+          let linebreak = "";
+      }
+
+
         document.getElementById("moreextensionseditordiv").innerHTML += 
       `
       <div class="extensionbox" onclick="setTimeout(fetchandexecute('${data.codeurl}'), 200);">
@@ -1041,7 +1052,7 @@ const extensions = [
         <img src="${data.imgurl}" width="140" alt="Thumbnail of ${data.name}" title="${data.name}, made by ${data.creator}">
         <p>Made by ${data.creator}</p>
       </div>
-    <br/>
+    ${linebreak}
       `;
     }
       
