@@ -10,3 +10,8 @@ Blockly.Blocks['print_string'] = {
    this.setHelpUrl("");
     }
   };
+
+let luaCate = Bark.CreateCategory("Lua", "#007a47");
+luaCate.addBlock(Bark.CreateBlock("print_string"));
+
+Bark.AppendCategoryToToolbox(luaCate);
