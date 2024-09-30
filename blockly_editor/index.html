@@ -1036,12 +1036,13 @@ const extensions = [
 ];
       
     for (const data of extensions) {
+      var linebreak;
 
       if (data.count == 4 || data.count == 10 || data.count == 13 || data.count == 16) 
       {
-          let linebreak = "<br/>"
+          linebreak = "<br/>"
       } else {
-          let linebreak = "";
+          linebreak = "";
       }
 
 
