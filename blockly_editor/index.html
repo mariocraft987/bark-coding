@@ -633,16 +633,6 @@
         <block type="custom_onstop"></block>
         <block type="bruh_wait"></block>
       </category>
-
-      <category name="Lua" colour="#007a47">
-        <block type="print_string">
-          <value name="TEXT">
-            <shadow type="text">
-              <field name="TEXT">abc</field>
-            </shadow>
-          </value>
-        </block>
-      </category>
     </xml>
 
 <script src="/blockly_editor/cates/custom.js"></script>
@@ -1034,14 +1024,14 @@ const extensions = [
     "count": 3,
   },
   {
-    "name": "Discord Bot Maker",
+    "name": "Test",
     "creator": "mariocraft987",
     "imgurl": "https://bark.dumorando.com/src/images/assets/extension/discord.png",
     "codeurl": "https://bark.dumorando.com/blockly_editor/builtinextensions/discord.js",
     "count": 4,
   },
   {
-    "name": "Discord Bot Maker",
+    "name": "Test",
     "creator": "mariocraft987",
     "imgurl": "https://bark.dumorando.com/src/images/assets/extension/discord.png",
     "codeurl": "https://bark.dumorando.com/blockly_editor/builtinextensions/discord.js",
@@ -1052,21 +1042,21 @@ const extensions = [
     for (const data of extensions) {
       var linebreak;
 
-      if (data.count == 4 || data.count == 10 || data.count == 13 || data.count == 16) 
+      if (data.count == 3 || data.count == 9 || data.count == 12 || data.count == 15) 
       {
-          linebreak = ""
+          linebreak = "<br/>"
       } else {
-          linebreak = "<br/>";
+          linebreak = "";
       }
 
 
         document.getElementById("moreextensionseditordiv").innerHTML += 
       `
-      <div class="extensionbox" onclick="setTimeout(fetchandexecute('${data.codeurl}'), 200);">
+      <span class="extensionbox" onclick="setTimeout(fetchandexecute('${data.codeurl}'), 200);">
         <h2>${data.name}</h2>
         <img src="${data.imgurl}" width="140" alt="Thumbnail of ${data.name}" title="${data.name}, made by ${data.creator}">
         <p>Made by ${data.creator}</p>
-      </div>
+      </span>
     ${linebreak}
       `;
     }
