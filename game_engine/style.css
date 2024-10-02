@@ -83,3 +83,13 @@ option {
     from, to { border-color: transparent }
     50% { border-color: orange; }
   }
+  
+div.scrollable-box {
+  margin: 5px;
+  padding: 5px;
+  background-color: rgb(0, 0, 0);
+  width: 500px;
+  height: 110px;
+  overflow: auto;
+  text-align: justify;
+}
