@@ -6,15 +6,7 @@
     <link rel="stylesheet" href="/game_engine/style.css"/>
   </head>
   <body>
-    <span id="beginning">
-
-      <div class="typewriter">
-      <h1>AtomicBolts presents...</h1>
-      </div>
-
-    </span>
-
-    <span id="editor" style="display: none;">
+<span id="editor">
 
       <div class="topnav">
         <a href="#">File</a>
@@ -47,14 +39,8 @@
 </div>
   </body>
   <script>
-    const Timeout = setTimeout(starteditor, 1800);
 
-    function starteditor() {
-        document.getElementById("beginning").style.display = "none";
-        document.getElementById("editor").style.display = "block";
-    }
-
-    function add_element(type) {
+function add_element(type) {
       // add a setting box for each type
       if (type == "player") {
         
