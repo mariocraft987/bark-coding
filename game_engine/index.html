@@ -19,14 +19,14 @@
 <div class="scrollable-box">
 
     <h4>Barkscript BETA</h4>
-    <h4>Game Engine & atomicscript by Mariocraft987</h4>
+    <h4>Game Engine & Cisk by Mariocraft987</h4>
     <img src="/src/images/assets/gameengine_assets/add_player_button.png" onclick="add_element('player')" style="cursor: pointer;" title="Add Player">
     <img src="/src/images/assets/gameengine_assets/add_object_button.png" onclick="add_element('object')" style="cursor: pointer;" title="Add Object">
     <img src="/src/images/assets/gameengine_assets/add_button_button.png" style="cursor: pointer;" title="Add Button">
     <img src="/src/images/assets/gameengine_assets/add_image_button.png" style="cursor: pointer;" title="Add Image">
     <img src="/src/images/assets/gameengine_assets/add_text_button.png" style="cursor: pointer;" title="Add Text">
     <img src="/src/images/assets/gameengine_assets/add_var_button.png" style="cursor: pointer;" title="Add new variable">
-    <img src="/src/images/assets/gameengine_assets/add_script_button.png" width="35" onclick="add_element('script')" style="cursor: pointer;" title="Add .atsc script">
+    <img src="/src/images/assets/gameengine_assets/add_script_button.png" width="35" onclick="add_element('script')" style="cursor: pointer;" title="Add .Cisk script">
     <img src="/src/images/assets/gameengine_assets/add_sp_button.png" style="cursor: pointer;" title="Add Secondary Character">
     <img src="/src/images/assets/gameengine_assets/add_particles_button.png" style="cursor: pointer;" title="Add Particle System">
 
@@ -69,8 +69,8 @@ function add_element(type) {
 
       else if (type == "script") {
         
-        let output  = '<div class="boxsettings"><img src="/src/images/assets/gameengine_assets/add_script_button.png" width="20">Script:<br/><br/>';
-        output += '<br/><textarea cols="40" rows"5"></textarea><br/>'
+        let output  = '<div class="boxsettings"><img src="/src/images/assets/gameengine_assets/add_script_button.png" width="20">Script:<br/>';
+        output += '<br/><textarea cols="40" rows"5" placeholder="int loop = 1;"></textarea><br/>'
         output += '</div>'
         document.getElementById("object-box").innerHTML += output
       }
