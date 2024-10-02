@@ -40,7 +40,7 @@ option {
 
 .topnav {
     overflow: hidden;
-    background-color: #303030;
+    background-color: dodgerblue;
   }
   
   .topnav a {
@@ -59,7 +59,7 @@ option {
 div.scrollable-box {
   margin: 5px;
   padding: 5px;
-  background-color: rgb(105, 105, 105);
+  background-color: rgb(72, 72, 72);
   width: 500px;
   height: 170px;
   overflow: auto;
