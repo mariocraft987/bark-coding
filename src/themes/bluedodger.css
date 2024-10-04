@@ -149,7 +149,9 @@ input {
 
 code {
   font-family: 'Courier New', Courier, monospace;
+  padding: 2px;
   background-color: #e6e6e6;
+  font-weight: bold;
   border-radius: 4px;
   color: #000000;
 }
