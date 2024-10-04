@@ -279,11 +279,12 @@ function replace(text) {
         GTKtext = GTKtext.replace(char, last)
         return GTKtext;
     }
-
-    start = getTwoKeys(start, "**", "<b>","</b>")
-    start = getTwoKeys(start, "_", "<i>","</i>")
-    start = getTwoKeys(start, "```", "<blockquote>","</blockquote>") // put this before </code> or it will bug, badly
-    start = getTwoKeys(start, "`", "<code>","</code>")
+    
+    for (r in 50) {
+        start = getTwoKeys(start, "**", "<b>","</b>")
+        start = getTwoKeys(start, "_", "<i>","</i>")
+        start = getTwoKeys(start, "`", "<code>","</code>")
+    }
 
         start = markdownLink(start);
     
