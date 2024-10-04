@@ -14,6 +14,7 @@ const components = {
     <a class="dark-mode-button" onclick="toggleDarkMode()" id="darkModeToggle"><dmbico alt="Dark Mode"></dmbico></a><form action="search" style="display: contents;"><input class="searchBar" id="search" name="q" placeholder="Search for Projects"></input></form>
     ${profile}
     `,
+    // editor_navbar
     "editor_navbar": `
     <div class="navbar"><a href="/"><img src="/src/images/Logo.svg" alt="Bark" width="25" height="25"></a>
     <input type="file" id="fileInput" accept=".barkf" style="display: none;" onchange="loadWorkspaceFromFile(this.files[0])" />
@@ -29,7 +30,7 @@ const components = {
     "footer": `
     <footer><p style="color: #777;">Looks like you\'ve reached the bottom.</p><p>
     <a href="/">Home</a>
-    <a href="/editor/">Editor</a>
+    <a href="/blockly_editor/">Editor</a>
     <a href="https://github.com/mariocraft987/bark.github.io/">Github</a>
     <br/><br/><a href="https://bark.dumorando.com/docs">Docs</a>
     <a href="https://discord.gg/hXmHw7H9BF">Discord</a>
