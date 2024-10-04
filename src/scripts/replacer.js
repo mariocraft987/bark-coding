@@ -280,7 +280,9 @@ function replace(text) {
         return GTKtext;
     }
 
-    start = getTwoKeys(start, "*", "<i>","</i>")
+    start = getTwoKeys(start, "**", "<b>","</b>")
+    start = getTwoKeys(start, "_", "<i>","</i>")
+    start = getTwoKeys(start, "`", "<code>","</code>")
 
         start = markdownLink(start);
     
