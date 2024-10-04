@@ -279,11 +279,14 @@ function replace(text) {
         GTKtext = GTKtext.replace(char, last)
         return GTKtext;
     }
+
+    let r = 0;
     
-    for (r in 50) {
+    while (r < 50) {
         start = getTwoKeys(start, "**", "<b>","</b>")
         start = getTwoKeys(start, "_", "<i>","</i>")
         start = getTwoKeys(start, "`", "<code>","</code>")
+        r++;
     }
 
         start = markdownLink(start);
