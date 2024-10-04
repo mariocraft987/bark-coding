@@ -11,17 +11,20 @@ toevaluate.forEach(path => {
     });
 });
 
-let newsBox = "<a href='https://bark.dumorando.com'>bark.dumorando.com</a> is a new domain of Bark Coding!.<br><br>Thanks to dumorando, <a href='https://bark.dumorando.com/users'>Bark accounts</a> now work!<br><br>Try out the new <a href='https://bark.dumorando.com/blockly_editor/cool'>advanced editor</a>!";
+let newsBox = "<br/>Come see the new <a href='https://barkcoding.boards.net/'>Discussions</a>!";
 let baseUrl = window.location.origin;
 let commitsLength = 150;
 
 let mobile = window.navigator.userAgent.toLowerCase().includes("mobi");
+
+let isFirefox = window.navigator.userAgent.toLowerCase().includes("firefox")
 
 let showHoldOn = true;
 
 // conditionals
 
 if (document.URL.includes('bark-coding.vercel.app')) {
+  localStorage.barktoken = null
   window.location.href = "https://bark.dumorando.com" + document.URL.replaceAll(window.location.origin, "")
 }
 
@@ -222,4 +225,5 @@ function closeAllSelect(elemnt) {
 }
 document.addEventListener("click", closeAllSelect);
 
-console.log("All scripts were run successfully")
+
+console.log("All scripts were run successfully!")
