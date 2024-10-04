@@ -283,6 +283,7 @@ function replace(text) {
     start = getTwoKeys(start, "**", "<b>","</b>")
     start = getTwoKeys(start, "_", "<i>","</i>")
     start = getTwoKeys(start, "`", "<code>","</code>")
+    start = getTwoKeys(start, "```", "<blockquote>","</blockguote>")
 
         start = markdownLink(start);
     
