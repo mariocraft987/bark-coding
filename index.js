@@ -11,7 +11,7 @@ toevaluate.forEach(path => {
     });
 });
 
-let newsBox = "<br/>Come see the new <a href='https://barkcoding.boards.net/'>Discussions</a>!";
+let newsBox = "Come see the new <a href='https://barkcoding.boards.net/'>Discussions</a>!";
 let baseUrl = window.location.origin;
 let commitsLength = 150;
 
