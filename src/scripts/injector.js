@@ -16,7 +16,7 @@ const components = {
     `,
     // editor_navbar
     "editor_navbar": `
-    <div class="navbar"><a href="/"><img src="/src/images/Logo.svg" alt="Bark" width="25" height="25"></a>
+    <div id="navbar" class="navbar"><a href="/"><img src="/src/images/Logo.svg" alt="Bark" width="25" height="25"></a>
     <input type="file" id="fileInput" accept=".barkf" style="display: none;" onchange="loadWorkspaceFromFile(this.files[0])" />
     <a href="#" onclick="openFileInput();" title="open a saved project">Open</a>
     <a href="#" id="downloadbutton" onclick="downloadproject();" title="download project to your computer.">Download</a>
