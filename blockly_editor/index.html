@@ -1039,13 +1039,13 @@ const extensions = [
 
         document.getElementById("moreextensionseditordiv").innerHTML += 
       `
-      <span class="extensionbox" onclick="setTimeout(fetchandexecute('${data.codeurl}'), 200);">
+      <dev class="extensionbox" onclick="setTimeout(fetchandexecute('${data.codeurl}'), 200);">
         ${data.name}
         <br/>
         <div><img src="${data.imgurl}" width="140" alt="Thumbnail of ${data.name}" title="${data.name}, made by ${data.creator}"></div>
         <br/>
         Made by ${data.creator}
-      </span>
+      </div>
     ${linebreak}
       `;
     }
