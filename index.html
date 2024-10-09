@@ -60,6 +60,10 @@
 
 <body>
   <!-- inject:navbar -->
+   <div class="box" id="profilebox">
+    <h3>Welcome, <span id="usernameforprofilebox">fellow user</span>!</h3>
+    <button onclick='window.location = "https://bark.dumorando.com/settings/profile"'>Edit your profile!</button>
+   </div>
   <div class="box">
     <h2 class="welcome">Welcome!</h2>
     <span id="formisterbrick"></span>
@@ -112,8 +116,10 @@
 <script src="/src/scripts/replacer.js"></script>
 <script>
 
-  if (localStorage.myBarkUsername == "Mister_Brick") {
-    document.getElementById("formisterbrick").innerHTML = "<h3>Dude, cannot you get a Discord account, or another Scratch account?? - mariocraft987</h3>"
+  if (localStorage.myBarkUsername) {
+    document.getElementById("usernameforprofilebox") == localStorage.myBarkUsername;
+  } else {
+    document.getElementById("profilebox").remove()
   }
   
   //**blob to dataURL**
