@@ -61,11 +61,11 @@
 <body>
   <!-- inject:navbar -->
    <div class="box" id="profilebox">
-    <h3>Welcome, <span id="usernameforprofilebox">fellow user</span>!</h3>
+    <h3>Wussup, <span id="usernameforprofilebox">fellow user</span>!</h3>
     <button class="buttonFrBx" onclick='window.location = "https://bark.dumorando.com/settings/profile"'>Edit your profile!</button>
    </div>
   <div class="box">
-    <h2 class="welcome">Welcome!</h2>
+    <h2 class="welcome" id="welcome">Welcome!</h2>
     <span id="formisterbrick"></span>
     <p class="barkfromblockly">Bark is a programming language building off of Google's <i>Blockly</i>.</p>
     <p class="barkinspiredscratch">Bark is inspired by <a class="link" href="https://scratch.mit.edu">Scratch</a>. <img
@@ -118,8 +118,9 @@
 
   if (localStorage.myBarkUsername) {
     document.getElementById("usernameforprofilebox").innerHTML = localStorage.myBarkUsername;
+    document.getElementById("welcome").remove();
   } else {
-    document.getElementById("profilebox").remove()
+    document.getElementById("profilebox").remove();
   }
   
   //**blob to dataURL**

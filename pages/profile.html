@@ -85,7 +85,7 @@
       <details>
         <summary>Admin</summary>
         <br/>
-        <button class="buttonFrBx" id="buttonadmininvalidatepfp">[admin] invalidate pfp</button>
+        <button class="buttonFrBx" title="you can follow this user, if you want" id="buttonadmininvalidatepfp">[admin] invalidate pfp</button>
         <br/>
         <br/>
         <button class="buttonFrBx" id="buttonadmininvalidatebio">[admin] change bio to</button>
@@ -128,6 +128,7 @@
   }
   document.getElementById('username').innerText = username;
   document.title = username + " on Bark";
+  document.getElementById('username').title = `${username}, this is a user`;
   const token = localStorage.getItem('barktoken');
 
   const response = await fetch(`https://api.bark.dumorando.com/api/v2/fetchUser?username=${encodeURIComponent(username)}`);
