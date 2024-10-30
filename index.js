@@ -11,7 +11,7 @@ toevaluate.forEach(path => {
     });
 });
 
-let newsBox = "Happy Halloween!<br/><br/>Come see the new <a href='https://barkcoding.boards.net/'>Discussions</a>!<br/><br/>All our <a href='https://bark.dumorando.com/users'>users!</a>";
+let newsBox = "Come see the new <a href='https://barkcoding.boards.net/'>Discussions</a>!<br/><br/>All our <a href='https://bark.dumorando.com/users'>users!</a>";
 let baseUrl = window.location.origin;
 let commitsLength = 150;
 
@@ -225,5 +225,5 @@ function closeAllSelect(elemnt) {
 }
 document.addEventListener("click", closeAllSelect);
 
-
-console.log("All scripts were run successfully!")
+console.log("-----------------------------------------");
+console.log("All scripts were ran successfully!")
