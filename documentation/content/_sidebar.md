@@ -1,4 +1,4 @@
   - [Add a new block](/Add%20a%20new%20block.md)
   - [Contributing](/Contributing.md)
   - [Creating an extension](/Create%20an%20extension.md)
-    - [Creating an extension](/Making$20themes.md)
+  - [Making themes](/Making$20themes.md)
