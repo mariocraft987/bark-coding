@@ -38,7 +38,6 @@
 
   <script src="/blockly_editor/custom_category_es6.js"></script>
   <script src="/blockly_editor/toolbox_label_e26.js"></script>
-  <script src="/blockly_editor/index.js"></script>
   <link rel="stylesheet" lang="css" href="/blockly_editor/uploader.css">
   <style>
     @import url(https://fonts.googleapis.com/css?family=Montserrat);
@@ -236,6 +235,10 @@
     background-color: #333;
   }
 
+span.extensionbox {
+  display: inline-block;
+}
+
 .extensionbox {
     background-color: #fff;
     border: 2px solid #000;
@@ -246,7 +249,6 @@
     text-align: center;
     cursor: pointer;
     width: 30px;
-    display: block;
 }
 
 .extensionbox.h2 {
@@ -267,15 +269,25 @@
 </head>
 
 <body onload="setTimeout(start, 50);" class="code">
-  <div id="navbar" class="navbar"><a href="/"><img src="/src/images/Logo.svg" alt="Bark" width="25" height="25"></a>
+  <div class="navbar">
+    <a href="/"><img src="/src/images/Logo.svg" alt="Bark"
+        width="25" height="25"></a>
+    
     <input type="file" id="fileInput" accept=".barkf" style="display: none;" onchange="loadWorkspaceFromFile(this.files[0])" />
     <a href="#" onclick="openFileInput();" title="open a saved project">Open</a>
+
     <a href="#" id="downloadbutton" onclick="downloadproject();" title="download project to your computer.">Download</a>
-    <a href="/blockly_editor/advanced/">Advanced</a>
+    
+    <a href="/blockly_editor/cool/">Advanced</a>
+    
     <a class="dark-mode-button" id="darkModeToggle">
+      
       <dmbico alt="Dark Mode"></dmbico>
     </a>
-    <input class="searchBar" id="projectname" placeholder="Project name..." value="project"></input></div>
+
+    <input class="searchBar" id="projectname" placeholder="Project name..." value="project"></input>
+
+  </div>
   
   <!-- Code Tab -->
   <div id="blocklyDiv" class="tabpage"></div>
@@ -627,9 +639,6 @@
         <block type="bruh_wait"></block>
       </category>
     </xml>
-
-<!-- 2 of these safer -->
-<script src="/index.js"></script>
 
 <script src="/blockly_editor/cates/custom.js"></script>
 <script src="/blockly_editor/cates/motion.js"></script>
@@ -1020,17 +1029,17 @@ const extensions = [
     "count": 3,
   },
   {
-    "name": "Bark - Fetch",
+    "name": "Test",
     "creator": "mariocraft987",
     "imgurl": "https://bark.dumorando.com/src/images/assets/extension/discord.png",
-    "codeurl": "https://bark.dumorando.com/blockly_editor/builtinextensions/barkfetch.js",
+    "codeurl": "https://bark.dumorando.com/blockly_editor/builtinextensions/discord.js",
     "count": 4,
   },
   {
-    "name": "Randomly",
+    "name": "Test",
     "creator": "mariocraft987",
     "imgurl": "https://bark.dumorando.com/src/images/assets/extension/discord.png",
-    "codeurl": "https://bark.dumorando.com/blockly_editor/builtinextensions/randomly.js",
+    "codeurl": "https://bark.dumorando.com/blockly_editor/builtinextensions/discord.js",
     "count": 5,
   }
 ];
@@ -1048,26 +1057,26 @@ const extensions = [
 
         document.getElementById("moreextensionseditordiv").innerHTML += 
       `
-      <dev class="extensionbox" onclick="setTimeout(fetchandexecute('${data.codeurl}'), 200);">
+      <span class="extensionbox" onclick="setTimeout(fetchandexecute('${data.codeurl}'), 200);">
         ${data.name}
         <br/>
         <div><img src="${data.imgurl}" width="140" alt="Thumbnail of ${data.name}" title="${data.name}, made by ${data.creator}"></div>
         <br/>
         Made by ${data.creator}
-      </div>
+      </span>
     ${linebreak}
       `;
     }
       
     </script>
-
+    
   <script src="/blockly_editor/custom.js"></script>
   <script src="/blockly_editor/contrast.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="/index.js"></script>
   <script src="/blockly_editor/uploader.js"></script>
   <script src="/blockly_editor/fullscreen.js"></script>
   <script src="/blockly_editor/beta/projectjsonopener.js"></script> 
-  <script src="/index.js"></script>
     
 </body>
 </html>
