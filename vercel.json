@@ -95,6 +95,10 @@
     {
       "source": "/editor_comingsoon",
       "destination": "/pages/editor_comingsoon.html"
+    },
+    {
+      "source": "/contributors",
+      "destination": "/pages/contr.html"
     }
   ]
 }

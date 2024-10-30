@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const val = document.getElementById('navbar_color').value;
             if (val) {
                 localStorage.setItem('navcolor', val);
-                localStorage.setItem('theme' 'bluedodger')
+                localStorage.setItem('theme', 'bluedodger');
                 window.location.reload();
             }
         })
