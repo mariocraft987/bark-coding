@@ -91,8 +91,8 @@
         const trustedd = !!trusted.find(thing => paramValue.startsWith(thing));
         if (trustedd) { 
           window.location.replace(paramValue);
+          window.close();
         }
-        window.close();
 
         document.getElementById("url-text").innerText = paramValue;
       }
