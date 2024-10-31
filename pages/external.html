@@ -89,7 +89,10 @@
 
         //just instantly go to the site if it is trusted
         const trustedd = !!trusted.find(thing => paramValue.startsWith(thing));
-        if (trustedd) window.location.replace(paramValue);
+        if (trustedd) { 
+          window.location.replace(paramValue);
+        }
+        window.close();
 
         document.getElementById("url-text").innerText = paramValue;
       }
