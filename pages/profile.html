@@ -99,7 +99,7 @@
   <br/>
   <br/>
     <div id="commentposter">
-      <textarea id="commentbox" placeholder="Hi guys... I made this small project..." rows="3" cols="25"></textarea>
+      <textarea id="commentbox" placeholder="Lorem Lpsum..." rows="3" cols="25"></textarea>
       <br/>
       <button class="buttonFrBx" id="postprofilecomment">Post</button>
       <span id="commenterror"></span>
@@ -119,6 +119,12 @@
   if((!localStorage.myBarkUsername)) {
     document.getElementById('commentposter').remove();
   }
+
+  const commentPlaceholders = ["Hello... I made this small project...", "Are you interested in doing a collab?", "Cool game!", "Hihihihihihi :3", "What's your favorite video game?"];
+
+  var randomCommentPlaceholder = commentPlaceholders[Math.floor(Math.random()*commentPlaceholders.length)];
+
+  document.getElementById("commentbox").placeholder = randomCommentPlaceholder;
   
   let parts = window.location.href.split("/");
   const username = parts[parts.length - 1];
