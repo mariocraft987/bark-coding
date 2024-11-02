@@ -20,10 +20,13 @@ Comment "I would like to be a QA!" <a href="https://github.com/Mariocraft987/bar
 - Must know how to open an issue
 - Please make sure you don't make a duplicate issue
 ## We're Also hiring contributers!
-Comment "I would like to be a contributer!" <a href="https://github.com/Mariocraft987/bark.github.io/commit/5644df6ebc5aa7ea7b611141a265ff7c17712c5e">here</a> then state your reason you could help, then fork the rep then create a pull request to show us what you got!<br>
+Comment "I would like to be a contributer!" <a href="https://github.com/Mariocraft987/bark.github.io/commit/5644df6ebc5aa7ea7b611141a265ff7c17712c5e">here</a> then state your reason you could help. 
+### IMPORTANT, THIS IS REQUIRED! 
+Fork the repository and create a pull request to show us what web-building skills you got!<br>
 ### Requirements:
-- Must know decent HTML and Javascript
+- Must know decent HTML, Javascript, and CSS
 - You must know the tools of Github
+- (not required)You have to have a sense of art and be creative
 ## We're Also hiring A/B Testers!
 Comment "I would like to be a A/B tester!" <a href="https://github.com/Mariocraft987/bark.github.io/commit/5644df6ebc5aa7ea7b611141a265ff7c17712c5e">here</a> if you would like to get a job as a AB tester at Bark.<br>
 ### Requirements:
