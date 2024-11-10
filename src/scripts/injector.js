@@ -34,7 +34,8 @@ const components = {
     <a href="https://github.com/mariocraft987/bark.github.io/">Github</a>
     <br/><br/><a href="https://bark.dumorando.com/docs">Docs</a>
     <a href="https://discord.gg/hXmHw7H9BF">Discord</a></p>
-    <p style="color: #777;">this one's for my dude: 🦴</p></footer>
+    <p style="color: #777;">this one's for my dude: 🦴</p><br />
+  <p style="font-size: 5pt;">Even though this project is hosted on a dumorando.com domain, this project is barely affiliated with dumorando.</p></footer>
     `
 };
 Object.keys(components).forEach(item => {
