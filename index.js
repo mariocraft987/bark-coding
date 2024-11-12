@@ -92,7 +92,7 @@ function whatsNew() {
 function randomTxt() {
   if (location.pathname !== "/explore")
     return;
-  fetch("/src/scripts/tips.json")
+  fetch("/src/json/tips.json")
     .then(res => res.json())
     .then(data => {
       var tip = data[parseInt(Math.random() * data.length)];
