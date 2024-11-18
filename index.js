@@ -11,7 +11,7 @@ toevaluate.forEach(path => {
     });
 });
 
-if (document.URL == "https://bark.dumorando.com/profile/") {
+if (document.URL == "https://bark.dumorando.com/profile/" || document.URL == "https://bark.dumorando.com/profile") {
   window.location.href = "https://bark.dumorando.com/users";
 }
 
