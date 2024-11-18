@@ -185,7 +185,7 @@
 
     document.getElementById('buttonadmininvalidatepfp').addEventListener('click', async () => {
       await fetch(`https://api.bark.dumorando.com/api/v2/setPFP/admin?token=${encodeURIComponent(token)}&target=${username}`, {
-        method: 'PUT',
+        method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
