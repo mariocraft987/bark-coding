@@ -36,3 +36,14 @@ Blockly.Blocks['logic_mousedown'] = {
  this.setHelpUrl("https://en.scratch-wiki.info/wiki/Mouse_Down%3F_(block)");
   }
 };
+
+Blockly.Blocks['logic_this'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("This");
+    this.setOutput(true, null);
+    this.setColour(230);
+ this.setTooltip("Returns what sprite the script is running in.");
+ this.setHelpUrl("");
+  }
+};

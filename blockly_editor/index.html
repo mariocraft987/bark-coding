@@ -394,6 +394,7 @@ span.extensionbox {
         </block>
         <block type="logic_null"></block>
         <block type="logic_ternary"></block>
+        <block type="logic_this"></block>
       </category>
       
       <category name="Motion" colour="#3399ff">
@@ -1029,14 +1030,14 @@ const extensions = [
     "count": 3,
   },
   {
-    "name": "Test",
+    "name": "Test 1",
     "creator": "mariocraft987",
     "imgurl": "https://bark.dumorando.com/src/images/assets/extension/discord.png",
     "codeurl": "https://bark.dumorando.com/blockly_editor/builtinextensions/discord.js",
     "count": 4,
   },
   {
-    "name": "Test",
+    "name": "Test 2",
     "creator": "mariocraft987",
     "imgurl": "https://bark.dumorando.com/src/images/assets/extension/discord.png",
     "codeurl": "https://bark.dumorando.com/blockly_editor/builtinextensions/discord.js",
@@ -1057,13 +1058,13 @@ const extensions = [
 
         document.getElementById("moreextensionseditordiv").innerHTML += 
       `
-      <span class="extensionbox" onclick="setTimeout(fetchandexecute('${data.codeurl}'), 200);">
+      <div class="extensionbox" onclick="setTimeout(fetchandexecute('${data.codeurl}'), 200);">
         ${data.name}
         <br/>
         <div><img src="${data.imgurl}" width="140" alt="Thumbnail of ${data.name}" title="${data.name}, made by ${data.creator}"></div>
         <br/>
         Made by ${data.creator}
-      </span>
+      </div>
     ${linebreak}
       `;
     }
