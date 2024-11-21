@@ -125,6 +125,7 @@
 <script src="/index.js"></script>
 <script src="/src/scripts/replacer.js"></script>
 <script src="/src/scripts/admin.js"></script>
+<script src="/src/scripts/badge.js"></script>
 <script type="module">
   if((!localStorage.myBarkUsername)) {
     document.getElementById('commentposter').remove();
@@ -163,10 +164,7 @@
     document.getElementById('username').style.color = "#ffa70f";
   }
 
-  if (username == "marioc") {
-    document.getElementById('username').outerHTML += "<badge-box>Creeper? Aw man</badge-box>";
-    document.getElementById('username').style.color = "#ffa70f";
-  }
+  setup_badges();
   
   if (await amiadmin()) {
     document.getElementById('admin').classList.add('show');
