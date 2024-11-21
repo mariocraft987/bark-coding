@@ -18,7 +18,7 @@
                     <label for="favcolor">Navbar Color:</label>
                     <input type="color" id="navbar_color" name="navbar_color" value="#ff0000"><br><br>
                 </div>
-
+                <br/>
                 <input type="submit" value="Apply">
                 <br/>
                 <button class="themeBtn" onclick="localStorage.navcolor = 'nocolor';">Remove color</button>
@@ -53,7 +53,17 @@
                 <p class="warninglang">This page is a work in progress.</p>
                 <p class="langnotwork">Some features may not work</p>
             </div>
-            
+        </section>
+        <section id="settingsPage">
+            <h2>Debug</h2>
+            <button onclick='localStorage.theme = "bluedodger";'>Reset theme</button>
+            <br/>
+            <hr/>
+            <h2><span style="color:red;">D</span><span style="color:rgb(255, 98, 0);">E</span><span style="color:rgb(255, 196, 0);">V </span><span style="color:rgb(208, 255, 0);">M</span><span style="color:rgb(0, 255, 21);">O</span><span style="color:rgb(0, 251, 255);">D</span><span style="color:rgb(0, 119, 255);">E</span></h2>
+                <select>
+                  <option value="true">True</option>
+                  <option value="false">False</option>
+                </select>
         </section>
     </main>
 </body>
