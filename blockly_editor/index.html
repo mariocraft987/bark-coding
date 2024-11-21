@@ -1046,15 +1046,6 @@ const extensions = [
 ];
       
     for (const data of extensions) {
-      var linebreak;
-
-      if (data.count == 3 || data.count == 9 || data.count == 12 || data.count == 15) 
-      {
-          linebreak = "<br/>"
-      } else {
-          linebreak = "";
-      }
-
 
         document.getElementById("moreextensionseditordiv").innerHTML += 
       `
@@ -1065,7 +1056,6 @@ const extensions = [
         <br/>
         Made by ${data.creator}
       </span>
-    ${linebreak}
       `;
     }
       
