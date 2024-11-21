@@ -285,7 +285,7 @@ span.extensionbox {
       <dmbico alt="Dark Mode"></dmbico>
     </a>
 
-    <input class="searchBar" id="projectname" placeholder="Project name..." value="project"></input>
+    <input class="searchBar" id="projectname" placeholder="Project name..." onchange="change_document_title()" value="project"></input>
 
   </div>
   
@@ -994,6 +994,13 @@ if (theme) {
         }
       }
       window.addEventListener('load', initializeDarkMode);
+
+      function change_document_title() {
+        if (document.getElementById("projectname").value != "project") {
+          projectname = document.getElementById("projectname").value
+          document.title = `${projectname} - Bark Coding`
+        }
+      }
 
     </script>
 
