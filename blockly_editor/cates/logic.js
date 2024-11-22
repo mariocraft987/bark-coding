@@ -31,7 +31,7 @@ Blockly.Blocks['logic_mousedown'] = {
     this.appendDummyInput()
         .appendField("mouse down?");
     this.setOutput(true, "Boolean");
-    this.setColour(230);
+    this.setColour(210);
  this.setTooltip("If mouse downs, returns True.");
  this.setHelpUrl("https://en.scratch-wiki.info/wiki/Mouse_Down%3F_(block)");
   }
@@ -40,10 +40,32 @@ Blockly.Blocks['logic_mousedown'] = {
 Blockly.Blocks['logic_this'] = {
   init: function() {
     this.appendDummyInput()
-        .appendField("This");
+        .appendField("this");
     this.setOutput(true, null);
-    this.setColour(230);
+    this.setColour(210);
  this.setTooltip("Returns what sprite the script is running in.");
  this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['logic_this'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("This");
+    this.setOutput(true, null);
+    this.setColour(210);
+ this.setTooltip("Returns what sprite the script is running in.");
+ this.setHelpUrl("");
+  }
+};
+
+Blockly.Blocks['current_user'] = {
+  init: function() {
+    this.appendDummyInput()
+        .appendField("current user");
+    this.setOutput(true, null);
+    this.setColour(210);
+ this.setTooltip("");
+ this.setHelpUrl("Returns the account the user is in.");
   }
 };
