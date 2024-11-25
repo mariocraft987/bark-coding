@@ -57,8 +57,12 @@
       "destination": "/pages/explore.html"
     },
     {
-      "source": "/discord-bot",
+      "source": "/discord/bot",
       "destination": "/pages/discordbot.html"
+    },
+    {
+      "source": "/discord",
+      "destination": "/pages/discord.html"
     },
     {
       "source": "/signout",
