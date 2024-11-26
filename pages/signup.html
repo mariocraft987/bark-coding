@@ -48,6 +48,8 @@
         <br/>
         <label for="password">Password:</label>
         <input type="password" id="password" placeholder="password" required="required" />
+        <br/>
+        <button class="buttonFrBx" onclick="showandhidepw()">Show/Hide password</button>
         <br />
         <br />
         <label for="email">Email:</label>
@@ -80,6 +82,15 @@
 </body>
 <script src="/index.js"></script>
 <script>
+
+  function showandhidepw() {
+    if (document.getElementById("password").type == "text") {
+        document.getElementById("password").type = "password";
+    } else {
+        document.getElementById("password").type = "text";
+    }
+  }
+
   let gender_value = document.getElementById("gender").value;
   let other_gender = document.getElementById("other_gender");
   

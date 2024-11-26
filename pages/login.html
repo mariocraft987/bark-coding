@@ -44,6 +44,8 @@
       <div class="form-group">
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" placeholder="password" required>
+        <br/>
+        <button class="buttonFrBx" onclick="showandhidepw()">Show/Hide password</button>
       </div>
       <br />
       <div class="text-center">
@@ -56,6 +58,15 @@
   <!-- zepto cuz i got tired of doing dom stuff -->
   <script src="/index.js"></script>
   <script>
+
+function showandhidepw() {
+    if (document.getElementById("password").type == "text") {
+        document.getElementById("password").type = "password";
+    } else {
+        document.getElementById("password").type = "text";
+    }
+  }
+
     async function login() {
       document.querySelector('#feedback').innerText = 'logging in..';
       let username = document.getElementById('username').value;

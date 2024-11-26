@@ -1,6 +1,6 @@
 function documentReplaceWord(usingid, target, word) {
     if (usingid == true) {
-        document.getElementById(target).value = word;
+        document.getElementsByClassName(target)[0].innerHTML = word;
     } else {
         document.documentElement.innerHTML = document.documentElement.innerHTML.replaceAll(target, word);
     }
