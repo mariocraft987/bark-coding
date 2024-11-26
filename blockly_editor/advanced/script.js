@@ -12,9 +12,9 @@ code.focus();
 
 function colorTextEditor() {
     newcode = document.getElementById("code").innerHTML;
-    document.getElementById("code").innerHTML = newcode.replaceAll("let", "<span style='color:magenta;'>let</span>");
-    document.getElementById("code").innerHTML = newcode.replaceAll("draw()", "<span style='color:lime;'>draw()</span>");
-    document.getElementById("code").innerHTML = newcode.replaceAll("new", "<span style='color:orange;'>new</span>");
+    document.getElementById("code").innerHTML = newcode.replaceAll("let", "<magenta>let</magenta>");
+    document.getElementById("code").innerHTML = newcode.replaceAll("draw()", "<lime>draw()</lime>");
+    document.getElementById("code").innerHTML = newcode.replaceAll("new", "<orange>new</orange>");
 }
 
 colorTextEditor()
