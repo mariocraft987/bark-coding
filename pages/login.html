@@ -44,8 +44,8 @@
       <div class="form-group">
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" placeholder="password" required>
-        <br/>
-        <button class="buttonFrBx" onclick="showandhidepw()">Show/Hide password</button>
+        <label for="showhidepw">Show/Hide password:</label>
+        <input id="showhidepw" name="showhidepw" type="checkbox" onclick="showandhidepw()">
       </div>
       <br />
       <div class="text-center">
@@ -60,7 +60,7 @@
   <script>
 
 function showandhidepw() {
-    if (document.getElementById("password").type == "text") {
+    if (document.getElementById("showhidepw").checked) {
         document.getElementById("password").type = "password";
     } else {
         document.getElementById("password").type = "text";
