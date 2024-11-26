@@ -49,7 +49,7 @@
         <label for="password">Password:</label>
         <input type="password" id="password" placeholder="password" required="required" />
         <br/>
-        <label for="showhidepw">Show/Hide password:</label>
+        <label for="showhidepw">Show password:</label>
         <input id="showhidepw" name="showhidepw" type="checkbox" onclick="showandhidepw()">
         <br />
         <br />
@@ -86,9 +86,9 @@
 
   function showandhidepw() {
     if (document.getElementById("showhidepw").checked) {
-        document.getElementById("password").type = "password";
-    } else {
         document.getElementById("password").type = "text";
+    } else {
+        document.getElementById("password").type = "password";
     }
   }
 
