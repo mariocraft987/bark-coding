@@ -634,7 +634,6 @@ span.extensionbox {
       -->
       
       <category name="Other" colour="#a826ff">
-        <button text="Add Extension.." callbackKey="showExtsMenu"></button>
         <block type="test_block"></block>
         <block type="custom_onstop"></block>
         <block type="bruh_wait"></block>
@@ -1065,6 +1064,8 @@ const extensions = [
       </span>
       `;
     }
+
+    window.workspace.updateToolbox(toolbox);
       
     </script>
     
