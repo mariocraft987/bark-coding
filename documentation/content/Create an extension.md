@@ -63,4 +63,4 @@ Bark.AppendCategoryToToolbox(myCategory);
 
 Then put all of this together into a single `.js` file!
 
-If your having trouble, use [these files](https://github.com/mariocraft987/bark-coding/tree/main/editor/builtinextensions) for a base.
+If your having trouble, use [these files](https://github.com/mariocraft987/bark-coding/tree/main/blockly_editor/builtinextensions) for a base.
