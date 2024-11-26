@@ -15,7 +15,9 @@ if (document.URL == "https://bark.dumorando.com/profile/" || document.URL == "ht
   window.location.href = "https://bark.dumorando.com/users";
 }
 
-let newsBox = "Come see the new <a href='https://barkcoding.boards.net/'>Discussions</a>!<br/><br/>All our <a href='https://bark.dumorando.com/users'>users!</a>";
+let newsBox =  `
+Bark is entering it's Christmas phase, so be sure to look out for secrets!
+`;
 let baseUrl = window.location.origin;
 let commitsLength = 150;
 
