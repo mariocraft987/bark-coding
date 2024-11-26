@@ -47,7 +47,7 @@ function changebg(color) {
 ```
 after that the block is now in the blockbar!
 
-![picture of block](https://bark.dumorando.com/editor/blockpic.png)
+![picture of block](https://imagizer.imageshack.com/img922/4093/w5pnLS.png)
 
 If you want to make a library of custom blocks, go see `Create an extension.md`!
 
