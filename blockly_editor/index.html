@@ -1011,6 +1011,7 @@ if (theme) {
       fetch (file)
         .then(x => x.text())
         .then(y => eval(y));
+        window.workspace.updateToolbox(toolbox);
       }
 
 const extensions = [
@@ -1065,7 +1066,6 @@ const extensions = [
       `;
     }
 
-    window.workspace.updateToolbox(toolbox);
       
     </script>
     
