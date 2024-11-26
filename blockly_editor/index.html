@@ -331,7 +331,7 @@ span.extensionbox {
   </div>
   <div id="editortabs">
     <button
-      onclick="document.body.classList.add('code'); document.body.classList.remove('costumes'); document.body.classList.remove('sounds'); document.body.classList.remove('moreextension');">Code</button>
+      onclick="document.body.classList.add('code'); document.body.classList.remove('costumes'); document.body.classList.remove('sounds'); document.body.classList.remove('moreextension'); window.workspace.updateToolbox(toolbox);">Code</button>
     <button
       onclick="document.body.classList.remove('code'); document.body.classList.add('costumes'); document.body.classList.remove('sounds'); document.body.classList.remove('moreextension');">Costumes</button>
     <button
@@ -1011,7 +1011,6 @@ if (theme) {
       fetch (file)
         .then(x => x.text())
         .then(y => eval(y));
-        window.workspace.updateToolbox(toolbox);
       }
 
 const extensions = [
