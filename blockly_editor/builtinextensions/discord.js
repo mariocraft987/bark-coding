@@ -41,6 +41,19 @@ Blockly.Blocks['db_send'] = {
   }
 };
 
+Blockly.Blocks['db_send'] = {
+  init: function() {
+    this.appendValueInput("TEXT")
+        .setCheck(null)
+        .appendField("send");
+    this.setPreviousStatement(true, null);
+    this.setNextStatement(true, null);
+    this.setColour(45);
+ this.setTooltip("");
+ this.setHelpUrl("");
+  }
+};
+
 Blockly.Blocks['db_reply'] = {
   init: function() {
     this.appendValueInput("TEXT")
@@ -54,7 +67,7 @@ Blockly.Blocks['db_reply'] = {
   }
 };
 
-Blockly.Blocks['db_send'] = {
+Blockly.Blocks['db_embed'] = {
   init: function() {
     this.appendValueInput("TEXT")
         .setCheck(null)
@@ -76,6 +89,6 @@ discordCategory.addBlock(Bark.CreateBlock("db_run"));
 discordCategory.addBlock(Bark.CreateBlock("db_cmd"));
 discordCategory.addBlock(Bark.CreateBlock("db_send"));
 discordCategory.addBlock(Bark.CreateBlock("db_reply"));
-
+discordCategory.addBlock(Bark.CreateBlock("db_embed"));
 
 Bark.AppendCategoryToToolbox(discordCategory);
