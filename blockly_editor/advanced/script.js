@@ -17,6 +17,8 @@ function colorTextEditor() {
     document.getElementById("code").innerHTML = newcode.replaceAll("new", "<span style='color:orange;'>new</span>");
 }
 
+colorTextEditor()
+
 let zoom = function() {
     if (zoomsize < 50) {
         zoomsize += 4;
