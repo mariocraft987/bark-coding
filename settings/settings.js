@@ -1,3 +1,17 @@
+if (document.getElementById("devmode").value == "true") {
+    document.getElementById('devmode').selectedIndex = 1;
+} else {
+    document.getElementById('devmode').selectedIndex = 0;
+}
+
+function devmodeset() {
+if (document.getElementById("devmode").value == "true") {
+    localStorage.devmode = true;
+} else {
+    localStorage.devmode = false;
+}
+}
+
 function checkDarkModeSelect() {
     let darkModeValue = document.getElementById("dark-mode-setting-edit").value
     

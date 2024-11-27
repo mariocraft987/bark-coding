@@ -74,19 +74,6 @@
 <script src="/src/scripts/replacer.js"></script>
 <script src="/settings/settings.js"></script>
 <script>
-        if (document.getElementById("devmode").value == "true") {
-            document.getElementById('devmode').selectedIndex = 1;
-        } else {
-            document.getElementById('devmode').selectedIndex = 0;
-        }
-
-    function devmodeset() {
-        if (document.getElementById("devmode").value == "true") {
-            localStorage.devmode = true;
-        } else {
-            localStorage.devmode = false;
-        }
-    }
 
     let span = document.getElementById("forthischangelang");
     let spanslang = navigator.language
