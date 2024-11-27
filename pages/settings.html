@@ -20,7 +20,7 @@
         <section id="settingsPage">
             <form id="navColor">
                 <div style="display: flex;align-items: center;">
-                    <label for="favcolor">Navbar Color:</label>
+                    <label for="navbar_color">Navbar Color:</label>
                     <input type="color" id="navbar_color" name="navbar_color" value="#ff0000"><br><br>
                 </div>
                 <input type="submit" value="Apply">
@@ -74,6 +74,12 @@
 <script src="/src/scripts/replacer.js"></script>
 <script src="/settings/settings.js"></script>
 <script>
+        if (document.getElementById("devmode").value == "true") {
+            document.getElementById("select").selectedIndex = 1;
+        } else {
+            document.getElementById("select").selectedIndex = 0;
+        }
+
     function devmodeset() {
         if (document.getElementById("devmode").value == "true") {
             localStorage.devmode = true;
