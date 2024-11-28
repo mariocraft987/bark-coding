@@ -175,8 +175,8 @@ input[type="color"]::-moz-color-swatch {
 }
 
 /* Crap Brown Dodger */
-.BrownDodger {
-  background-color: rgb(150, 73, 18);
+.BrownDodgerButton {
+  background-color: rgb(18, 150, 106);
   padding: 9px 17px;
   border-radius: 6px;
   cursor: pointer;
@@ -184,10 +184,12 @@ input[type="color"]::-moz-color-swatch {
   color: #ffffff;
 }
 
-.BrownDodger:hover {
-  background-color: rgb(99, 50, 14);
+.BrownDodgerButton:hover {
+  background-color: rgb(14, 99, 55);
   border: none;
 }
+
+/* Basically the same thing as the one above */
 
 .oldWebButton {
   background-color: #a85400;
