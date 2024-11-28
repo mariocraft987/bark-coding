@@ -28,3 +28,5 @@ adds a rectangle to the stage
 
 draws a sprite to the stage
 
+
+[Edit this page.](https://github.com/mariocraft987/bark-coding/edit/main/documentation/content/Advanced%20editor.md)

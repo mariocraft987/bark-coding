@@ -35,3 +35,6 @@ Comment "I would like to be a A/B tester!" <a href="https://github.com/Mariocraf
 
 
 Thanks,<br>The Bark Team
+
+
+[Edit this page.](https://github.com/mariocraft987/bark-coding/edit/main/documentation/content/Contributing.md)

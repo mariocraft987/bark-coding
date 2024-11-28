@@ -56,3 +56,6 @@ If you want to make a library of custom blocks, go see `Create an extension.md`!
 <!--
     Make sure to change date to the current commit date!
 -->
+
+
+[Edit this page.](https://github.com/mariocraft987/bark-coding/blob/main/documentation/content/Add%20a%20new%20block.md)

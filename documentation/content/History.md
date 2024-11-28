@@ -15,3 +15,6 @@ A web hosting was wanted at the time, Atomic didn't hear about [Nekoweb](https:/
 At last, Github was found and the [first commits](https://github.com/mariocraft987/bark-coding/commits/main/?after=90de7433c0df14563f3f145841f0bc53187a4bdd+2869) were made.
 
 More coming soon...
+
+
+[Edit this page.](https://github.com/mariocraft987/bark-coding/edit/main/documentation/content/History.md)
