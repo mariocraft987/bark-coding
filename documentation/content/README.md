@@ -38,6 +38,7 @@ To be a part of Bark's development, please go to <a href="https://bark.dumorando
 [<img src="https://avatars.githubusercontent.com/u/164731988?v=4" alt="Rubiidev Alt" title="Rubiidev Alt" width="70" height="70" style="border-radius:100%">](https://github.com/Rubiidev18alt)
 [<img src="https://avatars.githubusercontent.com/u/115564143?v=4" alt="" title="BwnnyRxbbit" width="70" height="70" style="border-radius:100%">](https://github.com/Funtasmo)
 [<img src="https://avatars.githubusercontent.com/u/167290033?v=4" alt="" title="BwnnyRxbbit" width="70" height="70" style="border-radius:100%">](https://github.com/BwnnyRxbbit)
+[<img src="https://avatars.githubusercontent.com/u/138245554?v=4" alt="" title="KitsunAbigal" width="70" height="70" style="border-radius:100%">](https://github.com/KitsunAbigail)
 <hr>
 
 ## How do I add blocks?

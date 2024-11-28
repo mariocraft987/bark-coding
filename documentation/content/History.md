@@ -6,7 +6,9 @@ Bark Coding started out as a simulation if
 [Scratch MIT](https://scratch.org) had a dog mascot.
 
 AtomicBolts started Bark in his personal computer, with poor css
-![first version of the Bark website](https://imagizer.imageshack.com/img923/6950/xPaVkE.png)
+![picture of the first version of the Bark website](https://imagizer.imageshack.com/img923/6950/xPaVkE.png)
+
+![second picture of the first version of the Bark website](https://imagizer.imageshack.com/img922/1971/wJuIk7.png)
 
 A web hosting was wanted at the time, Atomic didn't hear about [Nekoweb](https://nekoweb.org/) or [Neocities](https://neocities.org/) yet.
 

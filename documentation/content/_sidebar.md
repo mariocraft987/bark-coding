@@ -3,3 +3,4 @@
   - [Contributing](/Contributing.md)
   - [Creating an extension](/Create%20an%20extension.md)
   - [Making themes](/Making%20themes.md)
+    - [Making themes](/Badges.md)

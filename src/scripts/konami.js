@@ -39,6 +39,9 @@ var allowedKeys = {
   
   function activateCheats() {
     if (document.URL == "https://bark.dumorando.com/settings") {
+        // note to myself, make this an rpg and when the konami code is entered then 
+        // make a bush apear and if clicked on the bush, then prompt the user with "A bush blocks your path! Do you wish to move it with your flower pot?"
+
         alert("You've stumbled apon a hidden button!\n")
         document.getElementById("themeButtons").innerHTML += '<button type="button" title="the legendary first theme: with poor css" name="classicdodger" onclick="localStorage.theme = `classic`; location.reload();" class="themeBtn"><b>CLASSIC</b></button>';
     }
