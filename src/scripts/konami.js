@@ -39,6 +39,7 @@ var allowedKeys = {
   
   function activateCheats() {
     if (document.URL == "https://bark.dumorando.com/settings") {
+        alert("You've stumbled apon a hidden button!\n")
         document.getElementById("themeButtons").innerHTML += '<button type="button" title="the legendary first theme: with poor css" name="classicdodger" onclick="localStorage.theme = `classic`; location.reload();" class="themeBtn"><b>CLASSIC</b></button>';
     }
   }
