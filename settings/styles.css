@@ -6,6 +6,16 @@ main {
     align-items: center;
 }
 
+@font-face {
+  font-family: ipix;
+  src: url("https://bark.dumorando.com/src/fonts/Ipix.ttf");
+}
+
+@font-face {
+  font-family: "Bazin";
+  src: url("https://bark.dumorando.com/src/Bazin.ttf");
+}
+
 section, #warning {
     margin-top: 5%;
     background-color: #ffffff;
@@ -41,6 +51,7 @@ input[type="submit"]:hover {
     background-color: #0056b3;
 }
 
+/* BlueDodger */
 button {
     padding: 8px 16px;
     background-color: #007bff;
@@ -142,6 +153,7 @@ input[type="color"]::-moz-color-swatch {
 
 /* Cherry Blossom */
 .CherryBlossomButton {
+  font-family: "Merriweather", "Bazin", sans-serif;
   background-color: rgb(255 0 129);
   padding: 13px 17px;
   border-radius: 15px;
@@ -176,7 +188,7 @@ input[type="color"]::-moz-color-swatch {
 
 /* Crap Brown Dodger */
 .BrownDodgerButton {
-  background-color: rgb(18, 150, 106);
+  background-color: #a85400;
   padding: 9px 17px;
   border-radius: 6px;
   cursor: pointer;
@@ -185,14 +197,15 @@ input[type="color"]::-moz-color-swatch {
 }
 
 .BrownDodgerButton:hover {
-  background-color: rgb(14, 99, 55);
+  background-color: #783c00;
   border: none;
 }
 
 /* Basically the same thing as the one above */
 
 .oldWebButton {
-  background-color: #a85400;
+  font-family: ipix;
+  background-color: rgb(18, 150, 106);
   padding: 9px 17px;
   cursor: pointer;
   border: none;
@@ -202,6 +215,6 @@ input[type="color"]::-moz-color-swatch {
 }
 
 .oldWebButton:hover {
-  background-color: #783c00;
+  background-color: rgb(14, 99, 55);
   border: none;
 }
