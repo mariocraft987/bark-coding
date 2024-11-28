@@ -39,6 +39,6 @@ var allowedKeys = {
   
   function activateCheats() {
     if (document.URL == "https://bark.dumorando.com/settings") {
-        document.getElementById("themeButtons").innerHTML += '<button type="button" title="the legendary first theme: with poor css" name="classicdodger" onclick="localStorage.theme = `classic`; location.reload();" class="themeBtn active"><b>CLASSIC</b></button>';
+        document.getElementById("themeButtons").innerHTML += '<button type="button" title="the legendary first theme: with poor css" name="classicdodger" onclick="localStorage.theme = `classic`; location.reload();" class="themeBtn"><b>CLASSIC</b></button>';
     }
   }
