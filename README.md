@@ -30,7 +30,7 @@ To be a part of Bark's development, please go to <a href="https://bark.dumorando
 ## Staff/Contributors
 [<img src="https://avatars.githubusercontent.com/u/154646419?v=4" alt="mariocraft" title="mariocraft" width="70" height="70" style="border-radius:100%">](https://github.com/mariocraft987)
 [<img src="https://avatars.githubusercontent.com/u/130254323?v=4" alt="nmsderp" title="nmsderp" width="70" height="70" style="border-radius:100%">](https://github.com/nmsderp)
-[<img src="https://avatars.githubusercontent.com/u/129226914?v=4" alt="qwertyy" title="qwertyy" width="70" height="70" style="border-radius:100%">](https://github.com/qwertyy-dev)
+[<img src="https://avatars.githubusercontent.com/u/129226914?v=4" alt="reese" title="reese" width="70" height="70" style="border-radius:100%">](https://github.com/sillybreakfast)
 [<img src="https://avatars.githubusercontent.com/u/158863401?v=4" alt="Rubiidev" title="Rubiidev" width="70" height="70" style="border-radius:100%">](https://github.com/Rubiidev-18)
 [<img src="https://avatars.githubusercontent.com/u/144301348?v=4" alt="dumorando" title="dumorando" width="70" height="70" style="border-radius:100%">](https://github.com/dumorando)
 [<img src="https://avatars.githubusercontent.com/u/110662505?v=4" alt="Adam" title="Adam" width="70" height="70" style="border-radius:100%">](https://github.com/Bashamega)
