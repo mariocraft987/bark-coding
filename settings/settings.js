@@ -73,7 +73,9 @@ btns.forEach(btn => {
     });
 });
 const applybtn = document.getElementById('applybtn');
-applybtn.addEventListener('click', () => {
-    localStorage.setItem('theme', pendingTheme);
-    window.location.reload();
-});
+applybtn.addEventListener('click', setTheme())
+
+    function setTheme() {
+        localStorage.setItem('theme', pendingTheme);
+        window.location.reload();
+    }
