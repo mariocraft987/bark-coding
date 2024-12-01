@@ -1,4 +1,4 @@
-if (document.getElementById("devmode").checked) {
+if (localStorage.devmode == true) {
     document.getElementById('devmode').selectedIndex = 1;
 } else {
     document.getElementById('devmode').selectedIndex = 0;
