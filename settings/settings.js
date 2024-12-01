@@ -5,11 +5,11 @@ if (localStorage.devmode == true) {
 }
 
 function devmodeset() {
-if (document.getElementById("devmode").checked) {
-    localStorage.devmode = true;
-} else {
-    localStorage.devmode = false;
-}
+    if (document.getElementById("devmode").checked == true) {
+        localStorage.devmode = true;
+    } else {
+        localStorage.devmode = false;
+    }
 }
 
 function checkDarkModeSelect() {
