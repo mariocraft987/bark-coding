@@ -1,3 +1,17 @@
+if (localStorage.devmode == "true") {
+    document.getElementById('devmode').checked = true;
+} else {
+    document.getElementById('devmode').checked = false;
+}
+
+function devmodeset() {
+    if (document.getElementById("devmode").checked == true) {
+        localStorage.devmode = "true";
+    } else {
+        localStorage.devmode = "false";
+    }
+}
+
 function checkDarkModeSelect() {
     let darkModeValue = document.getElementById("dark-mode-setting-edit").value
     
