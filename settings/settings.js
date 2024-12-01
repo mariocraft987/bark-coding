@@ -1,11 +1,11 @@
-if (document.getElementById("devmode").value == "true") {
+if (document.getElementById("devmode").checked) {
     document.getElementById('devmode').selectedIndex = 1;
 } else {
     document.getElementById('devmode').selectedIndex = 0;
 }
 
 function devmodeset() {
-if (document.getElementById("devmode").value == "true") {
+if (document.getElementById("devmode").checked) {
     localStorage.devmode = true;
 } else {
     localStorage.devmode = false;
