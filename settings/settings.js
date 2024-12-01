@@ -1,7 +1,7 @@
 if (localStorage.devmode == true) {
-    document.getElementById('devmode').selectedIndex = 1;
+    document.getElementById('devmode').checked = true;
 } else {
-    document.getElementById('devmode').selectedIndex = 0;
+    document.getElementById('devmode').checked = false;
 }
 
 function devmodeset() {
