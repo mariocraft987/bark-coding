@@ -72,10 +72,11 @@ btns.forEach(btn => {
         }
     });
 });
-const applybtn = document.getElementById('applybtn');
-applybtn.addEventListener('click', setTheme())
 
-    function setTheme() {
-        localStorage.setItem('theme', pendingTheme);
-        window.location.reload();
-    }
+function setTheme() {
+    localStorage.setItem('theme', pendingTheme);
+    window.location.reload();
+}
+
+let applybtn = document.getElementById('applybtn');
+applybtn.addEventListener('click', setTheme);
