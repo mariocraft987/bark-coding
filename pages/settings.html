@@ -67,6 +67,14 @@
             <label for="devmode">Dev Mode:</label>
             <input type="checkbox" name="devmode" id="devmode" onclick="devmodeset()">
         </section>
+
+        <span id="devmodeSettings">
+            <div id="warning" priority="2">
+                <h2>Double Warning</h2>
+                <p class="warningdevmode">These settings are a work in progress.</p>
+            </div>
+        </span>
+
     </main>
     <br/>
 
@@ -78,6 +86,10 @@
 <!-- for ANYONE that knows -->
 <script src="/src/scripts/konami.js"></script>
 <script>
+
+    if (localStorage.devmode == "false") {
+        document.getElementById("devmodeSettings").remove();
+    }
 
     let span = document.getElementById("forthischangelang");
     let spanslang = navigator.language
