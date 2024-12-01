@@ -5,7 +5,7 @@ if (localStorage.devmode == "true") {
 }
 
 function devmodeset() {
-    if (document.getElementById("devmode").checked == "true") {
+    if (document.getElementById("devmode").checked == true) {
         localStorage.devmode = "true";
     } else {
         localStorage.devmode = "false";
