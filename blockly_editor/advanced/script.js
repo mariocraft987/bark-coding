@@ -10,19 +10,6 @@ let bluroverlay = document.getElementById("blur-overlay");
 
 code.focus();
 
-function colorTextEditor() {
-    // SUPER optimized code yea yeah
-
-    newcode = document.getElementById("code").innerHTML;
-    document.getElementById("code").innerHTML = newcode.replaceAll("let", "<magenta>let</magenta>");
-    newcode = document.getElementById("code").innerHTML;
-    document.getElementById("code").innerHTML = newcode.replaceAll("draw()", "<lime>draw()</lime>");
-    newcode = document.getElementById("code").innerHTML;
-    document.getElementById("code").innerHTML = newcode.replaceAll("new", "<orange>new</orange>");
-}
-
-colorTextEditor()
-
 let zoom = function() {
     if (zoomsize < 50) {
         zoomsize += 4;
