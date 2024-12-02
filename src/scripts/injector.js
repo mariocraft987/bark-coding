@@ -22,7 +22,7 @@ const components = {
     <input type="file" id="fileInput" accept=".barkf" style="display: none;" onchange="loadWorkspaceFromFile(this.files[0])" />
     <a href="#" onclick="openFileInput();" title="open a saved project">Open</a>
     <a href="#" id="downloadbutton" onclick="downloadproject();" title="download project to your computer.">Download</a>
-    <a href="/blockly_editor/advance/">Advanced</a>
+    <a href="/advanced/">Advanced</a>
     <a class="dark-mode-button" id="darkModeToggle">
       <dmbico alt="Dark Mode"></dmbico>
     </a>
@@ -32,7 +32,7 @@ const components = {
     "footer": `
     <footer><p style="color: #777;">Looks like you\'ve reached the bottom.</p><p>
     <a href="/">Home</a>
-    <a href="/blockly_editor/">Editor</a>
+    <a href="/advanced">Editor</a>
     <a href="https://github.com/mariocraft987/bark.github.io/">Github</a>
     <br/><br/><a href="https://bark.dumorando.com/docs">Docs</a>
     <a href="https://discord.gg/hXmHw7H9BF">Discord</a></p>

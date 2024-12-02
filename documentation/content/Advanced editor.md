@@ -1,5 +1,5 @@
 # Advanced Editor
-The advanced editor was made by @qwertyytheartist/breakfast
+The advanced editor was made by @qwertyytheartist/sillybreakfast
 
 it's an addition of javascript
 

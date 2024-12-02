@@ -1,5 +1,7 @@
 # Making Blocks
+# NOTE THIS WONT BE USED ANYMORE
 ### This tutorial was written by @nmsderp, feel free to add more if needed
+
 *NOTE: Making blocks requires basic knowledge of xml, and some decent knowledge of JavaScript*
   
 *NOTE 2: IT WILL MAKE YOUR LIFE EASIER TO USE BLOCKLY BLOCK FACTORY: [Block Factory](https://blockly-demo.appspot.com/static/demos/blockfactory/index.html) OR THE [NEWER VERSION](https://google.github.io/blockly-samples/examples/developer-tools/index.html)*

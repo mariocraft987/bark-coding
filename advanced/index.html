@@ -5,13 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Bark Advanced Editor</title>
 	<link rel="shortcut icon" href="https://bark.dumorando.com/favicon.ico">
-	<link rel="stylesheet" type="text/css" href="/blockly_editor/advanced/style.css">
+	<link rel="stylesheet" type="text/css" href="/advanced/style.css">
 	<link rel="stylesheet" type="text/css" href="/src/css/colors.css">
 </head>
 <body>
 	<div class="navbar">
 		<a href="https://bark.dumorando.com"><img src="https://bark.dumorando.com/src/images/Logo.svg" alt="Bark" width="25" height="25"></a>
-		<a href="/blockly_editor/">Blockly Mode</a>
 		<a href="#" onclick="alert('You can\'t download projects yet! :(');" id="downloadbutton" onclick="downloadproject();" title="download project to your computer.">Download</a>
 		<input type="file" id="fileInput" style="display: none;" onchange="loadWorkspaceFromFile(this.files[0])" />
 		<a href="#" onclick="openFileInput();" title="open a saved project">Open</a>
@@ -29,7 +28,7 @@
 		<button class="programtoolbar" title="stop"><img src="/src/projecttoolbar/stop.svg"></button>
 		<button class="programtoolbar" title="pause"><img src="/src/projecttoolbar/pause.svg"></button>
 		<button class="programtoolbar" title="start" id="start"><img src="/src/projecttoolbar/run.svg"></button>
-		<iframe frameborder="0" sandbox="allow-scripts" id="stage" src="/blockly_editor/advanced/canvas.html"></iframe>
+		<iframe frameborder="0" sandbox="allow-scripts" id="stage" src="/advanced/canvas.html"></iframe>
 	</div>
 	<div id="blur-overlay"></div>
 	<div id="notification">
@@ -40,6 +39,6 @@
 		<p style="font-size: 13px;">hint: to bypass this notification in the future, use ctrl+backspace.</p>
 	</div>
 
-	<script src="/blockly_editor/advanced/script.js"></script>
+	<script src="/advanced/script.js"></script>
 </body>
 </html>
