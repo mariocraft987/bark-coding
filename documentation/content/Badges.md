@@ -16,12 +16,12 @@ Here is a list of all the badges and requirments:
 | Veteran | <img width="100" src="https://bark.dumorando.com/src/images/assets/badges/b_vet.png" style="image-rendering: pixelated;"> |Be apart of Bark Coding for a year|
 | DEVELOPERRR | <img width="100" src="https://bark.dumorando.com/src/images/assets/badges/b_dev.png" style="image-rendering: pixelated;"> |Have Dev Mode on|
 | Bruh. | <img width="100" src="https://bark.dumorando.com/src/images/assets/badges/b_bruh.png" style="image-rendering: pixelated;"> |Have a funny or questional bio|
-| A little thing called Youtube | ... |Be a youtuber with 100+ subscribers|
-| MrBeast60000 be like | ... |Be a youtuber with 500+ subscribers|
+| A little thing called Youtube | Waiting for permission... |Be a youtuber with 100+ subscribers|
+| MrBeast60000 be like | Waiting for permission... |Be a youtuber with 500+ subscribers|
 | Juggler | <img width="100" src="https://bark.dumorando.com/src/images/assets/badges/b_juggler.png" style="image-rendering: pixelated;"> |Have more than 5 badges|
 | Me The Explorer! | <img width="100" src="https://bark.dumorando.com/src/images/assets/badges/b_explore.png" style="image-rendering: pixelated;"> |Find a secret using your Konami knowledge|
-| Lucky! | ... |Find a secret on the website|
-| BOOSTER | ... |Boost the Bark Discord server|
+| Lucky! | <img width="100" src="https://bark.dumorando.com/src/images/assets/badges/b_lucky.png" style="image-rendering: pixelated;"> |Find a secret on the website|
+| BOOSTER | <img width="100" src="https://bark.dumorando.com/src/images/assets/badges/b_booster.png" style="image-rendering: pixelated;"> |Boost the Bark Discord server|
 
 
 [Edit this page.](https://github.com/mariocraft987/bark-coding/edit/main/documentation/content/Badges.md)
