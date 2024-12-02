@@ -1,19 +1,3 @@
-if (localStorage.devmode == "true") {
-    document.getElementById('devmodeon').innerHTML = "Dev Mode on!";
-} else {
-    document.getElementById('devmodeon').innerHTML = "Dev Mode Off!";
-}
-
-document.getElementById("devmode").addEventListener("click", devmodeset);
-
-function devmodeset() {
-    if (localStorage.devmode == "false") {
-        localStorage.devmode = "true";
-    } else {
-        localStorage.devmode = "false";
-    }
-}
-
 function checkDarkModeSelect() {
     let darkModeValue = document.getElementById("dark-mode-setting-edit").value
     
