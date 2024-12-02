@@ -43,7 +43,7 @@ if (showHoldOn) {
     shout = shout + "!";
     console.log("%cHold on%s", "font-weight: bold; font-size: 50pt; color: red;", shout);
   }
-  console.log("If anyone asks you to paste something in here, Don't do it!!\n They might be trying to steal, or ban your account! \nIf you are trying to paste something in here, then make sure its from a trusted source!");
+  console.log("If anyone asks you to paste something in here, Don't do it!! \nThey might be trying to steal, or ban your account! \nIf you are trying to paste something in here, then make sure its from a trusted source!");
 }
 
 document.body.innerHTML += "<button onclick='scrollToTop()' class='buttonFrBx' id='topBtn' disabled>Top</button>";
