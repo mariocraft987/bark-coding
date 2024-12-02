@@ -1,11 +1,13 @@
 if (localStorage.devmode == "true") {
-    document.getElementById('devmode').checked = true;
+    document.getElementById('devmodeon').innerHTML = "Dev Mode on!";
 } else {
-    document.getElementById('devmode').checked = false;
+    document.getElementById('devmodeon').innerHTML = "Dev Mode Off!";
 }
 
+document.getElementById("devmode").addEventListener("click", devmodeset);
+
 function devmodeset() {
-    if (document.getElementById("devmode").checked == true) {
+    if (localStorage.devmode == "false") {
         localStorage.devmode = "true";
     } else {
         localStorage.devmode = "false";
