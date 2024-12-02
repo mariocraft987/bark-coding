@@ -69,7 +69,7 @@
             <span id="devmodeon">...</span>
         </section>
 
-        <p id="devmodeSettings">
+        <p id="devmodeSettings" style="overflow-wrap: break-word;">
             <div id="warning" priority="2">
                 <h2>Double Warning</h2>
                 <p class="warningdevmode">These settings are a work in progress.</p>
@@ -110,6 +110,7 @@ function devmodeset() {
     }
 }
 
+    // if devmode false, kill devmodesettings
     if (localStorage.devmode == "false") {
         document.getElementById("devmodeSettings").remove();
     }
