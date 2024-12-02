@@ -69,7 +69,7 @@
             <span id="devmodeon">...</span>
         </section>
 
-        <div id="devmodeSettings" style="width: 100px;">
+        <div id="devmodeSettings" style="width: 100%; margin: auto;">
             <div id="warning" priority="2">
                 <h2>Double Warning</h2>
                 <p class="warningdevmode">These settings are a work in progress.</p>
@@ -95,7 +95,7 @@
 if (localStorage.devmode == "true") {
     document.getElementById('devmodeon').innerHTML = "Dev Mode on!";
 } else {
-    document.getElementById('devmodeon').innerHTML = "Dev Mode Off!";
+    document.getElementById('devmodeon').innerHTML = "Dev Mode off!";
 }
 
 document.getElementById("devmode").addEventListener("click", devmodeset);
