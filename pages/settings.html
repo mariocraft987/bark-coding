@@ -92,6 +92,22 @@
 <script src="/src/scripts/konami.js"></script>
 <script>
 
+if (localStorage.devmode == "true") {
+    document.getElementById('devmodeon').innerHTML = "Dev Mode on!";
+} else {
+    document.getElementById('devmodeon').innerHTML = "Dev Mode Off!";
+}
+
+document.getElementById("devmode").addEventListener("click", devmodeset);
+
+function devmodeset() {
+    if (localStorage.devmode == "false") {
+        localStorage.devmode = "true";
+    } else {
+        localStorage.devmode = "false";
+    }
+}
+
     if (localStorage.devmode == "false") {
         document.getElementById("devmodeSettings").remove();
     }

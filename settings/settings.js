@@ -80,4 +80,6 @@ function setTheme() {
     window.location.reload();
 }
 
-document.getElementById('applybtn').addEventListener('click', setTheme);
+if (!document.getElementById('applybtn') == null) {
+    document.getElementById('applybtn').addEventListener('click', setTheme);
+}
