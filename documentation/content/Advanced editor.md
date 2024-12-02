@@ -1,32 +1,38 @@
 # Advanced Editor
-The advanced editor was made by @qwertyytheartist/sillybreakfast
+The advanced editor was created by [sillybreakfast](https://github.com/sillybreakfast). It runs JavaScript with added features optimized for Bark.
 
-it's an addition of javascript
+## Commands
 
-## commands
-- `log()`
+- `clearconsole()` -> void
 
-logs a piece of text to the log
+Clears the terminal.
 
+- `log(str)` -> void
 
-- `clearconsole()`
+Adds `str` and a newline to the console.
 
-clears the log
+- `text(x, y, text, font, color)` -> void
 
+Draws text on the stage.
 
-- `text(x, y, text, font, color)`
+- `rect(x, y, width, height, background-color)` -> void
 
-adds text to the stage
+Draws a rectangle on the stage.
 
+## Objects
 
-- `rect(x, y, w, h, background-color)`
+### `sprite`
 
-adds a rectangle to the stage
+#### Parameters
 
+`new sprite(type="dog", x=0, y=0, size=100)`
 
-- `sprite.draw()`
+- `type`: The type of sprite (the only option as of now is `"dog"`)
+- `x`: How many pixels from the left edge of the stage. Anchored at the left of the sprite.
+- `y`: How many pixels from the top edge of the stage. Anchored at the top of the sprite.
+- `size`: How large the sprite is, in %.
 
-draws a sprite to the stage
-
+#### Methods
+- `draw()`: Renders the sprite.
 
 [Edit this page.](https://github.com/mariocraft987/bark-coding/edit/main/documentation/content/Advanced%20editor.md)
