@@ -80,5 +80,4 @@ function setTheme() {
     window.location.reload();
 }
 
-let applybtn = document.getElementById('applybtn');
-applybtn.addEventListener('click', setTheme);
+document.getElementById('applybtn').addEventListener('click', setTheme);
