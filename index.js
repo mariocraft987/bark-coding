@@ -35,8 +35,15 @@ if (document.URL.includes('bark-coding.vercel.app')) {
 }
 
 if (showHoldOn) {
-  console.log("%cHold on!", "font-size:36pt; color: red;");
-  console.log("If anyone asks you to paste something in here, Don't do it!!\n They might be trying to steal, or ban your account!");
+
+  // this exists because yeah
+  shout = "";
+
+  for (i = 0; i < 3; i++) {
+    shout = shout + "!";
+    console.log("%cHold on%s", "font-weight: bold; font-size: 50pt; color: red;", shout);
+  }
+  console.log("If anyone asks you to paste something in here, Don't do it!!\n They might be trying to steal, or ban your account! \nIf you are trying to paste something in here, then make sure its from a trusted source!");
 }
 
 document.body.innerHTML += "<button onclick='scrollToTop()' class='buttonFrBx' id='topBtn' disabled>Top</button>";
