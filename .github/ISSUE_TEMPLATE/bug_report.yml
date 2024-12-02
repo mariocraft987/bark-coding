@@ -1,5 +1,5 @@
 name: Report a bug
-title: "[bug] ..."
+title: "[BUG] ..."
 description: Create a report to help us improve Bark.
 labels: ["bug", "problem"]
 body:
