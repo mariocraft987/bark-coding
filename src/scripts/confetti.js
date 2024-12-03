@@ -1,9 +1,4 @@
-var link = $("<link />",{
-    rel: "stylesheet",
-    type: "text/css",
-    href: "https://bark.dumorando.com/src/css/confetti.scss"
-  })
-  $('head').append(link);
+document.head.innerHTML += '<link rel="stylesheet" type="text/css" href="https://bark.dumorando.com/src/css/confetti.scss">';
 
 document.body.innerHTML += `<div class="confetti">
   <div class="confetti-piece"></div>
