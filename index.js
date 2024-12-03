@@ -16,7 +16,7 @@ if (document.URL == "https://bark.dumorando.com/profile/" || document.URL == "ht
 }
 
 let newsBox =  `
-Bark is entering it's Christmas phase, so be sure to look out for secrets! \n WE REACHED 3000 COMMITS! we will celebrate by adding confetti thruout the whole website!
+Bark is entering it's Christmas phase, so be sure to look out for secrets!
 `;
 let baseUrl = window.location.origin;
 let commitsLength = 150;
