@@ -9,6 +9,7 @@ Here is a list of all the badges and requirments:
 | Badge    | Icon  | Requirments |
 | -------- | ------- | ------ |
 | Dogggggg | <img width="100" src="https://bark.dumorando.com/src/images/assets/badges/b_dog.png" style="image-rendering: pixelated;"> |Free badge!|
+| OG fella | <img width="100" src="https://bark.dumorando.com/src/images/assets/badges/b_og.png" style="image-rendering: pixelated;"> |Be one of the first 500 users on Bark|
 | Disco-oh-oh-ord | <img width="100" src="https://bark.dumorando.com/src/images/assets/badges/b_doooo.png" style="image-rendering: pixelated;"> |Be apart of the Bark Discord server|
 | Wumpus ain't a dog | <img width="100" src="https://bark.dumorando.com/src/images/assets/badges/b_waad.png" style="image-rendering: pixelated;"> |Same as Disco-oh-oh-ord|
 | Web-Spider | <img width="100" src="https://bark.dumorando.com/src/images/assets/badges/b_webspider.png" style="image-rendering: pixelated;"> |Have 10+ none-duplicate socials on your profile|
