@@ -1,5 +1,5 @@
 function image_badge(url, name) {
-    return `<img src="${url}" title="${url}" alt="${url} badge" width="36" style="image-rendering: pixelated;">`;
+    return `<a href="https://bark.dumorando.com/docs#/Badges"><img src="${url}" title="${name} Badge" alt="has ${name} badge" width="36" style="image-rendering: pixelated; cursor: help;"></a>`;
 }
 
 function setup_badges(name) {
