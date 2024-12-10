@@ -92,8 +92,9 @@
     <br/>
     <button class="buttonFrBx" id="changeprofiledetails" onclick="location.replace('/settings/profile')">Change profile details</button>
     <div id="admin">
+      <br/>
       <details>
-        <summary>Admin</summary>
+        <summary><b>ADMIN</b></summary>
         <br/>
         <button class="buttonFrBx" title="you can follow this user, if you want" id="buttonadmininvalidatepfp">[admin] invalidate pfp</button>
         <br/>
@@ -131,7 +132,7 @@
     document.getElementById('commentposter').remove();
   }
 
-  const commentPlaceholders = ["Hello... I made this small project...", "Are you interested in doing a collab?", "Cool game!", "Hihihihihihi :3", "What's your favorite video game?"];
+  const commentPlaceholders = ["Hello... I made this small project...", "Collab?", "Cool game!", "Hihihihihihi :3", "What's your favorite video game?"];
 
   var randomCommentPlaceholder = commentPlaceholders[Math.floor(Math.random()*commentPlaceholders.length)];
 
