@@ -175,7 +175,7 @@
 
 
   document.getElementById("postprofilecomment").addEventListener('click', async () => {
-    const postcommentresponse = await fetch(`https://api.bark.dumorando.com/api/v2/postProfileComment?username=${username}&comment=${document.getElementById("commentbox").value}`, {
+    const postcommentresponse = await fetch(`https://api.bark.dumorando.com/api/v2/postProfileComment?username=${encodeURIComponent(username)}&comment=${document.getElementById("commentbox").value}`, {
         method: 'PUT'
     });
     if (postcommentresponse.status == 400) {
