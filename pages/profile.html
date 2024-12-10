@@ -176,10 +176,10 @@
 
   document.getElementById("postprofilecomment").addEventListener('click', async () => {
     await fetch(`https://api.bark.dumorando.com/api/v2/postProfileComment?username=${username}&comment=${document.getElementById("commentbox").value}`, {
-        method: 'PUT',
+        method: 'POST',
         headers: {
           'Content-Type': 'application/json'
-        },
+        }
       });
   });
   
