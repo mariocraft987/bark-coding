@@ -13,12 +13,10 @@
 }
 
 button.danger {
-  background-color: red;
-  border: none;
+  background-color: red !important;
   color: white;
-  cursor: pointer;
 }
 
 button.danger:hover {
-  background-color: maroon;
+  background-color: maroon !important;
 }
