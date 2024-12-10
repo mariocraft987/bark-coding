@@ -128,15 +128,15 @@
 <script src="/src/scripts/admin.js"></script>
 <script src="/src/scripts/badge.js"></script>
 <script type="module">
-  if((!localStorage.myBarkUsername)) {
-    document.getElementById('commentposter').remove();
-  }
-
   const commentPlaceholders = ["Hello... I made this small project...", "Collab?", "Cool game!", "Hihihihihihi :3", "What's your favorite video game?"];
 
   var randomCommentPlaceholder = commentPlaceholders[Math.floor(Math.random()*commentPlaceholders.length)];
 
   document.getElementById("commentbox").placeholder = randomCommentPlaceholder;
+
+  if((!localStorage.myBarkUsername)) {
+    document.getElementById('commentposter').remove();
+  }
   
   let parts = window.location.href.split("/");
   const username = parts[parts.length - 1];
