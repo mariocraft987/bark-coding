@@ -11,3 +11,14 @@
     text-align: center;
     text-decoration: underline;
 }
+
+button.danger {
+  background-color: red;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+button.danger:hover {
+  background-color: maroon;
+}
