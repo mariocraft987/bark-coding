@@ -173,21 +173,15 @@
       console.log(data)
     });
 
-  /*
-    not ready yet...
 
   document.getElementById("postprofilecomment").addEventListener('click', async () => {
-    await fetch(`https://api.bark.dumorando.com/api/v2/postProfileComment?username=${localStorage.myBarkUsername}&comment=Test%20comment`, {
+    await fetch(`https://api.bark.dumorando.com/api/v2/postProfileComment?username=${username}&comment=${document.getElementById("commentbox").value}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({
-          bio: document.getElementById("texttoexecute").value
-        })
       });
   });
-  */
   
   if (await amiadmin()) {
     document.getElementById('admin').classList.add('show');
