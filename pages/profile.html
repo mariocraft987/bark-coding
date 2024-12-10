@@ -175,13 +175,17 @@
 
 
   document.getElementById("postprofilecomment").addEventListener('click', async () => {
-    await fetch(`https://api.bark.dumorando.com/api/v2/postProfileComment?username=${username}&comment=${document.getElementById("commentbox").value}`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      });
+    const postcommentresponse = await fetch(`https://api.bark.dumorando.com/api/v2/login?username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`, {
+        method: 'POST'
+    });
+    if (postcommentresponse.status == 400) {
+      document.getElementById("commenterror").innerHTML = "400: Invalid Request!"
+    }
+    if (postcommentresponse.status == 404) {
+      document.getElementById("commenterror").innerHTML = "404: Account not found!"
+    }
   });
+
   
   if (await amiadmin()) {
     document.getElementById('admin').classList.add('show');
