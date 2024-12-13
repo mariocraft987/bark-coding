@@ -37,6 +37,13 @@
     
     <p>Welcome to your mail! where you'll find <s>daily</s> updates.</p>
     <br/>
+
+    <details>
+      <summary>
+        <b>BLOGS</b>
+      </summary>
+      <span id="blogs"></span>
+    </details>
     
   </div>
   <!-- inject:footer -->
@@ -44,5 +51,26 @@
 <script src="/index.js"></script>
 <script src="/src/scripts/injector.js"></script>
 <script src="/src/scripts/replacer.js"></script>
+<script>
+  	const mail_posts = [
+		{
+			"title": "<b>BIG NEWS</b>",
+			"author": "AtomicBolts",
+			"content": "Test"
+		}
+	]
+	
+		for (m of mail_posts) {
+			document.getElementById("blogs").innerHTML += 
+			`
+			<br/>
+			<div class="box">
+				<h1>${m.title}</h1>
+				<span style="font-size: 7pt;">Written by ${m.author}</span>
+				<p>${m.content}</p>
+			</div>
+			`
+		}
+</script>
 
 </html>
