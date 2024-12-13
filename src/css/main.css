@@ -32,5 +32,5 @@ button.followButton {
 
 button.followButton:hover {
   animation-name: hue-rainbow;
-  animation-duration: 3s;
+  animation-duration: 5s;
 }
