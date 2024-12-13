@@ -11,9 +11,6 @@
   }
 
 .special {
-    font-family: cursive;
-    color: #380830;
-    text-align: center;
     text-decoration: underline;
 }
 
@@ -33,4 +30,8 @@ button.followButton {
 button.followButton:hover {
   animation-name: hue-rainbow;
   animation-duration: 5s;
+}
+
+canvas {
+  border: 1px solid black;
 }
