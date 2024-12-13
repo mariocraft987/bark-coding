@@ -52,25 +52,25 @@
 <script src="/src/scripts/injector.js"></script>
 <script src="/src/scripts/replacer.js"></script>
 <script>
-  	const mail_posts = [
-		{
-			"title": "<b>BIG NEWS</b>",
-			"author": "AtomicBolts",
-			"content": "Test"
-		}
-	]
+  const mail_posts = [
+	{
+		"title": "<b>BIG NEWS</b>",
+		"author": "AtomicBolts",
+		"content": "This is a test made from JS and JSON. You'll find blog posts from here"
+	}
+]
 	
-		for (m of mail_posts) {
-			document.getElementById("blogs").innerHTML += 
-			`
-			<br/>
-			<div class="box">
-				<h1>${m.title}</h1>
-				<span style="font-size: 7pt;">Written by ${m.author}</span>
-				<p>${m.content}</p>
-			</div>
-			`
-		}
+for (m of mail_posts) {
+	document.getElementById("blogs").innerHTML += 
+	`
+	<br/>
+	<div class="box">
+		<h1>${m.title}</h1>
+		<span style="font-size: 7pt;">Written by ${m.author}</span>
+		<p>${m.content}</p>
+	</div>
+	`
+}
 </script>
 
 </html>
