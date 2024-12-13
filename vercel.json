@@ -5,7 +5,7 @@
       "destination": "/pages/profile.html"
     },
     {
-      "source": "/donates",
+      "source": "/donate",
       "destination": "/pages/donates.html"
     },
     {
