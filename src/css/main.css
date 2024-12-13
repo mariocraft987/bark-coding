@@ -1,3 +1,8 @@
+@keyframes hue-rainbow {
+  from {filter: hue-rotate(0deg);}
+  to {filter: hue-rotate(360deg);}
+}
+
 .dark-mode .special {
     font-family: cursive;
     color: #fff;
@@ -19,4 +24,13 @@ button.danger {
 
 button.danger:hover {
   background-color: maroon;
+}
+
+button.followButton {
+  filter: hue-rotate(0deg);
+}
+
+button.followButton:hover {
+  animation-name: hue-rainbow;
+  animation-duration: 2.s;
 }
