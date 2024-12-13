@@ -47,7 +47,7 @@
   <tr>
     <td>
       <p>Something <span class="special">special</span> coming soon...</p>
-      <img src="/src/images/assets/brain-meme-you-did-not-have-to-cut-me-off.gif" id="bigbrainman" alt="man learns how to make wheel" width="100">
+      <img src="/src/images/assets/brain-meme-you-did-not-have-to-cut-me-off.gif" onclick="ctbd_addPlus()" alt="man learns how to make wheel" width="100">
     </td>
     <td>
       <h2>Statistics:</h2>
@@ -66,8 +66,11 @@
 </body>
 <script src="/index.js"></script>
 <script src="/src/scripts/replacer.js"></script>
+<script src="src/scripts/game1.js"></script>
 
 <script>
+
+
 // ctbd for Catch that bark dog
 // https://github.com/mariocraft987/bark-coding/discussions/264
 function ctbd_addPlus() {
@@ -80,7 +83,6 @@ function ctbd_addPlus() {
 }
 
 num = 0;
-document.getElementById("bigbrainman").addEventListener("click", ctbd_addPlus);
 </script>
 
 </html>
