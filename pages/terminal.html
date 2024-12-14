@@ -33,6 +33,9 @@ ___           _      ___                  _
 | _ \/ _` | '_| / / | (__/ _ \ ' \(_-&lt/ _ \ / -_)
 |___/\__,_|_| |_\_\  \___\___/_||_/__/\___/_\___|
     </span>
+
+    <span id="output"></span>
+
     <p><span id="loadings"></span></p>
 </body>
 <script>
@@ -62,8 +65,6 @@ ___           _      ___                  _
 
     function bootup() {
         console.log("Booted up!")
-
-        document.getElementById("loadings").innerHTML += `<span id="output"></span>`
 
         document.getElementById("loadings").innerHTML += `<br/><br/>${system_user}@barkcoding<br/>&gt<input id='input' onkeydown="cmd(this)" autocomplete='off'>`;
         document.getElementById("input").focus();
