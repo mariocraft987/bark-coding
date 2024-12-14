@@ -32,12 +32,31 @@
             <br/>
             <span id="themeButtons">
                 <p class="selecttheme" title="themes, css styles made by dev">Or select a premade theme:</p>
-                <button type="button" title='bluedodger, named after the color "dodgerblue"' name="bluedodger" onclick="switchTheme(`bluedodger`)" onclick class="themeBtn">Bluedodger</button>
-                <button type="button" title="as a contributon by Pranidhi10" name="pranidhi" onclick="switchTheme(`pranidhi`)" class="pranidhiButton">Pranidhi</button>
-                <button type="button" title="created by qwertyytheartist as another theme" name="cherryblossom" onclick="switchTheme(`cherryblossom`)" class="CherryBlossomButton">Cherry Blossom</button>
-                <button type="button" title="SNAIL IDE REFRENCE" name="shelledgastropod" onclick="switchTheme(`shelledgastropod`)" class="SnailButton">Shelled Gastropod</button>
-                <button type="button" title="not so acurate, more like a shrek theme" name="oldweb" onclick="switchTheme(`oldweb`)" class="oldWebButton">Old Web</button>
-                <button type="button" title='one word: "Why?"' name="browndodger" onclick="switchTheme(`browndodger`)" class="BrownDodgerButton">Browndodger</button>
+
+                <table>
+                    <tr>
+                        <td>
+                            <button type="button" title='bluedodger, named after the color "dodgerblue"' name="bluedodger" onclick="switchTheme(`bluedodger`)" onclick class="themeBtn">Bluedodger</button>
+                        </td>
+                        <td>
+                            <button type="button" title="as a contributon by Pranidhi10" name="pranidhi" onclick="switchTheme(`pranidhi`)" class="pranidhiButton">Pranidhi</button>
+                        </td>
+                        <td>
+                            <button type="button" title="created by qwertyytheartist as another theme" name="cherryblossom" onclick="switchTheme(`cherryblossom`)" class="CherryBlossomButton">Cherry Blossom</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="button" title="SNAIL IDE REFRENCE" name="shelledgastropod" onclick="switchTheme(`shelledgastropod`)" class="SnailButton">Shelled Gastropod</button>
+                        </td>
+                        <td>
+                            <button type="button" title="not so acurate, more like a shrek theme" name="oldweb" onclick="switchTheme(`oldweb`)" class="oldWebButton">Old Web</button>
+                        </td>
+                        <td>
+                            <button type="button" title='one word: "Why?"' name="browndodger" onclick="switchTheme(`browndodger`)" class="BrownDodgerButton">Browndodger</button>
+                        </td>
+                    </tr>
+                </table>
             </span>
         </section>
         <section id="settingsPage">
@@ -92,8 +111,6 @@
 <script src="/src/scripts/multi-language.js"></script>
 <script src="/src/scripts/replacer.js"></script>
 <script src="/settings/settings.js" defer></script>
-<!-- for ANYONE that knows -->
-<script src="/src/scripts/konami.js"></script>
 <script>
 
 if (localStorage.devmode == "true") {
