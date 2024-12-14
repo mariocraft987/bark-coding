@@ -16,7 +16,7 @@ if (document.URL == "https://bark.dumorando.com/profile/" || document.URL == "ht
 }
 
 let newsBox =  `
-Bark is entering it's Christmas phase, so be sure to look out for secrets!
+Bark is getting a web application version as well as a new theme along with it!
 `;
 let baseUrl = window.location.origin;
 let commitsLength = 150;
