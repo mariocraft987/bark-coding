@@ -9,6 +9,8 @@ function badge_type(e) {
         document.getElementById("username").outerHTML += image_badge("https://bark.dumorando.com/src/images/assets/badges/b_dev.png", "DEVELOPERRR");
     } else if (e == 3) {
         document.getElementById("username").outerHTML += image_badge("https://bark.dumorando.com/src/images/assets/badges/b_bruh.png", "Bruh");
+    } else if (e == 4) {
+        document.getElementById("username").outerHTML += image_badge("https://bark.dumorando.com/src/images/assets/badges/b_lucky.png", "Lucky!");
     }
 }
 
@@ -21,5 +23,8 @@ function setup_badges(name) {
     }
     if (name == "RarestUsername") {
         badge_type(3);
+    }
+    if (name == "theOVERGOD") {
+        badge_type(4);
     }
 }
