@@ -54,7 +54,7 @@ ___           _      ___                  _
     }
 
     function cmd(ele) {
-        if(event.keyCode == 13) {
+        if(event.Key === "Enter") {
             let input = document.getElementById("user_input").value;
 
             if (input == "help") {
@@ -69,7 +69,7 @@ ___           _      ___                  _
     function bootup() {
         console.log("Booted up!");
 
-        document.getElementById("input").innerHTML += `<br/><br/>${system_user}@barkcoding<br/>$<input id='user_input' onkeydown="cmd()" autocomplete='off'>`;
+        document.getElementById("input").innerHTML += `<br/><br/>${system_user}@barkcoding<br/>$<input id='user_input' onkeydown="cmd(this)" autocomplete='off'>`;
         document.getElementById("user_input").focus();
     }
 
