@@ -219,3 +219,16 @@ input[type="color"]::-moz-color-swatch {
   background-color: rgb(14, 99, 55);
   border: none;
 }
+
+.ProfProgButton {
+  background-color: #f55231;
+  color: white;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.ProfProgButton:hover {
+  background-color: #c94328;
+  border: none;
+}
