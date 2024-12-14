@@ -103,6 +103,10 @@
     {
       "source": "/contributors",
       "destination": "/pages/contr.html"
+    },
+    {
+      "source": "/terminal",
+      "destination": "/pages/terminal.html"
     }
   ]
 }
