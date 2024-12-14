@@ -1,5 +1,4 @@
 ![Logo](https://raw.githubusercontent.com/mariocraft987/bark.github.io/main/src/images/Bark.svg)<br>
-![Static Badge](https://img.shields.io/badge/engine%20by-blockly-yellow?style=for-the-badge&logo=google&logoColor=yellow)
 ![Static Badge](https://img.shields.io/badge/server:%20-bapiv2-green?style=for-the-badge&logo=javascript&logoColor=yellow)
 ![Static Badge](https://img.shields.io/badge/latest%20release-0.1.7-green?style=for-the-badge&logo=electron&logoColor=green)
 
@@ -24,7 +23,7 @@ Bark has many features, including:
 `*` = coming soon
 
 ![Screenshot of the Bark homepage](https://github.com/mariocraft987/bark.github.io/assets/129226914/c4afcd1e-e9c1-477f-a88f-3ae2f64748e6 "Homepage")<br>
-![Screenshot of the Bark code editor](https://github.com/user-attachments/assets/02f1e2a5-f839-46e3-bd63-f4ad55a9f178 "Code editor")
+![Screenshot of the Bark code editor](https://github.com/user-attachments/assets/ef973685-613f-4eb6-90b7-8a5bf0a99e6c)
 
 <hr>
 
@@ -44,9 +43,6 @@ To be a part of Bark's development, please go to <a href="https://bark.dumorando
 [<img src="https://avatars.githubusercontent.com/u/167290033?v=4" alt="" title="BwnnyRxbbit" width="70" height="70" style="border-radius:100%">](https://github.com/BwnnyRxbbit)
 [<img src="https://avatars.githubusercontent.com/u/138245554?v=4" alt="" title="KitsunAbigal" width="70" height="70" style="border-radius:100%">](https://github.com/KitsunAbigail)
 <hr>
-
-## How do I add blocks?
-Go to <a href="https://bark.dumorando.com/docs#/Add%20a%20new%20block">`block_adding.md`</a> and follow the steps. If you have made a library of blocks, why not make an <a href="https://bark.dumorando.com/docs#/Create%20an%20extension">extension</a> but, if you're lazy and want one of us to do it, make a discussion in [Here!](https://github.com/mariocraft987/bark.github.io/discussions/categories/block-requests)
 
 # License
 
