@@ -30,6 +30,7 @@ button.followButton {
 button.followButton:hover {
   animation-name: hue-rainbow;
   animation-duration: 5s;
+  animation-iteration-count: infinite;
 }
 
 canvas {
