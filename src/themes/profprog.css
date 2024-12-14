@@ -129,6 +129,7 @@ input {
 .searchBar {
   display: inline-block;
   padding: 6px 15px;
+  margin: 7px;
   font-size: 15px;
   border: none;
   color: #000000 !important;
