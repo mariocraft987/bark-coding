@@ -54,19 +54,19 @@ ___           _      ___                  _
         if(event.keyCode == 13) {
             input = ele.value;
 
-            if (input = "help") {
-                write("Coming Soon!")
+            if (input == "help") {
+                write("Coming Soon!");
             } else {
-                write("ERROR: Invalid Command")
+                write("ERROR: Invalid Command");
             }
 
         }
     }
 
     function bootup() {
-        console.log("Booted up!")
+        console.log("Booted up!");
 
-        document.getElementById("loadings").innerHTML += `<br/><br/>${system_user}@barkcoding<br/>&gt<input id='input' onkeydown="cmd(this)" autocomplete='off'>`;
+        document.getElementById("loadings").innerHTML += `<br/><br/>${system_user}@barkcoding<br/>$<input id='input' onkeydown="cmd(this)" autocomplete='off'>`;
         document.getElementById("input").focus();
     }
 
