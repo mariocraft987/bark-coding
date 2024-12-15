@@ -86,10 +86,6 @@
             <br>
         </section>
         <section id="settingsPage">
-            <h2>Debug</h2>
-            <button onclick='localStorage.theme = "bluedodger"; location.reload()'>Reset theme</button>
-            <br/>
-            <hr/>
             <h2><span style="color:red;">D</span><span style="color:rgb(255, 98, 0);">E</span><span style="color:rgb(255, 196, 0);">V </span><span style="color:rgb(208, 255, 0);">M</span><span style="color:rgb(0, 255, 21);">O</span><span style="color:rgb(0, 251, 255);">D</span><span style="color:rgb(0, 119, 255);">E</span></h2>
             <button name="devmode" id="devmode" onclick="devmodeset()">Enable/Disable Dev Mode</button>
             <br/>
@@ -100,13 +96,20 @@
             <center>
             <div id="warning" priority="2">
                 <h2>Double Warning</h2>
-                <p class="warningdevmode">These settings are a work in progress.</p>
-                <p>Custom Extension loader</p>
-                <p>Custom Theme loader</p>
+                <p class="warningdevmode" style="color: red;">These settings are a work in progress.</p>
             </div>
 
             <section id="settingsPage">
                 <h2>SECRET SETTINGS</h2>
+                <ul>
+                    <li>Sticky Navbar</li>
+                    <li>Explore Page Alpha Game</li>
+                </ul>
+            </section>
+
+            <section id="settingsPage">
+                <h2>Debug Settings</h2>
+                <button onclick='localStorage.theme = "bluedodger"; location.reload()'>Reset theme</button>
             </section>
             </center>
         </div>
