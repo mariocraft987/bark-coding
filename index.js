@@ -29,9 +29,9 @@ let showHoldOn = true;
 
 // conditionals
 
-if (document.URL.includes('bark-coding.vercel.app')) {
-  localStorage.barktoken = null
-  window.location.href = "https://bark.dumorando.com" + document.URL.replaceAll(window.location.origin, "")
+if (document.URL.includes('bark-coding.vercel.app') || document.URL.includes('mariocraft987.github.io/bark-coding')) {
+  localStorage.barktoken = null;
+  window.location.href = "https://bark.dumorando.com" + document.URL.replaceAll(window.location.origin, "");
 }
 
 if (showHoldOn) {
