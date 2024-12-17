@@ -280,6 +280,7 @@ function replace(text) {
         return GTKtext;
     }
 
+    /*
     for (i = 0; i < 10; i++) {
         start = start.replace("@", "<a href='https://dumorando.com/")
         point = start.indexOf("@")
@@ -292,6 +293,7 @@ function replace(text) {
 
         let result = str.slice(0, h) + "/profile'>" + start.slice(h);
     }
+    */
 
     
     for (r = 0; r < 50; r++) {
