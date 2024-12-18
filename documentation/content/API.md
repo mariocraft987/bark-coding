@@ -22,7 +22,9 @@ Returns the JSON of all the users on Bark.
         "username": "janedoe",
         "bio": "I started painting as a hobby when I was little",
         "profilepicture": "data:image/png;base64..."
-    }]
+    },
+    ...
+    ]
 }
 ```
 
