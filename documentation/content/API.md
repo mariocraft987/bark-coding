@@ -1,7 +1,9 @@
 # API
-BAPI, made by dumorando, using Node.js.
+BAPI (short for Bark API), made by dumorando, using Node.js.
 
 The API is hosted at [github.com/dumorando/bapiv2](https://github.com/dumorando/bapiv2)
+
+BAPI is at its 2th version.
 
 # Fetches
 
@@ -42,13 +44,14 @@ Fetches a Bark user and returns the following JSON data.
 ```
 ## /api/v2/admins
 
-Returns the JSON of the admins of Bark
+Returns the JSON of the admins of Bark.
 
 ```json
 [
     "johndoe",
     "janedoe",
     "michael",
-    "sans"
+    "sans",
+    ...
 ]
 ```
