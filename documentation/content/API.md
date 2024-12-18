@@ -3,7 +3,7 @@ BAPI (short for Bark API), made by dumorando, using Node.js.
 
 The API is hosted at [github.com/dumorando/bapiv2](https://github.com/dumorando/bapiv2)
 
-BAPI is at its 2th version.
+BAPI is at its 2nd version.
 
 # Fetches
 
