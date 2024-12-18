@@ -55,21 +55,22 @@
       // it's safer to just include our own websites
       const url = new URL(window.location.href);
       const trusted = [
-        "api.semisocial.chat",
-        "bark-coding.vercel.app",
-        "bark.dumorando.com",
-        "breakfast.pages.gay",
-        "dumorando.com",
-        "dumo.network",
-        "dumosgamemaker.vercel.app",
-        "go.nmsderp.xyz",
-        "mariocraft987.github.io",
-        "nmsderp.xyz",
-        "penguinmod.com",
-        "semisocial.chat",
-        "snail-ide.com",
-        "uwu.dumorando.com",
-        "sillyfriends.xyz"
+        "https://api.semisocial.chat",
+        "https://bark-coding.vercel.app",
+        "https://bark.dumorando.com",
+        "https://breakfast.pages.gay",
+        "https://dumorando.com",
+        "https://dumo.network",
+        "https://dumosgamemaker.vercel.app",
+        "https://go.nmsderp.xyz",
+        "https://mariocraft987.github.io",
+        "https://nmsderp.xyz",
+        "https://penguinmod.com",
+        "https://snail-ide.com/",
+        "https://semisocial.chat",
+        "https://snail-ide.com",
+        "https://uwu.dumorando.com",
+        "https://sillyfriends.xyz"
       ];
 
       function isValidURL(string) {
@@ -88,7 +89,7 @@
         document.getElementById("url").href = paramValue;
 
         //just instantly go to the site if it is trusted
-        const trustedd = !!trusted.find(thing => paramValue.startsWith(thing));
+        const trustedd = !!trusted.includes(paramValue);
         if (trustedd) { 
           window.location.replace(paramValue);
           window.close();
