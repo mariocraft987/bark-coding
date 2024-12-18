@@ -12,4 +12,4 @@ Bark is run by indie dev who made other projects before.
 
 It has a working Javascript editor, an account system, and is open-sourced.
 
-(![Bark Logo](https://bark.dumorando.com/src/images/Bark.svg))
+![Bark Logo](https://bark.dumorando.com/src/images/Bark.svg)
