@@ -3,9 +3,9 @@ BAPI, made by dumorando, using Node.js.
 
 The API is hosted at [github.com/dumorando/bapiv2](https://github.com/dumorando/bapiv2)
 
-## Fetches
+# Fetches
 
-### /api/v2/users
+## /api/v2/users
 
 Returns the JSON of all the users on Bark.
 
@@ -26,7 +26,7 @@ Returns the JSON of all the users on Bark.
 }
 ```
 
-### /api/v2/fetchUser?username=USERNAME
+## /api/v2/fetchUser?username=USERNAME
 
 Fetches a Bark user and returns the following JSON data.
 
@@ -38,7 +38,7 @@ Fetches a Bark user and returns the following JSON data.
     "profilepicture": "data:image/png;base64..."
 }
 ```
-### /api/v2/admins
+## /api/v2/admins
 
 Returns the JSON of the admins of Bark
 
