@@ -35,7 +35,8 @@ const components = {
     <a href="/advanced">Editor</a>
     <a href="https://github.com/mariocraft987/bark.github.io/">Github</a>
     <br/><br/><a href="https://bark.dumorando.com/docs">Docs</a>
-    <a href="https://discord.gg/hXmHw7H9BF">Discord</a></p>
+    <a href="https://discord.gg/hXmHw7H9BF">Discord</a>
+    <a href="https://x.com/barkcoding">X</a></p>
     <p style="color: #777;">for bark dog: 🦴</p><br />
   <p style="font-size: 5pt; color: #777;">Even though this project is hosted on a dumorando.com domain, this project is barely affiliated with dumorando.</p></footer>
     `
