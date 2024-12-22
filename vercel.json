@@ -107,6 +107,10 @@
     {
       "source": "/terminal",
       "destination": "/pages/terminal.html"
+    },
+    {
+      "source": "/share",
+      "destination": "/pages/share.html"
     }
   ]
 }
