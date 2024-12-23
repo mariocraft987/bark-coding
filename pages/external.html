@@ -39,6 +39,7 @@
       <p>
         This is the url:
         <span id="url-text" style="text-decoration: underline">undefined</span>
+        <img id="site-url" width="20">
       </p>
       <div style="display: flex; justify-content: space-evenly">
         <a href="/" class="button cancel">Cancel</a>
@@ -97,7 +98,8 @@
           window.location = paramValue;
         }
 
-        document.getElementById("url-text").innerText = paramValue + `<img src="https://s2.googleusercontent.com/s2/favicons?domain=${paramValue}" width="20">`;
+        document.getElementById("url-text").innerText = paramValue;
+        document.getElementById("site-icon").src = `https://s2.googleusercontent.com/s2/favicons?domain=${paramValue}`;
       }
     </script>
   </body>
