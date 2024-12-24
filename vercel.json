@@ -111,6 +111,10 @@
     {
       "source": "/share",
       "destination": "/pages/share.html"
+    },
+    {
+      "source": "/tos",
+      "destination": "/pages/tos.html"
     }
   ]
 }
