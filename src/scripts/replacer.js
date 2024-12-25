@@ -191,6 +191,11 @@ const emojis = [
         token: ":shrug:",
         emoji: "shrug",
         url: "/src/emojis/svg/normal/shrug.svg"
+    }, 
+    {
+        token: ":santa:",
+        emoji: "santa",
+        url: "/src/emojis/svg/normal/santa.svg"
     }
     /*{
         token: ":emojiName:",
@@ -221,7 +226,6 @@ function replace(text) {
 
         // Some terms listed here are only slices of words. this is because there are many different words (generally offensive and sexual) that begin with these terms.
         // 🆘 I wouldn't recommend searching these terms 🆘
-        .replaceAll(/(project 2025)+/gim, t(11))
         .replaceAll(/(strip club|prostitute|kid amongus)+/gim, t(10))
         .replaceAll(/(paedophile|wet dream|goofy ahh)+/gim, t(9))
         .replaceAll(/(ejaculat|beastial|masturbat|testicle|pedophile|stripper)+/gim, t(8))

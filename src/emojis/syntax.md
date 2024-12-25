@@ -40,6 +40,7 @@
 |`:rofl:`      |<img src="svg/normal/rofl.svg" width="25" height="25">|<a href="https://github.com/Rubiidev-18">Rubiidev-18</a>|
 |`:rubiidev:`  |<img src="svg/dev/rubiidev.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:sad:`       |<img src="svg/normal/sad.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
+|`:santa:`       |<img src="svg/normal/santa.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:smallSmile:`|<img src="svg/normal/smallsmile.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:smiley:`    |<img src="svg/normal/smiley.svg" width="25" height="25">|<a href="https://github.com/Mariocraft987">Mariocraft987</a>|
 |`:skibidi:`    |<img src="svg/joke/skibidi.svg" width="25" height="25">|<a href="https://github.com/mariocraft987">Mariocraft987</a>|
