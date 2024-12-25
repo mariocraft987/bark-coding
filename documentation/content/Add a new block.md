@@ -1,5 +1,4 @@
 # Making Blocks
-# NOTE THIS WONT BE USED ANYMORE
 ### This tutorial was written by @nmsderp, feel free to add more if needed
 
 *NOTE: Making blocks requires basic knowledge of xml, and some decent knowledge of JavaScript*

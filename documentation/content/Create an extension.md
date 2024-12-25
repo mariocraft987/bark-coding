@@ -1,5 +1,4 @@
 # How to make a Bark extension
-# NOTE THIS WONT BE USED ANYMORE
 
 First of all, youre gonna want to go to [the Block Factory](https://blockly-demo.appspot.com/static/demos/blockfactory/index.html) to create a block.<br />
 After you design your block, youre gonna want to copy the JSON code on the right side of the screen.<br />
