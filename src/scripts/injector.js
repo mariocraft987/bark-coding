@@ -9,7 +9,7 @@ if (response.status === 404) {
 }
 
 const actionsecret = localStorage.getItem("secret");
-let profile = !!localStorage.getItem("myBarkUsername") ? `<a href="/mail" class="right">Mail</a><a href="/profile/${localStorage.getItem("myBarkUsername")}" class="right"><img width="25" src="${pfp}">My Profile</a></div>` : '<a href="login" class="right">Login</a><a href="signup" class="right">Join bark</a></div>'
+let profile = !!localStorage.getItem("myBarkUsername") ? `<a href="/mail" class="right">Mail</a><a href="/profile/${localStorage.getItem("myBarkUsername")}" class="right"><img width="25" src="https://github.com/mariocraft987.png">My Profile</a></div>` : '<a href="login" class="right">Login</a><a href="signup" class="right">Join bark</a></div>'
 let setting = !!localStorage.getItem("myBarkUsername") ? `<a href="/settings">Settings</a>` : ''
 let afdbtn = new Date().getMonth() === 3 && new Date().getDate() === 1 ? "<a id='flip-it-afd-btn'>FLIP IT</a>" : '';
 let turkey = new Date().getMonth() === 10 && new Date().getDate() === 28 ? "<a onclick='alert(`Happy Thanksgiving!!\n\n🦃🦃🦃`)'>🦃</a>" : '';
