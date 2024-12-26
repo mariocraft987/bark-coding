@@ -11,13 +11,6 @@ toevaluate.forEach(path => {
     });
 });
 
-  const response = await fetch(`https://api.bark.dumorando.com/api/v2/fetchUser?username=${localStorage.getItem("myBarkUsername")}`);
-
-  if (response.status === 404) window.location = "https://atomicbolts.nekoweb.org/e.html";
-
-  const data = await response.json();
-  console.log(data.profilepicture);
-
 if (document.URL == "https://bark.dumorando.com/profile/" || document.URL == "https://bark.dumorando.com/profile") {
   window.location.href = "https://bark.dumorando.com/users";
 }
