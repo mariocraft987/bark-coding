@@ -1,8 +1,10 @@
-const response = await fetch(`https://api.bark.dumorando.com/api/v2/fetchUser?username=${localStorage.getItem("myBarkUsername")}`);
 
-const data = await response.json();
-pfp = data.profilepicture;
-console.log(pfp);
+  const response = await fetch(`https://api.bark.dumorando.com/api/v2/fetchUser?username=${localStorage.getItem("myBarkUsername")}`);
+
+  if (response.status === 404) window.location = "https://atomicbolts.nekoweb.org/e.html";
+
+  const data = await response.json();
+  console.log(data.profilepicture);
 
 const actionsecret = localStorage.getItem("secret");
 let profile = !!localStorage.getItem("myBarkUsername") ? `<a href="/mail" class="right">Mail</a><a href="/profile/${localStorage.getItem("myBarkUsername")}" class="right"><img width="21" style="border-radius: 50%;" src="https://github.com/mariocraft987.png">My Profile</a></div>` : '<a href="login" class="right">Login</a><a href="signup" class="right">Join bark</a></div>'
