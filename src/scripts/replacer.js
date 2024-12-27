@@ -246,7 +246,7 @@ function replace(text) {
         // joke emojis
         .replaceAll(":mewing:", "<img src='/src/emojis/svg/joke/mewing.svg' alt='mewing' style='margin-bottom: -7px;' width='" + emojisize + "' height='" + emojisize + "'>")
 
-        // devoloper tags
+        // developer tags
         .replaceAll(/(@mariocraft987|@mariocraft)+/gim, '<a href="https://github.com/Mariocraft987" style="background-color: #988bbf;height: 16px;display: inline-block;padding: 5px;margin: -5px 3px;border: 1px solid #ebd7ff;border-radius: 10px;color: #ffffff;position: relative;top: 2px; text-decoration: none;"><img src="https://github.com/mariocraft987.png" width="16px" style="border-radius: 50%;"><span style="top: -2px;margin-left: 3px;margin-right: 3px;position: relative;">mariocraft987</span></a>')
         .replaceAll(/(@thepython555|@dumorando)+/gim, '<a href="https://github.com/dumorando" style="background-color: #bebf8b;height: 16px;display: inline-block;padding: 5px;margin: -5px 3px;border: 1px solid #fffcd7;border-radius: 10px;color: #ffffff;position: relative;top: 2px; text-decoration: none;"><img src="https://github.com/dumorando.png" width="16px" style="border-radius: 50%;"><span style="top: -2px;margin-left: 3px;margin-right: 3px;position: relative;">dumorando</span></a>')
         .replaceAll(/(@breakfast|@sillybreakfast)+/gim, '<a href="https://github.com/raynecloudy" style="background-color: #bfb08b;height: 16px;display: inline-block;padding: 5px;margin: -5px 3px;border: 1px solid #fff4d7;border-radius: 10px;color: #ffffff;position: relative;top: 2px; text-decoration: none;"><img src="https://github.com/raynecloudy.png" width="16px" style="border-radius: 50%;"><span style="top: -2px;margin-left: 3px;margin-right: 3px;position: relative;">sillybreakfast</span></a>')
@@ -254,6 +254,10 @@ function replace(text) {
         .replaceAll(/(@nmsderp|@mr_rudy)+/gim, '<a href="https://github.com/nmsderp" style="background-color: #7ad975;height: 16px;display: inline-block;padding: 5px;margin: -5px 3px;border: 1px solid #d7ffe0;border-radius: 10px;color: #ffffff;position: relative;top: 2px; text-decoration: none;"><img src="https://github.com/nmsderp.png" width="16px" style="border-radius: 50%;"><span style="top: -2px;margin-left: 3px;margin-right: 3px;position: relative;">nmsderp</span></a>')
         // allow newlines
         .replaceAll(/\n/g, "<br>")
+        // 88x31 buttons
+        .replaceAll("[atomicbolts]", `a href="https://atomicbolts.nekoweb.org"><img src="https://atomicbolts.nekoweb.org/src/banner.gif" title="Atomic's weird site" style="image-rendering: pixelated" alt="atomicbolts site" width="100"></a>`)
+        .replaceAll("[breakfast]", '<a href="https://breakfast.nekoweb.org" target="_blank"><img src="https://breakfast.nekoweb.org/media/buttons/breakfast.png" alt="the breakfast house" title="the breakfast house"></a>')
+        .replaceAll("steve0greatness", '<a href="https://steve0greatness.nekoweb.org"><img src="https://steve0greatness.nekoweb.org/button.webp" title="Steve0Greatness" alt="Steve0Greatness" width="88" height="31" style="image-rendering: pixelated"/></a>')
 
     function getSecondHalf(str, coin) {
             return str.split(coin).pop()
