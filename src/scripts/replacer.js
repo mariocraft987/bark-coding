@@ -257,7 +257,7 @@ function replace(text) {
         .replaceAll(/\n/g, "<br>")
         
         // 88x31 buttons
-        .replaceAll("[atomicbolts]", `<a href="https://atomicbolts.nekoweb.org"><img src="https://atomicbolts.nekoweb.org/src/banner.gif" title="Atomic's weird site" style="image-rendering: pixelated" alt="atomicbolts site" width="100"></a>`)
+        .replaceAll("[atomicbolts]", `<a href="https://atomicbolts.nekoweb.org"><img src="https://atomicbolts.nekoweb.org/src/banner.gif" title="Atomic's weird site" alt="atomicbolts site" width="100"></a>`)
         .replaceAll("[breakfast]", '<a href="https://breakfast.nekoweb.org" target="_blank"><img src="https://breakfast.nekoweb.org/media/buttons/breakfast.png" alt="the breakfast house" title="the breakfast house"></a>')
         .replaceAll("[steve0greatness]", '<a href="https://steve0greatness.nekoweb.org" style="text-decoration: none;"><img src="https://steve0greatness.nekoweb.org/button.webp" title="Steve0Greatness" alt="Steve0Greatness" width="88" height="31" style="image-rendering: pixelated"/></a>')
 
