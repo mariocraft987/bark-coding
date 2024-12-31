@@ -23,6 +23,8 @@ let commitsLength = 150;
 
 let mobile = window.navigator.userAgent.toLowerCase().includes("mobi");
 
+let isLinux = navigator.appVersion.indexOf("Linux") != -1
+
 let isFirefox = window.navigator.userAgent.toLowerCase().includes("firefox")
 let isSafari = window.safari !== undefined;
 // because i get confused sometimes
