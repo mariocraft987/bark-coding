@@ -8,7 +8,7 @@ const components = {
     //navbar
     "navbar": `
     <div id="navbar" class="navbar"><a href="/"><img id="bark_logo" src="/src/images/Logo_christmas.svg" alt="bark" width="25" height="25" ></a>
-    <a href="/editor_comingsoon">Create</a>
+    <a href="/create">Create</a>
     <a href="/explore">Explore</a>
     <a href="/about">About</a>
     ${setting}

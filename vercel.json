@@ -97,8 +97,8 @@
       "destination": "/pages/mail.html"
     },
     {
-      "source": "/editor_comingsoon",
-      "destination": "/pages/editor_comingsoon.html"
+      "source": "/create",
+      "destination": "/pages/create.html"
     },
     {
       "source": "/contributors",
