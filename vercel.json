@@ -9,6 +9,10 @@
       "destination": "/pages/donates.html"
     },
     {
+      "source": "/donate/members",
+      "destination": "/pages/donatemembers.html"
+    },
+    {
       "source": "/contributors",
       "destination": "/pages/contributors.html"
     },
