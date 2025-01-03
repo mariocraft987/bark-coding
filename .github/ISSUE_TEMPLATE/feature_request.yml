@@ -7,10 +7,6 @@ body:
   attributes:
     value: "## Thanks for filling this out!"
 
-- type: markdown
-  attributes:
-    value: "_If you are using Internet Explorer, please switch to a modern browser before filling out this report._"
-
 - type: textarea
   id: describe
   attributes:
