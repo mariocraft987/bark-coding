@@ -39,8 +39,8 @@ const components = {
     <a href="https://discord.gg/hXmHw7H9BF">Discord</a>
     <a href="https://x.com/barkcoding">Twitter</a></p>
     <p style="color: #777;">for bark dog: 🦴</p>
-    <p style="font-size: 8pt; color: #777;">©2024 - 2025 Bark Coding</p><br/>
-      <p style="font-size: 5pt; color: #777;">Even though this project is hosted on a dumorando.com domain, this project is barely affiliated with dumorando.</p></footer>
+    <p style="font-size: 9pt; color: #777;">©2024 - 2025 Bark Coding<br/>
+    Even though this project is hosted on a dumorando.com domain, this project is barely affiliated with dumorando.</p></footer>
     `
 };
 Object.keys(components).forEach(item => {
