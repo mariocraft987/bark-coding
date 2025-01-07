@@ -34,11 +34,11 @@ const components = {
     <footer><p style="color: #777;">Looks like you\'ve reached the bottom.</p><p>
     <a href="/">Home</a>
     <a href="/advanced">Editor</a>
-    <a href="https://github.com/mariocraft987/bark.github.io/">Github</a>
+    <a href="https://github.com/mariocraft987/bark.github.io/">Source code</a>
     <br/><br/><a href="https://bark.dumorando.com/docs">Docs</a>
     <a href="https://discord.gg/hXmHw7H9BF">Discord</a>
     <a href="https://x.com/barkcoding">Twitter</a></p>
-    <p style="color: #777;">for bark dog: 🦴</p>
+    <p style="color: #777;">bark dog now has the bone, we have no more bones left.</p>
     <p style="font-size: 9pt; color: #777;">©2024 - 2025 Bark Coding<br/>
     Even though this project is hosted on a dumorando.com domain, this project is barely affiliated with dumorando.</p></footer>
     `
