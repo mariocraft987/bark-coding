@@ -1,6 +1,6 @@
 ![Logo](https://raw.githubusercontent.com/mariocraft987/bark.github.io/main/src/images/Bark.svg)<br>
 ![Static Badge](https://img.shields.io/badge/server:%20-bapiv2-green?style=for-the-badge&logo=javascript&logoColor=yellow)
-![Static Badge](https://img.shields.io/badge/latest%20release-0.1.7-green?style=for-the-badge&logo=electron&logoColor=green)
+![Static Badge](https://img.shields.io/badge/latest%20release-0.1.9-green?style=for-the-badge&logo=electron&logoColor=green)
 
 <a href="https://discord.com/invite/hXmHw7H9BF">![Bark Coding Discord](https://discord.com/api/guilds/1225552735445843978/embed.png)</a>
 <br />
