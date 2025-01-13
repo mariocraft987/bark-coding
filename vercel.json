@@ -119,6 +119,10 @@
     {
       "source": "/tos",
       "destination": "/pages/tos.html"
+    },
+    {
+      "source": "/download",
+      "destination": "/pages/download.html"
     }
   ]
 }
