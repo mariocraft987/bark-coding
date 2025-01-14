@@ -171,14 +171,14 @@
   fetch(`https://api.bark.dumorando.com/api/v2/profileComments?username=${username}`)
     .then(data => data.json())
     .then(data => {
-      console.log(data)
+      console.log("Profile comments: \n" + data)
     });
 
 
   document.getElementById("postprofilecomment").addEventListener('click', async () => {
     const postcommentresponse = await fetch(`https://api.bark.dumorando.com/api/v2/postProfileComment?username=${encodeURIComponent(username)}&comment=${encodeURIComponent(document.getElementById("commentbox").value)}`, {
-        method: 'POST ',
-        headers: { 
+        method: 'POST',
+      headers: { 
         'Content-type': 'application/json'
       }, 
       body: JSON.stringify(data) 
