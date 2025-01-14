@@ -77,6 +77,12 @@
     #commenterror {
       color: red;
     }
+
+    .profile-comment {
+      border: 2px solid black;
+      background-color: orange;
+      padding: 19px;
+    }
   </style>
 </head>
 
@@ -116,6 +122,9 @@
       <button class="buttonFrBx" id="postprofilecomment">Post</button>
       <span id="commenterror"></span>
     </div>
+
+    <span id="comments"></span>
+    
   </div>
   
   <!-- inject:footer -->
@@ -173,7 +182,20 @@
     .then(data => {
       console.log("Profile comments: \n");
       console.log(data);
+      let comment_list = data;
     });
+
+  
+
+  for (e of comment_list) {
+	document.getElementById("comments").innerHTML += 
+	`
+	<br/>
+	<div class="profile-comment">
+		<p>${replace(e.content)}</p>
+	</div>
+	`
+}
 
 
   document.getElementById("postprofilecomment").addEventListener('click', async () => {
