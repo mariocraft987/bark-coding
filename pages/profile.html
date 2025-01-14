@@ -177,7 +177,7 @@
 
 
   document.getElementById("postprofilecomment").addEventListener('click', async () => {
-    const postcommentresponse = await fetch(`https://api.bark.dumorando.com/api/v2/postProfileComment?username=${username.innerText}&comment=${document.getElementById("commentbox").value}`, {
+    const postcommentresponse = await fetch(`https://api.bark.dumorando.com/api/v2/postProfileComment?username=${parts[parts.length - 1]}&comment=${document.getElementById("commentbox").value}`, {
       method: 'POST',
       headers: { 
         'Content-type': 'application/json'
