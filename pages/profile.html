@@ -182,12 +182,8 @@
     .then(data => {
       console.log("Profile comments: \n");
       console.log(data);
-      let comment_list = data;
-    });
 
-  
-
-  for (e of comment_list) {
+for (e of data) {
 	document.getElementById("comments").innerHTML += 
 	`
 	<br/>
@@ -196,7 +192,8 @@
 	</div>
 	`
 }
-
+	    
+    });
 
   document.getElementById("postprofilecomment").addEventListener('click', async () => {
     const postcommentresponse = await fetch(`https://api.bark.dumorando.com/api/v2/postProfileComment?token=${encodeURIComponent(token)}&username=${encodeURIComponent(parts[parts.length - 1])}&comment=${encodeURIComponent(document.getElementById("commentbox").value)}`, {
