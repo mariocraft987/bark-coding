@@ -123,6 +123,10 @@
     {
       "source": "/download",
       "destination": "/pages/download.html"
+    },
+    {
+      "source": "/signedup",
+      "destination": "/pages/signedup.html"
     }
   ]
 }
