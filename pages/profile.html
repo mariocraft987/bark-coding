@@ -127,7 +127,7 @@
     </div>
     <br/>
     <center>
-      <span id="comments"></span>
+      <span id="comments">Loading...</span>
   </center>
     
   </div>
@@ -188,6 +188,7 @@
       console.log("Profile comments: \n");
       console.log(data);
 
+      document.getElementById("comments").innerHTML = "";
 	for (i = 0; i < data.length; i++) {
 		document.getElementById("comments").innerHTML += `
   	<br/>
