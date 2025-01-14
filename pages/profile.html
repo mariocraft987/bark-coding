@@ -171,7 +171,8 @@
   fetch(`https://api.bark.dumorando.com/api/v2/profileComments?username=${username}`)
     .then(data => data.json())
     .then(data => {
-      console.log("Profile comments: \n" + data)
+      console.log("Profile comments: \n");
+      console.log(data);
     });
 
 
