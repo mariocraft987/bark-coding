@@ -16,7 +16,7 @@ if (document.URL == "https://bark.dumorando.com/profile/" || document.URL == "ht
 }
 
 let newsBox =  `
-Bark is getting a web application version as well as a new theme along with it!
+Bark Coding now has a working comment system!!!
 `;
 let baseUrl = window.location.origin;
 let commitsLength = 150;
