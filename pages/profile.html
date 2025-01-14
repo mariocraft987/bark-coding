@@ -181,8 +181,7 @@
       method: 'POST',
       headers: { 
         'Content-type': 'application/json'
-      }, 
-      body: JSON.stringify(data) 
+      },  
     });
     if (postcommentresponse.status == 400) {
       document.getElementById("commenterror").innerHTML = "400: Invalid Request!"
