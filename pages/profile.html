@@ -122,7 +122,7 @@
       <button class="buttonFrBx" id="postprofilecomment">Post</button>
       <span id="commenterror"></span>
     </div>
-
+<br/>
     <span id="comments"></span>
     
   </div>
@@ -183,15 +183,14 @@
       console.log("Profile comments: \n");
       console.log(data);
 
-for (e of data) {
-	document.getElementById("comments").innerHTML += 
-	`
-	<br/>
+	for (i = 0; i < data.length; i++) {
+		document.getElementById("comments").innerHTML += `
+  	<br/>
 	<div class="profile-comment">
-		<p>${replace(e.content)}</p>
+		<p>${replace(data[i].content)}</p>
 	</div>
-	`
-}
+ `
+	}
 	    
     });
 
