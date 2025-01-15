@@ -103,7 +103,7 @@
     <br/>
     <button class="buttonFrBx" id="changeprofiledetails" onclick="location.replace('/settings/profile')">Change profile details</button>
     <br/>
-    <a href="/reportuser" style="float:left;">Report this user</a>
+    <a href="/reportuser" id="report_link" style="float:left;">Report this user</a>
     <div id="admin">
       <br/>
       <details>
@@ -162,6 +162,8 @@
     let btn = document.querySelector("button#changeprofiledetails");
     btn.remove();
   }
+	
+  document.getElementById("report_link").href = "/reportuser?user=${username}";
   document.getElementById('username').innerText = username;
   document.title = username + " on Bark";
   document.getElementById('username').title = `${username}, this is a user`;
