@@ -93,10 +93,6 @@
       "destination": "/pages/newproject.html"
     },
     {
-      "source": "/game_engine",
-      "destination": "/gameengine/index.html"
-    },
-    {
       "source": "/mail",
       "destination": "/pages/mail.html"
     },
@@ -127,6 +123,10 @@
     {
       "source": "/signedup",
       "destination": "/pages/signedup.html"
+    },
+    {
+      "source": "/reportuser/:username",
+      "destination": "/pages/reportuser.html"
     }
   ]
 }
