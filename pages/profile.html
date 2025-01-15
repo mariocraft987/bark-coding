@@ -202,7 +202,7 @@
     });
 
   document.getElementById("postprofilecomment").addEventListener('click', async () => {
-    const postcommentresponse = await fetch(`https://api.bark.dumorando.com/api/v2/postProfileComment?token=${encodeURIComponent(token)}&username=${encodeURIComponent(parts[parts.length - 1])}&comment=${encodeURIComponent(document.getElementById("commentbox").value)}`, {
+    const postcommentresponse = await fetch(`https://api.bark.dumorando.com/api/v2/postProfileComment?token=${encodeURIComponent(token)}&username=${encodeURIComponent(parts[parts.length - 1])}&comment=${localStorage.myBarkUsername}:%20${encodeURIComponent(document.getElementById("commentbox").value)}`, {
       method: 'POST',
       headers: { 
         'Content-type': 'application/json'
