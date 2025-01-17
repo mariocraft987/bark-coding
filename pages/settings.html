@@ -58,7 +58,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <button type="button" title="the legendary first theme: with poor css" name="classicdodger" onclick="switchTheme(`classic`)"><b>CLASSIC</b></button>
+                            <button type="button" title="the legendary first theme: with poor css" name="classicdodger" onclick="if (confirm('Are you sure you want to set this theme? Some elements may not looks good.') == true) switchTheme(`classic`)"><b>CLASSIC</b></button>
                         </td>
                         <td>
                             <button type="button" title="professional looking" name="professional prog" onclick="switchTheme(`profprog`)" class="ProfProgButton">Professional Prog</button>
@@ -154,16 +154,8 @@ function devmodeset() {
     if (spanslang.includes("pt")) {span.innerHTML = "Selecione um idioma:"}
 
 function switchTheme(selected) {
-    if (selected == "classic") {
-        // warning user of eye-displaeasing elements
-        if (prompt("Are you sure you want to set this theme? Some elements may not looks good.") == true) {
-            localStorage.theme = selected;
-            window.location.reload()
-        }
-    } else {
         localStorage.theme = selected;
         window.location.reload()
-    }
 }
 </script>
 
