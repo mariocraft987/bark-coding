@@ -292,6 +292,10 @@ footer {
   text-align: center;
 }
 
+footer a {
+    color: magenta;
+}
+
 .afd-upside-down {
   transform: rotate(180deg);
 }
