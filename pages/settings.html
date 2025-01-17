@@ -154,8 +154,16 @@ function devmodeset() {
     if (spanslang.includes("pt")) {span.innerHTML = "Selecione um idioma:"}
 
 function switchTheme(selected) {
-    localStorage.theme = selected;
-    window.location.reload()
+    if (selected == "classic") {
+        // warning user of eye-displaeasing elements
+        if (prompt("Are you sure you want to set this theme? Some elements may not looks good.") == true) {
+            localStorage.theme = selected;
+            window.location.reload()
+        }
+    } else {
+        localStorage.theme = selected;
+        window.location.reload()
+    }
 }
 </script>
 
