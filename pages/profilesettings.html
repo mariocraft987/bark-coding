@@ -76,6 +76,14 @@
   <div class="box">
       <p style="cursor: pointer;" onclick="signoutAcc()" title="signout of your account REMEMBER YOUR PASSWORD!" class="right">Sign out?</p>
   </div>
+
+  <dialog id="ExtrPopup">
+    <h2>Do you need help?</h2>
+    <p>This is <i>NO</i> joke here.</p>
+    <br/>
+    <p>Either call <i>988 Suicide Lifeline</i>, or <br/>
+    go to their website at <a href="https://988lifeline.org">988lifeline.org</a>.</p>
+  </dialog>
   
   <!-- inject:footer -->
 </body>
@@ -111,6 +119,18 @@
   $('#welcome').text(`Welcome back, ${username}!`);
   $('textarea#bio').text(response.bio);
   $('#setbio').on('click', async () => {
+
+    if (
+      $('textarea#bio').val()
+      .includes("suicidal")
+      .includes("suicide")
+   ) {
+
+      document.getElementById('ExtrPopup').showModal();
+
+      return;
+    }
+
     $('#setbio').prop('disabled', true);
     await fetch(`https://api.bark.dumorando.com/api/v2/setBio?token=${encodeURIComponent(token)}`, {
         method: 'PUT',
