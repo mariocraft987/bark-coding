@@ -120,6 +120,7 @@
   $('textarea#bio').text(response.bio);
   $('#setbio').on('click', async () => {
 
+    /*
     if (
       $('textarea#bio').val()
       .includes("suicidal")
@@ -130,6 +131,7 @@
 
       return;
     }
+  */
 
     $('#setbio').prop('disabled', true);
     await fetch(`https://api.bark.dumorando.com/api/v2/setBio?token=${encodeURIComponent(token)}`, {
