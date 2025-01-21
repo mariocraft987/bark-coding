@@ -78,6 +78,20 @@
     <div class="flex">
       <img style="border-radius: 50%" height="75" src="" id="pfp" alt="Profile picture">
       <h1>Report a user!</h1>
+      <p>Why are you reporting this user?</p>
+      <select>
+          <option>Profanity</option>
+          <option>Inappropriate content</option>
+          <option>Discrimination</option>
+          <option>Hacking, Phishing</option>
+          <option>Asking for personal information</option>
+      </select>
+      <br/>
+
+      <textarea placeholder="Extra comment e.g. This user said this, this user did that."></textarea>
+
+      <br/>
+      <button class="buttonFrBx">Submit</button>
     </div>
   </div>
   
@@ -92,6 +106,12 @@
 <script src="/src/scripts/admin.js"></script>
 <script src="/src/scripts/badge.js"></script>
 <script type="module">
+    const response = await fetch(`https://api.bark.dumorando.com/api/v2/fetchUser?username=${encodeURIComponent(username)}`);
 
+    if (response.status === 404) window.location.replace("/404");
+
+    const data = await response.json();
+    const pfpbox = document.getElementById('pfp');
+    pfpbox.src = data.profilepicture;
 </script>
 </html>
