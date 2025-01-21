@@ -217,10 +217,12 @@
       },  
     });
     if (postcommentresponse.status == 400) {
-      document.getElementById("commenterror").innerHTML = "400: Invalid Request!"
+      document.getElementById("commenterror").innerHTML = "400: Invalid Request!";
     }
-    if (postcommentresponse.status == 404) {
-      document.getElementById("commenterror").innerHTML = "404: Account not found!"
+    else if (postcommentresponse.status == 404) {
+      document.getElementById("commenterror").innerHTML = "404: Account not found!";
+    } else {
+	location.reload();
     }
   });
 
