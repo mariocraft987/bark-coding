@@ -138,9 +138,11 @@ function devmodeset() {
     if (localStorage.devmode == "false") {
         localStorage.devmode = "true";
         document.getElementById('devmodeon').innerHTML = "Dev Mode on!";
+        location.reload();
     } else {
         localStorage.devmode = "false";
         document.getElementById('devmodeon').innerHTML = "Dev Mode off!";
+        location.reload();
     }
 }
 
