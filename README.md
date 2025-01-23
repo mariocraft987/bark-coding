@@ -6,10 +6,6 @@
 <br />
 *The API source code is hosted at https://github.com/dumorando/bapiv2*
 
-![Bark percentage](https://img.shields.io/badge/Bark%20Coding-82%25%20done-dodgerblue) <br/>
-![Bark editor](https://img.shields.io/badge/Bark%20Editor-20%25%20done-red) <br/>
-![Bark api](https://img.shields.io/badge/Bark%20API-25%25%20done-green)
-
 # Description
 Bark is a website that makes programming easy, so users of any age can create and share games, animations, and everything else! &#128054;<br>
 Bark has many features, including:
