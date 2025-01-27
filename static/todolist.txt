@@ -16,4 +16,4 @@ One index.html and javascript to change content - we have vercel pages
 
 Turn this Bing AI code Into working blockly blocks - ai code is banned
 
-Add sun icon for light/dark mode button - done! (by qwertyy)
+Add sun icon for light/dark mode button - done! (by breakfast)
