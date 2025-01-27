@@ -194,6 +194,7 @@
   fetch(`https://api.bark.dumorando.com/api/v2/profileComments?username=${username}`)
     .then(data => data.json())
     .then(data => {
+	console.log(data)
 
       document.getElementById("comments").innerHTML = "";
 	for (i = 0; i < data.length; i++) {
