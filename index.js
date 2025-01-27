@@ -103,16 +103,15 @@ function whatsNew() {
   document.getElementById("boxChanger").innerHTML = "<h2>Whats New?</h2><p>" + newsBox + "</p>";
 }
 
-function toDo() {
+function Todo() {
   if (location.pathname !== "/")
     return;
-  let toDoContent = "Failed to fetch!"
 
   fetch("https://bark.dumorando.com/static/todolist.txt")
 .then(x => x.text())
-.then(y => toDoContent = y);
+.then(y => let toDoContent = y);
   
-  document.getElementById("boxChanger").innerHTML = "<h2>Whats New?</h2><p>" + toDoContent + "</p>";
+  document.getElementById("boxChanger").innerHTML = "<h2>Whats New?</h2><p>" + toDoContent.replaceAll(/\n/g, "<br>") + "</p>";
 }
 
 function randomTxt() {
