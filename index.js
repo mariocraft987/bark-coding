@@ -111,7 +111,7 @@ function Todo() {
 .then(x => x.text())
 .then(y => toDoContent = y);
   
-  document.getElementById("boxChanger").innerHTML = "<h2>Whats New?</h2><p>" + toDoContent.replaceAll(/\n/g, "<br>") + "</p>";
+  document.getElementById("boxChanger").innerHTML = "<h2>Todo List</h2><p>" + toDoContent.replaceAll(/\n/g, "<br>") + "</p>";
 }
 
 function randomTxt() {
