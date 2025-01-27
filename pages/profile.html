@@ -194,8 +194,6 @@
   fetch(`https://api.bark.dumorando.com/api/v2/profileComments?username=${username}`)
     .then(data => data.json())
     .then(data => {
-      console.log("Profile comments: \n");
-      console.log(data);
 
       document.getElementById("comments").innerHTML = "";
 	for (i = 0; i < data.length; i++) {
@@ -203,6 +201,7 @@
   	<br/>
 	<div class="profile-comment">
 		<p>${replace(data[i].content)}</p>
+  		<p onload="this.remove()">Delete Comment</p>
 	</div>
  `
 	}
