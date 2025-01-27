@@ -107,7 +107,7 @@ function Todo() {
   if (location.pathname !== "/")
     return;
 
-  document.getElementById("boxChanger").innerHTML = "<h2>Todo List</h2><p>Fetching file...</p>";
+  document.getElementById("boxChanger").innerHTML = "<h2>Fetching file...</h2><p>please wait...</p>";
 
   fetch("https://bark.dumorando.com/static/todolist.txt")
 .then(x => x.text())
