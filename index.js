@@ -109,7 +109,7 @@ function Todo() {
 
   fetch("https://bark.dumorando.com/static/todolist.txt")
 .then(x => x.text())
-.then(y => let toDoContent = y);
+.then(y => toDoContent = y);
   
   document.getElementById("boxChanger").innerHTML = "<h2>Whats New?</h2><p>" + toDoContent.replaceAll(/\n/g, "<br>") + "</p>";
 }
