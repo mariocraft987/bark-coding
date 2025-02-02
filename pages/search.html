@@ -12,10 +12,10 @@
   <!-- inject:navbar -->
   
   <h1><span id="content">null</span></h1>
-  <p>Link this from our profile?</p>
+  <p>Link this to your profile?</p>
   <a id="link">#hashtag</a>
   <br/>
-  <texarea id="link-select">[#hashtag](https://bark.dumorando.com/search?q=hashtag)</texarea>
+  <textrea id="link-select">[#hashtag](https://bark.dumorando.com/search?q=hashtag)</textarea>
 
   <!-- inject:footer -->
 </body>
@@ -26,7 +26,7 @@
   document.getElementById('search').value = q;
 
   document.getElementById("link").href = `https://bark.dumorando.com/search?q=${q}`;
-  document.getElementById("link").value = `#${q}`;
+  document.getElementById("link").innerHTML = `#${q}`;
 
   document.getElementById("link-select").value = `[#${q}](https://bark.dumorando.com/search?q=${q})`;
 </script>
