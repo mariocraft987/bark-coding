@@ -23,7 +23,6 @@
   let q = new URLSearchParams(location.search).get("q".toString()) || "";
   document.title = 'Bark Search - "' + q + '"';
   document.getElementById('content').innerHTML += q;
-  document.getElementById('search').value = q;
 
   document.getElementById("link").href = `https://bark.dumorando.com/search?q=${q}`;
   document.getElementById("link").innerHTML = `#${q}`;
