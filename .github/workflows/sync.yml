@@ -1,0 +1,27 @@
+name: Sync README
+
+on:
+  push:
+    paths:
+      - "README.md"
+    branches:
+      - master  # Change this if your default branch is different
+
+jobs:
+  sync-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Copy README.md to docs/
+        run: cp README.md documentation/content/README.md
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "README-Sync-Bot"
+          git config --global user.email "github-actions@github.com"
+          git add docs/README.md
+          git commit -m "Sync README.md with docs/README.md" || echo "No changes to commit"
+          git push
