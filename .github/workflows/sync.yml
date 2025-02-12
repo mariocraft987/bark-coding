@@ -5,7 +5,7 @@ on:
     paths:
       - "README.md"
     branches:
-      - main  # Change this if your default branch is different
+      - master  # Change this if your default branch is different
 
 jobs:
   sync-readme:
