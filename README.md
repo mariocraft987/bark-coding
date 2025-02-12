@@ -720,4 +720,4 @@ Public License instead of this License.  But first, please read
 <https://www.gnu.org/licenses/why-not-lgpl.html>.
 ```
 # Disclaimer
-Bark is not affiliated with Scratch, Turbowarp, nor PenguinMod. All credit for the idea goes to these founding organizations.
+Bark is not affiliated with Scratch, Turbowarp, or PenguinMod. The idea is the property of these founding organizations.
