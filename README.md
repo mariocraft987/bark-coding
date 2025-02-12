@@ -6,7 +6,6 @@
 <br />
 *The API source code is hosted at https://github.com/dumorando/bapiv2*
 
-
 # Description
 Bark is a website that makes programming easy, so users of any age can create and share games, animations, and everything else! &#128054;<br>
 Bark has many features, including:
